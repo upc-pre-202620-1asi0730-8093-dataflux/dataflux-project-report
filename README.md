@@ -259,3 +259,10 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 2.5. Ubiquitous Language
 
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+
+## 3.2. Impact Mapping
+
+## 3.3. Product Backlog
