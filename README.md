@@ -243,7 +243,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 **Segmento 1: Pequeñas y medianas empresas de alquiler de maquinaria**
 
-**Objetivo:** Conocer cómo gestionan actualmente sus máquinas y alquileres, qué problemas enfrentan y qué tan útil podría resultarles una solución como MaquiGest.
+**Objetivo:** Conocer cómo gestionan actualmente sus máquinas y alquileres, qué problemas enfrentan y qué tan útil podría resultarles una solución como RentBuild.
 
 **Contexto**
 
@@ -271,9 +271,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 10. ¿Qué parte del proceso de alquiler les toma más tiempo o les genera más problemas?
 
-**Opinión sobre MaquiGest**
+**Opinión sobre RentBuild**
 
-> *"Estamos desarrollando MaquiGest, una plataforma pensada para pequeñas y medianas empresas de alquiler de maquinaria. La idea es permitir gestionar las máquinas y alquileres desde un solo lugar, desde la reserva hasta la devolución y mantenimiento, de una manera sencilla."*
+> *"Estamos desarrollando RentBuild, una plataforma pensada para pequeñas y medianas empresas de alquiler de maquinaria. La idea es permitir gestionar las máquinas y alquileres desde un solo lugar, desde la reserva hasta la devolución y mantenimiento, de una manera sencilla."*
 
 11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
 
@@ -282,7 +282,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 **Segmento 2: Pequeñas empresas constructoras**
 
-**Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles MaquiGest.
+**Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles RentBuild.
 
 **Contexto**
 
@@ -310,7 +310,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 10. ¿Qué cambiarían de la forma en que actualmente buscan o alquilan maquinaria?
 
-**Opinión sobre MaquiGest**
+**Opinión sobre RentBuild**
 
 > *"Estamos desarrollando MaquiGest, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
 
@@ -398,7 +398,7 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 <tr>
 <td>US01</td>
 <td>Registro de usuario</td>
-<td>Como usuario, quiero registrarme en MaquiGest para acceder a las funcionalidades de la plataforma.</td>
+<td>Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma.</td>
 <td>
 Given que el usuario accede al formulario de registro<br>
 When ingresa sus datos correctamente<br>
