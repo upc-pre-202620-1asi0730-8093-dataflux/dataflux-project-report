@@ -733,6 +733,8 @@ Then el sistema registra la solicitud de contacto
 
 ## 3.2. Impact Mapping
 
+![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
+
 ## 3.3. Product Backlog
 
 # Capítulo IV: Product Design
