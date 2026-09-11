@@ -312,7 +312,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 **Opinión sobre RentBuild**
 
-> *"Estamos desarrollando MaquiGest, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
+> *"Estamos desarrollando RentBuild, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
 
 11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
 
