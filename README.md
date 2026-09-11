@@ -390,7 +390,7 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 <tr>
 <td>EP01</td>
 <td>Gestión de usuarios y acceso</td>
-<td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de MaquiGest.</td>
+<td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de RentBuild.</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -695,15 +695,15 @@ Then el sistema muestra las operaciones asociadas al equipo
 <tr>
 <td>EP06</td>
 <td>Información y contratación del servicio</td>
-<td>Epic orientado a brindar información sobre MaquiGest y facilitar el contacto de potenciales clientes con la plataforma.</td>
+<td>Epic orientado a brindar información sobre RentBuild y facilitar el contacto de potenciales clientes con la plataforma.</td>
 <td>-</td>
 <td>-</td>
 </tr>
 
 <tr>
 <td>US22</td>
-<td>Consultar información de MaquiGest</td>
-<td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
+<td>Consultar información de RentBuild</td>
+<td>Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa.</td>
 <td>
 Given que el visitante accede al Landing Page<br>
 When revisa la información del producto<br>
@@ -715,7 +715,7 @@ Then el sistema muestra sus principales funcionalidades y beneficios
 <tr>
 <td>US23</td>
 <td>Solicitar demostración</td>
-<td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
+<td>Como potencial cliente, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
 <td>
 Given que el visitante desea conocer la plataforma<br>
 When completa y envía el formulario de demostración<br>
@@ -727,8 +727,8 @@ And muestra un mensaje de confirmación
 
 <tr>
 <td>US24</td>
-<td>Contactar con MaquiGest</td>
-<td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
+<td>Contactar con RentBuild</td>
+<td>Como potencial cliente, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
 <td>
 Given que el visitante accede a la sección de contacto<br>
 When completa y envía sus datos y consulta<br>
