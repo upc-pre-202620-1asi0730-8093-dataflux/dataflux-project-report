@@ -362,6 +362,14 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.4. Empathy Mapping
 
+**1. Empathy Map para el primer segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map1.png)
+
+**2. Empathy Map para el segundo segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
+
 ## 2.4. Big Picture Event Storming
 
 ## 2.5. Ubiquitous Language
