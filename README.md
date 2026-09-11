@@ -241,6 +241,83 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.2.1. Diseño de entrevistas
 
+**Segmento 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
+**Objetivo:** Conocer cómo gestionan actualmente sus máquinas y alquileres, qué problemas enfrentan y qué tan útil podría resultarles una solución como MaquiGest.
+
+**Contexto**
+
+1. ¿A qué se dedica actualmente su empresa y qué tipo de maquinaria suelen alquilar?
+
+2. ¿Quién se encarga normalmente de gestionar los alquileres y las máquinas?
+
+**Situación actual**
+
+3. Cuando un cliente quiere alquilar una máquina, ¿cómo realizan normalmente todo el proceso?
+
+4. ¿Cómo saben qué máquinas están disponibles, alquiladas o fuera de servicio?
+
+5. ¿Qué herramientas utilizan actualmente para llevar el control de sus máquinas y alquileres?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que tienen al gestionar sus alquileres?
+
+7. ¿Alguna vez han tenido problemas porque una máquina fue reservada para más de un cliente o no estaba disponible cuando debía estarlo?
+
+8. ¿Qué ocurre cuando una máquina es devuelta con algún daño o presenta una falla?
+
+9. ¿Cómo controlan actualmente los mantenimientos y cuándo una máquina puede volver a alquilarse?
+
+10. ¿Qué parte del proceso de alquiler les toma más tiempo o les genera más problemas?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para pequeñas y medianas empresas de alquiler de maquinaria. La idea es permitir gestionar las máquinas y alquileres desde un solo lugar, desde la reserva hasta la devolución y mantenimiento, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera mejorar una sola parte de la gestión de sus alquileres, ¿cuál sería?
+
+
+**Segmento 2: Pequeñas empresas constructoras**
+
+**Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles MaquiGest.
+
+**Contexto**
+
+1. ¿A qué tipo de proyectos de construcción o remodelación se dedica su empresa?
+
+2. ¿Con qué frecuencia necesitan alquilar maquinaria o equipos?
+
+**Situación actual**
+
+3. Cuando necesitan una máquina para un proyecto, ¿cómo buscan actualmente dónde alquilarla?
+
+4. ¿Cómo averiguan si una máquina está disponible para las fechas que necesitan?
+
+5. ¿Qué información necesitan conocer antes de decidir alquilar una máquina?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que encuentran cuando necesitan conseguir maquinaria?
+
+7. ¿Alguna vez han necesitado una máquina y no pudieron conseguirla cuando la necesitaban? ¿Qué ocurrió?
+
+8. ¿Han tenido problemas con la entrega, el uso o la devolución de una máquina alquilada?
+
+9. ¿Qué parte del proceso de conseguir y alquilar maquinaria les toma más tiempo?
+
+10. ¿Qué cambiarían de la forma en que actualmente buscan o alquilan maquinaria?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera encontrar toda la información de una máquina en un solo lugar, ¿qué información sería indispensable para usted?
+
 ### 2.2.2. Registro de entrevistas
 
 ### 2.2.3. Análisis de entrevistas
