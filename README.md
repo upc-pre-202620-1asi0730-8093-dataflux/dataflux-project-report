@@ -807,6 +807,34 @@ Then el sistema registra la solicitud de contacto
 
 ### 5.1.1. Software Development Environment Configuration
 
+Para el desarrollo colaborativo de RentBuild el equipo utiliza los siguientes productos, organizados por tipo de actividad. Se indica el propósito de cada uno y la ruta de referencia (productos SaaS) o de descarga (productos que se instalan en el equipo de cada miembro).
+
+| Actividad | Producto | Propósito en el proyecto | Ruta |
+|---|---|---|---|
+| Project Management | GitHub (organización del equipo) | Repositorios del informe y del código, control de versiones y revisión mediante pull requests. | https://github.com/ |
+| Project Management | Trello | Product Backlog y Sprint Backlog: tableros por sprint con las User Stories y sus tareas. | https://trello.com/ |
+| Project Management | WhatsApp | Comunicación diaria del equipo y coordinación de reuniones. | https://www.whatsapp.com/ |
+| Requirements Management | UXPressia | User Personas, Empathy Maps, Journey Maps e Impact Map. | https://uxpressia.com/ |
+| Requirements Management | Figma / FigJam | Lean UX Canvas y EventStorming (Big Picture y Design-Level). | https://www.figma.com/ |
+| Product UX/UI Design | Figma | Wireframes, mock-ups y prototipos del Landing Page y de la Web Application; wireflows y user flows. | https://www.figma.com/ |
+| Software Design | Structurizr DSL | Diagramas C4 (contexto, containers y componentes) como código versionado. | https://structurizr.com/ |
+| Software Design | PlantUML | Diagramas de clases y de base de datos como código versionado. | https://plantuml.com/ |
+| Software Design | MySQL Workbench | Modelado y administración de la base de datos relacional. | https://www.mysql.com/products/workbench/ |
+| Software Development | Visual Studio Code | Editor para el Landing Page (HTML5, CSS3, JavaScript) y la Web Application. | https://code.visualstudio.com/ |
+| Software Development | Node.js y npm | Entorno de ejecución y gestor de paquetes de la Web Application. | https://nodejs.org/ |
+| Software Development | Vue 3, Vue Router, Pinia, PrimeVue | Framework, enrutamiento, estado global y biblioteca de componentes de la Web Application, con lenguaje de diseño Material Design. | https://vuejs.org/ · https://primevue.org/ |
+| Software Development | .NET SDK y ASP.NET Core | Framework de los Web Services RESTful, en C#. | https://dotnet.microsoft.com/ |
+| Software Development | Entity Framework Core | Mapeo objeto-relacional y migraciones de la base de datos. | https://learn.microsoft.com/ef/core/ |
+| Software Development | JetBrains Rider | IDE para el desarrollo de los Web Services en C#. | https://www.jetbrains.com/rider/ |
+| Software Development | MySQL Server | Sistema gestor de la base de datos relacional. | https://www.mysql.com/ |
+| Software Development | Git | Control de versiones local, con GitFlow y Conventional Commits. | https://git-scm.com/ |
+| Software Documentation | Swagger (OpenAPI Specification) | Documentación de los endpoints de los Web Services. | https://swagger.io/ |
+| Software Documentation | Google Docs | Redacción colaborativa del informe. | https://docs.google.com/ |
+| Software Documentation | Markdown en GitHub | Documentación de los repositorios (README, convenciones). | https://www.markdownguide.org/ |
+| Software Deployment | GitHub Pages | Publicación del Landing Page a partir de la rama principal del repositorio. | https://pages.github.com/ |
+| Software Deployment | Netlify | Publicación de la Web Application. | https://www.netlify.com/ |
+| Software Deployment | Azure App Service | Publicación de los Web Services en ASP.NET Core y de la base de datos MySQL. | https://azure.microsoft.com/ |
+
 ### 5.1.2. Source Code Management
 
 ### 5.1.3. Source Code Style Guide & Conventions
