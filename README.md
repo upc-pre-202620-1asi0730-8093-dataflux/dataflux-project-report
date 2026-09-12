@@ -793,6 +793,22 @@ Then el sistema registra la solicitud de contacto
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+Se presenta un diagrama de componentes por cada container con lógica propia: la Web Application y la RentBuild API. El Landing Page y la Base de Datos no se descomponen, ya que el primero es contenido estático y la segunda es un almacén sin componentes internos.
+
+#### Web Application
+
+![Component Diagram — Web Application](./assets/md-images-chapter4/software-architecture-component-diagram-web-application.png)
+
+La Web Application se organiza en una capa transversal y un módulo por bounded context. La capa transversal la forman el **App Router**, que define las rutas y las protege según el rol; el **Auth Store**, que mantiene el estado global de sesión; y el **HTTP Client**, que centraliza la URL base de la API, las cabeceras de autenticación y el manejo de errores. Cada bounded context aporta un par de componentes: sus **Views** (componentes Vue de la interfaz) y su **Service** (la lógica de acceso a la API para ese contexto). Así, un cambio en los recursos de alquileres afecta solo a `Rental Service` y `Rental Views`, sin tocar el resto de la aplicación. La única dependencia cruzada es la de `Rental Views` sobre `Inventory Service`, necesaria para consultar la disponibilidad del equipo antes de enviar una solicitud.
+
+#### RentBuild API
+
+![Component Diagram — RentBuild API](./assets/md-images-chapter4/software-architecture-component-diagram-api.png)
+
+La API tiene un controller de ASP.NET Core por bounded context: `/api/v1/users` y `/api/v1/auth` (IAM), `/api/v1/company-profiles` (Profiles), `/api/v1/equipment`, `/api/v1/categories` y `/api/v1/availability` (Inventory), `/api/v1/rental-requests`, `/api/v1/contracts`, `/api/v1/deliveries` y `/api/v1/returns` (Rentals), y `/api/v1/maintenance-records` e `/api/v1/incidents` (Maintenance). Todos los controllers persisten a través del componente **Persistence** (DbContext y repositorios de Entity Framework Core), y el **Notification Client** concentra el envío de correos transaccionales. Las dos dependencias entre contextos reflejan reglas del negocio: **Rentals actualiza el estado del equipo en Inventory** al aceptar una solicitud, registrar una entrega o una devolución (reserva → alquilado → disponible), y **Maintenance marca el equipo en mantenimiento o disponible** al programar o completar un trabajo. Estas son las transiciones que hoy las empresas pierden al gestionar con hojas de cálculo, y aquí quedan bajo control de la API.
+
+---
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
