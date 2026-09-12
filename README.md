@@ -791,6 +791,17 @@ Then el sistema registra la solicitud de contacto
 
 ### 4.6.3. Software Architecture Container Diagrams
 
+El sistema se descompone en cuatro containers, cada uno desplegable de forma independiente:
+
+![Software Architecture Container Diagram](./assets/md-images-chapter4/software-architecture-container-diagram.png)
+
+- **Landing Page** (HTML5, CSS3, JavaScript): sitio web estático que presenta la propuesta de valor a ambos segmentos. Sus llamadas a la acción derivan a la vista correspondiente de la Web Application, lo que mantiene una experiencia continua entre ambos productos.
+- **Web Application** (Vue 3, Vue Router, Pinia, PrimeVue, JavaScript): single-page application desde la que operan las empresas de alquiler y las constructoras. Cada rol accede a las vistas que le corresponden según la sesión autenticada.
+- **RentBuild API** (ASP.NET Core Web API, Entity Framework Core, C#): expone mediante REST los recursos de cada bounded context y se documenta con OpenAPI a través de Swagger. Se entrega en AV2, según el calendario del enunciado.
+- **Base de Datos** (MySQL): persiste usuarios, perfiles, inventario, alquileres, mantenimientos e incidencias, con el esquema relacional de la sección 4.8.
+
+La comunicación entre la Web Application y la API es HTTPS con JSON. La API accede a la base de datos mediante Entity Framework Core y consume el Servicio de Correo para notificar cambios de estado; la Web Application consume Google Maps Platform para mostrar ubicaciones de entrega y devolución.
+
 ### 4.6.4. Software Architecture Components Diagrams
 
 ## 4.7. Software Object-Oriented Design
