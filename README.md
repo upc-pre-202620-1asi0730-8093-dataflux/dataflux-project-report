@@ -789,6 +789,26 @@ Then el sistema registra la solicitud de contacto
 
 ### 4.6.2. Software Architecture Context Diagram
 
+A partir del Ubiquitous Language (2.5) y de las épicas de 3.1, la solución se organiza en cinco bounded contexts, que son la base de los diagramas de esta sección y de las siguientes:
+
+| Bounded context | Responsabilidad | Épicas que cubre |
+|---|---|---|
+| **IAM** | Registro, autenticación y roles de usuario (empresa de alquiler / empresa constructora). | EP01 |
+| **Profiles** | Datos de la empresa y perfil público de proveedor con su historial de cumplimiento. | EP01 (US03), término "Perfil de Proveedor" |
+| **Inventory** | Equipos, categorías, tarifas, estado del equipo y disponibilidad por periodo. | EP02, EP03 (US09–US11) |
+| **Rentals** | Solicitudes de alquiler, contratos, entregas y devoluciones. | EP03 (US12), EP04 |
+| **Maintenance** | Mantenimientos programados y realizados, incidencias e historial del equipo. | EP05 |
+
+EP06 (Landing Page) no constituye un bounded context: corresponde al container Landing Page.
+
+---
+
+RentBuild se representa como un único sistema de software en el centro del diagrama, rodeado por las personas que lo utilizan y los sistemas externos con los que interactúa. Las personas corresponden a los roles del Ubiquitous Language: el **Operador de Alquiler**, que administra el inventario y el ciclo completo del alquiler; el **Jefe de Obra**, que busca maquinaria y solicita alquileres para su proyecto; y el **Visitante**, que conoce la propuesta de valor desde el Landing Page.
+
+![Software Architecture Context Diagram](./assets/md-images-chapter4/software-architecture-context-diagram.png)
+
+El sistema se apoya en dos servicios externos. El **Servicio de Correo** envía las notificaciones transaccionales del ciclo de alquiler — confirmación de solicitud, aceptación o rechazo y recordatorios de devolución —, que son el mecanismo por el que ambas empresas se enteran de un cambio de estado sin tener que consultar la plataforma. **Google Maps Platform** aporta la geolocalización de almacenes y obras, necesaria para coordinar entregas y devoluciones, que según las entrevistas ocurren en ubicaciones distintas al almacén del proveedor. Ambos cumplen el requisito de integrar al menos un servicio de terceros.
+
 ### 4.6.3. Software Architecture Container Diagrams
 
 ### 4.6.4. Software Architecture Components Diagrams
