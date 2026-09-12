@@ -799,7 +799,24 @@ Then el sistema registra la solicitud de contacto
 
 ## 4.8. Database Design
 
+El modelo de datos traduce las entidades de cada bounded context a tablas relacionales, conservando la separación por contexto: cada grupo de tablas pertenece a un único contexto y las referencias entre contextos se resuelven por identificador (`equipment_id`, `company_profile_id`, `contract_id`), nunca por tablas compartidas. Los value objects se aplanan en columnas de la entidad que los contiene (`Address` dentro de `company_profiles`, `RentalRate` dentro de `equipment`, `RentalPeriod` como `start_date`/`end_date`). Los estados se almacenan como cadenas cortas que corresponden a las enumeraciones del diseño de clases. El DBMS es MySQL, gestionado desde la API mediante Entity Framework Core y sus migraciones. Las columnas marcadas con asterisco son obligatorias.
+
 ### 4.8.1. Database Diagrams
+
+![Database Diagram](./assets/md-images-chapter4/database-diagram.png)
+
+Relaciones principales:
+
+- `users` 1—0..1 `company_profiles`: cada usuario tiene a lo sumo un perfil de empresa; `company_profiles` 1—0..1 `provider_profiles`: solo las empresas de alquiler tienen perfil público de proveedor.
+- `company_profiles` 1—N `equipment`: una empresa de alquiler posee muchos equipos; `equipment_categories` 1—N `equipment`.
+- `equipment` 1—N `availability_blocks`: bloqueos de disponibilidad por periodo.
+- `rental_requests` referencia al equipo, a la constructora y al proveedor; `rental_requests` 1—0..1 `rental_contracts`: una solicitud aceptada genera exactamente un contrato.
+- `rental_contracts` 1—0..1 `deliveries` y 1—0..1 `equipment_returns`: un contrato tiene una entrega y una devolución.
+- `equipment` 1—N `maintenance_records` y 1—N `incidents`; `incidents` 0..1—0..1 `maintenance_records`: una incidencia puede originar un mantenimiento correctivo; `incidents` puede referenciar el contrato durante el cual ocurrió.
+
+Restricciones destacadas: `users.email`, `company_profiles.ruc` y `equipment.serial_number` son únicos; `rental_contracts.request_id`, `deliveries.contract_id` y `equipment_returns.contract_id` son únicos para garantizar la relación uno a uno.
+
+---
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
