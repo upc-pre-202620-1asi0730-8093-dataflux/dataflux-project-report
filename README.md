@@ -203,6 +203,30 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 1.1.1. Descripción de la Startup
 
+DataFlux es una startup orientada al desarrollo de soluciones digitales accesibles que permitan organizar y optimizar los procesos de pequeñas y medianas empresas. Su propuesta se enfoca en resolver problemas operativos mediante herramientas especializadas, sencillas de utilizar y adaptadas a las necesidades de sus usuarios.
+
+Como parte de esta iniciativa, DataFlux desarrolla RentBuild, una plataforma SaaS dirigida principalmente a pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para obras de construcción de pequeña escala. Estas empresas suelen gestionar sus operaciones mediante hojas de cálculo, llamadas, mensajes y sistemas independientes, lo cual dificulta el control de sus equipos y aumenta la posibilidad de cometer errores.
+
+RentBuild centralizará la gestión del inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento de los equipos. De esta manera, permitirá realizar el seguimiento de la maquinaria durante todo su ciclo de alquiler y facilitará la interacción con las personas que necesitan alquilar equipos para sus proyectos personales relacionados con la construcción.
+
+#### Misión
+
+Nuestra misión es facilitar la gestión integral de las pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción mediante una plataforma digital sencilla, accesible y confiable. Buscamos centralizar sus operaciones, reducir errores relacionados con la disponibilidad y las reservas, mejorar el control del estado de los equipos y brindar una mejor experiencia tanto a las empresas como a las personas que alquilan maquinaria.
+
+#### Visión
+
+Nuestra visión es convertirnos en una startup referente en el Perú en soluciones digitales para la gestión del alquiler de maquinaria de construcción, contribuyendo a que las pequeñas y medianas empresas profesionalicen sus operaciones y brinden servicios más eficientes, organizados y confiables.
+
+#### Valores
+
+Nuestros valores principales son los siguientes:
+
+* **Innovación:** Aplicamos tecnología para mejorar y simplificar los procesos tradicionales del alquiler de maquinaria.
+* **Simplicidad:** Diseñamos soluciones comprensibles y accesibles para empresas con diferentes niveles de experiencia tecnológica.
+* **Responsabilidad:** Promovemos una gestión adecuada de los equipos, la información y las operaciones de alquiler.
+* **Colaboración:** Valoramos el trabajo en equipo y la comunicación con las empresas y personas que utilizarán RentBuild.
+* **Calidad:** Buscamos ofrecer una plataforma confiable, organizada y orientada a las necesidades reales de sus usuarios.
+
 ### 1.1.2. Perfiles de integrantes del equipo
 
 |   Código   | Nombre completo del integrante  | Descripción de la carrera                                          |                               Fotografía                                | Conocimientos y habilidades                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -280,6 +304,41 @@ El crecimiento de la cantidad de equipos, clientes y alquileres hace que la gest
 Según Clements (2025), el 67 % de las empresas de alquiler de equipos encuestadas opera con sistemas parcialmente integrados que requieren transferencia manual de información, lo que evidencia la existencia de dificultades para centralizar y conectar los procesos de gestión dentro de este sector.
 En ese contexto, DataFlux busca abordar esta problemática mediante RentBuild, una plataforma SaaS especializada en la gestión del alquiler de maquinaria y equipos para construcción, que permite centralizar en un solo lugar procesos como el control de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones y mantenimiento.
 
+#### Objetivos
+
+**Corto plazo**
+
+* Identificar y validar las necesidades principales de las empresas de alquiler y de las personas que solicitan maquinaria.
+* Diseñar una experiencia digital comprensible para los dos segmentos objetivo.
+* Implementar y desplegar la primera versión del Landing Page de RentBuild.
+* Definir las funcionalidades iniciales relacionadas con inventario, disponibilidad, reservas y alquileres.
+
+**Mediano plazo**
+
+* Implementar progresivamente la gestión de contratos, pagos, entregas, devoluciones, incidencias y mantenimiento.
+* Integrar la Web Application con el RESTful API desarrollado por el equipo.
+* Incorporar un servicio externo que complemente las funcionalidades de la plataforma.
+* Mejorar el producto a partir de las entrevistas y validaciones realizadas con los segmentos objetivo.
+
+**Largo plazo**
+
+* Conseguir una adopción recurrente de RentBuild por parte de pequeñas y medianas empresas del sector.
+* Reducir los errores relacionados con reservas, disponibilidad y seguimiento de equipos.
+* Incorporar nuevas herramientas de análisis y seguimiento de las operaciones.
+* Posicionar RentBuild como una solución especializada para la gestión del alquiler de maquinaria de construcción.
+
+#### Restricciones
+
+* RentBuild debe desarrollarse como una solución web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio.
+* La lógica del lado servidor debe desarrollarse con Java y tecnologías open-source, conforme a los lineamientos del curso.
+* La plataforma debe integrar al menos un servicio externo de terceros.
+* La interfaz debe adaptarse a las dimensiones de computadoras, tabletas y dispositivos móviles.
+* La experiencia visual y funcional debe ser consistente entre el Landing Page y la Web Application.
+* Los call-to-action del Landing Page deben dirigir a las vistas correspondientes de la Web Application.
+* El funcionamiento de la plataforma dependerá de una conexión a Internet para consultar y actualizar la información.
+* El alcance de la primera versión debe priorizar las funcionalidades principales que puedan desarrollarse dentro del ciclo académico.
+* El código y la documentación deben gestionarse en repositorios públicos de la organización de GitHub de DataFlux.
+* El equipo debe aplicar GitFlow y Conventional Commits durante la evolución del proyecto.
 
 ### 1.2.2. Lean UX Process
 
