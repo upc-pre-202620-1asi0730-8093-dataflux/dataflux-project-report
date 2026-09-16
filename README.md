@@ -362,11 +362,13 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.4. Empathy Mapping
 
-**1. Empathy Map para el primer segmento**
+El Empathy Mapping permite profundizar en la comprensión de los principales segmentos de usuarios de RentBuild mediante la identificación de sus pensamientos, sentimientos, comportamientos, necesidades y dificultades. Para la elaboración de este artefacto se tomó como referencia la información definida previamente en las User Personas, analizando lo que cada usuario piensa y siente, dice y hace, observa y escucha dentro de su contexto. Asimismo, se identificaron sus principales frustraciones y los beneficios que esperan obtener durante el proceso de alquiler y gestión de maquinaria. Este análisis permite representar de forma estructurada la perspectiva de la Persona Alquiler y la Persona Constructora, facilitando la identificación de necesidades y oportunidades que pueden ser atendidas mediante la solución propuesta.
+
+**1. Empathy Map - Pequeñas y medianas empresas de alquiler de maquinaria**
 
 ![Empathy Map](./assets/md-images-chapter2/empathy-map1.png)
 
-**2. Empathy Map para el segundo segmento**
+**2. Empathy Map - Pequeñas empresas constructoras**
 
 ![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
 
