@@ -263,6 +263,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 3.1. User Stories
 
+
 <table>
 <tr>
 <th>Epic / Story ID</th>
@@ -319,6 +320,30 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
+<td>US04</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>
+Given que el usuario solicita recuperación<br>
+When ingresa su correo<br>
+Then el sistema envía instrucciones de recuperación
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US05</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>
+Given que el usuario está autenticado<br>
+When selecciona cerrar sesión<br>
+Then el sistema finaliza su sesión
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
 <td>EP02</td>
 <td>Gestión de maquinaria</td>
 <td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
@@ -327,7 +352,7 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
-<td>US04</td>
+<td>US06</td>
 <td>Registrar maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
 <td>
@@ -340,7 +365,7 @@ And muestra el equipo registrado
 </tr>
 
 <tr>
-<td>US05</td>
+<td>US07</td>
 <td>Consultar maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
 <td>
@@ -353,7 +378,7 @@ And muestra información relevante de cada equipo
 </tr>
 
 <tr>
-<td>US06</td>
+<td>US08</td>
 <td>Actualizar información de maquinaria</td>
 <td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
 <td>
@@ -365,7 +390,7 @@ Then el sistema guarda la información actualizada
 </tr>
 
 <tr>
-<td>US07</td>
+<td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
 <td>
@@ -377,7 +402,7 @@ Then el sistema muestra si cada equipo está disponible, reservado o alquilado
 </tr>
 
 <tr>
-<td>US08</td>
+<td>US10</td>
 <td>Consultar estado de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
 <td>
@@ -398,7 +423,7 @@ And permite identificar si está disponible para alquiler
 </tr>
 
 <tr>
-<td>US09</td>
+<td>US11</td>
 <td>Buscar maquinaria</td>
 <td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
 <td>
@@ -410,7 +435,7 @@ Then el sistema muestra las maquinarias que coinciden con sus necesidades
 </tr>
 
 <tr>
-<td>US10</td>
+<td>US12</td>
 <td>Consultar información de maquinaria</td>
 <td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
 <td>
@@ -422,7 +447,7 @@ Then el sistema muestra sus características, estado y condiciones de alquiler
 </tr>
 
 <tr>
-<td>US11</td>
+<td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
 <td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
 <td>
@@ -434,7 +459,7 @@ Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
 </tr>
 
 <tr>
-<td>US12</td>
+<td>US14</td>
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
 <td>
@@ -448,6 +473,50 @@ And muestra su estado
 
 <tr>
 <td>EP04</td>
+<td>Planes y suscripciones</td>
+<td>Epic orientado a la gestión de planes.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US15</td>
+<td>Visualizar planes disponibles</td>
+<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>
+Given que el usuario accede a la sección de planes<br>
+When visualiza opciones<br>
+Then el sistema muestra los planes con sus características y precios
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US16</td>
+<td>Suscribirse a un plan</td>
+<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>
+Given que el usuario selecciona un plan<br>
+When confirma la suscripción<br>
+Then el sistema registra el plan
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US17</td>
+<td>Cambiar de plan</td>
+<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>
+Given que el usuario tiene un plan activo<br>
+When selecciona otro<br>
+Then el sistema actualiza la suscripción
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>EP05</td>
 <td>Gestión de reservas y alquileres</td>
 <td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
 <td>-</td>
@@ -455,7 +524,7 @@ And muestra su estado
 </tr>
 
 <tr>
-<td>US13</td>
+<td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
 <td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
 <td>
@@ -464,11 +533,11 @@ When el usuario consulta las solicitudes<br>
 Then el sistema muestra la información de cada solicitud<br>
 And permite identificar su estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US14</td>
+<td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
 <td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
 <td>
@@ -477,11 +546,11 @@ When el usuario selecciona aceptar o rechazar<br>
 Then el sistema actualiza el estado de la solicitud<br>
 And muestra el nuevo estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US15</td>
+<td>US20</td>
 <td>Consultar alquileres activos</td>
 <td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
 <td>
@@ -490,11 +559,11 @@ When el usuario consulta sus alquileres<br>
 Then el sistema muestra los equipos alquilados<br>
 And muestra información del periodo correspondiente
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US16</td>
+<td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
 <td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
 <td>
@@ -502,11 +571,11 @@ Given que el usuario ha realizado una solicitud<br>
 When consulta sus solicitudes<br>
 Then el sistema muestra el estado actualizado de cada una
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US17</td>
+<td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
 <td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
 <td>
@@ -515,11 +584,11 @@ When se registra la entrega o devolución<br>
 Then el sistema actualiza el estado del alquiler<br>
 And registra la operación realizada
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>EP05</td>
+<td>EP06</td>
 <td>Gestión de mantenimiento e incidencias</td>
 <td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
 <td>-</td>
@@ -527,7 +596,7 @@ And registra la operación realizada
 </tr>
 
 <tr>
-<td>US18</td>
+<td>US23</td>
 <td>Registrar mantenimiento</td>
 <td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
 <td>
@@ -536,11 +605,11 @@ When el usuario registra un mantenimiento<br>
 Then el sistema almacena la información<br>
 And la relaciona con el equipo correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US19</td>
+<td>US24</td>
 <td>Programar mantenimiento</td>
 <td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
 <td>
@@ -549,11 +618,11 @@ When el usuario registra una fecha de mantenimiento<br>
 Then el sistema guarda la programación<br>
 And permite consultar el mantenimiento pendiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US20</td>
+<td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
 <td>
@@ -562,11 +631,11 @@ When el usuario registra el problema<br>
 Then el sistema almacena la incidencia<br>
 And la relaciona con la maquinaria correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US21</td>
+<td>US26</td>
 <td>Consultar historial de maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
 <td>
@@ -574,11 +643,11 @@ Given que existe una maquinaria registrada<br>
 When el usuario consulta su historial<br>
 Then el sistema muestra las operaciones asociadas al equipo
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>EP06</td>
+<td>EP07</td>
 <td>Información y contratación del servicio</td>
 <td>Epic orientado a brindar información sobre RentBuild y facilitar el contacto de potenciales clientes con la plataforma.</td>
 <td>-</td>
@@ -586,7 +655,7 @@ Then el sistema muestra las operaciones asociadas al equipo
 </tr>
 
 <tr>
-<td>US22</td>
+<td>US27</td>
 <td>Consultar información de RentBuild</td>
 <td>Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa.</td>
 <td>
@@ -594,11 +663,11 @@ Given que el visitante accede al Landing Page<br>
 When revisa la información del producto<br>
 Then el sistema muestra sus principales funcionalidades y beneficios
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US23</td>
+<td>US28</td>
 <td>Solicitar demostración</td>
 <td>Como potencial cliente, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
 <td>
@@ -607,11 +676,11 @@ When completa y envía el formulario de demostración<br>
 Then el sistema registra la solicitud<br>
 And muestra un mensaje de confirmación
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US24</td>
+<td>US29</td>
 <td>Contactar con RentBuild</td>
 <td>Como potencial cliente, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
 <td>
@@ -619,7 +688,7 @@ Given que el visitante accede a la sección de contacto<br>
 When completa y envía sus datos y consulta<br>
 Then el sistema registra la solicitud de contacto
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 </table>
