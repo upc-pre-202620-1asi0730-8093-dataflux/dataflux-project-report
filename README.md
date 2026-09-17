@@ -336,23 +336,42 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.2. User Task Matrix
 
-| TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
-| :---- | :---: | :---: | :---: | :---: |
-| **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Consultar la disponibilidad de una maquinaria** | **Often** | **High** | **Often** | **High** |
-| **Registrar o actualizar información de maquinaria** | **Often** | **High** | **Rarely** | **Low** |
-| **Gestionar reservas y solicitudes de alquiler** | **Often** | **High** | **Often** | **High** |
-| **Coordinar la entrega de maquinaria** | **Often** | **High** | **Often** | **High** |
-| **Registrar la devolución de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Verificar el estado de la maquinaria después de un alquiler** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Registrar incidentes o daños en una maquinaria** | **Sometimes** | **High** | **Sometimes** | **High** |
-| **Consultar el historial de mantenimiento de una maquinaria** | **Often** | **High** | **Rarely** | **Medium** |
-| **Programar o registrar mantenimientos** | **Sometimes** | **High** | **Rarely** | **Low** |
-| **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
-| **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
-| **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
+La presente Task Matrix permite identificar y comparar las principales tareas realizadas por los User Personas pertenecientes a los dos segmentos considerados en RentBuild: pequeñas empresas de alquiler de maquinaria y pequeñas empresas constructoras. Para representar a estos segmentos se consideran los User Personas Armando Casas, correspondiente a una empresa de alquiler, y Andrea Torres, correspondiente a una empresa constructora.
+
+La matriz evalúa cada tarea considerando dos criterios: su frecuencia, que representa qué tan recurrentemente es realizada por el User Persona, y su importancia, que refleja el nivel de relevancia que tiene dentro de sus actividades y objetivos. Asimismo, se utiliza el valor N/A (Not Applicable) para aquellas tareas que no corresponden a las responsabilidades o funcionalidades disponibles para determinado segmento.
+
+| TASK | Armando Casas<br>(Empresa de alquiler)<br>Frecuencia | Armando Casas<br>(Empresa de alquiler)<br>Importancia | Andrea Torres<br>(Empresa constructora)<br>Frecuencia | Andrea Torres<br>(Empresa constructora)<br>Importancia |
+| :--- | :---: | :---: | :---: | :---: |
+| Consultar el inventario de maquinaria | Often | High | N/A | N/A |
+| Consultar la disponibilidad de una maquinaria | Often | High | Often | High |
+| Registrar o actualizar información de maquinaria | Often | High | N/A | N/A |
+| Gestionar solicitudes de alquiler y reservas | Often | High | N/A | N/A |
+| Coordinar la entrega de maquinaria | Often | High | Often | High |
+| Registrar la devolución de maquinaria | Often | High | N/A | N/A |
+| Verificar el estado de la maquinaria después de un alquiler | Often | High | N/A | N/A |
+| Consultar el historial de mantenimiento de una maquinaria | Sometimes | High | N/A | N/A |
+| Programar o registrar mantenimientos | Sometimes | High | N/A | N/A |
+| Buscar maquinaria según las necesidades de un proyecto | N/A | N/A | Often | High |
+| Consultar características y condiciones de una maquinaria | Sometimes | Medium | Often | High |
+| Solicitar o reservar maquinaria | N/A | N/A | Often | High |
+| Realizar seguimiento del estado de una solicitud o alquiler | Often | High | Often | High |
+
+A partir de la Task Matrix se observa que Armando Casas, como representante de las pequeñas empresas de alquiler de maquinaria, concentra una mayor cantidad de tareas relacionadas con la administración y operación interna de los equipos. Entre las tareas que presentan una frecuencia Often y una importancia High se encuentran la consulta de disponibilidad, el registro o actualización de información de maquinaria, la gestión de solicitudes de alquiler y reservas, la coordinación de entregas, el registro de devoluciones y la verificación del estado de los equipos después de un alquiler. Estas actividades son fundamentales para mantener actualizado el inventario y controlar adecuadamente el ciclo de alquiler de la maquinaria.
+
+Por otro lado, las actividades relacionadas con el mantenimiento de los equipos, como consultar su historial y programar o registrar mantenimientos, presentan una frecuencia menor, debido a que no necesariamente se realizan durante cada operación de alquiler. Sin embargo, mantienen una importancia alta, ya que permiten conservar la maquinaria en condiciones adecuadas y reducir posibles interrupciones en su disponibilidad.
+
+En el caso de Andrea Torres, representante de las pequeñas empresas constructoras, las tareas de mayor frecuencia e importancia están principalmente relacionadas con la búsqueda, selección y contratación de maquinaria. Entre ellas se encuentran buscar maquinaria de acuerdo con las necesidades de un proyecto, consultar su disponibilidad y características, solicitar o reservar un equipo y realizar el seguimiento de una solicitud o alquiler. Estas tareas permiten que la empresa constructora encuentre los equipos requeridos y conozca su situación durante el proceso de alquiler.
+
+Las principales coincidencias entre ambos User Personas se encuentran en aquellas actividades que requieren interacción entre la empresa que ofrece la maquinaria y la empresa que la alquila. Por ejemplo, ambos necesitan consultar la disponibilidad de los equipos, coordinar su entrega y realizar seguimiento al estado del alquiler. Aunque participan desde perspectivas diferentes, estas actividades forman parte de un mismo proceso y requieren información compartida y actualizada.
+
+Las principales diferencias se encuentran en las tareas asociadas a la responsabilidad de cada segmento. Armando realiza actividades relacionadas con la administración del inventario, el registro de maquinaria, las devoluciones y el mantenimiento, debido a que la empresa de alquiler es responsable de gestionar los equipos. En cambio, Andrea se enfoca en localizar maquinaria adecuada, consultar sus condiciones y realizar solicitudes de alquiler según las necesidades de sus proyectos. Por esta razón, determinadas tareas se identifican como N/A para alguno de los User Personas, ya que no forman parte de sus responsabilidades dentro de la plataforma.
+
 
 ### 2.3.3. User Journey Mapping
+
+El User Journey Mapping permite representar de manera integral la experiencia de los principales usuarios de RentBuild a lo largo del proceso de alquiler de maquinaria y equipos para pequeñas construcciones. El recorrido end-to-end que se pretende ilustrar comprende las distintas etapas que atraviesan la Persona Alquiler y la Persona Constructora, desde la identificación de una necesidad y la búsqueda o gestión de un equipo, hasta la reservación, formalización del alquiler, entrega, utilización y posterior devolución de la maquinaria. A través de este recorrido se busca identificar las acciones, necesidades, expectativas y principales dificultades que experimentan ambos segmentos, con el propósito de reconocer oportunidades de mejora que puedan ser abordadas mediante las funcionalidades propuestas en RentBuild.
+
+**1. User Journey Map - Pequeñas y medianas empresas de alquiler de maquinaria**
 
 ![User Journey Map](./assets/md-images-chapter2/user-journey-map1.png)
 
@@ -362,11 +381,13 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.4. Empathy Mapping
 
-**1. Empathy Map para el primer segmento**
+El Empathy Mapping permite profundizar en la comprensión de los principales segmentos de usuarios de RentBuild mediante la identificación de sus pensamientos, sentimientos, comportamientos, necesidades y dificultades. Para la elaboración de este artefacto se tomó como referencia la información definida previamente en las User Personas, analizando lo que cada usuario piensa y siente, dice y hace, observa y escucha dentro de su contexto. Asimismo, se identificaron sus principales frustraciones y los beneficios que esperan obtener durante el proceso de alquiler y gestión de maquinaria. Este análisis permite representar de forma estructurada la perspectiva de la Persona Alquiler y la Persona Constructora, facilitando la identificación de necesidades y oportunidades que pueden ser atendidas mediante la solución propuesta.
+
+**1. Empathy Map - Pequeñas y medianas empresas de alquiler de maquinaria**
 
 ![Empathy Map](./assets/md-images-chapter2/empathy-map1.png)
 
-**2. Empathy Map para el segundo segmento**
+**2. Empathy Map - Pequeñas empresas constructoras**
 
 ![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
 
