@@ -326,13 +326,17 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.3.1. User Personas
 
-El user persona se construyó a partir de patrones encontrados en las entrevistas
+En esta sección se presentan las fichas de User Personas construidas a partir de los datos recogidos del análisis de entrevistas al segmento #1: "Empresas de alquiler de equipos" y al segmento #2: "Empresas constructoras". Estas fichas permiten representar de forma clara y estratégica los perfiles del segmento objetivo, considerando sus metas, habilidades, motivaciones y dificultades. Al integrar tanto la perspectiva del usuario como las tendencias del sector, estas representaciones sirven como una herramienta clave para el diseño de soluciones digitales centradas en el usuario y alineadas con las oportunidades del mercado.
 
 **Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
-![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
 
-**Segmento Objetivo 2: Pequeñas empresas constructoras**
-![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+![User Persona 1](./assets/md-images-chapter2/user-persona-marisol-vega.png)
+
+Segmento Objetivo 1: https://app.creately.com/d/QwlCIfA0o0k/edit
+
+![User Persona 2](./assets/md-images-chapter2/user-persona-jorge-ramirez.png)
+
+Segmento Objetivo 2: https://app.creately.com/d/DyKHPyVwNtd/edit
 
 ### 2.3.2. User Task Matrix
 
