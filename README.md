@@ -326,43 +326,38 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.3.1. User Personas
 
-El user persona se construyó a partir de patrones encontrados en las entrevistas
+En esta sección se presentan las fichas de User Personas construidas a partir de los datos recogidos del análisis de entrevistas al segmento #1: "Empresas de alquiler de equipos" y al segmento #2: "Empresas constructoras". Estas fichas permiten representar de forma clara y estratégica los perfiles del segmento objetivo, considerando sus metas, habilidades, motivaciones y dificultades. Al integrar tanto la perspectiva del usuario como las tendencias del sector, estas representaciones sirven como una herramienta clave para el diseño de soluciones digitales centradas en el usuario y alineadas con las oportunidades del mercado.
 
 **Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
-![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
 
-**Segmento Objetivo 2: Pequeñas empresas constructoras**
-![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+![User Persona 1](./assets/md-images-chapter2/user-persona-marisol-vega.png)
+
+Segmento Objetivo 1: https://app.creately.com/d/QwlCIfA0o0k/edit
+
+![User Persona 2](./assets/md-images-chapter2/user-persona-jorge-ramirez.png)
+
+Segmento Objetivo 2: https://app.creately.com/d/DyKHPyVwNtd/edit
 
 ### 2.3.2. User Task Matrix
 
-La presente Task Matrix permite identificar y comparar las principales tareas realizadas por los User Personas pertenecientes a los dos segmentos considerados en RentBuild: pequeñas empresas de alquiler de maquinaria y pequeñas empresas constructoras. Para representar a estos segmentos se consideran los User Personas Armando Casas, correspondiente a una empresa de alquiler, y Andrea Torres, correspondiente a una empresa constructora.
+En esta sección se presenta el User Task Matrix, que concentra las tareas que realizan Marisol Vega Torres (Segmento 1 — Empresas de Alquiler) y Jorge Ramírez Delgado (Segmento 2 — Empresas Constructoras) para cumplir sus objetivos, independientemente de la existencia de una solución de software. Se considera para cada tarea su frecuencia (qué tan seguido la realiza) y su importancia (qué tan crítica es para su rol), en una escala de Baja / Media / Alta.
 
-La matriz evalúa cada tarea considerando dos criterios: su frecuencia, que representa qué tan recurrentemente es realizada por el User Persona, y su importancia, que refleja el nivel de relevancia que tiene dentro de sus actividades y objetivos. Asimismo, se utiliza el valor N/A (Not Applicable) para aquellas tareas que no corresponden a las responsabilidades o funcionalidades disponibles para determinado segmento.
-
-| TASK | Armando Casas<br>(Empresa de alquiler)<br>Frecuencia | Armando Casas<br>(Empresa de alquiler)<br>Importancia | Andrea Torres<br>(Empresa constructora)<br>Frecuencia | Andrea Torres<br>(Empresa constructora)<br>Importancia |
+| Tarea | Marisol Vega Torres — Frecuencia | Marisol Vega Torres — Importancia | Jorge Ramírez Delgado — Frecuencia | Jorge Ramírez Delgado — Importancia |
 | :--- | :---: | :---: | :---: | :---: |
-| Consultar el inventario de maquinaria | Often | High | N/A | N/A |
-| Consultar la disponibilidad de una maquinaria | Often | High | Often | High |
-| Registrar o actualizar información de maquinaria | Often | High | N/A | N/A |
-| Gestionar solicitudes de alquiler y reservas | Often | High | N/A | N/A |
-| Coordinar la entrega de maquinaria | Often | High | Often | High |
-| Registrar la devolución de maquinaria | Often | High | N/A | N/A |
-| Verificar el estado de la maquinaria después de un alquiler | Often | High | N/A | N/A |
-| Consultar el historial de mantenimiento de una maquinaria | Sometimes | High | N/A | N/A |
-| Programar o registrar mantenimientos | Sometimes | High | N/A | N/A |
-| Buscar maquinaria según las necesidades de un proyecto | N/A | N/A | Often | High |
-| Consultar características y condiciones de una maquinaria | Sometimes | Medium | Often | High |
-| Solicitar o reservar maquinaria | N/A | N/A | Often | High |
-| Realizar seguimiento del estado de una solicitud o alquiler | Often | High | Often | High |
+| Verificar disponibilidad de equipo | Alta | Alta | Alta | Alta |
+| Registrar/actualizar inventario de equipos | Alta | Alta | — | — |
+| Gestionar reservaciones de clientes | Alta | Alta | — | — |
+| Buscar y comparar proveedores de alquiler | — | — | Alta | Alta |
+| Coordinar entrega y recojo de equipo | Alta | Alta | Media | Alta |
+| Revisar condiciones y costos de alquiler | Media | Alta | Alta | Alta |
+| Elaborar y firmar contratos de alquiler | Media | Alta | Media | Media |
+| Dar seguimiento a fechas de devolución | Alta | Alta | Alta | Alta |
+| Registrar incidentes o daños del equipo | Media | Alta | Media | Media |
+| Programar mantenimiento preventivo | Media | Alta | — | — |
+| Comunicarse con proveedores/clientes vía teléfono o WhatsApp | Alta | Media | Alta | Alta |
+| Reportar avance de gastos/costos de alquiler a su empresa | Media | Media | Media | Alta |
 
-A partir de la Task Matrix se observa que Armando Casas, como representante de las pequeñas empresas de alquiler de maquinaria, concentra una mayor cantidad de tareas relacionadas con la administración y operación interna de los equipos. Entre las tareas que presentan una frecuencia Often y una importancia High se encuentran la consulta de disponibilidad, el registro o actualización de información de maquinaria, la gestión de solicitudes de alquiler y reservas, la coordinación de entregas, el registro de devoluciones y la verificación del estado de los equipos después de un alquiler. Estas actividades son fundamentales para mantener actualizado el inventario y controlar adecuadamente el ciclo de alquiler de la maquinaria.
-
-Por otro lado, las actividades relacionadas con el mantenimiento de los equipos, como consultar su historial y programar o registrar mantenimientos, presentan una frecuencia menor, debido a que no necesariamente se realizan durante cada operación de alquiler. Sin embargo, mantienen una importancia alta, ya que permiten conservar la maquinaria en condiciones adecuadas y reducir posibles interrupciones en su disponibilidad.
-
-En el caso de Andrea Torres, representante de las pequeñas empresas constructoras, las tareas de mayor frecuencia e importancia están principalmente relacionadas con la búsqueda, selección y contratación de maquinaria. Entre ellas se encuentran buscar maquinaria de acuerdo con las necesidades de un proyecto, consultar su disponibilidad y características, solicitar o reservar un equipo y realizar el seguimiento de una solicitud o alquiler. Estas tareas permiten que la empresa constructora encuentre los equipos requeridos y conozca su situación durante el proceso de alquiler.
-
-Las principales coincidencias entre ambos User Personas se encuentran en aquellas actividades que requieren interacción entre la empresa que ofrece la maquinaria y la empresa que la alquila. Por ejemplo, ambos necesitan consultar la disponibilidad de los equipos, coordinar su entrega y realizar seguimiento al estado del alquiler. Aunque participan desde perspectivas diferentes, estas actividades forman parte de un mismo proceso y requieren información compartida y actualizada.
+Del análisis del cuadro se observa que las tareas con mayor frecuencia e importancia para ambos segmentos son verificar disponibilidad de equipo y dar seguimiento a fechas de devolución, lo que confirma que la visibilidad en tiempo real del estado del inventario es una necesidad crítica compartida. Marisol dedica más tiempo a tareas internas de gestión (inventario, mantenimiento, contratos), mientras que Jorge se enfoca en tareas de búsqueda y coordinación externa (comparar proveedores, coordinar entregas). Ambos coinciden en la alta dependencia de canales informales como el teléfono y WhatsApp para comunicarse, lo que representa una oportunidad clara para una solución digital centralizada.
 
 Las principales diferencias se encuentran en las tareas asociadas a la responsabilidad de cada segmento. Armando realiza actividades relacionadas con la administración del inventario, el registro de maquinaria, las devoluciones y el mantenimiento, debido a que la empresa de alquiler es responsable de gestionar los equipos. En cambio, Andrea se enfoca en localizar maquinaria adecuada, consultar sus condiciones y realizar solicitudes de alquiler según las necesidades de sus proyectos. Por esta razón, determinadas tareas se identifican como N/A para alguno de los User Personas, ya que no forman parte de sus responsabilidades dentro de la plataforma.
 
