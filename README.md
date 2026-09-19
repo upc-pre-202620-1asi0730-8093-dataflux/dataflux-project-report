@@ -326,6 +326,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.3.1. User Personas
 
+El user persona se construyó a partir de patrones encontrados en las entrevistas realizadas.
+
+**Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
+
+**Segmento Objetivo 2: Pequeñas empresas constructoras**
+![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+
 ### 2.3.2. User Task Matrix
 
 ### 2.3.3. User Journey Mapping
