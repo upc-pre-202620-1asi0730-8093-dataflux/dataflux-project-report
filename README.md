@@ -871,21 +871,248 @@ Then el sistema registra la solicitud de contacto
 
 ## 4.1. Style Guidelines
 
+Las **Style Guidelines** de RentBuild establecen las decisiones visuales y de interacción que deben mantenerse de forma consistente en la Landing Page y en la Web Application. Estas pautas funcionan como referencia común para el equipo al momento de diseñar e implementar interfaces, assets y componentes, evitando variaciones innecesarias entre productos y dispositivos.
+
+La propuesta toma como base la identidad ya implementada en la Landing Page de RentBuild y la extiende a la Web Application. Además, se adoptan principios de **Material Design** para la jerarquía, los estados, el feedback visual y la consistencia de los componentes. En la futura implementación de la Web Application, estos criterios se alinean con el uso de **Angular Material**.
+
 ### 4.1.1. General Style Guidelines
+
+#### Tone of Voice
+
+El tono de comunicación de RentBuild se define como **serio, formal, respetuoso y sereno**. La plataforma se dirige principalmente a empresas que necesitan controlar operaciones de alquiler y a pequeñas empresas constructoras que requieren maquinaria para sus proyectos, por lo que la comunicación debe transmitir control, claridad y confianza.
+
+- **Serio:** se priorizan mensajes útiles y orientados a la operación del negocio.
+- **Formal:** se emplean expresiones claras y profesionales, evitando lenguaje ambiguo o excesivamente coloquial.
+- **Respetuoso:** los mensajes de ayuda, error y validación orientan al usuario sin atribuirle culpa.
+- **Sereno:** incluso en estados de mantenimiento, retraso o incidencia, la interfaz informa la situación y la acción disponible sin recurrir a mensajes alarmistas.
+
+#### Branding
+
+El isotipo de RentBuild se construye a partir de una representación simplificada y abstracta de una maquinaria de construcción, principalmente inspirada en la estructura de una excavadora. Esta elección busca establecer una relación visual inmediata con el sector en el que se especializa la plataforma: el alquiler de maquinaria y equipos para construcción. Asimismo, la forma del isotipo integra de manera sutil la inicial “R” de RentBuild, reforzando la identidad propia de la marca. 
+
+#### Typography
+
+La identidad tipográfica de **RentBuild** se basa principalmente en la familia **Inter**, utilizada como tipografía general de la Landing Page debido a su alta legibilidad en interfaces digitales y su adecuada adaptación a elementos como textos descriptivos, tarjetas, formularios, botones y componentes de navegación. Adicionalmente, la implementación incorpora **Rubik** como tipografía de apoyo para determinados elementos de mayor carácter visual o editorial, mientras que **Poppins** se utiliza en elementos específicos de la interfaz, como el selector de idioma. Esta combinación permite mantener una jerarquía visual clara y una presentación consistente en las distintas secciones de la Landing Page.
+
+Se establece la siguiente jerarquía tipográfica como referencia:
+
+| Nivel              | Referencia de uso                                                                  | Familia tipográfica | Peso sugerido |
+| ------------------ | ---------------------------------------------------------------------------------- | ------------------- | ------------: |
+| H1 / Hero          | Mensaje principal de la Landing Page y textos de mayor impacto visual              | Inter / Rubik       |       700–800 |
+| H2 / Section Title | Títulos principales de secciones como Features, Benefits, About, Pricing y Contact | Inter               |           700 |
+| H3 / Card Title    | Títulos de funcionalidades, beneficios, planes y elementos destacados              | Inter               |       600–700 |
+| Body               | Descripciones, contenido informativo, formularios y textos generales               | Inter               |           400 |
+| Caption / Helper   | Textos secundarios, estados, etiquetas, metadatos y mensajes de apoyo              | Inter               |       400–500 |
+| Button Label       | Call to Action (CTA), botones de navegación y acciones de la interfaz              | Inter               |           600 |
+| Language Selector  | Opciones y controles relacionados con la selección de idioma                       | Poppins             |       500–600 |
+
+
+#### Colors
+
+La paleta de colores de **RentBuild** se basa en los tokens definidos en `css/variables.css` de la Landing Page. La identidad visual combina un **naranja cálido** como color principal para llamadas a la acción y elementos destacados, junto con tonos **azul oscuro** para títulos, navegación y elementos asociados a la marca. Asimismo, se emplean colores neutros para fondos, textos secundarios, bordes y superficies, permitiendo mantener un adecuado nivel de contraste y una jerarquía visual consistente.
+
+| Token             | Hex       | Aplicación                                                                                                       |
+| ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| Primary           | `#F59E0B` | Color principal de la interfaz, utilizado en CTA, elementos destacados y acentos visuales                        |
+| Primary Dark      | `#B86D00` | Variante oscura del color principal, utilizada en estados interactivos como hover y elementos de mayor contraste |
+| Navy / Brand Blue | `#1E3A5F` | Branding, títulos, navegación y elementos principales de identidad visual                                        |
+| Text / Ink        | `#1E293B` | Texto principal, encabezados y contenido que requiere alto contraste                                             |
+| Blue              | `#2563EB` | Enlaces, estados de enfoque y acciones secundarias                                                               |
+| Mint              | `#54BD95` | Indicadores positivos, estados de disponibilidad y elementos complementarios                                     |
+| Background        | `#F8FAFC` | Fondo general de la Landing Page y secciones de contenido                                                        |
+| Surface           | `#FFFFFF` | Cards, formularios, paneles y superficies elevadas                                                               |
+| Text Muted        | `#737984` | Descripciones, textos secundarios, metadatos y contenido auxiliar                                                |
+| Footer            | `#64748B` | Texto secundario y contenido complementario del footer                                                           |
+| Border            | `#E2E8F0` | Bordes, divisores, contornos de inputs y separación entre componentes                                            |
+
+En la Web Application se utilizan además colores semánticos para estados de operación: verde para disponibilidad o éxito, azul para estados confirmados, naranja para mantenimiento o atención requerida y rojo para error o acciones críticas.
+
+#### Spacing
+
+El sistema de espaciado de **RentBuild** utiliza una escala consistente definida mediante variables CSS. Los valores principales son `4 px`, `8 px`, `16 px`, `24 px`, `48 px` y `80 px`, empleados para controlar márgenes, paddings y separación entre los distintos elementos y secciones de la Landing Page. Esta progresión permite mantener una distribución visual uniforme y establecer una jerarquía clara entre contenidos relacionados.
+
+Para los bordes redondeados se establecen como valores principales `8 px`, `16 px` y `24 px`, correspondientes a los tokens `--radius-sm`, `--radius-md` y `--radius-lg`. Adicionalmente, algunos componentes utilizan radios específicos como `10 px`, `20 px`, `30 px` o `999 px`, este último empleado principalmente en elementos con forma de pill, badges y controles completamente redondeados.
+
+El contenido principal de la Landing Page se encuentra limitado mediante un contenedor con un ancho máximo de **1180 px** (`--container-max`). Este contenedor adapta automáticamente su ancho en pantallas más pequeñas mediante márgenes laterales responsivos, mientras que las distintas secciones utilizan espacios verticales amplios para mantener una adecuada separación visual.
+
+Las cards, formularios y paneles emplean sombras suaves, utilizando como referencia el token `--shadow-card`, definido como `0 3px 8px rgb(12 36 66 / 8%)`. Estas sombras permiten diferenciar las superficies y generar profundidad sin producir una apariencia visual excesivamente cargada.
+
+<p align="center">
+  <img src="assets/md-images-chapter4/GeneralStyleGuidelinesPreview.png"
+       alt="General Style Guidelines de RentBuild"
+       width="100%">
+</p>
+
 
 ### 4.1.2. Web Style Guidelines
 
+Las **Web Style Guidelines** trasladan la identidad visual de **RentBuild** a interfaces web responsive, manteniendo coherencia entre la **Landing Page** y la **Web Application**. La Landing Page utiliza una navegación horizontal y una organización principalmente secuencial del contenido, mientras que la Web Application se estructura mediante una sidebar persistente, módulos funcionales, cards, formularios, filtros, tablas y listas operativas.
+
+La guía busca mantener consistencia en el uso de colores, tipografías, espaciado, jerarquías visuales, componentes interactivos y estados de interfaz, permitiendo que ambas experiencias formen parte de un mismo sistema visual.
+
+#### Material Design and Components
+
+El lenguaje visual de **RentBuild** toma principios de **Material Design** como referencia para la jerarquía, separación de superficies, consistencia de acciones, feedback visual y estados de interacción. Estos principios se adaptan a la identidad propia de RentBuild mediante sus tokens de color, tipografía, espaciado, bordes y radios.
+
+Para la **Web Application**, los componentes se diseñan con una estructura compatible con patrones de interfaces basadas en componentes, pudiendo posteriormente implementarse con tecnologías como **Angular Material** sin perder la identidad visual definida para RentBuild.
+
+Los componentes principales son:
+
+| Componente | Criterio de diseño |
+|---|---|
+| Primary CTA | Acción principal de alta visibilidad; utiliza principalmente el color `Primary` (`#F59E0B`) y texto de alto contraste |
+| Secondary Button | Acción complementaria presentada mediante borde, fondo blanco o superficie neutra |
+| Input / Select / Textarea | Label visible, borde consistente, espaciado uniforme y estados diferenciados de focus, error y disabled |
+| Search Bar | Búsqueda directa por nombre o categoría, complementada con filtros cuando corresponde |
+| Status Badge | Etiqueta breve acompañada de color para representar disponibilidad, alquiler, mantenimiento, aprobación, rechazo u otros estados |
+| Data Card | Agrupa información relevante en superficies blancas con bordes suaves y jerarquía clara |
+| Catalog Card | Presenta maquinaria mediante categoría, nombre, estado, disponibilidad, tarifa y acceso a detalle |
+| Data Table | Organiza información operativa como inventario, solicitudes, alquileres, mantenimiento e historial |
+| Form Card | Contenedor utilizado para procesos como registro de maquinaria o mantenimiento |
+| Sidebar | Navegación principal persistente de la Web Application, con estado activo diferenciado mediante fondo claro y color naranja |
+| Header | Navegación principal de la Landing Page, con acceso a las principales secciones del contenido |
+| Filter Control | Selectores y controles utilizados para reducir resultados por categoría, estado, maquinaria u otros criterios |
+| User Profile Block | Área que muestra información básica del usuario y acceso a la acción de cerrar sesión |
+
+#### Responsive Web Design
+
+La Landing Page de **RentBuild** aplica un diseño responsivo que adapta progresivamente la distribución, navegación, tipografía y tamaño de los componentes según el ancho disponible. La implementación utiliza principalmente los breakpoints de `1120 px`, `1023 px`, `767 px` y `480 px`.
+
+- **Desktop Web Browser:** se mantiene la distribución completa de las secciones, con navegación horizontal, composiciones de varias columnas y un ancho máximo de contenido controlado mediante el contenedor principal.
+- **Tablet / Small Laptop:** a partir de `1023 px`, la navegación horizontal se transforma en un menú desplegable mediante un botón tipo hamburguesa. También se reducen espacios, tamaños tipográficos y separación entre cards para aprovechar mejor el área disponible.
+- **Mobile Web Browser:** a partir de `767 px`, las principales secciones pasan progresivamente a una distribución de una columna. Elementos como Hero, About, Contact y Pricing reorganizan su contenido verticalmente, mientras que las cards y recursos visuales ajustan su ancho al espacio disponible. Por debajo de `480 px` se realizan ajustes adicionales en navegación, cards, footer y elementos visuales para pantallas pequeñas.
+
+#### Interaction States
+
+Los elementos interactivos de **RentBuild**, como botones, enlaces, controles del menú, selector de idioma, acordeones y campos de formulario, deben ofrecer una respuesta visual clara ante la interacción del usuario. Se consideran los estados **default, hover, focus, disabled, success y error**, aplicándolos según corresponda al tipo de componente.
+
+La Landing Page actual incorpora cambios visuales en estado `hover` para botones y enlaces, además de un estado de foco accesible mediante `:focus-visible`. Este último utiliza un `outline` de `3 px` en el color Navy de la marca y un `outline-offset` de `5 px`, permitiendo identificar claramente el elemento seleccionado mediante navegación por teclado.
+
+Los formularios también contemplan retroalimentación para estados de **success** y **error**, comunicando al usuario el resultado de acciones como el envío de información.
+
+#### Internationalization and Accessibility
+
+**RentBuild** contempla **English (`en`)** como idioma predeterminado y **Spanish (`es`)** como idioma alternativo. La implementación actual utiliza archivos de traducción independientes (`en.json` y `es.json`) y un selector `EN / ES` que permite cambiar el idioma de la interfaz. La preferencia seleccionada se conserva mediante `localStorage` utilizando la clave `rentbuild-language`.
+
+En materia de accesibilidad, RentBuild incorpora estructura semántica, textos alternativos para recursos visuales, navegación mediante teclado, enlace de salto al contenido principal y atributos ARIA como `aria-label`, `aria-expanded`, `aria-controls`, `aria-current` y `aria-live` cuando corresponde. Asimismo, se proporciona un foco visual claramente identificable y se respeta la preferencia del usuario `prefers-reduced-motion`, desactivando animaciones y transiciones cuando el sistema solicita una reducción de movimiento.
+
 ## 4.2. Information Architecture
+
+Para el desarrollo de **RentBuild**, la Arquitectura de la Información se plantea considerando las necesidades de los usuarios, la naturaleza de las tareas que realizan y la estructura del contenido disponible tanto en la **Landing Page** como en la **Web Application**. Esta organización permite presentar la información de manera clara, facilitar el acceso a las funcionalidades principales y reducir la complejidad durante la navegación e interacción con la plataforma.
 
 ### 4.2.1. Organization Systems
 
+En la **Landing Page**, la información se organiza principalmente de manera **jerárquica y secuencial**. El visitante inicia su recorrido con la propuesta de valor presentada en el **Hero** y continúa progresivamente por las secciones que explican el funcionamiento, las características y los beneficios de RentBuild. Posteriormente, puede conocer con mayor detalle el producto, revisar información sobre la solución, consultar los planes disponibles y finalmente acceder a las opciones de contacto.
+
+El recorrido principal de la Landing Page sigue aproximadamente la siguiente secuencia:
+
+**Home / Hero → How It Works → Features → Benefits → Product Showcase → About RentBuild → Pricing → Contact**
+
+Esta estructura permite acompañar al visitante desde el descubrimiento inicial de RentBuild hasta la evaluación de sus funcionalidades y planes, finalizando con una posible acción de contacto o conversión.
+
+En la **Web Application**, la información se organiza principalmente **por tópicos y tareas**, utilizando una barra lateral persistente que permite acceder directamente a las principales funcionalidades del sistema. 
+
+- **Perfil:** permite visualizar la información correspondiente a la cuenta del usuario.
+- **Inventario:** presenta la maquinaria registrada junto con información como categoría, estado y unidades disponibles.
+- **Registrar maquinaria:** permite incorporar nuevos equipos al inventario mediante un formulario.
+- **Solicitudes:** permite consultar las solicitudes de alquiler realizadas y su respectivo estado.
+- **Alquileres activos:** muestra los alquileres que se encuentran actualmente en curso, incluyendo información sobre periodo, tarifa y costo estimado.
+- **Mantenimiento:** permite registrar mantenimientos o incidencias relacionadas con la maquinaria y consultar su historial.
+- **Historial:** centraliza los eventos relacionados con cada equipo, como solicitudes, aprobaciones, rechazos, incidencias y mantenimientos.
+- **Catálogo:** permite explorar la maquinaria disponible mediante cards, búsqueda y filtros por categoría y estado.
+
+Además de la organización por tópicos, RentBuild incorpora una organización **secuencial** asociada al ciclo operativo de la maquinaria. Las diferentes funcionalidades se relacionan siguiendo un flujo general como el siguiente:
+
+**registro o consulta de maquinaria → solicitud de alquiler → aprobación o rechazo → alquiler activo → mantenimiento o incidencia → historial → actualización de disponibilidad**
+
+Esta combinación entre organización temática y secuencial permite que el usuario pueda acceder directamente a una funcionalidad específica desde la navegación principal y, al mismo tiempo, comprender la relación existente entre las distintas etapas del ciclo de alquiler y gestión de maquinaria.
+
 ### 4.2.2. Labeling Systems
+
+El sistema de etiquetado de **RentBuild** utiliza términos breves, descriptivos y relacionados directamente con las tareas del dominio de alquiler y gestión de maquinaria. Las etiquetas buscan mantener consistencia entre la **Landing Page** y la **Web Application**, evitando términos ambiguos y facilitando que el usuario pueda anticipar el contenido o acción asociada a cada elemento.
+
+La plataforma contempla internacionalización mediante **English (`en`)** y **Spanish (`es`)**, manteniendo equivalencias para los principales elementos de navegación, contenido y estados de la interfaz.
+
+| Contexto | Etiqueta principal | Asociación esperada |
+|---|---|---|
+| Landing Page | `Home` | Propuesta de valor principal de RentBuild |
+| Landing Page | `How it works` | Explicación general del funcionamiento y ciclo operativo |
+| Landing Page | `Features` | Funcionalidades principales para la gestión de maquinaria |
+| Landing Page | `Benefits` | Beneficios obtenidos mediante el uso de RentBuild |
+| Landing Page | `Product Demo` | Presentación visual del funcionamiento del producto |
+| Landing Page | `About` | Información sobre RentBuild y su propósito |
+| Landing Page | `Plans` | Planes Basic, Pro y Premium |
+| Landing Page | `Contact us` | Comunicación y contacto con el equipo de RentBuild |
+| Web Application | `Profile / Perfil` | Información de la cuenta del usuario |
+| Web Application | `Inventory / Inventario` | Maquinaria registrada, categoría, estado y unidades |
+| Web Application | `Register machinery / Registrar maquinaria` | Registro de nuevos equipos |
+| Web Application | `Requests / Solicitudes` | Solicitudes de alquiler y su estado |
+| Web Application | `Active rentals / Alquileres activos` | Alquileres actualmente vigentes |
+| Web Application | `Maintenance / Mantenimiento` | Registro y consulta de mantenimientos e incidencias |
+| Web Application | `History / Historial` | Eventos y actividades asociados a la maquinaria |
+| Web Application | `Catalog / Catálogo` | Exploración y consulta de la maquinaria disponible |
+
+Los estados también utilizan etiquetas breves acompañadas por indicadores visuales. Para la maquinaria se utilizan estados como `Available / Disponible`, `Rented / Alquilado`, `Reserved / Reservado` y `Maintenance / Mantenimiento`. Para las solicitudes se emplean `Pending / Pendiente`, `Approved / Aprobada` y `Rejected / Rechazada`, mientras que los alquileres activos pueden mostrar estados como `In progress / En curso`.
+
+El color funciona como apoyo visual para reconocer rápidamente estos estados, pero el significado no depende exclusivamente de él, ya que cada badge mantiene una etiqueta textual.
 
 ### 4.2.3. SEO Tags and Meta Tags
 
+Los **SEO Tags y Meta Tags** permiten identificar y describir correctamente la Landing Page de RentBuild para navegadores, motores de búsqueda y dispositivos. 
+
+| Producto | Tag | Valor |
+|---|---|---|
+| Landing Page | `title` | `RentBuild — Equipment rental, under control` |
+| Landing Page | `description` | `RentBuild connects equipment, reservations, rentals, deliveries, returns, and maintenance in one platform. Built by DataFlux.` |
+| Landing Page | `keywords` | `equipment rental, construction machinery, machinery management, rental management software, equipment availability, maintenance management, RentBuild` |
+| Landing Page | `author` | `DataFlux` |
+| Landing Page | `theme-color` | `#1E3A5F` |
+| Landing Page | `charset` | `UTF-8` |
+| Landing Page | `viewport` | `width=device-width, initial-scale=1.0` |
+| Landing Page | `lang` | `en`, actualizado dinámicamente a `es` cuando corresponde |
+| Web Application | `title` | `RentBuild | Equipment rental workspace` |
+| Web Application | `description` | `Manage machinery inventory, rental requests, active rentals, maintenance and equipment history with RentBuild.` |
+| Web Application | `keywords` | `equipment inventory, machinery rental, rental requests, active rentals, maintenance, equipment history, machinery catalog, RentBuild` |
+| Web Application | `author` | `DataFlux` |
+
 ### 4.2.4. Searching Systems
 
+El sistema de búsqueda de **RentBuild** se concentra en las áreas de la Web Application donde el volumen de maquinaria o registros puede dificultar la localización directa de información. En la Landing Page no se requiere un motor de búsqueda interno, debido a que el contenido se encuentra organizado en secciones accesibles mediante navegación y enlaces contextuales.
+
+En la Web Application se combinan mecanismos de **búsqueda directa**, **filtrado** y **exploración visual**.
+
+| Área | Búsqueda / filtros | Presentación de resultados |
+|---|---|---|
+| Landing Page | Navegación mediante secciones y enlaces internos | Desplazamiento hacia la sección correspondiente |
+| Catálogo | Búsqueda por nombre o categoría | Cards de maquinaria |
+| Catálogo | Filtro por categoría | Cards que coinciden con la categoría seleccionada |
+| Catálogo | Filtro por estado | Cards según disponibilidad o estado de la maquinaria |
+| Historial | Filtro por maquinaria | Tabla con eventos, fechas y detalles asociados |
+| Inventario | Consulta directa de maquinaria registrada | Tabla con equipo, categoría, estado y unidades |
+| Solicitudes | Consulta de solicitudes registradas | Tabla con maquinaria, fechas de alquiler y estado |
+| Alquileres activos | Consulta de alquileres actualmente vigentes | Tabla con maquinaria, periodo, tarifa, costo y estado |
+| Mantenimiento | Selección de maquinaria y tipo de registro | Formulario e historial de mantenimientos e incidencias |
+
+El **Catálogo de maquinaria** constituye el principal sistema de búsqueda exploratoria. El usuario dispone de una barra con el placeholder `Search by name or category… / Buscar por nombre o categoría…`, acompañada por filtros de categoría y estado. Los resultados se presentan mediante cards que muestran información esencial como categoría, nombre del equipo, estado, disponibilidad, tarifa y acceso a detalles.
+
+Por otra parte, el módulo **Historial** permite filtrar los eventos según una maquinaria determinada, facilitando la consulta de solicitudes, mantenimientos, incidencias y otros acontecimientos relacionados con un equipo.
+
+El criterio general consiste en utilizar **búsqueda directa** cuando el usuario conoce el nombre o categoría de la maquinaria y **filtros** cuando necesita reducir progresivamente el conjunto de resultados.
+
 ### 4.2.5. Navigation Systems
+
+**RentBuild** emplea diferentes niveles de navegación para permitir que el usuario acceda a las principales funcionalidades sin perder el contexto dentro de la plataforma.
+
+| Tipo de navegación | Aplicación en RentBuild |
+|---|---|
+| Global | Header de la Landing Page y sidebar persistente de la Web Application |
+| Local | Contenido y controles propios de módulos como Inventario, Mantenimiento, Historial y Catálogo |
+| Contextual | Acciones como `View details / Ver detalle`, registro de maquinaria y consulta de información específica |
+| Utility | Selector `EN / ES`, información del usuario y `Log out / Cerrar sesión` |
+| Quick actions | `Register machinery / Registrar maquinaria`, `Save record / Guardar registro` y `View details / Ver detalle` |
+| Responsive | Menú desplegable en la Landing Page y adaptación de la navegación para pantallas de menor tamaño |
+
+En la **Landing Page**, la navegación global permite acceder a las principales áreas informativas de RentBuild. El logo funciona como acceso a `Home`, mientras que la navegación dirige al usuario hacia secciones como `How it works`, `Features`, `Plans`, `Our Team` y `Contact us`. Otras secciones, como Benefits, Product Demo y About, forman parte del recorrido secuencial del contenido.
 
 ## 4.3. Landing Page UI Design
 
