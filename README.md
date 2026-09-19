@@ -676,18 +676,6 @@ Ana Rivera Quispe se dedica a la administración de pequeñas empresas dedicadas
 
 ### 2.3.1. User Personas
 
-En esta sección se presentan las fichas de User Personas construidas a partir de los datos recogidos del análisis de entrevistas al segmento #1: "Empresas de alquiler de equipos" y al segmento #2: "Empresas constructoras". Estas fichas permiten representar de forma clara y estratégica los perfiles del segmento objetivo, considerando sus metas, habilidades, motivaciones y dificultades. Al integrar tanto la perspectiva del usuario como las tendencias del sector, estas representaciones sirven como una herramienta clave para el diseño de soluciones digitales centradas en el usuario y alineadas con las oportunidades del mercado.
-
-**Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
-
-![User Persona 1](./assets/md-images-chapter2/user-persona-marisol-vega.png)
-
-Segmento Objetivo 1: https://app.creately.com/d/QwlCIfA0o0k/edit
-
-![User Persona 2](./assets/md-images-chapter2/user-persona-jorge-ramirez.png)
-
-Segmento Objetivo 2: https://app.creately.com/d/DyKHPyVwNtd/edit
-
 ### 2.3.2. User Task Matrix
 
 En esta sección se presenta el User Task Matrix, que concentra las tareas que realizan Marisol Vega Torres (Segmento 1 — Empresas de Alquiler) y Jorge Ramírez Delgado (Segmento 2 — Empresas Constructoras) para cumplir sus objetivos, independientemente de la existencia de una solución de software. Se considera para cada tarea su frecuencia (qué tan seguido la realiza) y su importancia (qué tan crítica es para su rol), en una escala de Baja / Media / Alta.
