@@ -205,13 +205,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-|   Código   | Nombre completo del integrante  | Descripción de la carrera                                          |                               Fotografía                                | Conocimientos y habilidades                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|   Código   | Nombre completo del integrante  | Descripción de la carrera                                          |                                  Fotografía                                  | Conocimientos y habilidades                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |:----------:|:--------------------------------| :----------------------------------------------------------------- |:----------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | U20211B198 | Cisneros Salas, Luis            | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |     <img src="assets/md-images-members/luis-angel.jpeg" width="150px" />     | Soy estudiante de Ingeniería de Software interesado en crear soluciones digitales que simplifiquen procesos y resuelvan problemas reales. Actualmente fortalezco mis conocimientos en C#, y cuento con experiencia en C++, Java, JavaScript, HTML y CSS. Me interesa especialmente el desarrollo frontend, las bases de datos y las aplicaciones web. Soy una persona organizada, responsable, de rápido aprendizaje y con facilidad para trabajar en equipo. Busco esta oportunidad para adquirir experiencia y seguir creciendo profesionalmente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | U202410211 | Manosalva Tovar, Miroslav       | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/miroslav-manosalva.jpeg" width="150px" /> | Soy Miroslav Manosalva Tovar, estudiante de Ingeniería de Software. Tengo conocimientos en el área de programación y experiencia en la elaboración de interfaces de usuario (UI), que puedo aportar al desarrollo de RentBuild. Mi experiencia trabajando con interfaces me permite contribuir a la presentación de la información y a la organización visual de las funcionalidades de la plataforma. Me considero una persona responsable y persistente: procuro cumplir con las actividades que asumo y mantener el esfuerzo cuando encuentro dificultades. En este proyecto, busco aplicar mis conocimientos de programación y diseño de interfaces, seguir fortaleciendo mi formación y contribuir al desarrollo de una solución útil para sus usuarios.                                                                                                                                                                                                                                                                 |
 | U202111529 | Montalvo Vasquez, Bruno Rodrigo | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |   <img src="assets/md-images-members/bruno-montalvo.png" width="150px" />    | Soy Bruno Rodrigo Montalvo Vasquez, estudiante de la carrera de Ingeniería de Software. Me encuentro interesado y motivado por aprender nuevos temas relacionados con mi carrera. Asimismo, estoy abierto a trabajar con profesionales de mi área académica para mejorar mis conocimientos, adquirir experiencia y fortalecer mis habilidades de trabajo en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | U20211F962 | Vargas Manchinelli, Deiby Juan  | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |    <img src="assets/md-images-members/deiby-vargas.jpeg" width="150px" />    | Estudio Ingeniería de Software y me apasiona usar la tecnología para convertir problemas en soluciones prácticas. Actualmente estoy aprendiendo y fortaleciendo mis conocimientos en C#, además de tener experiencia con C++, Java, JavaScript, HTML y CSS. Me interesa el frontend, las bases de datos y el desarrollo web. Soy organizado, aprendo rápido y disfruto trabajar en equipo. Mi objetivo es ganar experiencia, aprender y seguir creciendo en el mundo del software.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| U202322849 | Viza Quispe, Marlon Packard     | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |    <img src="assets/md-images-members/marlon-viza.jpeg" width="150px" />     | Soy estudiante de Ingeniería de Software con interés en el desarrollo web, frontend y bases de datos. Tengo experiencia con C++, Java, JavaScript, HTML y CSS, y actualmente estoy fortaleciendo mis conocimientos en C#. Me motiva crear soluciones útiles y eficientes, aprender constantemente y enfrentar nuevos desafíos. Me considero una persona organizada, creativa y con buena capacidad para trabajar en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| U202322849 | Viza Quispe, Marlon Packard     | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |     <img src="assets/md-images-members/marlon-viza.jpg" width="150px" />     | Soy estudiante de Ingeniería de Software con interés en el desarrollo web, frontend y bases de datos. Tengo experiencia con C++, Java, JavaScript, HTML y CSS, y actualmente estoy fortaleciendo mis conocimientos en C#. Me motiva crear soluciones útiles y eficientes, aprender constantemente y enfrentar nuevos desafíos. Me considero una persona organizada, creativa y con buena capacidad para trabajar en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## 1.2. Solution Profile
 
@@ -235,7 +235,237 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.1.1. Análisis competitivo
 
+<table style="text-align: center; width: 100%;">
+  <tr>
+    <th colspan="6">Competitive Analysis Landscape</th>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>¿Por qué llevar a cabo este análisis?</strong></td>
+    <td colspan="4">
+      Identificar oportunidades de diferenciación frente a soluciones existentes de alquiler de equipos y determinar cómo RentBuild puede ofrecer una solución más simple y especializada para PYMES del sector construcción.
+    </td>
+  </tr>
+
+  <tr>
+      <td colspan="2"><strong>Logotipos</strong></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-logo.png" alt="RentBuild" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Booqable.png" alt="Booqable" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Rentman.png" alt="Rentman" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Odoo%20Rental.png" alt="Odoo Rental" height="50"></td>
+  </tr>
+
+  <tr>
+    <td rowspan="2"><strong>Perfil</strong></td>
+    <td><strong>Overview</strong></td>
+    <td>RentBuild</td>
+    <td>Booqable</td>
+    <td>Rentman</td>
+    <td>Odoo Rental</td>
+  </tr>
+
+  <tr>
+    <td><strong>Ventaja Competitiva</strong></td>
+    <td>Gestión del ciclo completo de la maquinaria, desde reserva y alquiler hasta devolución, inspección, mantenimiento y nueva disponibilidad.</td>
+    <td>Facilidad para gestionar reservas, inventario y pedidos de alquiler desde una misma plataforma.</td>
+    <td>Gestión avanzada de inventario, almacenes, disponibilidad, mantenimiento y trazabilidad de equipos.</td>
+    <td>Integración con otros módulos como inventario, ventas, facturación y mantenimiento.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2"><strong>Perfil de Marketing</strong></td>
+    <td><strong>Mercado Objetivo</strong></td>
+    <td>Pequeñas y medianas empresas de alquiler de maquinaria para construcción y pequeñas empresas constructoras.</td>
+    <td>Empresas de alquiler de diferentes tamaños y sectores.</td>
+    <td>Empresas de alquiler, eventos y organizaciones que administran grandes cantidades de equipos.</td>
+    <td>Empresas de distintos sectores que necesitan integrar alquileres con otros procesos administrativos.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Estrategias de Marketing</strong></td>
+    <td>Marketing B2B, publicidad digital dirigida al sector construcción, demostraciones, prueba inicial y contacto directo con empresas de alquiler.</td>
+    <td>Promoción de digitalización del negocio de alquiler, reservas online y facilidad de administración.</td>
+    <td>Promoción basada en eficiencia operativa, control de equipos y reducción de errores mediante automatización.</td>
+    <td>Promoción mediante el ecosistema integrado de aplicaciones empresariales de Odoo.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="3"><strong>Perfil de Producto</strong></td>
+    <td><strong>Productos y Servicios</strong></td>
+    <td>Inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias, inspecciones y mantenimiento.</td>
+    <td>Inventario, reservas, pedidos, contratos, facturación, pagos, recogidas y devoluciones.</td>
+    <td>Inventario, planificación, almacenes, proyectos, códigos QR, reparaciones, mantenimiento y facturación.</td>
+    <td>Reservas, alquileres, cotizaciones, facturación, recogidas y devoluciones, con integración a otros módulos.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Precios y Costos</strong></td>
+    <td>Modelo SaaS con planes de suscripción escalables según las necesidades de las PYMES.</td>
+    <td>Suscripción mensual o anual mediante diferentes planes.</td>
+    <td>Suscripción según usuarios, módulos y funcionalidades utilizadas.</td>
+    <td>Suscripción mediante planes y aplicaciones del ecosistema Odoo.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Canales de Distribución (Web y/o Móvil)</strong></td>
+    <td>Plataforma web responsive accesible desde computadora, tablet o smartphone.</td>
+    <td>Plataforma web y herramientas móviles para determinadas operaciones.</td>
+    <td>Plataforma web y aplicación móvil.</td>
+    <td>Plataforma web y aplicación móvil.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="4"><strong>Análisis SWOT</strong></td>
+    <td><strong>Fortalezas</strong></td>
+    <td>
+      • Gestión integral del ciclo de alquiler.<br>
+      • Control de disponibilidad y estado de equipos.<br>
+      • Integración de alquiler y mantenimiento.<br>
+      • Plataforma centralizada.
+    </td>
+    <td>
+      • Gestión de inventario en tiempo real.<br>
+      • Reservas y pagos online.<br>
+      • Plataforma especializada en alquiler.<br>
+      • Automatización de procesos.
+    </td>
+    <td>
+      • Gestión avanzada de inventario.<br>
+      • Seguimiento mediante QR.<br>
+      • Control de múltiples almacenes.<br>
+      • Gestión de reparaciones.
+    </td>
+    <td>
+      • Amplio ecosistema ERP.<br>
+      • Integración entre diferentes módulos.<br>
+      • Alta capacidad de personalización.<br>
+      • Gestión de alquiler y facturación.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Debilidades</strong></td>
+    <td>
+      • Marca nueva.<br>
+      • Poco reconocimiento en el mercado.<br>
+      • Menor cantidad de integraciones iniciales.<br>
+      • Funcionalidades aún en crecimiento.
+    </td>
+    <td>
+      • Solución general para diferentes tipos de alquiler.<br>
+      • Algunas funciones dependen del plan contratado.<br>
+      • Menor especialización en maquinaria.<br>
+      • Dependencia de servicios en línea.
+    </td>
+    <td>
+      • Mayor complejidad de uso.<br>
+      • Curva de aprendizaje más alta.<br>
+      • Funciones avanzadas pueden resultar innecesarias.<br>
+      • Dependencia de módulos adicionales.
+    </td>
+    <td>
+      • Configuración más compleja.<br>
+      • Curva de aprendizaje elevada.<br>
+      • Gran cantidad de módulos.<br>
+      • Menor especialización en alquiler de maquinaria.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Oportunidades</strong></td>
+    <td>
+      • Incorporar nuevas automatizaciones.<br>
+      • Integrar nuevas funcionalidades de mantenimiento.<br>
+      • Ampliar integraciones con otros sistemas.<br>
+      • Expandir la gestión hacia nuevos tipos de equipos.
+    </td>
+    <td>
+      • Incorporar nuevas tecnologías de automatización.<br>
+      • Expandir funcionalidades de gestión de activos.<br>
+      • Mejorar integraciones externas.<br>
+      • Ampliar servicios digitales de alquiler.
+    </td>
+    <td>
+      • Fortalecer automatización del mantenimiento.<br>
+      • Mejorar análisis de datos de equipos.<br>
+      • Incorporar nuevas integraciones.<br>
+      • Expandir funcionalidades de trazabilidad.
+    </td>
+    <td>
+      • Ampliar su ecosistema de aplicaciones.<br>
+      • Incorporar nuevas automatizaciones.<br>
+      • Mejorar la integración entre módulos.<br>
+      • Expandir funciones relacionadas con alquiler.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Amenazas</strong></td>
+    <td>
+      • Competidores internacionales consolidados.<br>
+      • Aparición de nuevas plataformas especializadas.<br>
+      • Evolución rápida de tecnologías de gestión.<br>
+      • Competidores con mayor cantidad de integraciones.
+    </td>
+    <td>
+      • Nuevas plataformas especializadas.<br>
+      • Competidores con precios más bajos.<br>
+      • Mayor competencia SaaS.<br>
+      • Soluciones con mayor especialización.
+    </td>
+    <td>
+      • Plataformas más simples.<br>
+      • Nuevos competidores especializados.<br>
+      • Alternativas con menores costos.<br>
+      • Evolución tecnológica del sector.
+    </td>
+    <td>
+      • Plataformas SaaS especializadas.<br>
+      • Soluciones con implementación más rápida.<br>
+      • Competidores con menor complejidad.<br>
+      • Herramientas específicas para alquiler de equipos.
+    </td>
+  </tr>
+</table>
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+A partir del análisis competitivo, DataFlux aplicará estrategias para afrontar las fortalezas de sus competidores, aprovechar sus debilidades y responder a las oportunidades y amenazas del mercado.
+
+#### Estrategia ofensiva: aprovechar la menor especialización de Booqable
+
+Booqable posee una plataforma consolidada de alquiler, pero su enfoque es general para distintos tipos de equipos. RentBuild aprovechará esta menor especialización.
+
+- **Gestión especializada:** integrar alquiler, devolución, incidencias y mantenimiento de maquinaria.
+- **Control del equipo:** mantener actualizado el estado y disponibilidad de cada maquinaria.
+
+#### Estrategia defensiva: responder a la gestión avanzada de Rentman
+
+Rentman destaca por su gestión avanzada de inventario y equipos. RentBuild responderá con una plataforma más simple y enfocada.
+
+- **Interfaz sencilla:** facilitar las operaciones principales con menos pasos.
+- **Dashboard operativo:** visualizar rápidamente disponibilidad, alquileres y mantenimientos.
+
+#### Estrategia competitiva: aprovechar la complejidad de Odoo Rental
+
+Odoo Rental cuenta con un amplio ecosistema de módulos, pero su configuración puede resultar más compleja.
+
+- **Enfoque específico:** concentrar las funciones necesarias para la gestión de alquiler de maquinaria.
+- **Implementación simple:** reducir la dependencia de módulos y configuraciones adicionales.
+
+#### Estrategia adaptativa: aprovechar oportunidades tecnológicas
+
+RentBuild buscará fortalecer sus capacidades conforme evolucionen las necesidades del mercado.
+
+- **Automatización:** incorporar alertas y seguimiento automático de equipos.
+- **Integraciones:** añadir progresivamente servicios complementarios a la plataforma.
+
+#### Estrategia defensiva frente a amenazas del mercado
+
+La presencia de competidores consolidados y nuevas plataformas especializadas representa una amenaza para RentBuild.
+
+- **Diferenciación:** reforzar la gestión integral del ciclo de alquiler como ventaja principal.
+- **Mejora continua:** incorporar nuevas funcionalidades para mantener la competitividad de la plataforma.
 
 ## 2.2. Entrevistas
 
