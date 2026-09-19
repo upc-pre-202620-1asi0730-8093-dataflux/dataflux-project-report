@@ -336,7 +336,6 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.2. User Task Matrix
 
-
 | TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
 | :---- | :---: | :---: | :---: | :---: |
 | **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
@@ -352,17 +351,6 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 | **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
 | **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
 | **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
-
-A partir de la Task Matrix se observa que Armando Casas, como representante de las pequeñas empresas de alquiler de maquinaria, concentra una mayor cantidad de tareas relacionadas con la administración y operación interna de los equipos. Entre las tareas que presentan una frecuencia Often y una importancia High se encuentran la consulta de disponibilidad, el registro o actualización de información de maquinaria, la gestión de solicitudes de alquiler y reservas, la coordinación de entregas, el registro de devoluciones y la verificación del estado de los equipos después de un alquiler. Estas actividades son fundamentales para mantener actualizado el inventario y controlar adecuadamente el ciclo de alquiler de la maquinaria.
-
-Por otro lado, las actividades relacionadas con el mantenimiento de los equipos, como consultar su historial y programar o registrar mantenimientos, presentan una frecuencia menor, debido a que no necesariamente se realizan durante cada operación de alquiler. Sin embargo, mantienen una importancia alta, ya que permiten conservar la maquinaria en condiciones adecuadas y reducir posibles interrupciones en su disponibilidad.
-
-En el caso de Andrea Torres, representante de las pequeñas empresas constructoras, las tareas de mayor frecuencia e importancia están principalmente relacionadas con la búsqueda, selección y contratación de maquinaria. Entre ellas se encuentran buscar maquinaria de acuerdo con las necesidades de un proyecto, consultar su disponibilidad y características, solicitar o reservar un equipo y realizar el seguimiento de una solicitud o alquiler. Estas tareas permiten que la empresa constructora encuentre los equipos requeridos y conozca su situación durante el proceso de alquiler.
-
-Las principales coincidencias entre ambos User Personas se encuentran en aquellas actividades que requieren interacción entre la empresa que ofrece la maquinaria y la empresa que la alquila. Por ejemplo, ambos necesitan consultar la disponibilidad de los equipos, coordinar su entrega y realizar seguimiento al estado del alquiler. Aunque participan desde perspectivas diferentes, estas actividades forman parte de un mismo proceso y requieren información compartida y actualizada.
-
-Las principales diferencias se encuentran en las tareas asociadas a la responsabilidad de cada segmento. Armando realiza actividades relacionadas con la administración del inventario, el registro de maquinaria, las devoluciones y el mantenimiento, debido a que la empresa de alquiler es responsable de gestionar los equipos. En cambio, Andrea se enfoca en localizar maquinaria adecuada, consultar sus condiciones y realizar solicitudes de alquiler según las necesidades de sus proyectos. Por esta razón, determinadas tareas se identifican como N/A para alguno de los User Personas, ya que no forman parte de sus responsabilidades dentro de la plataforma.
-
 
 ### 2.3.3. User Journey Mapping
 
