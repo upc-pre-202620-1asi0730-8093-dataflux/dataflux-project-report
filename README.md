@@ -1151,6 +1151,88 @@ En este primer Sprint, el equipo desarrolló tanto la primera versión del Landi
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
+Como equipo, lo que logramos en este primer Sprint fue la exitosa implementación de nuestra Landing Page y su posterior despliegue gracias a la herramienta GitHub Pages. A continuación, presentaremos lo logrado a través de imágenes mostrando las principales vistas.
+
+**Landing Page**
+
+Sección principal (Hero):
+
+![Landing Page - Hero](./assets/md-images-chapter5/execution-evidence/landing-01-hero.png)
+
+Sección "Todo el ciclo de alquiler, conectado":
+
+![Landing Page - Ciclo de alquiler](./assets/md-images-chapter5/execution-evidence/landing-02-rental-cycle.png)
+
+Sección "Funciones para gestionar mejor tus equipos":
+
+![Landing Page - Funciones](./assets/md-images-chapter5/execution-evidence/landing-03-features.png)
+
+Sección "Mayor control sobre cada alquiler":
+
+![Landing Page - Mayor control](./assets/md-images-chapter5/execution-evidence/landing-04-control.png)
+
+Sección "Funciones RentBuild":
+
+![Landing Page - Funciones RentBuild](./assets/md-images-chapter5/execution-evidence/landing-05-features-video.png)
+
+Sección "Nuestro equipo":
+
+![Landing Page - Nuestro equipo](./assets/md-images-chapter5/execution-evidence/landing-06-team.png)
+
+Sección "RentBuild: Simplificando el alquiler y la gestión de equipos":
+
+![Landing Page - Sobre RentBuild](./assets/md-images-chapter5/execution-evidence/landing-07-about.png)
+
+Sección "Planes que crecen con tu negocio":
+
+![Landing Page - Planes](./assets/md-images-chapter5/execution-evidence/landing-08-plans.png)
+
+Sección "Contáctanos":
+
+![Landing Page - Contáctanos](./assets/md-images-chapter5/execution-evidence/landing-09-contact.png)
+
+**Web Application**
+
+Inicio de sesión:
+
+![Web Application - Login](./assets/md-images-chapter5/execution-evidence/app-01-login.png)
+
+Registro de cuenta:
+
+![Web Application - Registro](./assets/md-images-chapter5/execution-evidence/app-02-register.png)
+
+Perfil de usuario:
+
+![Web Application - Perfil](./assets/md-images-chapter5/execution-evidence/app-03-profile.png)
+
+Inventario de maquinaria:
+
+![Web Application - Inventario](./assets/md-images-chapter5/execution-evidence/app-04-inventory.png)
+
+Registro de nueva maquinaria:
+
+![Web Application - Registrar maquinaria](./assets/md-images-chapter5/execution-evidence/app-05-register-machinery.png)
+
+Mis solicitudes de alquiler:
+
+![Web Application - Mis solicitudes](./assets/md-images-chapter5/execution-evidence/app-06-my-requests.png)
+
+Alquileres activos:
+
+![Web Application - Alquileres activos](./assets/md-images-chapter5/execution-evidence/app-07-active-rentals.png)
+
+Registro de mantenimiento o incidencia:
+
+![Web Application - Mantenimiento e incidencias](./assets/md-images-chapter5/execution-evidence/app-08-maintenance.png)
+
+Historial de maquinaria:
+
+![Web Application - Historial](./assets/md-images-chapter5/execution-evidence/app-09-history.png)
+
+Catálogo de maquinaria:
+
+![Web Application - Catálogo](./assets/md-images-chapter5/execution-evidence/app-10-catalog.png)
+
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
