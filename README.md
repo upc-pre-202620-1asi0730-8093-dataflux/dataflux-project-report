@@ -978,7 +978,7 @@ Enlaces:
 
 **Software Deployment**
 
-Para el despliegue de la primera versión del Landing Page de RentBuild se utilizó (indica aquí la herramienta real: GitHub Pages, Vercel, Netlify, etc.).
+Para el despliegue de la primera versión del Landing Page de RentBuild se utilizó Vercel.
 
 Enlaces:
 
