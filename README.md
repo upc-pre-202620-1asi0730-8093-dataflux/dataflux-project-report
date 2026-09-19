@@ -676,6 +676,14 @@ Ana Rivera Quispe se dedica a la administración de pequeñas empresas dedicadas
 
 ### 2.3.1. User Personas
 
+El user persona se construyó a partir de patrones encontrados en las entrevistas.
+
+**Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
+
+**Segmento Objetivo 2: Pequeñas empresas constructoras**
+![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+
 ### 2.3.2. User Task Matrix
 
 En esta sección se presenta el User Task Matrix, que concentra las tareas que realizan Marisol Vega Torres (Segmento 1 — Empresas de Alquiler) y Jorge Ramírez Delgado (Segmento 2 — Empresas Constructoras) para cumplir sus objetivos, independientemente de la existencia de una solución de software. Se considera para cada tarea su frecuencia (qué tan seguido la realiza) y su importancia (qué tan crítica es para su rol), en una escala de Baja / Media / Alta.
