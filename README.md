@@ -929,7 +929,101 @@ Then el sistema registra la solicitud de contacto
 
 ### 5.1.1. Software Development Environment Configuration
 
+**Project Management**
+
+Para la administración del proyecto RentBuild se recurrió al uso de herramientas de comunicación, planificación y control de versiones. Se creó una organización en GitHub para centralizar la gestión del código fuente y su versionado. En cuanto a la planificación y asignación de tareas del equipo, se utilizó Trello mediante tableros personalizados para cada Sprint. Para la comunicación interna y coordinación de reuniones, se utilizó WhatsApp.
+
+- Organización del trabajo: GitHub
+- Planificación y asignación de tareas: Trello
+- Comunicación: WhatsApp
+
+Enlaces:
+
+- GitHub: https://github.com/
+- Trello: https://trello.com/
+- WhatsApp: https://www.whatsapp.com/
+
+**Requirement Management**
+
+Para esta fase, el equipo utilizó Trello como herramienta visual para gestionar y priorizar los requisitos y tareas del proyecto mediante tableros organizados por Sprint. Se utilizó UXPressia para desarrollar los User Personas, Empathy Maps, Journey Maps e Impact Maps correspondientes a los dos segmentos objetivo de RentBuild: empresas de alquiler de maquinaria y pequeñas empresas constructoras.
+
+Enlaces:
+
+- Trello: https://trello.com/
+- UXPressia: https://uxpressia.com/
+
+**Product UX/UI Design**
+
+En el diseño de la experiencia e interfaz de usuario, el equipo utilizó Figma para la creación de Wireframes, Mock-ups y Prototipos interactivos del Landing Page y de la Web Application, lo que permitió validar la propuesta visual y de interacción antes de la implementación.
+
+Enlaces:
+
+- Figma: https://www.figma.com/
+
+**Software Development**
+
+Para el desarrollo de la primera versión del Landing Page de RentBuild se utilizaron los lenguajes HTML, CSS y JavaScript en Visual Studio Code.
+
+Enlaces:
+
+- Visual Studio Code: https://code.visualstudio.com/
+
+**Software Documentation**
+
+Para el control de versiones y la colaboración en el desarrollo del informe, se utilizó GitHub siguiendo la estrategia de trabajo GitFlow, mediante el uso de ramas específicas para cada funcionalidad o corrección, lo que facilitó el trabajo colaborativo del equipo. Todo el contenido del proyecto fue centralizado en un repositorio dentro de una organización creada en GitHub. Para la documentación técnica se optó por archivos en formato Markdown, debido a su simplicidad, legibilidad y compatibilidad con GitHub.
+
+Enlaces:
+
+- GitHub: https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-project-report
+
+**Software Deployment**
+
+Para el despliegue de la primera versión del Landing Page de RentBuild se utilizó (indica aquí la herramienta real: GitHub Pages, Vercel, Netlify, etc.).
+
+Enlaces:
+
+- Vercel: https://dataflux-landing-page.vercel.app/
+
 ### 5.1.2. Source Code Management
+
+Para el control de versiones del código fuente de RentBuild, el equipo utiliza Git como sistema de versionado, gestionado a través de GitHub como plataforma de alojamiento. Se ha creado una organización pública en GitHub que centraliza los repositorios correspondientes a cada producto de la solución. Para esta primera entrega (AV1), el repositorio activo corresponde al Landing Page; los repositorios de Web Services (RESTful API) y Frontend Web Applications se incorporarán en las siguientes entregas conforme avance el desarrollo del proyecto.
+
+**Repositorio del proyecto (AV1):**
+
+| Producto | Repositorio |
+| :--- | :--- |
+| Informe del Proyecto | upc-pre-202620-1asi0730-8093-dataflux/dataflux-landing-page |
+| Landing Page | https://dataflux-landing-page.vercel.app/ |
+
+**Workflow de control de versiones: GitFlow**
+
+El equipo aplica GitFlow como estrategia de ramificación, complementando la rama principal (`main`) y la rama de desarrollo (`develop`) con ramas específicas según el tipo de trabajo:
+
+- **Feature branches**: se crean a partir de `develop` para el desarrollo de nuevas funcionalidades. Convención de nombres: `feature/nombre-de-la-funcionalidad` (ej. `feature/landing-hero-section`, `feature/landing-footer`).
+- **Release branches**: se crean a partir de `develop` cuando el conjunto de features está listo para una nueva versión. Convención de nombres: `release/vX.Y.Z` (ej. `release/v1.0.0`).
+- **Hotfix branches**: se crean a partir de `main` para corregir errores críticos detectados en producción. Convención de nombres: `hotfix/nombre-del-fix` (ej. `hotfix/fix-broken-navbar-link`).
+
+**Semantic Versioning**
+
+Las versiones (Releases) del Landing Page se nombran siguiendo Semantic Versioning 2.0.0, bajo el formato `MAJOR.MINOR.PATCH`:
+
+- **MAJOR**: cambios incompatibles con versiones anteriores.
+- **MINOR**: nuevas funcionalidades compatibles con versiones anteriores.
+- **PATCH**: correcciones de errores compatibles con versiones anteriores.
+
+Ejemplo: la primera versión desplegada del Landing Page se etiqueta como `v1.0.0`.
+
+**Conventional Commits**
+
+Todos los mensajes de commit siguen la convención de Conventional Commits, con el formato `tipo: descripción breve`, utilizando prefijos como:
+
+- `feat`: para nuevas funcionalidades (ej. `feat: add landing page hero section`)
+- `fix`: para corrección de errores (ej. `fix: correct broken footer link`)
+- `docs`: para cambios en documentación (ej. `docs: update README with setup instructions`)
+- `style`: para cambios de formato que no afectan la lógica
+- `refactor`: para reestructuración de código sin cambiar su comportamiento
+
+Esta convención permite mantener un historial de cambios claro y trazable para todo el equipo, incluso en esta etapa inicial del proyecto.
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
