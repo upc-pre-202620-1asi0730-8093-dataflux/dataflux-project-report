@@ -336,25 +336,22 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.2. User Task Matrix
 
-La presente Task Matrix permite identificar y comparar las principales tareas realizadas por los User Personas pertenecientes a los dos segmentos considerados en RentBuild: pequeñas empresas de alquiler de maquinaria y pequeñas empresas constructoras. Para representar a estos segmentos se consideran los User Personas Armando Casas, correspondiente a una empresa de alquiler, y Andrea Torres, correspondiente a una empresa constructora.
 
-La matriz evalúa cada tarea considerando dos criterios: su frecuencia, que representa qué tan recurrentemente es realizada por el User Persona, y su importancia, que refleja el nivel de relevancia que tiene dentro de sus actividades y objetivos. Asimismo, se utiliza el valor N/A (Not Applicable) para aquellas tareas que no corresponden a las responsabilidades o funcionalidades disponibles para determinado segmento.
-
-| TASK | Armando Casas<br>(Empresa de alquiler)<br>Frecuencia | Armando Casas<br>(Empresa de alquiler)<br>Importancia | Andrea Torres<br>(Empresa constructora)<br>Frecuencia | Andrea Torres<br>(Empresa constructora)<br>Importancia |
-| :--- | :---: | :---: | :---: | :---: |
-| Consultar el inventario de maquinaria | Often | High | N/A | N/A |
-| Consultar la disponibilidad de una maquinaria | Often | High | Often | High |
-| Registrar o actualizar información de maquinaria | Often | High | N/A | N/A |
-| Gestionar solicitudes de alquiler y reservas | Often | High | N/A | N/A |
-| Coordinar la entrega de maquinaria | Often | High | Often | High |
-| Registrar la devolución de maquinaria | Often | High | N/A | N/A |
-| Verificar el estado de la maquinaria después de un alquiler | Often | High | N/A | N/A |
-| Consultar el historial de mantenimiento de una maquinaria | Sometimes | High | N/A | N/A |
-| Programar o registrar mantenimientos | Sometimes | High | N/A | N/A |
-| Buscar maquinaria según las necesidades de un proyecto | N/A | N/A | Often | High |
-| Consultar características y condiciones de una maquinaria | Sometimes | Medium | Often | High |
-| Solicitar o reservar maquinaria | N/A | N/A | Often | High |
-| Realizar seguimiento del estado de una solicitud o alquiler | Often | High | Often | High |
+| TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
+| :---- | :---: | :---: | :---: | :---: |
+| **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Consultar la disponibilidad de una maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar o actualizar información de maquinaria** | **Often** | **High** | **Rarely** | **Low** |
+| **Gestionar reservas y solicitudes de alquiler** | **Often** | **High** | **Often** | **High** |
+| **Coordinar la entrega de maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar la devolución de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Verificar el estado de la maquinaria después de un alquiler** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Registrar incidentes o daños en una maquinaria** | **Sometimes** | **High** | **Sometimes** | **High** |
+| **Consultar el historial de mantenimiento de una maquinaria** | **Often** | **High** | **Rarely** | **Medium** |
+| **Programar o registrar mantenimientos** | **Sometimes** | **High** | **Rarely** | **Low** |
+| **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
+| **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
+| **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
 
 A partir de la Task Matrix se observa que Armando Casas, como representante de las pequeñas empresas de alquiler de maquinaria, concentra una mayor cantidad de tareas relacionadas con la administración y operación interna de los equipos. Entre las tareas que presentan una frecuencia Often y una importancia High se encuentran la consulta de disponibilidad, el registro o actualización de información de maquinaria, la gestión de solicitudes de alquiler y reservas, la coordinación de entregas, el registro de devoluciones y la verificación del estado de los equipos después de un alquiler. Estas actividades son fundamentales para mantener actualizado el inventario y controlar adecuadamente el ciclo de alquiler de la maquinaria.
 
