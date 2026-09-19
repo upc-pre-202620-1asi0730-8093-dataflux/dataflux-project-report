@@ -1239,6 +1239,32 @@ Dado que el alcance del Sprint 1 se centró en el desarrollo de la primera versi
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
+En esta sección se resumen las actividades realizadas por el equipo en relación con el despliegue de MaquiGest durante el Sprint 1. Estas actividades incluyeron la creación de cuentas en el proveedor de hosting vercel, la configuración de los recursos necesarios y el despliegue de la primera versión del Landing Page. A continuación, se presentan capturas de pantalla que evidencian los pasos realizados durante este proceso.
+
+**1.** Ingresando a la cuenta le damos click a *Add New* para añadir un proyecto.
+
+![Paso 1 - Add New](./assets/md-images-chapter5/deployment-evidence/step-1-add-new.png)
+
+**2.** Le damos click en *Project* para generar un proyecto.
+
+![Paso 2 - Project](./assets/md-images-chapter5/deployment-evidence/step-2-project.png)
+
+**3.** Le damos click en el proyecto que deseamos importar.
+
+![Paso 3 - Import Git Repository](./assets/md-images-chapter5/deployment-evidence/step-3-import-repository.png)
+
+**4.** Nos aparecerá el siguiente recuadro para poder hacer el deploy.
+
+![Paso 4 - Deploy](./assets/md-images-chapter5/deployment-evidence/step-4-deploy.png)
+
+**5.** Finalmente ya tenemos nuestra Landing Page desplegada.
+
+![Paso 5 - Proyecto creado en Vercel](./assets/md-images-chapter5/deployment-evidence/step-5a-project-created.png)
+
+![Paso 5 - Production Deployment](./assets/md-images-chapter5/deployment-evidence/step-5b-production-deployment.png)
+
+![Paso 5 - Landing Page desplegada](./assets/md-images-chapter5/deployment-evidence/step-5c-landing-page-live.png)
+
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
 # Conclusiones
