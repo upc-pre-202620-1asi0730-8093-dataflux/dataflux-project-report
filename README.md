@@ -1084,6 +1084,16 @@ Una vez importado el proyecto, Vercel genera el Production Deployment, el cual q
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
+En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elaborado por el equipo para el Sprint 1, el cual identifica al líder y a los colaboradores responsables de cada aspecto dentro del alcance definido para este sprint.
+
+| Team Member (Last, First) | GitHub Username | Diseño visual y maquetación (Landing Page) | Desarrollo Web Application | Despliegue (Vercel) |
+| :--- | :--- | :---: | :---: | :---: |
+| Cisneros Salas, Luis Angel | LuisCS03 | C | L | C |
+| Viza Quispe, Marlon Packard | V8Z5 | L | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | L |
+| Montalvo Vásquez, Bruno Rodrigo | TartaroZ | C | C | C |
+| Vargas Manchinelli, Deiby Juan | poluxbinPe | C | C | C |
+
 #### 5.2.1.3. Sprint Backlog 1
 
 #### 5.2.1.4. Development Evidence for Sprint Review
