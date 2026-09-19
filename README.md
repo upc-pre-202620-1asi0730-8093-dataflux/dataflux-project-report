@@ -235,6 +235,199 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.1.1. Análisis competitivo
 
+<table style="text-align: center; width: 100%;">
+  <tr>
+    <th colspan="6">Competitive Analysis Landscape</th>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>¿Por qué llevar a cabo este análisis?</strong></td>
+    <td colspan="4">
+      Identificar oportunidades de diferenciación frente a soluciones existentes de alquiler de equipos y determinar cómo RentBuild puede ofrecer una solución más simple y especializada para PYMES del sector construcción.
+    </td>
+  </tr>
+
+  <tr>
+      <td colspan="2"><strong>Logotipos</strong></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-logo.png" alt="RentBuild" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Booqable.png" alt="Booqable" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Rentman.png" alt="Rentman" height="50"></td>
+      <td><img src="assets/md-images-chapter2/RentBuild-Competidor_Odoo%20Rental.png" alt="Odoo Rental" height="50"></td>
+  </tr>
+
+  <tr>
+    <td rowspan="2"><strong>Perfil</strong></td>
+    <td><strong>Overview</strong></td>
+    <td>RentBuild</td>
+    <td>Booqable</td>
+    <td>Rentman</td>
+    <td>Odoo Rental</td>
+  </tr>
+
+  <tr>
+    <td><strong>Ventaja Competitiva</strong></td>
+    <td>Gestión del ciclo completo de la maquinaria, desde reserva y alquiler hasta devolución, inspección, mantenimiento y nueva disponibilidad.</td>
+    <td>Facilidad para gestionar reservas, inventario y pedidos de alquiler desde una misma plataforma.</td>
+    <td>Gestión avanzada de inventario, almacenes, disponibilidad, mantenimiento y trazabilidad de equipos.</td>
+    <td>Integración con otros módulos como inventario, ventas, facturación y mantenimiento.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2"><strong>Perfil de Marketing</strong></td>
+    <td><strong>Mercado Objetivo</strong></td>
+    <td>Pequeñas y medianas empresas de alquiler de maquinaria para construcción y pequeñas empresas constructoras.</td>
+    <td>Empresas de alquiler de diferentes tamaños y sectores.</td>
+    <td>Empresas de alquiler, eventos y organizaciones que administran grandes cantidades de equipos.</td>
+    <td>Empresas de distintos sectores que necesitan integrar alquileres con otros procesos administrativos.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Estrategias de Marketing</strong></td>
+    <td>Marketing B2B, publicidad digital dirigida al sector construcción, demostraciones, prueba inicial y contacto directo con empresas de alquiler.</td>
+    <td>Promoción de digitalización del negocio de alquiler, reservas online y facilidad de administración.</td>
+    <td>Promoción basada en eficiencia operativa, control de equipos y reducción de errores mediante automatización.</td>
+    <td>Promoción mediante el ecosistema integrado de aplicaciones empresariales de Odoo.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="3"><strong>Perfil de Producto</strong></td>
+    <td><strong>Productos y Servicios</strong></td>
+    <td>Inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias, inspecciones y mantenimiento.</td>
+    <td>Inventario, reservas, pedidos, contratos, facturación, pagos, recogidas y devoluciones.</td>
+    <td>Inventario, planificación, almacenes, proyectos, códigos QR, reparaciones, mantenimiento y facturación.</td>
+    <td>Reservas, alquileres, cotizaciones, facturación, recogidas y devoluciones, con integración a otros módulos.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Precios y Costos</strong></td>
+    <td>Modelo SaaS con planes de suscripción escalables según las necesidades de las PYMES.</td>
+    <td>Suscripción mensual o anual mediante diferentes planes.</td>
+    <td>Suscripción según usuarios, módulos y funcionalidades utilizadas.</td>
+    <td>Suscripción mediante planes y aplicaciones del ecosistema Odoo.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Canales de Distribución (Web y/o Móvil)</strong></td>
+    <td>Plataforma web responsive accesible desde computadora, tablet o smartphone.</td>
+    <td>Plataforma web y herramientas móviles para determinadas operaciones.</td>
+    <td>Plataforma web y aplicación móvil.</td>
+    <td>Plataforma web y aplicación móvil.</td>
+  </tr>
+
+  <tr>
+    <td rowspan="4"><strong>Análisis SWOT</strong></td>
+    <td><strong>Fortalezas</strong></td>
+    <td>
+      • Gestión integral del ciclo de alquiler.<br>
+      • Control de disponibilidad y estado de equipos.<br>
+      • Integración de alquiler y mantenimiento.<br>
+      • Plataforma centralizada.
+    </td>
+    <td>
+      • Gestión de inventario en tiempo real.<br>
+      • Reservas y pagos online.<br>
+      • Plataforma especializada en alquiler.<br>
+      • Automatización de procesos.
+    </td>
+    <td>
+      • Gestión avanzada de inventario.<br>
+      • Seguimiento mediante QR.<br>
+      • Control de múltiples almacenes.<br>
+      • Gestión de reparaciones.
+    </td>
+    <td>
+      • Amplio ecosistema ERP.<br>
+      • Integración entre diferentes módulos.<br>
+      • Alta capacidad de personalización.<br>
+      • Gestión de alquiler y facturación.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Debilidades</strong></td>
+    <td>
+      • Marca nueva.<br>
+      • Poco reconocimiento en el mercado.<br>
+      • Menor cantidad de integraciones iniciales.<br>
+      • Funcionalidades aún en crecimiento.
+    </td>
+    <td>
+      • Solución general para diferentes tipos de alquiler.<br>
+      • Algunas funciones dependen del plan contratado.<br>
+      • Menor especialización en maquinaria.<br>
+      • Dependencia de servicios en línea.
+    </td>
+    <td>
+      • Mayor complejidad de uso.<br>
+      • Curva de aprendizaje más alta.<br>
+      • Funciones avanzadas pueden resultar innecesarias.<br>
+      • Dependencia de módulos adicionales.
+    </td>
+    <td>
+      • Configuración más compleja.<br>
+      • Curva de aprendizaje elevada.<br>
+      • Gran cantidad de módulos.<br>
+      • Menor especialización en alquiler de maquinaria.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Oportunidades</strong></td>
+    <td>
+      • Incorporar nuevas automatizaciones.<br>
+      • Integrar nuevas funcionalidades de mantenimiento.<br>
+      • Ampliar integraciones con otros sistemas.<br>
+      • Expandir la gestión hacia nuevos tipos de equipos.
+    </td>
+    <td>
+      • Incorporar nuevas tecnologías de automatización.<br>
+      • Expandir funcionalidades de gestión de activos.<br>
+      • Mejorar integraciones externas.<br>
+      • Ampliar servicios digitales de alquiler.
+    </td>
+    <td>
+      • Fortalecer automatización del mantenimiento.<br>
+      • Mejorar análisis de datos de equipos.<br>
+      • Incorporar nuevas integraciones.<br>
+      • Expandir funcionalidades de trazabilidad.
+    </td>
+    <td>
+      • Ampliar su ecosistema de aplicaciones.<br>
+      • Incorporar nuevas automatizaciones.<br>
+      • Mejorar la integración entre módulos.<br>
+      • Expandir funciones relacionadas con alquiler.
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>Amenazas</strong></td>
+    <td>
+      • Competidores internacionales consolidados.<br>
+      • Aparición de nuevas plataformas especializadas.<br>
+      • Evolución rápida de tecnologías de gestión.<br>
+      • Competidores con mayor cantidad de integraciones.
+    </td>
+    <td>
+      • Nuevas plataformas especializadas.<br>
+      • Competidores con precios más bajos.<br>
+      • Mayor competencia SaaS.<br>
+      • Soluciones con mayor especialización.
+    </td>
+    <td>
+      • Plataformas más simples.<br>
+      • Nuevos competidores especializados.<br>
+      • Alternativas con menores costos.<br>
+      • Evolución tecnológica del sector.
+    </td>
+    <td>
+      • Plataformas SaaS especializadas.<br>
+      • Soluciones con implementación más rápida.<br>
+      • Competidores con menor complejidad.<br>
+      • Herramientas específicas para alquiler de equipos.
+    </td>
+  </tr>
+</table>
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
 ## 2.2. Entrevistas
