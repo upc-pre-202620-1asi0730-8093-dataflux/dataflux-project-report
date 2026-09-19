@@ -1279,6 +1279,18 @@ La sección de precios presenta tres alternativas de suscripción: Basic, Pro y 
 
 ![Landing_Page_UI_Design-Pricing.png](assets/md-images-chapter4/Landing_Page_UI_Design-Pricing.png)
 
+### Our Team
+
+La sección Our Team presenta a los integrantes responsables del desarrollo del proyecto. Cada miembro aparece dentro de una tarjeta que contiene su fotografía, nombre, carrera o función y una breve descripción. La distribución se organiza en dos filas para mantener una presentación ordenada.
+
+![Landing_Page_UI_Design-Our_Team.png](assets/md-images-chapter4/Landing_Page_UI_Design-Our_Team.png)
+
+### Footer
+
+El Footer representa la última sección de la Landing Page y concentra los enlaces secundarios de navegación. Incluye accesos relacionados con el producto, soporte, información de la empresa, contacto, términos y políticas de privacidad.
+
+![Landing_Page_UI_Design-Benefits.png](assets/md-images-chapter4/Landing_Page_UI_Design-Benefits.png)
+
 ### 4.3.2. Landing Page Mock-up
 
 ## 4.4. Web Applications UX/UI Design
