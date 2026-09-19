@@ -986,6 +986,45 @@ Enlaces:
 
 ### 5.1.2. Source Code Management
 
+Para el control de versiones del código fuente de RentBuild, el equipo utiliza Git como sistema de versionado, gestionado a través de GitHub como plataforma de alojamiento. Se ha creado una organización pública en GitHub que centraliza los repositorios correspondientes a cada producto de la solución. Para esta primera entrega (AV1), el repositorio activo corresponde al Landing Page; los repositorios de Web Services (RESTful API) y Frontend Web Applications se incorporarán en las siguientes entregas conforme avance el desarrollo del proyecto.
+
+**Repositorio del proyecto (AV1):**
+
+| Producto | Repositorio |
+| :--- | :--- |
+| Informe del Proyecto | upc-pre-202620-1asi0730-8093-dataflux/dataflux-landing-page |
+| Landing Page | https://dataflux-landing-page.vercel.app/ |
+
+**Workflow de control de versiones: GitFlow**
+
+El equipo aplica GitFlow como estrategia de ramificación, complementando la rama principal (`main`) y la rama de desarrollo (`develop`) con ramas específicas según el tipo de trabajo:
+
+- **Feature branches**: se crean a partir de `develop` para el desarrollo de nuevas funcionalidades. Convención de nombres: `feature/nombre-de-la-funcionalidad` (ej. `feature/landing-hero-section`, `feature/landing-footer`).
+- **Release branches**: se crean a partir de `develop` cuando el conjunto de features está listo para una nueva versión. Convención de nombres: `release/vX.Y.Z` (ej. `release/v1.0.0`).
+- **Hotfix branches**: se crean a partir de `main` para corregir errores críticos detectados en producción. Convención de nombres: `hotfix/nombre-del-fix` (ej. `hotfix/fix-broken-navbar-link`).
+
+**Semantic Versioning**
+
+Las versiones (Releases) del Landing Page se nombran siguiendo Semantic Versioning 2.0.0, bajo el formato `MAJOR.MINOR.PATCH`:
+
+- **MAJOR**: cambios incompatibles con versiones anteriores.
+- **MINOR**: nuevas funcionalidades compatibles con versiones anteriores.
+- **PATCH**: correcciones de errores compatibles con versiones anteriores.
+
+Ejemplo: la primera versión desplegada del Landing Page se etiqueta como `v1.0.0`.
+
+**Conventional Commits**
+
+Todos los mensajes de commit siguen la convención de Conventional Commits, con el formato `tipo: descripción breve`, utilizando prefijos como:
+
+- `feat`: para nuevas funcionalidades (ej. `feat: add landing page hero section`)
+- `fix`: para corrección de errores (ej. `fix: correct broken footer link`)
+- `docs`: para cambios en documentación (ej. `docs: update README with setup instructions`)
+- `style`: para cambios de formato que no afectan la lógica
+- `refactor`: para reestructuración de código sin cambiar su comportamiento
+
+Esta convención permite mantener un historial de cambios claro y trazable para todo el equipo, incluso en esta etapa inicial del proyecto.
+
 ### 5.1.3. Source Code Style Guide & Conventions
 
 ### 5.1.4. Software Deployment Configuration
