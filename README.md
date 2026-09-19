@@ -1267,6 +1267,8 @@ En esta sección se resumen las actividades realizadas por el equipo en relació
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
+En esta sección se explica cómo se desarrollaron las actividades de implementación del Landing Page durante el Sprint 1, evidenciando la participación colaborativa de todos los integrantes del equipo. A continuación, se presentan capturas de los analíticos de colaboración y commits en GitHub correspondientes al repositorio del proyecto, en los que se refleja el aporte individual de cada miembro del equipo.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
