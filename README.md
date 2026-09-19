@@ -430,6 +430,43 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+A partir del análisis competitivo, DataFlux aplicará estrategias para afrontar las fortalezas de sus competidores, aprovechar sus debilidades y responder a las oportunidades y amenazas del mercado.
+
+#### Estrategia ofensiva: aprovechar la menor especialización de Booqable
+
+Booqable posee una plataforma consolidada de alquiler, pero su enfoque es general para distintos tipos de equipos. RentBuild aprovechará esta menor especialización.
+
+- **Gestión especializada:** integrar alquiler, devolución, incidencias y mantenimiento de maquinaria.
+- **Control del equipo:** mantener actualizado el estado y disponibilidad de cada maquinaria.
+
+#### Estrategia defensiva: responder a la gestión avanzada de Rentman
+
+Rentman destaca por su gestión avanzada de inventario y equipos. RentBuild responderá con una plataforma más simple y enfocada.
+
+- **Interfaz sencilla:** facilitar las operaciones principales con menos pasos.
+- **Dashboard operativo:** visualizar rápidamente disponibilidad, alquileres y mantenimientos.
+
+#### Estrategia competitiva: aprovechar la complejidad de Odoo Rental
+
+Odoo Rental cuenta con un amplio ecosistema de módulos, pero su configuración puede resultar más compleja.
+
+- **Enfoque específico:** concentrar las funciones necesarias para la gestión de alquiler de maquinaria.
+- **Implementación simple:** reducir la dependencia de módulos y configuraciones adicionales.
+
+#### Estrategia adaptativa: aprovechar oportunidades tecnológicas
+
+RentBuild buscará fortalecer sus capacidades conforme evolucionen las necesidades del mercado.
+
+- **Automatización:** incorporar alertas y seguimiento automático de equipos.
+- **Integraciones:** añadir progresivamente servicios complementarios a la plataforma.
+
+#### Estrategia defensiva frente a amenazas del mercado
+
+La presencia de competidores consolidados y nuevas plataformas especializadas representa una amenaza para RentBuild.
+
+- **Diferenciación:** reforzar la gestión integral del ciclo de alquiler como ventaja principal.
+- **Mejora continua:** incorporar nuevas funcionalidades para mantener la competitividad de la plataforma.
+
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
