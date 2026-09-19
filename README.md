@@ -1130,6 +1130,25 @@ El propósito central de este Sprint fue construir la primera versión del Landi
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
+En este primer Sprint, el equipo desarrolló tanto la primera versión del Landing Page como las pantallas iniciales de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. Cada integrante contribuyó con distintas funcionalidades a lo largo del sprint. A continuación, se presenta la tabla con los commits realizados durante este periodo.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| RentBuild/Landing-Page | feature/app-features | a4682cd | feat(team): add profile photos for Bruno, Deiby and Miroslav | add profile photos for Bruno, Deiby and Miroslav | 18/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | bd3e866 | feat(catalog): add machinery search and filter screen | add machinery search and filter screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8649b7c | feat(inventory): add machinery history screen | add machinery history screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | c220f22 | feat(maintenance): add register maintenance and incident form | add register maintenance and incident form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 18b2785 | feat(rentals): add active rentals screen | add active rentals screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | a0b3479 | feat(requests): add my rental requests screen for construction companies | add my rental requests screen for construction companies | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | eb60cf5 | feat(inventory): add machinery detail screen with status and availability | add machinery detail screen with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 0a4dc7d | feat(inventory): add register new machinery form | add register new machinery form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | fe84942 | feat(inventory): display machinery list with status and availability | display machinery list with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 4c44274 | feat(profile): add user profile screen | add user profile screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8c6ff60 | feat(dashboard): implement user home screen | implement user home screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 17e01c2 | feat(auth): implement user registration form | implement user registration form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8a81a87 | feat(auth): add login modal for RentBuild | add login modal for RentBuild | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | dcb16bb | feat(team): add profile photo for Luis Angel Cisneros Salas | add profile photo for Luis Angel Cisneros Salas | 16/09/2026 |
+
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
