@@ -1307,6 +1307,23 @@ En la versión de alta fidelidad, esta sección utiliza iconos, colores y una or
 
 ![Landing_Page_ Mock_up-Operational_Management.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Operational_Management.png)
 
+### Key Features
+
+La sección presenta un reproductor de video acompañado de cuatro tarjetas que representan las funciones principales de RentBuild. Las tarjetas utilizan bordes redondeados, sombras suaves y títulos claramente diferenciados. Se muestran funciones de gestión de equipos, alquileres, mantenimiento y reportes.
+
+![Landing_Page_ Mock_up-Kep_Features.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Kep_Features.png)
+
+### RentBuild Platform Overview
+
+El mock-up combina un bloque descriptivo con un video de mayor tamaño para explicar cómo funciona RentBuild. Los textos destacan la gestión de equipos, el seguimiento del ciclo de alquiler y el mantenimiento de maquinaria. La organización en dos columnas permite distribuir correctamente la información.
+
+![Landing_Page_ Mock_up-RentBuild_Platform_Overview.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-RentBuild_Platform_Overview.png)
+
+### Benefits
+
+La sección de beneficios utiliza textos breves y elementos gráficos para destacar las ventajas principales de RentBuild. Se muestran aspectos relacionados con el control de maquinaria, reservas, devoluciones y mantenimiento. La jerarquía entre títulos y descripciones permite identificar rápidamente cada beneficio.
+
+![Landing_Page_ Mock_up-Benefits.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Benefits.png)
 
 
 ## 4.4. Web Applications UX/UI Design
