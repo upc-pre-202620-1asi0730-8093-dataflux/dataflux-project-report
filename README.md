@@ -1239,6 +1239,8 @@ Then el sistema registra la solicitud de contacto
 
 ## 4.3. Landing Page UI Design
 
+El diseño de la Landing Page de RentBuild busca comunicar de manera clara la propuesta de valor de la plataforma y presentar sus principales funcionalidades relacionadas con la gestión de equipos y operaciones de alquiler.
+
 ### 4.3.1. Landing Page Wireframe
 
 ### 4.3.2. Landing Page Mock-up
