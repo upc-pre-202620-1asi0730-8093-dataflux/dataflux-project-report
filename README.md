@@ -1235,6 +1235,8 @@ Catálogo de maquinaria:
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
+Dado que el alcance del Sprint 1 se centró en el desarrollo de la primera versión del Landing Page, no se contempló en este sprint la implementación de Web Services. Por consiguiente, no se cuenta aún con endpoints documentados. La documentación de servicios mediante OpenAPI Specification se incorporará a partir de los sprints correspondientes al desarrollo del RESTful API.
+
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
