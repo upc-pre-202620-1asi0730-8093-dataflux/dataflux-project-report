@@ -1466,9 +1466,109 @@ En la **Landing Page**, la navegación global permite acceder a las principales 
 
 ## 4.3. Landing Page UI Design
 
+El diseño de la Landing Page de RentBuild busca comunicar de manera clara la propuesta de valor de la plataforma y presentar sus principales funcionalidades relacionadas con la gestión de equipos y operaciones de alquiler.
+
 ### 4.3.1. Landing Page Wireframe
 
+### Nav y Hero
+
+La sección inicial del wireframe presenta el logotipo de RentBuild, el menú de navegación y el mensaje principal de la plataforma. El contenido se divide en dos áreas: a la izquierda se muestra la propuesta de valor y los botones de acción, mientras que a la derecha se reserva espacio para elementos visuales relacionados con la gestión de equipos.
+
+![Landing_Page_UI_Design-Nav_y_Hero.png](assets/md-images-chapter4/Landing_Page_UI_Design-Nav_y_Hero.png)
+
+### Operational Management
+
+Esta sección muestra las principales actividades que pueden gestionarse dentro de RentBuild. Se presentan bloques relacionados con la disponibilidad de equipos, las reservas y el mantenimiento. La distribución permite mostrar de forma sencilla cómo la plataforma centraliza diferentes procesos relacionados con el alquiler de maquinaria.
+
+![Landing_Page_UI_Design-Operational_Management.png](assets/md-images-chapter4/Landing_Page_UI_Design-Operational_Management.png)
+
+### Key Features
+
+La sección de funciones principales está dividida entre un espacio para video y cuatro bloques informativos. Estos representan la gestión y disponibilidad de equipos, reservas y alquileres, mantenimiento e incidencias, y reportes operativos. La estructura permite presentar las funciones principales de RentBuild de manera clara y ordenada.
+
+![Landing_Page_UI_Design-Key_Features.png](assets/md-images-chapter4/Landing_Page_UI_Design-Key_Features.png)
+
+### RentBuild Platform Overview
+
+Esta sección explica con mayor detalle la finalidad de RentBuild y su funcionamiento general. Se combina un bloque de información con un espacio destinado a un video demostrativo. El contenido destaca la gestión de equipos, el seguimiento del ciclo de alquiler y el control del mantenimiento.
+
+![Landing_Page_UI_Design-RentBuild_Platform_Overview.png](assets/md-images-chapter4/Landing_Page_UI_Design-RentBuild_Platform_Overview.png)
+
+### Benefits
+
+La sección de beneficios presenta las principales ventajas que obtiene el usuario al utilizar RentBuild. Entre ellas se encuentran un mejor control de la disponibilidad de maquinaria, organización de reservas, seguimiento de alquileres y gestión del mantenimiento. La información se presenta de manera sencilla y acompañada de elementos visuales.
+
+![Landing_Page_UI_Design-Benefits.png](assets/md-images-chapter4/Landing_Page_UI_Design-Benefits.png)
+
+### Pricing
+
+La sección de precios presenta tres alternativas de suscripción: Basic, Pro y Premium. Cada plan muestra diferentes características y niveles de acceso a las funciones de RentBuild. También se incluye un selector entre modalidad mensual y anual.
+
+![Landing_Page_UI_Design-Pricing.png](assets/md-images-chapter4/Landing_Page_UI_Design-Pricing.png)
+
+### Our Team
+
+La sección Our Team presenta a los integrantes responsables del desarrollo del proyecto. Cada miembro aparece dentro de una tarjeta que contiene su fotografía, nombre, carrera o función y una breve descripción. La distribución se organiza en dos filas para mantener una presentación ordenada.
+
+![Landing_Page_UI_Design-Our_Team.png](assets/md-images-chapter4/Landing_Page_UI_Design-Our_Team.png)
+
+### Footer
+
+El Footer representa la última sección de la Landing Page y concentra los enlaces secundarios de navegación. Incluye accesos relacionados con el producto, soporte, información de la empresa, contacto, términos y políticas de privacidad.
+
+![Landing_Page_UI_Design-Benefits.png](assets/md-images-chapter4/Landing_Page_UI_Design-Benefits.png)
+
 ### 4.3.2. Landing Page Mock-up
+
+El mock-up de la Landing Page de **RentBuild** representa la versión visual de alta fidelidad del diseño definido previamente en el wireframe. En esta etapa se incorporan la paleta de colores, tipografía, imágenes, tarjetas, sombras, botones y elementos gráficos que conforman la identidad visual final de la plataforma.
+
+### Nav y Hero
+
+El mock-up del Hero aplica la identidad visual definitiva de RentBuild mediante colores, tipografía, botones y elementos gráficos. El mensaje principal ocupa una posición destacada y se acompaña de llamadas a la acción como registro y demostración. A la derecha se muestran elementos relacionados con equipos y disponibilidad.
+
+![Landing_Page_ Mock_up-Nav_y_Hero.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Nav_y_Hero.png)
+
+### Operational Management
+
+En la versión de alta fidelidad, esta sección utiliza iconos, colores y una organización visual uniforme para representar disponibilidad, reservas y mantenimiento. Cada función se presenta mediante títulos y textos breves que permiten una lectura rápida. El uso de fondos claros y espacios amplios evita la saturación de información.
+
+![Landing_Page_ Mock_up-Operational_Management.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Operational_Management.png)
+
+### Key Features
+
+La sección presenta un reproductor de video acompañado de cuatro tarjetas que representan las funciones principales de RentBuild. Las tarjetas utilizan bordes redondeados, sombras suaves y títulos claramente diferenciados. Se muestran funciones de gestión de equipos, alquileres, mantenimiento y reportes.
+
+![Landing_Page_ Mock_up-Kep_Features.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Kep_Features.png)
+
+### RentBuild Platform Overview
+
+El mock-up combina un bloque descriptivo con un video de mayor tamaño para explicar cómo funciona RentBuild. Los textos destacan la gestión de equipos, el seguimiento del ciclo de alquiler y el mantenimiento de maquinaria. La organización en dos columnas permite distribuir correctamente la información.
+
+![Landing_Page_ Mock_up-RentBuild_Platform_Overview.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-RentBuild_Platform_Overview.png)
+
+### Benefits
+
+La sección de beneficios utiliza textos breves y elementos gráficos para destacar las ventajas principales de RentBuild. Se muestran aspectos relacionados con el control de maquinaria, reservas, devoluciones y mantenimiento. La jerarquía entre títulos y descripciones permite identificar rápidamente cada beneficio.
+
+![Landing_Page_ Mock_up-Benefits.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Benefits.png)
+
+### Pricing
+
+El mock-up presenta tres tarjetas correspondientes a los planes Basic, Pro y Premium. El plan Premium se destaca visualmente mediante el uso del color naranja, mientras que los demás mantienen tonos más claros. Cada tarjeta muestra sus principales funcionalidades y un botón de acción.
+
+![Landing_Page_ Mock_up-Pricing.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Pricing.png)
+
+### Our Team
+
+La sección utiliza tarjetas con fotografías circulares de cada integrante, acompañadas de su nombre, rol y una breve descripción. Los elementos se organizan en filas y mantienen espacios suficientes para mejorar la lectura. Los colores y estilos de las tarjetas siguen la identidad visual de RentBuild.
+
+![Landing_Page_ Mock_up-Our_Team.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Our_Team.png)
+
+### Footer
+
+El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el final de la página. Los enlaces están distribuidos en columnas relacionadas con producto, soporte, empresa y otros recursos. Los textos claros generan un buen contraste con el fondo.
+
+![Landing_Page_ Mock_up-Footer.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Footer.png)
 
 ## 4.4. Web Applications UX/UI Design
 
