@@ -1027,6 +1027,29 @@ Esta convención permite mantener un historial de cambios claro y trazable para 
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
+El equipo adoptará nomenclatura en inglés para todas las variables, funciones, clases y archivos del proyecto, con el objetivo de mantener flexibilidad, escalabilidad y coherencia en el desarrollo de MaquiGest.
+
+**HTML / CSS**
+
+Se sigue el Google HTML/CSS Style Guide. Las clases CSS estarán en `kebab-case`. Se utilizarán etiquetas semánticas e identificadores claros y descriptivos para accesibilidad y mantenimiento. Se usaron diferentes etiquetas para conformar la estructura del Landing Page del producto:
+
+- `header`: Define todo el contenido introductorio de la página, incluyendo el logo de MaquiGest y el menú de navegación principal.
+- `nav`: Define la sección de la página dedicada a la navegación.
+- `main`: Define el contenido principal de la página, agrupando las secciones informativas del Landing Page.
+- `section`: Delimita cada bloque temático de la página.
+- `div`: Permite la separación de diferentes objetos dentro de la página, lo que nos permitió aplicar hojas de estilo específicas para cada parte de los componentes visuales.
+- `img`: Permite la inserción de imágenes en la página web. Todas las imágenes incluyen el atributo `alt` como parte de las prácticas de Accessibility (a11y).
+- `ul` / `li`: La etiqueta `ul` define una lista desordenada, usada principalmente para el menú de navegación y la lista de beneficios de la plataforma; `li` define cada elemento dentro de dichas listas.
+- `a`: Se usó para definir hipervínculos que trasladan a los usuarios entre las diferentes secciones de la página, así como los Call-to-Action que redirigen al registro/login en la Web Application.
+- `p`: Define los párrafos de texto, separándolos del resto del contenido.
+- `button`: Declara un botón interactivo que permite al usuario realizar una acción específica.
+- `footer`: Define el contenido final de la página, incluyendo enlaces a Términos y Condiciones, Privacy Policy y datos de contacto.
+- `h1` - `h4`: Definen los diferentes títulos y subtítulos de la página, siendo `h1` el mayor nivel y `h4` el más bajo.
+
+**JavaScript**
+
+Se sigue el Google JavaScript Style Guide y las MDN JavaScript guidelines. Se utiliza `camelCase` para variables y funciones, `const` y `let` en lugar de `var`, y punto y coma obligatorio al final de cada sentencia. Los nombres de archivo siguen `kebab-case`.
+
 ### 5.1.4. Software Deployment Configuration
 
 ## 5.2. Landing Page, Services & Applications Implementation
