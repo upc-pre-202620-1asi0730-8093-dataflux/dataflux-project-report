@@ -1261,6 +1261,23 @@ La sección de funciones principales está dividida entre un espacio para video 
 
 ![Landing_Page_UI_Design-Key_Features.png](assets/md-images-chapter4/Landing_Page_UI_Design-Key_Features.png)
 
+### RentBuild Platform Overview
+
+Esta sección explica con mayor detalle la finalidad de RentBuild y su funcionamiento general. Se combina un bloque de información con un espacio destinado a un video demostrativo. El contenido destaca la gestión de equipos, el seguimiento del ciclo de alquiler y el control del mantenimiento.
+
+![Landing_Page_UI_Design-RentBuild_Platform_Overview.png](assets/md-images-chapter4/Landing_Page_UI_Design-RentBuild_Platform_Overview.png)
+
+### Benefits
+
+La sección de beneficios presenta las principales ventajas que obtiene el usuario al utilizar RentBuild. Entre ellas se encuentran un mejor control de la disponibilidad de maquinaria, organización de reservas, seguimiento de alquileres y gestión del mantenimiento. La información se presenta de manera sencilla y acompañada de elementos visuales.
+
+![Landing_Page_UI_Design-Benefits.png](assets/md-images-chapter4/Landing_Page_UI_Design-Benefits.png)
+
+### Pricing
+
+La sección de precios presenta tres alternativas de suscripción: Basic, Pro y Premium. Cada plan muestra diferentes características y niveles de acceso a las funciones de RentBuild. También se incluye un selector entre modalidad mensual y anual.
+
+![Landing_Page_UI_Design-Pricing.png](assets/md-images-chapter4/Landing_Page_UI_Design-Pricing.png)
 
 ### 4.3.2. Landing Page Mock-up
 
