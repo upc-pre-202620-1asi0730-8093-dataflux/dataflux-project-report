@@ -1052,6 +1052,14 @@ Se sigue el Google JavaScript Style Guide y las MDN JavaScript guidelines. Se ut
 
 ### 5.1.4. Software Deployment Configuration
 
+Para el despliegue del Landing Page de RentBuild se utilizó Vercel, importando el repositorio `dataflux-landing-page` de la organización de GitHub del equipo desde la rama `main`. La configuración del proyecto utiliza el preset de aplicación Vite y el directorio raíz `./`.
+
+![Vercel - Importación del proyecto](./assets/md-images-chapter5/vercel-import-project.png)
+
+Una vez importado el proyecto, Vercel genera el Production Deployment, el cual queda en estado *Ready* y accesible públicamente en el dominio `dataflux-landing-page.vercel.app`. El despliegue toma como fuente la rama `main`, por lo que cada actualización de esta rama se refleja en producción.
+
+![Vercel - Production Deployment](./assets/md-images-chapter5/vercel-production-deployment.png)
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
