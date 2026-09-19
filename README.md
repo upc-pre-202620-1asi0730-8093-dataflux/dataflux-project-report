@@ -1325,6 +1325,23 @@ La sección de beneficios utiliza textos breves y elementos gráficos para desta
 
 ![Landing_Page_ Mock_up-Benefits.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Benefits.png)
 
+### Pricing
+
+El mock-up presenta tres tarjetas correspondientes a los planes Basic, Pro y Premium. El plan Premium se destaca visualmente mediante el uso del color naranja, mientras que los demás mantienen tonos más claros. Cada tarjeta muestra sus principales funcionalidades y un botón de acción.
+
+![Landing_Page_ Mock_up-Pricing.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Pricing.png)
+
+### Our Team
+
+La sección utiliza tarjetas con fotografías circulares de cada integrante, acompañadas de su nombre, rol y una breve descripción. Los elementos se organizan en filas y mantienen espacios suficientes para mejorar la lectura. Los colores y estilos de las tarjetas siguen la identidad visual de RentBuild.
+
+![Landing_Page_ Mock_up-Our_Team.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Our_Team.png)
+
+### Footer
+
+El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el final de la página. Los enlaces están distribuidos en columnas relacionadas con producto, soporte, empresa y otros recursos. Los textos claros generan un buen contraste con el fondo.
+
+![Landing_Page_ Mock_up-Footer.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Footer.png)
 
 ## 4.4. Web Applications UX/UI Design
 
