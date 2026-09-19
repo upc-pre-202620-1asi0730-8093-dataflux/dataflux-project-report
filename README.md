@@ -1243,6 +1243,25 @@ El diseño de la Landing Page de RentBuild busca comunicar de manera clara la pr
 
 ### 4.3.1. Landing Page Wireframe
 
+### Nav y Hero
+
+La sección inicial del wireframe presenta el logotipo de RentBuild, el menú de navegación y el mensaje principal de la plataforma. El contenido se divide en dos áreas: a la izquierda se muestra la propuesta de valor y los botones de acción, mientras que a la derecha se reserva espacio para elementos visuales relacionados con la gestión de equipos.
+
+![Landing_Page_UI_Design-Nav_y_Hero.png](assets/md-images-chapter4/Landing_Page_UI_Design-Nav_y_Hero.png)
+
+### Operational Management
+
+Esta sección muestra las principales actividades que pueden gestionarse dentro de RentBuild. Se presentan bloques relacionados con la disponibilidad de equipos, las reservas y el mantenimiento. La distribución permite mostrar de forma sencilla cómo la plataforma centraliza diferentes procesos relacionados con el alquiler de maquinaria.
+
+![Landing_Page_UI_Design-Operational_Management.png](assets/md-images-chapter4/Landing_Page_UI_Design-Operational_Management.png)
+
+### Key Features
+
+La sección de funciones principales está dividida entre un espacio para video y cuatro bloques informativos. Estos representan la gestión y disponibilidad de equipos, reservas y alquileres, mantenimiento e incidencias, y reportes operativos. La estructura permite presentar las funciones principales de RentBuild de manera clara y ordenada.
+
+![Landing_Page_UI_Design-Key_Features.png](assets/md-images-chapter4/Landing_Page_UI_Design-Key_Features.png)
+
+
 ### 4.3.2. Landing Page Mock-up
 
 ## 4.4. Web Applications UX/UI Design
