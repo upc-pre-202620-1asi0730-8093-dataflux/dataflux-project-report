@@ -326,7 +326,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 2.3.1. User Personas
 
-El user persona se construyó a partir de patrones encontrados en las entrevistas realizadas.
+El user persona se construyó a partir de patrones encontrados en las entrevistas.
 
 **Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
 ![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
