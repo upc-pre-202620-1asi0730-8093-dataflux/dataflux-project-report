@@ -1293,6 +1293,22 @@ El Footer representa la última sección de la Landing Page y concentra los enla
 
 ### 4.3.2. Landing Page Mock-up
 
+El mock-up de la Landing Page de **RentBuild** representa la versión visual de alta fidelidad del diseño definido previamente en el wireframe. En esta etapa se incorporan la paleta de colores, tipografía, imágenes, tarjetas, sombras, botones y elementos gráficos que conforman la identidad visual final de la plataforma.
+
+### Nav y Hero
+
+El mock-up del Hero aplica la identidad visual definitiva de RentBuild mediante colores, tipografía, botones y elementos gráficos. El mensaje principal ocupa una posición destacada y se acompaña de llamadas a la acción como registro y demostración. A la derecha se muestran elementos relacionados con equipos y disponibilidad.
+
+![Landing_Page_ Mock_up-Nav_y_Hero.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Nav_y_Hero.png)
+
+### Operational Management
+
+En la versión de alta fidelidad, esta sección utiliza iconos, colores y una organización visual uniforme para representar disponibilidad, reservas y mantenimiento. Cada función se presenta mediante títulos y textos breves que permiten una lectura rápida. El uso de fondos claros y espacios amplios evita la saturación de información.
+
+![Landing_Page_ Mock_up-Operational_Management.png](assets/md-images-chapter4/Landing_Page_%20Mock_up-Operational_Management.png)
+
+
+
 ## 4.4. Web Applications UX/UI Design
 
 ### 4.4.1. Web Applications Wireframes
