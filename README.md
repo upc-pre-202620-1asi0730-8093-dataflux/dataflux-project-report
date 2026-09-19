@@ -734,20 +734,11 @@ El Empathy Mapping permite profundizar en la comprensión de los principales seg
 
 ## 2.4. Big Picture Event Storming
 
-En esta sección el equipo presenta el proceso y los resultados de la sesión de Big Picture EventStorming realizada para el proyecto RentBuild. Esta técnica permitió al equipo entender de forma colaborativa el dominio del negocio de alquiler de maquinaria para construcción en su conjunto, identificando los eventos significativos (Domain Events) que ocurren a lo largo del proceso de negocio, así como los comandos, agregados y políticas que los desencadenan. Se trata de una primera aproximación visual de alto nivel que explora el landscape del negocio, permitiendo identificar los procesos clave del dominio junto con las relaciones causa-efecto entre ellos, sirviendo como base para la posterior identificación de Bounded Contexts.
+El Big Picture Event Storming permitió identificar y representar los principales eventos del dominio de MaquiGest, mostrando de manera general el flujo del negocio desde el registro de la maquinaria hasta su devolución, inspección y mantenimiento.
 
-El flujo modelado por el equipo describe el proceso de reservación y contratación dentro de RentBuild, siguiendo la siguiente secuencia:
+La siguiente imagen presenta el resultado del Big Picture Event Storming realizado para el proyecto:
 
-1. Comando: Solicitar reservación
-2. Aggregate: Reservación
-3. Evento: Reservación confirmada
-4. Policy: Genera el contrato
-5. Comando: Generar contrato
-6. Evento: Contrato generado
-
-![Big Picture EventStorming](./assets/md-images-chapter2/big-picture-eventstorming.png)
-
-Miro: https://miro.com/welcomeonboard/bXFFSkpkdTBCYnBvUTdtSEJJT242NnpTQ0pTTTA4dWdleTJ2QTN0YmZRcUsrRmR4RjZ2ODBvb0JsdzJMZXVlbjljK1RPWFBpNjBPWHFZSWhhNkQwQ1hNczRUelBUWlJSenZCcml6aERpZG1RTFZ5WDZZUk42cjZPVXQ2RVUyR1ZBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=904943457433
+![Big Picture Event Storming de MaquiGest](assets/md-images-chapter2/big-picture-event-storming.png)
 
 ## 2.5. Ubiquitous Language
 
