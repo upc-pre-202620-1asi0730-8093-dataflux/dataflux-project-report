@@ -798,7 +798,7 @@ RentBuild is composed of a public **Landing Page**, a **Single Page Application*
 Additionally, the RESTful API communicates with external services such as **Google Maps Platform** for geolocation capabilities, **Stripe** for subscription payment processing, and **SendGrid** for transactional email delivery.
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/c4/container/rentbuild-c4-container-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/container/rentbuild-c4-system-container-diagram.png"
        alt="RentBuild Software Architecture Container Diagram"
        width="90%">
 </p>
