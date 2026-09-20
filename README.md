@@ -3175,6 +3175,8 @@ En esta sección se resumen las actividades realizadas por el equipo en relació
 
 En esta sección se explica cómo se desarrollaron las actividades de implementación del Landing Page durante el Sprint 1, evidenciando la participación colaborativa de todos los integrantes del equipo. A continuación, se presentan capturas de los analíticos de colaboración y commits en GitHub correspondientes al repositorio del proyecto, en los que se refleja el aporte individual de cada miembro del equipo.
 
+![Team collaboration](./assets/md-images-chapter5/Team.png)
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
@@ -3227,6 +3229,25 @@ Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to
 
 # Anexos
 
+# Anexos
+
+## Anexo A. Videos de Exposiciones
+
+En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
+
+| Entrega | Características del video                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sobre el contenido | Integración y entrega |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|
+| **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCijYvT9wbIS4c7IaP1XE5BAbY68_bZ8BJU7ORl780W598?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=WLcTld)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
+
+## Anexo B. Videos del proyecto
+
+En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest durante el AV1.
+
+| Tipo de video | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
+|---|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=21dBzs) |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQC3--vcfbm7Q5EeezHqkmXpAU4-4n9UExnoBHVrzoqYO00?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=k5zo8c)
+
 **Web Applications Mock-ups:** https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=qrleaHn5r7IHGSxf-1
 
 **Lean UX Canvas:** https://www.figma.com/board/OcVqiqyfAERGRZHmmTNKMI/Sin-t%C3%ADtulo?node-id=0-1&t=bgNbwgpxLyQB1bi2-1
@@ -3236,13 +3257,3 @@ Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to
 **Miro:** https://miro.com/welcomeonboard/bXFFSkpkdTBCYnBvUTdtSEJJT242NnpTQ0pTTTA4dWdleTJ2QTN0YmZRcUsrRmR4RjZ2ODBvb0JsdzJMZXVlbjljK1RPWFBpNjBPWHFZSWhhNkQwQ1hNczRUelBUWlJSenZCcml6aERpZG1RTFZ5WDZZUk42cjZPVXQ2RVUyR1ZBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=904943457433
 
 **Web Applications WireFlow:** https://www.figma.com/board/x7IvCSgobEyo1SbH3PRnqg/Rent-Build-WireFlow?t=TBFB1usHt4A4XCnH-1
-
-**Segmento Objetivo 1:** https://app.creately.com/d/QwlCIfA0o0k/edit
-
-**Segmento Objetivo 2:** https://app.creately.com/d/DyKHPyVwNtd/edit
-
-**Class Diagrams:** PlantUML://www.plantuml.com/plantuml/png/XLBThjCm3BxFKqIz0g4ZmHkSewsWNI0X9Xx0IxrYaTZ5SIOnnBj3fgvhrOrpqzhnz_D5yNCsK2ifklo3U025v4E4d5_Cb0x5S1U4ztH6_zwvoyItFmiDudyxxzzHLxyiwQ1Ogm26lIX1RJ0RT58h0wKZR0d6YM9FsHJqpTlQ3kKGAO2sl063ABsCvogzGWBz36p8b0ZPwkpFDSjNpAWd22Gy3tJ4y1rsJ85aQZyIBqC5uIDf0fqBliH_jukeAxMMJR67gT_YIMAfnajLggvLSt7F6tfkjX4s1PCjthCDmXrL2kR9zHCoAjJ3cyeNw6NEIy8cbm9DEfcuDqQR1iKCzsqLpi9x2GHnnTW8PzCIJ1HUvNpB1PGUB8hA1RbEqdne_DEJRnBmh-QwQ-wU_n8vsmGtEZz6U3SA_mSnRqPO_Kr1tLJDfkiNTGzkLb_DFIDt9SM_
-
-**Database Diagrams:** PlantUML://www.plantuml.com/plantuml/png/fPH1hjiW48Rtd09bMSaNgA8egswwwGsiAKoSKO5n0KVAYz_T7maESMpBIlGs5lppo_FzUCm-HF2niqQ4V-HQy62b8OVntA9a7uyi1Bf8yImt-B-ZbiD6Gf33Mbw4b3yaQVbJaejok_tpUxTBMbMbXsFxrsCgXUZ9DKbH4B5XJp0MCJ5e7Yk9YGvGQu9irQZ8WhbwRUinG0qc0HZqzQZrhslhpmTlCg8_WI9scAcVb7Ns0weZrEGecQy42Roe1t95cjCFPpCZUy0hTidSgSWU5cnTwC0JhqMxnnzobUrBeT15ZmrCKsayiUbItBLmuoDS0rISca3aKBxK3NGkhmCdlwRykGf40MxGeOTdu5VceeLccEBRQft09c9-6a6BaJNFSDvZ64PXSZmpTPtDmmUxEh0YC8LdiSjuudBqvT8t-msJcplapVjtXEV9osU7qlTLnPTo1udbB8DjyjEBWhLSlhzqkJhUPa_VZ_y-KTQbEX_vgOalUH357ftkhFa2
-
-**Figma:** https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=DNCxdsFf6vB1SXbX-1
