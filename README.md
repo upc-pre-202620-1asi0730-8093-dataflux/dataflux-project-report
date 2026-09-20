@@ -1704,25 +1704,25 @@ El Design-Level Event Storming permitió profundizar en los procesos identificad
 
 ### 4.6.2. Software Architecture Context Diagram
 
-A partir del Ubiquitous Language (2.5) y de las épicas de 3.1, la solución se organiza en cinco bounded contexts, que son la base de los diagramas de esta sección y de las siguientes:
+El Software Architecture Context Diagram presenta a **RentBuild** como un único sistema de software y muestra su interacción con los principales usuarios y servicios externos. En este nivel del C4 Model no se representan todavía los componentes internos, containers, bounded contexts ni tecnologías de implementación, ya que el objetivo es delimitar el alcance funcional de la solución y reconocer las dependencias externas con las que se comunica.
 
-| Bounded context | Responsabilidad | Épicas que cubre |
-|---|---|---|
-| **IAM** | Registro, autenticación y roles de usuario (empresa de alquiler / empresa constructora). | EP01 |
-| **Profiles** | Datos de la empresa y perfil público de proveedor con su historial de cumplimiento. | EP01 (US03), término "Perfil de Proveedor" |
-| **Inventory** | Equipos, categorías, tarifas, estado del equipo y disponibilidad por periodo. | EP02, EP03 (US09–US11) |
-| **Rentals** | Solicitudes de alquiler, contratos, entregas y devoluciones. | EP03 (US12), EP04 |
-| **Maintenance** | Mantenimientos programados y realizados, incidencias e historial del equipo. | EP05 |
+Los principales actores que interactúan con RentBuild son:
 
-EP06 (Landing Page) no constituye un bounded context: corresponde al container Landing Page.
+- **Rental Operator:** representa al usuario perteneciente a una empresa de alquiler de maquinaria. Utiliza RentBuild para administrar equipos, solicitudes de alquiler, reservas, entregas, devoluciones, incidencias y actividades de mantenimiento.
+- **Construction Manager:** representa al usuario perteneciente a una empresa constructora. Utiliza la plataforma para buscar maquinaria, revisar disponibilidad, realizar solicitudes de alquiler y efectuar el seguimiento de sus reservas y alquileres activos.
+- **System Administrator:** representa al responsable de administrar el acceso a la plataforma, supervisar su operación y atender casos excepcionales que requieran intervención administrativa.
 
----
+RentBuild también mantiene comunicación con servicios externos necesarios para determinadas capacidades del producto:
 
-RentBuild se representa como un único sistema de software en el centro del diagrama, rodeado por las personas que lo utilizan y los sistemas externos con los que interactúa. Las personas corresponden a los roles del Ubiquitous Language: el **Operador de Alquiler**, que administra el inventario y el ciclo completo del alquiler; el **Jefe de Obra**, que busca maquinaria y solicita alquileres para su proyecto; y el **Visitante**, que conoce la propuesta de valor desde el Landing Page.
+- **Google Maps Platform:** proporciona servicios de geolocalización y mapas utilizados para apoyar la localización de maquinaria y la coordinación de entregas y devoluciones.
+- **Stripe:** procesa los pagos asociados a los planes de suscripción de RentBuild.
+- **SendGrid:** proporciona servicios de correo transaccional para comunicaciones relacionadas con cuentas, reservas, alquileres, suscripciones y otras notificaciones del sistema.
 
-![Software Architecture Context Diagram](./assets/md-images-chapter4/software-architecture-context-diagram.png)
-
-El sistema se apoya en dos servicios externos. El **Servicio de Correo** envía las notificaciones transaccionales del ciclo de alquiler — confirmación de solicitud, aceptación o rechazo y recordatorios de devolución —, que son el mecanismo por el que ambas empresas se enteran de un cambio de estado sin tener que consultar la plataforma. **Google Maps Platform** aporta la geolocalización de almacenes y obras, necesaria para coordinar entregas y devoluciones, que según las entrevistas ocurren en ubicaciones distintas al almacén del proveedor. Ambos cumplen el requisito de integrar al menos un servicio de terceros.
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/context/rentbuild-c4-context-diagram.png"
+       alt="RentBuild Software Architecture Context Diagram"
+       width="90%">
+</p>
 
 ### 4.6.3. Software Architecture Container Diagrams
 
