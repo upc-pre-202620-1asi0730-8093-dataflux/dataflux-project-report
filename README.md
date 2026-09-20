@@ -174,6 +174,7 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-The-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
@@ -2165,6 +2166,70 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 
 ## Conclusiones y recomendaciones
 
+**Problema y segmentos.** El análisis del sector (Clements, 2025, indica que el 67 % de las empresas de alquiler opera con sistemas parcialmente integrados que requieren transferencia manual de información) y el User Task Matrix apuntan en la misma dirección. En ambos segmentos, las tareas de mayor frecuencia e importancia son verificar la disponibilidad de los equipos y dar seguimiento a las fechas de devolución. Ambos dependen además del teléfono y de WhatsApp. Esto respalda el Problem Statement y la necesidad de una solución digital centralizada.
+
+1. **Diferenciación.** El análisis competitivo frente a Booqable, Rentman y Odoo Rental mostró un espacio para una plataforma más especializada y simple. RentBuild se enfoca en maquinaria para construcción y en el ciclo completo (reserva, alquiler, entrega, devolución, inspección y mantenimiento), sin la complejidad de plataformas de mayor escala.
+2. **Producto del Sprint 1.** El equipo alcanzó el Sprint Goal. Se desarrolló la primera versión del Landing Page con HTML, CSS y JavaScript, a partir de los wireframes y mock-ups de Figma, y se desplegó en Vercel con acceso público. También se implementaron las pantallas iniciales de la Web Application: usuarios (registro, login y perfil), inventario de maquinaria, catálogo y búsqueda, solicitudes de alquiler y mantenimiento e incidencias. Las 23 tareas planificadas del Sprint Backlog se completaron dentro del sprint, con los 59 story points comprometidos, lo que cumple el alcance planificado para esta entrega.
+3. **Trabajo en equipo y liderazgo compartido.** El equipo estableció una meta común mediante el Sprint Goal y planificó las tareas con responsables por aspecto en la matriz LACX, donde el liderazgo se repartió entre los integrantes (diseño y maquetación, desarrollo de la Web Application y despliegue). Esta división permitió avanzar en paralelo sin bloqueos. Las ramas de GitFlow, los Conventional Commits y el tablero de Trello dieron trazabilidad al trabajo y permiten que cualquier integrante continúe las tareas de otro.
+4. **Mejora continua.** En la retrospectiva el equipo identificó una oportunidad de mejora: la herramienta de despliegue debió definirse antes. La integración de la lógica de negocio en algunas pantallas fue el mayor reto del sprint y se resolvió sobre la marcha. Estos aprendizajes, junto con la retroalimentación del docente, se incorporarán en las siguientes versiones de los artefactos.
+
+**Recomendaciones**
+
+1. Para TB1, desplegar la primera versión de la Web Application e iniciar el RESTful API con ASP.NET Core y su documentación en OpenAPI, como pide el enunciado.
+2. Organizar el RESTful API por los Bounded Contexts del Design-Level EventStorming y aplicar los principios de RESTful en las URLs y los verbos HTTP.
+3. Incluir pruebas unitarias y de integración o aceptación en el repositorio de Web Services.
+4. Priorizar en el Sprint 2 las funcionalidades que aún no existen: reservas con verificación de conflictos de disponibilidad, contratos y pagos, y suscripciones con los tres niveles de plan definidos en los assumptions.
+5. Implementar alertas de fechas de devolución y un dashboard operativo con disponibilidad, alquileres activos y mantenimientos. Son las tareas de mayor frecuencia e importancia del User Task Matrix.
+6. Usar como servicio externo de terceros un canal de notificaciones (WhatsApp o correo electrónico), ya que ambos segmentos dependen de esos medios. Así se cumple el requisito del enunciado con una integración que aporta valor real.
+7. Aplicar inglés como idioma por defecto en la interfaz y la documentación, con soporte para es_419 y atributos ARIA. Publicar además los términos y condiciones y la protección de privacidad en el footer del Landing Page y de la Web Application.
+8. Verificar que los call-to-action de cada segmento en el Landing Page redirijan a la vista correspondiente de la Web Application, con un estilo visual consistente entre ambos.
+
+# Video About-The-Team
+
 # Bibliografía
 
+Brandolini, A. (2013). *Introducing EventStorming*. Leanpub.
+
+Clements, K. (2025, January 25). *The 2025 state of rental technology report*. Quipli. https://www.quipli.com/resources/2025-state-of-rental-report/
+
+Cohn, M. (2004). *User stories applied: For agile software development*. Addison-Wesley.
+
+Cohn, M. (2005). *Agile estimating and planning*. Prentice Hall.
+
+Cooper, A., Reimann, R., Cronin, D., & Noessel, C. (2014). *About face: The essentials of interaction design* (4th ed.). Wiley.
+
+Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
+
+Garrett, J. J. (2011). *The elements of user experience: User-centered design for the web and beyond* (2nd ed.). New Riders.
+
+Gothelf, J., & Seiden, J. (2016). *Lean UX: Designing great products with agile teams* (2nd ed.). O'Reilly Media.
+
+Gray, D., Brown, S., & Macanufo, J. (2010). *Gamestorming: A playbook for innovators, rulebreakers, and changemakers*. O'Reilly Media.
+
+Newman, S. (2021). *Building microservices: Designing fine-grained systems* (2nd ed.). O'Reilly Media.
+
+Ries, E. (2011). *The lean startup: How today's entrepreneurs use continuous innovation to create radically successful businesses*. Crown Business.
+
+Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to Scrum*. Scrum.org. https://scrumguides.org/
+
 # Anexos
+
+**Web Applications Mock-ups:** https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=qrleaHn5r7IHGSxf-1
+
+**Lean UX Canvas:** https://www.figma.com/board/OcVqiqyfAERGRZHmmTNKMI/Sin-t%C3%ADtulo?node-id=0-1&t=bgNbwgpxLyQB1bi2-1
+
+**Trello:** https://trello.com/invite/b/6aacc6b9cc0413f772436a35/ATTI72782e0013e72d3ec63864ccbd335c7099570315/dataflux
+
+**Miro:** https://miro.com/welcomeonboard/bXFFSkpkdTBCYnBvUTdtSEJJT242NnpTQ0pTTTA4dWdleTJ2QTN0YmZRcUsrRmR4RjZ2ODBvb0JsdzJMZXVlbjljK1RPWFBpNjBPWHFZSWhhNkQwQ1hNczRUelBUWlJSenZCcml6aERpZG1RTFZ5WDZZUk42cjZPVXQ2RVUyR1ZBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=904943457433
+
+**Web Applications WireFlow:** https://www.figma.com/board/x7IvCSgobEyo1SbH3PRnqg/Rent-Build-WireFlow?t=TBFB1usHt4A4XCnH-1
+
+**Segmento Objetivo 1:** https://app.creately.com/d/QwlCIfA0o0k/edit
+
+**Segmento Objetivo 2:** https://app.creately.com/d/DyKHPyVwNtd/edit
+
+**Class Diagrams:** https://www.plantuml.com/plantuml/png/XLBThjCm3BxFKqIz0g4ZmHkSewsWNI0X9Xx0IxrYaTZ5SIOnnBj3fgvhrOrpqzhnz_D5yNCsK2ifklo3U025v4E4d5_Cb0x5S1U4ztH6_zwvoyItFmiDudyxxzzHLxyiwQ1Ogm26lIX1RJ0RT58h0wKZR0d6YM9FsHJqpTlQ3kKGAO2sl063ABsCvogzGWBz36p8b0ZPwkpFDSjNpAWd22Gy3tJ4y1rsJ85aQZyIBqC5uIDf0fqBliH_jukeAxMMJR67gT_YIMAfnajLggvLSt7F6tfkjX4s1PCjthCDmXrL2kR9zHCoAjJ3cyeNw6NEIy8cbm9DEfcuDqQR1iKCzsqLpi9x2GHnnTW8PzCIJ1HUvNpB1PGUB8hA1RbEqdne_DEJRnBmh-QwQ-wU_n8vsmGtEZz6U3SA_mSnRqPO_Kr1tLJDfkiNTGzkLb_DFIDt9SM_
+
+**Database Diagrams:** https://www.plantuml.com/plantuml/png/fPH1hjiW48Rtd09bMSaNgA8egswwwGsiAKoSKO5n0KVAYz_T7maESMpBIlGs5lppo_FzUCm-HF2niqQ4V-HQy62b8OVntA9a7uyi1Bf8yImt-B-ZbiD6Gf33Mbw4b3yaQVbJaejok_tpUxTBMbMbXsFxrsCgXUZ9DKbH4B5XJp0MCJ5e7Yk9YGvGQu9irQZ8WhbwRUinG0qc0HZqzQZrhslhpmTlCg8_WI9scAcVb7Ns0weZrEGecQy42Roe1t95cjCFPpCZUy0hTidSgSWU5cnTwC0JhqMxnnzobUrBeT15ZmrCKsayiUbItBLmuoDS0rISca3aKBxK3NGkhmCdlwRykGf40MxGeOTdu5VceeLccEBRQft09c9-6a6BaJNFSDvZ64PXSZmpTPtDmmUxEh0YC8LdiSjuudBqvT8t-msJcplapVjtXEV9osU7qlTLnPTo1udbB8DjyjEBWhLSlhzqkJhUPa_VZ_y-KTQbEX_vgOalUH357ftkhFa2
+
+**Figma:** https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=DNCxdsFf6vB1SXbX-1
