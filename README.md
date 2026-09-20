@@ -193,8 +193,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico                                                                                 | Acciones realizadas                                                                                                                                                                                            | Conclusiones |
 |:----------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta.**                                | **Cisneros Salas, Luis Angel**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:**<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:**<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** | **AV1:**     |
-| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Cisneros Salas, Luis Angel**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:**<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:**<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** | **AV1:**     |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta.**                                | **Cisneros Salas, Luis Angel**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: Durante el desarrollo del proyecto RentBuild, participé activamente en la elaboración de diferentes componentes relacionados con la experiencia de usuario y la documentación de la solución, entre ellos el Lean UX Process, Target Segments, Style Guidelines, Information Architecture, Web Applications User Flow y Web Applications WireFlow. Estas actividades requirieron coordinación con los demás integrantes del equipo para mantener coherencia entre la propuesta de valor, las necesidades de los usuarios, el diseño de las interfaces y la documentación general del proyecto. El trabajo colaborativo se gestionó mediante una organización en GitHub, utilizando repositorios independientes para la documentación de la solución y para el desarrollo de la Landing Page. Cada integrante trabajó sobre ramas específicas de acuerdo con las tareas asignadas y posteriormente realizó Pull Requests hacia la rama develop. Este procedimiento permitió que los cambios fueran revisados por otros miembros antes de ser integrados, promoviendo una responsabilidad compartida sobre la calidad del proyecto. Asimismo, participé en la revisión, corrección y actualización de diferentes elementos del trabajo, contribuyendo a mantener la continuidad entre las actividades realizadas por los distintos miembros y facilitando la integración de los entregables del equipo.**<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:**<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** | **AV1:**     |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Cisneros Salas, Luis Angel**<br>**AV1:** <br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: Durante el proyecto mantuve una participación activa y colaborativa, considerando las observaciones y aportes realizados por los demás integrantes antes de incorporar cambios a los entregables. La división del trabajo mediante ramas de Git permitió establecer responsabilidades específicas y desarrollar las tareas de forma organizada, mientras que el uso de Pull Requests proporcionó un espacio para revisar los cambios, realizar observaciones y proponer mejoras antes de integrarlos a la versión principal del proyecto. Ante observaciones o inconsistencias identificadas durante las revisiones, se analizaron los comentarios del equipo y se realizaron los ajustes necesarios buscando mantener la coherencia entre las distintas secciones del proyecto. Este flujo de trabajo permitió que los integrantes pudieran participar tanto en la elaboración como en la validación de los entregables. De esta manera, se promovió la cooperación y la integración del grupo mediante una metodología de trabajo en la que las contribuciones individuales eran revisadas y complementadas por otros miembros, permitiendo avanzar de forma coordinada hacia los objetivos establecidos para RentBuild**<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:**<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** | **AV1:**     |
 
 <div style="page-break-after: always;"></div>
 
@@ -1689,9 +1689,88 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+Los wireflow diagrams de la Web Application de RentBuildrepresentan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realiza el usuario dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las distintas pantallas y cómo avanza la experiencia de uso en función de las acciones y decisiones realizadas por el usuario.
+
+En el caso de RentBuild, se ha definido un wireflow general que abarca desde el proceso inicial de autenticación y registro hasta las principales funcionalidades destinadas a las empresas de alquiler de maquinaria. El diagrama permite observar de manera global cómo el usuario ingresa a la plataforma, selecciona el tipo de empresa correspondiente y posteriormente accede a los módulos necesarios para gestionar maquinaria, solicitudes, alquileres y actividades relacionadas con su operación.
+
+El recorrido comienza en la pantalla de Login, desde la cual el usuario puede ingresar sus credenciales para acceder a RentBuild. En caso de no contar con una cuenta, puede dirigirse a la pantalla de Register para completar el proceso de creación de una nueva cuenta. Una vez realizado el registro correctamente, el flujo continúa hacia una decisión asociada al tipo de empresa del usuario.
+
+En el wireflow desarrollado se representa la rama correspondiente a una **Rental Company**, es decir, una empresa dedicada al alquiler de maquinaria. Después de seleccionar este tipo de empresa, el usuario ingresa a la Web Application de RentBuild, donde dispone de una navegación lateral persistente que permite acceder a los principales módulos del sistema. Como parte del flujo inicial también se contempla la opción de **Register machinery**, mediante la cual se puede incorporar nueva maquinaria al inventario de la empresa.
+
+A partir de esta vista principal, el recorrido de la empresa de alquiler contempla los siguientes módulos:
+
+- **Inventory:** permite consultar la maquinaria registrada, su categoría, estado y cantidad de unidades disponibles.
+- **Requests:** permite revisar las solicitudes de alquiler y conocer el estado de cada una de ellas.
+- **Active rentals:** presenta los alquileres actualmente vigentes, incluyendo el período de alquiler, tarifa, costo estimado y estado.
+- **Maintenance:** permite registrar actividades de mantenimiento o incidencias asociadas a la maquinaria, además de consultar registros anteriores.
+- **History:** centraliza los eventos relacionados con cada maquinaria, como solicitudes, aprobaciones, rechazos, mantenimientos e incidencias.
+- **Catalog:** permite explorar la maquinaria mediante un catálogo visual, utilizando búsqueda y filtros para localizar equipos según su categoría o estado.
+
+Estos módulos se encuentran relacionados mediante la navegación lateral de RentBuild, permitiendo al usuario desplazarse entre las diferentes funcionalidades sin perder el contexto de la aplicación. De esta manera, el wireflow refleja el recorrido operativo asociado a la gestión de maquinaria y alquileres dentro de una empresa proveedora de equipos.
+
+Finalmente, el diagrama incorpora una salida general mediante la acción Sign Out, que representa el cierre de sesión y finaliza el recorrido del usuario dentro de la Web Application.
+
+En conjunto, el wireflow permite validar que las pantallas diseñadas se encuentran conectadas de manera coherente y que la navegación responde al flujo funcional planteado para las empresas de alquiler de maquinaria, desde el acceso inicial a RentBuild hasta la administración de inventario, solicitudes, alquileres, mantenimiento, historial y catálogo.
+
+<img src = "assets/md-images-chapter4/WireflowDiagrams.png" width = 100%>
+
 ### 4.4.3. Web Applications Mock-ups
 
 ### 4.4.4. Web Applications User Flow Diagrams
+
+#### Flujo de la empresa de alquiler de maquinaria
+
+Después de iniciar sesión correctamente y ser reconocido como usuario perteneciente a una empresa de alquiler de maquinaria, el usuario accede al **Rental Company Dashboard** de RentBuild. Desde este entorno puede desplazarse entre las principales funcionalidades de la aplicación mediante la navegación lateral.
+
+Las secciones disponibles para este segmento son las siguientes:
+
+- **Perfil:** permite consultar y gestionar la información relacionada con el usuario y su cuenta dentro de RentBuild.
+
+- **Inventario:** permite consultar la maquinaria registrada por la empresa y revisar la información disponible de los equipos que forman parte de su inventario.
+
+- **Registrar maquinaria:** permite incorporar nuevos equipos al inventario de la empresa mediante el registro de la información correspondiente. En el User Flow Diagram esta actividad forma parte del proceso de gestión del inventario.
+
+- **Solicitudes:** permite revisar las solicitudes de alquiler recibidas y consultar sus principales detalles. A partir de esta información, la empresa puede aprobar o rechazar una solicitud de acuerdo con sus condiciones y disponibilidad.
+
+- **Alquileres activos:** permite consultar los alquileres que actualmente se encuentran en curso y realizar seguimiento de las operaciones activas relacionadas con la maquinaria alquilada.
+
+- **Mantenimiento:** permite revisar las máquinas que se encuentran en mantenimiento, consultar reportes relacionados con averías o incidencias y programar fechas para las actividades de mantenimiento correspondientes.
+
+- **Historial:** permite consultar los eventos asociados a cada maquinaria a lo largo del tiempo, incluyendo mantenimientos, reparaciones y reservas realizadas previamente.
+
+- **Catálogo:** permite visualizar información detallada de la maquinaria registrada y localizar equipos utilizando criterios de búsqueda como nombre, categoría o condición.
+
+Dentro del recorrido de la empresa de alquiler, uno de los principales puntos de decisión se presenta en la sección **Solicitudes**. Después de revisar los detalles de una solicitud recibida, el usuario puede aprobarla o rechazarla. Esta decisión determina la continuidad del proceso de alquiler y permite a la empresa mantener control sobre las solicitudes recibidas.
+
+Las diferentes funcionalidades se encuentran conectadas con el Dashboard de la empresa de alquiler, permitiendo que el usuario pueda desplazarse entre los procesos de gestión de maquinaria, solicitudes, alquileres activos, mantenimiento, historial y catálogo de acuerdo con las tareas que necesite realizar.
+
+Finalmente, una vez terminadas sus actividades dentro de RentBuild, el usuario puede ejecutar la acción **Sign Out**, mediante la cual se cierra la sesión activa y finaliza su recorrido dentro de la Web Application.
+
+**Key elements:**
+
+- Acceso a la plataforma RentBuild.
+- Visualización de la pantalla de Login.
+- Verificación de la existencia de una cuenta.
+- Ingreso y validación de credenciales.
+- Manejo de credenciales incorrectas mediante un mensaje de error.
+- Registro de nuevos usuarios y empresas.
+- Confirmación del registro y retorno al Login.
+- Identificación del tipo de empresa.
+- Acceso al Rental Company Dashboard.
+- Gestión del perfil del usuario.
+- Consulta del inventario de maquinaria.
+- Registro de nueva maquinaria.
+- Revisión, aprobación o rechazo de solicitudes de alquiler.
+- Seguimiento de alquileres activos.
+- Gestión del mantenimiento de maquinaria.
+- Consulta de reportes de averías e incidencias.
+- Programación de actividades de mantenimiento.
+- Consulta del historial de cada maquinaria.
+- Consulta y búsqueda de equipos mediante el catálogo.
+- Cierre de sesión mediante la acción Sign Out.
+
+
+<img src = "assets/md-images-chapter4/UserFlowDiagrams.png" width = 100%>
 
 ## 4.5. Web Applications Prototyping
 
