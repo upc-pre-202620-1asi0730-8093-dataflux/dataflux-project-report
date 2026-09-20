@@ -793,21 +793,322 @@ Then el sistema registra la solicitud de contacto
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Se presenta un diagrama de componentes por cada container con lógica propia: la Web Application y la RentBuild API. El Landing Page y la Base de Datos no se descomponen, ya que el primero es contenido estático y la segunda es un almacén sin componentes internos.
+Los diagramas de componentes de arquitectura de software presentan una vista detallada de la organización interna de los principales contenedores frontend y backend que conforman RentBuild.
 
-#### Web Application
+A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
 
-![Component Diagram — Web Application](./assets/md-images-chapter4/software-architecture-component-diagram-web-application.png)
+Además, para cada bounded context del frontend se presenta una vista detallada basada en las capas DDD Presentation, Application, Domain e Infrastructure. Estas vistas permiten identificar los componentes internos, sus responsabilidades, tecnologías y relaciones. Complementariamente, se mantiene una vista específica de la Presentation Layer, donde se muestran con mayor detalle los componentes Angular responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
 
-La Web Application se organiza en una capa transversal y un módulo por bounded context. La capa transversal la forman el **App Router**, que define las rutas y las protege según el rol; el **Auth Store**, que mantiene el estado global de sesión; y el **HTTP Client**, que centraliza la URL base de la API, las cabeceras de autenticación y el manejo de errores. Cada bounded context aporta un par de componentes: sus **Views** (componentes Vue de la interfaz) y su **Service** (la lógica de acceso a la API para ese contexto). Así, un cambio en los recursos de alquileres afecta solo a `Rental Service` y `Rental Views`, sin tocar el resto de la aplicación. La única dependencia cruzada es la de `Rental Views` sobre `Inventory Service`, necesaria para consultar la disponibilidad del equipo antes de enviar una solicitud.
+A nivel de backend, la RESTful API desarrollada con Java y Spring Boot mantiene la misma organización basada en bounded contexts. Una vista general presenta los contextos contenidos dentro de la aplicación backend, mientras que los diagramas individuales descomponen cada bounded context en las capas Interfaces, Application, Domain e Infrastructure siguiendo principios de Domain-Driven Design.
 
-#### RentBuild API
+A continuación, se presentan las diferentes vistas de componentes que conforman la arquitectura de RentBuild.
 
-![Component Diagram — RentBuild API](./assets/md-images-chapter4/software-architecture-component-diagram-api.png)
+#### Frontend General Components Diagram
 
-La API tiene un controller de ASP.NET Core por bounded context: `/api/v1/users` y `/api/v1/auth` (IAM), `/api/v1/company-profiles` (Profiles), `/api/v1/equipment`, `/api/v1/categories` y `/api/v1/availability` (Inventory), `/api/v1/rental-requests`, `/api/v1/contracts`, `/api/v1/deliveries` y `/api/v1/returns` (Rentals), y `/api/v1/maintenance-records` e `/api/v1/incidents` (Maintenance). Todos los controllers persisten a través del componente **Persistence** (DbContext y repositorios de Entity Framework Core), y el **Notification Client** concentra el envío de correos transaccionales. Las dos dependencias entre contextos reflejan reglas del negocio: **Rentals actualiza el estado del equipo en Inventory** al aceptar una solicitud, registrar una entrega o una devolución (reserva → alquilado → disponible), y **Maintenance marca el equipo en mantenimiento o disponible** al programar o completar un trabajo. Estas son las transiciones que hoy las empresas pierden al gestionar con hojas de cálculo, y aquí quedan bajo control de la API.
+El Frontend General Components Diagram presenta la organización general de la Single Page Application de RentBuild. El frontend está implementado con Angular y se estructura alrededor de los bounded contexts definidos para el dominio del negocio.
 
----
+Los mecanismos de layout y routing de la aplicación permiten coordinar la navegación hacia IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Asimismo, Shared Frontend proporciona capacidades reutilizables de interfaz y servicios transversales, mientras que la infraestructura del frontend permite la comunicación con la RentBuild Backend API.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-general-component-diagram.png"
+       alt="RentBuild Frontend General Components Diagram"
+       width="95%">
+</p>
+
+#### IAM Frontend Components Diagram
+
+El bounded context IAM del frontend es responsable de las funcionalidades relacionadas con autenticación, registro, recuperación de contraseña, gestión de sesión y acceso a la cuenta.
+
+La Presentation Layer administra las vistas y las interacciones relacionadas con la autenticación. La Application Layer coordina los flujos de autenticación y el estado de sesión. La Domain Layer contiene los modelos y reglas del frontend asociados con autenticación, mientras que la Infrastructure Layer proporciona la comunicación con los servicios de autenticación del backend y mecanismos técnicos como la persistencia de sesión.
+
+IAM también proporciona información de la cuenta autenticada a otros contextos del frontend y utiliza las capacidades compartidas proporcionadas por Shared Frontend.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-iam-component-diagram.png"
+       alt="RentBuild IAM Frontend Components Diagram"
+       width="90%">
+</p>
+
+
+#### IAM Frontend Detailed Component Diagram
+
+El IAM Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context IAM, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones existentes entre sus componentes.
+
+La Presentation Layer está conformada por `LoginComponent`, `RegisterComponent` y `RecoverPasswordComponent`, responsables de las principales interacciones relacionadas con autenticación, registro y recuperación de contraseña.
+
+La Application Layer coordina los casos de uso y el estado asociado con los procesos de autenticación y gestión de sesión. La Domain Layer concentra los modelos y reglas vinculados con credenciales, sesión y conceptos propios del contexto IAM. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso a infraestructura y dominio, y cómo la infraestructura establece la comunicación con los servicios backend.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/IAM-Frontend-Detailed.png"
+       alt="RentBuild IAM Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Profiles Frontend Components Diagram
+
+El bounded context Profiles del frontend administra la información relacionada con los perfiles de usuarios, empresas y proveedores.
+
+La Presentation Layer contiene las vistas y formularios asociados con los perfiles. La Application Layer coordina las consultas y operaciones de actualización, mientras que la Domain Layer contiene los modelos y reglas correspondientes. La Infrastructure Layer se encarga de la comunicación con los endpoints de Profiles disponibles en el backend.
+
+Este bounded context también utiliza la información de la cuenta autenticada proporcionada por IAM y las capacidades comunes proporcionadas por Shared Frontend.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-profiles-component-diagram.png"
+       alt="RentBuild Profiles Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Profiles Frontend Detailed Component Diagram
+
+El Profiles Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Profiles, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
+
+La Presentation Layer está conformada por `ProfileComponent`, `EditProfileComponent` y `CompanyProfileComponent`, responsables de visualizar y actualizar la información correspondiente a los perfiles de usuarios y empresas.
+
+La Application Layer coordina las consultas, actualizaciones y el estado relacionado con la gestión de perfiles. La Domain Layer concentra los modelos y reglas asociados con usuarios, empresas y perfiles. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend relacionados con Profiles.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/Profiles-Frontend-Detailed.png"
+       alt="RentBuild Profiles Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Inventory Frontend Components Diagram
+
+El bounded context Inventory del frontend administra el catálogo de maquinaria, los detalles de los equipos, sus categorías, tarifas, estado operativo y disponibilidad.
+
+Su Application Layer coordina los flujos relacionados con la gestión y consulta del inventario, comunicándose con las capas Domain e Infrastructure. Inventory también proporciona información sobre maquinaria y disponibilidad requerida por Rentals y coordina con Maintenance los cambios relacionados con el estado de los equipos.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-inventory-component-diagram.png"
+       alt="RentBuild Inventory Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Inventory Frontend Detailed Component Diagram
+
+El Inventory Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Inventory, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
+
+La Presentation Layer está conformada por `EquipmentListComponent`, `EquipmentDetailComponent`, `EquipmentFormComponent`, `EquipmentSearchComponent`, `EquipmentFilterComponent` y `AvailabilityBadgeComponent`. Estos componentes soportan las principales interacciones relacionadas con consulta, detalle, registro, edición, búsqueda, filtrado y visualización de disponibilidad de maquinaria.
+
+La Application Layer coordina los casos de uso y el estado asociado con la gestión del inventario. La Domain Layer concentra los modelos y reglas relacionados con equipos, categorías, tarifas, disponibilidad y estado operativo. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Inventory.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/Inventory-Frontend-Detailed.png"
+       alt="RentBuild Inventory Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Rentals Frontend Components Diagram
+
+El bounded context Rentals del frontend soporta la interacción correspondiente al ciclo de alquiler, incluyendo solicitudes de alquiler, reservas, entregas, alquileres activos y devoluciones.
+
+Este contexto utiliza la información de los equipos y su disponibilidad proporcionada por Inventory, así como la información de empresas y participantes administrada por Profiles. Su Infrastructure Layer se encarga de la comunicación con los endpoints de Rentals expuestos por el backend.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-rentals-component-diagram.png"
+       alt="RentBuild Rentals Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Rentals Frontend Detailed Component Diagram
+
+El Rentals Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Rentals, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
+
+La Presentation Layer está conformada por `RentalRequestsComponent`, `RentalRequestDetailComponent`, `ReservationsComponent`, `ActiveRentalsComponent`, `DeliveryFormComponent` y `ReturnFormComponent`. Estos componentes soportan las principales interacciones relacionadas con solicitudes de alquiler, consulta de detalles, reservas, alquileres activos, entregas y devoluciones de maquinaria.
+
+La Application Layer coordina los casos de uso y el estado asociados con el ciclo de alquiler. La Domain Layer concentra los modelos y reglas relacionados con solicitudes de alquiler, reservas, contratos de alquiler, entregas y devoluciones. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Rentals.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/Rentals-Frontend-Detailed.png"
+       alt="RentBuild Rentals Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Maintenance Frontend Components Diagram
+
+El bounded context Maintenance del frontend administra las programaciones de mantenimiento, inspecciones, incidencias, registros de mantenimiento e historial de mantenimiento de la maquinaria.
+
+Este contexto colabora con Inventory para reflejar cambios en el estado y disponibilidad de los equipos, y con Rentals cuando una incidencia o actividad de mantenimiento afecta a una maquinaria asociada con un alquiler activo.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-maintenance-component-diagram.png"
+       alt="RentBuild Maintenance Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Maintenance Frontend Detailed Component Diagram
+
+El Maintenance Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Maintenance, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
+
+La Presentation Layer está conformada por `MaintenanceListComponent`, `MaintenanceDetailComponent`, `IncidentFormComponent` e `InspectionComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de mantenimientos, visualización de detalles, registro de incidencias y gestión de inspecciones de maquinaria.
+
+La Application Layer coordina los casos de uso y el estado asociados con las operaciones de mantenimiento. La Domain Layer concentra los modelos y reglas relacionados con mantenimientos, inspecciones, incidencias, estados de mantenimiento e historial de los equipos. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Maintenance.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/Maintenance-Frontend-Detailed.png"
+       alt="RentBuild Maintenance Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Subscriptions Frontend Components Diagram
+
+El bounded context Subscriptions del frontend administra los planes disponibles, la suscripción actual, el estado de la suscripción y los flujos relacionados con la gestión o cambio de plan.
+
+Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para obtener la información de la empresa asociada con la suscripción. Su Infrastructure Layer se comunica con los servicios correspondientes de Subscriptions disponibles en el backend.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-subscriptions-component-diagram.png"
+       alt="RentBuild Subscriptions Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Subscriptions Frontend Detailed Component Diagram
+
+El Subscriptions Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Subscriptions, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
+
+La Presentation Layer está conformada por `PlansComponent`, `CurrentSubscriptionComponent` y `ChangePlanComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de planes disponibles, visualización de la suscripción actual y modificación del plan contratado.
+
+La Application Layer coordina los casos de uso y el estado asociados con la gestión de suscripciones. La Domain Layer concentra los modelos y reglas relacionados con suscripciones, planes, períodos de facturación y estados de suscripción. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la RentBuild Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Subscriptions.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/Subscriptions-Frontend-Detailed.png"
+       alt="RentBuild Subscriptions Frontend Detailed Component Diagram"
+       width="95%">
+</p>
+
+#### Shared Frontend Components Diagram
+
+El Shared Frontend concentra capacidades transversales y reutilizables utilizadas por los diferentes bounded contexts de la Single Page Application de RentBuild.
+
+La Presentation Layer contiene componentes comunes de interfaz como `LayoutComponent`, `NavigationComponent`, `LanguageSwitcherComponent` y `FooterComponent`. Estos elementos proporcionan la estructura visual compartida, la navegación principal, el cambio de idioma y contenido reutilizable entre las diferentes vistas de la aplicación.
+
+La Domain Layer contiene value objects reutilizables que no pertenecen exclusivamente a un bounded context, como `Money` y `DateRange`, permitiendo representar valores comunes mediante objetos autovalidados.
+
+Por su parte, la Infrastructure Layer proporciona mecanismos técnicos compartidos. `ApiClient` centraliza capacidades comunes para la comunicación HTTP con la RentBuild REST API, `AuthInterceptor` incorpora la información de autenticación requerida en las solicitudes salientes y `LocalStorageService` proporciona acceso reutilizable al almacenamiento local del navegador.
+
+De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales comunes dentro de los bounded contexts y mantiene dichas responsabilidades separadas de los conceptos específicos del dominio.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-shared-component-diagram.png"
+       alt="RentBuild Shared Frontend Components Diagram"
+       width="90%">
+</p>
+
+#### Backend General Components Diagram
+
+El Backend General Components Diagram presenta la organización general de la RentBuild API Application implementada con Java y Spring Boot.
+
+El contenedor backend está organizado alrededor de seis bounded contexts de negocio: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, un componente Shared proporciona capacidades técnicas y transversales reutilizables por los diferentes contextos del backend.
+
+La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-general-component-diagram.png"
+       alt="RentBuild Backend General Components Diagram"
+       width="95%">
+</p>
+
+#### IAM Backend Component Diagram
+
+El bounded context IAM del backend administra la autenticación, autorización, credenciales, usuarios, roles y control de acceso.
+
+La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
+
+Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-iam-component-diagram.png"
+       alt="RentBuild IAM Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Profiles Backend Component Diagram
+
+El bounded context Profiles del backend administra la información correspondiente a usuarios, empresas, proveedores y clientes.
+
+La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Application Layer coordina operaciones de registro, actualización de perfiles, gestión de información empresarial y consultas.
+
+La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-profiles-component-diagram.png"
+       alt="RentBuild Profiles Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Inventory Backend Component Diagram
+
+El bounded context Inventory del backend administra la maquinaria, categorías, tarifas, estado operativo y disponibilidad.
+
+La Interfaces Layer expone los endpoints REST correspondientes a la gestión del inventario. La Application Layer coordina el registro y actualización de maquinaria, consultas de disponibilidad, gestión de tarifas y demás operaciones relacionadas con el inventario.
+
+La Domain Layer contiene los conceptos y reglas de negocio asociados con los equipos, mientras que la Infrastructure Layer proporciona las implementaciones de persistencia mediante Spring Data JPA.
+
+Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mientras que Maintenance interactúa con este contexto cuando las actividades de mantenimiento modifican el estado operativo o la disponibilidad de los equipos.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-inventory-component-diagram.png"
+       alt="RentBuild Inventory Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Rentals Backend Component Diagram
+
+El bounded context Rentals del backend administra el ciclo completo de alquiler, incluyendo solicitudes, reservas, contratos, entregas, alquileres activos y devoluciones.
+
+La Interfaces Layer expone las operaciones REST requeridas por el frontend. La Application Layer coordina los diferentes flujos del alquiler, mientras que la Domain Layer contiene los agregados, entidades, value objects y reglas de negocio correspondientes.
+
+La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-rentals-component-diagram.png"
+       alt="RentBuild Rentals Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Maintenance Backend Component Diagram
+
+El bounded context Maintenance del backend administra las programaciones de mantenimiento, inspecciones, incidencias, registros de mantenimiento e historial de mantenimiento de la maquinaria.
+
+La Interfaces Layer expone los endpoints REST relacionados con estas operaciones. La Application Layer coordina los casos de uso asociados con programación de mantenimiento, inspecciones, registro de incidencias y actualización de mantenimientos.
+
+La Domain Layer contiene los conceptos y reglas de negocio relacionados con el mantenimiento, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia.
+
+Maintenance colabora con Inventory para actualizar el estado y disponibilidad de la maquinaria y con Rentals cuando una actividad de mantenimiento o incidencia afecta a un equipo asociado con un alquiler activo.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-maintenance-component-diagram.png"
+       alt="RentBuild Maintenance Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Subscriptions Backend Component Diagram
+
+El bounded context Subscriptions del backend administra los planes de suscripción, suscripciones activas, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
+
+La Interfaces Layer expone los endpoints REST necesarios para la gestión de suscripciones. La Application Layer coordina la selección de planes, activación de suscripciones, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
+
+La Domain Layer contiene los conceptos y reglas de negocio correspondientes a las suscripciones, mientras que la Infrastructure Layer proporciona los mecanismos de persistencia necesarios.
+
+Este bounded context utiliza IAM para identificar la cuenta autenticada y Profiles para asociar la suscripción con la información de la empresa. Asimismo, un Payment Connector integra el contexto con Stripe para realizar el procesamiento de los pagos correspondientes a las suscripciones.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-subscriptions-component-diagram.png"
+       alt="rentbuild Subscriptions Backend Component Diagram"
+       width="90%">
+</p>
 
 ## 4.7. Software Object-Oriented Design
 
