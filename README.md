@@ -2227,7 +2227,7 @@ IAM también proporciona información de la cuenta autenticada a otros contextos
 </p>
 
 
-#### IAM Frontend Detailed Component Diagramgit
+#### IAM Frontend Detailed Component Diagram
 
 El IAM Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context IAM, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones existentes entre sus componentes.
 
