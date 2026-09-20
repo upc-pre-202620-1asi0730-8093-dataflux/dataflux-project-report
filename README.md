@@ -2396,7 +2396,7 @@ Finalmente, una vez terminadas sus actividades dentro de RentBuild, el usuario p
 
 ## 4.5. Web Applications Prototyping
 
-Este apartado muestra el prototipo interactivo de la Web Application de RentBuild, construido en Figma a partir de los wireframes y mock-ups definidos previamente. En él se puede recorrer el flujo principal de la plataforma, desde el inicio de sesión hasta la gestión de inventario, solicitudes de alquiler, mantenimiento y catálogo, de modo que el equipo y los usuarios puedan probar la navegación y validar la propuesta de interfaz antes de desarrollarla. Prototipo: https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=qrleaHn5r7IHGSxf-1
+Este apartado presenta el prototipo funcional de RentBuild, desarrollado a partir de los wireframes y mock-ups definidos previamente y publicado en Vercel. En él se puede recorrer el flujo principal de la plataforma, desde el inicio de sesión hasta la gestión de inventario, solicitudes de alquiler, mantenimiento y catálogo, de modo que el equipo y los usuarios puedan probar la navegación y validar la propuesta de interfaz. Prototipo: https://dataflux-landing-page.vercel.app/
 
 ## 4.6. Domain-Driven Software Architecture
 
