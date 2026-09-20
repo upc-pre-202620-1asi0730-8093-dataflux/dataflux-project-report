@@ -225,17 +225,218 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ### 1.2.1. Antecedentes y problemática
 
+**What (¿Qué?)**
+- ¿Cuál es el problema? 
+Las pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción tienen dificultades para gestionar de manera centralizada sus equipos, disponibilidad, reservas, contratos, pagos, entregas, devoluciones y mantenimiento. 
+
+- ¿Cuál es la relación con la persona en cuestión?
+Actualmente, muchas de estas actividades pueden gestionarse mediante herramientas dispersas como hojas de cálculo, mensajes, llamadas telefónicas y registros manuales. Esto puede generar errores en las reservas, desconocimiento del estado de los equipos, dificultades para controlar las fechas de devolución y poca visibilidad sobre el mantenimiento de la maquinaria. 
+
+**Why (¿Por qué?)**
+
+El objetivo es simplificar y centralizar la gestión del alquiler de maquinaria, permitiendo que las empresas tengan mayor control sobre sus equipos y operaciones.
+RentBuild busca reducir errores relacionados con la disponibilidad y las reservas, facilitar el seguimiento del estado de cada equipo y mejorar la gestión de los procesos de alquiler, devolución y mantenimiento.
+Para las empresas constructoras, el objetivo es facilitar la búsqueda y gestión de maquinaria disponible para sus proyectos.
+
+**When (¿Cuándo?)**
+
+- ¿Cuándo sucede el problema?
+El problema surge principalmente cuando una empresa debe realizar tareas como registrar o consultar la disponibilidad de un equipo, gestionar varias reservas simultáneamente, coordinar entregas y devoluciones, entre otros. La dificultad aumenta a medida que crece la cantidad de equipos, clientes y alquileres.
+
+- ¿Cuándo utiliza el cliente el producto?
+Las empresas de alquiler utilizarían RentBuild durante todo el ciclo del alquiler, desde el registro y disponibilidad del equipo hasta su reserva, entrega, devolución, inspección y mantenimiento. Las empresas constructoras utilizarían la plataforma principalmente cuando necesitan buscar, solicitar, reservar y realizar seguimiento de maquinaria para un proyecto.
+
+**Where (¿Dónde?)**
+- ¿Dónde está el cliente cuando utiliza el producto?
+El cliente puede utilizar RentBuild desde: La oficina de la empresa de alquiler, el almacén o patio donde se encuentran los equipos, una obra o proyecto de construcción y desde un dispositivo móvil durante una entrega o devolución.
+
+- ¿A dónde se dirige?
+Las empresas de alquiler gestionan equipos que pueden desplazarse entre su almacén, las instalaciones del cliente y diferentes proyectos de construcción. Las empresas constructoras utilizan los equipos principalmente en sus obras y proyectos de construcción.
+
+- ¿Dónde surge el problema?
+El problema puede surgir tanto en la oficina administrativa como durante las operaciones en campo. Por ejemplo, puede producirse un conflicto cuando un equipo aparece como disponible en un registro, pero realmente está alquilado, se encuentra en mantenimiento o está asignado a otra obra.
+
+**Who (¿Quienes?)**
+- ¿Quiénes están involucrados?
+Las empresas de alquiler de maquinaria (propietarios, administradores, operadores de alquiler) y las pequeñas empresas constructoras. 
+
+- ¿A quiénes les sucede el problema?
+Principalmente a los propietarios, administradores y operadores de pequeñas y medianas empresas de alquiler de maquinaria, especialmente cuando manejan varios equipos y alquileres simultáneamente. También afecta a las empresas constructoras cuando necesitan conseguir maquinaria disponible dentro de un periodo determinado.
+
+- ¿Quién utiliza el producto?
+Los principales usuarios de RentBuild serían por una parte usuarios internos como administradores, operadores, personal de logística y personal de mantenimiento. Mientras que por otra parte, usuarios externos como las empresas constructoras, encargados de proyectos y personal responsable de alquilar maquinaria. 
+
+- ¿Cuál es la causa del problema?
+Uso de herramientas no integradas, registros manuales o duplicados, información distribuida entre diferentes personas y canales, falta de actualización de la disponibilidad de los equipos, dificultad para realizar seguimiento del ciclo de vida de la maquinaria y 
+falta de una solución especializada y adaptada a pequeñas empresas del sector.
+
+**How (¿Cómo?)**
+- ¿En qué condiciones nuestros clientes usan el producto?
+RentBuild será utilizado principalmente en contextos donde los usuarios necesitan consultar o actualizar información rápidamente: Registrar un nuevo equipo, consultar disponibilidad, crear una reserva, registrar una alquiler, gestionar una entrega, entre otros. 
+
+- ¿Cómo nos conocieron nuestros compradores?
+Los clientes podrán conocer RentBuild mediante redes sociales, publicidad digital dirigida al sector construcción, recomendaciones entre empresas o contacto directo con empresas de alquiler.
+
+- ¿Cómo prefieren nuestros consumidores acceder a nuestro producto?
+Al tratarse de un producto SaaS, los usuarios podrán acceder mediante una plataforma web, utilizando sus credenciales desde cualquier dispositivo con conexión a Internet. 
+
+- ¿Qué llevó a la persona a esa situación?
+El crecimiento de la cantidad de equipos, clientes y alquileres hace que la gestión manual o mediante herramientas independientes sea cada vez más difícil. Cuando aumenta el volumen de operaciones, mantener actualizada la información sobre disponibilidad, reservas, entregas, devoluciones y mantenimiento se vuelve más complejo y aumenta el riesgo de errores.
+
+**How much (¿Cuánto?)**
+
+Según Clements (2025), el 67 % de las empresas de alquiler de equipos encuestadas opera con sistemas parcialmente integrados que requieren transferencia manual de información, lo que evidencia la existencia de dificultades para centralizar y conectar los procesos de gestión dentro de este sector.
+En ese contexto, DataFlux busca abordar esta problemática mediante RentBuild, una plataforma SaaS especializada en la gestión del alquiler de maquinaria y equipos para construcción, que permite centralizar en un solo lugar procesos como el control de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones y mantenimiento.
+
+#### Objetivos
+
+**Corto plazo**
+
+* Identificar y validar las necesidades principales de las empresas de alquiler y de las personas que solicitan maquinaria.
+* Diseñar una experiencia digital comprensible para los dos segmentos objetivo.
+* Implementar y desplegar la primera versión del Landing Page de RentBuild.
+* Definir las funcionalidades iniciales relacionadas con inventario, disponibilidad, reservas y alquileres.
+
+**Mediano plazo**
+
+* Implementar progresivamente la gestión de contratos, pagos, entregas, devoluciones, incidencias y mantenimiento.
+* Integrar la Web Application con el RESTful API desarrollado por el equipo.
+* Incorporar un servicio externo que complemente las funcionalidades de la plataforma.
+* Mejorar el producto a partir de las entrevistas y validaciones realizadas con los segmentos objetivo.
+
+**Largo plazo**
+
+* Conseguir una adopción recurrente de RentBuild por parte de pequeñas y medianas empresas del sector.
+* Reducir los errores relacionados con reservas, disponibilidad y seguimiento de equipos.
+* Incorporar nuevas herramientas de análisis y seguimiento de las operaciones.
+* Posicionar RentBuild como una solución especializada para la gestión del alquiler de maquinaria de construcción.
+
+#### Restricciones
+
+* RentBuild debe desarrollarse como una solución web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio.
+* La lógica del lado servidor debe desarrollarse con Java y tecnologías open-source, conforme a los lineamientos del curso.
+* La plataforma debe integrar al menos un servicio externo de terceros.
+* La interfaz debe adaptarse a las dimensiones de computadoras, tabletas y dispositivos móviles.
+* La experiencia visual y funcional debe ser consistente entre el Landing Page y la Web Application.
+* Los call-to-action del Landing Page deben dirigir a las vistas correspondientes de la Web Application.
+* El funcionamiento de la plataforma dependerá de una conexión a Internet para consultar y actualizar la información.
+* El alcance de la primera versión debe priorizar las funcionalidades principales que puedan desarrollarse dentro del ciclo académico.
+* El código y la documentación deben gestionarse en repositorios públicos de la organización de GitHub de DataFlux.
+* El equipo debe aplicar GitFlow y Conventional Commits durante la evolución del proyecto.
+
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+
+Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+
+Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+
+Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+
+Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+
 #### 1.2.2.2. Lean UX Assumptions
+
+**Business Assumptions:**
+* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
+
+* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+
+* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+
+* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+
+**Business Outcome Assumptions:**
+
+* Creemos que RentBuild logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+
+* Creemos que RentBuild  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+
+* Creemos que RentBuild aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+
+* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+
+**User Assumptions:**
+
+* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+
+* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+
+* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+
+* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+
+**User Outcome and Benefit Assumptions:**
+
+* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+
+* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+
+* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+
+* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+
+* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+
+**Feature Assumptions:**
+
+* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+
+* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+
+* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+
+* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+
+* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+
+* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+
+* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+
+* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+
+* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+
+* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de RentBuild si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+
+* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+
+
 #### 1.2.2.4. Lean UX Canvas
 
+<img src = "assets/md-images-chapter1/leanUXcanvas-RentBuild.png" width = 700px>
+
 ## 1.3. Segmentos objetivo
+
+**Segmento #1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
+Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en construcción, remodelación, movimiento de tierras y obras civiles. 
+
+* Aspectos demográficos:
+  - Edades: aproximadamente 30–55 años. 
+  - Ubicación: principalmente zonas urbanas donde existe concentración de actividad empresarial y construcción.
+* Aspectos psicográficos:
+  - Comportamiento tecnológico: utiliza computadora y smartphone para gestionar el negocio; suele utilizar WhatsApp, Excel, correo electrónico y sistemas administrativos básicos.
+  - Motivación: reducir pérdidas, mantener los equipos disponibles y tener mayor control sobre el negocio.
+
+**Segmento #2: Pequeñas empresas constructoras**
+
+Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. 
+
+* Aspectos demográficos:
+  - Edades: aproximadamente 28–50 años. 
+  - Ubicación: zonas urbanas y áreas con actividad constructiva. 
+* Aspectos psicográficos:
+  - Comportamiento: Prefieren procesos de solicitud simples y rápidos.
+  - Motivación: reducir costos y evitar retrasos en sus proyectos.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -2218,7 +2419,7 @@ Dado que el alcance del Sprint 1 se centró en el desarrollo de la primera versi
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-En esta sección se resumen las actividades realizadas por el equipo en relación con el despliegue de MaquiGest durante el Sprint 1. Estas actividades incluyeron la creación de cuentas en el proveedor de hosting vercel, la configuración de los recursos necesarios y el despliegue de la primera versión del Landing Page. A continuación, se presentan capturas de pantalla que evidencian los pasos realizados durante este proceso.
+En esta sección se resumen las actividades realizadas por el equipo en relación con el despliegue de RentBuild durante el Sprint 1. Estas actividades incluyeron la creación de cuentas en el proveedor de hosting vercel, la configuración de los recursos necesarios y el despliegue de la primera versión del Landing Page. A continuación, se presentan capturas de pantalla que evidencian los pasos realizados durante este proceso.
 
 **1.** Ingresando a la cuenta le damos click a *Add New* para añadir un proyecto.
 
