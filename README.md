@@ -1625,7 +1625,7 @@ La guía busca mantener consistencia en el uso de colores, tipografías, espacia
 
 El lenguaje visual de **RentBuild** toma principios de **Material Design** como referencia para la jerarquía, separación de superficies, consistencia de acciones, feedback visual y estados de interacción. Estos principios se adaptan a la identidad propia de RentBuild mediante sus tokens de color, tipografía, espaciado, bordes y radios.
 
-Para la **Web Application**, los componentes se diseñan con una estructura compatible con patrones de interfaces basadas en componentes, pudiendo posteriormente implementarse con tecnologías como **Angular Material** sin perder la identidad visual definida para RentBuild.
+Para la **Web Application**, los componentes se diseñan con una estructura compatible con patrones de interfaces basadas en componentes, pudiendo posteriormente implementarse con tecnologías como **PrimeVue** sin perder la identidad visual definida para RentBuild.
 
 Los componentes principales son:
 
