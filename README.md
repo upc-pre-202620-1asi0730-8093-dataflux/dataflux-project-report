@@ -804,7 +804,7 @@ RentBuild también mantiene comunicación con servicios externos necesarios para
 - **SendGrid:** proporciona servicios de correo transaccional para comunicaciones relacionadas con cuentas, reservas, alquileres, suscripciones y otras notificaciones del sistema.
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/c4/context/rentbuild-c4-system-context-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/context/rentbuild-c4-context-diagram.png"
        alt="RentBuild Software Architecture Context Diagram"
        width="90%">
 </p>
