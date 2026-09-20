@@ -1698,7 +1698,7 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 ### 4.6.1. Design-Level Event Storming
 
-El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de MaquiGest. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de RentBuild. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
 
 ![Design-Level Event Storming](assets/md-images-chapter4/design-level-event-storming.png)
 
