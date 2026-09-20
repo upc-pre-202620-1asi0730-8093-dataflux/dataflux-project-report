@@ -2057,7 +2057,7 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 ### 4.4.1. Web Applications Wireframes
 
-Los wireframes de las aplicaciones web de MaquiGest delinean la estructura y organización de las pantallas principales, especificando la ubicación de los elementos de la interfaz de usuario y la navegación. Estos esquemas visuales sirven como una guía precisa para el diseño final, asegurando una experiencia de usuario fluida e intuitiva tanto para el segmento de empresas de alquiler como para el segmento de empresas constructoras. Los wireframes están enfocados en la funcionalidad y facilidad de uso, permitiendo que diseñadores y desarrolladores visualicen cómo los usuarios interactúan con la aplicación, optimizando la disposición de los elementos para crear una experiencia eficiente y accesible.
+Los wireframes de las aplicaciones web de RentBuild delinean la estructura y organización de las pantallas principales, especificando la ubicación de los elementos de la interfaz de usuario y la navegación. Estos esquemas visuales sirven como una guía precisa para el diseño final, asegurando una experiencia de usuario fluida e intuitiva tanto para el segmento de empresas de alquiler como para el segmento de empresas constructoras. Los wireframes están enfocados en la funcionalidad y facilidad de uso, permitiendo que diseñadores y desarrolladores visualicen cómo los usuarios interactúan con la aplicación, optimizando la disposición de los elementos para crear una experiencia eficiente y accesible.
 
 <p align="center">
 <img src="./assets/md-images-chapter4/webapp1.png" width="100%">
@@ -2155,6 +2155,188 @@ En conjunto, el wireflow permite validar que las pantallas diseñadas se encuent
 <img src = "assets/md-images-chapter4/WireflowDiagrams.png" width = 100%>
 
 ### 4.4.3. Web Applications Mock-ups
+
+Los mock-ups de la Web Application de RentBuild representan la propuesta visual de alta fidelidad de las interfaces definidas mediante los wireframes. Estas vistas incorporan los elementos establecidos en el Design System de RentBuild, como la tipografía Inter, los colores corporativos, la iconografía, los botones, cards, formularios, etiquetas de estado y componentes de navegación.
+
+La propuesta utiliza azul oscuro para la identidad y navegación principal, naranja para destacar las acciones prioritarias, azul para enlaces y acciones secundarias, y fondos claros para mantener una interfaz ordenada y legible. Los componentes mantienen una jerarquía visual consistente y comunican los estados mediante etiquetas textuales, evitando depender únicamente del color.
+
+Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquitectura de información y los mismos objetivos de tarea, adaptando únicamente la distribución y densidad de los componentes al espacio disponible.
+
+#### 1. Login
+
+**Propósito:** Presentar una interfaz que permita que los usuarios registrados accedan de forma segura a RentBuild mediante sus credenciales.
+
+**Elementos clave:**
+- Logotipo de RentBuild y selector de idioma.
+- Campo de correo electrónico y campo de contraseña.
+- Acción principal para iniciar sesión.
+- Enlace para recuperar la contraseña.
+- Enlace para crear una nueva cuenta.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp18.png" alt="Mockup de login para escritorio" width="100%">
+</p>
+
+#### 2. Registro de usuario
+
+**Propósito:** Permitir la creación de una cuenta y recopilar la información necesaria para identificar al usuario y su organización dentro de RentBuild.
+
+**Elementos clave:**
+- Datos personales del usuario.
+- Correo electrónico y contraseña.
+- Información básica de la empresa.
+- Selección del tipo de organización.
+- Acción para crear la cuenta.
+- Enlace para volver al inicio de sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp19.png" alt="Mockup de register para escritorio" width="100%">
+</p>
+
+#### 3. Perfil
+
+**Propósito:** Permitir al usuario consultar y gestionar la información asociada a su perfil y organización dentro de RentBuild.
+
+**Elementos clave:**
+- Información personal del usuario.
+- Información de la empresa u organización.
+- Datos de contacto.
+- Opciones para editar la información.
+- Configuración de la cuenta.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp20.png" alt="Mockup de perfil para escritorio" width="100%">
+</p>
+
+#### 4. Inventario
+
+**Propósito:** Permitir la gestión y consulta de la maquinaria disponible dentro de RentBuild.
+
+**Elementos clave:**
+- Listado de maquinaria registrada.
+- Estado y disponibilidad de cada maquinaria.
+- Información básica de los equipos.
+- Filtros y opciones de búsqueda.
+- Acciones para consultar y gestionar maquinaria.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp21.png" alt="Mockup de inventario para escritorio" width="100%">
+</p>
+
+#### 5. Registrar maquinaria
+
+**Propósito:** Permitir el registro de nuevas máquinas y equipos dentro del inventario de RentBuild.
+
+**Elementos clave:**
+- Datos generales de la maquinaria.
+- Marca, modelo y categoría.
+- Características técnicas.
+- Información sobre disponibilidad.
+- Carga de imágenes o documentación.
+- Acción para registrar la maquinaria.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp22.png" alt="Mockup de registro de maquinaria para escritorio" width="100%">
+</p>
+
+#### 6. Solicitudes
+
+**Propósito:** Permitir la gestión y seguimiento de las solicitudes de alquiler realizadas dentro de RentBuild.
+
+**Elementos clave:**
+- Listado de solicitudes.
+- Estado de cada solicitud.
+- Información del solicitante.
+- Maquinaria solicitada.
+- Fechas de alquiler.
+- Acciones para aceptar, rechazar o consultar una solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp23.png" alt="Mockup de solicitudes para escritorio" width="100%">
+</p>
+
+#### 7. Alquileres activos
+
+**Propósito:** Permitir visualizar y gestionar los alquileres que se encuentran actualmente activos.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Información de la maquinaria alquilada.
+- Datos del cliente o empresa.
+- Fecha de inicio y fecha de finalización.
+- Estado del alquiler.
+- Acciones de seguimiento y gestión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp24.png" alt="Mockup de alquileres activos para escritorio" width="100%">
+</p>
+
+#### 8. Mantenimiento
+
+**Propósito:** Facilitar la gestión de las actividades de mantenimiento realizadas sobre la maquinaria registrada.
+
+**Elementos clave:**
+- Listado de equipos en mantenimiento.
+- Estado de mantenimiento.
+- Tipo de mantenimiento.
+- Fechas programadas y realizadas.
+- Registro de observaciones.
+- Acciones para gestionar el mantenimiento.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp25.png" alt="Mockup de mantenimiento para escritorio" width="100%">
+</p>
+
+#### 9. Historial
+
+**Propósito:** Permitir consultar el historial de operaciones y actividades relacionadas con la maquinaria y los alquileres.
+
+**Elementos clave:**
+- Historial de alquileres.
+- Historial de mantenimientos.
+- Registro de movimientos de maquinaria.
+- Fechas y estados de las operaciones.
+- Filtros para facilitar la consulta.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp26.png" alt="Mockup de historial para escritorio" width="100%">
+</p>
+
+#### 10. Catálogo
+
+**Propósito:** Presentar las maquinarias disponibles para alquiler, permitiendo a los usuarios consultar sus características y disponibilidad.
+
+**Elementos clave:**
+- Listado de maquinaria disponible.
+- Imágenes de los equipos.
+- Nombre, categoría y características principales.
+- Información de disponibilidad.
+- Filtros y búsqueda.
+- Acción para consultar o solicitar el alquiler de una maquinaria.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/webapp27.png" alt="Mockup de catálogo para escritorio" width="100%">
+</p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
