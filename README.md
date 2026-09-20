@@ -314,7 +314,7 @@ En ese contexto, DataFlux busca abordar esta problemática mediante RentBuild, u
 #### Restricciones
 
 * RentBuild debe desarrollarse como una solución web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio.
-* La lógica del lado servidor debe desarrollarse con Java y tecnologías open-source, conforme a los lineamientos del curso.
+* La lógica del lado servidor debe desarrollarse con C# sobre ASP.NET Core y tecnologías open-source, conforme a los lineamientos del curso.
 * La plataforma debe integrar al menos un servicio externo de terceros.
 * La interfaz debe adaptarse a las dimensiones de computadoras, tabletas y dispositivos móviles.
 * La experiencia visual y funcional debe ser consistente entre el Landing Page y la Web Application.
