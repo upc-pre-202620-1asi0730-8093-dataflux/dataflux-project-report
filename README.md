@@ -881,6 +881,168 @@ Ana Rivera Quispe se dedica a la administración de pequeñas empresas dedicadas
 
 ### 2.2.3. Análisis de entrevistas
 
+### Primera entrevista - Pedro González (Segmento 1)
+
+La entrevista con Pedro González, contratista de una empresa de El Salvador dedicada al alquiler de maquinaria pesada, permitió conocer que actualmente gestionan sus alquileres principalmente mediante documentación y correos electrónicos. La empresa trabaja con maquinaria como tractores, camiones y mezcladoras.
+
+Para controlar el estado de las máquinas antes de entregarlas, realizan una revisión mediante fotografías y escaneo. La entrevista permitió identificar la necesidad de contar con una plataforma centralizada que facilite la gestión de máquinas, reservas, devoluciones y mantenimiento.
+
+#### Hallazgos importantes
+
+* El proceso actual de gestión se basa principalmente en documentación y correos electrónicos, lo que puede dificultar tener una visión centralizada del estado y disponibilidad de las máquinas.
+* La empresa necesita controlar qué maquinaria está disponible, alquilada o fuera de servicio para evitar problemas durante las reservas.
+* Antes de entregar una máquina, realizan una revisión mediante fotografías y escaneo para comprobar que salga en buenas condiciones.
+* Existe una necesidad de registrar y conservar evidencias del estado de cada equipo.
+* También resulta importante controlar posibles daños o fallas durante la devolución y relacionarlos con el historial de cada máquina.
+* La propuesta de una plataforma que centralice las reservas, disponibilidad, devolución y mantenimiento resulta pertinente para este tipo de empresas, especialmente para pequeñas y medianas empresas de alquiler de maquinaria.
+* La entrevista quedó incompleta, ya que el entrevistado no llegó a responder las preguntas sobre cuál es la principal dificultad del proceso, qué parte genera más problemas, su valoración concreta de la plataforma y qué aspecto mejoraría prioritariamente.
+
+### Segunda entrevista - Carlos Rodríguez (Segmento 1)
+
+La entrevista con Carlos Rodríguez, de 51 años, técnico mecánico y dedicado al alquiler de camiones en San Juan de Miraflores, permitió conocer que actualmente administra junto con su esposa una flota de cinco camiones utilizando principalmente un cuaderno de apuntes. Los alquileres se coordinan mediante llamadas telefónicas y registran manualmente dónde se encuentra cada vehículo, quién lo tiene alquilado y cuándo debe regresar al taller.
+
+Esta forma de gestión ha generado problemas de control, como reservas duplicadas cuando ambos coordinan con clientes diferentes. También presentan dificultades cuando los camiones sufren fallas durante los viajes, ya que deben realizar auxilios, reparaciones y mantenimientos antes de volver a alquilarlos.
+
+El entrevistado consideró que el aplicativo propuesto sería muy útil porque permitiría centralizar y automatizar el control, reducir tiempos y mejorar la precisión de la información.
+
+#### Hallazgos importantes
+
+* **Gestión actual:** utilizan un cuaderno para registrar camiones, clientes, ubicaciones, alquileres y retornos.
+* **Proceso de alquiler:** los clientes se comunican principalmente por teléfono con Carlos o su esposa.
+* **Problema de disponibilidad:** han tenido reservas duplicadas porque ambos pueden comprometer el mismo camión con clientes diferentes.
+* **Baja fluidez:** algunos camiones permanecen varios días sin alquilarse porque esperan llamadas de clientes.
+* **Fallos y devoluciones:** cuando un camión presenta problemas, debe regresar al taller para revisión y reparación antes de volver a estar disponible.
+* **Mantenimiento:** se realiza según los viajes y se registra manualmente en el cuaderno.
+* **Mayor dificultad:** las fallas durante la ruta generan problemas y requieren realizar auxilios, lo que consume bastante tiempo.
+* **Aceptación de la solución:** considera que el aplicativo permitiría tener un mejor control de todo el proceso, reemplazando los apuntes manuales por una gestión más práctica y automática.
+* **Necesidad principal identificada:** centralizar la disponibilidad, reservas, mantenimiento, ubicación y estado de los camiones para evitar errores y ahorrar tiempo.
+
+---
+
+### Tercera entrevista - Sonia Gutiérrez (Segmento 2)
+
+La entrevista muestra que una empresa inmobiliaria ubicada en San Juan de Miraflores necesita alquilar maquinaria aproximadamente cada 15 días para sus proyectos. Actualmente buscan proveedores por internet y deben comunicarse individualmente con cada uno para verificar la disponibilidad, el precio y las características de las máquinas.
+
+Una de las principales dificultades es encontrar equipos adecuados según el tamaño, peso y capacidad de carga que requieren, además de asegurarse de que estén completamente operativos. También señalaron que el proceso de búsqueda consume tiempo porque deben revisar diferentes páginas y proveedores por separado.
+
+La persona entrevistada consideró muy útil la plataforma propuesta, ya que permitiría encontrar en un solo lugar las máquinas disponibles, evitando buscar proveedor por proveedor.
+
+#### Hallazgos importantes
+
+* **Frecuencia de alquiler:** aproximadamente cada 15 días.
+* **Búsqueda actual:** utilizan internet para encontrar proveedores y luego contactan directamente con ellos.
+* **Información indispensable:** principalmente precio, capacidad de carga, peso que soporta y características de la maquinaria.
+* **Principal dificultad:** encontrar una máquina con el tamaño y capacidad adecuados para proyectos inmobiliarios y que esté 100 % operativa.
+* **Problema de disponibilidad:** han tenido ocasiones en las que necesitaban maquinaria, pero el proveedor ya tenía el equipo ocupado.
+* **Mayor pérdida de tiempo:** revisar diferentes páginas y consultar a los proveedores uno por uno.
+* **Necesidad identificada:** contar con una plataforma que reúna todas las maquinarias disponibles y sus proveedores en un solo lugar.
+* **Validación de la idea:** la propuesta fue considerada muy buena y útil, principalmente porque reduciría el tiempo de búsqueda y facilitaría la comparación de opciones.
+* **Funcionalidad clave:** mostrar claramente la disponibilidad y las especificaciones técnicas de cada máquina, especialmente su capacidad de carga.
+
+---
+
+### Cuarta entrevista - Giovanni Mena Zuleta (Segmento 2)
+
+La entrevista con Giovanni Mena Zuleta, de 49 años, administrador de maquinaria y de subconstrucción en San Juan de Lurigancho, permitió identificar que su empresa trabaja principalmente en obras de áreas verdes, parques y pistas, por lo que necesita alquilar maquinaria con mucha frecuencia.
+
+Actualmente buscan equipos mediante anuncios de internet y publicidad, y verifican la disponibilidad coordinando directamente con el encargado del alquiler. Una de sus principales dificultades es encontrar rápidamente proveedores y máquinas en buenas condiciones, ya que algunos equipos están en mal estado o ya fueron alquilados.
+
+El proceso de búsqueda mediante publicidad les genera pérdida de tiempo. El entrevistado consideró útil la plataforma propuesta porque facilitaría encontrar maquinaria, ahorrar tiempo y mejorar la coordinación entre la empresa y los proveedores.
+
+#### Hallazgos importantes
+
+* **Frecuencia de alquiler:** necesitan maquinaria muy frecuentemente debido a sus actividades.
+* **Tipo de proyectos:** áreas verdes, parques y pistas.
+* **Búsqueda actual:** anuncios en internet y otros medios publicitarios.
+* **Verificación de disponibilidad:** coordinan directamente con el encargado del alquiler.
+* **Información importante:** que la maquinaria esté en buenas condiciones y operativa para el trabajo.
+* **Principal dificultad:** localizar rápidamente al responsable del alquiler y encontrar equipos disponibles.
+* **Problemas de disponibilidad:** algunas máquinas ya estaban alquiladas y otras no se encontraban en buenas condiciones.
+* **Mayor pérdida de tiempo:** buscar mediante anuncios y publicidad en internet.
+* **Necesidad identificada:** facilitar la búsqueda y el contacto con proveedores desde un solo lugar.
+* **Validación de la plataforma:** considera que sería factible y útil, principalmente porque permitiría ahorrar tiempo durante el proceso de alquiler.
+* **Funcionalidad clave:** facilitar la comunicación y coordinación entre el cliente y el proveedor.
+
+---
+
+### Quinta entrevista - Carmen Glosada (Segmento 1)
+
+La entrevista con Carmen Glosada Paredes, de 51 años, administradora de una pequeña empresa de alquiler de camiones en San Juan de Lurigancho, permitió identificar que actualmente gestiona los alquileres mediante redes sociales y utiliza una base de datos en Excel para controlar la disponibilidad de sus unidades.
+
+A pesar de contar con este registro, han tenido problemas de control, incluyendo casos en los que una misma maquinaria fue alquilada a dos clientes. Cuando una unidad es entregada, elaboran un documento que registra que se encuentra en buenas condiciones y establece una penalidad en caso de daños durante la devolución.
+
+El mantenimiento y la disponibilidad también se controlan mediante Excel. La entrevistada señaló que el trámite del alquiler es una de las partes más tediosas del proceso y consideró que una plataforma centralizada sería útil porque podría facilitar la gestión y generar más oportunidades de alquiler.
+
+#### Hallazgos importantes
+
+* **Gestión actual:** la propietaria administra personalmente los alquileres.
+* **Contacto con clientes:** los clientes llegan principalmente mediante redes sociales.
+* **Control de disponibilidad:** utilizan una base de datos en Excel.
+* **Problema crítico:** han ocurrido reservas duplicadas de una misma maquinaria para dos clientes.
+* **Control de daños:** antes de entregar la maquinaria elaboran un documento que registra su buen estado y establece una penalidad por daños al devolverla.
+* **Mantenimiento:** actualmente también se controla mediante la base de datos.
+* **Principal dificultad:** el trámite y proceso del alquiler resulta tedioso.
+* **Necesidad identificada:** centralizar y simplificar el proceso completo, desde la reserva hasta la devolución y mantenimiento.
+* **Validación de la plataforma:** considera que sería útil porque podría facilitar la gestión y permitir más salidas de alquileres.
+
+---
+
+### Sexta entrevista - Ana Rivera (Segmento 1)
+
+La entrevista con Ana Rivera Quispe, de 36 años, administradora de pequeñas empresas en Los Olivos, permitió identificar que su empresa se dedica a la construcción de pequeños edificios, departamentos y casas, por lo que requiere maquinaria con frecuencia.
+
+Actualmente buscan equipos principalmente mediante redes sociales y verifican su disponibilidad comunicándose directamente con la persona encargada. La principal dificultad identificada es encontrar y contactar rápidamente a la persona indicada para gestionar el alquiler.
+
+Hasta el momento no han tenido problemas con la disponibilidad, entrega, uso o devolución de las máquinas. La entrevistada considera que una plataforma centralizada sería útil porque permitiría encontrar más rápidamente la maquinaria adecuada y facilitar el contacto con el propietario.
+
+#### Hallazgos importantes
+
+* **Tipo de proyectos:** construcción de pequeños edificios, departamentos y casas.
+* **Frecuencia de alquiler:** requieren maquinaria con bastante frecuencia.
+* **Búsqueda actual:** utilizan principalmente redes sociales porque consideran que es más rápido.
+* **Verificación de disponibilidad:** deben comunicarse directamente con la persona encargada.
+* **Información importante:** que la maquinaria se encuentre en buenas condiciones.
+* **Principal dificultad:** localizar y comunicarse con la persona indicada o propietaria de la máquina.
+* **Problemas de disponibilidad:** hasta el momento no han tenido casos en los que no consiguieran una máquina cuando la necesitaban.
+* **Entrega, uso y devolución:** tampoco han experimentado problemas hasta ahora.
+* **Mayor pérdida de tiempo:** establecer comunicación con el propietario o responsable de la maquinaria.
+* **Necesidad identificada:** facilitar la búsqueda y el contacto directo con los proveedores.
+* **Validación de la plataforma:** considera que sería útil para encontrar más rápidamente las máquinas indicadas y centralizar la información.
+
+#### Análisis general de entrevistas
+
+Se entrevistaron **6 personas/empresas vinculadas al alquiler o uso de maquinaria**. Los principales hallazgos identificados fueron los siguientes:
+
+### Gestión y búsqueda de maquinaria
+
+El principal problema identificado corresponde a la **gestión y búsqueda de maquinaria**, ya que **5 de 6 entrevistados (83%)** mencionaron dificultades relacionadas con encontrar proveedores, contactar a la persona encargada, verificar disponibilidad o gestionar el alquiler.
+
+Además, **4 de 6 entrevistados (67%)** utilizan herramientas manuales o poco centralizadas, como **cuadernos, Excel, documentación y llamadas**, mientras que **2 de 6 (33%)** dependen principalmente de **internet y redes sociales** para encontrar maquinaria.
+
+### Disponibilidad y reservas
+
+Un problema relevante para MaquiGest es el **control de disponibilidad y reservas**. **2 de 6 entrevistados (33%)** reportaron directamente problemas relacionados con **reservas duplicadas o falta de disponibilidad**, incluyendo casos en los que una misma máquina fue comprometida con dos clientes.
+
+Por otro lado, **4 de 6 entrevistados (67%)** señalaron como una necesidad importante poder conocer o verificar que la maquinaria se encuentre **disponible y en buenas condiciones** antes de realizar el alquiler.
+
+### Mantenimiento y condición de la maquinaria
+
+En relación con el mantenimiento y estado de las máquinas, **3 de 6 entrevistados (50%)** mencionaron explícitamente problemas o procesos relacionados con **fallas, reparaciones, mantenimiento o condiciones de la maquinaria**.
+
+Entre los casos mencionados se encuentran devoluciones con fallas, mantenimientos periódicos y la necesidad de comprobar que el equipo se encuentre operativo antes de realizar un alquiler.
+
+### Tiempo de búsqueda y coordinación
+
+Respecto al proceso de búsqueda, **4 de 6 entrevistados (67%)** identificaron la **búsqueda, comunicación o coordinación con proveedores** como una actividad que consume tiempo.
+
+Los entrevistados señalaron que deben buscar proveedor por proveedor, revisar anuncios, realizar llamadas o comunicarse directamente con los responsables para confirmar la disponibilidad de la maquinaria.
+
+### Aceptación de una plataforma como MaquiGest
+
+Finalmente, **6 de 6 entrevistados (100%)** mostraron una **respuesta favorable hacia una plataforma como MaquiGest**. Entre los principales beneficios mencionados se encuentran la posibilidad de **centralizar información, conocer la disponibilidad, reducir tiempos, mejorar el control y simplificar el proceso de alquiler**.
+
+En conjunto, los resultados evidencian oportunidades de mejora principalmente en la **búsqueda y gestión de maquinaria, control de disponibilidad, coordinación con proveedores y seguimiento del estado de los equipos**.
+
 ## 2.3. Needfinding
 
 ### 2.3.1. User Personas
