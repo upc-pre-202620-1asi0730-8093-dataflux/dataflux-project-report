@@ -2396,7 +2396,11 @@ Finalmente, una vez terminadas sus actividades dentro de RentBuild, el usuario p
 
 ## 4.5. Web Applications Prototyping
 
+A continuación se presenta el prototipo de la aplicación web de RentBuild, el cual permite a los usuarios interactuar con la interfaz y explorar las diversas secciones de la plataforma. Este prototipo incluye las funcionalidades clave y características de la aplicación, proporcionando una vista preliminar de la experiencia del usuario. Además, facilita la evaluación y prueba de la interfaz antes de su implementación final, asegurando que el diseño sea intuitivo y eficiente. Link del prototipo: https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=qrleaHn5r7IHGSxf-1
+
 ## 4.6. Domain-Driven Software Architecture
+
+En esta sección se presenta la arquitectura de software basada en el dominio para RentBuild. Se detallan el Design-Level Event Storming, que define los Bounded Contexts del sistema, y los diagramas de contexto, contenedores y componentes, que ilustran la estructura y organización de la solución, así como los componentes clave que la integran, mostrando cómo se interconectan para proporcionar una solución eficiente y escalable.
 
 ### 4.6.1. Design-Level Event Storming
 
