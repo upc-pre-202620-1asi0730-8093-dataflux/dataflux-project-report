@@ -2057,6 +2057,76 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 ### 4.4.1. Web Applications Wireframes
 
+Los wireframes de las aplicaciones web de MaquiGest delinean la estructura y organización de las pantallas principales, especificando la ubicación de los elementos de la interfaz de usuario y la navegación. Estos esquemas visuales sirven como una guía precisa para el diseño final, asegurando una experiencia de usuario fluida e intuitiva tanto para el segmento de empresas de alquiler como para el segmento de empresas constructoras. Los wireframes están enfocados en la funcionalidad y facilidad de uso, permitiendo que diseñadores y desarrolladores visualicen cómo los usuarios interactúan con la aplicación, optimizando la disposición de los elementos para crear una experiencia eficiente y accesible.
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp1.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp2.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp3.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp4.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp5.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp6.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp7.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp8.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp9.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp10.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp11.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp12.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp13.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp14.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp15.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp16.png" width="100%">
+</p>
+
+<p align="center">
+<img src="./assets/md-images-chapter4/webapp17.png" width="100%">
+</p>
+
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 Los wireflow diagrams de la Web Application de RentBuildrepresentan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realiza el usuario dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las distintas pantallas y cómo avanza la experiencia de uso en función de las acciones y decisiones realizadas por el usuario.
