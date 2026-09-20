@@ -1783,38 +1783,39 @@ El Design-Level Event Storming permitió profundizar en los procesos identificad
 
 ### 4.6.2. Software Architecture Context Diagram
 
-A partir del Ubiquitous Language (2.5) y de las épicas de 3.1, la solución se organiza en cinco bounded contexts, que son la base de los diagramas de esta sección y de las siguientes:
+El Software Architecture Context Diagram presenta a **RentBuild** como un único sistema de software y muestra su interacción con los principales usuarios y servicios externos. En este nivel del C4 Model no se representan todavía los componentes internos, containers, bounded contexts ni tecnologías de implementación, ya que el objetivo es delimitar el alcance funcional de la solución y reconocer las dependencias externas con las que se comunica.
 
-| Bounded context | Responsabilidad | Épicas que cubre |
-|---|---|---|
-| **IAM** | Registro, autenticación y roles de usuario (empresa de alquiler / empresa constructora). | EP01 |
-| **Profiles** | Datos de la empresa y perfil público de proveedor con su historial de cumplimiento. | EP01 (US03), término "Perfil de Proveedor" |
-| **Inventory** | Equipos, categorías, tarifas, estado del equipo y disponibilidad por periodo. | EP02, EP03 (US09–US11) |
-| **Rentals** | Solicitudes de alquiler, contratos, entregas y devoluciones. | EP03 (US12), EP04 |
-| **Maintenance** | Mantenimientos programados y realizados, incidencias e historial del equipo. | EP05 |
+Los principales actores que interactúan con RentBuild son:
 
-EP06 (Landing Page) no constituye un bounded context: corresponde al container Landing Page.
+- **Rental Operator:** representa al usuario perteneciente a una empresa de alquiler de maquinaria. Utiliza RentBuild para administrar equipos, solicitudes de alquiler, reservas, entregas, devoluciones, incidencias y actividades de mantenimiento.
+- **Construction Manager:** representa al usuario perteneciente a una empresa constructora. Utiliza la plataforma para buscar maquinaria, revisar disponibilidad, realizar solicitudes de alquiler y efectuar el seguimiento de sus reservas y alquileres activos.
+- **System Administrator:** representa al responsable de administrar el acceso a la plataforma, supervisar su operación y atender casos excepcionales que requieran intervención administrativa.
 
----
+RentBuild también mantiene comunicación con servicios externos necesarios para determinadas capacidades del producto:
 
-RentBuild se representa como un único sistema de software en el centro del diagrama, rodeado por las personas que lo utilizan y los sistemas externos con los que interactúa. Las personas corresponden a los roles del Ubiquitous Language: el **Operador de Alquiler**, que administra el inventario y el ciclo completo del alquiler; el **Jefe de Obra**, que busca maquinaria y solicita alquileres para su proyecto; y el **Visitante**, que conoce la propuesta de valor desde el Landing Page.
+- **Google Maps Platform:** proporciona servicios de geolocalización y mapas utilizados para apoyar la localización de maquinaria y la coordinación de entregas y devoluciones.
+- **Stripe:** procesa los pagos asociados a los planes de suscripción de RentBuild.
+- **SendGrid:** proporciona servicios de correo transaccional para comunicaciones relacionadas con cuentas, reservas, alquileres, suscripciones y otras notificaciones del sistema.
 
-![Software Architecture Context Diagram](./assets/md-images-chapter4/software-architecture-context-diagram.png)
-
-El sistema se apoya en dos servicios externos. El **Servicio de Correo** envía las notificaciones transaccionales del ciclo de alquiler — confirmación de solicitud, aceptación o rechazo y recordatorios de devolución —, que son el mecanismo por el que ambas empresas se enteran de un cambio de estado sin tener que consultar la plataforma. **Google Maps Platform** aporta la geolocalización de almacenes y obras, necesaria para coordinar entregas y devoluciones, que según las entrevistas ocurren en ubicaciones distintas al almacén del proveedor. Ambos cumplen el requisito de integrar al menos un servicio de terceros.
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/context/rentbuild-c4-context-diagram.png"
+       alt="RentBuild Software Architecture Context Diagram"
+       width="90%">
+</p>
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-El sistema se descompone en cuatro containers, cada uno desplegable de forma independiente:
+The Software Architecture Container Diagram presents the main containers that compose the RentBuild platform and the technologies used to implement them.
 
-![Software Architecture Container Diagram](./assets/md-images-chapter4/software-architecture-container-diagram.png)
+RentBuild is composed of a public **Landing Page**, a **Single Page Application**, a **RESTful API**, and a **MySQL Database**. The Landing Page provides public information about the platform, while the Single Page Application allows authenticated users to interact with the main business capabilities. The RESTful API exposes the application services and manages access to persistent data.
 
-- **Landing Page** (HTML5, CSS3, JavaScript): sitio web estático que presenta la propuesta de valor a ambos segmentos. Sus llamadas a la acción derivan a la vista correspondiente de la Web Application, lo que mantiene una experiencia continua entre ambos productos.
-- **Web Application** (Vue 3, Vue Router, Pinia, PrimeVue, JavaScript): single-page application desde la que operan las empresas de alquiler y las constructoras. Cada rol accede a las vistas que le corresponden según la sesión autenticada.
-- **RentBuild API** (ASP.NET Core Web API, Entity Framework Core, C#): expone mediante REST los recursos de cada bounded context y se documenta con OpenAPI a través de Swagger. Se entrega en AV2, según el calendario del enunciado.
-- **Base de Datos** (MySQL): persiste usuarios, perfiles, inventario, alquileres, mantenimientos e incidencias, con el esquema relacional de la sección 4.8.
+Additionally, the RESTful API communicates with external services such as **Google Maps Platform** for geolocation capabilities, **Stripe** for subscription payment processing, and **SendGrid** for transactional email delivery.
 
-La comunicación entre la Web Application y la API es HTTPS con JSON. La API accede a la base de datos mediante Entity Framework Core y consume el Servicio de Correo para notificar cambios de estado; la Web Application consume Google Maps Platform para mostrar ubicaciones de entrega y devolución.
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/container/rentbuild-c4-system2-container-diagram.png"
+       alt="RentBuild Software Architecture Container Diagram"
+       width="90%">
+</p>
 
 ### 4.6.4. Software Architecture Components Diagrams
 
@@ -2036,19 +2037,208 @@ Una vez importado el proyecto, Vercel genera el Production Deployment, el cual q
 
 #### 5.2.1.1. Sprint Planning 1
 
+| | |
+| :--- | :--- |
+| **Sprint #** | Sprint 1 |
+| **Sprint Planning Background** | |
+| Date | 2026-09-17 |
+| Time | 10:00 PM |
+| Location | Vía Discord |
+| Prepared By | Luis Angel Cisneros Salas |
+| Attendees | Cisneros Salas, Luis Angel<br>Viza Quispe, Marlon Packard<br>Manosalva Tovar, Miroslav Oscar<br>Montalvo Vásquez, Bruno Rodrigo<br>Vargas Manchinelli, Deiby Juan |
+| Sprint 1 Review Summary | Durante el Sprint 1, el equipo completó exitosamente el desarrollo de la primera versión del Landing Page de RentBuild utilizando HTML, CSS y JavaScript, tomando como base los Wireframes y Mock-ups diseñados previamente en Figma. Asimismo, se avanzó con las pantallas iniciales de la Web Application correspondientes a la gestión de usuarios (Registro, Login, Perfil), gestión de maquinaria (Inventario, Registro, Detalle, Estado/Disponibilidad), solicitudes de alquiler (Bandeja de solicitudes, Mis solicitudes, Alquileres activos), mantenimiento e incidencias (Registro, Historial), y el Catálogo/búsqueda de maquinaria. El Landing Page se desplegó en un entorno de producción mediante Vercel, permitiendo su acceso público, y todas las tareas planificadas en el Sprint Backlog fueron completadas dentro del tiempo estimado. |
+| Sprint 1 Retrospective Summary | En esta sección tuvimos varios aciertos, ya que la división de tareas entre diseño (Figma), desarrollo del Landing Page (HTML/CSS/JS) y desarrollo de las pantallas de la Web Application permitió avanzar en paralelo sin bloqueos. Sin embargo, nos quedamos con dos pendientes específicos: la definición temprana de la herramienta de despliegue y la integración de la lógica de negocio en algunas pantallas de la Web Application, lo cual puso a prueba nuestra capacidad de resolución de problemas sobre la marcha. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Desarrollar e implementar la primera versión funcional del Landing Page de RentBuild, incluyendo su estructura y diseño visual basado en los prototipos definidos en Figma, así como las pantallas iniciales de la Web Application correspondientes a la gestión de usuarios, maquinaria, solicitudes de alquiler, mantenimiento/incidencias y catálogo de búsqueda, asegurando su despliegue en un entorno de producción accesible públicamente. |
+| Sprint 1 Velocity | 59 |
+| Sum of Story Points | 59 story points |
+
 #### 5.2.1.2. Aspect Leaders and Collaborators
+
+En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elaborado por el equipo para el Sprint 1, el cual identifica al líder y a los colaboradores responsables de cada aspecto dentro del alcance definido para este sprint.
+
+| Team Member (Last, First) | GitHub Username | Diseño visual y maquetación (Landing Page) | Desarrollo Web Application | Despliegue (Vercel) |
+| :--- | :--- | :---: | :---: | :---: |
+| Cisneros Salas, Luis Angel | LuisCS03 | C | L | C |
+| Viza Quispe, Marlon Packard | V8Z5 | L | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | L |
+| Montalvo Vásquez, Bruno Rodrigo | TartaroZ | C | C | C |
+| Vargas Manchinelli, Deiby Juan | poluxbinPe | C | C | C |
 
 #### 5.2.1.3. Sprint Backlog 1
 
+El propósito central de este Sprint fue construir la primera versión del Landing Page de RentBuild y avanzar en paralelo con las pantallas iniciales de la Web Application, cubriendo la gestión de usuarios, maquinaria, solicitudes de alquiler y mantenimiento/incidencias. El trabajo se organizó a partir de las User Stories asociadas a los Epics comprendidos en este Sprint (EP01, EP02, EP03, EP04, EP05 y EP06). Como herramienta de seguimiento y control de tareas, el equipo optó por Trello.
+
+![Sprint 1 - Tablero de Trello](./assets/md-images-chapter5/sprint-1-trello-board.png)
+
+**Trello:** https://trello.com/invite/b/6aacc6b9cc0413f772436a35/ATTI72782e0013e72d3ec63864ccbd335c7099570315/dataflux
+
+| User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Assigned To | Status (To do / In Process / To Review / Done) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US-01 | Registro | UT-01 | Crear estructura HTML | Maquetar el formulario de registro de usuario | Luis Cisneros | Done |
+| US-01 | Registro | UT-02 | Añadir estilos CSS | Aplicar estilos según el diseño de Figma | Luis Cisneros | Done |
+| US-01 | Registro | UT-03 | Añadir validaciones JS | Validar campos y mostrar mensaje de confirmación | Luis Cisneros | Done |
+| US-02 | Login | UT-04 | Crear estructura HTML | Maquetar formulario de inicio de sesión | Marlon Viza | Done |
+| US-02 | Login | UT-05 | Añadir estilos CSS | Aplicar estilos según diseño aprobado | Marlon Viza | Done |
+| US-02 | Login | UT-06 | Añadir lógica JS | Validar credenciales y manejo de errores | Marlon Viza | Done |
+| US-03 | Perfil de usuario | UT-07 | Crear estructura HTML | Maquetar sección de datos personales | Deiby Vargas | To Do |
+| US-03 | Perfil de usuario | UT-08 | Añadir estilos CSS | Aplicar estilos según diseño | Deiby Vargas | To Do |
+| US-04 | Registrar nueva maquinaria | UT-09 | Crear formulario de registro | Maquetar campos del equipo (nombre, tipo, estado) | Miroslav Manosalva | Done |
+| US-04 | Registrar nueva maquinaria | UT-10 | Añadir validaciones JS | Validar datos ingresados del equipo | Miroslav Manosalva | Done |
+| US-05 | Inventario de maquinaria | UT-11 | Crear vista de lista | Maquetar tabla/lista de maquinaria registrada | Bruno Montalvo | Done |
+| US-05 | Inventario de maquinaria | UT-12 | Añadir estilos CSS | Aplicar estilos responsivos a la lista | Bruno Montalvo | Done |
+| US-07/08 | Detalle + estado/disponibilidad | UT-13 | Crear vista de detalle | Maquetar sección con info, estado y disponibilidad | Luis Cisneros | In Progress |
+| US-07/08 | Detalle + estado/disponibilidad | UT-14 | Añadir lógica JS | Mostrar estado dinámico (disponible/reservado/alquilado) | Luis Cisneros | In Progress |
+| US-09 | Catálogo/búsqueda | UT-15 | Crear buscador | Maquetar barra de búsqueda y filtros | Marlon Viza | Done |
+| US-09 | Catálogo/búsqueda | UT-16 | Añadir lógica JS | Filtrar resultados según criterios | Marlon Viza | Done |
+| US-13/14 | Bandeja de solicitudes | UT-17 | Añadir acciones JS | Maquetar lista de solicitudes recibidas | Miroslav Manosalva | In Progress |
+| US-15 | Alquileres activos | UT-18 | Crear vista de alquileres | Maquetar lista de equipos alquilados vigentes | Miroslav Manosalva | In Progress |
+| US-16 | Mis solicitudes | UT-19 | Crear vista de solo lectura | Maquetar estado de solicitudes del cliente | Bruno Montalvo | To Do |
+| US-18/20 | Registrar mantenimiento/incidencia | UT-20 | Crear formulario | Maquetar registro de mantenimiento e incidencias | Deiby Vargas | To Do |
+| US-18/20 | Registrar mantenimiento/incidencia | UT-21 | Añadir validaciones JS | Validar tipo y fecha del registro | Luis Cisneros | In Progress |
+| US-21 | Historial de maquinaria | UT-22 | Crear vista de historial | Maquetar historial de alquileres/incidencias/mantenimientos | Luis Cisneros | In Progress |
+| US-21 | Historial de maquinaria | UT-23 | Añadir estilos CSS | Aplicar estilos a la línea de tiempo del historial | Marlon Viza | Done |
+
 #### 5.2.1.4. Development Evidence for Sprint Review
+
+En este primer Sprint, el equipo desarrolló tanto la primera versión del Landing Page como las pantallas iniciales de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. Cada integrante contribuyó con distintas funcionalidades a lo largo del sprint. A continuación, se presenta la tabla con los commits realizados durante este periodo.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| RentBuild/Landing-Page | feature/app-features | a4682cd | feat(team): add profile photos for Bruno, Deiby and Miroslav | add profile photos for Bruno, Deiby and Miroslav | 18/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | bd3e866 | feat(catalog): add machinery search and filter screen | add machinery search and filter screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8649b7c | feat(inventory): add machinery history screen | add machinery history screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | c220f22 | feat(maintenance): add register maintenance and incident form | add register maintenance and incident form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 18b2785 | feat(rentals): add active rentals screen | add active rentals screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | a0b3479 | feat(requests): add my rental requests screen for construction companies | add my rental requests screen for construction companies | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | eb60cf5 | feat(inventory): add machinery detail screen with status and availability | add machinery detail screen with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 0a4dc7d | feat(inventory): add register new machinery form | add register new machinery form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | fe84942 | feat(inventory): display machinery list with status and availability | display machinery list with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 4c44274 | feat(profile): add user profile screen | add user profile screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8c6ff60 | feat(dashboard): implement user home screen | implement user home screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 17e01c2 | feat(auth): implement user registration form | implement user registration form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8a81a87 | feat(auth): add login modal for RentBuild | add login modal for RentBuild | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | dcb16bb | feat(team): add profile photo for Luis Angel Cisneros Salas | add profile photo for Luis Angel Cisneros Salas | 16/09/2026 |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
+Como equipo, lo que logramos en este primer Sprint fue la exitosa implementación de nuestra Landing Page y su posterior despliegue gracias a la herramienta GitHub Pages. A continuación, presentaremos lo logrado a través de imágenes mostrando las principales vistas.
+
+**Landing Page**
+
+Sección principal (Hero):
+
+![Landing Page - Hero](./assets/md-images-chapter5/execution-evidence/landing-01-hero.png)
+
+Sección "Todo el ciclo de alquiler, conectado":
+
+![Landing Page - Ciclo de alquiler](./assets/md-images-chapter5/execution-evidence/landing-02-rental-cycle.png)
+
+Sección "Funciones para gestionar mejor tus equipos":
+
+![Landing Page - Funciones](./assets/md-images-chapter5/execution-evidence/landing-03-features.png)
+
+Sección "Mayor control sobre cada alquiler":
+
+![Landing Page - Mayor control](./assets/md-images-chapter5/execution-evidence/landing-04-control.png)
+
+Sección "Funciones RentBuild":
+
+![Landing Page - Funciones RentBuild](./assets/md-images-chapter5/execution-evidence/landing-05-features-video.png)
+
+Sección "Nuestro equipo":
+
+![Landing Page - Nuestro equipo](./assets/md-images-chapter5/execution-evidence/landing-06-team.png)
+
+Sección "RentBuild: Simplificando el alquiler y la gestión de equipos":
+
+![Landing Page - Sobre RentBuild](./assets/md-images-chapter5/execution-evidence/landing-07-about.png)
+
+Sección "Planes que crecen con tu negocio":
+
+![Landing Page - Planes](./assets/md-images-chapter5/execution-evidence/landing-08-plans.png)
+
+Sección "Contáctanos":
+
+![Landing Page - Contáctanos](./assets/md-images-chapter5/execution-evidence/landing-09-contact.png)
+
+**Web Application**
+
+Inicio de sesión:
+
+![Web Application - Login](./assets/md-images-chapter5/execution-evidence/app-01-login.png)
+
+Registro de cuenta:
+
+![Web Application - Registro](./assets/md-images-chapter5/execution-evidence/app-02-register.png)
+
+Perfil de usuario:
+
+![Web Application - Perfil](./assets/md-images-chapter5/execution-evidence/app-03-profile.png)
+
+Inventario de maquinaria:
+
+![Web Application - Inventario](./assets/md-images-chapter5/execution-evidence/app-04-inventory.png)
+
+Registro de nueva maquinaria:
+
+![Web Application - Registrar maquinaria](./assets/md-images-chapter5/execution-evidence/app-05-register-machinery.png)
+
+Mis solicitudes de alquiler:
+
+![Web Application - Mis solicitudes](./assets/md-images-chapter5/execution-evidence/app-06-my-requests.png)
+
+Alquileres activos:
+
+![Web Application - Alquileres activos](./assets/md-images-chapter5/execution-evidence/app-07-active-rentals.png)
+
+Registro de mantenimiento o incidencia:
+
+![Web Application - Mantenimiento e incidencias](./assets/md-images-chapter5/execution-evidence/app-08-maintenance.png)
+
+Historial de maquinaria:
+
+![Web Application - Historial](./assets/md-images-chapter5/execution-evidence/app-09-history.png)
+
+Catálogo de maquinaria:
+
+![Web Application - Catálogo](./assets/md-images-chapter5/execution-evidence/app-10-catalog.png)
+
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Dado que el alcance del Sprint 1 se centró en el desarrollo de la primera versión del Landing Page, no se contempló en este sprint la implementación de Web Services. Por consiguiente, no se cuenta aún con endpoints documentados. La documentación de servicios mediante OpenAPI Specification se incorporará a partir de los sprints correspondientes al desarrollo del RESTful API.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
+En esta sección se resumen las actividades realizadas por el equipo en relación con el despliegue de MaquiGest durante el Sprint 1. Estas actividades incluyeron la creación de cuentas en el proveedor de hosting vercel, la configuración de los recursos necesarios y el despliegue de la primera versión del Landing Page. A continuación, se presentan capturas de pantalla que evidencian los pasos realizados durante este proceso.
+
+**1.** Ingresando a la cuenta le damos click a *Add New* para añadir un proyecto.
+
+![Paso 1 - Add New](./assets/md-images-chapter5/deployment-evidence/step-1-add-new.png)
+
+**2.** Le damos click en *Project* para generar un proyecto.
+
+![Paso 2 - Project](./assets/md-images-chapter5/deployment-evidence/step-2-project.png)
+
+**3.** Le damos click en el proyecto que deseamos importar.
+
+![Paso 3 - Import Git Repository](./assets/md-images-chapter5/deployment-evidence/step-3-import-repository.png)
+
+**4.** Nos aparecerá el siguiente recuadro para poder hacer el deploy.
+
+![Paso 4 - Deploy](./assets/md-images-chapter5/deployment-evidence/step-4-deploy.png)
+
+**5.** Finalmente ya tenemos nuestra Landing Page desplegada.
+
+![Paso 5 - Proyecto creado en Vercel](./assets/md-images-chapter5/deployment-evidence/step-5a-project-created.png)
+
+![Paso 5 - Production Deployment](./assets/md-images-chapter5/deployment-evidence/step-5b-production-deployment.png)
+
+![Paso 5 - Landing Page desplegada](./assets/md-images-chapter5/deployment-evidence/step-5c-landing-page-live.png)
+
 #### 5.2.1.8. Team Collaboration Insights during Sprint
+
+En esta sección se explica cómo se desarrollaron las actividades de implementación del Landing Page durante el Sprint 1, evidenciando la participación colaborativa de todos los integrantes del equipo. A continuación, se presentan capturas de los analíticos de colaboración y commits en GitHub correspondientes al repositorio del proyecto, en los que se refleja el aporte individual de cada miembro del equipo.
 
 # Conclusiones
 
