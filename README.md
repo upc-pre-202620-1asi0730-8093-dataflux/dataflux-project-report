@@ -1698,6 +1698,10 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 ### 4.6.1. Design-Level Event Storming
 
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de MaquiGest. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
+
+![Design-Level Event Storming](assets/md-images-chapter4/design-level-event-storming.png)
+
 ### 4.6.2. Software Architecture Context Diagram
 
 A partir del Ubiquitous Language (2.5) y de las épicas de 3.1, la solución se organiza en cinco bounded contexts, que son la base de los diagramas de esta sección y de las siguientes:
