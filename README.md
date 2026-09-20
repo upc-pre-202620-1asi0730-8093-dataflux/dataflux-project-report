@@ -1287,6 +1287,48 @@ And mantiene la estructura y funcionalidad de la página
 
 ## 3.3. Product Backlog
 
+El Product Backlog de RentBuild contiene las historias de usuario identificadas para el desarrollo de la solución. Estas se presentan en orden correlativo según su identificador, desde US01 hasta US35.
+
+| # Orden | User Story ID | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 2 | US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 3 | US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 4 | US04 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 5 | US05 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 6 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en RentBuild. | 5 |
+| 7 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 8 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 9 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 10 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 11 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 12 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 13 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 14 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 15 | US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece RentBuild. | 3 |
+| 16 | US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 17 | US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 18 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 19 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 20 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 21 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud de alquiler para conocer su situación actual. | 3 |
+| 22 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 23 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 24 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 25 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 26 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 27 | US27 | Consultar información de RentBuild | Como visitante, quiero consultar información de RentBuild para conocer la solución y su propuesta de valor. | 2 |
+| 28 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona RentBuild. | 2 |
+| 29 | US29 | Contactar con RentBuild | Como visitante, quiero contactar con RentBuild para realizar consultas sobre la solución. | 2 |
+| 30 | US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa. | 2 |
+| 31 | US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con RentBuild. | 3 |
+| 32 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si RentBuild se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 33 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
+| 34 | US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar RentBuild desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 35 | US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar RentBuild en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+
+<div style="page-break-before: always;"></div>
+
 # Capítulo IV: Product Design
 
 ## 4.1. Style Guidelines
