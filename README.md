@@ -734,11 +734,11 @@ El Empathy Mapping permite profundizar en la comprensión de los principales seg
 
 ## 2.4. Big Picture Event Storming
 
-El Big Picture Event Storming permitió identificar y representar los principales eventos del dominio de MaquiGest, mostrando de manera general el flujo del negocio desde el registro de la maquinaria hasta su devolución, inspección y mantenimiento.
+El Big Picture Event Storming permitió identificar y representar los principales eventos del dominio de RentBuild, mostrando de manera general el flujo del negocio desde el registro de la maquinaria hasta su devolución, inspección y mantenimiento.
 
 La siguiente imagen presenta el resultado del Big Picture Event Storming realizado para el proyecto:
 
-![Big Picture Event Storming de MaquiGest](assets/md-images-chapter2/big-picture-event-storming.png)
+![Big Picture Event Storming de RentBuild](assets/md-images-chapter2/big-picture-event-storming.png)
 
 ## 2.5. Ubiquitous Language
 
