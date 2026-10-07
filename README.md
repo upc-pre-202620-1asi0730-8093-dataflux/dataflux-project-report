@@ -3365,8 +3365,6 @@ Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to
 
 # Anexos
 
-# Anexos
-
 ## Anexo A. Videos de Exposiciones
 
 En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
