@@ -3231,8 +3231,8 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 | Sprint 1 Retrospective Summary | La división de tareas entre diseño, Landing Page y Web Application permitió avanzar en paralelo sin bloqueos. Como mejoras, el equipo identificó definir antes la herramienta de despliegue y cerrar la integración de la lógica de negocio en las pantallas ya maquetadas, además de incorporar la retroalimentación recibida en el AV1 sobre los artefactos del informe. |
 | **Sprint Goal & User Stories** | |
 | Sprint 2 Goal | Nuestro enfoque está en completar el flujo principal de alquiler de RentBuild en la Web Application: consulta de disponibilidad por periodo, solicitud de alquiler, gestión de solicitudes por la empresa de alquiler, y selección y gestión de planes de suscripción. Creemos que esto permitirá a las empresas constructoras y a las empresas de alquiler recorrer el ciclo completo de reserva sin recurrir al teléfono ni a WhatsApp. Esto se confirmará cuando una empresa constructora pueda solicitar un alquiler para un periodo disponible, la empresa de alquiler pueda confirmarlo o rechazarlo, y la primera versión de la Web Application quede desplegada y accesible públicamente desde los call-to-action de la nueva versión del Landing Page. |
-| Sprint 2 Velocity | 39 |
-| Sum of Story Points | 39 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17) |
+| Sprint 2 Velocity | 41 |
+| Sum of Story Points | 41 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33) |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -3271,10 +3271,8 @@ El propósito central de este Sprint es completar el flujo principal de alquiler
 | US15 | Consultar planes | UT-13 | Vista comparativa de planes | Maquetar los tres niveles de plan con sus características | 3 | Marlon Viza | To Do |
 | US16 | Seleccionar plan | UT-14 | Flujo de selección de plan | Permitir elegir un plan y confirmar la selección | 3 | Marlon Viza | To Do |
 | US17 | Gestionar suscripción | UT-15 | Vista de suscripción actual | Mostrar el plan activo y permitir cambiarlo o cancelarlo | 4 | Bruno Montalvo | To Do |
-| — | Tareas generales (sin User Story) | UT-16 | Configurar la fake API | Levantar una fake API con los datos de maquinaria, solicitudes y planes para que la Web Application la consuma | 2 | Luis Cisneros | To Do |
-| — | Tareas generales (sin User Story) | UT-17 | Términos y condiciones y privacidad | Publicar los términos y condiciones y la protección de privacidad en el footer del Landing Page y la Web Application | 2 | Deiby Vargas | To Do |
-| — | Tareas generales (sin User Story) | UT-18 | Corrección de observaciones del Landing Page | Verificar que los call-to-action de cada segmento redirijan a la vista de la Web Application y unificar el estilo visual | 3 | Luis Cisneros | To Do |
-| — | Tareas generales (sin User Story) | UT-19 | Despliegue de la Web Application | Importar el repositorio en Vercel y publicar la Web Application | 2 | Miroslav Manosalva | To Do |
+| US33 | Acceder a la Web Application | UT-16 | Corrección de observaciones del Landing Page | Verificar que los call-to-action de cada segmento redirijan a la vista de la Web Application y unificar el estilo visual | 3 | Luis Cisneros | To Do |
+| US33 | Acceder a la Web Application | UT-17 | Despliegue de la Web Application | Importar el repositorio en Vercel y publicar la Web Application | 2 | Miroslav Manosalva | To Do |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
