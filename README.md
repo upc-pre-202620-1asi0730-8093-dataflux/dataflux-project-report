@@ -3216,8 +3216,6 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 
 ### 5.2.2. Sprint 2
 
-> **Nota de redacción (borrador):** los campos marcados como `[COMPLETAR]` corresponden a datos que solo se conocen al ejecutar el sprint (fechas, commits, capturas, enlaces). El alcance, los responsables y las estimaciones son una propuesta para validar con el equipo antes de la entrega. Eliminar esta nota al finalizar.
-
 #### 5.2.2.1. Sprint Planning 2
 
 | | |
