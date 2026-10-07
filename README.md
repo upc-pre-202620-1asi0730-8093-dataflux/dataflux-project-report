@@ -3222,8 +3222,8 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 | :--- | :--- |
 | **Sprint #** | Sprint 2 |
 | **Sprint Planning Background** | |
-| Date | [COMPLETAR] |
-| Time | [COMPLETAR] |
+| Date | 2026-10-07 |
+| Time | 9:00 PM |
 | Location | Vía Discord |
 | Prepared By | Luis Angel Cisneros Salas |
 | Attendees | Cisneros Salas, Luis Angel<br>Viza Quispe, Marlon Packard<br>Manosalva Tovar, Miroslav Oscar<br>Montalvo Vásquez, Bruno Rodrigo<br>Vargas Manchinelli, Deiby Juan |
