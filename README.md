@@ -2375,59 +2375,59 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-#### Flujo de la empresa de alquiler de maquinaria
+El User Flow Diagram de la Web Application de **RentBuild** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
-Después de iniciar sesión correctamente y ser reconocido como usuario perteneciente a una empresa de alquiler de maquinaria, el usuario accede al **Rental Company Dashboard** de RentBuild. Desde este entorno puede desplazarse entre las principales funcionalidades de la aplicación mediante la navegación lateral.
+#### Authentication and Registration User Flow
 
-Las secciones disponibles para este segmento son las siguientes:
+El Authentication and Registration User Flow representa el proceso transversal mediante el cual una persona obtiene acceso a RentBuild, independientemente del tipo de empresa a la que pertenece. El flujo contempla tanto el ingreso de usuarios existentes como la creación de nuevas cuentas, la recuperación de credenciales y la validación de las condiciones necesarias para acceder al workspace correspondiente.
 
-- **Perfil:** permite consultar y gestionar la información relacionada con el usuario y su cuenta dentro de RentBuild.
+El recorrido comienza cuando el usuario abre la plataforma y el sistema comprueba si existe una sesión activa. En caso contrario, se presenta la pantalla de inicio de sesión, desde la cual el usuario puede autenticarse, registrarse o iniciar el proceso de recuperación de contraseña. Cuando las credenciales son válidas, el sistema identifica el tipo de compañía y redirige al usuario hacia el entorno que le corresponde.
 
-- **Inventario:** permite consultar la maquinaria registrada por la empresa y revisar la información disponible de los equipos que forman parte de su inventario.
+Durante el registro se distingue entre los dos segmentos atendidos por RentBuild: empresas de alquiler de maquinaria y empresas constructoras o contratistas. Las empresas constructoras pueden activar su cuenta directamente, mientras que las empresas de alquiler deben seleccionar un plan de suscripción y completar el proceso de pago antes de habilitar el acceso a las funcionalidades de la plataforma.
 
-- **Registrar maquinaria:** permite incorporar nuevos equipos al inventario de la empresa mediante el registro de la información correspondiente. En el User Flow Diagram esta actividad forma parte del proceso de gestión del inventario.
+Asimismo, el flujo contempla escenarios alternativos como credenciales incorrectas, pagos no completados, suscripciones inactivas y recuperación de contraseña mediante correo electrónico. De esta manera, el diagrama no representa únicamente el camino exitoso, sino también las principales situaciones que pueden presentarse durante el acceso.
 
-- **Solicitudes:** permite revisar las solicitudes de alquiler recibidas y consultar sus principales detalles. A partir de esta información, la empresa puede aprobar o rechazar una solicitud de acuerdo con sus condiciones y disponibilidad.
+En conjunto, este User Flow permite visualizar cómo RentBuild controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-- **Alquileres activos:** permite consultar los alquileres que actualmente se encuentran en curso y realizar seguimiento de las operaciones activas relacionadas con la maquinaria alquilada.
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width="800px">
 
-- **Mantenimiento:** permite revisar las máquinas que se encuentran en mantenimiento, consultar reportes relacionados con averías o incidencias y programar fechas para las actividades de mantenimiento correspondientes.
+#### Rental Company Core Domain User Flow
 
-- **Historial:** permite consultar los eventos asociados a cada maquinaria a lo largo del tiempo, incluyendo mantenimientos, reparaciones y reservas realizadas previamente.
+El Rental Company Core Domain User Flow representa las principales operaciones que realiza una empresa de alquiler de maquinaria dentro de RentBuild una vez que ha obtenido acceso a su workspace. El flujo se concentra en las actividades directamente relacionadas con la administración de maquinaria y con el ciclo completo de atención de un alquiler.
 
-- **Catálogo:** permite visualizar información detallada de la maquinaria registrada y localizar equipos utilizando criterios de búsqueda como nombre, categoría o condición.
+El recorrido parte desde el Rental Company Dashboard, desde donde el usuario puede acceder a los módulos de Equipment, Rental Requests, Reservations, Rentals y Maintenance. Estos módulos representan las capacidades principales que permiten controlar la disponibilidad y utilización de la maquinaria.
 
-Dentro del recorrido de la empresa de alquiler, uno de los principales puntos de decisión se presenta en la sección **Solicitudes**. Después de revisar los detalles de una solicitud recibida, el usuario puede aprobarla o rechazarla. Esta decisión determina la continuidad del proceso de alquiler y permite a la empresa mantener control sobre las solicitudes recibidas.
+En Equipment, la empresa administra su inventario mediante el registro de nuevos equipos, la actualización de información y la consulta de detalles. Esta información constituye la base para que la maquinaria pueda ser posteriormente encontrada y solicitada por empresas constructoras.
 
-Las diferentes funcionalidades se encuentran conectadas con el Dashboard de la empresa de alquiler, permitiendo que el usuario pueda desplazarse entre los procesos de gestión de maquinaria, solicitudes, alquileres activos, mantenimiento, historial y catálogo de acuerdo con las tareas que necesite realizar.
+En Rental Requests, la empresa revisa las solicitudes recibidas. Cada solicitud puede ser aprobada o rechazada. Cuando se aprueba, la empresa constructora es notificada y se genera una reserva asociada al equipo y al período solicitado. Si se rechaza, se registra el motivo correspondiente y se comunica la decisión al solicitante.
 
-Finalmente, una vez terminadas sus actividades dentro de RentBuild, el usuario puede ejecutar la acción **Sign Out**, mediante la cual se cierra la sesión activa y finaliza su recorrido dentro de la Web Application.
+El módulo Reservations permite administrar las asignaciones ya confirmadas. Una reserva puede consultarse, cancelarse o continuar hacia el registro de un alquiler. Esto establece una separación entre la intención inicialmente aprobada y la operación de alquiler que posteriormente será ejecutada.
 
-**Key elements:**
+En Rentals, la empresa administra las etapas operativas del servicio. El proveedor registra la entrega del equipo y posteriormente espera la confirmación de recepción por parte de la empresa constructora antes de considerar que la maquinaria se encuentra efectivamente en alquiler. Al finalizar el período, la constructora inicia la devolución y la empresa de alquiler revisa el retorno, inspecciona el equipo y confirma su recepción antes de completar el alquiler.
 
-- Acceso a la plataforma RentBuild.
-- Visualización de la pantalla de Login.
-- Verificación de la existencia de una cuenta.
-- Ingreso y validación de credenciales.
-- Manejo de credenciales incorrectas mediante un mensaje de error.
-- Registro de nuevos usuarios y empresas.
-- Confirmación del registro y retorno al Login.
-- Identificación del tipo de empresa.
-- Acceso al Rental Company Dashboard.
-- Gestión del perfil del usuario.
-- Consulta del inventario de maquinaria.
-- Registro de nueva maquinaria.
-- Revisión, aprobación o rechazo de solicitudes de alquiler.
-- Seguimiento de alquileres activos.
-- Gestión del mantenimiento de maquinaria.
-- Consulta de reportes de averías e incidencias.
-- Programación de actividades de mantenimiento.
-- Consulta del historial de cada maquinaria.
-- Consulta y búsqueda de equipos mediante el catálogo.
-- Cierre de sesión mediante la acción Sign Out.
+Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar su estado y devolver un equipo a disponibilidad cuando nuevamente se encuentre en condiciones de ser alquilado.
 
+Por ello, este User Flow representa el núcleo operativo de RentBuild para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-<img src = "assets/md-images-chapter4/UserFlowDiagrams.png" width = 100%>
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width="800px">
+
+#### Construction Company Core Domain User Flow
+
+El Construction Company Core Domain User Flow representa el recorrido principal de una pequeña empresa constructora o contratista que utiliza RentBuild para encontrar maquinaria, solicitar su alquiler y realizar seguimiento a las operaciones asociadas.
+
+El flujo comienza desde el Construction Company Dashboard, desde donde el usuario puede acceder principalmente a Search Equipment, My Requests, My Reservations y My Rentals. A diferencia de la empresa de alquiler, este segmento no administra inventario propio dentro del sistema, sino que utiliza RentBuild como medio para encontrar y contratar maquinaria ofrecida por proveedores.
+
+En Search Equipment, la empresa constructora explora el catálogo de maquinaria disponible, puede aplicar filtros según categoría, ubicación, disponibilidad u otras características, y acceder al detalle de un equipo. Desde esta vista puede seleccionar el período requerido y comprobar si la maquinaria se encuentra disponible para dichas fechas. Cuando la disponibilidad es favorable, puede generar una solicitud de alquiler.
+
+Las solicitudes realizadas pasan a My Requests, donde la constructora puede consultar su estado. Una solicitud puede encontrarse pendiente mientras espera la respuesta del proveedor, ser aprobada para continuar con el proceso o ser rechazada. Mientras corresponda, el usuario también puede cancelar solicitudes que todavía no hayan avanzado a etapas posteriores.
+
+Una vez confirmada la asignación del equipo, la operación pasa a My Reservations. Desde este módulo la empresa consulta las reservas vigentes, los equipos involucrados, los proveedores y los períodos confirmados. También puede cancelar una reserva cuando ya no requiera la maquinaria, notificando al proveedor y liberando el período previamente reservado.
+
+Posteriormente, cuando la reserva se convierte en alquiler, la operación aparece en My Rentals. Desde allí la constructora puede consultar la maquinaria que se encuentra en uso, revisar las fechas de devolución y realizar las acciones que le corresponden dentro de la operación. Cuando el proveedor registra una entrega, la constructora confirma que recibió el equipo. Al finalizar el uso de la maquinaria, la constructora inicia el proceso de devolución, quedando la confirmación final y la inspección en manos de la empresa de alquiler.
+
+En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de RentBuild, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
+
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width="800px">
 
 ## 4.5. Web Applications Prototyping
 
