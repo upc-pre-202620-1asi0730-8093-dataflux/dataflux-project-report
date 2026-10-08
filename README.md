@@ -1,79 +1,64 @@
+# RentBuild
 <div align="center">
 
-<img src="assets/md-images-front/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="90">
+  <img src="assets/md-images-front/upc-logo.png" width="150px" />
 
-<p>
-Universidad Peruana de Ciencias Aplicadas<br>
-Facultad de Ingeniería<br>
-Carrera de Ingeniería de Software
-</p>
+  <p>Universidad Peruana de Ciencias Aplicadas</p>
+  <p>Facultad de Ingeniería</p>
+  <p>Carrera de Ingeniería de Software</p>
 
-<br>
+  <p>Ciclo académico 2026-20</p><br>
 
-<p>
-<strong>1ASI0730</strong><br>
-<strong>Aplicaciones Web</strong>
-</p>
+  <p><b>1ASI0730</b></p>
+  <p><b>Aplicaciones Web</b></p>
+  <p>NRC</p>
+  <p><b>8093</b></p>
+  <p><b>Informe de Trabajo Final</b></p>
+  <p>Docente</p>
+  <p><b>Bautista Ubillús, Efraín Ricardo</b></p>
+  <p>Startup</p>
+  <p><b>DataFlux</b></p><br>
+  <p>Producto</p>
+  <p><b>RentBuild</b></p>
 
-<p>
-NRC<br>
-<strong>8093</strong>
-</p>
+</div>
 
-<h3>Informe de Trabajo Final</h3>
+<div align="center">
+  <h3>Integrantes</h3>
 
-<p>
-Docente<br>
-<strong>Bautista Ubillús, Efraín Ricardo</strong>
-</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Apellidos y Nombres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>U20211B198</td>
+        <td>Cisneros Salas, Luis Angel</td>
+      </tr>
+      <tr>
+        <td>U202410211</td>
+        <td>Manosalva Tovar, Miroslav Oscar</td>
+      </tr>
+      <tr>
+        <td>U202111529</td>
+        <td>Montalvo Vásquez, Bruno Rodrigo</td>
+      </tr>
+      <tr>
+        <td>U20211F962</td>
+        <td>Vargas Manchinelli, Deiby Juan</td>
+      </tr>
+      <tr>
+        <td>U2023228489</td>
+        <td>Viza Quispe, Marlon Packard</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
 
-<br>
-
-<p>
-Startup<br>
-<strong>DataFlux</strong>
-</p>
-
-<p>
-Producto<br>
-<strong>RentBuild</strong>
-</p>
-
-<br>
-
-<p><strong>Integrantes</strong></p>
-
-<p>
-<span style="display:inline-block; width:120px; text-align:left;"><strong>Código</strong></span>
-<span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
-<br>
-
-<span style="display:inline-block; width:120px; text-align:left;">U20211B198</span>
-<span style="display:inline-block; width:300px; text-align:left;">Cisneros Salas, Luis Angel</span>
-<br>
-
-<span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
-<span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav Oscar</span>
-<br>
-
-<span style="display:inline-block; width:120px; text-align:left;">U202111529</span>
-<span style="display:inline-block; width:300px; text-align:left;">Montalvo Vásquez, Bruno Rodrigo</span>
-<br>
-
-<span style="display:inline-block; width:120px; text-align:left;">U20211F962</span>
-<span style="display:inline-block; width:300px; text-align:left;">Vargas Manchinelli, Deiby Juan</span>
-<br>
-
-<span style="display:inline-block; width:120px; text-align:left;">U202322849</span>
-<span style="display:inline-block; width:300px; text-align:left;">Viza Quispe, Marlon Packard</span>
-
-<br>
-
-<p><strong>Ciclo académico 2026-20</strong></p>
-
-<br>
-
-<p><strong>Octubre, 2026</strong></p>
+  <p><b>Septiembre, 2026</b></p>
 
 </div>
 
@@ -84,10 +69,10 @@ Producto<br>
 | Versión | Fecha |  Autor   |                                                  Descripción de modificación                                                   |
 | :-----: |:-----:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
 | 1.0 | 13/09/2026 | Cisneros Salas Luis Angel,<br>Viza Quispe Marlon Packard,<br>Manosalva Tovar Miroslav Oscar,<br>Montalvo Vásquez Bruno Rodrigo,<br>Vargas Manchinelli Deiby Juan | **Capítulo I: Introducción**<br>&emsp;1.1. Startup Profile<br>&emsp;&emsp;1.1.1. Descripción de la Startup<br>&emsp;&emsp;1.1.2. Perfiles de integrantes del equipo<br>&emsp;1.2. Solution Profile<br>&emsp;&emsp;1.2.1. Antecedentes y problemática<br>&emsp;&emsp;1.2.2. Lean UX Process<br>&emsp;&emsp;&emsp;1.2.2.1. Lean UX Problem Statements<br>&emsp;&emsp;&emsp;1.2.2.2. Lean UX Assumptions<br>&emsp;&emsp;&emsp;1.2.2.3. Lean UX Hypothesis Statements<br>&emsp;&emsp;&emsp;1.2.2.4. Lean UX Canvas<br>&emsp;1.3. Segmentos objetivo<br>**Capítulo II: Requirements Elicitation & Analysis**<br>&emsp;2.1. Competidores<br>&emsp;&emsp;2.1.1. Análisis competitivo<br>&emsp;&emsp;2.1.2. Estrategias y tácticas frente a competidores<br>&emsp;2.2. Entrevistas<br>&emsp;&emsp;2.2.1. Diseño de entrevistas<br>&emsp;&emsp;2.2.2. Registro de entrevistas<br>&emsp;&emsp;2.2.3. Análisis de entrevistas<br>&emsp;2.3. Needfinding<br>&emsp;&emsp;2.3.1. User Personas<br>&emsp;&emsp;2.3.2. User Task Matrix<br>&emsp;&emsp;2.3.3. User Journey Mapping<br>&emsp;&emsp;2.3.4. Empathy Mapping<br>&emsp;2.4. Big Picture EventStorming<br>&emsp;2.5. Ubiquitous Language<br>**Capítulo III: Requirements Specification**<br>&emsp;3.1. User Stories<br>&emsp;3.2. Impact Mapping<br>&emsp;3.3. Product Backlog<br>**Capítulo IV: Product Design**<br>&emsp;4.1. Style Guidelines<br>&emsp;&emsp;4.1.1. General Style Guidelines<br>&emsp;&emsp;4.1.2. Web Style Guidelines<br>&emsp;4.2. Information Architecture<br>&emsp;&emsp;4.2.1. Organization Systems<br>&emsp;&emsp;4.2.2. Labeling Systems<br>&emsp;&emsp;4.2.3. SEO Tags and Meta Tags<br>&emsp;&emsp;4.2.4. Searching Systems<br>&emsp;&emsp;4.2.5. Navigation Systems<br>&emsp;4.3. Landing Page UI Design<br>&emsp;&emsp;4.3.1. Landing Page Wireframe<br>&emsp;&emsp;4.3.2. Landing Page Mock-up<br>&emsp;4.4. Web Applications UX/UI Design<br>&emsp;&emsp;4.4.1. Web Applications Wireframes<br>&emsp;&emsp;4.4.2. Web Applications Wireflow Diagrams<br>&emsp;&emsp;4.4.3. Web Applications Mock-ups<br>&emsp;&emsp;4.4.4. Web Applications User Flow Diagrams<br>&emsp;4.5. Web Applications Prototyping<br>&emsp;4.6. Domain-Driven Software Architecture<br>&emsp;&emsp;4.6.1. Design-Level EventStorming<br>&emsp;&emsp;4.6.2. Software Architecture Context Diagram<br>&emsp;&emsp;4.6.3. Software Architecture Container Diagrams<br>&emsp;&emsp;4.6.4. Software Architecture Components Diagrams<br>&emsp;4.7. Software Object-Oriented Design<br>&emsp;&emsp;4.7.1. Class Diagrams<br>&emsp;4.8. Database Design<br>&emsp;&emsp;4.8.1. Database Diagrams<br>**Capítulo V: Product Implementation, Validation & Deployment**<br>&emsp;5.1. Software Configuration Management<br>&emsp;&emsp;5.1.1. Software Development Environment Configuration<br>&emsp;&emsp;5.1.2. Source Code Management<br>&emsp;&emsp;5.1.3. Source Code Style Guide & Conventions<br>&emsp;&emsp;5.1.4. Software Deployment Configuration<br>&emsp;5.2. Landing Page, Services & Applications Implementation<br>&emsp;&emsp;&emsp;5.2.1.1. Sprint Planning 1<br>&emsp;&emsp;&emsp;5.2.1.2. Aspect Leaders and Collaborators<br>&emsp;&emsp;&emsp;5.2.1.3. Sprint Backlog 1<br>&emsp;&emsp;&emsp;5.2.1.4. Development Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.1.5. Execution Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.1.6. Services Documentation Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.1.7. Software Deployment Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.1.8. Team Collaboration Insights during Sprint |
-| 1.2 | 08/10/2026 | Equipo DataFlux — revisión pendiente | Recuperación de las secciones acumulativas del informe para TB1, conservación de los nuevos diagramas de clases y de la matriz de personas corregida, y revisión de referencias locales. Sprint 2 permanece como borrador hasta incorporar evidencia verificable. |
-| 1.3 | 08/10/2026 | Equipo DataFlux — revisión pendiente | Lean UX y catálogo US01–US35/TS01–TS09 conciliados; glosario inglés; suplementos de EventStorming/C4/UML y flujos; evidencia local PR12 y colaboración del informe con cortes explícitos. No declara cierre completo de TB1. |
+| 1.1 | 07/10/2026 | Cisneros Salas Luis Angel,<br>Viza Quispe Marlon Packard,<br>Manosalva Tovar Miroslav Oscar,<br>Montalvo Vásquez Bruno Rodrigo,<br>Vargas Manchinelli Deiby Juan | **Capítulo V: Product Implementation, Validation & Deployment**<br>&emsp;5.2. Landing Page, Services & Applications Implementation<br>&emsp;&emsp;5.2.2. Sprint 2<br>&emsp;&emsp;&emsp;5.2.2.1. Sprint Planning 2<br>&emsp;&emsp;&emsp;5.2.2.2. Aspect Leaders and Collaborators<br>&emsp;&emsp;&emsp;5.2.2.3. Sprint Backlog 2<br>&emsp;&emsp;&emsp;5.2.2.4. Development Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.2.5. Execution Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.2.6. Services Documentation Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.2.7. Software Deployment Evidence for Sprint Review<br>&emsp;&emsp;&emsp;5.2.2.8. Team Collaboration Insights during Sprint |
 
 <div style="page-break-after: always;"></div>
+
 
 ## Project Report Collaboration Insights
 
@@ -95,50 +80,22 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 
 #### Link del repositorio del Reporte:
 
-- https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report
+- https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-project-report.git
 
-#### Link del repositorio de la Website:
+| Entrega | Semana | Descripción |
+| :--- | :---: | :--- |
+| AV1 – Sprint Review | 4 | **Cisneros Salas Luis Angel:** En este Sprint 1 realicé el Needfinding del proyecto (User Personas, User Task Matrix, Big Picture EventStorming y Ubiquitous Language), la definición de los sistemas de búsqueda y navegación de la Información Architecture, el diseño UX/UI de la Web Application (Wireframes y Wireflow Diagrams), la configuración del entorno de desarrollo, y la documentación completa del Sprint 1 (Sprint Planning, matriz de liderazgo y colaboración, Sprint Backlog, evidencia de desarrollo, ejecución, servicios y despliegue).<br>**Viza Quispe Marlon Packard:** En este Sprint 1 realicé el análisis competitivo del proyecto RentBuild, incluyendo la comparación de competidores, sus fortalezas, debilidades y estrategias de diferenciación. Asimismo, desarrollé el diseño UX/UI de la Landing Page mediante Wireframes y Mock-ups, definiendo su estructura visual y distribución de contenidos. Finalmente, participé en la implementación del código de la Landing Page, trasladando los diseños realizados a una interfaz web funcional y responsive. <br>**Manosalva Tovar Miroslav Oscar:** En este Sprint 1 elaboré el Solution Profile, el Lean UX Process y los Target Segments del proyecto RentBuild, definiendo el problema y los segmentos a los que se dirige la solución. Asimismo, desarrollé las Style Guidelines, la Information Architecture, y los Web Applications User Flow Diagrams y Wireflow Diagrams, estableciendo la base visual y de navegación de la plataforma. Finalmente, participé en la implementación de la Web Application, desarrollando las pantallas de registro de maquinaria, bandeja de solicitudes y alquileres activos.<br>**Montalvo Vásquez Bruno Rodrigo:**<br>**Vargas Manchinelli Deiby Juan:** En este Sprint 1 elaboré el Startup Profile y participé en el Solution Profile, describiendo a la startup y la propuesta de valor de RentBuild. Asimismo, definí las Style Guidelines del proyecto, estableciendo los lineamientos visuales para el diseño de la Landing Page y la Web Application. Finalmente, desarrollé los diagramas de arquitectura de software (contexto, contenedores y componentes) y los diagramas de clases y de base de datos. |
+| TB1 – Stage Review | 7 | |
+| AV2 – Sprint Review | 12 | |
+| TB2 – Release Review | 15 | |
 
-- https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website
+### Entrega AV1:
 
-#### Link del repositorio del WebApp:
+#### Participación por integrante:
 
-- https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp
-- 
-| GitHub author login | AV1: main `014bb734` | Cambios adicionales hacia `67d1ff5` |
-|---|---:|---:|
-| LuisCS03 | 30 | 7 |
-| Miroa123 | 5 | 7 |
-| TartaroZ | 55 | 0 |
-| V8Z5 | 13 | 1 |
-| poluxbinPe | 9 | 3 |
-| **Total** | **112** | **18** |
-
-### Entrega AV1: corte del informe
-
-![Commits del informe al corte AV1 main 014bb734](assets/tb1-collaboration/av1-report-commits.png)
-
-### Entrega TB1: cambios del informe al corte
-
-![Commits adicionales del informe hacia 67d1ff5](assets/tb1-collaboration/tb1-report-commits.png)
-
-Fuente reproducible y alcance: [conteos por autor](delivery/collaboration-counts.json); [contributors de GitHub](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report/graphs/contributors). El corte `67d1ff5` corresponde a la rama de recuperación local y debe vincularse al PR cuando se publique; no se afirma que ya esté en develop ni se amplía el corte con el commit que incorpore estos gráficos, para evitar contar su propia evidencia.
-
-El valor 0 de TartaroZ en ese rango **no incluye** los [PR22 de personas](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report/pull/22) y [PR25 de Task Matrix](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report/pull/25), abiertos al corte. No equivale a ausencia de trabajo ni modifica una nota. Sus aportes se conciliarán con revisión/merge y con la evidencia del estudiante. Para los otros repositorios se utilizarán sus propias tablas/cortes del sprint.
+##### Commits en el Project Report:
 
 <div style="page-break-after: always;"></div>
-
-<p align="center">
-  <img src="./assets/md-images-chapter5/teamcolabo1.png"
-       alt="RentBuild Sprint 2 Collaboration Evidence - GitHub Contributors"
-       width="90%">
-</p>
-
-<p align="center">
-  <img src="./assets/md-images-chapter5/teamcolabo2.png"
-       alt="RentBuild Sprint 2 Collaboration Evidence - Commit Activity"
-       width="90%">
-</p>
 
 # Contenido
 
@@ -179,7 +136,6 @@ El valor 0 de TartaroZ en ese rango **no incluye** los [PR22 de personas](https:
     - [3.1. User Stories](#31-user-stories)
     - [3.2. Impact Mapping](#32-impact-mapping)
     - [3.3. Product Backlog](#33-product-backlog)
-        - [Plan técnico propuesto para AV2](#plan-técnico-propuesto-para-av2)
 - [Capítulo IV: Product Design](#capítulo-iv-product-design)
     - [4.1. Style Guidelines](#41-style-guidelines)
         - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
@@ -235,11 +191,11 @@ El valor 0 de TartaroZ en ese rango **no incluye** los [PR22 de personas](https:
             - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-The-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
 <div style="page-break-after: always;"></div>
-
 
 ## Student Outcome
 
@@ -252,8 +208,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |:---|:---|:---|
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta.** | **Cisneros Salas, Luis Angel**<br>**AV1:** Lideró la documentación y coordinación del Sprint 1, incluyendo el Sprint Planning, la definición de objetivos y la elaboración de la matriz de Leadership-and-Collaboration (LACX), asignando líderes y colaboradores por cada aspecto del sprint entre los integrantes del equipo.<br>Organizó el Sprint Backlog en Trello, desglosando las User Stories del equipo en Work-Items con estimaciones y asignaciones claras para cada miembro.<br>Coordinó y documentó la evidencia de desarrollo, ejecución y despliegue del Sprint 1, consolidando el trabajo individual del equipo en un reporte conjunto.<br>Definió y distribuyó los User Goals, Task Flows y Wireflow Diagrams de la Web Application, estableciendo la base de diseño que el resto del equipo siguió para el desarrollo de las pantallas.<br>**TB1:** Asumió el contexto Rentals de la Web Application y lo incorporó al repositorio compartido mediante la rama `feature/rentals`. Documentó en el informe el Sprint 2 (sección 5.2.2): restauró la sección y la completó con la evidencia de desarrollo (5.2.2.4), con la tabla de commits reales de la Web Application, la evidencia de ejecución (5.2.2.5), con las capturas de las vistas de la empresa constructora y de la empresa de alquiler, y el tablero de Trello del Sprint 2 con su enlace (5.2.2.3). Además, actualizó el diagrama de base de datos de la sección 4.8.1 como parte de las correcciones de la entrega.<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:** Durante el desarrollo del proyecto RentBuild, participé activamente en la elaboración de diferentes componentes relacionados con la experiencia de usuario y la documentación de la solución, entre ellos el Lean UX Process, Target Segments, Style Guidelines, Information Architecture, Web Applications User Flow y Web Applications WireFlow. Estas actividades requirieron coordinación con los demás integrantes del equipo para mantener coherencia entre la propuesta de valor, las necesidades de los usuarios, el diseño de las interfaces y la documentación general del proyecto. El trabajo colaborativo se gestionó mediante una organización en GitHub, utilizando repositorios independientes para la documentación de la solución y para el desarrollo de la Landing Page. Cada integrante trabajó sobre ramas específicas de acuerdo con las tareas asignadas y posteriormente realizó Pull Requests hacia la rama develop. Este procedimiento permitió que los cambios fueran revisados por otros miembros antes de ser integrados, promoviendo una responsabilidad compartida sobre la calidad del proyecto. Asimismo, participé en la revisión, corrección y actualización de diferentes elementos del trabajo, contribuyendo a mantener la continuidad entre las actividades realizadas por los distintos miembros y facilitando la integración de los entregables del equipo.<br>**TB1:** Durante el desarrollo de RentBuild, contribuí al progreso del equipo mediante la mejora de la documentación del proyecto y la organización de sus principales entregables, tomando en cuenta las observaciones realizadas por el profesor. Incorporé indicadores cuantificables al final del Problem Statement para evaluar si RentBuild está generando valor y reformulé las Hypothesis Statements para que cumplieran con los cuatro elementos de la plantilla de Lean UX: el resultado esperado del negocio, los usuarios objetivo, el beneficio que recibirán y la funcionalidad propuesta. Asimismo, dividí el User Flow en tres diagramas independientes: Authentication and Registration User Flow, Rental Company Core Domain User Flow y Construction Company Core Domain User Flow. Esta reorganización permitió presentar de manera más clara los procesos de autenticación y los flujos principales correspondientes a cada segmento de usuarios.<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:** Durante el desarrollo de la primera entrega de RentBuild, participé activamente en el trabajo colaborativo del equipo mediante la realización de actividades relacionadas con la identificación de necesidades de los usuarios y la definición inicial de la solución. Participé en el diseño y realización de entrevistas, así como en el registro y análisis de la información obtenida durante el proceso de Needfinding. A partir de estos resultados, contribuí en la elaboración del Impact Mapping, las User Stories y el Product Backlog, permitiendo organizar las necesidades identificadas y relacionarlas con los objetivos y funcionalidades iniciales de RentBuild. Asimismo, participé en la elaboración de los diagramas de clase y diagramas de datos, y colaboré en el desarrollo del diagramado C4 junto con otros integrantes del equipo. Estas actividades requirieron coordinación con los demás miembros para mantener coherencia entre las necesidades identificadas, los requisitos definidos y la representación de la solución.<br>**TB1:** Durante el Sprint 2, contribuí al trabajo colaborativo mediante la revisión y corrección de los artefactos de definición del producto. Participé en la actualización de las User Stories y del Product Backlog, incorporando Technical Stories para representar los requerimientos técnicos asociados al RESTful API y las integraciones externas. Asimismo, colaboré en la corrección del Impact Mapping, revisando la relación entre los objetivos, los actores, las necesidades identificadas y los resultados esperados. Estas actividades requirieron coordinar los cambios con los demás integrantes para mantener la coherencia entre los requisitos funcionales, las necesidades del negocio y los aspectos técnicos de la solución. De esta manera, contribuí a que el equipo contara con una definición más completa de las funcionalidades y del trabajo técnico necesario para las siguientes iteraciones.<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:** Durante el desarrollo de la primera entrega de RentBuild, participé en la elaboración del diagramado C4 de la solución, coordinando este trabajo con los demás integrantes para representar de manera coherente la arquitectura propuesta y sus principales componentes. Asimismo, participé en la estructura y despliegue de la Landing Page, contribuyendo a integrar el trabajo de desarrollo con los demás artefactos definidos para el proyecto. Estas actividades requirieron coordinación con el equipo para mantener consistencia entre la arquitectura, la estructura de la solución y los avances de implementación.<br>**TB1:** Asumí el contexto Subscriptions de la Web Application e integré el código compartido por el equipo con los servicios y rutas de la base común. Coordiné su incorporación mediante la rama `feature/subscriptions` y el Pull Request #12, revisado e integrado por el coordinador. Participé también en la revisión y adaptación de los diagramas C4 y UML al stack de RentBuild, conservando la estructura de referencia acordada. Gestioné las correcciones del informe mediante Pull Requests separados, preservando los aportes de mis compañeros y la organización del trabajo en develop.<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** Durante el desarrollo del Sprint 1 de RentBuild, participé activamente en la elaboración del análisis competitivo, identificando las fortalezas, debilidades y estrategias de diferenciación frente a otras plataformas. Asimismo, asumí la responsabilidad del diseño UX/UI de la Landing Page mediante la elaboración de Wireframes y Mock-ups, definiendo su estructura visual y organización de contenidos. Posteriormente, participé en la implementación del código de la Landing Page, trasladando los diseños a una interfaz web funcional y responsive. Estas actividades requirieron coordinación con los demás integrantes del equipo para mantener la coherencia entre la propuesta de valor, el diseño y el desarrollo del producto, contribuyendo al cumplimiento de los objetivos establecidos para el Sprint 1.<br>**TB1:** Durante el desarrollo del Sprint 2 de RentBuild, asumí responsabilidades en la organización e integración de la Web Application, contribuyendo a la preparación de la estructura del proyecto en Vue y a la configuración inicial de las ramas main y develop. Participé en la preparación de la base compartida y en la integración de los contextos IAM y Profiles, relacionados con la autenticación, gestión de sesiones y administración de perfiles empresariales. Asimismo, contribuí a integrar los contextos Inventory, Rentals, Maintenance y Subscriptions desarrollados por los demás integrantes, realizando correcciones en las rutas, servicios y componentes compartidos para mantener la compatibilidad entre los módulos. También participé en la implementación de mejoras de accesibilidad, internacionalización en inglés y español y componentes de interfaz mediante PrimeVue. Finalmente, contribuí a la integración y validación de la versión completa de la aplicación, realizando ajustes para su despliegue en Vercel y conectando los botones de ingreso y registro de la Landing Page con la Web Application. Estas actividades permitieron reunir los aportes individuales en una solución integrada, fortaleciendo el trabajo colaborativo y el liderazgo compartido durante el Sprint 2. | **AV1:** Como equipo, concluimos que el liderazgo compartido permitió distribuir las responsabilidades de acuerdo con las actividades asignadas a cada integrante y avanzar de manera paralela en los diferentes artefactos de la primera entrega. La participación en actividades de investigación, definición de requisitos, diseño, arquitectura y desarrollo permitió integrar los distintos aportes en una primera versión de RentBuild. La coordinación entre los integrantes permitió relacionar los resultados del Needfinding con las User Stories, el Product Backlog, los diagramas de arquitectura y los primeros avances de la Landing Page, estableciendo una base para continuar el desarrollo en las siguientes entregas.<br><br>**TB1:** Durante la TB1, el equipo fortaleció el liderazgo compartido mediante la distribución de responsabilidades para el desarrollo e integración de los distintos contextos de la Web Application y la actualización de los artefactos del proyecto. La participación de los integrantes en actividades de programación, corrección de diagramas, actualización del Product Backlog y documentación del Sprint 2 permitió combinar aportes técnicos y de análisis para avanzar hacia un objetivo común. Asimismo, el uso de ramas, commits y Pull Requests facilitó la revisión e integración de los cambios, promoviendo la responsabilidad compartida sobre el resultado final. En conjunto, estas actividades evidencian que el equipo pudo coordinar sus fortalezas y responsabilidades para contribuir al desarrollo de la solución durante esta iteración. |
-| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Cisneros Salas, Luis Angel**<br>**AV1:** Estableció las metas del Sprint 1 al definir el Sprint Goal y coordinar con el equipo el alcance de las User Stories a cubrir, articulando la meta común del equipo antes de iniciar el desarrollo.<br>Planificó las tareas del sprint mediante el desglose del Sprint Backlog en Trello, distribuyendo el trabajo entre los integrantes según sus fortalezas y disponibilidad.<br>Fomentó un entorno colaborativo al coordinar la comunicación del equipo mediante WhatsApp y Trello, facilitando que cada integrante conociera el avance y los pendientes del resto.<br>Dio seguimiento al cumplimiento de los objetivos planteados, verificando que las tareas asignadas se completaran dentro del tiempo estimado del sprint.<br>**TB1:** Estableció las metas del Sprint 2 al redactar su objetivo y su planificación, y organizó el Sprint Backlog 2 en un tablero de Trello con las tarjetas del sprint (35 tarjetas completadas en la columna Done). Mantuvo el flujo de trabajo del equipo con GitFlow y Conventional Commits en inglés, y subió sus cambios del informe mediante Pull Requests hacia develop para que fueran revisados e integrados por el coordinador. Al integrar su sección del Sprint 2 con los cambios que el resto del equipo había incorporado en develop, resolvió los conflictos conservando los aportes de los demás integrantes, de modo que el informe acumulativo no perdiera contenido.<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:** Durante el proyecto mantuve una participación activa y colaborativa, considerando las observaciones y aportes realizados por los demás integrantes antes de incorporar cambios a los entregables. La división del trabajo mediante ramas de Git permitió establecer responsabilidades específicas y desarrollar las tareas de forma organizada, mientras que el uso de Pull Requests proporcionó un espacio para revisar los cambios, realizar observaciones y proponer mejoras antes de integrarlos a la versión principal del proyecto. Ante observaciones o inconsistencias identificadas durante las revisiones, se analizaron los comentarios del equipo y se realizaron los ajustes necesarios buscando mantener la coherencia entre las distintas secciones del proyecto. Este flujo de trabajo permitió que los integrantes pudieran participar tanto en la elaboración como en la validación de los entregables. De esta manera, se promovió la cooperación y la integración del grupo mediante una metodología de trabajo en la que las contribuciones individuales eran revisadas y complementadas por otros miembros, permitiendo avanzar de forma coordinada hacia los objetivos establecidos para RentBuild.<br>**TB1:** Durante esta entrega de RentBuild, demostré una actitud proactiva al incorporar las observaciones del profesor y realizar mejoras concretas en la documentación del proyecto. Añadí indicadores cuantificables al Problem Statement para facilitar la evaluación del valor generado por la solución y reformulé las Hypothesis Statements para garantizar que respetaran la estructura completa de Lean UX. Asimismo, atendí la recomendación de dividir el User Flow debido a su extensión, organizándolo en tres diagramas que representan los procesos de autenticación y registro, las actividades principales de las empresas de alquiler y las actividades principales de las empresas constructoras. También apoyé en la elaboración del tablero de Trello para visualizar el Product Backlog, contribuyendo a que los requerimientos y las tareas pendientes estuvieran organizados y fueran más fáciles de consultar por el equipo. Por otra parte, durante la implementación del módulo de Mantenimiento de la aplicación web, utilicé GitFlow para organizar las ramas de desarrollo y Conventional Commits para mantener un formato consistente en los mensajes de los commits. Esto permitió estructurar mi trabajo de programación y facilitar la identificación de los cambios realizados.<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:** Participé en la planificación y desarrollo de las actividades asignadas para la primera entrega, coordinando con los integrantes del equipo la realización de entrevistas, el proceso de Needfinding y la definición de los requisitos iniciales de RentBuild. Los resultados obtenidos fueron utilizados como base para elaborar el Impact Mapping, las User Stories y el Product Backlog, contribuyendo a establecer y organizar las funcionalidades que formarían parte de la solución. Asimismo, participé en la elaboración de los diagramas de clase, diagramas de datos y diagramado C4, coordinando estos artefactos con el resto de la documentación del proyecto. El trabajo fue desarrollado de manera colaborativa, considerando los aportes y avances de los demás integrantes para mantener la coherencia entre las diferentes partes de la solución y cumplir con los objetivos establecidos para la AV1.<br>**TB1:** Durante el Sprint 2, contribuí a cumplir los objetivos de la entrega mediante la revisión y actualización de los requisitos y artefactos de planificación de RentBuild. Coordiné la incorporación de las Technical Stories necesarias para representar el soporte técnico del RESTful API y las integraciones externas, procurando que las funcionalidades previstas mantuvieran una relación clara con los requerimientos técnicos. También colaboré en la corrección del Impact Mapping para mejorar la correspondencia entre los objetivos del producto, los actores, las necesidades identificadas y los resultados esperados. Estas actividades contribuyeron a que el equipo dispusiera de una planificación más completa y coherente para orientar el desarrollo de la Web Application y las siguientes iteraciones.<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:** Participé en el cumplimiento de los objetivos de la primera entrega mediante el desarrollo de las actividades relacionadas con el diagramado C4 y la estructura y despliegue de la Landing Page. Coordiné con los integrantes responsables de otros artefactos para mantener coherencia entre la arquitectura planteada y la implementación realizada. Asimismo, participé en la revisión e integración de los avances de la Landing Page, contribuyendo a que las tareas asignadas se desarrollaran de acuerdo con los objetivos establecidos para la AV1.<br>**TB1:** Contribuí al objetivo del Sprint 2 al integrar y corregir la comparación y selección de planes, el cambio de plan y la contratación de una suscripción vencida con la Fake API. Validé el contexto mediante 34 pruebas de Subscriptions, la compilación de producción y comprobaciones locales de navegación, idiomas y acceso por segmento. Publiqué los cambios en feature/subscriptions mediante commits y el Pull Request #12. Además, contribuí a adecuar los diagramas al stack del proyecto, entregar una imagen PNG por diagrama y restaurar las ocho secciones aprobadas de Sprint 2 mediante los Pull Requests #48, #51 y #52. Estas actividades permitieron integrar mi contexto y mantener la coherencia de los entregables de TB1.<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** Durante el Sprint 1 de RentBuild, contribuí al cumplimiento de los objetivos del equipo mediante la planificación y ejecución de mis responsabilidades en el análisis competitivo, diseño UX/UI e implementación de la Landing Page. Mantuve una comunicación constante con mis compañeros para coordinar los avances, recibir observaciones y realizar los ajustes necesarios en los entregables. Asimismo, participé en la integración del diseño y desarrollo de la plataforma, procurando mantener la coherencia visual y funcional del producto. Esta colaboración permitió cumplir con las tareas asignadas dentro de los plazos establecidos y contribuir al logro de las metas del Sprint 1.<br>**TB1:** Durante el Sprint 2 de RentBuild, contribuí al cumplimiento de los objetivos del equipo mediante la organización, integración y validación de las funcionalidades de la Web Application. Utilicé GitHub para gestionar ramas de trabajo, commits, Pull Requests y procesos de integración, facilitando la incorporación de los diferentes módulos desarrollados por el equipo. Participé en la preparación de la base compartida de Vue y en la integración de los contextos IAM y Profiles, verificando funcionalidades relacionadas con el registro, inicio y cierre de sesión, visualización y actualización de perfiles empresariales. Asimismo, realicé ajustes en las rutas de navegación, servicios y componentes compartidos para integrar los módulos de inventario, alquileres, mantenimiento y suscripciones. También contribuí a implementar la internacionalización, mejoras de accesibilidad y componentes visuales mediante PrimeVue, buscando mantener una experiencia de usuario coherente. Como parte de la validación de la versión integrada, se registró la ejecución satisfactoria de 96 pruebas unitarias, dos escenarios de navegador y la compilación de producción. Finalmente, contribuí a la preparación del despliegue en Vercel mediante la configuración de rutas SPA y la conexión de los botones de ingreso y registro de la Landing Page con la Web Application. Estas actividades permitieron resolver problemas de integración, mantener la continuidad del desarrollo y contribuir al cumplimiento de los objetivos establecidos para la TB1. | **AV1:** La definición del Sprint Goal, la organización de las tareas y la distribución de responsabilidades permitieron establecer una forma de trabajo coordinada durante esta primera entrega. El uso de herramientas de colaboración y control de versiones permitió organizar los aportes individuales e integrar progresivamente los diferentes artefactos del proyecto. Como resultado, el equipo logró avanzar en la identificación de necesidades, definición de requisitos, arquitectura, diseño y desarrollo de la Landing Page. Estos resultados corresponden al avance alcanzado durante la AV1 y servirán como base para continuar con la implementación y validación de RentBuild en las siguientes etapas del proyecto.<br><br>**TB1:** Durante la TB1, el equipo fortaleció su capacidad para crear un entorno colaborativo, establecer objetivos y organizar las tareas necesarias para avanzar con la Web Application. La planificación del Sprint 2 y la distribución de responsabilidades por contextos y aspectos de desarrollo permitieron que los integrantes trabajaran en paralelo y coordinaran posteriormente la integración de sus aportes. El uso de GitHub, las ramas de trabajo y los Pull Requests facilitó la revisión de cambios, la resolución de conflictos y la preservación de las contribuciones individuales. Además, las actividades de pruebas, validación, documentación y despliegue contribuyeron a comprobar el avance alcanzado y a mantener la coherencia de los entregables. En conjunto, estas prácticas permitieron al equipo avanzar hacia los objetivos establecidos para la TB1 mediante una organización colaborativa y una responsabilidad compartida sobre el producto. |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta.** | **Cisneros Salas, Luis Angel**<br>**AV1:** Lideró la documentación y coordinación del Sprint 1, incluyendo el Sprint Planning, la definición de objetivos y la elaboración de la matriz de Leadership-and-Collaboration (LACX), asignando líderes y colaboradores por cada aspecto del sprint entre los integrantes del equipo.<br>Organizó el Sprint Backlog en Trello, desglosando las User Stories del equipo en Work-Items con estimaciones y asignaciones claras para cada miembro.<br>Coordinó y documentó la evidencia de desarrollo, ejecución y despliegue del Sprint 1, consolidando el trabajo individual del equipo en un reporte conjunto.<br>Definió y distribuyó los User Goals, Task Flows y Wireflow Diagrams de la Web Application, estableciendo la base de diseño que el resto del equipo siguió para el desarrollo de las pantallas.<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:** Durante el desarrollo del proyecto RentBuild, participé activamente en la elaboración de diferentes componentes relacionados con la experiencia de usuario y la documentación de la solución, entre ellos el Lean UX Process, Target Segments, Style Guidelines, Information Architecture, Web Applications User Flow y Web Applications WireFlow. Estas actividades requirieron coordinación con los demás integrantes del equipo para mantener coherencia entre la propuesta de valor, las necesidades de los usuarios, el diseño de las interfaces y la documentación general del proyecto. El trabajo colaborativo se gestionó mediante una organización en GitHub, utilizando repositorios independientes para la documentación de la solución y para el desarrollo de la Landing Page. Cada integrante trabajó sobre ramas específicas de acuerdo con las tareas asignadas y posteriormente realizó Pull Requests hacia la rama develop. Este procedimiento permitió que los cambios fueran revisados por otros miembros antes de ser integrados, promoviendo una responsabilidad compartida sobre la calidad del proyecto. Asimismo, participé en la revisión, corrección y actualización de diferentes elementos del trabajo, contribuyendo a mantener la continuidad entre las actividades realizadas por los distintos miembros y facilitando la integración de los entregables del equipo.<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:** Durante el desarrollo de la primera entrega de RentBuild, participé activamente en el trabajo colaborativo del equipo mediante la realización de actividades relacionadas con la identificación de necesidades de los usuarios y la definición inicial de la solución. Participé en el diseño y realización de entrevistas, así como en el registro y análisis de la información obtenida durante el proceso de Needfinding. A partir de estos resultados, contribuí en la elaboración del Impact Mapping, las User Stories y el Product Backlog, permitiendo organizar las necesidades identificadas y relacionarlas con los objetivos y funcionalidades iniciales de RentBuild. Asimismo, participé en la elaboración de los diagramas de clase y diagramas de datos, y colaboré en el desarrollo del diagramado C4 junto con otros integrantes del equipo. Estas actividades requirieron coordinación con los demás miembros para mantener coherencia entre las necesidades identificadas, los requisitos definidos y la representación de la solución.<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:** Durante el desarrollo de la primera entrega de RentBuild, participé en la elaboración del diagramado C4 de la solución, coordinando este trabajo con los demás integrantes para representar de manera coherente la arquitectura propuesta y sus principales componentes. Asimismo, participé en la estructura y despliegue de la Landing Page, contribuyendo a integrar el trabajo de desarrollo con los demás artefactos definidos para el proyecto. Estas actividades requirieron coordinación con el equipo para mantener consistencia entre la arquitectura, la estructura de la solución y los avances de implementación.<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** Durante el desarrollo del Sprint 1 de RentBuild, participé activamente en la elaboración del análisis competitivo, identificando las fortalezas, debilidades y estrategias de diferenciación frente a otras plataformas. Asimismo, asumí la responsabilidad del diseño UX/UI de la Landing Page mediante la elaboración de Wireframes y Mock-ups, definiendo su estructura visual y organización de contenidos. Posteriormente, participé en la implementación del código de la Landing Page, trasladando los diseños a una interfaz web funcional y responsive. Estas actividades requirieron coordinación con los demás integrantes del equipo para mantener la coherencia entre la propuesta de valor, el diseño y el desarrollo del producto, contribuyendo al cumplimiento de los objetivos establecidos para el Sprint 1. | **AV1:** Como equipo, concluimos que el liderazgo compartido permitió distribuir las responsabilidades de acuerdo con las actividades asignadas a cada integrante y avanzar de manera paralela en los diferentes artefactos de la primera entrega. La participación en actividades de investigación, definición de requisitos, diseño, arquitectura y desarrollo permitió integrar los distintos aportes en una primera versión de RentBuild. La coordinación entre los integrantes permitió relacionar los resultados del Needfinding con las User Stories, el Product Backlog, los diagramas de arquitectura y los primeros avances de la Landing Page, estableciendo una base para continuar el desarrollo en las siguientes entregas. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Cisneros Salas, Luis Angel**<br>**AV1:** Estableció las metas del Sprint 1 al definir el Sprint Goal y coordinar con el equipo el alcance de las User Stories a cubrir, articulando la meta común del equipo antes de iniciar el desarrollo.<br>Planificó las tareas del sprint mediante el desglose del Sprint Backlog en Trello, distribuyendo el trabajo entre los integrantes según sus fortalezas y disponibilidad.<br>Fomentó un entorno colaborativo al coordinar la comunicación del equipo mediante WhatsApp y Trello, facilitando que cada integrante conociera el avance y los pendientes del resto.<br>Dio seguimiento al cumplimiento de los objetivos planteados, verificando que las tareas asignadas se completaran dentro del tiempo estimado del sprint.<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1:** Durante el proyecto mantuve una participación activa y colaborativa, considerando las observaciones y aportes realizados por los demás integrantes antes de incorporar cambios a los entregables. La división del trabajo mediante ramas de Git permitió establecer responsabilidades específicas y desarrollar las tareas de forma organizada, mientras que el uso de Pull Requests proporcionó un espacio para revisar los cambios, realizar observaciones y proponer mejoras antes de integrarlos a la versión principal del proyecto. Ante observaciones o inconsistencias identificadas durante las revisiones, se analizaron los comentarios del equipo y se realizaron los ajustes necesarios buscando mantener la coherencia entre las distintas secciones del proyecto. Este flujo de trabajo permitió que los integrantes pudieran participar tanto en la elaboración como en la validación de los entregables. De esta manera, se promovió la cooperación y la integración del grupo mediante una metodología de trabajo en la que las contribuciones individuales eran revisadas y complementadas por otros miembros, permitiendo avanzar de forma coordinada hacia los objetivos establecidos para RentBuild.<br><br>**Montalvo Vásquez, Bruno Rodrigo**<br>**AV1:** Participé en la planificación y desarrollo de las actividades asignadas para la primera entrega, coordinando con los integrantes del equipo la realización de entrevistas, el proceso de Needfinding y la definición de los requisitos iniciales de RentBuild. Los resultados obtenidos fueron utilizados como base para elaborar el Impact Mapping, las User Stories y el Product Backlog, contribuyendo a establecer y organizar las funcionalidades que formarían parte de la solución. Asimismo, participé en la elaboración de los diagramas de clase, diagramas de datos y diagramado C4, coordinando estos artefactos con el resto de la documentación del proyecto. El trabajo fue desarrollado de manera colaborativa, considerando los aportes y avances de los demás integrantes para mantener la coherencia entre las diferentes partes de la solución y cumplir con los objetivos establecidos para la AV1.<br><br>**Vargas Manchinelli, Deiby Juan**<br>**AV1:** Participé en el cumplimiento de los objetivos de la primera entrega mediante el desarrollo de las actividades relacionadas con el diagramado C4 y la estructura y despliegue de la Landing Page. Coordiné con los integrantes responsables de otros artefactos para mantener coherencia entre la arquitectura planteada y la implementación realizada. Asimismo, participé en la revisión e integración de los avances de la Landing Page, contribuyendo a que las tareas asignadas se desarrollaran de acuerdo con los objetivos establecidos para la AV1.<br><br>**Viza Quispe, Marlon Packard**<br>**AV1:** Durante el Sprint 1 de RentBuild, contribuí al cumplimiento de los objetivos del equipo mediante la planificación y ejecución de mis responsabilidades en el análisis competitivo, diseño UX/UI e implementación de la Landing Page. Mantuve una comunicación constante con mis compañeros para coordinar los avances, recibir observaciones y realizar los ajustes necesarios en los entregables. Asimismo, participé en la integración del diseño y desarrollo de la plataforma, procurando mantener la coherencia visual y funcional del producto. Esta colaboración permitió cumplir con las tareas asignadas dentro de los plazos establecidos y contribuir al logro de las metas del Sprint 1. | **AV1:** La definición del Sprint Goal, la organización de las tareas y la distribución de responsabilidades permitieron establecer una forma de trabajo coordinada durante esta primera entrega. El uso de herramientas de colaboración y control de versiones permitió organizar los aportes individuales e integrar progresivamente los diferentes artefactos del proyecto. Como resultado, el equipo logró avanzar en la identificación de necesidades, definición de requisitos, arquitectura, diseño y desarrollo de la Landing Page. Estos resultados corresponden al avance alcanzado durante la AV1 y servirán como base para continuar con la implementación y validación de RentBuild en las siguientes etapas del proyecto. |
 
 <div style="page-break-after: always;"></div>
 
@@ -262,8 +218,6 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 ## 1.1. Startup Profile
 
 ### 1.1.1. Descripción de la Startup
-
-**Identidad del proyecto.** DataFlux es la startup y RentBuild es el producto. RentBuild corresponde a la denominación previa que aún aparece en algunos exports recuperados; esos exports se identifican como históricos y no representan otra startup ni una validación nueva.
 
 DataFlux es una startup orientada al desarrollo de soluciones digitales accesibles que permitan organizar y optimizar los procesos de pequeñas y medianas empresas. Su propuesta se enfoca en resolver problemas operativos mediante herramientas especializadas, sencillas de utilizar y adaptadas a las necesidades de sus usuarios.
 
@@ -291,23 +245,25 @@ Nuestros valores principales son los siguientes:
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-|   Código   | Nombre completo del integrante  | Descripción de la carrera                                          |                               Fotografía                                | Conocimientos y habilidades                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|   Código   | Nombre completo del integrante  | Descripción de la carrera                                          |                                  Fotografía                                  | Conocimientos y habilidades                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |:----------:|:--------------------------------| :----------------------------------------------------------------- |:----------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | U20211B198 | Cisneros Salas, Luis            | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |     <img src="assets/md-images-members/luis-angel.jpg" width="150px" />     | Soy estudiante de Ingeniería de Software interesado en crear soluciones digitales que simplifiquen procesos y resuelvan problemas reales. Actualmente fortalezco mis conocimientos en C#, y cuento con experiencia en C++, Java, JavaScript, HTML y CSS. Me interesa especialmente el desarrollo frontend, las bases de datos y las aplicaciones web. Soy una persona organizada, responsable, de rápido aprendizaje y con facilidad para trabajar en equipo. Busco esta oportunidad para adquirir experiencia y seguir creciendo profesionalmente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | U202410211 | Manosalva Tovar, Miroslav       | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/miroslav-manosalva.jpeg" width="150px" /> | Soy Miroslav Manosalva Tovar, estudiante de Ingeniería de Software. Tengo conocimientos en el área de programación y experiencia en la elaboración de interfaces de usuario (UI), que puedo aportar al desarrollo de RentBuild. Mi experiencia trabajando con interfaces me permite contribuir a la presentación de la información y a la organización visual de las funcionalidades de la plataforma. Me considero una persona responsable y persistente: procuro cumplir con las actividades que asumo y mantener el esfuerzo cuando encuentro dificultades. En este proyecto, busco aplicar mis conocimientos de programación y diseño de interfaces, seguir fortaleciendo mi formación y contribuir al desarrollo de una solución útil para sus usuarios.                                                                                                                                                                                                                                                                 |
 | U202111529 | Montalvo Vasquez, Bruno Rodrigo | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |   <img src="assets/md-images-members/bruno-montalvo.png" width="150px" />    | Soy Bruno Rodrigo Montalvo Vasquez, estudiante de la carrera de Ingeniería de Software. Me encuentro interesado y motivado por aprender nuevos temas relacionados con mi carrera. Asimismo, estoy abierto a trabajar con profesionales de mi área académica para mejorar mis conocimientos, adquirir experiencia y fortalecer mis habilidades de trabajo en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | U20211F962 | Vargas Manchinelli, Deiby Juan  | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |    <img src="assets/md-images-members/deiby-vargas.jpeg" width="150px" />    | Estudio Ingeniería de Software y me apasiona usar la tecnología para convertir problemas en soluciones prácticas. Actualmente estoy aprendiendo y fortaleciendo mis conocimientos en C#, además de tener experiencia con C++, Java, JavaScript, HTML y CSS. Me interesa el frontend, las bases de datos y el desarrollo web. Soy organizado, aprendo rápido y disfruto trabajar en equipo. Mi objetivo es ganar experiencia, aprender y seguir creciendo en el mundo del software.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| U202322849 | Viza Quispe, Marlon Packard     | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |    <img src="assets/md-images-members/marlon-viza.jpg" width="150px" />     | Soy estudiante de Ingeniería de Software con interés en el desarrollo web, frontend y bases de datos. Tengo experiencia con C++, Java, JavaScript, HTML y CSS, y actualmente estoy fortaleciendo mis conocimientos en C#. Me motiva crear soluciones útiles y eficientes, aprender constantemente y enfrentar nuevos desafíos. Me considero una persona organizada, creativa y con buena capacidad para trabajar en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| U202322849 | Viza Quispe, Marlon Packard     | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas |     <img src="assets/md-images-members/marlon-viza.jpg" width="150px" />     | Soy estudiante de Ingeniería de Software con interés en el desarrollo web, frontend y bases de datos. Tengo experiencia con C++, Java, JavaScript, HTML y CSS, y actualmente estoy fortaleciendo mis conocimientos en C#. Me motiva crear soluciones útiles y eficientes, aprender constantemente y enfrentar nuevos desafíos. Me considero una persona organizada, creativa y con buena capacidad para trabajar en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
 
-**What (¿Qué?)**
-- ¿Cuál es el problema? 
-Las pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción tienen dificultades para gestionar de manera centralizada sus equipos, disponibilidad, reservas, contratos, pagos, entregas, devoluciones y mantenimiento. 
+**Who (¿Quiénes?)**
 
-El problema que se investiga es la fragmentación de la información y la coordinación durante el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción. También afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
+
+**What (¿Qué?)**
+
+El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
 
 Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
@@ -325,64 +281,27 @@ También puede presentarse internamente cuando la empresa de alquiler necesita v
 
 **Why (¿Por qué?)**
 
-El objetivo es simplificar y centralizar la gestión del alquiler de maquinaria, permitiendo que las empresas tengan mayor control sobre sus equipos y operaciones.
-RentBuild busca reducir errores relacionados con la disponibilidad y las reservas, facilitar el seguimiento del estado de cada equipo y mejorar la gestión de los procesos de alquiler, devolución y mantenimiento.
-Para las empresas constructoras, el objetivo es facilitar la búsqueda y gestión de maquinaria disponible para sus proyectos.
+La problemática ocurre porque muchas de las herramientas utilizadas actualmente no se encuentran integradas y requieren que la información sea registrada, actualizada o comprobada manualmente.
 
-**When (¿Cuándo?)**
+Además, algunas soluciones existentes están orientadas a empresas con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas que necesitan gestionar sus procesos de alquiler de forma más sencilla.
 
-- ¿Cuándo sucede el problema?
-El problema surge principalmente cuando una empresa debe realizar tareas como registrar o consultar la disponibilidad de un equipo, gestionar varias reservas simultáneamente, coordinar entregas y devoluciones, entre otros. La dificultad aumenta a medida que crece la cantidad de equipos, clientes y alquileres.
-
-- ¿Cuándo utiliza el cliente el producto?
-Las empresas de alquiler utilizarían RentBuild durante todo el ciclo del alquiler, desde el registro y disponibilidad del equipo hasta su reserva, entrega, devolución, inspección y mantenimiento. Las empresas constructoras utilizarían la plataforma principalmente cuando necesitan buscar, solicitar, reservar y realizar seguimiento de maquinaria para un proyecto.
-
-**Where (¿Dónde?)**
-- ¿Dónde está el cliente cuando utiliza el producto?
-El cliente puede utilizar RentBuild desde: La oficina de la empresa de alquiler, el almacén o patio donde se encuentran los equipos, una obra o proyecto de construcción y desde un dispositivo móvil durante una entrega o devolución.
-
-- ¿A dónde se dirige?
-Las empresas de alquiler gestionan equipos que pueden desplazarse entre su almacén, las instalaciones del cliente y diferentes proyectos de construcción. Las empresas constructoras utilizan los equipos principalmente en sus obras y proyectos de construcción.
-
-- ¿Dónde surge el problema?
-El problema puede surgir tanto en la oficina administrativa como durante las operaciones en campo. Por ejemplo, puede producirse un conflicto cuando un equipo aparece como disponible en un registro, pero realmente está alquilado, se encuentra en mantenimiento o está asignado a otra obra.
-
-**Who (¿Quienes?)**
-- ¿Quiénes están involucrados?
-Las empresas de alquiler de maquinaria (propietarios, administradores, operadores de alquiler) y las pequeñas empresas constructoras. 
-
-- ¿A quiénes les sucede el problema?
-Principalmente a los propietarios, administradores y operadores de pequeñas y medianas empresas de alquiler de maquinaria, especialmente cuando manejan varios equipos y alquileres simultáneamente. También afecta a las empresas constructoras cuando necesitan conseguir maquinaria disponible dentro de un periodo determinado.
-
-- ¿Quién utiliza el producto?
-Los principales usuarios de RentBuild serían por una parte usuarios internos como administradores, operadores, personal de logística y personal de mantenimiento. Mientras que por otra parte, usuarios externos como las empresas constructoras, encargados de proyectos y personal responsable de alquilar maquinaria. 
-
-- ¿Cuál es la causa del problema?
-Uso de herramientas no integradas, registros manuales o duplicados, información distribuida entre diferentes personas y canales, falta de actualización de la disponibilidad de los equipos, dificultad para realizar seguimiento del ciclo de vida de la maquinaria y 
-falta de una solución especializada y adaptada a pequeñas empresas del sector.
+Por otro lado, las pequeñas empresas constructoras y contratistas suelen depender de llamadas o aplicaciones de mensajería para conocer la disponibilidad y condiciones de los equipos, lo que dificulta contar con información centralizada durante la planificación de sus proyectos.
 
 **How (¿Cómo?)**
-- ¿En qué condiciones nuestros clientes usan el producto?
-RentBuild será utilizado principalmente en contextos donde los usuarios necesitan consultar o actualizar información rápidamente: Registrar un nuevo equipo, consultar disponibilidad, crear una reserva, registrar una alquiler, gestionar una entrega, entre otros. 
 
-- ¿Cómo nos conocieron nuestros compradores?
-Los clientes podrán conocer RentBuild mediante redes sociales, publicidad digital dirigida al sector construcción, recomendaciones entre empresas o contacto directo con empresas de alquiler.
+Las empresas de alquiler revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus equipos y alquileres.
 
-- ¿Cómo prefieren nuestros consumidores acceder a nuestro producto?
-Al tratarse de un producto SaaS, los usuarios podrán acceder mediante una plataforma web, utilizando sus credenciales desde cualquier dispositivo con conexión a Internet. 
+De forma paralela, las empresas constructoras y contratistas deben comunicarse directamente con los proveedores para consultar qué maquinaria se encuentra disponible, conocer sus condiciones y realizar seguimiento a sus solicitudes.
 
-- ¿Qué llevó a la persona a esa situación?
-El crecimiento de la cantidad de equipos, clientes y alquileres hace que la gestión manual o mediante herramientas independientes sea cada vez más difícil. Cuando aumenta el volumen de operaciones, mantener actualizada la información sobre disponibilidad, reservas, entregas, devoluciones y mantenimiento se vuelve más complejo y aumenta el riesgo de errores.
+Esta forma de trabajo puede producir información desactualizada, registros duplicados, conflictos de disponibilidad, dificultades de coordinación y pérdida de trazabilidad durante el proceso de alquiler.
 
-**How much (¿Cuánto?)**
-
-Según Clements (2025), el 67 % de las empresas de alquiler de equipos encuestadas opera con sistemas parcialmente integrados que requieren transferencia manual de información, lo que evidencia la existencia de dificultades para centralizar y conectar los procesos de gestión dentro de este sector.
+**How Much (¿Cuánto impacta?)**
 
 El impacto se refleja en el tiempo empleado para comprobar y actualizar información, los posibles conflictos de disponibilidad, los retrasos en las entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler.
 
 Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
 
-Estas situaciones pueden afectar la eficiencia operativa y la coordinación entre proveedor y cliente. Las entrevistas documentadas recogen dificultades percibidas, pero no establecen una línea base de tiempo, costos o frecuencia de conflictos para el mercado. La cuantificación requiere registrar operaciones y contrastarlas durante un piloto; los umbrales de la sección 1.2.2.1 son metas hipotéticas y no resultados observados.
+Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
 
 #### Objetivos
 
@@ -424,127 +343,109 @@ Estas situaciones pueden afectar la eficiencia operativa y la coordinación entr
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-Se formula un único Problem Statement para una **Brand new initiative**, incluyendo los dos segmentos. Su vínculo con 5W2H es: Who identifica a empresas de alquiler y constructoras; What/How describen información dispersa y coordinación manual; Where/When sitúan el problema en el ciclo de alquiler; Why plantea la necesidad de una alternativa integrada y adecuada a empresas pequeñas; How Much reconoce que aún no existe una línea base cuantitativa de impacto. Las metas siguientes son hipótesis de validación, no resultados de las entrevistas ni logros de TB1.
+Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
 
-**Estado actual.** El dominio del alquiler de maquinaria de construcción comprende a pequeñas y medianas empresas proveedoras y pequeñas empresas constructoras o contratistas. En la operación descrita en 5W2H, inventario, disponibilidad, solicitudes, contratos, entregas, devoluciones e incidencias se coordinan mediante documentos, hojas de cálculo, llamadas y mensajería. Esta dispersión puede producir información desactualizada, conflictos de disponibilidad y dificultades para seguir un alquiler.
+Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
 
-**Gap u oportunidad.** Partimos del supuesto de que estos segmentos necesitan gestionar y consultar el ciclo de alquiler de forma integrada, con menor complejidad que una solución generalista. El análisis competitivo y las entrevistas orientan esta propuesta; no demuestran todavía una participación de mercado, disposición de pago generalizada ni una reducción cuantificada de errores.
+Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para DataFlux la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
 
-**Estrategia.** RentBuild buscará cubrir esta necesidad mediante una plataforma SaaS que centralice inventario y disponibilidad y conecte la búsqueda, solicitud, decisión del proveedor y seguimiento del alquiler. La evolución prevista incluye contratos, tarifas, planes, entregas, devoluciones, incidencias y mantenimiento. Se conservarán las restricciones del proyecto: landing HTML/CSS/JavaScript; frontend Vue/PrimeVue y Material Design; API propia ASP.NET Core/EF Core/C#; interfaz responsive y un servicio externo pertinente. La existencia de estos requisitos no acredita su implementación.
+RentBuild abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
 
-**Foco inicial.** Armando Casas representa a los responsables de empresas de alquiler que necesitan conocer y controlar sus equipos; Andrea Torres representa a quienes buscan maquinaria para una empresa constructora. El primer foco funcional es inventario, disponibilidad por periodo, solicitudes y seguimiento. Para TB1 se plantea la experiencia frontend y la nueva landing; los contratos técnicos de la API se planifican para AV2.
+El desarrollo de RentBuild estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio. Para el desarrollo del Frontend se utilizará Vue Framework, junto con HTML5, CSS3 y JavaScript, siguiendo los principios de Material Design y utilizando PrimeVue como biblioteca de componentes de interfaz. Para el desarrollo de los Web Services se empleará ASP.NET Core, bajo el estilo arquitectónico RESTful API, utilizando Entity Framework Core para el acceso y gestión de datos y C# como lenguaje de programación. La interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
 
-**Éxito observable propuesto.** Sabremos que la propuesta genera valor si, durante los **primeros seis meses desde el inicio de un piloto**, al menos **20 empresas de alquiler** usan RentBuild recurrentemente y al menos **10 empresas constructoras** completan una búsqueda, consulta de disponibilidad y solicitud. Se propone además registrar al menos **50 equipos** con datos de estado/disponibilidad, gestionar al menos **30 reservas o alquileres** y registrar **menos de 5 conflictos de disponibilidad o reservas duplicadas** en esa misma ventana. Las metas de 20/10 empresas concilian los objetivos del Impact Map; las metas operativas provienen del Problem Statement previo. Son umbrales propuestos para contrastar la hipótesis, no una predicción ni una cifra de adopción actual.
+Sabremos que RentBuild está generando valor cuando, durante una etapa inicial de validación, al menos 10 pequeñas y medianas empresas de alquiler utilicen recurrentemente la plataforma para gestionar sus operaciones, se registren al menos 50 equipos con información actualizada sobre su estado y disponibilidad, se gestionen al menos 30 reservas o alquileres mediante la plataforma y al menos 5 pequeñas empresas constructoras o contratistas realicen solicitudes de alquiler utilizando RentBuild.
 
-Para la medición, una empresa de alquiler cuenta como recurrente si registra un equipo y realiza una acción de disponibilidad, solicitud o alquiler en **dos semanas distintas**; una constructora cuenta una sola vez cuando completa el recorrido indicado. Se contabilizan empresas y operaciones únicas, excluyendo cuentas internas, datos semilla y repeticiones de demostración. La fuente prevista son registros de actividad y operaciones identificables, más una revisión de conflictos; estos instrumentos y una fecha de inicio del piloto están pendientes. No se afirma que exista hoy un piloto ni una línea base de reducción de tiempo/costos.
+Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reservas duplicadas durante el período de evaluación. Estos resultados serán analizados mediante las métricas de uso de la plataforma, los registros de las operaciones realizadas y las validaciones efectuadas con los segmentos objetivo.
 
 #### 1.2.2.2. Lean UX Assumptions
 
-**Business Assumptions:**
-* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
+### Business Assumptions
 
-* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+- Creemos que las pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción presentan dificultades para mantener actualizada y centralizada la información sobre inventario, disponibilidad, reservas, alquileres y mantenimiento cuando utilizan hojas de cálculo, documentos, llamadas y aplicaciones de mensajería.
 
-* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+- Creemos que estas empresas estarían dispuestas a reemplazar parte de sus procesos manuales por una plataforma web si esta les permite centralizar la información y reducir problemas relacionados con disponibilidad, seguimiento y duplicidad de registros.
 
-* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+- Creemos que las empresas de alquiler estarían dispuestas a pagar una suscripción mensual por **RentBuild** si perciben que la plataforma reduce el tiempo requerido para gestionar sus operaciones y facilita el control de sus equipos.
 
-**Business Outcome Assumptions:**
+- Creemos que un modelo de suscripción con diferentes niveles puede adaptarse a empresas con distintos tamaños de inventario y necesidades operativas, siempre que cada plan ofrezca funcionalidades y capacidades diferenciadas.
 
-* Creemos que RentBuild logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+- Creemos que existe una oportunidad para una solución especializada en pequeñas y medianas empresas frente a plataformas de alquiler orientadas a organizaciones con operaciones de mayor escala o complejidad.
 
-* Creemos que RentBuild  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+### Business Outcome Assumptions
 
-- **BO01.** Creemos que la centralización del inventario y del seguimiento puede favorecer que al menos 20 empresas de alquiler utilicen RentBuild recurrentemente en la ventana propuesta de seis meses.
-- **BO02.** Creemos que la búsqueda y consulta de disponibilidad pueden favorecer que al menos 10 empresas constructoras completen una solicitud durante esa ventana.
-- **BO03.** Creemos que la utilidad del inventario puede comprobarse mediante al menos 50 equipos registrados con estado y disponibilidad identificables.
-- **BO04.** Creemos que la trazabilidad del proceso puede comprobarse mediante al menos 30 reservas o alquileres registrados, relacionando solicitud, decisión y operaciones posteriores.
-- **BO05.** Creemos que comprobar disponibilidad antes de confirmar y bloquear equipos no aptos puede mantener los conflictos de disponibilidad o duplicidad por debajo de 5 durante la misma ventana. Sin una línea base previa no se presenta este umbral como una reducción demostrada.
+- Creemos que la adopción de **RentBuild** podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
 
-* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+- Creemos que las empresas continuarán utilizando **RentBuild** si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
 
-* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que **RentBuild** está siendo incorporado dentro de las operaciones habituales de las empresas.
 
-**User Outcome and Benefit Assumptions:**
+- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
 
-* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
 
-* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+### User Assumptions
 
-* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+- Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler necesitan conocer el estado, ubicación, disponibilidad y condición de sus equipos para organizar sus operaciones.
 
-* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+- Creemos que los trabajadores responsables de gestionar los alquileres necesitan consultar y actualizar reservas, contratos, entregas, devoluciones e incidencias sin depender de información distribuida entre diferentes herramientas.
 
-* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas necesitan encontrar maquinaria disponible en función de los requerimientos y fechas de sus proyectos.
 
-**Feature Assumptions:**
+- Creemos que los responsables de gestionar el alquiler de maquinaria dentro de empresas constructoras necesitan conocer con anticipación la disponibilidad, características, costos y condiciones de los equipos antes de realizar una solicitud.
 
-* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+- Creemos que las empresas constructoras y contratistas necesitan realizar seguimiento a sus reservas y alquileres para coordinar adecuadamente la recepción, utilización y devolución de la maquinaria.
 
-* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+### User Outcome and Benefit Assumptions
 
-* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+- Creemos que los administradores de empresas de alquiler podrán tomar mejores decisiones operativas si pueden identificar rápidamente qué equipos están disponibles, reservados, alquilados o en mantenimiento.
 
-* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+- Creemos que los trabajadores responsables de las operaciones de alquiler podrán reducir errores y tiempo de coordinación si la información sobre reservas, entregas y devoluciones se mantiene actualizada en un único sistema.
 
-* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+- Creemos que disponer de un historial de incidencias y mantenimiento permitirá a las empresas identificar equipos que necesitan inspección o reparación antes de volver a ofrecerlos en alquiler.
 
-- **FA01.** Creemos que un módulo de inventario que registre características, ubicación, condición y disponibilidad facilita conocer la situación de cada equipo.
+- Creemos que las pequeñas empresas constructoras y contratistas podrán encontrar con mayor rapidez la maquinaria requerida si pueden consultar equipos mediante criterios como categoría, disponibilidad y características.
 
-- **FA02.** Creemos que la validación de disponibilidad antes de confirmar una solicitud ayuda a evitar asignaciones incompatibles del mismo equipo.
+- Creemos que disponer de información clara sobre costos, condiciones y fechas de alquiler permitirá a las empresas constructoras planificar mejor los recursos y gastos asociados a sus proyectos.
 
-- **FA03.** Creemos que la gestión integrada de contratos, tarifas, pagos, entregas y devoluciones permite seguir el alquiler desde su confirmación hasta el retorno.
+- Creemos que la posibilidad de consultar el estado de una reserva o alquiler reducirá la dependencia de llamadas y mensajes para realizar seguimiento a las solicitudes.
 
-- **FA04.** Creemos que el historial y la programación de mantenimiento, inspecciones e incidencias permiten identificar y bloquear equipos que temporalmente no deben alquilarse.
+### Feature Assumptions
 
-- **FA05.** Creemos que la búsqueda por categoría y características, junto con la información de condiciones y costos, ayuda a encontrar maquinaria adecuada.
+- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
 
-- **FA06.** Creemos que la consulta de disponibilidad para un periodo permite evaluar si el equipo puede usarse antes de enviar una solicitud.
+- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
 
-- **FA07.** Creemos que el seguimiento de solicitudes y alquileres permite conocer estados, periodos, costos y fechas relevantes sin depender de llamadas.
+- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
+
+- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
+
+- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
+
+- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+
+- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-Cada hipótesis utiliza el template **business outcome → users/personas → user outcome/benefit → feature**. Las siete hipótesis corresponden, una a una, a FA01–FA07. Las cifras se evalúan en la ventana propuesta de seis meses de 1.2.2.1; los criterios de interacción se especifican como comportamiento esperado, no como pruebas ya ejecutadas.
+- Creemos que lograremos incrementar el uso recurrente de **RentBuild** si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-**H01 — FA01.** Creemos que lograremos **alcanzar 20 empresas de alquiler recurrentes y 50 equipos registrados** si **los administradores representados por Armando Casas** alcanzan el beneficio de **conocer el estado y la disponibilidad de su inventario** mediante **módulo centralizado de inventario**.
+- Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
 
-- **Criterio observable:** Un equipo registrado conserva sus datos y su estado al consultarse; las empresas y equipos únicos se cuentan según el criterio de 1.2.2.1.
-- **Trazabilidad:** BO01/BO03; US06, US07, US08, US09, US10; TS01.
+- Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante **RentBuild** si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
 
-**H02 — FA02.** Creemos que lograremos **mantener los conflictos de disponibilidad y duplicidad por debajo de 5 en el piloto** si **los responsables de alquiler representados por Armando Casas** alcanzan el beneficio de **confirmar únicamente periodos compatibles con los compromisos existentes** mediante **validación de disponibilidad al decidir una solicitud**.
+- Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
 
-- **Criterio observable:** Una solicitud con un periodo incompatible no se confirma; cada intento y decisión debe poder revisarse sin duplicar la asignación.
-- **Trazabilidad:** BO05; US13, US14, US18, US19; TS02, TS03.
+- Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
 
-**H03 — FA03.** Creemos que lograremos **registrar al menos 30 reservas o alquileres trazables** si **los responsables de operaciones representados por Armando Casas** alcanzan el beneficio de **seguir condiciones, entrega y devolución de una operación** mediante **gestión integrada del ciclo de alquiler**.
+- Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante **RentBuild** si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
 
-- **Criterio observable:** Una operación permite relacionar equipo, periodo, decisión, condiciones y entrega/devolución cuando ocurran; un retorno sin entrega previa no se acepta.
-- **Trazabilidad:** BO04; US20, US22; TS04.
+- Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
 
-**H04 — FA04.** Creemos que lograremos **favorecer el uso recurrente de 20 empresas de alquiler sin confirmar equipos no aptos** si **los administradores representados por Armando Casas** alcanzan el beneficio de **identificar incidencias y mantenimientos que impiden ofrecer un equipo** mediante **historial y programación de mantenimiento e incidencias**.
+- Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
 
-- **Criterio observable:** Un equipo con mantenimiento que bloquee el periodo consultado no aparece disponible; la incidencia y su intervención quedan relacionadas con el equipo.
-- **Trazabilidad:** BO01/BO05; US10, US23, US24, US25, US26; TS05.
-
-**H05 — FA05.** Creemos que lograremos **alcanzar 10 empresas constructoras que completen el recorrido de solicitud** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **encontrar equipos y evaluar características, costos y condiciones** mediante **búsqueda y detalle de maquinaria**.
-
-- **Criterio observable:** Los resultados satisfacen los filtros aplicados y el detalle corresponde al equipo elegido; se registra la continuidad hacia consulta y solicitud.
-- **Trazabilidad:** BO02; US11, US12; TS02.
-
-**H06 — FA06.** Creemos que lograremos **favorecer 10 empresas constructoras solicitantes evitando periodos no disponibles** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **conocer si pueden usar un equipo en las fechas requeridas** mediante **consulta de disponibilidad por periodo**.
-
-- **Criterio observable:** Un rango inválido se rechaza y un rango bloqueado se informa como no disponible; solo un rango disponible permite continuar la solicitud.
-- **Trazabilidad:** BO02/BO05; US13, US14; TS02, TS03.
-
-**H07 — FA07.** Creemos que lograremos **sostener las 10 constructoras participantes y la trazabilidad de 30 operaciones** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **conocer la decisión y las fechas relevantes de sus solicitudes** mediante **seguimiento de solicitudes y alquileres**.
-
-- **Criterio observable:** La constructora consulta sus propias solicitudes y ve el estado correspondiente a la última decisión; no obtiene operaciones de otra empresa.
-- **Trazabilidad:** BO02/BO04; US21; TS03.
+- Creemos que lograremos incrementar el uso recurrente de **RentBuild** por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
-
-El canvas sintetiza problema, segmentos, resultados, soluciones y experimentos. La numeración FA01–FA07/H01–H07 y las metas de 1.2.2.1 constituyen la especificación textual vigente; el export gráfico recuperado debe sincronizarse con ella. No se presenta el gráfico como una nueva validación.
 
 <img src = "assets/md-images-chapter1/leanUXcanvas-RentBuild.png" width = 700px>
 
@@ -552,10 +453,10 @@ El canvas sintetiza problema, segmentos, resultados, soluciones y experimentos. 
 
 **Segmento #1: Pequeñas y medianas empresas de alquiler de maquinaria**
 
-Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en construcción, remodelación, movimiento de tierras y obras civiles.
+Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en construcción, remodelación, movimiento de tierras y obras civiles. 
 
 * Aspectos demográficos:
-  - Edades: aproximadamente 30–55 años.
+  - Edades: aproximadamente 30–55 años. 
   - Ubicación: principalmente zonas urbanas donde existe concentración de actividad empresarial y construcción.
 * Aspectos psicográficos:
   - Comportamiento tecnológico: utiliza computadora y smartphone para gestionar el negocio; suele utilizar WhatsApp, Excel, correo electrónico y sistemas administrativos básicos.
@@ -563,11 +464,11 @@ Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente
 
 **Segmento #2: Pequeñas empresas constructoras**
 
-Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
+Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. 
 
 * Aspectos demográficos:
-  - Edades: aproximadamente 28–50 años.
-  - Ubicación: zonas urbanas y áreas con actividad constructiva.
+  - Edades: aproximadamente 28–50 años. 
+  - Ubicación: zonas urbanas y áreas con actividad constructiva. 
 * Aspectos psicográficos:
   - Comportamiento: Prefieren procesos de solicitud simples y rápidos.
   - Motivación: reducir costos y evitar retrasos en sus proyectos.
@@ -852,6 +753,7 @@ La presencia de competidores consolidados y nuevas plataformas especializadas re
 
 12. Si pudiera mejorar una sola parte de la gestión de sus alquileres, ¿cuál sería?
 
+
 **Segmento 2: Pequeñas empresas constructoras**
 
 **Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles RentBuild.
@@ -894,22 +796,22 @@ La presencia de competidores consolidados y nuevas plataformas especializadas re
 
 ### Entrevista 1 — Pedro González
 
-| Campo | Detalle                                                                                                                                                                                                                                                                                                                             |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nombres y apellidos | Pedro González                                                                                                                                                                                                                                                                                                                      |
-| Edad | 27 años                                                                                                                                                                                                                                                                                                                             |
-| Distrito | Villa El Salvador                                                                                                                                                                                                                                                                                                                   |
-| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria                                                                                                                                                                                                                                                    |
-| Fecha de entrevista | 18 setiembre 2026                                                                                                                                                                                                                                                                                                                   |
-| Duración | 02:48                                                                                                                                                                                                                                                                                                                               |
-| Timing en el video | 00:00 - 02:48                                                                                                                                                                                                                                                                                                                       |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Pedro González |
+| Edad | 27 años |
+| Distrito | Villa El Salvador |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 18 setiembre 2026 |
+| Duración | 02:48 |
+| Timing en el video | 00:00 - 02:48 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="180">
+  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Pedro González se desempeña como contratista en el rubro de alquiler de maquinaria pesada (tractores, camiones y mezcladoras). Su gestión la realiza de forma manual y mediante correos electrónicos. Mantiene el control de la disponibilidad y el estado de sus equipos a través de documentación física y papeles, lo que dificulta el seguimiento constante y puede ocasionar el traspapeleo de registros importantes. Confirmó haber tenido inconvenientes debido a la falta de trazabilidad en las reservas. Cuando una maquinaria es devuelta con fallas o daños, aplican penalidades previamente pactadas. Para el control de salidas y mantenimientos, realizan una inspección previa con fotografías y escaneo preventivo antes de liberar la máquina. Identifica que la etapa más crítica y propensa a problemas es el registro de retorno de los equipos por mal uso o daños no reportados. Mostró gran interés en la propuesta de RentBuild, destacando que una solución web centralizada agilizaría considerablemente sus procesos y reduciría la dependencia de documentos físicos, siendo el módulo de registro de entrada y salida de equipos la función que más valoraría.
 
 ### Entrevista 2 — Carlos Rodríguez
@@ -923,13 +825,13 @@ Pedro González se desempeña como contratista en el rubro de alquiler de maquin
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 04:34 |
 | Timing en el video | 02:49 - 07:23 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de camiones de carga. Gestiona los alquileres y el control de las unidades de manera directa e informal junto a su esposa, utilizando únicamente un cuaderno de apuntes para registrar las fechas de retorno, mantenimiento y disponibilidad. Esta falta de un sistema centralizado les ha ocasionado problemas frecuentes como duplicidad de reservas, vehículos parados por falta de fluidez en la demanda y complicaciones cuando una unidad presenta fallas técnicas en ruta. Respecto a la propuesta del aplicativo, mostró una valoración positiva destacando que permitiría automatizar el proceso, evitar errores en los apuntes manuales y optimizar significativamente los tiempos de gestión de su negocio.
 
 ### Entrevista 3 — Carmen Losada Paredes
@@ -943,13 +845,13 @@ Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de cami
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 03:13 |
 | Timing en el video | 07:24 - 10:38 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de camiones concreteros (mixers). Gestiona el negocio de manera directa a través de redes sociales para la captación de clientes y utiliza una base de datos en Excel como única herramienta para controlar la disponibilidad de las unidades y los mantenimientos. La falta de una herramienta centralizada y automatizada le ha generado problemas de duplicidad de reservas, alquilando la misma máquina a dos clientes distintos en una misma fecha. Además, considera que el trámite administrativo actual es bastante pesado y tedioso. Respecto a la propuesta del aplicativo, mostró una recepción positiva, destacando que le permitiría agilizar los procesos de tramitación, evitar errores en las reservas y lograr una mayor rotación en el alquiler de sus equipos.
 
 ### Entrevista 4 — Yovani Meléndez Zuleta
@@ -963,13 +865,13 @@ Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de ca
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 04:22 |
 | Timing en el video | 10:39 - 14:59 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="80">
+  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a la ejecución de obras públicas y privadas, principalmente enfocado en áreas verdes, parques y pistas. Requiere alquilar maquinaria con alta frecuencia y actualmente recurre a anuncios en internet, avisos publicitarios y coordinación directa telefónica para ubicar proveedores. Su principal problema radica en la pérdida de tiempo durante la búsqueda y la falta de disponibilidad oportuna de equipos en buen estado técnico. Destaca la recepción positiva hacia la propuesta de la plataforma, manifestando que centralizar la disponibilidad e información en un solo lugar les permitirá optimizar tiempos de gestión y agilizar la contratación de las máquinas para sus obras.
 
 ### Entrevista 5 — Sonia Gutiérrez
@@ -983,13 +885,13 @@ Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 03:33 |
 | Timing en el video | 14:59 - 18:32 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Miraflores y requieren alquilar maquinaria o equipos de construcción aproximadamente cada 15 días. Actualmente, cuando necesitan equipos para sus proyectos u obras inmobiliarias, buscan proveedores navegando por internet y se comunican directamente con ellos para consultar precios y disponibilidad. Mencionó que han enfrentado problemas como la cancelación o falta de disponibilidad a última hora por parte de proveedores que ya habían confirmado el alquiler. Además, señala que el proceso actual de buscar y comparar proveedores uno por uno les consume bastante tiempo. Mostró una recepción muy positiva hacia la propuesta de la plataforma centralizada, destacando que les facilitaría encontrar en un solo lugar la oferta disponible, la capacidad/carga técnica de las máquinas y los precios, agilizando considerablemente su gestión.
 
 ### Entrevista 6 — Ana Rivera Quispe
@@ -1003,13 +905,13 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 02:50 |
 | Timing en el video | 18:33 - 21:22 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG)|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=FaBBc3)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="700">
 </p>
 
-**Resumen:**
+**Resumen:**  
 Ana Rivera Quispe se dedica a la administración de pequeñas empresas dedicadas a la construcción de pequeños edificios, departamentos y casas. Requieren alquilar maquinaria con mucha frecuencia debido a la demanda de sus obras. Actualmente, buscan proveedores principalmente mediante redes sociales por ser un canal más rápido y confirman la disponibilidad conversando directamente con la persona encargada. La principal condición que evalúan antes de alquilar es que las máquinas se encuentren en buenas condiciones de operatividad. Señala que el mayor obstáculo y la parte que les toma más tiempo en todo el proceso es lograr comunicarse y conversar directamente con la persona indicada o el propietario de la máquina. Valora de forma positiva la propuesta del aplicativo centralizado, destacando que les permitiría encontrar los equipos adecuados de manera mucho más rápida.
 
 ### 2.2.3. Análisis de entrevistas
@@ -1190,25 +1092,27 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ### 2.3.2. User Task Matrix
 
-La matriz presenta las tareas de Armando Casas, representante de las empresas de alquiler, y Andrea Torres, representante de las empresas constructoras. Para cada persona se indica la frecuencia y la importancia de las tareas, independientemente de la existencia del software.
+En esta sección se presenta el User Task Matrix, que concentra las tareas que realizan Marisol Vega Torres (Segmento 1 — Empresas de Alquiler) y Jorge Ramírez Delgado (Segmento 2 — Empresas Constructoras) para cumplir sus objetivos, independientemente de la existencia de una solución de software. Se considera para cada tarea su frecuencia (qué tan seguido la realiza) y su importancia (qué tan crítica es para su rol), en una escala de Baja / Media / Alta.
 
-| TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
-| :---- | :---: | :---: | :---: | :---: |
-| **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Consultar la disponibilidad de una maquinaria** | **Often** | **High** | **Often** | **High** |
-| **Registrar o actualizar información de maquinaria** | **Often** | **High** | **Rarely** | **Low** |
-| **Gestionar reservas y solicitudes de alquiler** | **Often** | **High** | **Often** | **High** |
-| **Coordinar la entrega de maquinaria** | **Often** | **High** | **Often** | **High** |
-| **Registrar la devolución de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Verificar el estado de la maquinaria después de un alquiler** | **Often** | **High** | **Sometimes** | **Medium** |
-| **Registrar incidentes o daños en una maquinaria** | **Sometimes** | **High** | **Sometimes** | **High** |
-| **Consultar el historial de mantenimiento de una maquinaria** | **Often** | **High** | **Rarely** | **Medium** |
-| **Programar o registrar mantenimientos** | **Sometimes** | **High** | **Rarely** | **Low** |
-| **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
-| **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
-| **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
+| Tarea | Marisol Vega Torres — Frecuencia | Marisol Vega Torres — Importancia | Jorge Ramírez Delgado — Frecuencia | Jorge Ramírez Delgado — Importancia |
+| :--- | :---: | :---: | :---: | :---: |
+| Verificar disponibilidad de equipo | Alta | Alta | Alta | Alta |
+| Registrar/actualizar inventario de equipos | Alta | Alta | — | — |
+| Gestionar reservaciones de clientes | Alta | Alta | — | — |
+| Buscar y comparar proveedores de alquiler | — | — | Alta | Alta |
+| Coordinar entrega y recojo de equipo | Alta | Alta | Media | Alta |
+| Revisar condiciones y costos de alquiler | Media | Alta | Alta | Alta |
+| Elaborar y firmar contratos de alquiler | Media | Alta | Media | Media |
+| Dar seguimiento a fechas de devolución | Alta | Alta | Alta | Alta |
+| Registrar incidentes o daños del equipo | Media | Alta | Media | Media |
+| Programar mantenimiento preventivo | Media | Alta | — | — |
+| Comunicarse con proveedores/clientes vía teléfono o WhatsApp | Alta | Media | Alta | Alta |
+| Reportar avance de gastos/costos de alquiler a su empresa | Media | Media | Media | Alta |
 
-Armando realiza con mayor frecuencia las tareas internas de inventario, registro de maquinaria y mantenimiento. Andrea se enfoca en la búsqueda de equipos y la consulta de características y condiciones de alquiler. Ambos consultan disponibilidad, gestionan solicitudes y coordinan entregas con frecuencia e importancia altas, por lo que esas actividades constituyen necesidades compartidas entre los segmentos.
+Del análisis del cuadro se observa que las tareas con mayor frecuencia e importancia para ambos segmentos son verificar disponibilidad de equipo y dar seguimiento a fechas de devolución, lo que confirma que la visibilidad en tiempo real del estado del inventario es una necesidad crítica compartida. Marisol dedica más tiempo a tareas internas de gestión (inventario, mantenimiento, contratos), mientras que Jorge se enfoca en tareas de búsqueda y coordinación externa (comparar proveedores, coordinar entregas). Ambos coinciden en la alta dependencia de canales informales como el teléfono y WhatsApp para comunicarse, lo que representa una oportunidad clara para una solución digital centralizada.
+
+Las principales diferencias se encuentran en las tareas asociadas a la responsabilidad de cada segmento. Armando realiza actividades relacionadas con la administración del inventario, el registro de maquinaria, las devoluciones y el mantenimiento, debido a que la empresa de alquiler es responsable de gestionar los equipos. En cambio, Andrea se enfoca en localizar maquinaria adecuada, consultar sus condiciones y realizar solicitudes de alquiler según las necesidades de sus proyectos. Por esta razón, determinadas tareas se identifican como N/A para alguno de los User Personas, ya que no forman parte de sus responsabilidades dentro de la plataforma.
+
 
 ### 2.3.3. User Journey Mapping
 
@@ -1236,182 +1140,600 @@ El Empathy Mapping permite profundizar en la comprensión de los principales seg
 
 ## 2.4. Big Picture Event Storming
 
-El dominio se organiza alrededor del ciclo de alquiler: registrar equipo, consultar un periodo, enviar una solicitud, decidirla, entregar, devolver e inspeccionar. Mantenimiento y suscripciones son capacidades de soporte. El artefacto previo se conserva como [export original](assets/md-images-chapter2/big-picture-event-storming.png).
+El Big Picture Event Storming permitió identificar y representar los principales eventos del dominio de RentBuild, mostrando de manera general el flujo del negocio desde el registro de la maquinaria hasta su devolución, inspección y mantenimiento.
 
-El suplemento siguiente reconstruye ese recorrido a partir del export y las US vigentes: ordena eventos, separa actores y señala el punto en que una intervención impide volver a ofrecer un equipo. Es una **revisión documental**, no el acta de una nueva sesión colaborativa. Fecha, participantes y acuerdos del taller del equipo siguen pendientes de incorporar; no se inventa su duración ni se atribuyen observaciones a nuevas entrevistas.
+La siguiente imagen presenta el resultado del Big Picture Event Storming realizado para el proyecto:
 
-![Big Picture suplementario de RentBuild: ciclo de alquiler propuesto](assets/tb1-design/eventstorming-big-picture.png)
-
-Una solicitud enviada no equivale a una reserva confirmada. El proveedor decide después de comprobar disponibilidad. La entrega requiere una operación aprobada; la devolución requiere entrega previa. La inspección determina si procede cerrar la operación y liberar el equipo o registrar una incidencia/mantenimiento. Cerrar una intervención no debe liberar el equipo si permanece otra condición que lo bloquea. La revisión detallada por contextos se presenta en 4.6.1.
+![Big Picture Event Storming de RentBuild](assets/md-images-chapter2/big-picture-event-storming.png)
 
 ## 2.5. Ubiquitous Language
 
-El glosario reúne **términos del negocio en inglés**, con equivalente español y una definición sin ambigüedad. Las referencias a clases sirven para mantener consistencia con 4.6–4.8; términos técnicos como framework, controller o repository no forman parte de esta tabla.
+En esta sección se presenta el glosario de términos y conceptos utilizados en el dominio del negocio de RentBuild, con el objetivo de establecer un lenguaje común, sin ambigüedades, entre todos los miembros del equipo y stakeholders del proyecto. Mantener un Ubiquitous Language actualizado permite que la comunicación entre las áreas de negocio y desarrollo sea clara y consistente a lo largo de todo el ciclo de vida del producto. Eric Evans, en su libro *Domain-Driven Design: Tackling Complexity in the Heart of Software*, establece que el Ubiquitous Language debe modelarse dentro de un Bounded Context, donde los términos y conceptos del dominio del negocio son identificados y no deben presentar ambigüedad.
 
-| Term | Definición en el dominio de RentBuild |
-|---|---|
-| Equipment (Equipo) | Máquina o herramienta identificable del inventario de una empresa de alquiler. Sus características, condición y tarifa permiten evaluar su uso en un proyecto. |
-| Rental Company (Empresa de alquiler) | Empresa proveedora que registra equipos y decide solicitudes; administra la entrega, devolución y condición operativa de sus propios equipos. |
-| Construction Company (Empresa constructora) | Empresa solicitante que busca equipos, consulta fechas y sigue la decisión de sus propias solicitudes. |
-| Inventory (Inventario) | Conjunto de equipos de un proveedor con datos de identificación, categoría, ubicación, condición y tarifa. |
-| Equipment Category (Categoría de equipo) | Clasificación de equipos con características o usos similares, utilizada para organizar el inventario y buscar maquinaria. |
-| Availability (Disponibilidad) | Posibilidad de asignar un equipo para un periodo válido, considerando compromisos que se solapan y restricciones de condición/mantenimiento. No es solo una etiqueta del equipo. |
-| Rental Request (Solicitud de alquiler) | Petición de una constructora por un equipo y periodo; permanece Pending hasta que el proveedor la aprueba o rechaza. |
-| Reservation (Reservación) | Compromiso de disponibilidad confirmado tras aprobar una solicitud. En el diseño propuesto se representa por solicitud aprobada, contrato y bloqueo del periodo; no se introduce un agregado adicional denominado Reservation. |
-| Rental Contract (Contrato de alquiler) | Acuerdo que relaciona solicitud aprobada, equipo, periodo y condiciones económicas, y permite seguir entrega/devolución. Su generación real por API es trabajo futuro. |
-| Delivery (Entrega) | Registro del momento en que el proveedor entrega el equipo asociado al contrato. No puede registrarse de nuevo como una segunda entrega de la misma operación. |
-| Equipment Return (Devolución de equipo) | Registro del retorno y condición del equipo después de una entrega. Una devolución sin entrega previa no es válida. |
-| Incident (Incidencia) | Registro identificable y fechado de falla, daño o problema de un equipo; puede relacionarse con un contrato y originar mantenimiento correctivo. |
-| Maintenance Record (Registro de mantenimiento) | Intervención preventiva/correctiva o inspección con equipo, periodo y estado. Su efecto sobre disponibilidad depende de si mantiene una restricción. |
-| Equipment Condition (Condición del equipo) | Condición operativa utilizada para decidir si es apto para alquiler; se distingue de la disponibilidad por periodo y del estado de una solicitud. |
-| Rental Period (Periodo de alquiler) | Rango con fecha de inicio y fin válidas asociado a la solicitud o compromiso del equipo. En el diseño se modela mediante DateRange. |
-| Availability Block (Bloqueo de disponibilidad) | Compromiso o restricción por periodo que impide asignar el mismo equipo a un rango incompatible; registra el origen del bloqueo. |
-| Rental Rate (Tarifa de alquiler) | Importe y unidad de facturación acordados para el equipo. El importe conserva su moneda y no se combina con importes de otra moneda. |
-| Rental Operator (Operador de alquiler) | Persona que actúa para un proveedor y gestiona sus equipos, solicitudes y operaciones de alquiler. |
-| Construction Manager (Responsable de obra) | Persona que actúa para una constructora y coordina la búsqueda, solicitud y seguimiento de maquinaria para el proyecto. |
-| Provider Profile (Perfil de proveedor) | Información pública del proveedor; se separa de los datos privados del perfil y no supone que exista una reputación o historial verificados. |
-| Subscription Plan (Plan de suscripción) | Opción de acceso con nombre, precio/moneda, periodicidad y características de referencia. Las características descritas no prueban la implementación de otros módulos. |
-| User Subscription (Suscripción del usuario) | Registro de la opción elegida por un usuario, con periodo y estado. Solo es vigente si su estado permite acceso y la fecha está dentro del periodo. |
-| Subscription Period (Periodo de suscripción) | Rango durante el que una suscripción puede considerarse vigente. En la demo un nuevo mes se calcula desde confirmación y ajusta el fin de mes. |
-| Billing Cycle (Periodicidad) | Unidad temporal de referencia del plan; la demo del PR12 ofrece planes mensuales. |
-| Renewal Preference (Preferencia de renovación) | Valor guardado de la suscripción. En TB1 no programa cobros ni renovaciones automáticas. |
-| Monetary Amount (Importe monetario) | Valor no negativo con moneda explícita, usado para precio/tarifa. El diseño C# futuro utiliza decimal; la demo frontend guarda importes referenciales. |
-| Equipment Location (Ubicación de equipo) | Dirección y coordenadas asociadas al equipo para ayudar a localizarlo. Una integración de mapas debe verificarse por separado. |
-
-**Correspondencia de nombres:** RentalPeriod y SubscriptionPeriod se representan con DateRange; RentalRate contiene Money. RentalRequest, Reservation y RentalContract no son sinónimos. Inventory mantiene la condición del equipo, Rentals mantiene la decisión/contrato y Maintenance informa restricciones por intervención. La coordinación futura conserva identificadores y responsabilidades por contexto.
+| Término | Definición |
+| :--- | :--- |
+| Equipo | Maquinaria o herramienta perteneciente al inventario de una empresa de alquiler, disponible para ser rentada por un periodo determinado (ej. andamios, mezcladoras, plataformas elevadoras, generadores). |
+| Empresa de Alquiler | Empresa propietaria del equipo, responsable de administrar su inventario, disponibilidad, reservaciones y mantenimiento dentro de la plataforma. |
+| Empresa Constructora | Empresa que busca y solicita el alquiler de equipos para el desarrollo de sus proyectos de construcción. |
+| Inventario | Conjunto de equipos registrados por una empresa de alquiler, junto con sus características, estado y ubicación. |
+| Disponibilidad | Estado que indica si un equipo puede ser reservado o alquilado en una fecha determinada, sin superposición con otra reservación o alquiler activo. |
+| Reservación | Solicitud realizada por una empresa constructora para apartar un equipo durante un periodo específico, antes de confirmarse como un alquiler formal. |
+| Contrato de Alquiler | Documento que formaliza las condiciones del alquiler de un equipo, incluyendo tarifas, plazos, responsabilidades y condiciones de devolución. |
+| Entrega | Proceso mediante el cual el equipo alquilado es trasladado o puesto a disposición de la empresa constructora en el lugar acordado. |
+| Devolución | Proceso mediante el cual el equipo alquilado es devuelto a la empresa de alquiler al finalizar el periodo de alquiler. |
+| Mantenimiento | Conjunto de actividades de inspección, reparación o servicio preventivo realizadas sobre un equipo para garantizar su correcto funcionamiento y disponibilidad. |
+| Incidencia | Registro de un daño, falla o problema detectado en un equipo, ya sea durante su uso, entrega o devolución. |
+| Estado del Equipo | Condición actual de un equipo dentro del inventario: disponible, alquilado o en mantenimiento. |
+| Período de Alquiler | Rango de fechas durante el cual un equipo se encuentra reservado o alquilado por una empresa constructora. |
+| Tarifa | Costo asociado al alquiler de un equipo, generalmente calculado por día, semana o periodo acordado. |
+| Operador de Alquiler | Colaborador de una empresa de alquiler responsable de gestionar las reservaciones, contratos, entregas, devoluciones e incidencias del equipo. |
+| Jefe de Obra | Responsable dentro de una empresa constructora encargado de identificar, solicitar y coordinar el alquiler de equipo necesario para su proyecto. |
+| Perfil de Proveedor | Información pública de una empresa de alquiler visible para las empresas constructoras, incluyendo su historial de cumplimiento y equipo disponible. |
 
 # Capítulo III: Requirements Specification
 
 ## 3.1. User Stories
 
-Las User Stories y Technical Stories representan los requisitos funcionales y técnicos identificados para el desarrollo progresivo de la solución. Las historias se organizan mediante Epics de acuerdo con las principales capacidades del producto, mientras que las Technical Stories permiten definir el soporte técnico necesario para implementar y evolucionar las funcionalidades de la solución.
+<table>
+<tr>
+<th>Epic / Story ID</th>
+<th>Título</th>
+<th>Descripción</th>
+<th>Criterios de Aceptación</th>
+<th>Relacionado con</th>
+</tr>
 
-| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
-| :---: | :--- | :--- | :--- | :--- |
-| **EP01** | **Gestión de usuarios y acceso** | Gestiona el registro, acceso, perfil y recuperación de acceso de los usuarios de RentBuild. | N/A | — |
-| US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para poder acceder a las funcionalidades de la plataforma. | **Given** que el usuario proporciona la información obligatoria y válida, **When** solicita registrarse, **Then** el sistema crea su cuenta.<br><br>**Given** que el usuario proporciona información que ya se encuentra registrada, **When** solicita registrarse, **Then** el sistema rechaza el registro.<br><br>**Given** que faltan datos obligatorios o presentan un formato inválido, **When** solicita registrarse, **Then** el sistema rechaza la operación e informa la validación correspondiente. | EP01 |
-| US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | **Given** que existe una cuenta con credenciales válidas, **When** el usuario inicia sesión, **Then** el sistema permite el acceso a su cuenta.<br><br>**Given** que las credenciales proporcionadas no son válidas, **When** el usuario intenta iniciar sesión, **Then** el sistema rechaza el acceso. | EP01 |
-| US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | **Given** que existe un perfil de usuario, **When** el usuario proporciona información válida para actualizarlo, **Then** el sistema actualiza la información.<br><br>**Given** que la información proporcionada no cumple las validaciones establecidas, **When** el usuario intenta actualizar su perfil, **Then** el sistema rechaza los datos inválidos. | EP01 |
-| US04 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | **Given** que existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema permite iniciar el proceso de recuperación.<br><br>**Given** que no existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema rechaza la solicitud. | EP01 |
-| US05 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | **Given** que el usuario tiene una sesión activa, **When** solicita cerrar sesión, **Then** el sistema finaliza la sesión.<br><br>**Given** que no existe una sesión activa, **When** se solicita cerrar sesión, **Then** el sistema no permite continuar con una sesión autenticada. | EP01 |
-| TS02 | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | **Given** que existe un perfil de usuario, **When** un cliente autorizado consulta el recurso correspondiente, **Then** la API devuelve la información del perfil.<br><br>**Given** que se proporciona información válida para actualizar un perfil, **When** el cliente realiza la solicitud, **Then** la API actualiza el perfil y devuelve la información correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se solicita la actualización, **Then** la API rechaza la operación. | US03 |
-| **EP02** | **Gestión de maquinaria** | Permite administrar el inventario, información, disponibilidad y estado de la maquinaria de las empresas de alquiler. | N/A | — |
-| US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en RentBuild. | **Given** que la empresa proporciona la información obligatoria de una maquinaria, **When** solicita registrarla, **Then** el sistema registra la maquinaria en el inventario.<br><br>**Given** que faltan datos obligatorios, **When** la empresa intenta registrar la maquinaria, **Then** el sistema rechaza el registro. | EP02 |
-| US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | **Given** que existen maquinarias registradas, **When** la empresa solicita consultarlas, **Then** el sistema devuelve las maquinarias correspondientes.<br><br>**Given** que no existen maquinarias registradas, **When** la empresa consulta su inventario, **Then** el sistema informa que no existen registros disponibles. | EP02 |
-| US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida para actualizarla, **Then** el sistema actualiza sus datos.<br><br>**Given** que la maquinaria no existe, **When** la empresa intenta actualizarla, **Then** el sistema rechaza la operación. | EP02 |
-| US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | **Given** que existen maquinarias registradas, **When** la empresa consulta su disponibilidad, **Then** el sistema muestra el estado de disponibilidad correspondiente.<br><br>**Given** que una maquinaria se encuentra comprometida durante un periodo, **When** se consulta su disponibilidad, **Then** el sistema la identifica como no disponible para dicho periodo. | EP02 |
-| US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su estado, **Then** el sistema devuelve su condición actual.<br><br>**Given** que la maquinaria no existe, **When** se solicita su estado, **Then** el sistema rechaza la consulta. | EP02 |
-| TS03 | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | **Given** que el usuario tiene permisos para gestionar maquinaria, **When** el cliente envía una solicitud válida para registrar, consultar o actualizar una maquinaria, **Then** la API procesa la operación.<br><br>**Given** que una operación de maquinaria se procesa correctamente, **When** la API responde, **Then** devuelve la información correspondiente del recurso.<br><br>**Given** que la solicitud contiene información inválida, **When** se procesa, **Then** la API rechaza la operación. | US06, US07, US08 |
-| TS04 | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | **Given** que existe una maquinaria registrada, **When** el cliente solicita su disponibilidad para un periodo válido, **Then** la API devuelve la disponibilidad correspondiente.<br><br>**Given** que el periodo solicitado es inválido, **When** se realiza la consulta, **Then** la API rechaza la solicitud. | US09, US13 |
-| **EP03** | **Búsqueda y solicitud de alquiler** | Permite a las empresas constructoras buscar maquinaria, consultar sus características y disponibilidad y solicitar alquileres. | N/A | — |
-| US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | **Given** que existen maquinarias registradas, **When** la empresa realiza una búsqueda válida, **Then** el sistema devuelve las maquinarias que coinciden con los criterios indicados.<br><br>**Given** que no existen maquinarias que coincidan con los criterios, **When** la empresa realiza una búsqueda, **Then** el sistema informa que no existen resultados. | EP03 |
-| US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su información, **Then** el sistema devuelve sus características.<br><br>**Given** que la maquinaria no existe, **When** la empresa solicita su información, **Then** el sistema rechaza la consulta. | EP03 |
-| US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su disponibilidad para un periodo válido, **Then** el sistema indica si se encuentra disponible.<br><br>**Given** que la maquinaria se encuentra comprometida durante parte del periodo solicitado, **When** se consulta su disponibilidad, **Then** el sistema indica que no se encuentra disponible para dicho periodo. | EP03 |
-| US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | **Given** que la maquinaria está disponible para el periodo solicitado, **When** la empresa registra una solicitud de alquiler válida, **Then** el sistema registra la solicitud con estado inicial PENDING.<br><br>**Given** que la maquinaria no está disponible para el periodo solicitado, **When** la empresa intenta solicitar el alquiler, **Then** el sistema rechaza la solicitud.<br><br>**Given** que la solicitud de alquiler se registra correctamente, **When** finaliza la creación de la solicitud, **Then** se genera la notificación correspondiente para la empresa de alquiler. | EP03 |
-| TS05 | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | **Given** que existe una maquinaria disponible, **When** el cliente envía una solicitud válida de alquiler, **Then** la API registra la solicitud y devuelve su identificador y estado inicial.<br><br>**Given** que existe una solicitud de alquiler, **When** el cliente autorizado consulta el recurso, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no está disponible, **When** se intenta crear la solicitud, **Then** la API rechaza la operación. | US14, US21 |
-| **EP04** | **Planes y suscripciones** | Permite consultar y gestionar las opciones de suscripción disponibles para los usuarios de RentBuild. | N/A | — |
-| US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece RentBuild. | **Given** que existen planes configurados, **When** el usuario consulta las opciones disponibles, **Then** el sistema muestra la información de los planes.<br><br>**Given** que no existen planes disponibles, **When** el usuario realiza la consulta, **Then** el sistema informa que no existen opciones disponibles. | EP04 |
-| US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | **Given** que existen planes disponibles, **When** el usuario selecciona un plan válido, **Then** el sistema registra la selección correspondiente.<br><br>**Given** que el plan seleccionado no está disponible, **When** el usuario intenta seleccionarlo, **Then** el sistema rechaza la operación. | EP04 |
-| US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | **Given** que existe una suscripción asociada al usuario, **When** el usuario solicita consultar o modificar la información permitida, **Then** el sistema procesa la operación.<br><br>**Given** que no existe una suscripción válida, **When** el usuario intenta gestionarla, **Then** el sistema rechaza la operación. | EP04 |
-| TS09 | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | **Given** que existen planes configurados, **When** el cliente solicita los planes disponibles, **Then** la API devuelve la información correspondiente.<br><br>**Given** que se proporciona una selección de plan válida, **When** el cliente registra la selección, **Then** la API devuelve el estado correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se procesa la solicitud, **Then** la API rechaza la operación. | US15, US16, US17 |
-| **EP05** | **Gestión de reservas y alquileres** | Permite administrar solicitudes, decisiones de alquiler, alquileres activos, entregas y devoluciones. | N/A | — |
-| US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | **Given** que existen solicitudes de alquiler registradas, **When** la empresa consulta sus solicitudes, **Then** el sistema muestra las solicitudes recibidas y su información relevante.<br><br>**Given** que existen solicitudes pendientes, **When** la empresa consulta las solicitudes, **Then** el sistema permite identificar aquellas que se encuentran pendientes.<br><br>**Given** que no existen solicitudes registradas, **When** la empresa consulta las solicitudes, **Then** el sistema informa que no existen solicitudes disponibles. | EP05 |
-| US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | **Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** el sistema actualiza su estado a CONFIRMED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** el sistema actualiza su estado a REJECTED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que la solicitud no se encuentra pendiente, **When** la empresa intenta confirmarla o rechazarla, **Then** el sistema rechaza la operación. | EP05 |
-| US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | **Given** que existen alquileres activos, **When** la empresa solicita consultarlos, **Then** el sistema devuelve los alquileres que se encuentran en curso.<br><br>**Given** que no existen alquileres activos, **When** la empresa realiza la consulta, **Then** el sistema informa que no existen alquileres en curso. | EP05 |
-| US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | **Given** que existe una solicitud asociada a la empresa constructora, **When** consulta su estado, **Then** el sistema devuelve el estado actual de la solicitud.<br><br>**Given** que la solicitud no existe o no pertenece a la empresa constructora, **When** se consulta su estado, **Then** el sistema rechaza la consulta. | EP05 |
-| US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | **Given** que existe un alquiler confirmado, **When** la empresa registra una entrega válida, **Then** el sistema registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** la empresa registra una devolución válida, **Then** el sistema registra la devolución y actualiza el estado de la maquinaria.<br><br>**Given** que no existe un alquiler válido asociado a la operación, **When** se intenta registrar una entrega o devolución, **Then** el sistema rechaza la operación. | EP05 |
-| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de RentBuild. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
-| TS07 | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | **Given** que existe un alquiler confirmado, **When** el cliente registra una entrega válida, **Then** la API registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** el cliente registra una devolución válida, **Then** la API registra la devolución y actualiza el estado correspondiente.<br><br>**Given** que la operación no corresponde al estado actual del alquiler, **When** se registra la operación, **Then** la API la rechaza. | US22 |
-| **EP06** | **Gestión de mantenimiento e incidencias** | Permite registrar, programar y consultar mantenimientos e incidencias relacionadas con la maquinaria. | N/A | — |
-| US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida del mantenimiento, **Then** el sistema registra la intervención.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar un mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
-| US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona una fecha válida de mantenimiento, **Then** el sistema registra la programación.<br><br>**Given** que la fecha proporcionada no es válida, **When** la empresa intenta programar el mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
-| US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa registra una incidencia válida, **Then** el sistema almacena la incidencia.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar la incidencia, **Then** el sistema rechaza la operación. | EP06 |
-| US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su historial, **Then** el sistema devuelve los mantenimientos e incidencias registrados.<br><br>**Given** que no existen registros históricos, **When** la empresa consulta el historial, **Then** el sistema informa que no existen registros disponibles. | EP06 |
-| TS08 | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | **Given** que existe una maquinaria registrada, **When** el cliente envía información válida de mantenimiento o incidencia, **Then** la API almacena la información.<br><br>**Given** que existen registros históricos, **When** el cliente consulta el historial, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar información, **Then** la API rechaza la operación. | US23, US24, US25, US26 |
-| **EP07** | **Información y contratación del servicio** | Permite a los visitantes conocer RentBuild, solicitar una demostración y contactar con el equipo. | N/A | — |
-| US27 | Consultar información de RentBuild | Como visitante, quiero consultar información de RentBuild para conocer la solución y su propuesta de valor. | **Given** que el visitante accede a la información de RentBuild, **When** consulta el contenido disponible, **Then** el sistema presenta información sobre la solución y su propuesta de valor.<br><br>**Given** que el visitante consulta la información, **When** navega por el contenido, **Then** puede identificar las características principales de RentBuild. | EP07 |
-| US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona RentBuild. | **Given** que el visitante proporciona la información requerida, **When** solicita una demostración, **Then** el sistema registra la solicitud.<br><br>**Given** que faltan datos obligatorios, **When** el visitante solicita la demostración, **Then** el sistema rechaza la solicitud. | EP07 |
-| US29 | Contactar con RentBuild | Como visitante, quiero contactar con RentBuild para realizar consultas sobre la solución. | **Given** que el visitante proporciona la información requerida, **When** envía una consulta, **Then** el sistema registra el contacto.<br><br>**Given** que faltan datos obligatorios, **When** el visitante intenta enviar la consulta, **Then** el sistema rechaza el envío. | EP07 |
-| **EP08** | **Landing Page de RentBuild** | Presenta la propuesta de valor, funcionalidades y soluciones de RentBuild mediante una experiencia web accesible y adaptable. | N/A | — |
-| US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa. | **Given** que el visitante accede al Landing Page, **When** consulta la propuesta de valor, **Then** el sistema presenta la información correspondiente.<br><br>**Given** que el visitante consulta la propuesta de valor, **When** continúa explorando el contenido, **Then** puede identificar el beneficio principal de RentBuild. | EP08 |
-| US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con RentBuild. | **Given** que el visitante accede al contenido de funcionalidades, **When** consulta la información, **Then** el sistema presenta las funcionalidades principales de RentBuild.<br><br>**Given** que el visitante revisa las funcionalidades, **When** consulta cada característica, **Then** puede comprender su propósito general. | EP08 |
-| US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si RentBuild se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | **Given** que el visitante pertenece a uno de los segmentos objetivo, **When** consulta las soluciones disponibles, **Then** el sistema presenta información correspondiente a su tipo de empresa.<br><br>**Given** que el visitante revisa las soluciones, **When** compara la información con sus necesidades, **Then** puede identificar la propuesta correspondiente a su segmento. | EP08 |
-| US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de RentBuild. | **Given** que el visitante se encuentra en el Landing Page, **When** solicita acceder a la Web Application, **Then** el sistema dirige al visitante hacia la experiencia correspondiente.<br><br>**Given** que el acceso a la Web Application no se encuentra disponible, **When** el visitante intenta acceder, **Then** el sistema informa que el recurso no está disponible. | EP08 |
-| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar RentBuild desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | **Given** que el usuario accede desde un dispositivo con una resolución determinada, **When** utiliza la plataforma, **Then** el contenido se adapta al tamaño de pantalla correspondiente.<br><br>**Given** que el usuario cambia el tamaño de pantalla, **When** continúa utilizando la plataforma, **Then** la información mantiene una presentación adecuada. | EP08 |
-| US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar RentBuild en diferentes idiomas para comprender y utilizar la plataforma. | **Given** que existen idiomas disponibles, **When** el usuario selecciona un idioma, **Then** el sistema presenta el contenido disponible en el idioma seleccionado.<br><br>**Given** que el usuario selecciona otro idioma disponible, **When** continúa utilizando la plataforma, **Then** el contenido se actualiza al idioma correspondiente. | EP08 |
-| TS01 | Exponer API REST de RentBuild | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de RentBuild y permitir que la Web Application consuma las funcionalidades del dominio. | **Given** que la API se encuentra disponible, **When** un cliente realiza una solicitud a un recurso válido, **Then** la API procesa la solicitud y devuelve la respuesta HTTP correspondiente.<br><br>**Given** que existen recursos REST definidos, **When** la Web Application los consume, **Then** los recursos mantienen una estructura consistente de solicitudes y respuestas. | Transversal |
-| TS10 | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de RentBuild y controlar el acceso según el tipo de usuario. | **Given** que existe una cuenta registrada, **When** el cliente envía credenciales válidas al recurso de autenticación, **Then** la API permite establecer una sesión autorizada.<br><br>**Given** que un cliente solicita un recurso protegido sin autorización válida, **When** la API procesa la solicitud, **Then** rechaza el acceso.<br><br>**Given** que el usuario no posee permisos para un recurso, **When** intenta acceder, **Then** la API rechaza la operación. | US01, US02, US04, US05 |
-| TS11 | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | **Given** que se registra correctamente una solicitud de alquiler, **When** el sistema procesa la creación de la solicitud, **Then** se envía un correo a la empresa de alquiler.<br><br>**Given** que una solicitud pendiente es confirmada, **When** el sistema procesa la confirmación, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que una solicitud pendiente es rechazada, **When** el sistema procesa el rechazo, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que SendGrid no permite completar el envío, **When** ocurre un error de comunicación, **Then** el sistema registra el error sin revertir una solicitud que ya fue creada o actualizada correctamente. | US14, US19 |
-| TS12 | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de RentBuild. | **Given** que se recibe una operación válida de registro, **When** la operación finaliza correctamente, **Then** la información queda almacenada en la base de datos.<br><br>**Given** que existe un registro almacenado, **When** se consulta mediante el recurso correspondiente, **Then** la API devuelve la información persistida.<br><br>**Given** que ocurre un error durante una operación de persistencia, **When** la operación no puede completarse, **Then** el sistema informa el fallo y evita comunicar un registro exitoso inexistente. | TS02, TS03, TS05, TS08, TS09 |
-| TS13 | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de RentBuild. | **Given** que una solicitud contiene todos los datos obligatorios con valores válidos, **When** se procesa, **Then** la API permite continuar con la operación.<br><br>**Given** que una solicitud contiene datos obligatorios ausentes o inválidos, **When** se procesa, **Then** la API rechaza la solicitud e identifica los errores de validación.<br><br>**Given** que un periodo de alquiler presenta fechas incompatibles, **When** se solicita la operación, **Then** la API rechaza el periodo inválido. | TS02, TS03, TS04, TS05, TS07, TS09 |
-| TS14 | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | **Given** que una operación se completa correctamente, **When** la API responde, **Then** devuelve el código HTTP correspondiente y la información esperada.<br><br>**Given** que se solicita un recurso inexistente, **When** la API procesa la petición, **Then** devuelve una respuesta HTTP que representa el recurso no encontrado.<br><br>**Given** que una solicitud contiene datos inválidos, **When** la API procesa la petición, **Then** devuelve una respuesta de validación consistente.<br><br>**Given** que ocurre un error inesperado, **When** la API procesa la operación, **Then** devuelve una respuesta controlada sin exponer detalles internos sensibles. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
-| TS15 | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | **Given** que la API expone recursos REST, **When** se consulta su documentación, **Then** se muestran los endpoints y métodos disponibles.<br><br>**Given** que un recurso recibe parámetros o un cuerpo de solicitud, **When** se consulta su documentación, **Then** se describen los datos requeridos y sus restricciones principales.<br><br>**Given** que un recurso devuelve respuestas exitosas o errores previstos, **When** se consulta su documentación, **Then** se muestran los códigos de respuesta correspondientes. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
-| TS16 | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | **Given** que se dispone de una ubicación válida, **When** la aplicación solicita información geográfica al servicio externo, **Then** el sistema procesa la respuesta recibida.<br><br>**Given** que el servicio externo devuelve información válida, **When** la API procesa la respuesta, **Then** proporciona los datos necesarios para apoyar la operación de entrega o devolución.<br><br>**Given** que el servicio externo no está disponible, **When** se solicita información geográfica, **Then** el sistema gestiona el error sin exponer credenciales ni interrumpir operaciones ajenas a esa consulta. | US22, TS07 |
-| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de RentBuild. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
+<tr>
+<td>EP01</td>
+<td>Gestión de usuarios y acceso</td>
+<td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de RentBuild.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US01</td>
+<td>Registro de usuario</td>
+<td>Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma.</td>
+<td>
+Given que el usuario accede al formulario de registro<br>
+When ingresa sus datos correctamente<br>
+Then el sistema crea su cuenta<br>
+And muestra un mensaje de confirmación
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US02</td>
+<td>Inicio de sesión</td>
+<td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
+<td>
+Given que el usuario posee una cuenta registrada<br>
+When ingresa credenciales válidas<br>
+Then el sistema permite el acceso a la plataforma
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US03</td>
+<td>Gestionar perfil</td>
+<td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
+<td>
+Given que el usuario ha iniciado sesión<br>
+When modifica sus datos de perfil<br>
+Then el sistema guarda la información actualizada<br>
+And muestra los nuevos datos
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US04</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>
+Given que el usuario solicita recuperación<br>
+When ingresa su correo<br>
+Then el sistema envía instrucciones de recuperación
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US05</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>
+Given que el usuario está autenticado<br>
+When selecciona cerrar sesión<br>
+Then el sistema finaliza su sesión
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>EP02</td>
+<td>Gestión de maquinaria</td>
+<td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US06</td>
+<td>Registrar maquinaria</td>
+<td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
+<td>
+Given que el usuario tiene permisos para gestionar maquinaria<br>
+When registra los datos de un equipo<br>
+Then el sistema almacena la maquinaria en el inventario<br>
+And muestra el equipo registrado
+</td>
+<td>EP02</td>
+</tr>
+
+<tr>
+<td>US07</td>
+<td>Consultar maquinaria</td>
+<td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
+<td>
+Given que existen equipos registrados<br>
+When el usuario consulta el inventario<br>
+Then el sistema muestra la lista de maquinaria<br>
+And muestra información relevante de cada equipo
+</td>
+<td>EP02</td>
+</tr>
+
+<tr>
+<td>US08</td>
+<td>Actualizar información de maquinaria</td>
+<td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
+<td>
+Given que existe una maquinaria registrada<br>
+When el usuario modifica sus datos<br>
+Then el sistema guarda la información actualizada
+</td>
+<td>EP02</td>
+</tr>
+
+<tr>
+<td>US09</td>
+<td>Consultar disponibilidad de maquinaria</td>
+<td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
+<td>
+Given que existen equipos registrados<br>
+When el usuario consulta su disponibilidad<br>
+Then el sistema muestra si cada equipo está disponible, reservado o alquilado
+</td>
+<td>EP02</td>
+</tr>
+
+<tr>
+<td>US10</td>
+<td>Consultar estado de maquinaria</td>
+<td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
+<td>
+Given que existe una maquinaria registrada<br>
+When el usuario consulta su información<br>
+Then el sistema muestra su estado actual<br>
+And permite identificar si está disponible para alquiler
+</td>
+<td>EP02</td>
+</tr>
+
+<tr>
+<td>EP03</td>
+<td>Búsqueda y solicitud de alquiler</td>
+<td>Epic orientado a permitir que las pequeñas empresas constructoras encuentren maquinaria y gestionen solicitudes de alquiler.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US11</td>
+<td>Buscar maquinaria</td>
+<td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
+<td>
+Given que el usuario accede al catálogo de maquinaria<br>
+When busca o filtra equipos<br>
+Then el sistema muestra las maquinarias que coinciden con sus necesidades
+</td>
+<td>EP03</td>
+</tr>
+
+<tr>
+<td>US12</td>
+<td>Consultar información de maquinaria</td>
+<td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
+<td>
+Given que el usuario visualiza una maquinaria<br>
+When selecciona el equipo<br>
+Then el sistema muestra sus características, estado y condiciones de alquiler
+</td>
+<td>EP03</td>
+</tr>
+
+<tr>
+<td>US13</td>
+<td>Consultar disponibilidad para un periodo</td>
+<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
+<td>
+Given que el usuario selecciona una maquinaria y un periodo<br>
+When consulta su disponibilidad<br>
+Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
+</td>
+<td>EP03</td>
+</tr>
+
+<tr>
+<td>US14</td>
+<td>Solicitar alquiler de maquinaria</td>
+<td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
+<td>
+Given que la maquinaria está disponible<br>
+When el usuario registra una solicitud de alquiler<br>
+Then el sistema registra la solicitud<br>
+And muestra su estado
+</td>
+<td>EP03</td>
+</tr>
+
+<tr>
+<td>EP04</td>
+<td>Planes y suscripciones</td>
+<td>Epic orientado a la gestión de planes.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US15</td>
+<td>Visualizar planes disponibles</td>
+<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>
+Given que el usuario accede a la sección de planes<br>
+When visualiza opciones<br>
+Then el sistema muestra los planes con sus características y precios
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US16</td>
+<td>Suscribirse a un plan</td>
+<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>
+Given que el usuario selecciona un plan<br>
+When confirma la suscripción<br>
+Then el sistema registra el plan
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US17</td>
+<td>Cambiar de plan</td>
+<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>
+Given que el usuario tiene un plan activo<br>
+When selecciona otro<br>
+Then el sistema actualiza la suscripción
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>EP05</td>
+<td>Gestión de reservas y alquileres</td>
+<td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US18</td>
+<td>Gestionar solicitudes de alquiler</td>
+<td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
+<td>
+Given que existen solicitudes de alquiler<br>
+When el usuario consulta las solicitudes<br>
+Then el sistema muestra la información de cada solicitud<br>
+And permite identificar su estado
+</td>
+<td>EP05</td>
+</tr>
+
+<tr>
+<td>US19</td>
+<td>Confirmar o rechazar una solicitud</td>
+<td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
+<td>
+Given que existe una solicitud pendiente<br>
+When el usuario selecciona aceptar o rechazar<br>
+Then el sistema actualiza el estado de la solicitud<br>
+And muestra el nuevo estado
+</td>
+<td>EP05</td>
+</tr>
+
+<tr>
+<td>US20</td>
+<td>Consultar alquileres activos</td>
+<td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
+<td>
+Given que existen alquileres activos<br>
+When el usuario consulta sus alquileres<br>
+Then el sistema muestra los equipos alquilados<br>
+And muestra información del periodo correspondiente
+</td>
+<td>EP05</td>
+</tr>
+
+<tr>
+<td>US21</td>
+<td>Consultar estado de una solicitud de alquiler</td>
+<td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
+<td>
+Given que el usuario ha realizado una solicitud<br>
+When consulta sus solicitudes<br>
+Then el sistema muestra el estado actualizado de cada una
+</td>
+<td>EP05</td>
+</tr>
+
+<tr>
+<td>US22</td>
+<td>Gestionar entregas y devoluciones</td>
+<td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
+<td>
+Given que existe un alquiler confirmado<br>
+When se registra la entrega o devolución<br>
+Then el sistema actualiza el estado del alquiler<br>
+And registra la operación realizada
+</td>
+<td>EP05</td>
+</tr>
+
+<tr>
+<td>EP06</td>
+<td>Gestión de mantenimiento e incidencias</td>
+<td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US23</td>
+<td>Registrar mantenimiento</td>
+<td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
+<td>
+Given que existe una maquinaria registrada<br>
+When el usuario registra un mantenimiento<br>
+Then el sistema almacena la información<br>
+And la relaciona con el equipo correspondiente
+</td>
+<td>EP06</td>
+</tr>
+
+<tr>
+<td>US24</td>
+<td>Programar mantenimiento</td>
+<td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
+<td>
+Given que una maquinaria requiere mantenimiento<br>
+When el usuario registra una fecha de mantenimiento<br>
+Then el sistema guarda la programación<br>
+And permite consultar el mantenimiento pendiente
+</td>
+<td>EP06</td>
+</tr>
+
+<tr>
+<td>US25</td>
+<td>Registrar incidencia de maquinaria</td>
+<td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
+<td>
+Given que una maquinaria presenta una incidencia<br>
+When el usuario registra el problema<br>
+Then el sistema almacena la incidencia<br>
+And la relaciona con la maquinaria correspondiente
+</td>
+<td>EP06</td>
+</tr>
+
+<tr>
+<td>US26</td>
+<td>Consultar historial de maquinaria</td>
+<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
+<td>
+Given que existe una maquinaria registrada<br>
+When el usuario consulta su historial<br>
+Then el sistema muestra las operaciones asociadas al equipo
+</td>
+<td>EP06</td>
+</tr>
+
+<tr>
+<td>EP07</td>
+<td>Información y contratación del servicio</td>
+<td>Epic orientado a brindar información sobre RentBuild y facilitar el contacto de potenciales clientes con la plataforma.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US27</td>
+<td>Consultar información de RentBuild</td>
+<td>Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa.</td>
+<td>
+Given que el visitante accede al Landing Page<br>
+When revisa la información del producto<br>
+Then el sistema muestra sus principales funcionalidades y beneficios
+</td>
+<td>EP07</td>
+</tr>
+
+<tr>
+<td>US28</td>
+<td>Solicitar demostración</td>
+<td>Como potencial cliente, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
+<td>
+Given que el visitante desea conocer la plataforma<br>
+When completa y envía el formulario de demostración<br>
+Then el sistema registra la solicitud<br>
+And muestra un mensaje de confirmación
+</td>
+<td>EP07</td>
+</tr>
+
+<tr>
+<td>US29</td>
+<td>Contactar con RentBuild</td>
+<td>Como potencial cliente, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
+<td>
+Given que el visitante accede a la sección de contacto<br>
+When completa y envía sus datos y consulta<br>
+Then el sistema registra la solicitud de contacto
+</td>
+<td>EP07</td>
+</tr>
+
+<tr>
+<td>EP08</td>
+<td>Landing Page de RentBuild</td>
+<td>Epic orientado a presentar la propuesta de valor de RentBuild y facilitar la navegación de los potenciales clientes hacia las funcionalidades y acciones principales de la plataforma.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US30</td>
+<td>Visualizar propuesta de valor</td>
+<td>Como visitante, quiero identificar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
+<td>
+Given que el visitante accede al Landing Page<br>
+When visualiza la sección principal<br>
+Then el sistema muestra la propuesta de valor de RentBuild<br>
+And presenta sus principales beneficios para la gestión de alquileres
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US31</td>
+<td>Explorar funcionalidades principales</td>
+<td>Como potencial cliente, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
+<td>
+Given que el visitante se encuentra en el Landing Page<br>
+When revisa la sección de funcionalidades<br>
+Then el sistema muestra las principales funcionalidades de RentBuild<br>
+And presenta una descripción breve de cada funcionalidad
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US32</td>
+<td>Identificar la solución para mi empresa</td>
+<td>Como visitante, quiero identificar cómo RentBuild puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
+<td>
+Given que el visitante accede a la sección orientada a clientes<br>
+When selecciona o visualiza su tipo de empresa<br>
+Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US33</td>
+<td>Acceder a la Web Application</td>
+<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild.</td>
+<td>
+Given que el visitante se encuentra en el Landing Page<br>
+When selecciona el CTA para acceder a la plataforma<br>
+Then el sistema redirige al visitante hacia la Web Application
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US34</td>
+<td>Consultar el Landing Page en diferentes dispositivos</td>
+<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer RentBuild sin importar el dispositivo que utilice.</td>
+<td>
+Given que el visitante accede al Landing Page desde un dispositivo<br>
+When navega por sus diferentes secciones<br>
+Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
+And permite utilizar las funcionalidades de navegación sin pérdida de información
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US35</td>
+<td>Cambiar el idioma del Landing Page</td>
+<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de RentBuild en el idioma de mi preferencia.</td>
+<td>
+Given que el visitante accede al Landing Page<br>
+When selecciona un idioma disponible<br>
+Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
+And mantiene la estructura y funcionalidad de la página
+</td>
+<td>EP08</td>
+</tr>
+
+</table>
 
 ## 3.2. Impact Mapping
-
-El Impact Map relaciona hipótesis de negocio, personas, cambios de comportamiento y entregables. **G01:** alcanzar 20 empresas de alquiler recurrentes en los primeros seis meses de un piloto. **G02:** lograr que 10 empresas constructoras completen búsqueda, consulta de disponibilidad y solicitud en la misma ventana. Son metas propuestas, con definiciones e instrumentos pendientes descritos en 1.2.2.1; no son adopción observada. Los indicadores de 50 equipos, 30 operaciones y menos de 5 conflictos permiten contrastar utilidad y trazabilidad.
 
 ![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
 
 ## 3.3. Product Backlog
 
-El Product Backlog contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
+El Product Backlog de RentBuild contiene las historias de usuario identificadas para el desarrollo de la solución. Estas se presentan en orden correlativo según su identificador, desde US01 hasta US35.
 
-| # | Story ID | Tipo | Título | Descripción | Story Points |
-| :---: | :---: | :--- | :--- | :--- | :---: |
-| 1 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa. | 2 |
-| 2 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con RentBuild. | 3 |
-| 3 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si RentBuild se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
-| 4 | US27 | User Story | Consultar información de RentBuild | Como visitante, quiero consultar información de RentBuild para conocer la solución y su propuesta de valor. | 2 |
-| 5 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
-| 6 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona RentBuild. | 2 |
-| 7 | US29 | User Story | Contactar con RentBuild | Como visitante, quiero contactar con RentBuild para realizar consultas sobre la solución. | 2 |
-| 8 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar RentBuild desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
-| 9 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar RentBuild en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
-| 10 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
-| 11 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
-| 12 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
-| 13 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 14 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
-| 15 | TS11 | Technical Story | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | 5 |
-| 16 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en RentBuild. | 5 |
-| 17 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
-| 18 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
-| 19 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
-| 20 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
-| 21 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
-| 22 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
-| 23 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
-| 24 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
-| 25 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
-| 26 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
-| 27 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
-| 28 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de RentBuild. | 5 |
-| 29 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
-| 30 | TS16 | Technical Story | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | 5 |
-| 31 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
-| 32 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
-| 33 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
-| 34 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
-| 35 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
-| 36 | TS12 | Technical Story | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de RentBuild. | 5 |
-| 37 | TS13 | Technical Story | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de RentBuild. | 3 |
-| 38 | TS14 | Technical Story | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | 3 |
-| 39 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece RentBuild. | 3 |
-| 40 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
-| 41 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
-| 42 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
-| 43 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
-| 44 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
-| 45 | TS01 | Technical Story | Exponer API REST de RentBuild | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de RentBuild y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
-| 46 | TS15 | Technical Story | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | 3 |
-| 47 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en RentBuild para poder acceder a las funcionalidades de la plataforma. | 5 |
-| 48 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
-| 49 | US04 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
-| 50 | US05 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
-| 51 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de RentBuild y controlar el acceso según el tipo de usuario. | 5 |
+| # Orden | User Story ID | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 2 | US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 3 | US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 4 | US04 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 5 | US05 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 6 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en RentBuild. | 5 |
+| 7 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 8 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 9 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 10 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 11 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 12 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 13 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 14 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 15 | US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece RentBuild. | 3 |
+| 16 | US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 17 | US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 18 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 19 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 20 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 21 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud de alquiler para conocer su situación actual. | 3 |
+| 22 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 23 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 24 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 25 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 26 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 27 | US27 | Consultar información de RentBuild | Como visitante, quiero consultar información de RentBuild para conocer la solución y su propuesta de valor. | 2 |
+| 28 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona RentBuild. | 2 |
+| 29 | US29 | Contactar con RentBuild | Como visitante, quiero contactar con RentBuild para realizar consultas sobre la solución. | 2 |
+| 30 | US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa. | 2 |
+| 31 | US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con RentBuild. | 3 |
+| 32 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si RentBuild se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 33 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
+| 34 | US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar RentBuild desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 35 | US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar RentBuild en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+
+<div style="page-break-before: always;"></div>
 
 # Capítulo IV: Product Design
 
@@ -1419,7 +1741,7 @@ El Product Backlog contiene las User Stories y Technical Stories identificadas p
 
 Las **Style Guidelines** de RentBuild establecen las decisiones visuales y de interacción que deben mantenerse de forma consistente en la Landing Page y en la Web Application. Estas pautas funcionan como referencia común para el equipo al momento de diseñar e implementar interfaces, assets y componentes, evitando variaciones innecesarias entre productos y dispositivos.
 
-La propuesta toma como base la identidad ya implementada en la Landing Page de RentBuild y la extiende a la Web Application. Además, se adoptan principios de **Material Design** para la jerarquía, los estados, el feedback visual y la consistencia de los componentes. En la futura implementación de la Web Application, estos criterios se alinean con el uso de **PrimeVue**, manteniendo las pautas de Material Design exigidas por el curso.
+La propuesta toma como base la identidad ya implementada en la Landing Page de RentBuild y la extiende a la Web Application. Además, se adoptan principios de **Material Design** para la jerarquía, los estados, el feedback visual y la consistencia de los componentes. En la futura implementación de la Web Application, estos criterios se alinean con el uso de **Angular Material**.
 
 ### 4.1.1. General Style Guidelines
 
@@ -1434,7 +1756,7 @@ El tono de comunicación de RentBuild se define como **serio, formal, respetuoso
 
 #### Branding
 
-El isotipo de RentBuild se construye a partir de una representación simplificada y abstracta de una maquinaria de construcción, principalmente inspirada en la estructura de una excavadora. Esta elección busca establecer una relación visual inmediata con el sector en el que se especializa la plataforma: el alquiler de maquinaria y equipos para construcción. Asimismo, la forma del isotipo integra de manera sutil la inicial “R” de RentBuild, reforzando la identidad propia de la marca.
+El isotipo de RentBuild se construye a partir de una representación simplificada y abstracta de una maquinaria de construcción, principalmente inspirada en la estructura de una excavadora. Esta elección busca establecer una relación visual inmediata con el sector en el que se especializa la plataforma: el alquiler de maquinaria y equipos para construcción. Asimismo, la forma del isotipo integra de manera sutil la inicial “R” de RentBuild, reforzando la identidad propia de la marca. 
 
 #### Typography
 
@@ -1451,6 +1773,7 @@ Se establece la siguiente jerarquía tipográfica como referencia:
 | Caption / Helper   | Textos secundarios, estados, etiquetas, metadatos y mensajes de apoyo              | Inter               |       400–500 |
 | Button Label       | Call to Action (CTA), botones de navegación y acciones de la interfaz              | Inter               |           600 |
 | Language Selector  | Opciones y controles relacionados con la selección de idioma                       | Poppins             |       500–600 |
+
 
 #### Colors
 
@@ -1487,6 +1810,7 @@ Las cards, formularios y paneles emplean sombras suaves, utilizando como referen
        alt="General Style Guidelines de RentBuild"
        width="100%">
 </p>
+
 
 ### 4.1.2. Web Style Guidelines
 
@@ -1554,7 +1878,7 @@ El recorrido principal de la Landing Page sigue aproximadamente la siguiente sec
 
 Esta estructura permite acompañar al visitante desde el descubrimiento inicial de RentBuild hasta la evaluación de sus funcionalidades y planes, finalizando con una posible acción de contacto o conversión.
 
-En la **Web Application**, la información se organiza principalmente **por tópicos y tareas**, utilizando una barra lateral persistente que permite acceder directamente a las principales funcionalidades del sistema.
+En la **Web Application**, la información se organiza principalmente **por tópicos y tareas**, utilizando una barra lateral persistente que permite acceder directamente a las principales funcionalidades del sistema. 
 
 - **Perfil:** permite visualizar la información correspondiente a la cuenta del usuario.
 - **Inventario:** presenta la maquinaria registrada junto con información como categoría, estado y unidades disponibles.
@@ -1602,7 +1926,7 @@ El color funciona como apoyo visual para reconocer rápidamente estos estados, p
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-Los **SEO Tags y Meta Tags** permiten identificar y describir correctamente la Landing Page de RentBuild para navegadores, motores de búsqueda y dispositivos.
+Los **SEO Tags y Meta Tags** permiten identificar y describir correctamente la Landing Page de RentBuild para navegadores, motores de búsqueda y dispositivos. 
 
 | Producto | Tag | Valor |
 |---|---|---|
@@ -1840,9 +2164,7 @@ Los wireframes de las aplicaciones web de RentBuild delinean la estructura y org
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-**Trazabilidad del wireflow general:** inventario US06–US10; búsqueda/detalle US11–US13; solicitudes US14/US18/US19/US21; alquileres y retorno US20/US22; mantenimiento US23–US26; planes US15–US17; perfil/acceso US01–US05. El gráfico recuperado es navegación general y no acredita wireflows completos por cada user goal. Su actualización por objetivo y las variantes mobile permanecen pendientes.
-
-Los wireflow diagrams de la Web Application de RentBuild representan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realizan los usuarios dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las pantallas entre sí y cómo fluye la experiencia de uso de acuerdo con las acciones y decisiones del usuario.
+Los wireflow diagrams de la Web Application de RentBuildrepresentan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realiza el usuario dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las distintas pantallas y cómo avanza la experiencia de uso en función de las acciones y decisiones realizadas por el usuario.
 
 En el caso de RentBuild, se ha definido un wireflow general que abarca desde el proceso inicial de autenticación y registro hasta las principales funcionalidades destinadas a las empresas de alquiler de maquinaria. El diagrama permite observar de manera global cómo el usuario ingresa a la plataforma, selecciona el tipo de empresa correspondiente y posteriormente accede a los módulos necesarios para gestionar maquinaria, solicitudes, alquileres y actividades relacionadas con su operación.
 
@@ -2053,74 +2375,63 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los siguientes suplementos mejoran la lectura de los flujos por objetivo y concilian su semántica con las US vigentes. Incluyen un resultado esperado y rutas alternativas; seis incorporan mockups Figma ya presentes en el informe, sin modificar sus píxeles. **Son propuestas de diseño, no capturas de ejecución ni un nuevo export de FigJam/LucidChart/Overflow.** La publicación formal en esa herramienta, la cobertura de todos los objetivos y los estados mobile continúan pendientes.
+El User Flow Diagram de la Web Application de **RentBuild** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
-La recuperación de contraseña por correo, pagos, cancelación de reserva y confirmación adicional de recepción que aparecen en exports anteriores no se declaran implementados ni se atribuyen a una US de otro rol. Se emplea el modelo común de 2.5: solicitud Pending → Approved/Rejected; aprobación compromete periodo; entrega precede devolución.
+#### Authentication and Registration User Flow
 
-| User goal / persona | US relacionadas | Condición y alternativa |
-|---|---|---|
-| Registrar o actualizar equipo / Armando Casas | US06–US10 | Datos válidos y equipo propio; rechazar duplicidad o información incompleta. |
-| Encontrar y solicitar equipo / Andrea Torres | US11–US14 | Periodo válido y disponible; conservar contexto de búsqueda si no está disponible. |
-| Decidir solicitud / Armando Casas | US18, US19 | Solicitud propia y pendiente; aprobar exige disponibilidad vigente. Rechazar exige motivo, sin exigir disponibilidad. |
-| Entregar y registrar retorno / Armando Casas | US20, US22 | Contrato confirmado, una entrega y devolución posterior; rechazar repetición o paso previo ausente. |
-| Gestionar condición/mantenimiento / Armando Casas | US23–US26 | Equipo propio e intervención completa; no liberar si existe otro bloqueo. |
-| Seguir solicitud propia / Andrea Torres | US21 | Consultar el último estado propio; no exponer solicitudes de otra empresa. |
-| Elegir o cambiar plan / Armando Casas | US15–US17 | Plan habilitado; no repetir el mismo plan vigente; tras vencimiento puede empezar nuevo mes de demo. |
+El Authentication and Registration User Flow representa el proceso transversal mediante el cual una persona obtiene acceso a RentBuild, independientemente del tipo de empresa a la que pertenece. El flujo contempla tanto el ingreso de usuarios existentes como la creación de nuevas cuentas, la recuperación de credenciales y la validación de las condiciones necesarias para acceder al workspace correspondiente.
 
-#### User goal: Registrar / actualizar equipo
+El recorrido comienza cuando el usuario abre la plataforma y el sistema comprueba si existe una sesión activa. En caso contrario, se presenta la pantalla de inicio de sesión, desde la cual el usuario puede autenticarse, registrarse o iniciar el proceso de recuperación de contraseña. Cuando las credenciales son válidas, el sistema identifica el tipo de compañía y redirige al usuario hacia el entorno que le corresponde.
 
-El proveedor parte del inventario y solicita registrar o actualizar información. Los datos incompletos o seriales duplicados no reemplazan un registro válido. El mismo objetivo debe dividirse en los estados de formulario nuevos/editados en el export formal.
+Durante el registro se distingue entre los dos segmentos atendidos por RentBuild: empresas de alquiler de maquinaria y empresas constructoras o contratistas. Las empresas constructoras pueden activar su cuenta directamente, mientras que las empresas de alquiler deben seleccionar un plan de suscripción y completar el proceso de pago antes de habilitar el acceso a las funcionalidades de la plataforma.
 
-![Suplemento de User Flow: Registrar / actualizar equipo](assets/tb1-design/userflow-inventory.png)
+Asimismo, el flujo contempla escenarios alternativos como credenciales incorrectas, pagos no completados, suscripciones inactivas y recuperación de contraseña mediante correo electrónico. De esta manera, el diagrama no representa únicamente el camino exitoso, sino también las principales situaciones que pueden presentarse durante el acceso.
 
-#### User goal: Encontrar y solicitar equipo
+En conjunto, este User Flow permite visualizar cómo RentBuild controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-La constructora busca, inspecciona características y consulta un periodo. Si el periodo es válido y disponible envía una solicitud Pending; una consulta negativa conserva las fechas para corregirlas. Enviar no significa que ya exista aprobación o contrato.
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width="800px">
 
-![Suplemento de User Flow: Encontrar y solicitar equipo](assets/tb1-design/userflow-request.png)
+#### Rental Company Core Domain User Flow
 
-#### User goal: Decidir una solicitud
+El Rental Company Core Domain User Flow representa las principales operaciones que realiza una empresa de alquiler de maquinaria dentro de RentBuild una vez que ha obtenido acceso a su workspace. El flujo se concentra en las actividades directamente relacionadas con la administración de maquinaria y con el ciclo completo de atención de un alquiler.
 
-El proveedor revisa solicitudes y decide. Aprobar exige comprobar disponibilidad nuevamente para evitar solapamientos; rechazar conserva el motivo. La reserva representa el compromiso del periodo, no una segunda solicitud.
+El recorrido parte desde el Rental Company Dashboard, desde donde el usuario puede acceder a los módulos de Equipment, Rental Requests, Reservations, Rentals y Maintenance. Estos módulos representan las capacidades principales que permiten controlar la disponibilidad y utilización de la maquinaria.
 
-![Suplemento de User Flow: Decidir una solicitud](assets/tb1-design/userflow-decision.png)
+En Equipment, la empresa administra su inventario mediante el registro de nuevos equipos, la actualización de información y la consulta de detalles. Esta información constituye la base para que la maquinaria pueda ser posteriormente encontrada y solicitada por empresas constructoras.
 
-#### User goal: Entregar y registrar devolución
+En Rental Requests, la empresa revisa las solicitudes recibidas. Cada solicitud puede ser aprobada o rechazada. Cuando se aprueba, la empresa constructora es notificada y se genera una reserva asociada al equipo y al período solicitado. Si se rechaza, se registra el motivo correspondiente y se comunica la decisión al solicitante.
 
-El proveedor registra entrega del contrato aprobado y luego retorno/condición. No se permite retorno sin entrega ni repetir la misma operación. La intervención requerida después de inspección debe impedir liberar prematuramente el equipo.
+El módulo Reservations permite administrar las asignaciones ya confirmadas. Una reserva puede consultarse, cancelarse o continuar hacia el registro de un alquiler. Esto establece una separación entre la intención inicialmente aprobada y la operación de alquiler que posteriormente será ejecutada.
 
-![Suplemento de User Flow: Entregar y registrar devolución](assets/tb1-design/userflow-rental.png)
+En Rentals, la empresa administra las etapas operativas del servicio. El proveedor registra la entrega del equipo y posteriormente espera la confirmación de recepción por parte de la empresa constructora antes de considerar que la maquinaria se encuentra efectivamente en alquiler. Al finalizar el período, la constructora inicia la devolución y la empresa de alquiler revisa el retorno, inspecciona el equipo y confirma su recepción antes de completar el alquiler.
 
-#### User goal: Gestionar condición y mantenimiento
+Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar su estado y devolver un equipo a disponibilidad cuando nuevamente se encuentre en condiciones de ser alquilado.
 
-El proveedor registra antecedentes y sigue la intervención. Completar una intervención permite liberar únicamente si el equipo está apto y no queda otra restricción; no se asume que todas las incidencias generen mantenimiento.
+Por ello, este User Flow representa el núcleo operativo de RentBuild para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-![Suplemento de User Flow: Gestionar condición y mantenimiento](assets/tb1-design/userflow-maintenance.png)
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width="800px">
 
-#### User goal: Seguir solicitud propia
+#### Construction Company Core Domain User Flow
 
-La constructora consulta sus solicitudes con el estado de la última decisión. La consulta de operaciones ajenas se deniega. La sección no incorpora cancelación ni alquileres del proveedor dentro de US21.
+El Construction Company Core Domain User Flow representa el recorrido principal de una pequeña empresa constructora o contratista que utiliza RentBuild para encontrar maquinaria, solicitar su alquiler y realizar seguimiento a las operaciones asociadas.
 
-![Suplemento de User Flow: Seguir solicitud propia](assets/tb1-design/userflow-tracking.png)
+El flujo comienza desde el Construction Company Dashboard, desde donde el usuario puede acceder principalmente a Search Equipment, My Requests, My Reservations y My Rentals. A diferencia de la empresa de alquiler, este segmento no administra inventario propio dentro del sistema, sino que utiliza RentBuild como medio para encontrar y contratar maquinaria ofrecida por proveedores.
 
-#### User goal: Elegir / cambiar plan
+En Search Equipment, la empresa constructora explora el catálogo de maquinaria disponible, puede aplicar filtros según categoría, ubicación, disponibilidad u otras características, y acceder al detalle de un equipo. Desde esta vista puede seleccionar el período requerido y comprobar si la maquinaria se encuentra disponible para dichas fechas. Cuando la disponibilidad es favorable, puede generar una solicitud de alquiler.
 
-El PR12 respalda el recorrido frontend sobre Fake API. Se presenta referencia de precio mensual y confirmación de demo; un plan vigente conserva periodo al cambiar, y uno vencido puede comenzar un mes nuevo. Carga/error bloquean confirmación y habilitan reintento; no existe pago ni renovación programada.
+Las solicitudes realizadas pasan a My Requests, donde la constructora puede consultar su estado. Una solicitud puede encontrarse pendiente mientras espera la respuesta del proveedor, ser aprobada para continuar con el proceso o ser rechazada. Mientras corresponda, el usuario también puede cancelar solicitudes que todavía no hayan avanzado a etapas posteriores.
 
-![Suplemento de User Flow: Elegir / cambiar plan](assets/tb1-design/userflow-subscriptions.png)
+Una vez confirmada la asignación del equipo, la operación pasa a My Reservations. Desde este módulo la empresa consulta las reservas vigentes, los equipos involucrados, los proveedores y los períodos confirmados. También puede cancelar una reserva cuando ya no requiera la maquinaria, notificando al proveedor y liberando el período previamente reservado.
 
-**Cobertura pendiente:** acceso/recuperación/perfil (US01–US05), variantes independientes de registro/edición y de mantenimiento, y todos los estados mobile deben conciliarse con sus wireflows y mockups por objetivo. Las stories de landing US27–US35 conservan su alcance público. No se marca completa la exigencia de flujos/prototipos por agregar estos suplementos.
+Posteriormente, cuando la reserva se convierte en alquiler, la operación aparece en My Rentals. Desde allí la constructora puede consultar la maquinaria que se encuentra en uso, revisar las fechas de devolución y realizar las acciones que le corresponden dentro de la operación. Cuando el proveedor registra una entrega, la constructora confirma que recibió el equipo. Al finalizar el uso de la maquinaria, la constructora inicia el proceso de devolución, quedando la confirmación final y la inspección en manos de la empresa de alquiler.
+
+En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de RentBuild, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
+
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width="800px">
 
 ## 4.5. Web Applications Prototyping
 
-La propuesta de interacción usa navegación por contexto, vistas de lista/detalle y confirmación de acciones, conservando resultados o datos de entrada cuando ocurre un error. Los prototipos deben simular los happy/unhappy paths de 4.4.4 tanto en Desktop como Mobile Web Browser, con estados de foco, mensajes y navegación consistentes.
-
-| Producto / viewport | Evidencia disponible | Pendiente de cierre |
-|---|---|---|
-| Web Application / Desktop | Wireframes y mockups previos; suplementos de navegación; ejecución local del módulo subscriptions en 5.2.2.5. | Prototipo Figma interactivo con todos los recorridos seleccionados y video de navegación en Stream con screenshot. |
-| Web Application / Mobile | Propuesta responsive descrita en el diseño. | Completar estados de mockup/prototipo mobile y sus recorridos, y video con screenshot. |
-
-El enlace `https://dataflux-landing-page.vercel.app/` corresponde a la **landing histórica de AV1**; no se utiliza como evidencia de prototipo de la Web Application ni de sus operaciones. Los accesos públicos de TB1, export de Figma y videos se incorporarán cuando se verifiquen. Una ejecución local de frontend no reemplaza un prototipo ni el video exigido.
+Este apartado presenta el prototipo funcional de RentBuild, desarrollado a partir de los wireframes y mock-ups definidos previamente y publicado en Vercel. En él se puede recorrer el flujo principal de la plataforma, desde el inicio de sesión hasta la gestión de inventario, solicitudes de alquiler, mantenimiento y catálogo, de modo que el equipo y los usuarios puedan probar la navegación y validar la propuesta de interfaz. Prototipo: https://dataflux-landing-page.vercel.app/
 
 ## 4.6. Domain-Driven Software Architecture
 
@@ -2152,56 +2463,64 @@ Para facilitar su comprensión, el modelado se presenta mediante diagramas indiv
 
 **Subscription Plans Bounded Context**
 
-![Subscription Plans Bounded Context](assets/images/chapter-4/subscription-plans-bounded-context.png)
-
-**External Systems**
-
-![External Systems](assets/images/chapter-4/external-systems.png)
-
-**Generic IAM Bounded Context**
-
-![Generic IAM Bounded Context](assets/images/chapter-4/generic-iam-bounded-context.png)
-
-**IAM Bounded Context**
-
-![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
-
-**Profiles Bounded Context**
-
-![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
+![Design-Level Event Storming](assets/md-images-chapter4/design-level-event-storming.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
-Rental Operator, Construction Manager y System Administrator interactúan con RentBuild. Google Maps, Stripe y SendGrid forman parte de las integraciones previstas para geolocalización, pagos y correo.
+El Software Architecture Context Diagram presenta a **RentBuild** como un único sistema de software y muestra su interacción con los principales usuarios y servicios externos. En este nivel del C4 Model no se representan todavía los componentes internos, containers, bounded contexts ni tecnologías de implementación, ya que el objetivo es delimitar el alcance funcional de la solución y reconocer las dependencias externas con las que se comunica.
 
-![Software Architecture Context Diagram](assets/tb1-reference-design/rentbuild-c4-context-diagram.png)
+Los principales actores que interactúan con RentBuild son:
+
+- **Rental Operator:** representa al usuario perteneciente a una empresa de alquiler de maquinaria. Utiliza RentBuild para administrar equipos, solicitudes de alquiler, reservas, entregas, devoluciones, incidencias y actividades de mantenimiento.
+- **Construction Manager:** representa al usuario perteneciente a una empresa constructora. Utiliza la plataforma para buscar maquinaria, revisar disponibilidad, realizar solicitudes de alquiler y efectuar el seguimiento de sus reservas y alquileres activos.
+- **System Administrator:** representa al responsable de administrar el acceso a la plataforma, supervisar su operación y atender casos excepcionales que requieran intervención administrativa.
+
+RentBuild también mantiene comunicación con servicios externos necesarios para determinadas capacidades del producto:
+
+- **Google Maps Platform:** proporciona servicios de geolocalización y mapas utilizados para apoyar la localización de maquinaria y la coordinación de entregas y devoluciones.
+- **Stripe:** procesa los pagos asociados a los planes de suscripción de RentBuild.
+- **SendGrid:** proporciona servicios de correo transaccional para comunicaciones relacionadas con cuentas, reservas, alquileres, suscripciones y otras notificaciones del sistema.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/context/rentbuild-c4-context-diagram.png"
+       alt="RentBuild Software Architecture Context Diagram"
+       width="90%">
+</p>
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-La arquitectura comprende Landing Page, Web Application, RESTful API y Database, con sus tecnologías y comunicaciones.
+The Software Architecture Container Diagram presents the main containers that compose the RentBuild platform and the technologies used to implement them.
 
-![Software Architecture Container Diagram](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.png)
+RentBuild is composed of a public **Landing Page**, a **Single Page Application**, a **RESTful API**, and a **MySQL Database**. The Landing Page provides public information about the platform, while the Single Page Application allows authenticated users to interact with the main business capabilities. The RESTful API exposes the application services and manages access to persistent data.
 
-### 4.6.4. Software Architecture Component Diagrams
+Additionally, the RESTful API communicates with external services such as **Google Maps Platform** for geolocation capabilities, **Stripe** for subscription payment processing, and **SendGrid** for transactional email delivery.
+
+<p align="center">
+  <img src="./assets/md-images-chapter4/c4/container/rentbuild-c4-system2-container-diagram.png"
+       alt="RentBuild Software Architecture Container Diagram"
+       width="90%">
+</p>
+
+### 4.6.4. Software Architecture Components Diagrams
 
 Los diagramas de componentes de arquitectura de software presentan una vista detallada de la organización interna de los principales contenedores frontend y backend que conforman RentBuild.
 
-A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
+A nivel de frontend, la Single Page Application desarrollada con Vue se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
 
-Además, para cada bounded context del frontend se presenta una vista detallada basada en las capas DDD Presentation, Application, Domain e Infrastructure. Estas vistas permiten identificar los componentes internos, sus responsabilidades, tecnologías y relaciones. Complementariamente, se mantiene una vista específica de la Presentation Layer, donde se muestran con mayor detalle los componentes Angular responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
+Además, para cada bounded context del frontend se presenta una vista detallada basada en las capas DDD Presentation, Application, Domain e Infrastructure. Estas vistas permiten identificar los componentes internos, sus responsabilidades, tecnologías y relaciones. Complementariamente, se mantiene una vista específica de la Presentation Layer, donde se muestran con mayor detalle los componentes Vue responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
 
-A nivel de backend, la RESTful API desarrollada con Java y Spring Boot mantiene la misma organización basada en bounded contexts. Una vista general presenta los contextos contenidos dentro de la aplicación backend, mientras que los diagramas individuales descomponen cada bounded context en las capas Interfaces, Application, Domain e Infrastructure siguiendo principios de Domain-Driven Design.
+A nivel de backend, la RESTful API desarrollada con C# y ASP.NET Core mantiene la misma organización basada en bounded contexts. Una vista general presenta los contextos contenidos dentro de la aplicación backend, mientras que los diagramas individuales descomponen cada bounded context en las capas Interfaces, Application, Domain e Infrastructure siguiendo principios de Domain-Driven Design.
 
 A continuación, se presentan las diferentes vistas de componentes que conforman la arquitectura de RentBuild.
 
 #### Frontend General Components Diagram
 
-El Frontend General Components Diagram presenta la organización general de la Single Page Application de RentBuild. El frontend está implementado con Angular y se estructura alrededor de los bounded contexts definidos para el dominio del negocio.
+El Frontend General Components Diagram presenta la organización general de la Single Page Application de RentBuild. El frontend está implementado con Vue y PrimeVue y se estructura alrededor de los bounded contexts definidos para el dominio del negocio.
 
 Los mecanismos de layout y routing de la aplicación permiten coordinar la navegación hacia IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Asimismo, Shared Frontend proporciona capacidades reutilizables de interfaz y servicios transversales, mientras que la infraestructura del frontend permite la comunicación con la RentBuild Backend API.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-general-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-general-component-diagram.png"
        alt="RentBuild Frontend General Components Diagram"
        width="95%">
 </p>
@@ -2215,7 +2534,7 @@ La Presentation Layer administra las vistas y las interacciones relacionadas con
 IAM también proporciona información de la cuenta autenticada a otros contextos del frontend y utiliza las capacidades compartidas proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-iam-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-iam-component-diagram.png"
        alt="RentBuild IAM Frontend Components Diagram"
        width="90%">
 </p>
@@ -2232,7 +2551,7 @@ La Application Layer coordina los casos de uso y el estado asociado con los proc
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso a infraestructura y dominio, y cómo la infraestructura establece la comunicación con los servicios backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/IAM-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/IAM-Frontend-Detailed.png"
        alt="RentBuild IAM Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2246,7 +2565,7 @@ La Presentation Layer contiene las vistas y formularios asociados con los perfil
 Este bounded context también utiliza la información de la cuenta autenticada proporcionada por IAM y las capacidades comunes proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-profiles-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-profiles-component-diagram.png"
        alt="RentBuild Profiles Frontend Components Diagram"
        width="90%">
 </p>
@@ -2262,7 +2581,7 @@ La Application Layer coordina las consultas, actualizaciones y el estado relacio
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend relacionados con Profiles.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Profiles-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/Profiles-Frontend-Detailed.png"
        alt="RentBuild Profiles Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2274,7 +2593,7 @@ El bounded context Inventory del frontend administra el catálogo de maquinaria,
 Su Application Layer coordina los flujos relacionados con la gestión y consulta del inventario, comunicándose con las capas Domain e Infrastructure. Inventory también proporciona información sobre maquinaria y disponibilidad requerida por Rentals y coordina con Maintenance los cambios relacionados con el estado de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-inventory-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-inventory-component-diagram.png"
        alt="RentBuild Inventory Frontend Components Diagram"
        width="90%">
 </p>
@@ -2290,7 +2609,7 @@ La Application Layer coordina los casos de uso y el estado asociado con la gesti
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Inventory.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Inventory-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/Inventory-Frontend-Detailed.png"
        alt="RentBuild Inventory Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2302,7 +2621,7 @@ El bounded context Rentals del frontend soporta la interacción correspondiente 
 Este contexto utiliza la información de los equipos y su disponibilidad proporcionada por Inventory, así como la información de empresas y participantes administrada por Profiles. Su Infrastructure Layer se encarga de la comunicación con los endpoints de Rentals expuestos por el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-rentals-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-rentals-component-diagram.png"
        alt="RentBuild Rentals Frontend Components Diagram"
        width="90%">
 </p>
@@ -2318,7 +2637,7 @@ La Application Layer coordina los casos de uso y el estado asociados con el cicl
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Rentals.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Rentals-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/Rentals-Frontend-Detailed.png"
        alt="RentBuild Rentals Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2330,7 +2649,7 @@ El bounded context Maintenance del frontend administra las programaciones de man
 Este contexto colabora con Inventory para reflejar cambios en el estado y disponibilidad de los equipos, y con Rentals cuando una incidencia o actividad de mantenimiento afecta a una maquinaria asociada con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-maintenance-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Frontend Components Diagram"
        width="90%">
 </p>
@@ -2346,7 +2665,7 @@ La Application Layer coordina los casos de uso y el estado asociados con las ope
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Maintenance.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Maintenance-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/Maintenance-Frontend-Detailed.png"
        alt="RentBuild Maintenance Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2358,7 +2677,7 @@ El bounded context Subscriptions del frontend administra los planes disponibles,
 Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para obtener la información de la empresa asociada con la suscripción. Su Infrastructure Layer se comunica con los servicios correspondientes de Subscriptions disponibles en el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-subscriptions-component-diagram.png"
        alt="RentBuild Subscriptions Frontend Components Diagram"
        width="90%">
 </p>
@@ -2374,7 +2693,7 @@ La Application Layer coordina los casos de uso y el estado asociados con la gest
 Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Subscriptions.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Subscriptions-Frontend-Detailed.png"
+  <img src="./assets/md-images-chapter4/c4/components/Subscriptions-Frontend-Detailed.png"
        alt="RentBuild Subscriptions Frontend Detailed Component Diagram"
        width="95%">
 </p>
@@ -2392,21 +2711,21 @@ Por su parte, la Infrastructure Layer proporciona mecanismos técnicos compartid
 De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales comunes dentro de los bounded contexts y mantiene dichas responsabilidades separadas de los conceptos específicos del dominio.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-shared-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-frontend-shared-component-diagram.png"
        alt="RentBuild Shared Frontend Components Diagram"
        width="90%">
 </p>
 
 #### Backend General Components Diagram
 
-El Backend General Components Diagram presenta la organización general de la RentBuild API Application implementada con Java y Spring Boot.
+El Backend General Components Diagram presenta la organización general de la RentBuild API Application implementada con C# y ASP.NET Core.
 
 El contenedor backend está organizado alrededor de seis bounded contexts de negocio: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, un componente Shared proporciona capacidades técnicas y transversales reutilizables por los diferentes contextos del backend.
 
-La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
+La Single Page Application desarrollada con Vue aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-general-component-diagram.png"
        alt="RentBuild Backend General Components Diagram"
        width="95%">
 </p>
@@ -2417,10 +2736,10 @@ El bounded context IAM del backend administra la autenticación, autorización, 
 
 La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
 
-Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
+Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como ASP.NET Core Identity, codificación de contraseñas y autenticación basada en tokens JWT. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-iam-component-diagram.png"
        alt="RentBuild IAM Backend Component Diagram"
        width="90%">
 </p>
@@ -2434,7 +2753,7 @@ La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Appl
 La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-profiles-component-diagram.png"
        alt="RentBuild Profiles Backend Component Diagram"
        width="90%">
 </p>
@@ -2445,12 +2764,12 @@ El bounded context Inventory del backend administra la maquinaria, categorías, 
 
 La Interfaces Layer expone los endpoints REST correspondientes a la gestión del inventario. La Application Layer coordina el registro y actualización de maquinaria, consultas de disponibilidad, gestión de tarifas y demás operaciones relacionadas con el inventario.
 
-La Domain Layer contiene los conceptos y reglas de negocio asociados con los equipos, mientras que la Infrastructure Layer proporciona las implementaciones de persistencia mediante Spring Data JPA.
+La Domain Layer contiene los conceptos y reglas de negocio asociados con los equipos, mientras que la Infrastructure Layer proporciona las implementaciones de persistencia mediante Entity Framework Core.
 
 Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mientras que Maintenance interactúa con este contexto cuando las actividades de mantenimiento modifican el estado operativo o la disponibilidad de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-inventory-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-inventory-component-diagram.png"
        alt="RentBuild Inventory Backend Component Diagram"
        width="90%">
 </p>
@@ -2464,7 +2783,7 @@ La Interfaces Layer expone las operaciones REST requeridas por el frontend. La A
 La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-rentals-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-rentals-component-diagram.png"
        alt="RentBuild Rentals Backend Component Diagram"
        width="90%">
 </p>
@@ -2480,7 +2799,7 @@ La Domain Layer contiene los conceptos y reglas de negocio relacionados con el m
 Maintenance colabora con Inventory para actualizar el estado y disponibilidad de la maquinaria y con Rentals cuando una actividad de mantenimiento o incidencia afecta a un equipo asociado con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-maintenance-component-diagram.png"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Backend Component Diagram"
        width="90%">
 </p>
@@ -2496,390 +2815,78 @@ La Domain Layer contiene los conceptos y reglas de negocio correspondientes a la
 Este bounded context utiliza IAM para identificar la cuenta autenticada y Profiles para asociar la suscripción con la información de la empresa. Asimismo, un Payment Connector integra el contexto con Stripe para realizar el procesamiento de los pagos correspondientes a las suscripciones.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-subscriptions-component-diagram.png"
-       alt="RentBuild Subscriptions Backend Component Diagram"
+  <img src="./assets/md-images-chapter4/c4/components/rentbuild-backend-subscriptions-component-diagram.png"
+       alt="rentbuild Subscriptions Backend Component Diagram"
        width="90%">
 </p>
 
 ## 4.7. Software Object-Oriented Design
 
+El diseño orientado a objetos detalla la implementación de cada bounded context identificado en la arquitectura. Cada diagrama sigue la misma estructura: entidades del dominio con sus atributos y comportamiento, value objects para conceptos sin identidad propia (periodos, tarifas, direcciones), enumeraciones para los estados del Ubiquitous Language, un repositorio por agregado y un servicio de aplicación que orquesta los casos de uso de las User Stories. Los nombres están en inglés según la convención de nomenclatura del proyecto y los tipos corresponden a C#, el lenguaje de los Web Services; las etiquetas de las relaciones van en español para facilitar la lectura.
+
 ### 4.7.1. Class Diagrams
 
-## Inventory
-### A. Domain Layer
+#### Backend  Class Diagram
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
+![Class Diagram — Backend](./assets/md-images-chapter4/class-diagram-backend.png)
 
-Explicación del Proceso:
-La capa de dominio contiene el agregado raíz Equipment, el cual encapsula la lógica pura de la maquinaria. Equipment se relaciona con EquipmentCategory para su clasificación, utiliza el Value Object RentalRate para definir costos y gestiona bloques de indisponibilidad mediante AvailabilityBlock y DateRange.
+El diagrama general de clases del backend encapsula los Agregados principales (Aggregate Roots) de cada Bounded Context y define las fronteras de dominio. A fin de mantener el desacoplamiento dictado por la arquitectura DDD, la comunicación entre contextos se realiza estrictamente a través de referencias por identificadores primitivos (userId, equipmentId, planId, contractId), garantizando que cada contexto mantenga su persistencia y sus reglas de negocio aisladas.
 
-Conexión de la Capa:
-Las entidades del dominio declaran los puertos de persistencia (interfaces EquipmentRepository y EquipmentCategoryRepository). Estas interfaces pertenecen al dominio para cumplir con el principio de Inversión de Dependencias (DIP).
+#### Inventory
 
-### B. Application Layer
+![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
+Equipment es el agregado principal: pertenece a una EquipmentCategory, compone una RentalRate (tarifa diaria y semanal) y mantiene su EquipmentStatus (disponible, alquilado, en mantenimiento). Los AvailabilityBlock con su DateRange permiten responder isAvailableFor(period) sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. InventoryApplicationService cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado de la maquinaria.
 
-Explicación del Proceso:
-Contiene la clase InventoryApplicationService, responsable de coordinar los casos de uso como el registro de maquinaria (RegisterEquipmentCommand) y la verificación de disponibilidad para constructoras.
+#### Rentals
 
-Conexión de la Capa:
-InventoryApplicationService recibe llamadas desde la capa de Interfaces e interactúa directamente con el dominio invocando los métodos declarados en EquipmentRepository.
+![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
 
-### C. Infrastructure Layer
-
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
-
-Explicación del Proceso:
-Implementa el acceso a datos mediante Spring Data JPA (EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl).
-
-Conexión de la Capa:
-Se conecta con la Capa de Dominio mediante una relación de Realización/Implementación de las interfaces de repositorio (EquipmentRepository), traduciendo los Value Objects del dominio a tablas de MySQL.
-
-### D. Interfaces Layer
-
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
-
-Explicación del Proceso:
-A través de InventoryController, expone los endpoints HTTP REST que reciben las solicitudes JSON del cliente Web Angular.
-
-Conexión de la Capa:
-Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
-
-## Rentals
-### A. Domain Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
-
-Explicación del Proceso:
-Nace con el agregado RentalRequest en estado PENDING. Al aprobarse, genera la entidad RentalContract, que a su vez se compone de las entidades de seguimiento Delivery y EquipmentReturn.
-
-Conexión de la Capa:
-Declara los repositorios del dominio (RentalRequestRepository, RentalContractRepository, EquipmentReturnRepository, DeliveryRepository) y el puerto de integración InventoryAvailabilityPort para validar disponibilidad.
-
-### B. Application Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
-
-Explicación del Proceso:
-RentalApplicationService orquesta las transacciones operativas: responder solicitudes (acceptRequest), registrar la entrega física en obra (registerDelivery) y procesar la devolución del equipo (registerReturn).
-
-Conexión de la Capa:
-Conecta las peticiones de interfaz con el dominio utilizando los repositorios e invocando el adaptador de disponibilidad hacia el contexto de Inventory.
-
-### C. Infrastructure Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
-
-Explicación del Proceso:
-Proporciona las clases concretas que implementan los repositorios JPA e incluye el adaptador InventoryAvailabilityAdapter.
-
-Conexión de la Capa:
-Implementa las interfaces definidas en la capa de aplicación/dominio para realizar consultas en la base de datos MySQL.
-
-### D. Interfaces Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
-
-Explicación del Proceso:
-RentalsController gestiona las rutas REST para la creación y cambio de estado de los alquileres.
-
-Conexión de la Capa:
-Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
+RentalRequest modela la reservación: nace en estado PENDING y, al aceptarse, genera un RentalContract. El contrato compone un DateRange y registra una Delivery y un EquipmentReturn. EquipmentReturn.requiresMaintenance() es el punto de integración donde una devolución reportada con daño dispara el flujo dentro del contexto Maintenance. RentalApplicationService orquesta el ciclo completo de alquiler mediante los cuatro repositorios de infraestructura.
 
 #### Maintenance
 
-### A. Domain Layer
+![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
 
-
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
-
-
-Explicación del Proceso:
-
-Agrupa los agregados Incident (reportes de fallas) y MaintenanceRecord
-(reparaciones preventivas y correctivas).
-
-
-Conexión de la Capa:
-
-Un Incident en estado no resuelto se relaciona con un MaintenanceRecord.
-Declara la interfaz EquipmentStatusPort para notificar al contexto de
-inventario cuando una máquina entra a taller.
-
-
-### B. Application Layer
-
-
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
-
-
-Explicación del Proceso:
-
-MaintenanceApplicationService ejecuta los comandos de reporte de averías
-(reportIncident), programación de mantenimientos (scheduleMaintenance) y cierre
-técnico (completeMaintenance).
-
-
-Conexión de la Capa:
-
-Llama a los repositorios de mantenimiento e informa a través de
-EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
-
-
-### C. Infrastructure Layer
-
-
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
-
-
-Explicación del Proceso:
-
-Contiene IncidentRepositoryImpl, MaintenanceRecordRepositoryImpl y el adaptador
-InventoryEquipmentStatusAdapter.
-
-
-Conexión de la Capa:
-
-Conecta las llamadas de actualización de estado hacia la base de datos e
-interactúa con el módulo de inventario.
-
-
-### D. Interfaces Layer
-
-
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
-
-
-Explicación del Proceso:
-
-MaintenanceController mapea los endpoints de gestión de taller técnico.
-
-
-Conexión de la Capa:
-
-Envía las acciones del cliente Web a MaintenanceApplicationService.
+MaintenanceRecord distingue mantenimientos preventivos y correctivos con su ciclo de estados. Incident registra daños o fallas operativas con su nivel de severidad y puede originar formalmente un MaintenanceRecord. MaintenanceApplicationService orquesta el flujo de atención técnica y actualiza el estado de disponibilidad del equipo en comunicación con el contexto Inventory.
 
 #### Subscription
 
-### A. Domain Layer
+![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
 
-
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
-
-
-Explicación del Proceso:
-
-Contiene el plan de suscripción SubscriptionPlan y la suscripción del usuario
-UserSubscription vinculada mediante el Value Object DateRange. (Asegurarse de
-conectar el Enum BillingCycle con una línea hacia SubscriptionPlan y utilizar
-el tipo de dato Boolean para autoRenew).
-
-
-Conexión de la Capa:
-
-Declara las interfaces UserSubscriptionRepository, SubscriptionPlanRepository y
-el puerto de pasarela de pago PaymentConnector.
-
-
-### B. Application Layer
-
-
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
-
-
-Explicación del Proceso:
-
-SubscriptionApplicationService coordina la selección de planes y la facturación
-recurrente de los usuarios.
-
-
-Conexión de la Capa:
-
-Utiliza los repositorios de dominio y delega el cobro al puerto
-PaymentConnector.
-
-
-### C. Infrastructure Layer
-
-
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
-
-
-Explicación del Proceso:
-
-Contiene las implementaciones JPA y el adaptador externo
-StripePaymentConnector.
-
-
-Conexión de la Capa:
-
-Realiza la integración de pagos con servicios de terceros y persiste el estado
-de la suscripción.
-
-
-### D. Interfaces Layer
-
-
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
-
-
-Explicación del Proceso:
-
-SubscriptionController expone las llamadas de selección, cambio o cancelación
-de planes.
-
-
-Conexión de la Capa:
-
-Envía las peticiones REST a SubscriptionApplicationService.
+SubscriptionPlan define los términos de precios, beneficios y ciclo de facturación de la plataforma. UserSubscription vincula una cuenta de usuario con su plan activo mediante el value object DateRange y controla los estados de renovación o cancelación automática. SubscriptionApplicationService se integra con la pasarela externa de pagos para gestionar el flujo comercial de las membresías.
 
 #### IAM
 
-### A. Domain Layer
+![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
 
-
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
-
-
-Explicación del Proceso:
-
-La entidad raíz User se compone del Value Object Credentials (correo y hash de
-contraseña) y gestiona los permisos con UserRole. (Verificar que UserRole y
-UserStatus estén conectados explícitamente a User).
-
-
-Conexión de la Capa:
-
-Declara UserRepository para la búsqueda y registro seguro de cuentas.
-
-
-### B. Application Layer
-
-
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
-
-
-Explicación del Proceso:
-
-AuthenticationService ejecuta la lógica de autenticación, generación de tokens
-SessionToken y validación de credenciales.
-
-
-Conexión de la Capa:
-
-Consulta UserRepository para validar el correo y la contraseña cifrada.
-
-
-### C. Infrastructure Layer
-
-
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
-
-
-Explicación del Proceso:
-
-UserRepositoryImpl implementa la persistencia de los usuarios mediante JPA.
-
-
-Conexión de la Capa:
-
-Conecta las operaciones de la aplicación con la tabla de usuarios en la base de
-datos.
-
-
-### D. Interfaces Layer
-
-
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
-
-
-Explicación del Proceso:
-
-IAMController maneja los endpoints de /register, /login y /logout.  
-
-
-Conexión de la Capa:
-
-Recibe RegisterUserCommand o LoginCommand y los procesa con
-AuthenticationService.
+User es la entidad central, con role (empresa de alquiler o constructora) y status. Credentials es un value object que encapsula la validación de correo y contraseña, y SessionToken representa el token de acceso vigente. AuthenticationService orquesta el registro, el inicio y el cierre de sesión a través de UserRepository.
 
 #### Profiles
 
-### A. Domain Layer
+![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
 
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
-
-
-Explicación del Proceso:
-
-CompanyProfile almacena los datos de la organización e integra el Value Object
-Address con coordenadas geográficas GeoCoordinates para la localización.
-ProviderProfile extiende el perfil para las empresas de alquiler con métricas
-de reputación. (Conectar los Enums CompanyType directamente con la entidad).
-
-
-Conexión de la Capa:
-
-Declara CompanyProfileRepository y ProviderProfileRepository.
-
-
-### B. Application Layer
-
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
-
-
-Explicación del Proceso:
-
-ProfileApplicationService orquesta la creación y actualización de perfiles de
-empresa y de proveedores.
-
-
-Conexión de la Capa:
-
-Transforma los datos enviados por la interfaz e invoca a los repositorios de
-dominio.
-
-
-### C. Infrastructure Layer
-
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
-
-
-Explicación del Proceso:
-
-Implementa los repositorios de perfiles con JPA.
-
-
-Conexión de la Capa:
-
-Guarda la información de las empresas en la base de datos.
-
-
-### D. Interfaces Layer
-
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
-
-
-Explicación del Proceso:
-
-ProfilesController gestiona los endpoints REST de lectura y actualización de
-perfiles.
-
-
-Conexión de la Capa:
-
-Pasa los Comandos DTO a ProfileApplicationService.
+CompanyProfile guarda los datos de la empresa y compone un value object Address con coordenadas geográficas, que alimenta la integración con mapas. ProviderProfile extiende el perfil de una empresa de alquiler con su reputación pública —alquileres completados y tasa de cumplimiento—, respondiendo al término "Perfil de Proveedor" del Ubiquitous Language.
 
 ## 4.8. Database Design
 
+El modelo de datos traduce las entidades de cada bounded context a tablas relacionales, conservando la separación por contexto: cada grupo de tablas pertenece a un único contexto y las referencias entre contextos se resuelven por identificador (equipment_id, company_profile_id, contract_id), nunca por tablas compartidas. Los value objects se aplanan en columnas de la entidad que los contiene (Address dentro de company_profiles, RentalRate dentro de equipments, RentalPeriod como start_date/end_date). Los estados se almacenan como cadenas cortas que corresponden a las enumeraciones del diseño de clases. El DBMS es MySQL, gestionado desde la API mediante Entity Framework Core y sus migraciones. Las columnas marcadas con viñeta (•) o asterisco son obligatorias.
 ### 4.8.1. Database Diagrams
 
-![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram1.png)
+![Database Diagram](./assets/md-images-chapter4/database-diagram.png)
+
+Relaciones principales:
+
+- users 1—0..1 company_profiles: cada usuario tiene a lo sumo un perfil de empresa; company_profiles 1—0..1 provider_profiles: solo las empresas de alquiler tienen perfil público de proveedor.
+- company_profiles 1—N equipments: una empresa de alquiler posee muchos equipos; equipment_categories 1—N equipments.
+- equipments 1—N availability_blocks: bloqueos de disponibilidad por periodo.
+- rental_requests referencia al equipo, a la constructora y al proveedor; rental_requests 1—0..1 rental_contracts: una solicitud aceptada genera exactamente un contrato.
+- rental_contracts 1—0..1 deliveries y 1—0..1 equipment_returns: un contrato tiene una entrega y una devolución.
+- equipments 1—N maintenance_records y 1—N incidents; incidents 0..1—0..1 maintenance_records: una incidencia puede originar un mantenimiento correctivo; incidents puede referenciar el contrato durante el cual ocurrió.
+
+Restricciones destacadas: users.email, company_profiles.ruc y equipments.serial_number son únicos; rental_contracts.request_id, deliveries.contract_id y equipment_returns.contract_id son únicos para garantizar la relación uno a uno.
+
+---
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -2932,7 +2939,7 @@ Para el control de versiones y la colaboración en el desarrollo del informe, se
 
 Enlaces:
 
-- GitHub: https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report
+- GitHub: https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-project-report
 
 **Software Deployment**
 
@@ -2944,18 +2951,18 @@ Enlaces:
 
 ### 5.1.2. Source Code Management
 
-Para el control de versiones se utilizan repositorios públicos de la organización DataFlux. Los nombres canónicos actuales son:
+Para el control de versiones del código fuente de RentBuild, el equipo utiliza Git como sistema de versionado, gestionado a través de GitHub como plataforma de alojamiento. Se ha creado una organización pública en GitHub que centraliza los repositorios correspondientes a cada producto de la solución. Para esta primera entrega (AV1), el repositorio activo corresponde al Landing Page; los repositorios de Web Services (RESTful API) y Frontend Web Applications se incorporarán en las siguientes entregas conforme avance el desarrollo del proyecto.
 
-| Producto | Repositorio público                                                                              | Estado al corte de revisión                                                                                                                                                                                                                                                                                                                                                   |
-|---|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Informe | [dataflux-report](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report)     | Recuperación y correcciones TB1 en rama de trabajo; PR/merge de esta versión aún pendiente.                                                                                                                                                                                                                                                                                   |
-| Landing | [dataflux-website](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website)   | [PR1](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website/pull/1) abierto hacia develop, reviewer V8Z5; publicación TB1 pendiente.                                                                                                                                                                                                                     |
-| Frontend | [dataflux-webapp](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp)     | [PR12 subscriptions](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp/pull/12) y [PR13 ajustes comunes](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp/pull/13) abiertos hacia develop, reviewer V8Z5. Inventory: 22 archivos en develop `119a9ee77080`, composición/rutas pendientes. Rentals no acreditado en esa base. |
-| API | [dataflux-platform](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-platform) | Implementación .NET y despliegue exigidos en AV2; no se acredita API por tener un repositorio.                                                                                                                                                                                                                                                                                |
+**Repositorio del proyecto (AV1):**
+
+| Producto | Repositorio |
+| :--- | :--- |
+| Informe del Proyecto | upc-pre-202620-1asi0730-8093-dataflux/dataflux-landing-page |
+| Landing Page | https://dataflux-landing-page.vercel.app/ |
 
 **Workflow de control de versiones: GitFlow**
 
-El equipo establece GitFlow como estrategia de ramificación, complementando la rama principal (`main`) y la rama de desarrollo (`develop`) con ramas específicas según el tipo de trabajo:
+El equipo aplica GitFlow como estrategia de ramificación, complementando la rama principal (`main`) y la rama de desarrollo (`develop`) con ramas específicas según el tipo de trabajo:
 
 - **Feature branches**: se crean a partir de `develop` para el desarrollo de nuevas funcionalidades. Convención de nombres: `feature/nombre-de-la-funcionalidad` (ej. `feature/landing-hero-section`, `feature/landing-footer`).
 - **Release branches**: se crean a partir de `develop` cuando el conjunto de features está listo para una nueva versión. Convención de nombres: `release/vX.Y.Z` (ej. `release/v1.0.0`).
@@ -2969,11 +2976,11 @@ Las versiones (Releases) del Landing Page se nombran siguiendo Semantic Versioni
 - **MINOR**: nuevas funcionalidades compatibles con versiones anteriores.
 - **PATCH**: correcciones de errores compatibles con versiones anteriores.
 
-Ejemplo de convención: `v1.0.0`. La existencia de tags/releases correspondientes debe verificarse; no se declara creada esta etiqueta solo por incluir el ejemplo.
+Ejemplo: la primera versión desplegada del Landing Page se etiqueta como `v1.0.0`.
 
 **Conventional Commits**
 
-Se establece que los mensajes nuevos sigan Conventional Commits, con el formato `tipo: descripción breve`, utilizando prefijos como:
+Todos los mensajes de commit siguen la convención de Conventional Commits, con el formato `tipo: descripción breve`, utilizando prefijos como:
 
 - `feat`: para nuevas funcionalidades (ej. `feat: add landing page hero section`)
 - `fix`: para corrección de errores (ej. `fix: correct broken footer link`)
@@ -3024,21 +3031,21 @@ Una vez importado el proyecto, Vercel genera el Production Deployment, el cual q
 
 #### 5.2.1.1. Sprint Planning 1
 
-|                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|:-------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Sprint #**                   | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Date                           | 2026-09-17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Time                           | 10:00 PM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Location                       | Vía Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Prepared By                    | Luis Angel Cisneros Salas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Attendees                      | Cisneros Salas, Luis Angel<br>Viza Quispe, Marlon Packard<br>Manosalva Tovar, Miroslav Oscar<br>Montalvo Vásquez, Bruno Rodrigo<br>Vargas Manchinelli, Deiby Juan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Sprint 0 Review Summary        | El Sprint Backlog histórico registra 13 tareas Done y 10 tareas pendientes o en proceso. Se documentaron capturas y commits de landing y pantallas iniciales, pero esa evidencia no declara todas las tareas completadas ni permite verificar horas reales o velocity aceptada. Los pendientes de perfil, detalle, solicitudes y mantenimiento deben conciliarse con los responsables y la evidencia de TB1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Sprint 0 Retrospective Summary | En esta sección tuvimos varios aciertos, ya que la división de tareas entre diseño (Figma), desarrollo del Landing Page (HTML/CSS/JS) y desarrollo de las pantallas de la Web Application permitió avanzar en paralelo sin bloqueos. Sin embargo, nos quedamos con dos pendientes específicos: la definición temprana de la herramienta de despliegue y la integración de la lógica de negocio en algunas pantallas de la Web Application, lo cual puso a prueba nuestra capacidad de resolución de problemas sobre la marcha.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Sprint 1 Goal                  | Nuestro enfoque se centra en lanzar la primera versión funcional de la plataforma RentBuild —que incluye la Landing Page pública y los módulos principales de la Web Application para la gestión de usuarios, el inventario de maquinaria, las solicitudes de alquiler, el seguimiento de incidencias y el catálogo de búsqueda— desplegada en un entorno de producción accesible públicamente. Creemos que esto aporta una presencia digital validada, autonomía operativa para los primeros usuarios administradores y una experiencia fluida de descubrimiento y solicitud de alquiler para los clientes. Esto se confirmará cuando los usuarios potenciales puedan acceder públicamente a la Landing Page, y los operadores autorizados consigan gestionar usuarios, dar de alta maquinaria, tramitar solicitudes de alquiler, registrar incidencias de mantenimiento y navegar por el catálogo de búsqueda en el entorno de producción real. |
-| Sprint 1 Velocity              | 59                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Sum of Story Points            | 59 story points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| | |
+| :--- | :--- |
+| **Sprint #** | Sprint 1 |
+| **Sprint Planning Background** | |
+| Date | 2026-09-17 |
+| Time | 10:00 PM |
+| Location | Vía Discord |
+| Prepared By | Luis Angel Cisneros Salas |
+| Attendees | Cisneros Salas, Luis Angel<br>Viza Quispe, Marlon Packard<br>Manosalva Tovar, Miroslav Oscar<br>Montalvo Vásquez, Bruno Rodrigo<br>Vargas Manchinelli, Deiby Juan |
+| Sprint 1 Review Summary | Durante el Sprint 1, el equipo completó exitosamente el desarrollo de la primera versión del Landing Page de RentBuild utilizando HTML, CSS y JavaScript, tomando como base los Wireframes y Mock-ups diseñados previamente en Figma. Asimismo, se avanzó con las pantallas iniciales de la Web Application correspondientes a la gestión de usuarios (Registro, Login, Perfil), gestión de maquinaria (Inventario, Registro, Detalle, Estado/Disponibilidad), solicitudes de alquiler (Bandeja de solicitudes, Mis solicitudes, Alquileres activos), mantenimiento e incidencias (Registro, Historial), y el Catálogo/búsqueda de maquinaria. El Landing Page se desplegó en un entorno de producción mediante Vercel, permitiendo su acceso público, y todas las tareas planificadas en el Sprint Backlog fueron completadas dentro del tiempo estimado. |
+| Sprint 1 Retrospective Summary | En esta sección tuvimos varios aciertos, ya que la división de tareas entre diseño (Figma), desarrollo del Landing Page (HTML/CSS/JS) y desarrollo de las pantallas de la Web Application permitió avanzar en paralelo sin bloqueos. Sin embargo, nos quedamos con dos pendientes específicos: la definición temprana de la herramienta de despliegue y la integración de la lógica de negocio en algunas pantallas de la Web Application, lo cual puso a prueba nuestra capacidad de resolución de problemas sobre la marcha. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Desarrollar e implementar la primera versión funcional del Landing Page de RentBuild, incluyendo su estructura y diseño visual basado en los prototipos definidos en Figma, así como las pantallas iniciales de la Web Application correspondientes a la gestión de usuarios, maquinaria, solicitudes de alquiler, mantenimiento/incidencias y catálogo de búsqueda, asegurando su despliegue en un entorno de producción accesible públicamente. |
+| Sprint 1 Velocity | 59 |
+| Sum of Story Points | 59 story points |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -3054,30 +3061,37 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog 1 reúne los Work-items definidos para implementar la primera versión funcional del Landing Page de RentBuild. Las tareas se derivan de las User Stories seleccionadas para el Sprint 1 y abarcan la presentación de la propuesta de valor, funcionalidades, soluciones, planes, solicitud de demostración, contacto, responsive design e internacionalización.
+El propósito central de este Sprint fue construir la primera versión del Landing Page de RentBuild y avanzar en paralelo con las pantallas iniciales de la Web Application, cubriendo la gestión de usuarios, maquinaria, solicitudes de alquiler y mantenimiento/incidencias. El trabajo se organizó a partir de las User Stories asociadas a los Epics comprendidos en este Sprint (EP01, EP02, EP03, EP04, EP05 y EP06). Como herramienta de seguimiento y control de tareas, el equipo optó por Trello.
 
-A continuación, se presenta el Sprint Backlog correspondiente al Sprint 1:
+![Sprint 1 - Tablero de Trello](./assets/md-images-chapter5/sprint-1-trello-board.png)
 
-![Sprint 1 - Tablero de Trello](./assets/md-images-chapter5/sprint-1-backlog-board.jpeg)
+**Trello:** https://trello.com/invite/b/6aacc6b9cc0413f772436a35/ATTI72782e0013e72d3ec63864ccbd335c7099570315/dataflux
 
-| Sprint # | Sprint 1 |
-| :--- | :--- |
-
-| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
-| US30 | Visualizar propuesta de valor | TS01 | Implement Home section | Implementar la sección principal del Landing Page con la propuesta de valor, descripción general de RentBuild y sus principales Call-to-Action. | 4 hrs | Delgado Perez, James Caleb | Done |
-| US31 | Explorar funcionalidades principales | TS02 | Implement Benefits section | Implementar la sección de beneficios para comunicar el valor que RentBuild ofrece a sus segmentos objetivo. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
-| US31 | Explorar funcionalidades principales | TS03 | Implement Features section | Implementar la sección que presenta las principales funcionalidades ofrecidas por RentBuild. | 4 hrs | Delgado Perez, James Caleb | Done |
-| US27 | Consultar información de RentBuild | TS04 | Implement About Us section | Implementar la sección informativa sobre Dataflux y RentBuild, incluyendo misión, visión y valores. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
-| US32 | Identificar la solución para mi empresa | TS05 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
-| US15 | Visualizar planes disponibles | TS06 | Implement Plans section | Implementar la sección de planes mostrando las alternativas disponibles, sus características y precios. | 4 hrs | Delgado Perez, James Caleb | Done |
-| US28 | Solicitar demostración | TS07 | Implement Request Demo section | Implementar el formulario mediante el cual un potencial cliente puede solicitar una demostración de RentBuild. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
-| US29 | Contactar con RentBuild | TS08 | Implement Contact section | Implementar el formulario de contacto para permitir que los visitantes realicen consultas al equipo de RentBuild. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
-| US27 | Consultar información de RentBuild | TS09 | Implement Footer | Implementar el footer con información complementaria, navegación y enlaces correspondientes al Landing Page. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
-| US34 | Consultar el Landing Page en diferentes dispositivos | TS10 | Implement responsive layout | Adaptar la estructura, navegación, cards, formularios y contenido del Landing Page para diferentes resoluciones de pantalla. | 4 hrs | Daga Chávez, Joaquín Leonardo | Done |
-| US35 | Cambiar el idioma del Landing Page | TS11 | Implement language switching | Implementar el cambio de idioma del Landing Page manteniendo la estructura, navegación y funcionalidades disponibles. | 4 hrs | Delgado Perez, James Caleb | Done |
-
-**Trello:** https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest
+| User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Assigned To | Status (To do / In Process / To Review / Done) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| US-01 | Registro | UT-01 | Crear estructura HTML | Maquetar el formulario de registro de usuario | Luis Cisneros | Done |
+| US-01 | Registro | UT-02 | Añadir estilos CSS | Aplicar estilos según el diseño de Figma | Luis Cisneros | Done |
+| US-01 | Registro | UT-03 | Añadir validaciones JS | Validar campos y mostrar mensaje de confirmación | Luis Cisneros | Done |
+| US-02 | Login | UT-04 | Crear estructura HTML | Maquetar formulario de inicio de sesión | Marlon Viza | Done |
+| US-02 | Login | UT-05 | Añadir estilos CSS | Aplicar estilos según diseño aprobado | Marlon Viza | Done |
+| US-02 | Login | UT-06 | Añadir lógica JS | Validar credenciales y manejo de errores | Marlon Viza | Done |
+| US-03 | Perfil de usuario | UT-07 | Crear estructura HTML | Maquetar sección de datos personales | Deiby Vargas | To Do |
+| US-03 | Perfil de usuario | UT-08 | Añadir estilos CSS | Aplicar estilos según diseño | Deiby Vargas | To Do |
+| US-04 | Registrar nueva maquinaria | UT-09 | Crear formulario de registro | Maquetar campos del equipo (nombre, tipo, estado) | Miroslav Manosalva | Done |
+| US-04 | Registrar nueva maquinaria | UT-10 | Añadir validaciones JS | Validar datos ingresados del equipo | Miroslav Manosalva | Done |
+| US-05 | Inventario de maquinaria | UT-11 | Crear vista de lista | Maquetar tabla/lista de maquinaria registrada | Bruno Montalvo | Done |
+| US-05 | Inventario de maquinaria | UT-12 | Añadir estilos CSS | Aplicar estilos responsivos a la lista | Bruno Montalvo | Done |
+| US-07/08 | Detalle + estado/disponibilidad | UT-13 | Crear vista de detalle | Maquetar sección con info, estado y disponibilidad | Luis Cisneros | In Progress |
+| US-07/08 | Detalle + estado/disponibilidad | UT-14 | Añadir lógica JS | Mostrar estado dinámico (disponible/reservado/alquilado) | Luis Cisneros | In Progress |
+| US-09 | Catálogo/búsqueda | UT-15 | Crear buscador | Maquetar barra de búsqueda y filtros | Marlon Viza | Done |
+| US-09 | Catálogo/búsqueda | UT-16 | Añadir lógica JS | Filtrar resultados según criterios | Marlon Viza | Done |
+| US-13/14 | Bandeja de solicitudes | UT-17 | Añadir acciones JS | Maquetar lista de solicitudes recibidas | Miroslav Manosalva | In Progress |
+| US-15 | Alquileres activos | UT-18 | Crear vista de alquileres | Maquetar lista de equipos alquilados vigentes | Miroslav Manosalva | In Progress |
+| US-16 | Mis solicitudes | UT-19 | Crear vista de solo lectura | Maquetar estado de solicitudes del cliente | Bruno Montalvo | To Do |
+| US-18/20 | Registrar mantenimiento/incidencia | UT-20 | Crear formulario | Maquetar registro de mantenimiento e incidencias | Deiby Vargas | To Do |
+| US-18/20 | Registrar mantenimiento/incidencia | UT-21 | Añadir validaciones JS | Validar tipo y fecha del registro | Luis Cisneros | In Progress |
+| US-21 | Historial de maquinaria | UT-22 | Crear vista de historial | Maquetar historial de alquileres/incidencias/mantenimientos | Luis Cisneros | In Progress |
+| US-21 | Historial de maquinaria | UT-23 | Añadir estilos CSS | Aplicar estilos a la línea de tiempo del historial | Marlon Viza | Done |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
@@ -3085,20 +3099,20 @@ En este primer Sprint, el equipo desarrolló tanto la primera versión del Landi
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | a4682cd | feat(team): add profile photos for Bruno, Deiby and Miroslav | add profile photos for Bruno, Deiby and Miroslav | 18/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | bd3e866 | feat(catalog): add machinery search and filter screen | add machinery search and filter screen | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 8649b7c | feat(inventory): add machinery history screen | add machinery history screen | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | c220f22 | feat(maintenance): add register maintenance and incident form | add register maintenance and incident form | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 18b2785 | feat(rentals): add active rentals screen | add active rentals screen | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | a0b3479 | feat(requests): add my rental requests screen for construction companies | add my rental requests screen for construction companies | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | eb60cf5 | feat(inventory): add machinery detail screen with status and availability | add machinery detail screen with status and availability | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 0a4dc7d | feat(inventory): add register new machinery form | add register new machinery form | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | fe84942 | feat(inventory): display machinery list with status and availability | display machinery list with status and availability | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 4c44274 | feat(profile): add user profile screen | add user profile screen | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 8c6ff60 | feat(dashboard): implement user home screen | implement user home screen | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 17e01c2 | feat(auth): implement user registration form | implement user registration form | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | 8a81a87 | feat(auth): add login modal for RentBuild | add login modal for RentBuild | 16/09/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website | feature/app-features | dcb16bb | feat(team): add profile photo for Luis Angel Cisneros Salas | add profile photo for Luis Angel Cisneros Salas | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | a4682cd | feat(team): add profile photos for Bruno, Deiby and Miroslav | add profile photos for Bruno, Deiby and Miroslav | 18/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | bd3e866 | feat(catalog): add machinery search and filter screen | add machinery search and filter screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8649b7c | feat(inventory): add machinery history screen | add machinery history screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | c220f22 | feat(maintenance): add register maintenance and incident form | add register maintenance and incident form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 18b2785 | feat(rentals): add active rentals screen | add active rentals screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | a0b3479 | feat(requests): add my rental requests screen for construction companies | add my rental requests screen for construction companies | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | eb60cf5 | feat(inventory): add machinery detail screen with status and availability | add machinery detail screen with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 0a4dc7d | feat(inventory): add register new machinery form | add register new machinery form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | fe84942 | feat(inventory): display machinery list with status and availability | display machinery list with status and availability | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 4c44274 | feat(profile): add user profile screen | add user profile screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8c6ff60 | feat(dashboard): implement user home screen | implement user home screen | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 17e01c2 | feat(auth): implement user registration form | implement user registration form | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | 8a81a87 | feat(auth): add login modal for RentBuild | add login modal for RentBuild | 16/09/2026 |
+| RentBuild/Landing-Page | feature/app-features | dcb16bb | feat(team): add profile photo for Luis Angel Cisneros Salas | add profile photo for Luis Angel Cisneros Salas | 16/09/2026 |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
@@ -3240,7 +3254,7 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 | **Sprint Goal & User Stories** | |
 | Sprint 2 Goal | Nuestro enfoque está en completar el flujo principal de alquiler de RentBuild en la Web Application: consulta de disponibilidad por periodo, solicitud de alquiler, gestión de solicitudes por la empresa de alquiler, y selección y gestión de planes de suscripción. Creemos que esto permitirá a las empresas constructoras y a las empresas de alquiler recorrer el ciclo completo de reserva sin recurrir al teléfono ni a WhatsApp. Esto se confirmará cuando una empresa constructora pueda solicitar un alquiler para un periodo disponible, la empresa de alquiler pueda aprobarlo o rechazarlo, y la primera versión de la Web Application quede desplegada y accesible públicamente desde los call-to-action de la nueva versión del Landing Page. |
 | Sprint 2 Velocity | 41 |
-| Sum of Story Points | 41 |
+| Sum of Story Points | 41 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33) |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -3258,165 +3272,54 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
 
-![Sprint 2 - Tablero de Trello](./assets/md-images-chapter5/sprint-2-trello-board.png)
+[COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
 
-**Trello:** https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild
+**Trello:** [COMPLETAR: URL pública del tablero del Sprint 2]
 
-| Sprint # | Sprint 2 |
-| :--- | :--- |
-
-| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
-| US01 | Registro de usuario | T2-01 | Construir formulario de registro | Presentar los campos necesarios y sus validaciones en la Web App. | 5 | `JAmsy06` | Done |
-| US01 | Registro de usuario | T2-02 | Integrar flujo de registro | Enviar los datos a la API simulada y mostrar el resultado al usuario. | 4 | `JAmsy06` | Done |
-| US02 | Inicio de sesión | T2-03 | Construir vista de inicio de sesión | Presentar y validar los campos de acceso. | 4 | `JAmsy06` | Done |
-| US02 | Inicio de sesión | T2-04 | Gestionar sesión de usuario | Procesar el acceso y dirigir al usuario a la vista correspondiente. | 5 | `JAmsy06` | Done |
-| US03 | Gestionar perfil | T2-05 | Mostrar información del perfil | Consultar y presentar los datos del usuario autenticado. | 4 | `JAmsy06` | Done |
-| US03 | Gestionar perfil | T2-06 | Editar información del perfil | Permitir la actualización de los datos editables y mostrar el resultado. | 5 | `JAmsy06` | Done |
-| US04 | Cerrar sesión | T2-07 | Incorporar acción de cierre de sesión | Agregar la opción de salir en la navegación de la Web App. | 2 | `JAmsy06` | Done |
-| US04 | Cerrar sesión | T2-08 | Finalizar la sesión activa | Limpiar los datos de sesión y redirigir a la vista de acceso. | 3 | `JAmsy06` | Done |
-| US05 | Recuperar contraseña | T2-09 | Construir vista de recuperación | Permitir el ingreso del dato necesario para solicitar la recuperación. | 4 | `JAmsy06` | Done |
-| US05 | Recuperar contraseña | T2-10 | Mostrar resultado de la solicitud | Validar el formulario y comunicar al usuario el resultado del proceso. | 3 | `JAmsy06` | Done |
-| US06 | Registrar maquinaria | T2-11 | Construir formulario de maquinaria | Capturar los datos requeridos para registrar un equipo. | 5 | `JAmsy06` | Done |
-| US06 | Registrar maquinaria | T2-12 | Guardar maquinaria registrada | Integrar el formulario con la fuente de datos utilizada por la Web App. | 5 | `JAmsy06` | Done |
-| US07 | Consultar maquinaria | T2-13 | Construir listado de maquinaria | Mostrar los equipos registrados con su información resumida. | 4 | `JAmsy06` | Done |
-| US07 | Consultar maquinaria | T2-14 | Vincular listado y detalle | Permitir abrir la información de un equipo desde el listado. | 3 | `JAmsy06` | Done |
-| US08 | Actualizar información de maquinaria | T2-15 | Precargar datos del equipo | Mostrar la información actual de la maquinaria en un formulario editable. | 4 | `JAmsy06` | Done |
-| US08 | Actualizar información de maquinaria | T2-16 | Guardar cambios de maquinaria | Validar y enviar las modificaciones realizadas por el usuario. | 4 | `JAmsy06` | Done |
-| US09 | Consultar disponibilidad de maquinaria | T2-17 | Mostrar disponibilidad | Incorporar el estado de disponibilidad en las vistas de maquinaria. | 4 | `JAmsy06` | Done |
-| US09 | Consultar disponibilidad de maquinaria | T2-18 | Actualizar resultado de consulta | Presentar la disponibilidad correspondiente a los equipos consultados. | 4 | `JAmsy06` | Done |
-| US10 | Consultar estado de maquinaria | T2-19 | Mostrar estado del equipo | Presentar la condición registrada de cada maquinaria. | 3 | `JAmsy06` | Done |
-| US10 | Consultar estado de maquinaria | T2-20 | Incorporar estado en el detalle | Permitir consultar la condición del equipo junto con sus demás datos. | 3 | `JAmsy06` | Done |
-| US11 | Buscar maquinaria | T2-21 | Incorporar búsqueda | Permitir localizar maquinaria mediante un término ingresado por el usuario. | 4 | `JAmsy06` | Done |
-| US11 | Buscar maquinaria | T2-22 | Incorporar filtros | Permitir acotar los resultados según los criterios disponibles. | 4 | `JAmsy06` | Done |
-| US12 | Consultar información de maquinaria | T2-23 | Construir vista de detalle | Presentar las características de la maquinaria seleccionada. | 4 | `JAmsy06` | Done |
-| US12 | Consultar información de maquinaria | T2-24 | Cargar información seleccionada | Obtener y mostrar los datos del equipo abierto desde el listado o la búsqueda. | 3 | `JAmsy06` | Done |
-| US13 | Consultar disponibilidad para un periodo | T2-25 | Capturar periodo solicitado | Permitir que el usuario indique las fechas que desea consultar. | 3 | `JAmsy06` | Done |
-| US13 | Consultar disponibilidad para un periodo | T2-26 | Evaluar disponibilidad del periodo | Mostrar el resultado de la consulta para la maquinaria y las fechas seleccionadas. | 5 | `JAmsy06` | Done |
-| US14 | Solicitar alquiler de maquinaria | T2-27 | Construir solicitud de alquiler | Presentar los datos de la maquinaria y el periodo solicitado. | 5 | `JAmsy06` | Done |
-| US14 | Solicitar alquiler de maquinaria | T2-28 | Registrar solicitud | Enviar la solicitud y comunicar al usuario el resultado del registro. | 5 | `JAmsy06` | Done |
-| US15 | Consultar planes | T2-29 | Mostrar planes disponibles | Presentar las alternativas de suscripción en la Web App. | 4 | `JAmsy06` | Done |
-| US15 | Consultar planes | T2-30 | Mostrar características de cada plan | Permitir comparar la información relevante de las alternativas. | 3 | `JAmsy06` | Done |
-| US16 | Seleccionar plan | T2-31 | Incorporar selección de plan | Permitir elegir una de las alternativas presentadas. | 4 | `JAmsy06` | Done |
-| US16 | Seleccionar plan | T2-32 | Aplicar acceso según plan | Reflejar en la Web App las condiciones del plan seleccionado. | 5 | `JAmsy06` | Done |
-| US17 | Gestionar suscripción | T2-33 | Mostrar suscripción actual | Presentar al usuario la información de su plan vigente. | 4 | `JAmsy06` | Done |
-| US17 | Gestionar suscripción | T2-34 | Incorporar gestión del plan | Permitir realizar las acciones de administración disponibles para la suscripción. | 5 | `JAmsy06` | Done |
-| US18 | Gestionar solicitudes de alquiler | T2-35 | Mostrar solicitudes recibidas | Presentar a la empresa de alquiler sus solicitudes de maquinaria. | 4 | `JAmsy06` | Done |
-| US18 | Gestionar solicitudes de alquiler | T2-36 | Consultar detalle de solicitud | Permitir revisar los datos de una solicitud seleccionada. | 4 | `JAmsy06` | Done |
-| US19 | Confirmar o rechazar una solicitud | T2-37 | Incorporar acciones de decisión | Presentar las opciones de confirmación y rechazo de una solicitud. | 4 | `JAmsy06` | Done |
-| US19 | Confirmar o rechazar una solicitud | T2-38 | Registrar la decisión | Actualizar el estado de la solicitud y mostrar el resultado. | 4 | `JAmsy06` | Done |
-| US20 | Consultar alquileres activos | T2-39 | Mostrar alquileres en curso | Presentar las operaciones de alquiler que se encuentran activas. | 4 | `JAmsy06` | Done |
-| US20 | Consultar alquileres activos | T2-40 | Mostrar detalle del alquiler | Permitir revisar la maquinaria y los datos asociados a una operación activa. | 3 | `JAmsy06` | Done |
-| US21 | Consultar estado de una solicitud de alquiler | T2-41 | Listar solicitudes propias | Mostrar al solicitante sus solicitudes de alquiler. | 4 | `JAmsy06` | Done |
-| US21 | Consultar estado de una solicitud de alquiler | T2-42 | Mostrar estado de solicitud | Presentar el estado actual de la solicitud seleccionada. | 3 | `JAmsy06` | Done |
-| US22 | Gestionar entregas y devoluciones | T2-43 | Registrar entrega | Permitir registrar la entrega de la maquinaria asociada a un alquiler. | 5 | `JAmsy06` | Done |
-| US22 | Gestionar entregas y devoluciones | T2-44 | Registrar devolución | Permitir registrar el retorno de la maquinaria y actualizar la operación. | 5 | `JAmsy06` | Done |
-| US23 | Registrar mantenimiento | T2-45 | Construir formulario de mantenimiento | Capturar los datos de una intervención asociada a una maquinaria. | 4 | `JAmsy06` | Done |
-| US23 | Registrar mantenimiento | T2-46 | Guardar registro de mantenimiento | Registrar la intervención y mostrarla en la información del equipo. | 5 | `JAmsy06` | Done |
-| US24 | Programar mantenimiento | T2-47 | Capturar programación | Permitir indicar la maquinaria, fecha y datos de un mantenimiento futuro. | 4 | `JAmsy06` | Done |
-| US24 | Programar mantenimiento | T2-48 | Mostrar mantenimientos programados | Presentar las intervenciones registradas para próximas fechas. | 4 | `JAmsy06` | Done |
-| US25 | Registrar incidencia de maquinaria | T2-49 | Construir formulario de incidencia | Permitir describir una incidencia y asociarla a una maquinaria. | 4 | `JAmsy06` | Done |
-| US25 | Registrar incidencia de maquinaria | T2-50 | Guardar incidencia | Registrar el problema reportado y mostrar la confirmación correspondiente. | 4 | `JAmsy06` | Done |
-| US26 | Consultar historial de maquinaria | T2-51 | Mostrar historial de mantenimiento | Presentar las intervenciones registradas para el equipo seleccionado. | 4 | `JAmsy06` | Done |
-| US26 | Consultar historial de maquinaria | T2-52 | Mostrar historial de incidencias | Presentar los problemas registrados anteriormente para ese equipo. | 4 | `JAmsy06` | Done |
-| US27 | Consultar información de RentBuild | T2-53 | Presentar información del producto | Mostrar qué es RentBuild y a quién está dirigido en el Landing Page. | 3 | `TartaroZ` | Done |
-| US27 | Consultar información de RentBuild | T2-54 | Presentar información del equipo | Mostrar la información institucional correspondiente a Dataflux. | 3 | `Miroa123` | Done |
-| US28 | Solicitar demostración | T2-55 | Construir formulario de demostración | Permitir que un visitante ingrese su solicitud desde el Landing Page. | 4 | `TartaroZ` | Done |
-| US28 | Solicitar demostración | T2-56 | Validar solicitud de demostración | Revisar los campos del formulario y mostrar su resultado al visitante. | 3 | `CarlossUPC` | Done |
-| US29 | Contactar con RentBuild | T2-57 | Construir formulario de contacto | Permitir que el visitante redacte y envíe su consulta. | 4 | `Miroa123` | Done |
-| US29 | Contactar con RentBuild | T2-58 | Mostrar confirmación de contacto | Informar al visitante si su consulta fue registrada. | 2 | `CarlossUPC` | Done |
-| US30 | Visualizar propuesta de valor | T2-59 | Presentar propuesta principal | Mostrar el mensaje principal de RentBuild en la vista inicial. | 3 | `JAmsy06` | Done |
-| US30 | Visualizar propuesta de valor | T2-60 | Incorporar llamada a la acción | Dar al visitante una opción visible para continuar desde la vista inicial. | 2 | `CarlossUPC` | Done |
-| US31 | Explorar funcionalidades principales | T2-61 | Presentar funcionalidades | Mostrar las capacidades principales de RentBuild en el Landing Page. | 4 | `JAmsy06` | Done |
-| US31 | Explorar funcionalidades principales | T2-62 | Presentar beneficios | Explicar los beneficios vinculados con esas funcionalidades. | 3 | `TartaroZ` | Done |
-| US32 | Identificar la solución para mi empresa | T2-63 | Presentar segmento de alquiler | Explicar la propuesta para empresas que alquilan maquinaria. | 3 | `TartaroZ` | Done |
-| US32 | Identificar la solución para mi empresa | T2-64 | Presentar segmento constructor | Explicar la propuesta para empresas que necesitan alquilar maquinaria. | 3 | `Miroa123` | Done |
-| US33 | Acceder a la Web Application | T2-65 | Vincular acceso desde el Landing Page | Configurar los enlaces que dirigen al visitante hacia la Web App. | 3 | `JAmsy06` | Done |
-| US33 | Acceder a la Web Application | T2-66 | Comprobar enlaces de acceso | Revisar el destino y la navegación de los enlaces publicados. | 2 | `Eshnikeee` | Done |
-| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-67 | Adaptar vistas a distintos anchos | Ajustar la presentación de las vistas principales en pantallas de distintos tamaños. | 5 | `CarlossUPC` | Done |
-| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-68 | Revisar navegación adaptable | Comprobar que menús, formularios y controles puedan utilizarse en esos tamaños. | 3 | `Miroa123` | Done |
-| US35 | Utilizar la plataforma en diferentes idiomas | T2-69 | Incorporar textos en español e inglés | Preparar los textos necesarios para las vistas incluidas en el alcance. | 5 | `JAmsy06` | Done |
-| US35 | Utilizar la plataforma en diferentes idiomas | T2-70 | Incorporar cambio de idioma | Permitir alternar los textos disponibles durante la navegación. | 3 | `Eshnikeee` | Done |
+| User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Estimation (Hours) | Assigned To | Status (To do / In Process / To Review / Done) |
+| :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| US03 | Gestionar perfil | UT-01 | Maquetar sección de datos personales | Crear la vista de perfil con los datos del usuario (arrastra UT-07 y UT-08 del Sprint 1) | 2 | Deiby Vargas | To Do |
+| US03 | Gestionar perfil | UT-02 | Editar y guardar perfil | Habilitar la edición de datos con validaciones y mensaje de confirmación | 2 | Deiby Vargas | To Do |
+| US04 | Cerrar sesión | UT-03 | Implementar cierre de sesión | Añadir la acción de cerrar sesión y limpiar la sesión del usuario | 1 | Marlon Viza | To Do |
+| US08 | Actualizar información de maquinaria | UT-04 | Formulario de edición | Precargar los datos de la maquinaria en un formulario editable | 3 | Miroslav Manosalva | To Do |
+| US08 | Actualizar información de maquinaria | UT-05 | Validaciones y confirmación | Validar los campos modificados y confirmar el guardado | 2 | Miroslav Manosalva | To Do |
+| US13 | Consultar disponibilidad para un periodo | UT-06 | Selector de periodo | Agregar selector de rango de fechas en el detalle de la maquinaria | 3 | Luis Cisneros | To Do |
+| US13 | Consultar disponibilidad para un periodo | UT-07 | Verificación de conflictos | Implementar la lógica que detecta cruces con alquileres o reservas existentes | 4 | Luis Cisneros | To Do |
+| US14 | Solicitar alquiler de maquinaria | UT-08 | Formulario de solicitud | Maquetar el formulario con maquinaria, periodo y datos del proyecto | 3 | Luis Cisneros | To Do |
+| US14 | Solicitar alquiler de maquinaria | UT-09 | Envío de solicitud | Registrar la solicitud con estado Pendiente y confirmar al usuario | 3 | Luis Cisneros | To Do |
+| US18 | Gestionar solicitudes de alquiler | UT-10 | Bandeja de solicitudes | Listar las solicitudes recibidas con filtros por estado (arrastra UT-17 del Sprint 1) | 3 | Miroslav Manosalva | To Do |
+| US19 | Confirmar o rechazar una solicitud | UT-11 | Acciones confirmar y rechazar | Agregar las acciones con diálogo de confirmación y actualización del estado | 3 | Miroslav Manosalva | To Do |
+| US21 | Consultar estado de una solicitud de alquiler | UT-12 | Vista de estado de solicitudes | Mostrar al cliente el estado de cada solicitud (arrastra UT-19 del Sprint 1) | 2 | Bruno Montalvo | To Do |
+| US15 | Consultar planes | UT-13 | Vista comparativa de planes | Maquetar los tres niveles de plan con sus características | 3 | Marlon Viza | To Do |
+| US16 | Seleccionar plan | UT-14 | Flujo de selección de plan | Permitir elegir un plan y confirmar la selección | 3 | Marlon Viza | To Do |
+| US17 | Gestionar suscripción | UT-15 | Vista de suscripción actual | Mostrar el plan activo y permitir cambiarlo o cancelarlo | 4 | Bruno Montalvo | To Do |
+| US33 | Acceder a la Web Application | UT-16 | Corrección de observaciones del Landing Page | Verificar que los call-to-action de cada segmento redirijan a la vista de la Web Application y unificar el estilo visual | 3 | Luis Cisneros | To Do |
+| US33 | Acceder a la Web Application | UT-17 | Despliegue de la Web Application | Importar el repositorio en Vercel y publicar la Web Application | 2 | Miroslav Manosalva | To Do |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
 En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de alquiler de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los commits realizados durante este periodo.
 
-En este segundo Sprint el equipo desarrolló la primera versión de la Web Application, organizada por contextos (IAM, Profiles, Inventory, Maintenance, Rentals, Subscriptions y Shared), distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los principales commits realizados durante este periodo en el repositorio de la Web Application.
-
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | db46589 | feat(iam): incorporar registro y gestion de sesion en Vue | incorporar registro y gestion de sesion en Vue | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | 23486b8 | feat(iam): integrate PrimeVue and segment-based registration | integrate PrimeVue and segment-based registration | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/profiles | 86d6c67 | feat(profiles): incorporar consulta y edicion de perfiles de empresa | incorporar consulta y edicion de perfiles de empresa | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/shared | 644de15 | feat(shared): add terms and keyboard navigation | add terms and keyboard navigation | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 3d19ce2 | webapp(inventory): add inventory.store.js | add inventory.store.js | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 83a8d66 | webapp(inventory): add EquipmentList.vue | add EquipmentList.vue | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 17f857a | webapp(inventory): add EquipmentSearch.vue | add EquipmentSearch.vue | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | 8d63b25 | feat: add Incident entity | add Incident entity | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | f12af4c | feat: add maintenance list view | add maintenance list view | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/subscriptions | 8a93cfe | feat(subscriptions): integrar seleccion y renovacion de planes de demo | integrar seleccion y renovacion de planes de demo | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/rentals | 17e17ba | feat(rentals): add rentals context | add rentals context | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 7b877a2 | fix(rentals): recover partial writes without duplicate reservations | recover partial writes without duplicate reservations | 08/10/2026 |
-| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 8453a09 | fix(maintenance): reactivate inspected equipment without a fictitious incident | reactivate inspected equipment without a fictitious incident | 08/10/2026 |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-En este Sprint se implementó la primera versión de la Web Application, con una experiencia distinta para cada uno de los dos segmentos objetivo: la empresa de alquiler y la empresa constructora. La aplicación consume una fake API con datos de prueba. A continuación se presentan las principales vistas logradas.
+En este Sprint se implementaron las vistas del flujo de alquiler de la Web Application y se aplicaron las correcciones al Landing Page. A continuación se presentan las principales vistas logradas.
 
 **Web Application**
 
-*Acceso a la plataforma (ambos segmentos)*
+- Perfil de usuario: [COMPLETAR: captura]
+- Edición de maquinaria: [COMPLETAR: captura]
+- Disponibilidad por periodo en el detalle de maquinaria: [COMPLETAR: captura]
+- Solicitud de alquiler: [COMPLETAR: captura]
+- Bandeja de solicitudes con confirmar y rechazar: [COMPLETAR: captura]
+- Mis solicitudes con estado: [COMPLETAR: captura]
+- Planes de suscripción: [COMPLETAR: captura]
+- Gestión de la suscripción: [COMPLETAR: captura]
 
-Inicio de sesión:
-
-![Web Application - Inicio de sesión](./assets/md-images-chapter5/execution-evidence/sprint2-01-login.png)
-
-Registro de empresa, con selección del tipo de organización:
-
-![Web Application - Registro](./assets/md-images-chapter5/execution-evidence/sprint2-02-register.png)
-
-*Empresa constructora*
-
-Panel de la empresa constructora:
-
-![Web Application - Panel de empresa constructora](./assets/md-images-chapter5/execution-evidence/sprint2-03-construction-dashboard.png)
-
-Búsqueda de maquinaria con filtros por categoría, ubicación y disponibilidad:
-
-![Web Application - Buscar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-04-search-machinery.png)
-
-Mis solicitudes, con el estado de cada solicitud de alquiler:
-
-![Web Application - Mis solicitudes](./assets/md-images-chapter5/execution-evidence/sprint2-05-my-requests.png)
-
-Perfil de usuario, con información personal, de contacto y de la organización:
-
-![Web Application - Perfil](./assets/md-images-chapter5/execution-evidence/sprint2-06-profile.png)
-
-*Empresa de alquiler*
-
-Panel de la empresa de alquiler:
-
-![Web Application - Panel de empresa de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-07-rental-dashboard.png)
-
-Inventario de maquinaria de la empresa de alquiler:
-
-![Web Application - Maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-08-machinery.png)
-
-Registro de maquinaria:
-
-![Web Application - Registrar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-09-register-machinery.png)
-
-Solicitudes de alquiler recibidas, con filtros por estado y fecha:
-
-![Web Application - Solicitudes de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-10-rental-requests.png)
-
-Plan y suscripción, con la comparación de los tres planes disponibles:
-
-![Web Application - Plan y suscripción](./assets/md-images-chapter5/execution-evidence/sprint2-11-plan-subscription.png)
-
-**Execution Evidence Video for Sprint 2 Review:** [Ver video de Execution Evidence Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDOPdOMeAhKRZ-vz-1kQtt7AX2VvaT-R5lQZFxI_11rJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kexC0i)
+**Video de ejecución:** [COMPLETAR: enlace al video de navegación del Sprint 2]
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -3424,121 +3327,37 @@ Dado que el alcance del Sprint 2 se centró en la primera versión del Frontend 
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 2 se realizó el despliegue de la Web Application de RentBuild utilizando Vercel, plataforma empleada también para el Landing Page. Asimismo, se implementó una Fake API mediante JSON Server, desplegada en Render, con el propósito de proporcionar datos simulados para el funcionamiento y las pruebas de la aplicación.
+En esta sección se resumen las actividades de despliegue de la Web Application de RentBuild durante el Sprint 2, realizadas en Vercel, el mismo proveedor utilizado para el Landing Page. Se desplegó la nueva versión del Landing Page y la primera versión de la Web Application, que consume una fake API.
 
-**Despliegue de la Web Application en Vercel**
+[COMPLETAR: pasos con capturas del despliegue (importación del repositorio de la Web Application, configuración, Production Deployment), URL pública de la Web Application, URL de la nueva versión del Landing Page y herramienta usada para la fake API.]
 
-Para publicar la Web Application se realizaron los siguientes pasos:
-
-1. **Importación del repositorio:** Se seleccionó el repositorio `rentbuild-webapp` desde GitHub y se importó a Vercel.
-2. **Configuración del proyecto:** Se estableció el nombre `rentbuild-webapp`, se seleccionó Vite como framework y se inició el despliegue.
-3. **Confirmación del despliegue:** Vercel mostró el mensaje de confirmación indicando que la aplicación fue desplegada correctamente.
-4. **Verificación en producción:** Se comprobó que el estado del despliegue fuera `Ready` y que la aplicación estuviera disponible públicamente.
-
-**Evidencias del despliegue:**
-
-![paso-1-importacion.png.png](assets/sprint2-deployment/vercel/paso-1-importacion.png.png)
-![paso-2-configuracion.png](assets/sprint2-deployment/vercel/paso-2-configuracion.png)
-![paso-3-confirmacion.png](assets/sprint2-deployment/vercel/paso-3-confirmacion.png)
-![paso-4-produccion.png](assets/sprint2-deployment/vercel/paso-4-produccion.png)
-
-**URL pública de la Web Application:** https://rentbuild-webapp.vercel.app/
-
-**Despliegue de la Fake API en Render**
-
-Para proporcionar datos simulados a la Web Application, se utilizó JSON Server como Fake API y Render como plataforma de alojamiento.
-
-El procedimiento realizado fue el siguiente:
-
-1. **Creación del servicio:** Se ingresó a Render y se seleccionó la opción `New > Web Service`.
-2. **Conexión con GitHub:** Se proporcionó la dirección del repositorio que contiene los archivos necesarios para la Fake API.
-3. **Configuración del servicio:** Se establecieron las configuraciones del entorno Node.js, la rama principal y la región de despliegue.
-4. **Configuración de ejecución:** Se definieron los comandos de instalación e inicio de JSON Server y se seleccionó el plan gratuito.
-5. **Verificación del despliegue:** Se confirmó el estado `Deploy succeeded | Live` y se obtuvo la URL pública del servicio.
-
-**Evidencias del despliegue:**
-
-![paso-1-servicio.png](assets/sprint2-deployment/render/paso-1-servicio.png)
-![paso-2-repositorio.png](assets/sprint2-deployment/render/paso-2-repositorio.png)
-![paso-3-configuracion.png](assets/sprint2-deployment/render/paso-3-configuracion.png)
-![paso-4-json-server.png](assets/sprint2-deployment/render/paso-4-json-server.png)
-![paso-5-despliegue.png](assets/sprint2-deployment/render/paso-5-despliegue.png)
-
-**URL pública de la Fake API:** https://dataflux-api.onrender.com/
-
-**URL pública de la Landing Page:** https://dataflux-landing-page.vercel.app/
-
-De esta manera, se logró disponer de la Web Application y de la Fake API en entornos públicos, permitiendo realizar las pruebas de integración y demostrar los avances desarrollados durante el Sprint 2.
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 2, el equipo Dataflux trabajó colaborativamente en la estructura, desarrollo, integración y despliegue de la primera versión funcional de la Web Application de RentBuild. Esta iteración permitió continuar el trabajo realizado durante el Sprint 1, pasando de la presentación de la propuesta de valor mediante el Landing Page hacia una primera experiencia funcional dentro de la plataforma.
-
-Git y GitHub fueron utilizados como herramientas principales para administrar el código fuente, coordinar el desarrollo de las funcionalidades y registrar las contribuciones realizadas durante la iteración. El trabajo se organizó mediante ramas destinadas al desarrollo de funcionalidades específicas, una rama `develop` utilizada para integración y la rama `main` correspondiente a la versión estable del producto.
-
-Durante este Sprint se trabajó principalmente en la configuración y estructura inicial de la Web Application, el sistema de navegación y routing, la presentación de los procesos de registro e inicio de sesión, el manejo de sesiones y cierre de sesión, la redirección hacia los dashboards según el tipo de empresa y la integración entre el Landing Page y la Web Application.
-
-Las contribuciones realizadas por los integrantes pueden observarse mediante las herramientas de análisis proporcionadas por GitHub.
-
-##### GitHub Contributors
-
-GitHub Contributors permite visualizar la participación de los integrantes del equipo en el repositorio `RentBuild-website`.
-
-La distribución de commits no asociados con operaciones de merge registrada para el Sprint 1 fue la siguiente:
-
-| Team Member | GitHub Username | Commits |
-|---|---:|--------:|
-| Cisneros Salas, Luis Angel | LuisCS03 |       7 |
-| Viza Quispe, Marlon Packard | V8Z5 |       1 |
-| Manosalva Tovar, Miroslav Oscar | Miroa123 |       7 |
-| Montalvo Vásquez, Bruno Rodrigo | TartaroZ |      10 |
-| Vargas Manchinelli, Deiby Juan | poluxbinPe |       3 |
-| **Total** |  |  **28** |
-
-Las siguientes evidencias muestran las estadísticas individuales registradas por GitHub para los integrantes del equipo.
-
-<p align="center">
-  <img src="./assets/md-images-chapter5/teamcolabo1.png"
-       alt="RentBuild Sprint 2 Collaboration Evidence - GitHub Contributors"
-       width="90%">
-</p>
-
-Las estadísticas permiten observar la participación de los cinco integrantes durante el desarrollo del Sprint 2. Las contribuciones estuvieron relacionadas con diferentes aspectos de la Web Application, incluyendo la configuración y estructura inicial del proyecto, routing y navegación, presentación de los procesos de autenticación y registro, manejo de sesiones y cierre de sesión, dashboards según el tipo de empresa, integración con el Landing Page, pruebas y actividades de despliegue.
-
-La distribución de responsabilidades se realizó de acuerdo con los aspectos definidos para el Sprint 2. James Caleb Delgado Perez participó como líder de Web App Setup & Routing; Bruno Rodrigo Montalvo Vasquez como líder de IAM Presentation; Miroslav Oscar Manosalva Tovar como líder de Session Management & Logout; Joaquín Leonardo Daga Chávez como líder de Role-Based Dashboard Access; y Carlos Augusto Paredes Chavez como líder de Landing Page to Web App Integration. Todos los integrantes participaron adicionalmente como colaboradores en los demás aspectos y en las actividades de Testing & QA.
-
-##### Commit Activity
-
-La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 2.
-
-Durante este periodo se registró la actividad correspondiente al desarrollo e integración de la primera versión funcional de la Web Application de RentBuild.
-
-<p align="center">
-  <img src="./assets/md-images-chapter5/teamcolabo2.png"
-       alt="RentBuild Sprint 2 Collaboration Evidence - Commit Activity"
-       width="90%">
-</p>
-
-La actividad registrada durante octubre de 2026 corresponde al periodo de planificación, implementación, integración, pruebas y despliegue de la Web Application desarrollada durante el Sprint 2.
-
-Las contribuciones realizadas durante esta iteración permitieron establecer la estructura inicial de la aplicación frontend y desarrollar los principales flujos definidos para el Sprint. Entre ellos se encuentran el acceso a la Web Application, el registro de usuarios, el inicio de sesión, el manejo de sesión, el cierre de sesión y la redirección hacia los dashboards correspondientes según el tipo de empresa.
-
-Asimismo, se trabajó en la integración entre el Landing Page y la Web Application, permitiendo que los Call-to-Action definidos en el Landing Page conduzcan hacia la experiencia de la aplicación. De esta manera, se estableció una continuidad entre el trabajo realizado durante el Sprint 1 y la nueva funcionalidad desarrollada durante el Sprint 2.
-
-La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las contribuciones realizadas por los integrantes, los Work-Items definidos en el Sprint Backlog 2 y los commits asociados al desarrollo de la Web Application.
-
-Asimismo, la actividad registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint 2, en la que se distribuyeron responsabilidades relacionadas con la configuración y routing de la Web Application, la presentación de los procesos de registro e inicio de sesión, la gestión de sesiones, el acceso a dashboards según el tipo de empresa, la integración con el Landing Page y las actividades de Testing & QA.
+[COMPLETAR: descripción de la colaboración durante el Sprint 2 y capturas de los analíticos y commits de GitHub que reflejen el aporte individual de cada integrante.]
 
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-Durante el desarrollo de la TB1 se avanzó desde la definición inicial de RentBuild hacia una primera versión funcional de la Web Application, integrando las funcionalidades del Sprint 2. Esto permitió validar el acceso de usuarios, la autenticación, el manejo de sesiones y la navegación según el tipo de empresa.
+**Problema y segmentos.** El análisis del sector (Clements, 2025, indica que el 67 % de las empresas de alquiler opera con sistemas parcialmente integrados que requieren transferencia manual de información) y el User Task Matrix apuntan en la misma dirección. En ambos segmentos, las tareas de mayor frecuencia e importancia son verificar la disponibilidad de los equipos y dar seguimiento a las fechas de devolución. Ambos dependen además del teléfono y de WhatsApp. Esto respalda el Problem Statement y la necesidad de una solución digital centralizada.
 
-En cuanto a la planificación, se actualizaron las User Stories, el Product Backlog y se incorporaron Technical Stories relacionadas con el RESTful API apoyadas en DataFlux, mejorando la trazabilidad entre los requerimientos técnicos y funcionales. A nivel de Lean UX, se afinaron el Problem Statement con indicadores cuantificables, los Hypothesis Statements con templates estándar y se reestructuraron los User Flows por dominios de usuario.
+1. **Diferenciación.** El análisis competitivo frente a Booqable, Rentman y Odoo Rental mostró un espacio para una plataforma más especializada y simple. RentBuild se enfoca en maquinaria para construcción y en el ciclo completo (reserva, alquiler, entrega, devolución, inspección y mantenimiento), sin la complejidad de plataformas de mayor escala.
+2. **Producto del Sprint 1.** El equipo alcanzó el Sprint Goal. Se desarrolló la primera versión del Landing Page con HTML, CSS y JavaScript, a partir de los wireframes y mock-ups de Figma, y se desplegó en Vercel con acceso público. También se implementaron las pantallas iniciales de la Web Application: usuarios (registro, login y perfil), inventario de maquinaria, catálogo y búsqueda, solicitudes de alquiler y mantenimiento e incidencias. Las 23 tareas planificadas del Sprint Backlog se completaron dentro del sprint, con los 59 story points comprometidos, lo que cumple el alcance planificado para esta entrega.
+3. **Trabajo en equipo y liderazgo compartido.** El equipo estableció una meta común mediante el Sprint Goal y planificó las tareas con responsables por aspecto en la matriz LACX, donde el liderazgo se repartió entre los integrantes (diseño y maquetación, desarrollo de la Web Application y despliegue). Esta división permitió avanzar en paralelo sin bloqueos. Las ramas de GitFlow, los Conventional Commits y el tablero de Trello dieron trazabilidad al trabajo y permiten que cualquier integrante continúe las tareas de otro.
+4. **Mejora continua.** En la retrospectiva el equipo identificó una oportunidad de mejora: la herramienta de despliegue debió definirse antes. La integración de la lógica de negocio en algunas pantallas fue el mayor reto del sprint y se resolvió sobre la marcha. Estos aprendizajes, junto con la retroalimentación del docente, se incorporarán en las siguientes versiones de los artefactos.
 
-En el aspecto arquitectónico, se corrigieron los diagramas C4, los diagramas de clases por Bounded Context y el Design-Level EventStorming con una leyenda estandarizada. Funcionalmente, se estructuró la Web Application con su sistema de navegación, autenticación, redirección de dashboards y se integró con la Landing Page mediante CTAs.
+**Recomendaciones**
 
-La gestión del equipo se apoyó en Git, GitHub y una distribución clara de responsabilidades. Como recomendaciones para los siguientes Sprints, se debe mantener la trazabilidad de los commits con el Product Backlog, continuar el desarrollo de la API con DataFlux, y asegurar buenas prácticas en diseño responsivo, accesibilidad, pruebas y despliegue continuo.
+1. Para TB1, desplegar la primera versión de la Web Application y una nueva versión del Landing Page, como pide el enunciado. El RESTful API con ASP.NET Core y su documentación en OpenAPI se exige desde la AV2.
+2. Organizar el RESTful API por los Bounded Contexts del Design-Level EventStorming y aplicar los principios de RESTful en las URLs y los verbos HTTP.
+3. Incluir pruebas unitarias y de integración o aceptación en el repositorio de Web Services.
+4. Priorizar en el Sprint 2 las funcionalidades que aún no existen: reservas con verificación de conflictos de disponibilidad, contratos y pagos, y suscripciones con los tres niveles de plan definidos en los assumptions.
+5. Implementar alertas de fechas de devolución y un dashboard operativo con disponibilidad, alquileres activos y mantenimientos. Son las tareas de mayor frecuencia e importancia del User Task Matrix.
+6. Usar como servicio externo de terceros un canal de notificaciones (WhatsApp o correo electrónico), ya que ambos segmentos dependen de esos medios. Así se cumple el requisito del enunciado con una integración que aporta valor real.
+7. Aplicar inglés como idioma por defecto en la interfaz y la documentación, con soporte para es_419 y atributos ARIA. Publicar además los términos y condiciones y la protección de privacidad en el footer del Landing Page y de la Web Application.
+8. Verificar que los call-to-action de cada segmento en el Landing Page redirijan a la vista correspondiente de la Web Application, con un estilo visual consistente entre ambos.
+
+# Video About-The-Team
 
 # Bibliografía
 
@@ -3570,37 +3389,27 @@ Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to
 
 ## Anexo A. Videos de Exposiciones
 
-En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto.
+En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
 
 | Entrega | Características del video                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sobre el contenido | Integración y entrega |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|
-| **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCBXFdo0jrXTqL0vkQUNlrlAWSe4PbJ4LTRVTYfF420B-E?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=mhMcM3)<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 13:55 | Video de exposición grupal correspondiente al AV1 de RentBuild. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
-| **TB1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video TB1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCBXFdo0jrXTqL0vkQUNlrlAWSe4PbJ4LTRVTYfF420B-E?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=mhMcM3)<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-expo-tb1`<br>**Formato:** `.mp4`<br>**Duración:** 13:55 | Video de exposición grupal correspondiente al TB1 de RentBuild. Presenta el avance integral del proyecto hasta el Sprint 2, incluyendo la web app. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del TB1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 2. |
+| **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCijYvT9wbIS4c7IaP1XE5BAbY68_bZ8BJU7ORl780W598?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=WLcTld)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
 
-## Anexo B. Enlaces del proyecto
+## Anexo B. Videos del proyecto
 
-En este anexo se consolidan los principales recursos digitales utilizados para el desarrollo, documentación, diseño, planificación y despliegue del proyecto MaquiGest durante el AV1.
+En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest durante el AV1.
 
-| Recurso                       | Descripción                                                                                                                             | Enlace                                                                                                                                               |
-|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Project Report**            | Repositorio principal utilizado para la elaboración colaborativa, documentación y versionamiento del informe.                           | [Ver Project Report](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-report)                                                      |
-| **Landing Page Repository**   | Repositorio que contiene el código fuente de la Landing Page.                                                                           | [Ver Landing Page Repository](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-website)                                            |
-| **Web App Repository**        | Repositorio que contiene el código fuente de la Web App.                                                                                | [Ver Web APP Repository](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp)                                                  |
-| **Landing Page Deployment**   | Versión desplegada de la Landing Page correspondiente                                                                                   | [Ver Website](https://dataflux-landing-page.vercel.app/)                                                                                             |
-| **Web App Deployment**        | Versión desplegada de la Web App correspondiente                                                                                        | [Ver Website](https://dataflux-webapp.vercel.app/iam/sign-in)                                                                                        
-| **Sprint Backlog 1**          | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 1](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest) |
-| **Sprint Backlog 2**          | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 2](https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild) |
-| **Web Applications Mock-ups** | Web Application Mock ups                                                                                                                | [Ver Sprint Backlog 2](https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1) |
-| **Web Applications WireFlow** | Web Application WireFlow                                                                                                                | [Ver Sprint Backlog 2](https://www.figma.com/board/x7IvCSgobEyo1SbH3PRnqg/Rent-Build-WireFlow) |
+| Tipo de video | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
+|---|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=21dBzs) |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-8093-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQC3--vcfbm7Q5EeezHqkmXpAU4-4n9UExnoBHVrzoqYO00?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=k5zo8c)
 
+**Web Applications Mock-ups:** https://www.figma.com/design/OIBiedVSqvMmmqYcjx14Ec/Sin-t%C3%ADtulo?node-id=0-1&t=qrleaHn5r7IHGSxf-1
 
-## Anexo C. Videos del proyecto
+**Lean UX Canvas:** https://www.figma.com/board/OcVqiqyfAERGRZHmmTNKMI/Sin-t%C3%ADtulo?node-id=0-1&t=bgNbwgpxLyQB1bi2-1
 
-En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto RentBuild durante el AV1.
+**Trello:** https://trello.com/invite/b/6aacc6b9cc0413f772436a35/ATTI72782e0013e72d3ec63864ccbd335c7099570315/dataflux
 
-| Tipo de video             | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de RentBuild. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBFiR1QwYfTSL96qzfO9KaTATUN322TsrAuqI6OxMv3ymk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZBYgEG) |
-| **Prototype Navigation**  | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-prototype-navigation-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación del prototipo interactivo de la Web Application de RentBuild desarrollado en Figma. El video evidencia los principales recorridos definidos para empresas de alquiler de maquinaria y empresas constructoras, mostrando la relación entre los mock-ups, User Flow Diagrams y las interacciones del prototipo. | [Ver Prototype Navigation](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dB05rw)                                                |
-| **Execution Evidence 1**  | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de RentBuild. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDOPdOMeAhKRZ-vz-1kQtt7AX2VvaT-R5lQZFxI_11rJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kexC0i)                                                 |
-| **Execution Evidence 2**  | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0730-8093-dataflux-execution-evidence-sprint-2`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada de la web app de RentBuild. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 2. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDOPdOMeAhKRZ-vz-1kQtt7AX2VvaT-R5lQZFxI_11rJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kexC0i)                                                 |
+**Miro:** https://miro.com/welcomeonboard/bXFFSkpkdTBCYnBvUTdtSEJJT242NnpTQ0pTTTA4dWdleTJ2QTN0YmZRcUsrRmR4RjZ2ODBvb0JsdzJMZXVlbjljK1RPWFBpNjBPWHFZSWhhNkQwQ1hNczRUelBUWlJSenZCcml6aERpZG1RTFZ5WDZZUk42cjZPVXQ2RVUyR1ZBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=904943457433
+
+**Web Applications WireFlow:** https://www.figma.com/board/x7IvCSgobEyo1SbH3PRnqg/Rent-Build-WireFlow?t=TBFB1usHt4A4XCnH-1
