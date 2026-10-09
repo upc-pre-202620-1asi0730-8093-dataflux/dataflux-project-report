@@ -2886,7 +2886,7 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 | **Sprint Goal & User Stories** | |
 | Sprint 2 Goal | Nuestro enfoque está en completar el flujo principal de alquiler de RentBuild en la Web Application: consulta de disponibilidad por periodo, solicitud de alquiler, gestión de solicitudes por la empresa de alquiler, y selección y gestión de planes de suscripción. Creemos que esto permitirá a las empresas constructoras y a las empresas de alquiler recorrer el ciclo completo de reserva sin recurrir al teléfono ni a WhatsApp. Esto se confirmará cuando una empresa constructora pueda solicitar un alquiler para un periodo disponible, la empresa de alquiler pueda aprobarlo o rechazarlo, y la primera versión de la Web Application quede desplegada y accesible públicamente desde los call-to-action de la nueva versión del Landing Page. |
 | Sprint 2 Velocity | 41 |
-| Sum of Story Points | 41 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33) |
+| Sum of Story Points | 41 |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -2906,7 +2906,7 @@ El propósito central de este Sprint es completar el flujo principal de alquiler
 
 [COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
 
-**Trello:** [COMPLETAR: URL pública del tablero del Sprint 2]
+**Trello:** https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild
 
 | Sprint # | Sprint 2 |
 | :--- | :--- |
