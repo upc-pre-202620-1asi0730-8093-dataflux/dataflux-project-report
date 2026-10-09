@@ -3010,9 +3010,9 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
 
-[COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
+![Sprint 2 - Tablero de Trello](./assets/md-images-chapter5/sprint-2-trello-board.png)
 
-**Trello:** [COMPLETAR: URL pública del tablero del Sprint 2]
+**Trello:** https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild
 
 | User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Estimation (Hours) | Assigned To | Status (To do / In Process / To Review / Done) |
 | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
@@ -3036,26 +3036,79 @@ El propósito central de este Sprint es completar el flujo principal de alquiler
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de alquiler de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los commits realizados durante este periodo.
+En este segundo Sprint el equipo desarrolló la primera versión de la Web Application, organizada por contextos (IAM, Profiles, Inventory, Maintenance, Rentals, Subscriptions y Shared), distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los principales commits realizados durante este periodo en el repositorio de la Web Application.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | db46589 | feat(iam): incorporar registro y gestion de sesion en Vue | incorporar registro y gestion de sesion en Vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | 23486b8 | feat(iam): integrate PrimeVue and segment-based registration | integrate PrimeVue and segment-based registration | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/profiles | 86d6c67 | feat(profiles): incorporar consulta y edicion de perfiles de empresa | incorporar consulta y edicion de perfiles de empresa | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/shared | 644de15 | feat(shared): add terms and keyboard navigation | add terms and keyboard navigation | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 3d19ce2 | webapp(inventory): add inventory.store.js | add inventory.store.js | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 83a8d66 | webapp(inventory): add EquipmentList.vue | add EquipmentList.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 17f857a | webapp(inventory): add EquipmentSearch.vue | add EquipmentSearch.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | 8d63b25 | feat: add Incident entity | add Incident entity | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | f12af4c | feat: add maintenance list view | add maintenance list view | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/subscriptions | 8a93cfe | feat(subscriptions): integrar seleccion y renovacion de planes de demo | integrar seleccion y renovacion de planes de demo | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/rentals | 17e17ba | feat(rentals): add rentals context | add rentals context | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 7b877a2 | fix(rentals): recover partial writes without duplicate reservations | recover partial writes without duplicate reservations | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 8453a09 | fix(maintenance): reactivate inspected equipment without a fictitious incident | reactivate inspected equipment without a fictitious incident | 08/10/2026 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-En este Sprint se implementaron las vistas del flujo de alquiler de la Web Application y se aplicaron las correcciones al Landing Page. A continuación se presentan las principales vistas logradas.
+En este Sprint se implementó la primera versión de la Web Application, con una experiencia distinta para cada uno de los dos segmentos objetivo: la empresa de alquiler y la empresa constructora. La aplicación consume una fake API con datos de prueba. A continuación se presentan las principales vistas logradas.
 
 **Web Application**
 
-- Perfil de usuario: [COMPLETAR: captura]
-- Edición de maquinaria: [COMPLETAR: captura]
-- Disponibilidad por periodo en el detalle de maquinaria: [COMPLETAR: captura]
-- Solicitud de alquiler: [COMPLETAR: captura]
-- Bandeja de solicitudes con confirmar y rechazar: [COMPLETAR: captura]
-- Mis solicitudes con estado: [COMPLETAR: captura]
-- Planes de suscripción: [COMPLETAR: captura]
-- Gestión de la suscripción: [COMPLETAR: captura]
+*Acceso a la plataforma (ambos segmentos)*
+
+Inicio de sesión:
+
+![Web Application - Inicio de sesión](./assets/md-images-chapter5/execution-evidence/sprint2-01-login.png)
+
+Registro de empresa, con selección del tipo de organización:
+
+![Web Application - Registro](./assets/md-images-chapter5/execution-evidence/sprint2-02-register.png)
+
+*Empresa constructora*
+
+Panel de la empresa constructora:
+
+![Web Application - Panel de empresa constructora](./assets/md-images-chapter5/execution-evidence/sprint2-03-construction-dashboard.png)
+
+Búsqueda de maquinaria con filtros por categoría, ubicación y disponibilidad:
+
+![Web Application - Buscar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-04-search-machinery.png)
+
+Mis solicitudes, con el estado de cada solicitud de alquiler:
+
+![Web Application - Mis solicitudes](./assets/md-images-chapter5/execution-evidence/sprint2-05-my-requests.png)
+
+Perfil de usuario, con información personal, de contacto y de la organización:
+
+![Web Application - Perfil](./assets/md-images-chapter5/execution-evidence/sprint2-06-profile.png)
+
+*Empresa de alquiler*
+
+Panel de la empresa de alquiler:
+
+![Web Application - Panel de empresa de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-07-rental-dashboard.png)
+
+Inventario de maquinaria de la empresa de alquiler:
+
+![Web Application - Maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-08-machinery.png)
+
+Registro de maquinaria:
+
+![Web Application - Registrar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-09-register-machinery.png)
+
+Solicitudes de alquiler recibidas, con filtros por estado y fecha:
+
+![Web Application - Solicitudes de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-10-rental-requests.png)
+
+Plan y suscripción, con la comparación de los tres planes disponibles:
+
+![Web Application - Plan y suscripción](./assets/md-images-chapter5/execution-evidence/sprint2-11-plan-subscription.png)
 
 **Video de ejecución:** [COMPLETAR: enlace al video de navegación del Sprint 2]
 
@@ -3065,10 +3118,51 @@ Dado que el alcance del Sprint 2 se centró en la primera versión del Frontend 
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-En esta sección se resumen las actividades de despliegue de la Web Application de RentBuild durante el Sprint 2, realizadas en Vercel, el mismo proveedor utilizado para el Landing Page. Se desplegó la nueva versión del Landing Page y la primera versión de la Web Application, que consume una fake API.
+Durante el Sprint 2 se realizó el despliegue de la Web Application de RentBuild utilizando Vercel, plataforma empleada también para el Landing Page. Asimismo, se implementó una Fake API mediante JSON Server, desplegada en Render, con el propósito de proporcionar datos simulados para el funcionamiento y las pruebas de la aplicación.
 
-[COMPLETAR: pasos con capturas del despliegue (importación del repositorio de la Web Application, configuración, Production Deployment), URL pública de la Web Application, URL de la nueva versión del Landing Page y herramienta usada para la fake API.]
+**Despliegue de la Web Application en Vercel**
 
+Para publicar la Web Application se realizaron los siguientes pasos:
+
+1. **Importación del repositorio:** Se seleccionó el repositorio `rentbuild-webapp` desde GitHub y se importó a Vercel.
+2. **Configuración del proyecto:** Se estableció el nombre `rentbuild-webapp`, se seleccionó Vite como framework y se inició el despliegue.
+3. **Confirmación del despliegue:** Vercel mostró el mensaje de confirmación indicando que la aplicación fue desplegada correctamente.
+4. **Verificación en producción:** Se comprobó que el estado del despliegue fuera `Ready` y que la aplicación estuviera disponible públicamente.
+
+**Evidencias del despliegue:**
+
+![paso-1-importacion.png.png](assets/sprint2-deployment/vercel/paso-1-importacion.png.png)
+![paso-2-configuracion.png](assets/sprint2-deployment/vercel/paso-2-configuracion.png)
+![paso-3-confirmacion.png](assets/sprint2-deployment/vercel/paso-3-confirmacion.png)
+![paso-4-produccion.png](assets/sprint2-deployment/vercel/paso-4-produccion.png)
+
+**URL pública de la Web Application:** https://rentbuild-webapp.vercel.app/
+
+**Despliegue de la Fake API en Render**
+
+Para proporcionar datos simulados a la Web Application, se utilizó JSON Server como Fake API y Render como plataforma de alojamiento.
+
+El procedimiento realizado fue el siguiente:
+
+1. **Creación del servicio:** Se ingresó a Render y se seleccionó la opción `New > Web Service`.
+2. **Conexión con GitHub:** Se proporcionó la dirección del repositorio que contiene los archivos necesarios para la Fake API.
+3. **Configuración del servicio:** Se establecieron las configuraciones del entorno Node.js, la rama principal y la región de despliegue.
+4. **Configuración de ejecución:** Se definieron los comandos de instalación e inicio de JSON Server y se seleccionó el plan gratuito.
+5. **Verificación del despliegue:** Se confirmó el estado `Deploy succeeded | Live` y se obtuvo la URL pública del servicio.
+
+**Evidencias del despliegue:**
+
+![paso-1-servicio.png](assets/sprint2-deployment/render/paso-1-servicio.png)
+![paso-2-repositorio.png](assets/sprint2-deployment/render/paso-2-repositorio.png)
+![paso-3-configuracion.png](assets/sprint2-deployment/render/paso-3-configuracion.png)
+![paso-4-json-server.png](assets/sprint2-deployment/render/paso-4-json-server.png)
+![paso-5-despliegue.png](assets/sprint2-deployment/render/paso-5-despliegue.png)
+
+**URL pública de la Fake API:** https://dataflux-api.onrender.com/
+
+**URL pública de la Landing Page:** https://dataflux-landing-page.vercel.app/
+
+De esta manera, se logró disponer de la Web Application y de la Fake API en entornos públicos, permitiendo realizar las pruebas de integración y demostrar los avances desarrollados durante el Sprint 2.
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
 [COMPLETAR: descripción de la colaboración durante el Sprint 2 y capturas de los analíticos y commits de GitHub que reflejen el aporte individual de cada integrante.]
