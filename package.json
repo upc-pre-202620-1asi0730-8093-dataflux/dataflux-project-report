@@ -1,0 +1,10 @@
+{
+  "name": "dataflux-project-report-tools",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "export:pdf": "node tools/export-report.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "marked": "17.0.5" }
+}

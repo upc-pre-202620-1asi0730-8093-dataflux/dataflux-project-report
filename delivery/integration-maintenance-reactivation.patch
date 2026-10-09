@@ -1,0 +1,312 @@
+diff --git a/src/app/maintenance/application/incident.store.js b/src/app/maintenance/application/incident.store.js
+index 90e1928..6bc9f81 100644
+--- a/src/app/maintenance/application/incident.store.js
++++ b/src/app/maintenance/application/incident.store.js
+@@ -311,8 +311,7 @@ export class IncidentStore {
+       return;
+     }
+     if (!IncidentReactivationPolicy.canReactivate(equipmentId, this.#incidentsState.value)) {
+-      this.#errorState.value =
+-        'There are unresolved blocking incidents or no blocking incident history';
++      this.#errorState.value = 'There are unresolved blocking incidents';
+       return;
+     }
+     this.#reactivatingEquipmentIdState.value = equipmentId;
+diff --git a/src/app/maintenance/application/incident.store.test.js b/src/app/maintenance/application/incident.store.test.js
+new file mode 100644
+index 0000000..b2a2951
+--- /dev/null
++++ b/src/app/maintenance/application/incident.store.test.js
+@@ -0,0 +1,168 @@
++import { afterEach, describe, expect, it, vi } from "vitest";
++import {
++  createWorkflowHarness,
++  equipmentResource,
++  rentalResource,
++} from "../../../../tests/helpers/workflow-harness.js";
++
++afterEach(() => vi.unstubAllGlobals());
++
++const incidentResource = (blocksRental = true, status = "OPEN") => ({
++  id: 1,
++  equipmentId: 1,
++  description: "Fictional inspection finding",
++  reportedAt: "2030-01-09T05:00:00.000Z",
++  blocksRental,
++  status,
++  resolvedAt: status === "RESOLVED" ? "2030-01-10T05:00:00.000Z" : null,
++});
++
++async function loadIncidents(store) {
++  store.loadForCompany(1);
++  await vi.waitFor(() => expect(store.loading.value).toBe(false));
++  expect(store.error.value).toBeNull();
++}
++
++const availableWrites = (calls) =>
++  calls.filter(
++    (call) =>
++      call.method === "PATCH" &&
++      call.resource === "equipment" &&
++      call.body?.status === "AVAILABLE",
++  );
++
++describe("Maintenance: inspected equipment returns to service", () => {
++  it("completes a maintenance return and inspection without manufacturing an incident", async () => {
++    const { services, db } = await createWorkflowHarness({
++      equipment: [equipmentResource("RENTED")],
++      rentals: [rentalResource()],
++    });
++    services.rentals.loadActiveRentalsForCompany(1);
++    await vi.waitFor(() => expect(services.rentals.loading.value).toBe(false));
++    expect(services.rentals.error.value).toBeNull();
++    services.rentals.registerReturn(
++      1,
++      new Date("2030-01-09T05:00:00.000Z"),
++      "",
++      true,
++    );
++    await vi.waitFor(() =>
++      expect(services.rentals.operationSuccess.value).toBe("RETURN"),
++    );
++    expect(db.equipment[0].status).toBe("MAINTENANCE");
++    services.maintenance.loadForCompany(1);
++    await vi.waitFor(() =>
++      expect(services.maintenance.loading.value).toBe(false),
++    );
++    services.maintenance.registerMaintenance(
++      1,
++      1,
++      new Date("2030-01-10T05:00:00.000Z"),
++      "Inspection completed",
++    );
++    await vi.waitFor(() =>
++      expect(services.maintenance.saveSucceeded.value).toBe(true),
++    );
++    await loadIncidents(services.incidents);
++    expect(
++      services.incidents.reactivatableEquipment.value.map((item) => item.id),
++    ).toEqual([1]);
++    services.incidents.reactivateEquipment(1, 1, true);
++    await vi.waitFor(() =>
++      expect(services.incidents.reactivationSucceeded.value).toBe(true),
++    );
++    expect(services.incidents.error.value).toBeNull();
++    expect(db.equipment[0].status).toBe("AVAILABLE");
++    expect(db.rentals[0].status).toBe("COMPLETED");
++    expect(db["equipment-returns"]).toHaveLength(1);
++    expect(db.maintenances).toHaveLength(1);
++    expect(db.maintenances[0].status).toBe("COMPLETED");
++    expect(db.incidents).toEqual([]);
++  });
++
++  it("requires the operator to confirm the technical inspection", async () => {
++    const { services, db, calls } = await createWorkflowHarness();
++    await loadIncidents(services.incidents);
++    services.incidents.reactivateEquipment(1, 1, false);
++    expect(services.incidents.error.value).toContain(
++      "Confirm the technical inspection",
++    );
++    expect(db.equipment[0].status).toBe("MAINTENANCE");
++    expect(availableWrites(calls)).toHaveLength(0);
++  });
++
++  it("keeps equipment restricted while a known blocking incident is open", async () => {
++    const { services, db, calls } = await createWorkflowHarness({
++      incidents: [incidentResource()],
++    });
++    await loadIncidents(services.incidents);
++    expect(services.incidents.reactivatableEquipment.value).toHaveLength(0);
++    services.incidents.reactivateEquipment(1, 1, true);
++    expect(services.incidents.error.value).toContain(
++      "unresolved blocking incidents",
++    );
++    expect(db.equipment[0].status).toBe("MAINTENANCE");
++    expect(availableWrites(calls)).toHaveLength(0);
++  });
++
++  it("rechecks incidents added after the equipment list was loaded", async () => {
++    const { services, db, calls } = await createWorkflowHarness();
++    await loadIncidents(services.incidents);
++    db.incidents.push(incidentResource());
++    services.incidents.reactivateEquipment(1, 1, true);
++    await vi.waitFor(() =>
++      expect(services.incidents.reactivatingEquipmentId.value).toBeNull(),
++    );
++    expect(services.incidents.error.value).toContain(
++      "New or unresolved blocking incidents",
++    );
++    expect(db.equipment[0].status).toBe("MAINTENANCE");
++    expect(availableWrites(calls)).toHaveLength(0);
++  });
++
++  it("does not reactivate equipment with an active rental", async () => {
++    const { services, db, calls } = await createWorkflowHarness({
++      rentals: [rentalResource()],
++    });
++    await loadIncidents(services.incidents);
++    services.incidents.reactivateEquipment(1, 1, true);
++    await vi.waitFor(() =>
++      expect(services.incidents.reactivatingEquipmentId.value).toBeNull(),
++    );
++    expect(services.incidents.error.value).toContain("active rental");
++    expect(db.equipment[0].status).toBe("MAINTENANCE");
++    expect(availableWrites(calls)).toHaveLength(0);
++  });
++
++  it.each([
++    ["an open nonblocking finding", incidentResource(false)],
++    ["a resolved blocking finding", incidentResource(true, "RESOLVED")],
++  ])("allows inspection with %s", async (_, incident) => {
++    const { services, db } = await createWorkflowHarness({
++      incidents: [incident],
++    });
++    await loadIncidents(services.incidents);
++    services.incidents.reactivateEquipment(1, 1, true);
++    await vi.waitFor(() =>
++      expect(services.incidents.reactivationSucceeded.value).toBe(true),
++    );
++    expect(db.equipment[0].status).toBe("AVAILABLE");
++    expect(db.incidents).toEqual([incident]);
++  });
++
++  it.each([
++    ["owner", { userId: 99 }, "does not belong to this company"],
++    ["state", { status: "RENTED" }, "Only equipment in MAINTENANCE"],
++  ])("rechecks the equipment %s before writing", async (_, change, message) => {
++    const { services, db, calls } = await createWorkflowHarness();
++    await loadIncidents(services.incidents);
++    Object.assign(db.equipment[0], change);
++    services.incidents.reactivateEquipment(1, 1, true);
++    await vi.waitFor(() =>
++      expect(services.incidents.reactivatingEquipmentId.value).toBeNull(),
++    );
++    expect(services.incidents.reactivationSucceeded.value).toBe(false);
++    expect(services.incidents.error.value).toContain(message);
++    expect(availableWrites(calls)).toHaveLength(0);
++  });
++});
+diff --git a/src/app/maintenance/domain/model/incident-reactivation-policy.js b/src/app/maintenance/domain/model/incident-reactivation-policy.js
+index 6796fa0..5d5de26 100644
+--- a/src/app/maintenance/domain/model/incident-reactivation-policy.js
++++ b/src/app/maintenance/domain/model/incident-reactivation-policy.js
+@@ -2,10 +2,10 @@ import { IncidentStatus } from './incident-status.enum.js';
+ export class IncidentReactivationPolicy {
+   static canReactivate(equipmentId, incidents) {
+     const related = incidents.filter((incident) => incident.equipmentId === equipmentId);
+-    const hadBlockingIncident = related.some((incident) => incident.blocksRental);
+     const hasUnresolvedBlocker = related.some(
+       (incident) => incident.blocksRental && incident.status === IncidentStatus.OPEN,
+     );
+-    return hadBlockingIncident && !hasUnresolvedBlocker;
++    // A maintenance return does not require an incident to have been reported.
++    return !hasUnresolvedBlocker;
+   }
+ }
+diff --git a/tests/helpers/workflow-harness.js b/tests/helpers/workflow-harness.js
+new file mode 100644
+index 0000000..a7001fb
+--- /dev/null
++++ b/tests/helpers/workflow-harness.js
+@@ -0,0 +1,101 @@
++import { expect, vi } from "vitest";
++
++export const equipmentResource = (status = "MAINTENANCE") => ({
++  id: 1,
++  userId: 1,
++  code: "TEST-1",
++  name: "Fictional equipment",
++  description: "Local test fixture",
++  categoryId: 1,
++  location: "Lima",
++  dailyRate: 100,
++  weeklyRate: 600,
++  status,
++  availabilityBlocks: [],
++});
++
++export const rentalResource = (status = "ACTIVE") => ({
++  id: 1,
++  equipmentId: 1,
++  constructionUserId: 2,
++  rentalCompanyUserId: 1,
++  startDate: "2030-01-01T05:00:00.000Z",
++  endDate: "2030-01-10T04:59:59.999Z",
++  status,
++});
++
++// Replace only HTTP and browser storage; context composition, APIs and ACLs stay real.
++export async function createWorkflowHarness(resources = {}) {
++  vi.resetModules();
++  const values = new Map();
++  vi.stubGlobal("localStorage", {
++    getItem: (key) => values.get(key) ?? null,
++    setItem: (key, value) => values.set(key, String(value)),
++    removeItem: (key) => values.delete(key),
++  });
++  const db = structuredClone({
++    equipment: [equipmentResource()],
++    "equipment-categories": [
++      { id: 1, name: "Test category", description: "Fictional" },
++    ],
++    profiles: [],
++    users: [],
++    "rental-requests": [],
++    rentals: [],
++    deliveries: [],
++    "equipment-returns": [],
++    maintenances: [],
++    incidents: [],
++    "user-subscriptions": [],
++    "subscription-plans": [],
++    ...resources,
++  });
++  const calls = [];
++  const respond = (status, data) =>
++    new Response(JSON.stringify(data), { status });
++  vi.stubGlobal("fetch", async (rawUrl, options = {}) => {
++    const url = new URL(rawUrl);
++    const [resource, rawId] = url.pathname
++      .replace(/^\/api\/v1\//, "")
++      .split("/");
++    const id = rawId === undefined ? null : Number(rawId);
++    const method = options.method ?? "GET";
++    const body = options.body ? JSON.parse(options.body) : undefined;
++    calls.push({ method, resource, id, body });
++    const rows = db[resource];
++    if (!Array.isArray(rows))
++      return respond(404, { message: "Unknown test resource" });
++    if (method === "GET") {
++      const result =
++        id === null
++          ? rows.filter((row) =>
++              [...url.searchParams].every(
++                ([key, value]) => String(row[key]) === value,
++              ),
++            )
++          : rows.find((row) => row.id === id);
++      return result === undefined
++        ? respond(404, { message: "Resource not found" })
++        : respond(200, result);
++    }
++    if (method === "POST") {
++      const row = {
++        ...body,
++        id: Math.max(0, ...rows.map((row) => row.id)) + 1,
++      };
++      rows.push(row);
++      return respond(201, row);
++    }
++    const index = rows.findIndex((row) => row.id === id);
++    if (index < 0) return respond(404, { message: "Resource not found" });
++    rows[index] =
++      method === "PATCH" ? { ...rows[index], ...body } : { ...body, id };
++    return respond(200, rows[index]);
++  });
++  const { configureServices, useServices } =
++    await import("../../src/app/app.services.js");
++  configureServices();
++  const services = useServices();
++  await vi.waitFor(() => expect(services.inventory.loading.value).toBe(false));
++  return { services, db, calls };
++}
