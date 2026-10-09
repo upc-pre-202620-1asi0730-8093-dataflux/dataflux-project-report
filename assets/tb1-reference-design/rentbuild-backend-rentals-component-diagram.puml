@@ -1,0 +1,41 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Rentals Backend Component Diagram
+
+Container(spa, "Single Page Application", "Vue", "Consumes rental-management capabilities provided by the RentBuild backend.")
+
+Container_Boundary(rentals_context, "RentBuild RESTful API / ASP.NET Core — Rentals context detail") {
+    Component(interfaces_layer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+    Component(application_layer, "Application Layer", "Application Services / Command and Query Services", "Coordinates rental requests, reservation workflows, contract operations, deliveries, returns, and rental lifecycle use cases.")
+    Component(domain_layer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains rental requests, rental contracts, reservations, deliveries, returns, and rental business rules.")
+    Component(infrastructure_layer, "Infrastructure Layer", "EF Core / Repository Implementations", "Provides persistence implementations and technical adapters required by the Rentals bounded context.")
+}
+
+Component(inventory_bc, "Inventory Bounded Context", "Backend Context", "Provides machinery information, rates, status, and availability required by rental operations.")
+Component(profiles_bc, "Profiles Bounded Context", "Backend Context", "Provides supplier, lessee, and company profile information required by rental operations.")
+
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores rental requests, reservations, contracts, deliveries, returns, and active rental information.")
+
+' SPA Relationships
+Rel(spa, interfaces_layer, "Consumes Rentals services", "JSON / HTTPS")
+
+' Internal Layer Relationships
+Rel(interfaces_layer, application_layer, "Delegates requests")
+Rel(application_layer, domain_layer, "Executes rental domain operations")
+Rel(application_layer, infrastructure_layer, "Uses persistence capabilities")
+
+' External Context Relationships
+Rel(application_layer, inventory_bc, "Checks machinery availability and equipment data")
+Rel(application_layer, profiles_bc, "Uses company and participant profile data")
+
+' Database Relationships
+Rel(infrastructure_layer, database, "Reads and writes Rentals data", "EF Core / SQL")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

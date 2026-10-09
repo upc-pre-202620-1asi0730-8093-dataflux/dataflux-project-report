@@ -1,0 +1,45 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Subscriptions Backend Component Diagram
+
+Container(spa, "Single Page Application", "Vue", "Consumes subscription-management capabilities provided by the RentBuild backend.")
+
+Container_Boundary(subs_context, "RentBuild RESTful API / ASP.NET Core — Subscriptions context detail") {
+    Component(interfaces_layer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for subscription plans, active subscriptions, plan changes, billing status, and subscription management.")
+    Component(application_layer, "Application Layer", "Application Services / Command and Query Services", "Coordinates plan selection, subscription activation, plan changes, billing state, and subscription-related use cases.")
+    Component(domain_layer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains subscription plans, active subscriptions, billing status, and subscription-related business rules.")
+    Component(infrastructure_layer, "Infrastructure Layer", "EF Core / Repository Implementations", "Provides persistence implementations and technical adapters required by the Subscriptions bounded context.")
+    Component(payment_connector, "Payment Connector", "Stripe SDK / REST API", "Integrates the Subscriptions bounded context with the external payment provider.")
+}
+
+Component(iam_bc, "IAM Bounded Context", "Backend Context", "Provides authenticated account identity required for subscription ownership.")
+Component(profiles_bc, "Profiles Bounded Context", "Backend Context", "Provides company and account profile information associated with subscriptions.")
+
+System_Ext(stripe, "Stripe", "External Payment Service", "Processes subscription payment transactions.")
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores plans, subscriptions, billing status, payment references, and subscription-related information.")
+
+' SPA Relationships
+Rel(spa, interfaces_layer, "Consumes Subscriptions services", "JSON / HTTPS")
+
+' Internal Layer Relationships
+Rel(interfaces_layer, application_layer, "Delegates requests")
+Rel(application_layer, domain_layer, "Executes subscription domain operations")
+Rel(application_layer, infrastructure_layer, "Uses persistence capabilities")
+Rel(application_layer, payment_connector, "Requests payment operations")
+
+' External Bounded Context Relationships
+Rel(application_layer, iam_bc, "Uses authenticated account identity")
+Rel(application_layer, profiles_bc, "Uses company profile information")
+
+' External Service & Database Relationships
+Rel(infrastructure_layer, database, "Reads and writes Subscriptions data", "EF Core / SQL")
+Rel(payment_connector, stripe, "Processes subscription payments", "HTTPS / API")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

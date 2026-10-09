@@ -1,0 +1,30 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Context>
+
+title RentBuild - System Context Diagram
+
+LAYOUT_WITH_LEGEND()
+
+Person(rentalOperator, "Rental Operator", "Person responsible for managing machinery, rentals, deliveries, returns, incidents and maintenance.")
+Person(constructionManager, "Construction Manager", "Person responsible for finding machinery, checking availability and requesting rentals for construction projects.")
+Person(systemAdministrator, "System Administrator", "Person responsible for mediating conflicts over machinery conditions, damages, or delays involving owners and clients.")
+
+System(rentBuild, "RentBuild", "Web-based platform for managing construction machinery rentals throughout the complete rental lifecycle.")
+
+System_Ext(googleMaps, "Google Maps Platform", "Provides geolocation and mapping services for coordinating machinery deliveries and returns.")
+System_Ext(stripe, "Stripe", "External payment gateaway that processes user subscription transactions.")
+System_Ext(sendGrid, "SendGrid", "External email service API that handles transactional emails and notifications.")
+
+Rel(rentalOperator, rentBuild, "Manages machinery, rentals, deliveries, returns and maintenance")
+Rel(constructionManager, rentBuild, "Searches machinery, checks availability and requests rentals")
+Rel(systemAdministrator, rentBuild, "Monitors website uptime, manages database security and resolves technical issues")
+
+Rel(rentBuild, googleMaps, "Uses maps and geolocation services")
+Rel(rentBuild, stripe, "Processes subscription payments via HTTPS")
+Rel(rentBuild, sendGrid, "Sends transactional emails, booking confirmations, and alerts", "HTTPS/API")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

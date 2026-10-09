@@ -1,0 +1,78 @@
+@startuml
+title RentBuild — Rentals — Proposed MySQL design
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+hide circle
+skinparam classAttributeIconSize 0
+package "Rentals" {
+    entity "rental_requests" as rental_requests {
+        * id : BIGINT <<PK>>
+        --
+        * equipment_id : BIGINT <<FK>>
+        * construction_company_id : BIGINT <<FK>>
+        * provider_id : BIGINT <<FK>>
+        * start_date : DATE
+        * end_date : DATE
+        * status : VARCHAR(20)
+        * requested_at : TIMESTAMP
+        notes : TEXT
+        rejection_reason : VARCHAR(255)
+    }
+    entity "rental_contracts" as rental_contracts {
+        * id : BIGINT <<PK>>
+        --
+        * request_id : BIGINT <<FK, UNIQUE>>
+        * equipment_id : BIGINT <<FK>>
+        * construction_company_id : BIGINT <<FK>>
+        * provider_id : BIGINT <<FK>>
+        * start_date : DATE
+        * end_date : DATE
+        * total_amount : DECIMAL(12,2)
+        terms : TEXT
+        * status : VARCHAR(20)
+        * created_at : TIMESTAMP
+    }
+    entity "deliveries" as deliveries {
+        * id : BIGINT <<PK>>
+        --
+        * contract_id : BIGINT <<FK, UNIQUE>>
+        * delivered_at : TIMESTAMP
+        * delivery_location : VARCHAR(150)
+        received_by : VARCHAR(120)
+        observations : TEXT
+    }
+    entity "equipment_returns" as equipment_returns {
+        * id : BIGINT <<PK>>
+        --
+        * contract_id : BIGINT <<FK, UNIQUE>>
+        * returned_at : TIMESTAMP
+        condition_on_return : VARCHAR(255)
+        has_damage : BOOLEAN
+        inspection_notes : TEXT
+    }
+}
+entity "company_profiles [external owner]" as company_profiles #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+entity "equipments [external owner]" as equipments #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+entity "incidents [external owner]" as incidents #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+entity "provider_profiles [external owner]" as provider_profiles #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+equipments ||--o{ rental_requests : equipment_id
+company_profiles ||--o{ rental_requests : construction_company_id
+provider_profiles ||--o{ rental_requests : provider_id
+rental_requests ||--o| rental_contracts : request_id
+equipments ||--o{ rental_contracts : equipment_id
+company_profiles ||--o{ rental_contracts : construction_company_id
+provider_profiles ||--o{ rental_contracts : provider_id
+rental_contracts ||--o| deliveries : contract_id
+rental_contracts ||--o| equipment_returns : contract_id
+rental_contracts |o--o{ incidents : contract_id
+footer Proposed AV2 schema; reference domain preserved; no deployed tables or migrations are claimed
+@enduml

@@ -1,0 +1,143 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+package "Interfaces Layer" {
+  class RentalsController <<Controller>> {
+    - rentalsService: RentalApplicationService
+    + submitRequest(command: SubmitRentalRequestCommand): RentalRequestResponse
+    + acceptRequest(rentalRequestId: RentalRequestId): RentalContractResponse
+    + registerDelivery(command: RegisterDeliveryCommand): DeliveryResponse
+    + registerReturn(command: RegisterReturnCommand): EquipmentReturnResponse
+  }
+}
+
+package "Application Layer" {
+  class RentalApplicationService <<Application Service>> {
+    - requestRepository: RentalRequestRepository
+    - contractRepository: RentalContractRepository
+    - deliveryRepository: DeliveryRepository
+    - returnRepository: EquipmentReturnRepository
+    - availabilityPort: InventoryAvailabilityPort
+    + submitRequest(command: SubmitRentalRequestCommand): RentalRequestId
+    + acceptRequest(rentalRequestId: RentalRequestId): RentalContractId
+    + registerDelivery(command: RegisterDeliveryCommand): DeliveryId
+    + registerReturn(command: RegisterReturnCommand): EquipmentReturnId
+  }
+
+  interface InventoryAvailabilityPort <<Port>> {
+    + isAvailable(equipmentId: EquipmentId, period: DateRange): bool
+  }
+}
+
+package "Infrastructure Layer" {
+  class RentalRequestRepositoryImpl <<Repository Implementation>>
+  class RentalContractRepositoryImpl <<Repository Implementation>>
+  class DeliveryRepositoryImpl <<Repository Implementation>>
+  class EquipmentReturnRepositoryImpl <<Repository Implementation>>
+  class InventoryAvailabilityAdapter <<Context Adapter>>
+}
+
+package "Domain Layer" {
+  class RentalRequest <<Aggregate Root>> {
+    - id: RentalRequestId
+    - equipmentId: EquipmentId
+    - constructionCompanyId: CompanyProfileId
+    - providerId: ProviderProfileId
+    - period: DateRange
+    - status: RequestStatus
+    - rejectionReason: RejectionReason
+    + approve(): void
+    + reject(reason: RejectionReason): void
+  }
+
+  class RentalContract <<Aggregate Root>> {
+    - id: RentalContractId
+    - requestId: RentalRequestId
+    - equipmentId: EquipmentId
+    - constructionCompanyId: CompanyProfileId
+    - providerId: ProviderProfileId
+    - period: DateRange
+    - totalAmount: Money
+    - status: ContractStatus
+    + start(): void
+    + close(): void
+  }
+
+  entity Delivery <<Entity>> {
+    - id: DeliveryId
+    - contractId: RentalContractId
+    - deliveredAt: DateTimeOffset
+    - location: DeliveryLocation
+    - receivedBy: UserId
+  }
+
+  entity EquipmentReturn <<Entity>> {
+    - id: EquipmentReturnId
+    - contractId: RentalContractId
+    - returnedAt: DateTimeOffset
+    - condition: ReturnCondition
+    - hasDamage: bool
+    - requiresMaintenance: bool
+  }
+
+  enum RequestStatus <<Enum>> {
+    PENDING
+    APPROVED
+    REJECTED
+    CANCELLED
+  }
+
+  enum ContractStatus <<Enum>> {
+    CREATED
+    ACTIVE
+    COMPLETED
+    CANCELLED
+  }
+
+  class RejectionReason <<Value Object>> {
+    - value: string
+  }
+  class ReturnCondition <<Value Object>> {
+    - value: string
+  }
+  class DeliveryLocation <<Value Object>> {
+    - value: string
+  }
+  class DateRange <<Value Object>> {
+    - startDate: DateOnly
+    - endDate: DateOnly
+  }
+
+  interface RentalRequestRepository <<Repository>>
+  interface RentalContractRepository <<Repository>>
+  interface DeliveryRepository <<Repository>>
+  interface EquipmentReturnRepository <<Repository>>
+}
+
+RentalsController --> RentalApplicationService
+RentalApplicationService --> RentalRequestRepository
+RentalApplicationService --> RentalContractRepository
+RentalApplicationService --> DeliveryRepository
+RentalApplicationService --> EquipmentReturnRepository
+RentalApplicationService --> InventoryAvailabilityPort
+
+RentalRequestRepositoryImpl ..|> RentalRequestRepository
+RentalContractRepositoryImpl ..|> RentalContractRepository
+DeliveryRepositoryImpl ..|> DeliveryRepository
+EquipmentReturnRepositoryImpl ..|> EquipmentReturnRepository
+InventoryAvailabilityAdapter ..|> InventoryAvailabilityPort
+
+RentalRequest "1" --> "1" RequestStatus
+RentalRequest "1" *-- "0..1" RejectionReason
+RentalRequest "1" *-- "1" DateRange
+RentalContract "1" --> "1" ContractStatus
+RentalContract "1" *-- "1" DateRange
+RentalContract "1" --> "0..1" Delivery
+RentalContract "1" --> "0..1" EquipmentReturn
+EquipmentReturn "1" *-- "1" ReturnCondition
+Delivery "1" *-- "1" DeliveryLocation
+RentalRequest "1" ..> "0..1" RentalContract : generates
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

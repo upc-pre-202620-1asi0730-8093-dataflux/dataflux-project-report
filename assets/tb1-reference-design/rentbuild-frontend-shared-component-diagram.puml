@@ -1,0 +1,47 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Shared Frontend Component Diagram (DDD Layers)
+
+Container_Boundary(shared_frontend, "Shared Frontend\n[container]") {
+
+    Boundary(presentation_boundary, "Presentation") {
+        Component(layout_comp, "LayoutComponent", "Vue Component", "Defines the common application frame used by authenticated screens.")
+        Component(nav_comp, "NavigationComponent", "Vue Component", "Provides the main navigation between application modules.")
+        Component(lang_comp, "LanguageSwitcherComponent", "Vue Component", "Allows users to switch between English and Spanish.")
+        Component(footer_comp, "FooterComponent", "Vue Component", "Provides common footer content across the SPA.")
+    }
+
+    Boundary(infrastructure_boundary, "Infrastructure") {
+        Component(api_client, "HttpClient", "JavaScript / Axios / RxJS", "Provides reusable HTTP communication capabilities for frontend contexts.")
+        Component(auth_interceptor, "AuthInterceptor", "JavaScript", "Attaches authentication information to outgoing HTTP requests.")
+        Component(local_storage, "LocalStorageService", "JavaScript", "Provides reusable access to browser local storage.")
+    }
+
+    Boundary(domain_boundary, "Domain") {
+        Component(shared_domain, "shared/domain/model", "Value Objects", "Money and DateRange: reusable self-validating values shared by frontend contexts.")
+    }
+}
+
+Container_Ext(backend_api, "RentBuild REST API", "C# / ASP.NET Core", "Exposes RESTful services consumed by the frontend.")
+
+' Presentation UI Hierarchy
+Rel(layout_comp, nav_comp, "Renders")
+Rel(layout_comp, lang_comp, "Renders")
+Rel(layout_comp, footer_comp, "Renders")
+
+' Infrastructure Internal Dependencies
+Rel(api_client, auth_interceptor, "Uses")
+Rel(auth_interceptor, local_storage, "Reads session data")
+Rel(api_client, shared_domain, "Uses shared values")
+
+' External Service Communication
+Rel(api_client, backend_api, "Sends requests to", "HTTPS / JSON")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

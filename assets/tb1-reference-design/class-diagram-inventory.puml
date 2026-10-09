@@ -1,0 +1,125 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+package "Interfaces Layer" {
+  class InventoryController <<Controller>> {
+    - inventoryService: InventoryApplicationService
+    + registerEquipment(command: RegisterEquipmentCommand): EquipmentResponse
+    + checkAvailability(period: DateRange): AvailabilityResponse
+  }
+}
+
+package "Application Layer" {
+  class InventoryApplicationService <<Application Service>> {
+    - equipmentRepository: EquipmentRepository
+    - categoryRepository: EquipmentCategoryRepository
+    + registerEquipment(command: RegisterEquipmentCommand): EquipmentId
+    + checkAvailability(period: DateRange): bool
+  }
+}
+
+package "Infrastructure Layer" {
+  class EquipmentRepositoryImpl <<Repository Implementation>> {
+    - dbContext: RentBuildDbContext
+  }
+  class EquipmentCategoryRepositoryImpl <<Repository Implementation>> {
+    - dbContext: RentBuildDbContext
+  }
+}
+
+package "Domain Layer" {
+  entity EquipmentCategory <<Entity>> {
+    - id: EquipmentCategoryId
+    - name: CategoryName
+    - description: CategoryDescription
+  }
+
+  class Equipment <<Aggregate Root>> {
+    - id: EquipmentId
+    - providerId: ProviderProfileId
+    - categoryId: EquipmentCategoryId
+    - name: EquipmentName
+    - serialNumber: SerialNumber
+    - location: EquipmentLocation
+    - rentalRate: RentalRate
+    - status: EquipmentStatus
+    + isAvailableFor(period: DateRange): bool
+  }
+
+  enum EquipmentStatus <<Enum>> {
+    AVAILABLE
+    RESERVED
+    RENTED
+    UNDER_MAINTENANCE
+  }
+
+  entity AvailabilityBlock <<Entity>> {
+    - id: AvailabilityBlockId
+    - period: DateRange
+    - reason: AvailabilityReason
+  }
+
+  class RentalRate <<Value Object>> {
+    - dailyRate: Money
+    - weeklyRate: Money
+  }
+
+  class DateRange <<Value Object>> {
+    - startDate: DateOnly
+    - endDate: DateOnly
+    + overlapsWith(other: DateRange): bool
+  }
+
+  class CategoryName <<Value Object>> {
+    - value: string
+  }
+  class CategoryDescription <<Value Object>> {
+    - value: string
+  }
+  class EquipmentName <<Value Object>> {
+    - value: string
+  }
+  class SerialNumber <<Value Object>> {
+    - value: string
+  }
+  class EquipmentLocation <<Value Object>> {
+    - value: string
+  }
+  class AvailabilityReason <<Value Object>> {
+    - value: string
+  }
+
+  interface EquipmentRepository <<Repository>> {
+    + findById(id: EquipmentId): Equipment
+    + findAvailable(period: DateRange): List<Equipment>
+    + save(equipment: Equipment): Equipment
+  }
+
+  interface EquipmentCategoryRepository <<Repository>> {
+    + findById(id: EquipmentCategoryId): EquipmentCategory
+    + findAll(): List<EquipmentCategory>
+    + save(category: EquipmentCategory): EquipmentCategory
+  }
+}
+
+InventoryController --> InventoryApplicationService
+InventoryApplicationService --> EquipmentRepository
+InventoryApplicationService --> EquipmentCategoryRepository
+EquipmentRepositoryImpl ..|> EquipmentRepository
+EquipmentCategoryRepositoryImpl ..|> EquipmentCategoryRepository
+
+Equipment "1" o-- "1" RentalRate
+Equipment "1" --> "0..*" AvailabilityBlock
+Equipment "1" --> "1" EquipmentStatus
+Equipment "0..*" --> "1" EquipmentCategory
+EquipmentCategory "1" *-- "1" CategoryName
+EquipmentCategory "1" *-- "0..1" CategoryDescription
+Equipment "1" *-- "1" EquipmentName
+Equipment "1" *-- "1" SerialNumber
+Equipment "1" *-- "1" EquipmentLocation
+AvailabilityBlock "1" *-- "1" DateRange
+AvailabilityBlock "1" *-- "0..1" AvailabilityReason
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

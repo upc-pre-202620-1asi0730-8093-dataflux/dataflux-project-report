@@ -1,0 +1,50 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Subscriptions Frontend Component Diagram (DDD Layers)
+
+Container_Boundary(subscriptions_frontend, "Subscriptions Frontend Bounded Context\n[container]") {
+
+    Boundary(presentation_boundary, "Presentation") {
+        Component(sub_plans_comp, "SubscriptionPlansComponent", "Vue Component", "Displays the available RentBuild subscription plans")
+        Component(current_sub_comp, "CurrentSubscriptionComponent", "Vue Component", "Displays the organization's current subscription information")
+        Component(sub_detail_comp, "SubscriptionDetailComponent", "Vue Component", "Displays detailed subscription, plan and billing information")
+        Component(change_plan_comp, "ChangePlanComponent", "Vue Component", "Provides the interface for changing the current subscription plan")
+    }
+
+    Boundary(application_boundary, "Application") {
+        Component(subs_app, "subscriptions/application", "JavaScript", "Coordinates subscription queries, plan changes, subscription state and frontend billing-related use cases")
+    }
+
+    Boundary(infrastructure_boundary, "Infrastructure") {
+        Component(subs_infra, "subscriptions/infrastructure", "HTTP, Resources, Mappers", "Consumes Subscriptions REST endpoints and maps backend resources into frontend subscription models")
+    }
+
+    Boundary(domain_boundary, "Domain") {
+        Component(subs_domain, "subscriptions/domain/model", "Entities / Value Objects", "Subscription, SubscriptionPlan, BillingPeriod and SubscriptionStatus models and business rules")
+    }
+}
+
+Container_Ext(backend_api, "RentBuild Backend API", "ASP.NET Core ", "Exposes subscription, plan and billing-related RESTful services consumed by the Subscriptions frontend")
+
+' Presentation to Application Relations
+Rel(sub_plans_comp, subs_app, "Requests available plans")
+Rel(current_sub_comp, subs_app, "Requests current subscription")
+Rel(sub_detail_comp, subs_app, "Requests subscription details")
+Rel(change_plan_comp, subs_app, "Requests plan change")
+
+' Application Relationships
+Rel(subs_app, subs_infra, "Loads and updates subscription data through")
+Rel(subs_app, subs_domain, "Holds and applies subscription state and rules")
+
+' Infrastructure Relationships
+Rel(subs_infra, subs_domain, "Maps resources into")
+Rel(subs_infra, backend_api, "Consumes Subscriptions REST endpoints", "HTTPS / JSON")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

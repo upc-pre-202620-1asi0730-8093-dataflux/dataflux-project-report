@@ -1,0 +1,43 @@
+@startuml
+title RentBuild — Maintenance — Proposed MySQL design
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+hide circle
+skinparam classAttributeIconSize 0
+package "Maintenance" {
+    entity "incidents" as incidents {
+        * id : BIGINT <<PK>>
+        --
+        * equipment_id : BIGINT <<FK>>
+        contract_id : BIGINT <<FK>>
+        * reported_at : TIMESTAMP
+        * severity : VARCHAR(20)
+        * status : VARCHAR(20)
+        * description : TEXT
+    }
+    entity "maintenance_records" as maintenance_records {
+        * id : BIGINT <<PK>>
+        --
+        * equipment_id : BIGINT <<FK>>
+        incident_id : BIGINT <<FK, UNIQUE>>
+        * type : VARCHAR(20)
+        * status : VARCHAR(20)
+        scheduled_date : DATE
+        completed_date : DATE
+        description : TEXT
+        cost : DECIMAL(10,2)
+    }
+}
+entity "equipments [external owner]" as equipments #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+entity "rental_contracts [external owner]" as rental_contracts #EEEEEE {
+  * id : BIGINT <<PK>>
+}
+equipments ||--o{ incidents : equipment_id
+rental_contracts |o--o{ incidents : contract_id
+equipments ||--o{ maintenance_records : equipment_id
+incidents |o--o| maintenance_records : incident_id
+footer Proposed AV2 schema; reference domain preserved; no deployed tables or migrations are claimed
+@enduml

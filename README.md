@@ -2455,180 +2455,201 @@ El enlace `https://dataflux-landing-page.vercel.app/` corresponde a la **landing
 
 ## 4.6. Domain-Driven Software Architecture
 
-El frontend TB1 se contrasta con [develop `7e862dd`](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/tree/7e862dddb7be797afea964bdb360c772de94d56c) y las correcciones de [PR17, `c4c3452`, pendiente de revisión](https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17). Usa **Vue 3, JavaScript, PrimeVue 4, Pinia, Vue Router, Axios y RxJS**. `HttpClient` en `shared/infrastructure/services.js` convierte peticiones Axios en observables cancelables; `app.services.js` compone stores y puertos ACL. Shared es soporte técnico y no un séptimo contexto de negocio.
+Se conserva la arquitectura de producto propuesta por el equipo: seis Bounded Contexts (IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions), cuatro capas dentro del backend (Interfaces, Application, Domain e Infrastructure) y una API con persistencia relacional. Shared aporta capacidades técnicas comunes. Los contextos siguen formando parte de la misma aplicación; no se convierten en microservicios.
 
-La demo TB1 consume **Node.js/json-server con recursos JSON**. El backend del statement es una propuesta para AV2: **ASP.NET Core, C#, Entity Framework Core y MySQL**, con OpenAPI/Swagger. EF Core pertenece a la API, no es el motor de base de datos. No se acredita un backend productivo, migraciones, autorización de servidor ni transacciones durables mediante la Fake API.
+La adaptación al curso cambia tecnologías y tipos: frontend **Vue 3, JavaScript, Vue Router, Pinia y PrimeVue**; comunicación HTTP con **Axios/RxJS**; backend propuesto **C#/ASP.NET Core**, persistencia **Entity Framework Core** y **MySQL**. Se mantienen los agregados, puertos, repositorios, relaciones y responsabilidades del diseño de referencia. Los tipos Java LocalDate/Instant/BigDecimal y adaptadores JPA se traducen a DateOnly/DateTimeOffset/decimal y EF Core.
 
-Las figuras se renderizan con **PlantUML real y Graphviz**, desde las fuentes `.puml` enlazadas. C4 utiliza la biblioteca estándar local de PlantUML. El [índice](assets/tb1-design/index.json) y los datos por figura explicitan alcance y procedencia. Los [exports anteriores](assets/tb1-design/previous-exports.md) se preservan como antecedentes; sus rótulos Angular, Spring/Java o controllers Node no definen la arquitectura vigente.
+Los diagramas principales siguientes representan **el diseño propuesto del producto**. TB1 ejecuta frontend y Fake API Node.js/json-server; los controllers, repositorios EF Core y servicios externos del diseño no se declaran implementados. El UML del frontend actual es una vista complementaria y no sustituye el diseño del backend.
+
+Las fuentes se recuperaron de los metadatos PlantUML de las imágenes del equipo y se renderizan con PlantUML/Graphviz. La [comparación de cambios y justificaciones](assets/tb1-reference-design/COMPARISON.md) y la [validación de nombres y relaciones](assets/tb1-reference-design/reference-validation.json) documentan qué se conserva y qué se adapta. Las imágenes originales permanecen intactas.
 
 ### 4.6.1. Design-Level Event Storming
 
-La reconstrucción documental distingue comandos, agregados, consultas y eventos en seis contextos. Comandos azules, agregados amarillos y eventos naranjas tienen una leyenda visible. Es un modelo de discusión y no evidencia de taller, asistentes, acuerdos ni bus implementado.
+El artefacto del equipo delimita los contextos del ciclo de alquiler, sus agregados, comandos y eventos. Se conserva como referencia del diseño; esta adaptación de stack no acredita una sesión nueva ni cambia unilateralmente sus fronteras.
 
-| Contexto | Modelo y coordinación propuesta |
-|---|---|
-| IAM | Registro, inicio y fin de sesión; comandos SignIn/SignUp y estado de identidad. El fin de sesión limpia datos privados. |
-| Profiles | CompanyProfile compone Address; consulta/actualización del perfil propio. La información de proveedor es una proyección. |
-| Inventory | Equipment, EquipmentCategory y AvailabilityBlock; publicar equipo, consultar tarifa y disponibilidad por periodo. |
-| Rentals | RentalRequest y Rental; aprobar/rechazar, entregar y retornar. Aprobación consulta disponibilidad y condiciones a través de puertos. |
-| Maintenance | Incident y Maintenance son historiales independientes del equipo; bloqueos y liberación requieren comprobar condiciones pendientes. |
-| Subscriptions | SubscriptionPlan y UserSubscription; estado más periodo determinan vigencia. La demo no programa cobros. |
+![Design-Level Event Storming del equipo](assets/md-images-chapter4/design-level-event-storming.png)
 
-![Design-Level EventStorming de los contextos principales](assets/tb1-design/eventstorming-core.png)
-
-[Fuente PlantUML](assets/tb1-design/eventstorming-core.puml).
-
-![Design-Level EventStorming de los contextos de soporte](assets/tb1-design/eventstorming-support.png)
-
-[Fuente PlantUML](assets/tb1-design/eventstorming-support.puml).
+Los [flujos principales](assets/tb1-design/eventstorming-core.png) y [de soporte](assets/tb1-design/eventstorming-support.png) son lecturas complementarias del proceso TB1, con sus [fuentes](assets/tb1-design/eventstorming-core.puml). No prueban un bus de eventos implementado.
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El sistema central RentBuild se relaciona con Rental Operator y Construction Manager mediante intenciones nombradas. Geolocalización se mantiene como servicio candidato, sin atribuir una integración de un proveedor ya realizada.
+Se mantienen Rental Operator, Construction Manager y System Administrator, junto con Google Maps, Stripe y SendGrid del diseño original. Administración, geolocalización, pagos y correo son capacidades previstas; su presencia en la propuesta no acredita su integración en TB1.
 
-![C4 contexto: actores, RentBuild y servicio externo propuesto](assets/tb1-design/c4-context.png)
+![C4 de contexto: estructura original conservada](assets/tb1-reference-design/rentbuild-c4-context-diagram.png)
 
-[Fuente PlantUML](assets/tb1-design/c4-context.puml).
+[Fuente PlantUML](assets/tb1-reference-design/rentbuild-c4-context-diagram.puml) · [SVG](assets/tb1-reference-design/rentbuild-c4-context-diagram.svg).
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-Landing, SPA Vue y API demo son unidades de despliegue TB1. Los enlaces de la landing abren la app y la app consume JSON por HTTP/HTTPS. La API ASP.NET Core y MySQL se muestran como reemplazo propuesto AV2. Los seis contextos no son seis microservicios.
+Se conserva la distribución propuesta Landing Page → SPA → RESTful API → Database. Landing y SPA usan Vue; la API propuesta usa ASP.NET Core/EF Core y MySQL almacena los datos. Cada container corresponde a una unidad de despliegue independiente. Los proveedores externos previstos conservan su lugar en la propuesta.
 
-![C4 contenedores con tecnología y comunicación TB1/AV2](assets/tb1-design/c4-containers.png)
+![C4 de contenedores: diseño del producto con el stack del curso](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.png)
 
-[Fuente PlantUML](assets/tb1-design/c4-containers.puml).
+[Fuente PlantUML](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.puml) · [SVG](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.svg).
+
+La [vista de la demo TB1](assets/tb1-design/c4-containers.png), con [fuente PlantUML](assets/tb1-design/c4-containers.puml), detalla el uso actual de Node/json-server. La Fake API es el soporte temporal de la demo y no elimina la arquitectura objetivo.
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Cada frontera indica el container en alcance. Los componentes nombran tecnología y responsabilidad; los servicios de otro container permanecen fuera de la frontera. Las referencias de código son una revisión de fuente, no una afirmación de despliegue.
+#### Frontend General Components Diagram
 
-#### Landing Page components
+Se conserva App Layout, App Router, Shared, los seis contextos y API/Local Data Infrastructure. Cambian las etiquetas Angular/Java a Vue/JavaScript y C#/ASP.NET Core; el transporte se identifica con Axios/RxJS. Se corrige el símbolo de la API externa, que corresponde a un container de aplicación y no a una base de datos.
 
-![C4 componentes de la landing](assets/tb1-design/c4-components-landing.png)
+![C4 frontend: distribución y responsabilidades conservadas](assets/tb1-reference-design/rentbuild-frontend-general-component-diagram.png)
 
-[Fuente PlantUML](assets/tb1-design/c4-components-landing.puml).
+[Fuente PlantUML](assets/tb1-reference-design/rentbuild-frontend-general-component-diagram.puml) · [SVG](assets/tb1-reference-design/rentbuild-frontend-general-component-diagram.svg).
 
-#### Web Application components
+La [vista del código TB1](assets/tb1-design/c4-components-web.png), con [fuente](assets/tb1-design/c4-components-web.puml), complementa esta propuesta con stores, composición y endpoints del snapshot revisado. Los nombres concretos del runtime no reemplazan las responsabilidades del diseño.
 
-![C4 componentes reales del frontend Vue por contexto](assets/tb1-design/c4-components-web.png)
+#### Backend General Components Diagram
 
-[Fuente PlantUML](assets/tb1-design/c4-components-web.puml).
+Se mantienen los seis contextos y Shared dentro de la RESTful API. Los componentes de persistencia se adaptan a EF Core/MySQL, manteniendo responsabilidades y comunicaciones del modelo de referencia.
 
-La figura identifica IamStore, ProfilesStore, InventoryStore, RentalsStore, SubscriptionsStore, MaintenanceStore e IncidentStore. Los modelos se exponen a Pinia mediante `registerStore`/`exposeStore`; la composición registra puertos ACL de acceso, equipo, disponibilidad, participantes e incidentes. Las APIs/assemblers propios adaptan los recursos a entidades. Estos controles del cliente no sustituyen autorización del servidor.
+![C4 backend propuesto: contextos originales con C#/ASP.NET Core](assets/tb1-reference-design/rentbuild-backend-general-component-diagram.png)
 
-#### TB1 Demo API components
+[Fuente PlantUML](assets/tb1-reference-design/rentbuild-backend-general-component-diagram.puml) · [SVG](assets/tb1-reference-design/rentbuild-backend-general-component-diagram.svg).
 
-![C4 componentes Node/json-server de la demo TB1](assets/tb1-design/c4-components-mock.png)
+#### Backend Component Diagrams by Bounded Context
 
-[Fuente PlantUML](assets/tb1-design/c4-components-mock.puml).
+Las seis vistas siguientes amplían el detalle de la misma API, con las capas Interfaces, Application, Domain e Infrastructure. Sus fronteras indican el contexto enfocado dentro de la API; no son seis despliegues independientes.
 
-#### RESTful API components — proposed AV2
+| Contexto | Diagrama | Fuente PlantUML |
+|---|---|---|
+| Iam | [PNG](assets/tb1-reference-design/rentbuild-backend-iam-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-iam-component-diagram.puml) |
+| Profiles | [PNG](assets/tb1-reference-design/rentbuild-backend-profiles-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-profiles-component-diagram.puml) |
+| Inventory | [PNG](assets/tb1-reference-design/rentbuild-backend-inventory-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-inventory-component-diagram.puml) |
+| Rentals | [PNG](assets/tb1-reference-design/rentbuild-backend-rentals-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-rentals-component-diagram.puml) |
+| Maintenance | [PNG](assets/tb1-reference-design/rentbuild-backend-maintenance-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-maintenance-component-diagram.puml) |
+| Subscriptions | [PNG](assets/tb1-reference-design/rentbuild-backend-subscriptions-component-diagram.png) | [.puml](assets/tb1-reference-design/rentbuild-backend-subscriptions-component-diagram.puml) |
 
-![C4 componentes de la futura API ASP.NET Core/C#/EF Core](assets/tb1-design/c4-components-api.png)
-
-[Fuente PlantUML](assets/tb1-design/c4-components-api.puml).
-
-Los controllers, servicios de aplicación, modelos de dominio y repositorios EF Core son diseño propuesto para los contratos TS01–TS09. No se representan controllers Node ni Spring como backend exigido por el curso.
-
-#### Database logical structure — proposed AV2
-
-![Estructura lógica de esquemas propietarios en MySQL](assets/tb1-design/c4-components-database.png)
-
-[Fuente PlantUML](assets/tb1-design/c4-components-database.puml).
-
-Los grupos SQL muestran descomposición estructural de la base, no componentes de aplicación ejecutables. La estructura detallada se expresa mediante los seis ERD de 4.8.
+Los demás zooms frontend recuperados conservan sus componentes y relaciones; están registrados en la [validación de referencias](assets/tb1-reference-design/reference-validation.json). La [vista de componentes de la Fake API](assets/tb1-design/c4-components-mock.png) y la [landing TB1](assets/tb1-design/c4-components-landing.png) explican exclusivamente la demo actual.
 
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
 
-### 4.7.1. Class Diagrams
+Los diagramas principales conservan **el diseño DDD del backend** del equipo: Interfaces → Application → contratos propios de Domain, con implementaciones en Infrastructure. Se mantienen agregados, entidades, value objects, interfaces de repositorio, puertos, operaciones y multiplicidades. Las implementaciones EF Core satisfacen los contratos del dominio; los value objects y las reglas de negocio permanecen en su contexto.
 
-#### Backend  Class Diagram
+Se adaptan únicamente los tipos y la tecnología del stack: String/Long/Boolean/BigDecimal a string/long/bool/decimal; LocalDate a DateOnly; LocalDateTime/Instant a DateTimeOffset; y repositorios JPA a adaptadores que reciben RentBuildDbContext. Son clases propuestas para AV2 y no evidencia de código C# ejecutado en TB1.
 
-![Class Diagram — Backend](./assets/md-images-chapter4/class-diagram-backend.png)
+#### Backend Class Diagram
 
-El diagrama general de clases del backend encapsula los Agregados principales (Aggregate Roots) de cada Bounded Context y define las fronteras de dominio. A fin de mantener el desacoplamiento dictado por la arquitectura DDD, la comunicación entre contextos se realiza estrictamente a través de referencias por identificadores primitivos (userId, equipmentId, planId, contractId), garantizando que cada contexto mantenga su persistencia y sus reglas de negocio aisladas.
+![UML general del dominio backend: agregados originales conservados](assets/tb1-reference-design/class-diagram-backend.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-backend.puml) · [SVG](assets/tb1-reference-design/class-diagram-backend.svg).
 
 #### Inventory
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
+Equipment, EquipmentCategory, AvailabilityBlock y RentalRate conservan su estructura y contratos de disponibilidad. ProviderProfileId sigue siendo una referencia por ID al contexto propietario.
 
-Equipment es el agregado principal: pertenece a una EquipmentCategory, compone una RentalRate (tarifa diaria y semanal) y mantiene su EquipmentStatus (disponible, alquilado, en mantenimiento). Los AvailabilityBlock con su DateRange permiten responder isAvailableFor(period) sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. InventoryApplicationService cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado de la maquinaria.
+![UML backend propuesto — Inventory](assets/tb1-reference-design/class-diagram-inventory.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-inventory.puml) · [SVG](assets/tb1-reference-design/class-diagram-inventory.svg).
 
 #### Rentals
 
-![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
+Se conservan RentalRequest y RentalContract, entregas, devoluciones, InventoryAvailabilityPort y repositorios propios. Que la demo JavaScript utilice Rental no elimina RentalContract del diseño del backend.
 
-RentalRequest modela la reservación: nace en estado PENDING y, al aceptarse, genera un RentalContract. El contrato compone un DateRange y registra una Delivery y un EquipmentReturn. EquipmentReturn.requiresMaintenance() es el punto de integración donde una devolución reportada con daño dispara el flujo dentro del contexto Maintenance. RentalApplicationService orquesta el ciclo completo de alquiler mediante los cuatro repositorios de infraestructura.
+![UML backend propuesto — Rentals](assets/tb1-reference-design/class-diagram-rentals.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-rentals.puml) · [SVG](assets/tb1-reference-design/class-diagram-rentals.svg).
 
 #### Maintenance
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
+Se conservan Incident y MaintenanceRecord, sus repositorios y EquipmentStatusPort con el adaptador de Inventory. Los vínculos opcionales previstos se distinguen de los historiales independientes de la demo.
 
-MaintenanceRecord distingue mantenimientos preventivos y correctivos con su ciclo de estados. Incident registra daños o fallas operativas con su nivel de severidad y puede originar formalmente un MaintenanceRecord. MaintenanceApplicationService orquesta el flujo de atención técnica y actualiza el estado de disponibilidad del equipo en comunicación con el contexto Inventory.
+![UML backend propuesto — Maintenance](assets/tb1-reference-design/class-diagram-maintenance.png)
 
-#### Subscription
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-maintenance.puml) · [SVG](assets/tb1-reference-design/class-diagram-maintenance.svg).
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
+#### Subscriptions
 
-SubscriptionPlan define los términos de precios, beneficios y ciclo de facturación de la plataforma. UserSubscription vincula una cuenta de usuario con su plan activo mediante el value object DateRange y controla los estados de renovación o cancelación automática. SubscriptionApplicationService se integra con la pasarela externa de pagos para gestionar el flujo comercial de las membresías.
+Se conservan SubscriptionPlan, UserSubscription, los repositorios, PaymentConnector y su adaptador previsto. Stripe y los ciclos adicionales son propuesta; la demo mensual no procesa pagos.
+
+![UML backend propuesto — Subscriptions](assets/tb1-reference-design/class-diagram-subscription-bounded-context.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-subscription-bounded-context.puml) · [SVG](assets/tb1-reference-design/class-diagram-subscription-bounded-context.svg).
 
 #### IAM
 
-![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
+Se mantienen User, Credentials, SessionToken, sus value objects y UserRepository. El adaptador de persistencia cambia de JPA a EF Core; la autoridad de autenticación corresponde al backend propuesto.
 
-User es la entidad central, con role (empresa de alquiler o constructora) y status. Credentials es un value object que encapsula la validación de correo y contraseña, y SessionToken representa el token de acceso vigente. AuthenticationService orquesta el registro, el inicio y el cierre de sesión a través de UserRepository.
+![UML backend propuesto — IAM](assets/tb1-reference-design/class-diagram-iam.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-iam.puml) · [SVG](assets/tb1-reference-design/class-diagram-iam.svg).
 
 #### Profiles
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
+Se conservan CompanyProfile y ProviderProfile, Address, los value objects de contacto/reputación y los repositorios propios. ProviderProfile es diseño futuro aunque no exista como entidad de la demo.
 
-CompanyProfile guarda los datos de la empresa y compone un value object Address con coordenadas geográficas, que alimenta la integración con mapas. ProviderProfile extiende el perfil de una empresa de alquiler con su reputación pública —alquileres completados y tasa de cumplimiento—, respondiendo al término "Perfil de Proveedor" del Ubiquitous Language.
+![UML backend propuesto — Profiles](assets/tb1-reference-design/class-diagram-profiles.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/class-diagram-profiles.puml) · [SVG](assets/tb1-reference-design/class-diagram-profiles.svg).
+
+#### Complementary TB1 JavaScript class diagrams
+
+El snapshot de frontend revisado (`7e862dd` y las correcciones `c4c3452` de PR17) se documenta por separado. Estas vistas muestran el código real de la demo y sus diferencias con la propuesta; no redefinen el modelo objetivo.
+
+| Contexto | Runtime TB1 | Diseño backend conservado | UML de la demo |
+|---|---|---|---|
+| IAM | Commands, IamStore/IamApi y DTO de sesión | User, Credentials, SessionToken y autenticación en servidor | [PNG](assets/tb1-design/uml-iam.png) / [.puml](assets/tb1-design/uml-iam.puml) |
+| Profiles | CompanyProfile/Address | CompanyProfile y ProviderProfile con reputación | [PNG](assets/tb1-design/uml-profiles.png) / [.puml](assets/tb1-design/uml-profiles.puml) |
+| Inventory | Equipment, código por usuario y RentalRate | Equipment con ProviderProfileId y value objects | [PNG](assets/tb1-design/uml-inventory.png) / [.puml](assets/tb1-design/uml-inventory.puml) |
+| Rentals | Rental y operaciones de entrega/retorno | RentalContract y puertos/repositorios del backend | [PNG](assets/tb1-design/uml-rentals.png) / [.puml](assets/tb1-design/uml-rentals.puml) |
+| Maintenance | Maintenance e Incident independientes por equipo | MaintenanceRecord con vínculo opcional de origen y EquipmentStatusPort | [PNG](assets/tb1-design/uml-maintenance.png) / [.puml](assets/tb1-design/uml-maintenance.puml) |
+| Subscriptions | Plan mensual y periodo, sin cobros | UserSubscription, SubscriptionPlan y PaymentConnector previsto | [PNG](assets/tb1-design/uml-subscriptions.png) / [.puml](assets/tb1-design/uml-subscriptions.puml) |
+
+Los [value objects](assets/tb1-design/uml-value-objects.png) y [enumeraciones JavaScript](assets/tb1-design/uml-enumerations.png) completan esta vista del runtime. La precisión decimal del diseño C# no se atribuye a Number de JavaScript.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-Los seis ERD son **diseño relacional MySQL propuesto para AV2**, no migraciones ni tablas implementadas en TB1. Incluyen columnas, tipos, PK, FK, claves únicas y cardinalidades crow foot. Las tablas grises externas muestran solo la clave del contexto propietario. Address, Money, RentalRate y DateRange se aplanan en columnas; EF Core sería el adaptador de persistencia de la API.
+La propuesta MySQL conserva las tablas del diseño original, incluyendo provider_profiles, rental_contracts y maintenance_records. Los value objects se mapean a columnas y cada contexto conserva sus tablas propietarias. EF Core pertenece a la API y no es el motor de base de datos. Los diagramas no acreditan migraciones ni tablas desplegadas en TB1.
+
+Se reconcilian relaciones con los UML originales: provider_id apunta al ProviderProfileId correspondiente; una solicitud pendiente puede no tener contrato; un contrato puede no tener aún entrega o devolución; los vínculos de incidente y mantenimiento son opcionales. La relación opcional cero-o-uno del UML de Maintenance se conserva mediante incident_id nullable y UNIQUE. Estos ajustes de consistencia, que van más allá de etiquetas de stack, están explicados en la comparación.
+
+![ERD general: tablas del diseño original y FK consistentes con sus UML](assets/tb1-reference-design/database-diagram.png)
+
+[Fuente PlantUML](assets/tb1-reference-design/database-diagram.puml) · [SVG](assets/tb1-reference-design/database-diagram.svg).
 
 #### IAM
 
-![ERD propuesto IAM](assets/tb1-design/erd-iam.png)
+![ERD propuesto — IAM](assets/tb1-reference-design/erd-iam.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-iam.puml). Email único y password_hash protegido son reglas propuestas, no el formato simplificado del mock.
+[Fuente PlantUML](assets/tb1-reference-design/erd-iam.puml) · [SVG](assets/tb1-reference-design/erd-iam.svg).
 
 #### Profiles
 
-![ERD propuesto Profiles](assets/tb1-design/erd-profiles.png)
+![ERD propuesto — Profiles](assets/tb1-reference-design/erd-profiles.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-profiles.puml). user_id único propone un perfil por cuenta; Address se conserva en columnas propias.
+[Fuente PlantUML](assets/tb1-reference-design/erd-profiles.puml) · [SVG](assets/tb1-reference-design/erd-profiles.svg).
 
 #### Inventory
 
-![ERD propuesto Inventory](assets/tb1-design/erd-inventory.png)
+![ERD propuesto — Inventory](assets/tb1-reference-design/erd-inventory.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-inventory.puml). Código único por dueño, tarifas no negativas, categoría FK y bloques normalizados por equipo. Evitar periodos solapados exige validación transaccional, no solo CHECK de fechas.
+[Fuente PlantUML](assets/tb1-reference-design/erd-inventory.puml) · [SVG](assets/tb1-reference-design/erd-inventory.svg).
 
 #### Rentals
 
-![ERD propuesto Rentals](assets/tb1-design/erd-rentals.png)
+![ERD propuesto — Rentals](assets/tb1-reference-design/erd-rentals.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-rentals.puml). rental_request_id opcional admite legado; UNIQUE por solicitud y por rental_id de entrega/retorno propone impedir duplicación. Autoridad, secuencia y compensaciones requieren API real.
+[Fuente PlantUML](assets/tb1-reference-design/erd-rentals.puml) · [SVG](assets/tb1-reference-design/erd-rentals.svg).
 
 #### Maintenance
 
-![ERD propuesto Maintenance](assets/tb1-design/erd-maintenance.png)
+![ERD propuesto — Maintenance](assets/tb1-reference-design/erd-maintenance.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-maintenance.puml). Incidents y maintenances pertenecen al contexto y referencian Equipment; no se inventa FK entre los dos historiales.
+[Fuente PlantUML](assets/tb1-reference-design/erd-maintenance.puml) · [SVG](assets/tb1-reference-design/erd-maintenance.svg).
 
 #### Subscriptions
 
-![ERD propuesto Subscriptions](assets/tb1-design/erd-subscriptions.png)
+![ERD propuesto — Subscriptions](assets/tb1-reference-design/erd-subscriptions.png)
 
-[Fuente PlantUML](assets/tb1-design/erd-subscriptions.puml). plan_id FK, importe DECIMAL y moneda CHAR(3), periodo válido e historial por usuario. **user_id no es UNIQUE**: la renovación conserva historia. Un máximo de una suscripción efectiva requiere transacción y evaluación conjunta de estado/fechas; auto_renew no implica cobros ni un scheduler implementado.
+[Fuente PlantUML](assets/tb1-reference-design/erd-subscriptions.puml) · [SVG](assets/tb1-reference-design/erd-subscriptions.svg).
 
-Las reglas CHECK, FK y UNIQUE son decisiones de diseño que deberá validar el equipo e implementar en las migraciones AV2. Los bitmaps de bases de datos anteriores se conservan en el archivo de antecedentes y ya no actúan como especificación canónica.
+Las seis vistas por contexto son recortes del mismo esquema global: muestran PK, FK, columnas y cardinalidades. Las tablas externas muestran únicamente la clave del contexto propietario. El historial de suscripciones conserva múltiples filas por usuario; no se introduce UNIQUE(user_id). Reglas de disponibilidad, secuencia de operaciones y suscripción efectiva requieren validación transaccional en el backend futuro.
 
 ---
 
