@@ -266,7 +266,7 @@ La problemática afecta principalmente a los propietarios, administradores y tra
 
 **What (¿Qué?)**
 
-El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+El problema que se investiga es la fragmentación de la información y la coordinación durante el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
 
 Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
@@ -304,7 +304,7 @@ El impacto se refleja en el tiempo empleado para comprobar y actualizar informac
 
 Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
 
-Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
+Estas situaciones pueden afectar la eficiencia operativa y la coordinación entre proveedor y cliente. Las entrevistas documentadas recogen dificultades percibidas, pero no establecen una línea base de tiempo, costos o frecuencia de conflictos para el mercado. La cuantificación requiere registrar operaciones y contrastarlas durante un piloto; los umbrales de la sección 1.2.2.1 son metas hipotéticas y no resultados observados.
 
 #### Objetivos
 
@@ -346,19 +346,19 @@ Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la ca
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
+Se formula un único Problem Statement para una **Brand new initiative**, incluyendo los dos segmentos. Su vínculo con 5W2H es: Who identifica a empresas de alquiler y constructoras; What/How describen información dispersa y coordinación manual; Where/When sitúan el problema en el ciclo de alquiler; Why plantea la necesidad de una alternativa integrada y adecuada a empresas pequeñas; How Much reconoce que aún no existe una línea base cuantitativa de impacto. Las metas siguientes son hipótesis de validación, no resultados de las entrevistas ni logros de TB1.
 
-Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
+**Estado actual.** El dominio del alquiler de maquinaria de construcción comprende a pequeñas y medianas empresas proveedoras y pequeñas empresas constructoras o contratistas. En la operación descrita en 5W2H, inventario, disponibilidad, solicitudes, contratos, entregas, devoluciones e incidencias se coordinan mediante documentos, hojas de cálculo, llamadas y mensajería. Esta dispersión puede producir información desactualizada, conflictos de disponibilidad y dificultades para seguir un alquiler.
 
-Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para DataFlux la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
+**Gap u oportunidad.** Partimos del supuesto de que estos segmentos necesitan gestionar y consultar el ciclo de alquiler de forma integrada, con menor complejidad que una solución generalista. El análisis competitivo y las entrevistas orientan esta propuesta; no demuestran todavía una participación de mercado, disposición de pago generalizada ni una reducción cuantificada de errores.
 
-RentBuild abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
+**Estrategia.** RentBuild buscará cubrir esta necesidad mediante una plataforma SaaS que centralice inventario y disponibilidad y conecte la búsqueda, solicitud, decisión del proveedor y seguimiento del alquiler. La evolución prevista incluye contratos, tarifas, planes, entregas, devoluciones, incidencias y mantenimiento. Se conservarán las restricciones del proyecto: landing HTML/CSS/JavaScript; frontend Vue/PrimeVue y Material Design; API propia ASP.NET Core/EF Core/C#; interfaz responsive y un servicio externo pertinente. La existencia de estos requisitos no acredita su implementación.
 
-El desarrollo de RentBuild estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio. Para el desarrollo del Frontend se utilizará Vue Framework, junto con HTML5, CSS3 y JavaScript, siguiendo los principios de Material Design y utilizando PrimeVue como biblioteca de componentes de interfaz. Para el desarrollo de los Web Services se empleará ASP.NET Core, bajo el estilo arquitectónico RESTful API, utilizando Entity Framework Core para el acceso y gestión de datos y C# como lenguaje de programación. La interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
+**Foco inicial.** Armando Casas representa a los responsables de empresas de alquiler que necesitan conocer y controlar sus equipos; Andrea Torres representa a quienes buscan maquinaria para una empresa constructora. El primer foco funcional es inventario, disponibilidad por periodo, solicitudes y seguimiento. Para TB1 se plantea la experiencia frontend y la nueva landing; los contratos técnicos de la API se planifican para AV2.
 
-Sabremos que RentBuild está generando valor cuando, durante una etapa inicial de validación, al menos 10 pequeñas y medianas empresas de alquiler utilicen recurrentemente la plataforma para gestionar sus operaciones, se registren al menos 50 equipos con información actualizada sobre su estado y disponibilidad, se gestionen al menos 30 reservas o alquileres mediante la plataforma y al menos 5 pequeñas empresas constructoras o contratistas realicen solicitudes de alquiler utilizando RentBuild.
+**Éxito observable propuesto.** Sabremos que la propuesta genera valor si, durante los **primeros seis meses desde el inicio de un piloto**, al menos **20 empresas de alquiler** usan RentBuild recurrentemente y al menos **10 empresas constructoras** completan una búsqueda, consulta de disponibilidad y solicitud. Se propone además registrar al menos **50 equipos** con datos de estado/disponibilidad, gestionar al menos **30 reservas o alquileres** y registrar **menos de 5 conflictos de disponibilidad o reservas duplicadas** en esa misma ventana. Las metas de 20/10 empresas concilian los objetivos del Impact Map; las metas operativas provienen del Problem Statement previo. Son umbrales propuestos para contrastar la hipótesis, no una predicción ni una cifra de adopción actual.
 
-Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reservas duplicadas durante el período de evaluación. Estos resultados serán analizados mediante las métricas de uso de la plataforma, los registros de las operaciones realizadas y las validaciones efectuadas con los segmentos objetivo.
+Para la medición, una empresa de alquiler cuenta como recurrente si registra un equipo y realiza una acción de disponibilidad, solicitud o alquiler en **dos semanas distintas**; una constructora cuenta una sola vez cuando completa el recorrido indicado. Se contabilizan empresas y operaciones únicas, excluyendo cuentas internas, datos semilla y repeticiones de demostración. La fuente prevista son registros de actividad y operaciones identificables, más una revisión de conflictos; estos instrumentos y una fecha de inicio del piloto están pendientes. No se afirma que exista hoy un piloto ni una línea base de reducción de tiempo/costos.
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -376,15 +376,11 @@ Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reserv
 
 ### Business Outcome Assumptions
 
-- Creemos que la adopción de **RentBuild** podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
-
-- Creemos que las empresas continuarán utilizando **RentBuild** si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
-
-- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que **RentBuild** está siendo incorporado dentro de las operaciones habituales de las empresas.
-
-- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
-
-- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
+- **BO01.** Creemos que la centralización del inventario y del seguimiento puede favorecer que al menos 20 empresas de alquiler utilicen RentBuild recurrentemente en la ventana propuesta de seis meses.
+- **BO02.** Creemos que la búsqueda y consulta de disponibilidad pueden favorecer que al menos 10 empresas constructoras completen una solicitud durante esa ventana.
+- **BO03.** Creemos que la utilidad del inventario puede comprobarse mediante al menos 50 equipos registrados con estado y disponibilidad identificables.
+- **BO04.** Creemos que la trazabilidad del proceso puede comprobarse mediante al menos 30 reservas o alquileres registrados, relacionando solicitud, decisión y operaciones posteriores.
+- **BO05.** Creemos que comprobar disponibilidad antes de confirmar y bloquear equipos no aptos puede mantener los conflictos de disponibilidad o duplicidad por debajo de 5 durante la misma ventana. Sin una línea base previa no se presenta este umbral como una reducción demostrada.
 
 ### User Assumptions
 
@@ -414,41 +410,62 @@ Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reserv
 
 ### Feature Assumptions
 
-- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
+- **FA01.** Creemos que un módulo de inventario que registre características, ubicación, condición y disponibilidad facilita conocer la situación de cada equipo.
 
-- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
+- **FA02.** Creemos que la validación de disponibilidad antes de confirmar una solicitud ayuda a evitar asignaciones incompatibles del mismo equipo.
 
-- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
+- **FA03.** Creemos que la gestión integrada de contratos, tarifas, pagos, entregas y devoluciones permite seguir el alquiler desde su confirmación hasta el retorno.
 
-- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
+- **FA04.** Creemos que el historial y la programación de mantenimiento, inspecciones e incidencias permiten identificar y bloquear equipos que temporalmente no deben alquilarse.
 
-- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
+- **FA05.** Creemos que la búsqueda por categoría y características, junto con la información de condiciones y costos, ayuda a encontrar maquinaria adecuada.
 
-- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+- **FA06.** Creemos que la consulta de disponibilidad para un periodo permite evaluar si el equipo puede usarse antes de enviar una solicitud.
 
-- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
+- **FA07.** Creemos que el seguimiento de solicitudes y alquileres permite conocer estados, periodos, costos y fechas relevantes sin depender de llamadas.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-- Creemos que lograremos incrementar el uso recurrente de **RentBuild** si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
+Cada hipótesis utiliza el template **business outcome → users/personas → user outcome/benefit → feature**. Las siete hipótesis corresponden, una a una, a FA01–FA07. Las cifras se evalúan en la ventana propuesta de seis meses de 1.2.2.1; los criterios de interacción se especifican como comportamiento esperado, no como pruebas ya ejecutadas.
 
-- Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
+**H01 — FA01.** Creemos que lograremos **alcanzar 20 empresas de alquiler recurrentes y 50 equipos registrados** si **los administradores representados por Armando Casas** alcanzan el beneficio de **conocer el estado y la disponibilidad de su inventario** mediante **módulo centralizado de inventario**.
 
-- Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante **RentBuild** si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
+- **Criterio observable:** Un equipo registrado conserva sus datos y su estado al consultarse; las empresas y equipos únicos se cuentan según el criterio de 1.2.2.1.
+- **Trazabilidad:** BO01/BO03; US06, US07, US08, US09, US10; TS01.
 
-- Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
+**H02 — FA02.** Creemos que lograremos **mantener los conflictos de disponibilidad y duplicidad por debajo de 5 en el piloto** si **los responsables de alquiler representados por Armando Casas** alcanzan el beneficio de **confirmar únicamente periodos compatibles con los compromisos existentes** mediante **validación de disponibilidad al decidir una solicitud**.
 
-- Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
+- **Criterio observable:** Una solicitud con un periodo incompatible no se confirma; cada intento y decisión debe poder revisarse sin duplicar la asignación.
+- **Trazabilidad:** BO05; US13, US14, US18, US19; TS02, TS03.
 
-- Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante **RentBuild** si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+**H03 — FA03.** Creemos que lograremos **registrar al menos 30 reservas o alquileres trazables** si **los responsables de operaciones representados por Armando Casas** alcanzan el beneficio de **seguir condiciones, entrega y devolución de una operación** mediante **gestión integrada del ciclo de alquiler**.
 
-- Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
+- **Criterio observable:** Una operación permite relacionar equipo, periodo, decisión, condiciones y entrega/devolución cuando ocurran; un retorno sin entrega previa no se acepta.
+- **Trazabilidad:** BO04; US20, US22; TS04.
 
-- Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
+**H04 — FA04.** Creemos que lograremos **favorecer el uso recurrente de 20 empresas de alquiler sin confirmar equipos no aptos** si **los administradores representados por Armando Casas** alcanzan el beneficio de **identificar incidencias y mantenimientos que impiden ofrecer un equipo** mediante **historial y programación de mantenimiento e incidencias**.
 
-- Creemos que lograremos incrementar el uso recurrente de **RentBuild** por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
+- **Criterio observable:** Un equipo con mantenimiento que bloquee el periodo consultado no aparece disponible; la incidencia y su intervención quedan relacionadas con el equipo.
+- **Trazabilidad:** BO01/BO05; US10, US23, US24, US25, US26; TS05.
+
+**H05 — FA05.** Creemos que lograremos **alcanzar 10 empresas constructoras que completen el recorrido de solicitud** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **encontrar equipos y evaluar características, costos y condiciones** mediante **búsqueda y detalle de maquinaria**.
+
+- **Criterio observable:** Los resultados satisfacen los filtros aplicados y el detalle corresponde al equipo elegido; se registra la continuidad hacia consulta y solicitud.
+- **Trazabilidad:** BO02; US11, US12; TS02.
+
+**H06 — FA06.** Creemos que lograremos **favorecer 10 empresas constructoras solicitantes evitando periodos no disponibles** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **conocer si pueden usar un equipo en las fechas requeridas** mediante **consulta de disponibilidad por periodo**.
+
+- **Criterio observable:** Un rango inválido se rechaza y un rango bloqueado se informa como no disponible; solo un rango disponible permite continuar la solicitud.
+- **Trazabilidad:** BO02/BO05; US13, US14; TS02, TS03.
+
+**H07 — FA07.** Creemos que lograremos **sostener las 10 constructoras participantes y la trazabilidad de 30 operaciones** si **los responsables de obra representados por Andrea Torres** alcanzan el beneficio de **conocer la decisión y las fechas relevantes de sus solicitudes** mediante **seguimiento de solicitudes y alquileres**.
+
+- **Criterio observable:** La constructora consulta sus propias solicitudes y ve el estado correspondiente a la última decisión; no obtiene operaciones de otra empresa.
+- **Trazabilidad:** BO02/BO04; US21; TS03.
 
 #### 1.2.2.4. Lean UX Canvas
+
+El canvas sintetiza problema, segmentos, resultados, soluciones y experimentos. La numeración FA01–FA07/H01–H07 y las metas de 1.2.2.1 constituyen la especificación textual vigente; el export gráfico recuperado debe sincronizarse con ella. No se presenta el gráfico como una nueva validación.
 
 <img src = "assets/md-images-chapter1/leanUXcanvas-RentBuild.png" width = 700px>
 
@@ -1175,564 +1192,490 @@ En esta sección se presenta el glosario de términos y conceptos utilizados en 
 
 ## 3.1. User Stories
 
-<table>
-<tr>
-<th>Epic / Story ID</th>
-<th>Título</th>
-<th>Descripción</th>
-<th>Criterios de Aceptación</th>
-<th>Relacionado con</th>
-</tr>
+El catálogo mantiene **US01–US35** y sus significados; la prioridad se especifica en el Product Backlog, no en la numeración. US04 es recuperación de contraseña y US05 cierre de sesión. US34/US35 cubren la landing; el resto de productos también debe cumplir los requisitos generales de responsive/i18n del statement. Las historias describen comportamiento esperado y no acreditan implementación ni aceptación.
 
+Las **TS01–TS09** utilizan el rol Developer y describen **contratos propuestos para AV2**, con ejemplos de request/response y errores. Las rutas y campos deben contrastarse con OpenAPI cuando se implemente el backend; no son evidencia de endpoints existentes. EP09 agrupa documentación y verificación técnica, sin introducir un nuevo bounded context. El control de acceso se exige antes de publicar recursos privados aunque las historias de autenticación se prioricen al final por valor de negocio.
+
+<table>
+<tr><th>Epic / Story ID</th><th>Título</th><th>Descripción</th><th>Criterios de Aceptación</th><th>Relacionado con (Epic ID)</th></tr>
 <tr>
 <td>EP01</td>
 <td>Gestión de usuarios y acceso</td>
 <td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de RentBuild.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US01</td>
 <td>Registro de usuario</td>
 <td>Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma.</td>
-<td>
-Given que el usuario accede al formulario de registro<br>
-When ingresa sus datos correctamente<br>
-Then el sistema crea su cuenta<br>
-And muestra un mensaje de confirmación
-</td>
+<td><strong>Scenario 1</strong><br>Given la persona proporciona datos requeridos válidos y un correo no registrado<br>When la persona solicita crear su cuenta<br>Then el sistema registra una única cuenta y comunica el resultado<br><br><strong>Scenario 2</strong><br>Given los datos están incompletos o el correo ya pertenece a una cuenta<br>When la persona solicita el registro<br>Then el sistema comunica el impedimento y no crea una cuenta duplicada</td>
 <td>EP01</td>
 </tr>
-
 <tr>
 <td>US02</td>
 <td>Inicio de sesión</td>
 <td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
-<td>
-Given que el usuario posee una cuenta registrada<br>
-When ingresa credenciales válidas<br>
-Then el sistema permite el acceso a la plataforma
-</td>
+<td><strong>Scenario 1</strong><br>Given el usuario tiene una cuenta habilitada<br>When el usuario proporciona credenciales válidas<br>Then el sistema inicia una sesión y permite el acceso correspondiente a su cuenta<br><br><strong>Scenario 2</strong><br>Given las credenciales son inválidas<br>When el usuario solicita iniciar sesión<br>Then el sistema rechaza el acceso y no crea una sesión válida</td>
 <td>EP01</td>
 </tr>
-
 <tr>
 <td>US03</td>
 <td>Gestionar perfil</td>
 <td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
-<td>
-Given que el usuario ha iniciado sesión<br>
-When modifica sus datos de perfil<br>
-Then el sistema guarda la información actualizada<br>
-And muestra los nuevos datos
-</td>
+<td><strong>Scenario 1</strong><br>Given el usuario tiene una sesión y datos de perfil válidos<br>When el usuario solicita actualizar sus datos<br>Then el sistema conserva los nuevos valores y los devuelve al consultarse<br><br><strong>Scenario 2</strong><br>Given los datos requeridos son inválidos<br>When el usuario solicita guardar el perfil<br>Then el sistema informa el error y conserva la información anterior</td>
 <td>EP01</td>
 </tr>
-
 <tr>
 <td>US04</td>
 <td>Recuperar contraseña</td>
 <td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
-<td>
-Given que el usuario solicita recuperación<br>
-When ingresa su correo<br>
-Then el sistema envía instrucciones de recuperación
-</td>
+<td><strong>Scenario 1</strong><br>Given una persona necesita recuperar acceso<br>When la persona proporciona un correo para recuperación<br>Then el sistema comunica la recepción de la solicitud y entrega instrucciones cuando la cuenta corresponde<br><br><strong>Scenario 2</strong><br>Given la recuperación presenta un código vencido o inválido<br>When la persona intenta cambiar la contraseña<br>Then el sistema no cambia las credenciales y permite solicitar una nueva recuperación</td>
 <td>EP01</td>
 </tr>
-
 <tr>
 <td>US05</td>
 <td>Cerrar sesión</td>
 <td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
-<td>
-Given que el usuario está autenticado<br>
-When selecciona cerrar sesión<br>
-Then el sistema finaliza su sesión
-</td>
+<td><strong>Scenario 1</strong><br>Given el usuario tiene una sesión activa<br>When el usuario solicita finalizarla<br>Then el sistema invalida la sesión y un acceso privado posterior requiere autenticación<br><br><strong>Scenario 2</strong><br>Given la sesión ya terminó<br>When el usuario vuelve a solicitar el cierre<br>Then el sistema mantiene el estado sin sesión y no modifica operaciones de negocio</td>
 <td>EP01</td>
 </tr>
-
 <tr>
 <td>EP02</td>
 <td>Gestión de maquinaria</td>
 <td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US06</td>
 <td>Registrar maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
-<td>
-Given que el usuario tiene permisos para gestionar maquinaria<br>
-When registra los datos de un equipo<br>
-Then el sistema almacena la maquinaria en el inventario<br>
-And muestra el equipo registrado
-</td>
+<td><strong>Scenario 1</strong><br>Given la empresa de alquiler proporciona datos válidos y un serial no registrado<br>When la empresa solicita registrar el equipo<br>Then el sistema conserva el equipo asociado al proveedor y permite consultarlo en su inventario<br><br><strong>Scenario 2</strong><br>Given faltan datos requeridos o el serial ya existe<br>When la empresa solicita registrar el equipo<br>Then el sistema informa el motivo y no crea un registro duplicado</td>
 <td>EP02</td>
 </tr>
-
 <tr>
 <td>US07</td>
 <td>Consultar maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
-<td>
-Given que existen equipos registrados<br>
-When el usuario consulta el inventario<br>
-Then el sistema muestra la lista de maquinaria<br>
-And muestra información relevante de cada equipo
-</td>
+<td><strong>Scenario 1</strong><br>Given la empresa de alquiler tiene equipos registrados<br>When la empresa consulta su inventario<br>Then el sistema devuelve sus equipos con identificación y estado<br><br><strong>Scenario 2</strong><br>Given la empresa no tiene equipos<br>When la empresa consulta el inventario<br>Then el sistema informa un resultado vacío y no incorpora equipos de otro proveedor</td>
 <td>EP02</td>
 </tr>
-
 <tr>
 <td>US08</td>
 <td>Actualizar información de maquinaria</td>
 <td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario modifica sus datos<br>
-Then el sistema guarda la información actualizada
-</td>
+<td><strong>Scenario 1</strong><br>Given un equipo pertenece a la empresa de alquiler y los cambios son válidos<br>When la empresa solicita actualizarlo<br>Then el sistema conserva los cambios y devuelve los valores actualizados<br><br><strong>Scenario 2</strong><br>Given el cambio incumple un dato requerido o duplica un serial<br>When la empresa solicita actualizar el equipo<br>Then el sistema informa el error y conserva los valores anteriores</td>
 <td>EP02</td>
 </tr>
-
 <tr>
 <td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
-<td>
-Given que existen equipos registrados<br>
-When el usuario consulta su disponibilidad<br>
-Then el sistema muestra si cada equipo está disponible, reservado o alquilado
-</td>
+<td><strong>Scenario 1</strong><br>Given existen equipos y compromisos de disponibilidad registrados<br>When la empresa consulta disponibilidad<br>Then el sistema diferencia disponible, reservado, alquilado y en mantenimiento conforme a los registros<br><br><strong>Scenario 2</strong><br>Given un compromiso bloquea el equipo<br>When la empresa vuelve a consultar disponibilidad<br>Then el sistema no lo presenta como libre para el periodo bloqueado</td>
 <td>EP02</td>
 </tr>
-
 <tr>
 <td>US10</td>
 <td>Consultar estado de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su información<br>
-Then el sistema muestra su estado actual<br>
-And permite identificar si está disponible para alquiler
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo tiene un estado operativo registrado<br>When la empresa consulta su condición<br>Then el sistema devuelve el estado asociado al equipo consultado<br><br><strong>Scenario 2</strong><br>Given el equipo está en mantenimiento o no apto para alquiler<br>When la empresa consulta su condición<br>Then el sistema comunica la restricción y no lo considera apto para un nuevo alquiler</td>
 <td>EP02</td>
 </tr>
-
 <tr>
 <td>EP03</td>
 <td>Búsqueda y solicitud de alquiler</td>
 <td>Epic orientado a permitir que las pequeñas empresas constructoras encuentren maquinaria y gestionen solicitudes de alquiler.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US11</td>
 <td>Buscar maquinaria</td>
 <td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
-<td>
-Given que el usuario accede al catálogo de maquinaria<br>
-When busca o filtra equipos<br>
-Then el sistema muestra las maquinarias que coinciden con sus necesidades
-</td>
+<td><strong>Scenario 1</strong><br>Given el catálogo contiene equipos con categorías y características<br>When la constructora establece criterios de búsqueda<br>Then el sistema devuelve equipos que cumplen los criterios<br><br><strong>Scenario 2</strong><br>Given ningún equipo cumple los criterios<br>When la constructora consulta los resultados<br>Then el sistema informa que no hay coincidencias sin sustituirlos por equipos que incumplen los filtros</td>
 <td>EP03</td>
 </tr>
-
 <tr>
 <td>US12</td>
 <td>Consultar información de maquinaria</td>
 <td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
-<td>
-Given que el usuario visualiza una maquinaria<br>
-When selecciona el equipo<br>
-Then el sistema muestra sus características, estado y condiciones de alquiler
-</td>
+<td><strong>Scenario 1</strong><br>Given un equipo está disponible en el catálogo<br>When la constructora solicita sus detalles<br>Then el sistema devuelve características, estado, proveedor y condiciones de alquiler del mismo equipo<br><br><strong>Scenario 2</strong><br>Given el equipo ya no existe en el catálogo<br>When la constructora solicita sus detalles<br>Then el sistema comunica que no puede consultarse y no permite solicitar ese registro inexistente</td>
 <td>EP03</td>
 </tr>
-
 <tr>
 <td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
 <td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
-<td>
-Given que el usuario selecciona una maquinaria y un periodo<br>
-When consulta su disponibilidad<br>
-Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo existe y el periodo es válido<br>When la constructora consulta disponibilidad<br>Then el sistema informa si el periodo está libre considerando compromisos y mantenimiento<br><br><strong>Scenario 2</strong><br>Given el rango es inválido o se solapa con un bloqueo<br>When la constructora consulta el periodo<br>Then el sistema diferencia el rango inválido del periodo no disponible y no autoriza una solicitud incompatible</td>
 <td>EP03</td>
 </tr>
-
 <tr>
 <td>US14</td>
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
-<td>
-Given que la maquinaria está disponible<br>
-When el usuario registra una solicitud de alquiler<br>
-Then el sistema registra la solicitud<br>
-And muestra su estado
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo tiene un periodo válido disponible<br>When la constructora solicita el alquiler<br>Then el sistema registra una solicitud pendiente con equipo, periodo y solicitante identificables<br><br><strong>Scenario 2</strong><br>Given el equipo no está disponible o el periodo es inválido<br>When la constructora solicita el alquiler<br>Then el sistema informa el impedimento y no registra una solicitud como confirmada</td>
 <td>EP03</td>
 </tr>
-
 <tr>
 <td>EP04</td>
 <td>Planes y suscripciones</td>
 <td>Epic orientado a la gestión de planes.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US15</td>
 <td>Visualizar planes disponibles</td>
 <td>Como usuario, quiero ver los planes para elegir uno.</td>
-<td>
-Given que el usuario accede a la sección de planes<br>
-When visualiza opciones<br>
-Then el sistema muestra los planes con sus características y precios
-</td>
+<td><strong>Scenario 1</strong><br>Given hay planes publicados<br>When el usuario consulta las opciones de servicio<br>Then el sistema devuelve características, precio y periodicidad de cada plan<br><br><strong>Scenario 2</strong><br>Given un plan no está habilitado<br>When el usuario consulta opciones de contratación<br>Then el sistema no lo ofrece como una opción activa</td>
 <td>EP04</td>
 </tr>
-
 <tr>
 <td>US16</td>
 <td>Suscribirse a un plan</td>
 <td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
-<td>
-Given que el usuario selecciona un plan<br>
-When confirma la suscripción<br>
-Then el sistema registra el plan
-</td>
+<td><strong>Scenario 1</strong><br>Given el usuario elige un plan habilitado<br>When el usuario confirma la contratación<br>Then el sistema registra el plan seleccionado y comunica el estado de la suscripción<br><br><strong>Scenario 2</strong><br>Given el plan no existe o está deshabilitado<br>When el usuario intenta suscribirse<br>Then el sistema rechaza la selección y no activa una suscripción para ese plan</td>
 <td>EP04</td>
 </tr>
-
 <tr>
 <td>US17</td>
 <td>Cambiar de plan</td>
 <td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
-<td>
-Given que el usuario tiene un plan activo<br>
-When selecciona otro<br>
-Then el sistema actualiza la suscripción
-</td>
+<td><strong>Scenario 1</strong><br>Given el usuario tiene una suscripción y el plan destino está habilitado<br>When el usuario solicita cambiar de plan<br>Then el sistema actualiza la referencia al plan y comunica las condiciones aplicables<br><br><strong>Scenario 2</strong><br>Given el plan destino no está habilitado<br>When el usuario solicita el cambio<br>Then el sistema informa el impedimento y conserva el plan anterior</td>
 <td>EP04</td>
 </tr>
-
 <tr>
 <td>EP05</td>
 <td>Gestión de reservas y alquileres</td>
 <td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
 <td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
-<td>
-Given que existen solicitudes de alquiler<br>
-When el usuario consulta las solicitudes<br>
-Then el sistema muestra la información de cada solicitud<br>
-And permite identificar su estado
-</td>
+<td><strong>Scenario 1</strong><br>Given la empresa de alquiler ha recibido solicitudes<br>When la empresa consulta su bandeja<br>Then el sistema devuelve equipo, periodo, solicitante y estado de solicitudes dirigidas a esa empresa<br><br><strong>Scenario 2</strong><br>Given la empresa no ha recibido solicitudes<br>When la empresa consulta la bandeja<br>Then el sistema devuelve un resultado vacío sin incluir solicitudes de otro proveedor</td>
 <td>EP05</td>
 </tr>
-
 <tr>
 <td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
 <td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
-<td>
-Given que existe una solicitud pendiente<br>
-When el usuario selecciona aceptar o rechazar<br>
-Then el sistema actualiza el estado de la solicitud<br>
-And muestra el nuevo estado
-</td>
+<td><strong>Scenario 1</strong><br>Given una solicitud propia está pendiente y el periodo sigue disponible<br>When la empresa de alquiler la aprueba<br>Then el sistema registra la aprobación y el compromiso del periodo sin duplicar la asignación<br><br><strong>Scenario 2</strong><br>Given una solicitud propia está pendiente<br>When la empresa de alquiler la rechaza con un motivo<br>Then el sistema registra el rechazo y no ocupa el periodo como alquiler confirmado<br><br><strong>Scenario 3</strong><br>Given la solicitud ya fue decidida o el periodo dejó de estar disponible<br>When la empresa intenta aprobarla<br>Then el sistema informa el conflicto y no confirma una asignación incompatible</td>
 <td>EP05</td>
 </tr>
-
 <tr>
 <td>US20</td>
 <td>Consultar alquileres activos</td>
 <td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
-<td>
-Given que existen alquileres activos<br>
-When el usuario consulta sus alquileres<br>
-Then el sistema muestra los equipos alquilados<br>
-And muestra información del periodo correspondiente
-</td>
+<td><strong>Scenario 1</strong><br>Given la empresa de alquiler tiene operaciones activas<br>When la empresa consulta sus alquileres<br>Then el sistema devuelve sus equipos, periodos y estados de operaciones activas<br><br><strong>Scenario 2</strong><br>Given no hay operaciones activas<br>When la empresa consulta sus alquileres<br>Then el sistema devuelve un resultado vacío sin incluir operaciones cerradas como activas</td>
 <td>EP05</td>
 </tr>
-
 <tr>
 <td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
 <td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
-<td>
-Given que el usuario ha realizado una solicitud<br>
-When consulta sus solicitudes<br>
-Then el sistema muestra el estado actualizado de cada una
-</td>
+<td><strong>Scenario 1</strong><br>Given la constructora ha presentado solicitudes<br>When la constructora consulta su seguimiento<br>Then el sistema devuelve el estado que corresponde a la última decisión de cada solicitud propia<br><br><strong>Scenario 2</strong><br>Given la solicitud pertenece a otra constructora<br>When la empresa intenta consultar su seguimiento<br>Then el sistema no entrega datos de la operación ajena</td>
 <td>EP05</td>
 </tr>
-
 <tr>
 <td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
 <td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
-<td>
-Given que existe un alquiler confirmado<br>
-When se registra la entrega o devolución<br>
-Then el sistema actualiza el estado del alquiler<br>
-And registra la operación realizada
-</td>
+<td><strong>Scenario 1</strong><br>Given hay un alquiler confirmado sin entrega registrada<br>When la empresa registra la entrega<br>Then el sistema relaciona equipo, operación y fecha de entrega una sola vez<br><br><strong>Scenario 2</strong><br>Given hay una entrega previa y aún no se registra el retorno<br>When la empresa registra la devolución y condición del equipo<br>Then el sistema conserva fecha y condición del retorno y permite seguir la revisión del equipo<br><br><strong>Scenario 3</strong><br>Given no hay entrega previa o el retorno ya está registrado<br>When la empresa intenta registrar la devolución<br>Then el sistema informa el impedimento y no crea una devolución duplicada o sin entrega</td>
 <td>EP05</td>
 </tr>
-
 <tr>
 <td>EP06</td>
 <td>Gestión de mantenimiento e incidencias</td>
 <td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US23</td>
 <td>Registrar mantenimiento</td>
 <td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario registra un mantenimiento<br>
-Then el sistema almacena la información<br>
-And la relaciona con el equipo correspondiente
-</td>
+<td><strong>Scenario 1</strong><br>Given existe un equipo y se proporcionan datos válidos de una intervención<br>When la empresa registra el mantenimiento realizado<br>Then el sistema conserva tipo, fecha y estado de la intervención asociada al equipo<br><br><strong>Scenario 2</strong><br>Given el equipo no existe o faltan datos de la intervención<br>When la empresa intenta registrar el mantenimiento<br>Then el sistema comunica el error y no crea un registro incompleto</td>
 <td>EP06</td>
 </tr>
-
 <tr>
 <td>US24</td>
 <td>Programar mantenimiento</td>
 <td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
-<td>
-Given que una maquinaria requiere mantenimiento<br>
-When el usuario registra una fecha de mantenimiento<br>
-Then el sistema guarda la programación<br>
-And permite consultar el mantenimiento pendiente
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo requiere atención y el periodo propuesto es válido<br>When la empresa programa el mantenimiento<br>Then el sistema conserva la programación y considera el bloqueo correspondiente al consultar disponibilidad<br><br><strong>Scenario 2</strong><br>Given la programación contiene un periodo inválido<br>When la empresa solicita guardarla<br>Then el sistema informa el error y no registra un bloqueo inválido</td>
 <td>EP06</td>
 </tr>
-
 <tr>
 <td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
-<td>
-Given que una maquinaria presenta una incidencia<br>
-When el usuario registra el problema<br>
-Then el sistema almacena la incidencia<br>
-And la relaciona con la maquinaria correspondiente
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo existe y se describe un problema<br>When la empresa registra una incidencia<br>Then el sistema conserva la descripción y su relación con el equipo para seguimiento<br><br><strong>Scenario 2</strong><br>Given no se identifica el equipo o falta la descripción<br>When la empresa intenta registrar la incidencia<br>Then el sistema informa el error y no crea una incidencia sin trazabilidad</td>
 <td>EP06</td>
 </tr>
-
 <tr>
 <td>US26</td>
 <td>Consultar historial de maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su historial<br>
-Then el sistema muestra las operaciones asociadas al equipo
-</td>
+<td><strong>Scenario 1</strong><br>Given el equipo tiene operaciones e intervenciones registradas<br>When la empresa consulta su historial<br>Then el sistema devuelve la secuencia de alquileres, incidencias y mantenimientos con fechas e identificadores<br><br><strong>Scenario 2</strong><br>Given el equipo no tiene antecedentes<br>When la empresa consulta el historial<br>Then el sistema devuelve un historial vacío sin mezclar antecedentes de otro equipo</td>
 <td>EP06</td>
 </tr>
-
 <tr>
 <td>EP07</td>
 <td>Información y contratación del servicio</td>
 <td>Epic orientado a brindar información sobre RentBuild y facilitar el contacto de potenciales clientes con la plataforma.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US27</td>
 <td>Consultar información de RentBuild</td>
 <td>Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When revisa la información del producto<br>
-Then el sistema muestra sus principales funcionalidades y beneficios
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante desea evaluar el servicio<br>When el visitante consulta información de RentBuild<br>Then el contenido explica propósito, segmentos, funcionalidades y beneficios<br><br><strong>Scenario 2</strong><br>Given el visitante consulta los dos segmentos<br>When el visitante evalúa la propuesta<br>Then el contenido permite distinguir los beneficios para alquiler y construcción</td>
 <td>EP07</td>
 </tr>
-
 <tr>
 <td>US28</td>
 <td>Solicitar demostración</td>
-<td>Como potencial cliente, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
-<td>
-Given que el visitante desea conocer la plataforma<br>
-When completa y envía el formulario de demostración<br>
-Then el sistema registra la solicitud<br>
-And muestra un mensaje de confirmación
-</td>
+<td>Como visitante, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
+<td><strong>Scenario 1</strong><br>Given el visitante proporciona contacto válido para una demostración<br>When el visitante envía la solicitud por el canal publicado<br>Then el sistema comunica recepción solo cuando el canal confirma el envío; una simulación se identifica como tal<br><br><strong>Scenario 2</strong><br>Given faltan datos de contacto válidos o falla el envío<br>When el visitante solicita la demostración<br>Then el sistema informa el problema sin declarar una solicitud recibida</td>
 <td>EP07</td>
 </tr>
-
 <tr>
 <td>US29</td>
 <td>Contactar con RentBuild</td>
-<td>Como potencial cliente, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
-<td>
-Given que el visitante accede a la sección de contacto<br>
-When completa y envía sus datos y consulta<br>
-Then el sistema registra la solicitud de contacto
-</td>
+<td>Como visitante, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
+<td><strong>Scenario 1</strong><br>Given el visitante tiene una consulta y un contacto válido<br>When el visitante utiliza el canal de contacto publicado<br>Then el sistema informa cómo se tramita la consulta y solo declara envío cuando existe confirmación<br><br><strong>Scenario 2</strong><br>Given el canal no puede tramitar el mensaje<br>When el visitante intenta contactar<br>Then el sistema comunica el impedimento y no presenta una confirmación ficticia</td>
 <td>EP07</td>
 </tr>
-
 <tr>
 <td>EP08</td>
 <td>Landing Page de RentBuild</td>
 <td>Epic orientado a presentar la propuesta de valor de RentBuild y facilitar la navegación de los potenciales clientes hacia las funcionalidades y acciones principales de la plataforma.</td>
-<td>-</td>
-<td>-</td>
+<td>—</td>
+<td>—</td>
 </tr>
-
 <tr>
 <td>US30</td>
 <td>Visualizar propuesta de valor</td>
 <td>Como visitante, quiero identificar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When visualiza la sección principal<br>
-Then el sistema muestra la propuesta de valor de RentBuild<br>
-And presenta sus principales beneficios para la gestión de alquileres
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante busca comprender el producto<br>When el visitante consulta la propuesta de valor<br>Then el contenido identifica el problema del ciclo de alquiler y el beneficio de centralizarlo<br><br><strong>Scenario 2</strong><br>Given el visitante compara los segmentos<br>When el visitante evalúa los beneficios<br>Then el contenido incluye tanto control para proveedores como búsqueda y seguimiento para constructoras</td>
 <td>EP08</td>
 </tr>
-
 <tr>
 <td>US31</td>
 <td>Explorar funcionalidades principales</td>
-<td>Como potencial cliente, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
-<td>
-Given que el visitante se encuentra en el Landing Page<br>
-When revisa la sección de funcionalidades<br>
-Then el sistema muestra las principales funcionalidades de RentBuild<br>
-And presenta una descripción breve de cada funcionalidad
-</td>
+<td>Como visitante, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
+<td><strong>Scenario 1</strong><br>Given el visitante evalúa capacidades de RentBuild<br>When el visitante consulta funcionalidades<br>Then el contenido explica inventario, disponibilidad, solicitudes, seguimiento y mantenimiento<br><br><strong>Scenario 2</strong><br>Given una capacidad corresponde a una etapa futura<br>When el visitante consulta su descripción<br>Then el contenido la identifica como prevista y no como una función comprobada de la versión actual</td>
 <td>EP08</td>
 </tr>
-
 <tr>
 <td>US32</td>
 <td>Identificar la solución para mi empresa</td>
 <td>Como visitante, quiero identificar cómo RentBuild puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
-<td>
-Given que el visitante accede a la sección orientada a clientes<br>
-When selecciona o visualiza su tipo de empresa<br>
-Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante pertenece a una empresa de alquiler<br>When el visitante consulta la solución para su segmento<br>Then el contenido explica control de inventario, solicitudes y equipos<br><br><strong>Scenario 2</strong><br>Given el visitante pertenece a una constructora<br>When el visitante consulta la solución para su segmento<br>Then el contenido explica búsqueda, disponibilidad, solicitud y seguimiento</td>
 <td>EP08</td>
 </tr>
-
 <tr>
 <td>US33</td>
 <td>Acceder a la Web Application</td>
 <td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild.</td>
-<td>
-Given que el visitante se encuentra en el Landing Page<br>
-When selecciona el CTA para acceder a la plataforma<br>
-Then el sistema redirige al visitante hacia la Web Application
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante identifica su segmento<br>When el visitante solicita acceder a la aplicación<br>Then el destino corresponde a la Web Application y al acceso previsto para su segmento<br><br><strong>Scenario 2</strong><br>Given el acceso público no está disponible<br>When el visitante intenta acceder<br>Then el contenido informa la limitación y no declara que existe un workspace operativo</td>
 <td>EP08</td>
 </tr>
-
 <tr>
 <td>US34</td>
 <td>Consultar el Landing Page en diferentes dispositivos</td>
 <td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer RentBuild sin importar el dispositivo que utilice.</td>
-<td>
-Given que el visitante accede al Landing Page desde un dispositivo<br>
-When navega por sus diferentes secciones<br>
-Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
-And permite utilizar las funcionalidades de navegación sin pérdida de información
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante utiliza un navegador desktop<br>When el visitante consulta el Landing Page<br>Then el contenido y la navegación conservan su información y funcionalidad<br><br><strong>Scenario 2</strong><br>Given el visitante utiliza un navegador móvil<br>When el visitante consulta el Landing Page<br>Then el contenido se adapta sin recortar información ni impedir el acceso a sus funciones de navegación</td>
 <td>EP08</td>
 </tr>
-
 <tr>
 <td>US35</td>
 <td>Cambiar el idioma del Landing Page</td>
 <td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de RentBuild en el idioma de mi preferencia.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When selecciona un idioma disponible<br>
-Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
-And mantiene la estructura y funcionalidad de la página
-</td>
+<td><strong>Scenario 1</strong><br>Given el visitante no ha establecido una preferencia<br>When el visitante consulta el Landing Page<br>Then el contenido utiliza inglés por defecto con base en_US<br><br><strong>Scenario 2</strong><br>Given el visitante solicita español latinoamericano<br>When el visitante cambia la preferencia a es_419<br>Then el contenido se presenta en ese idioma y conserva navegación y destinos</td>
 <td>EP08</td>
 </tr>
-
+<tr><td>EP09</td><td>Documentación y verificación técnica</td><td>Epic de soporte para contratos OpenAPI y pruebas del RESTful API.</td><td>—</td><td>—</td></tr>
+<tr>
+<td>TS01</td>
+<td>Contratos REST de inventario</td>
+<td>Como Developer, quiero exponer registro, consulta y actualización de equipos para integrar US06–US10 sin depender de datos de demostración.</td>
+<td><strong>Scenario 1</strong><br>Given el proveedor está autorizado y el serial es nuevo<br>When el cliente envía POST /api/v1/equipment con name, serialNumber, categoryId y datos de alquiler válidos<br>Then la respuesta es 201 con id, proveedor asociado y estado; GET /api/v1/equipment/{id} devuelve el mismo registro<br><br><strong>Scenario 2</strong><br>Given el cliente envía un serial duplicado o datos inválidos<br>When el servidor procesa POST o PUT /api/v1/equipment/{id}<br>Then la respuesta es 409 para duplicidad o 400 para validación y no modifica el inventario<br><br><strong>Scenario 3</strong><br>Given el equipo pertenece a otro proveedor<br>When el cliente intenta actualizarlo<br>Then la respuesta es 403 y no cambia el equipo; la pertenencia se verifica en servidor</td>
+<td>EP02</td>
+</tr>
+<tr>
+<td>TS02</td>
+<td>Contratos REST de búsqueda y disponibilidad</td>
+<td>Como Developer, quiero consultar catálogo y disponibilidad por periodo para integrar US11–US13 y la validación de fechas.</td>
+<td><strong>Scenario 1</strong><br>Given existen equipos que cumplen los filtros<br>When el cliente envía GET /api/v1/equipment?categoryId={id}&amp;query={text}<br>Then la respuesta es 200 con items que cumplen los filtros; si no hay coincidencias, items es una lista vacía<br><br><strong>Scenario 2</strong><br>Given el equipo existe y el rango es válido<br>When el cliente envía GET /api/v1/equipment/{id}/availability?startDate={start}&amp;endDate={end}<br>Then la respuesta es 200 con equipmentId, startDate, endDate y available; un compromiso o mantenimiento incompatible produce available=false<br><br><strong>Scenario 3</strong><br>Given el rango tiene fin anterior al inicio o el equipo no existe<br>When el cliente consulta disponibilidad<br>Then la respuesta es 400 para rango inválido o 404 para equipo inexistente, sin presentar disponibilidad positiva<br><br><strong>Scenario 4</strong><br>Given el equipo forma parte del catálogo consultable<br>When el cliente envía GET /api/v1/equipment/{id}<br>Then la respuesta es 200 con id, características, condición, tarifa y condiciones de alquiler correspondientes al equipo; un id inexistente devuelve 404</td>
+<td>EP03</td>
+</tr>
+<tr>
+<td>TS03</td>
+<td>Contratos REST de solicitudes y decisiones</td>
+<td>Como Developer, quiero crear, consultar y decidir solicitudes para integrar US14, US18, US19 y US21 con estados y conflictos comprobables.</td>
+<td><strong>Scenario 1</strong><br>Given el equipo y periodo son válidos y la constructora está autorizada<br>When el cliente envía POST /api/v1/rental-requests con equipmentId, startDate y endDate<br>Then la respuesta es 201 con id y status=PENDING; el solicitante y proveedor se resuelven y validan en servidor<br><br><strong>Scenario 2</strong><br>Given una solicitud propia está pendiente y el periodo sigue disponible<br>When el proveedor envía PATCH /api/v1/rental-requests/{id}/decision con decision=APPROVE<br>Then la respuesta es 200 con status=APPROVED y el periodo se compromete sin doble asignación<br><br><strong>Scenario 3</strong><br>Given el proveedor rechaza una solicitud pendiente<br>When el cliente envía la decisión REJECT y reason<br>Then la respuesta es 200 con status=REJECTED y no confirma el periodo<br><br><strong>Scenario 4</strong><br>Given la solicitud ya se decidió, existe un solapamiento o el cliente no está autorizado<br>When el cliente intenta decidir o consultar la solicitud<br>Then la respuesta es 409 por conflicto o 403 por operación ajena; el estado y las asignaciones previas se conservan<br><br><strong>Scenario 5</strong><br>Given el usuario está autorizado como proveedor o solicitante<br>When el cliente envía GET /api/v1/rental-requests o GET /api/v1/rental-requests/{id}<br>Then la respuesta es 200 con las solicitudes recibidas o enviadas que le corresponden, incluyendo id, equipmentId, periodo y estado de la última decisión; una consulta ajena devuelve 403 y una solicitud inexistente devuelve 404</td>
+<td>EP05</td>
+</tr>
+<tr>
+<td>TS04</td>
+<td>Contratos REST del ciclo de alquiler</td>
+<td>Como Developer, quiero consultar alquileres y registrar entregas y devoluciones para integrar US20 y US22 con operaciones trazables.</td>
+<td><strong>Scenario 1</strong><br>Given el proveedor está autorizado<br>When el cliente envía GET /api/v1/rental-contracts?status=ACTIVE<br>Then la respuesta es 200 con items del proveedor, equipo, periodo y estado; las operaciones cerradas no se incluyen como activas<br><br><strong>Scenario 2</strong><br>Given el alquiler está confirmado y no tiene entrega<br>When el cliente envía POST /api/v1/rental-contracts/{id}/deliveries con datos válidos de la entrega<br>Then la respuesta es 201 con id, contractId y deliveredAt; un segundo registro incompatible devuelve 409<br><br><strong>Scenario 3</strong><br>Given hay entrega previa sin retorno<br>When el cliente envía POST /api/v1/rental-contracts/{id}/returns con condition y datos válidos<br>Then la respuesta es 201 con id, contractId y returnedAt; una devolución sin entrega previa o duplicada devuelve 409</td>
+<td>EP05</td>
+</tr>
+<tr>
+<td>TS05</td>
+<td>Contratos REST de mantenimiento e historial</td>
+<td>Como Developer, quiero registrar incidencias e intervenciones y consultar antecedentes para integrar US23–US26 y la condición operativa del equipo.</td>
+<td><strong>Scenario 1</strong><br>Given el equipo existe y pertenece al proveedor<br>When el cliente envía POST /api/v1/incidents con equipmentId y description o POST /api/v1/maintenance-records con equipmentId, type y periodo válido<br>Then la respuesta es 201 con id y equipmentId; la programación que bloquee el periodo se considera en disponibilidad<br><br><strong>Scenario 2</strong><br>Given el equipo no existe o la entrada es inválida<br>When el cliente registra una incidencia o mantenimiento<br>Then la respuesta es 404 o 400, respectivamente, sin persistir un registro incompleto<br><br><strong>Scenario 3</strong><br>Given el proveedor está autorizado para el equipo<br>When el cliente envía GET /api/v1/equipment/{id}/history<br>Then la respuesta es 200 con antecedentes identificables y fechados del mismo equipo; sin antecedentes, items es una lista vacía</td>
+<td>EP06</td>
+</tr>
+<tr>
+<td>TS06</td>
+<td>Contratos REST de perfil</td>
+<td>Como Developer, quiero consultar y actualizar el perfil propio para integrar US03 con validación y pertenencia comprobadas en servidor.</td>
+<td><strong>Scenario 1</strong><br>Given el usuario está autenticado y los datos de contacto son válidos<br>When el cliente envía PATCH /api/v1/profiles/me con los cambios de perfil<br>Then la respuesta es 200 con el perfil actualizado; GET /api/v1/profiles/me devuelve esos valores<br><br><strong>Scenario 2</strong><br>Given los datos requeridos son inválidos o falta una sesión válida<br>When el cliente intenta actualizar el perfil<br>Then la respuesta es 400 por validación o 401 por falta de autenticación y conserva los valores anteriores</td>
+<td>EP01</td>
+</tr>
+<tr>
+<td>TS07</td>
+<td>Contratos REST de planes y suscripciones</td>
+<td>Como Developer, quiero consultar planes y registrar o cambiar suscripciones para integrar US15–US17 sin declarar pagos o activaciones no confirmados.</td>
+<td><strong>Scenario 1</strong><br>Given hay planes habilitados<br>When el cliente envía GET /api/v1/subscription-plans<br>Then la respuesta es 200 con id, características, precio y periodicidad de planes habilitados<br><br><strong>Scenario 2</strong><br>Given el usuario está autorizado y el plan está habilitado<br>When el cliente envía POST /api/v1/subscriptions con planId o PATCH /api/v1/subscriptions/{id}/plan con el nuevo planId<br>Then la respuesta es 201 o 200 con planId y estado real de la suscripción; no declara pago exitoso sin confirmación del mecanismo de pago<br><br><strong>Scenario 3</strong><br>Given el plan no existe, está deshabilitado o la suscripción pertenece a otro usuario<br>When el cliente envía POST /api/v1/subscriptions o PATCH /api/v1/subscriptions/{id}/plan<br>Then la respuesta es 404 para plan inexistente, 400 para plan deshabilitado o 403 para suscripción ajena y no activa ni modifica la suscripción</td>
+<td>EP04</td>
+</tr>
+<tr>
+<td>TS08</td>
+<td>Contratos REST de identidad y acceso</td>
+<td>Como Developer, quiero gestionar registro, sesiones y recuperación para integrar US01, US02, US04 y US05 y proteger los recursos privados.</td>
+<td><strong>Scenario 1</strong><br>Given los datos de registro son válidos y el correo no existe<br>When el cliente envía POST /api/v1/auth/register<br>Then la respuesta es 201 con el identificador de cuenta; no devuelve contraseñas ni hashes<br><br><strong>Scenario 2</strong><br>Given la cuenta está habilitada<br>When el cliente envía POST /api/v1/auth/login con credenciales válidas<br>Then la respuesta es 200 con una sesión y expiración; credenciales inválidas devuelven 401<br><br><strong>Scenario 3</strong><br>Given una persona solicita recuperar acceso<br>When el cliente envía POST /api/v1/auth/password-recovery con email válido<br>Then la respuesta es 202 con un mensaje genérico de recepción sin exponer si existe la cuenta; POST /api/v1/auth/password-reset con código inválido devuelve 400 y no cambia credenciales<br><br><strong>Scenario 4</strong><br>Given existe una sesión<br>When el cliente envía POST /api/v1/auth/logout<br>Then la respuesta es 204 y esa sesión no permite una nueva solicitud privada; el control se verifica en servidor</td>
+<td>EP01</td>
+</tr>
+<tr>
+<td>TS09</td>
+<td>Contrato OpenAPI y verificación de API</td>
+<td>Como Developer, quiero documentar y comprobar los contratos REST para integrar el frontend con especificaciones y pruebas reproducibles.</td>
+<td><strong>Scenario 1</strong><br>Given el servicio propuesto está implementado en la etapa AV2<br>When el cliente envía GET /openapi.json<br>Then la respuesta es 200 con una especificación OpenAPI de las rutas implementadas, entradas, respuestas y errores; Swagger permite consultarla<br><br><strong>Scenario 2</strong><br>Given se dispone de un equipo y periodo de prueba controlados<br>When se ejecuta la prueba de integración del request de disponibilidad y de decisión conflictiva<br>Then las respuestas verifican 200 con available y 409 por conflicto; la prueba comprueba que no existe una doble asignación<br><br><strong>Scenario 3</strong><br>Given el proveedor está autorizado y falta name en los datos de un equipo<br>When el cliente envía POST /api/v1/equipment con Accept-Language correspondiente a en_US o es_419, o sin preferencia<br>Then la respuesta es 400 con código de validación estable y mensaje en el idioma soportado solicitado, con inglés por defecto; las pruebas unitarias e integración se documentan sin atribuirles ejecución previa</td>
+<td>EP09</td>
+</tr>
 </table>
 
 ## 3.2. Impact Mapping
 
+El Impact Map relaciona hipótesis de negocio, personas, cambios de comportamiento y entregables. **G01:** alcanzar 20 empresas de alquiler recurrentes en los primeros seis meses de un piloto. **G02:** lograr que 10 empresas constructoras completen búsqueda, consulta de disponibilidad y solicitud en la misma ventana. Son metas propuestas, con definiciones e instrumentos pendientes descritos en 1.2.2.1; no son adopción observada. Los indicadores de 50 equipos, 30 operaciones y menos de 5 conflictos permiten contrastar utilidad y trazabilidad.
+
 ![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
+
+**Estado del gráfico:** el export recuperado conserva la marca MaquiGest y una numeración antigua US01–US10. No se ha editado ni se presenta como un nuevo export de UXPressia. La relación textual vigente para RentBuild se establece a continuación y debe trasladarse al gráfico en una actualización posterior.
+
+| Business Goal | Actor / Persona | Impact esperado | Deliverable | User Stories vigentes |
+|---|---|---|---|---|
+| G01 | Armando Casas | Registra y consulta sus equipos para mantener información centralizada | Inventario (FA01/H01) | **US06:** Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.<br>Relacionadas: US07, US08, US09, US10; TS01. |
+| G01 | Armando Casas | Decide solicitudes únicamente para periodos compatibles | Validación y decisión (FA02/H02) | **US19:** Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.<br>Relacionadas: US13, US14, US18; TS02, TS03. |
+| G01 | Armando Casas | Sigue alquiler, entrega y retorno con trazabilidad | Ciclo de alquiler (FA03/H03) | **US22:** Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.<br>Relacionadas: US20; TS04. |
+| G01 | Armando Casas | Identifica equipos no aptos y registra sus intervenciones | Incidencias y mantenimiento (FA04/H04) | **US25:** Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.<br>Relacionadas: US23, US24, US26; TS05. |
+| G02 | Andrea Torres | Encuentra equipos que corresponden a la necesidad de su proyecto | Búsqueda y detalle (FA05/H05) | **US11:** Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.<br>Relacionadas: US12; TS02. |
+| G02 | Andrea Torres | Comprueba un periodo y solicita el equipo disponible | Disponibilidad y solicitud (FA06/H06) | **US14:** Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.<br>Relacionadas: US13; TS02, TS03. |
+| G02 | Andrea Torres | Consulta la decisión sin depender de llamadas de seguimiento | Seguimiento (FA07/H07) | **US21:** Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.<br>Relacionadas: TS03. |
+| G01/G02 | Visitantes de ambos segmentos | Comprenden la propuesta y continúan hacia la aplicación | Landing y acceso al producto | **US33:** Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild.<br>Relacionadas: US27, US28, US29, US30, US31, US32, US34, US35. |
+| G01 | Usuarios del servicio | Eligen condiciones de uso adecuadas a su empresa | Planes y suscripciones como soporte | **US16:** Como usuario, quiero suscribirme a un plan para acceder a funciones premium.<br>Relacionadas: US15, US17; TS07. |
+| G01/G02 | Usuarios del servicio | Mantienen su perfil y acceden a sus operaciones propias | Perfil e identidad como soporte | **US03:** Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.<br>Relacionadas: US01, US02, US04, US05; TS06, TS08, TS09. |
+
+Correspondencia del export anterior: US01 gestión de maquinaria → US06–US08; US02 disponibilidad → US09/US13; US03 reservas → US14/US18/US19/US21; US04 entrega/devolución → US22; US05 incidencias → US25; US06 mantenimiento → US23/US24/US26; US07 búsqueda → US11; US08 detalle → US12; US09 solicitud → US14; US10 seguimiento de la constructora → US21. Esta equivalencia no cambia los IDs actuales ni acredita que el gráfico haya sido corregido.
 
 ## 3.3. Product Backlog
 
-El Product Backlog de RentBuild contiene las historias de usuario identificadas para el desarrollo de la solución. Estas se presentan en orden correlativo según su identificador, desde US01 hasta US35.
+El orden expresa **valor para el negocio**: inventario, disponibilidad, solicitud/decisión y ciclo de alquiler primero; soporte de identidad y autenticación al final. El ID conserva identidad y no determina prioridad. Las historias de landing se consideran desde Sprint 1 y sus correcciones continúan en TB1; su posición en esta revisión acumulativa no elimina ese alcance histórico. Antes de desplegar recursos privados, las dependencias de seguridad deben estar satisfechas.
 
-| # Orden | User Story ID | Título | Descripción | Story Points |
+Las estimaciones son propuestas de planificación en la escala 1/2/3/5/8 y deben revisarse por el equipo; no son horas consumidas ni velocity aceptada. Las 35 US mantienen el significado del catálogo. Las TS son trabajo técnico propuesto para AV2 y no implican que la API ya esté implementada.
+
+| # Orden | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
 | :---: | :---: | :--- | :--- | :---: |
-| 1 | US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para poder acceder a las funcionalidades de la plataforma. | 5 |
-| 2 | US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
-| 3 | US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
-| 4 | US04 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
-| 5 | US05 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
-| 6 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en RentBuild. | 5 |
-| 7 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
-| 8 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
-| 9 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
-| 10 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
-| 11 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
-| 12 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
-| 13 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
-| 14 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 15 | US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece RentBuild. | 3 |
-| 16 | US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
-| 17 | US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
-| 18 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
-| 19 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
-| 20 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
-| 21 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud de alquiler para conocer su situación actual. | 3 |
-| 22 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
-| 23 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
-| 24 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
-| 25 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
-| 26 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
-| 27 | US27 | Consultar información de RentBuild | Como visitante, quiero consultar información de RentBuild para conocer la solución y su propuesta de valor. | 2 |
-| 28 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona RentBuild. | 2 |
-| 29 | US29 | Contactar con RentBuild | Como visitante, quiero contactar con RentBuild para realizar consultas sobre la solución. | 2 |
-| 30 | US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa. | 2 |
-| 31 | US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con RentBuild. | 3 |
-| 32 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si RentBuild se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
-| 33 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
-| 34 | US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar RentBuild desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
-| 35 | US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar RentBuild en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| 1 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario. | 5 |
+| 2 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos. | 3 |
+| 3 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado. | 3 |
+| 4 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres. | 5 |
+| 5 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso. | 3 |
+| 6 | TS01 | Contratos REST de inventario | Como Developer, quiero exponer registro, consulta y actualización de equipos para integrar US06–US10 sin depender de datos de demostración. | 8 |
+| 7 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto. | 5 |
+| 8 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto. | 3 |
+| 9 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler. | 5 |
+| 10 | TS02 | Contratos REST de búsqueda y disponibilidad | Como Developer, quiero consultar catálogo y disponibilidad por periodo para integrar US11–US13 y la validación de fechas. | 5 |
+| 11 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 12 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres. | 5 |
+| 13 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos. | 3 |
+| 14 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente. | 3 |
+| 15 | TS03 | Contratos REST de solicitudes y decisiones | Como Developer, quiero crear, consultar y decidir solicitudes para integrar US14, US18, US19 y US21 con estados y conflictos comprobables. | 8 |
+| 16 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados. | 3 |
+| 17 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados. | 5 |
+| 18 | TS04 | Contratos REST del ciclo de alquiler | Como Developer, quiero consultar alquileres y registrar entregas y devoluciones para integrar US20 y US22 con operaciones trazables. | 5 |
+| 19 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo. | 5 |
+| 20 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención. | 3 |
+| 21 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones. | 3 |
+| 22 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos. | 5 |
+| 23 | TS05 | Contratos REST de mantenimiento e historial | Como Developer, quiero registrar incidencias e intervenciones y consultar antecedentes para integrar US23–US26 y la condición operativa del equipo. | 5 |
+| 24 | US30 | Visualizar propuesta de valor | Como visitante, quiero identificar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria. | 2 |
+| 25 | US27 | Consultar información de RentBuild | Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa. | 2 |
+| 26 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar cómo RentBuild puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades. | 3 |
+| 27 | US31 | Explorar funcionalidades principales | Como visitante, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria. | 3 |
+| 28 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
+| 29 | US34 | Consultar el Landing Page en diferentes dispositivos | Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer RentBuild sin importar el dispositivo que utilice. | 5 |
+| 30 | US35 | Cambiar el idioma del Landing Page | Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de RentBuild en el idioma de mi preferencia. | 5 |
+| 31 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio. | 2 |
+| 32 | US29 | Contactar con RentBuild | Como visitante, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio. | 2 |
+| 33 | US15 | Visualizar planes disponibles | Como usuario, quiero ver los planes para elegir uno. | 3 |
+| 34 | US16 | Suscribirse a un plan | Como usuario, quiero suscribirme a un plan para acceder a funciones premium. | 3 |
+| 35 | US17 | Cambiar de plan | Como usuario, quiero cambiar de plan según mis necesidades. | 5 |
+| 36 | TS07 | Contratos REST de planes y suscripciones | Como Developer, quiero consultar planes y registrar o cambiar suscripciones para integrar US15–US17 sin declarar pagos o activaciones no confirmados. | 5 |
+| 37 | US03 | Gestionar perfil | Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada. | 3 |
+| 38 | TS06 | Contratos REST de perfil | Como Developer, quiero consultar y actualizar el perfil propio para integrar US03 con validación y pertenencia comprobadas en servidor. | 3 |
+| 39 | TS09 | Contrato OpenAPI y verificación de API | Como Developer, quiero documentar y comprobar los contratos REST para integrar el frontend con especificaciones y pruebas reproducibles. | 5 |
+| 40 | US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma. | 5 |
+| 41 | US02 | Inicio de sesión | Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta. | 3 |
+| 42 | US04 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta. | 3 |
+| 43 | US05 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger mi cuenta. | 1 |
+| 44 | TS08 | Contratos REST de identidad y acceso | Como Developer, quiero gestionar registro, sesiones y recuperación para integrar US01, US02, US04 y US05 y proteger los recursos privados. | 5 |
+
+**Evidencia de herramienta:** pendiente de adjuntar la captura del Product Backlog y una URL pública de lectura del tablero de Trello/Jira/YouTrack con el mismo orden, IDs y estimaciones. No se publica una invitación ni se declara que el tablero ya refleje esta revisión.
+
+### Plan técnico propuesto para AV2
+
+Los contratos TS01–TS09 se planifican para la etapa en que el statement exige la primera API desplegada (AV2, semana 12). No se fija una fecha de implementación ni se atribuyen responsables individuales. Cada tarea permanece **To Do**; las horas son estimaciones propuestas y requieren aprobación del equipo. Su inclusión no modifica la evidencia pendiente de TB1 ni declara pruebas ejecutadas.
+
+| Technical Story | US relacionadas | Work-Item | Tarea propuesta | Estimación (horas) | Responsable | Estado |
+|---|---|---|---|---:|---|---|
+| TS01 | US06–US10 | API-TS01-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS01 | US06–US10 | API-TS01-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS01 | US06–US10 | API-TS01-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS02 | US11–US13 | API-TS02-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS02 | US11–US13 | API-TS02-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS02 | US11–US13 | API-TS02-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS03 | US14, US18, US19, US21 | API-TS03-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS03 | US14, US18, US19, US21 | API-TS03-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS03 | US14, US18, US19, US21 | API-TS03-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS04 | US20, US22 | API-TS04-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS04 | US20, US22 | API-TS04-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS04 | US20, US22 | API-TS04-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS05 | US23–US26 | API-TS05-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS05 | US23–US26 | API-TS05-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS05 | US23–US26 | API-TS05-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS06 | US03 | API-TS06-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS06 | US03 | API-TS06-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS06 | US03 | API-TS06-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS07 | US15–US17 | API-TS07-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS07 | US15–US17 | API-TS07-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS07 | US15–US17 | API-TS07-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS08 | US01, US02, US04, US05 | API-TS08-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS08 | US01, US02, US04, US05 | API-TS08-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS08 | US01, US02, US04, US05 | API-TS08-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
+| TS09 | TS01–TS08 | API-TS09-01 | Publicar la especificación OpenAPI y configurar consulta Swagger | 4 | Pendiente de acuerdo del equipo | To Do |
+| TS09 | TS01–TS08 | API-TS09-02 | Preparar pruebas de integración de disponibilidad, decisiones conflictivas y errores | 8 | Pendiente de acuerdo del equipo | To Do |
+| TS09 | TS01–TS08 | API-TS09-03 | Documentar ejecución real de pruebas y reproducibilidad desde el repositorio | 4 | Pendiente de acuerdo del equipo | To Do |
 
 <div style="page-break-before: always;"></div>
 
@@ -2308,6 +2251,8 @@ Los registros, cantidades y fechas se presentan como datos ilustrativos para rep
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+**Trazabilidad del wireflow general:** inventario US06–US10; búsqueda/detalle US11–US13; solicitudes US14/US18/US19/US21; alquileres y retorno US20/US22; mantenimiento US23–US26; planes US15–US17; perfil/acceso US01–US05. El gráfico recuperado es navegación general y no acredita wireflows completos por cada user goal. Su actualización por objetivo y las variantes mobile permanecen pendientes.
+
 Los wireflow diagrams de la Web Application de RentBuild representan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realizan los usuarios dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las pantallas entre sí y cómo fluye la experiencia de uso de acuerdo con las acciones y decisiones del usuario.
 
 En el caso de RentBuild, se ha definido un wireflow general que integra los principales recorridos de la aplicación web, desde las pantallas de autenticación hasta las interfaces específicas para los dos segmentos principales de usuarios: las empresas de alquiler de maquinaria y las empresas constructoras. De esta forma, se representa de manera global la navegación principal del sistema, así como las pantallas clave que intervienen en el proceso de gestión y solicitud de maquinaria.
@@ -2596,6 +2541,16 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
 </p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
+
+**Correspondencia documental con el catálogo:** las imágenes siguientes conservan su export anterior; no se han renombrado ni editado para presentarlas como corregidas. Los flujos son una propuesta y no prueba de ejecución de TB1.
+
+| Flow | US vigentes relacionadas | Límite de la evidencia |
+|---|---|---|
+| Authentication and Registration | US01, US02, US04, US05; US15–US17 para planes | El pago/activación dibujado no acredita una integración o cobro. |
+| Rental Company Core Domain | US06–US10, US18–US20, US22–US26 | Solicitud, reserva y contrato requieren la misma definición en historias, EventStorming, clases y DB; el gráfico todavía debe conciliarse. |
+| Construction Company Core Domain | US11–US14, US21 | Cancelación, confirmación de recepción y vistas adicionales dibujadas requieren revisar su cobertura; no se atribuyen a una US con otro rol ni se declaran implementadas. |
+
+La cobertura por cada user goal, los mockups dentro del user flow y sus rutas alternativas deben completarse al actualizar los artefactos. Esta tabla establece relaciones textuales y no reemplaza los diagramas exigidos.
 
 El User Flow Diagram de la Web Application de **RentBuild** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
@@ -3521,6 +3476,8 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 #### 5.2.1.3. Sprint Backlog 1
 
+Los IDs de esta tabla se concilian con el catálogo vigente por el título de la función; la versión previa utilizaba aliases como US-03 y una numeración anterior para maquinaria y solicitudes. Se mantienen Work-Items, responsables y estados históricos, sin declarar aceptación nueva. La asignación de IDs corregida no convierte una tarea pendiente en Done.
+
 El propósito central de este Sprint fue construir la primera versión del Landing Page de RentBuild y avanzar en paralelo con las pantallas iniciales de la Web Application, cubriendo la gestión de usuarios, maquinaria, solicitudes de alquiler y mantenimiento/incidencias. El trabajo se organizó a partir de las User Stories asociadas a los Epics comprendidos en este Sprint (EP01, EP02, EP03, EP04, EP05 y EP06). Como herramienta de seguimiento y control de tareas, el equipo optó por Trello.
 
 ![Sprint 1 - Tablero de Trello](./assets/md-images-chapter5/sprint-1-trello-board.png)
@@ -3529,29 +3486,29 @@ El propósito central de este Sprint fue construir la primera versión del Landi
 
 | User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Assigned To | Status (To do / In Process / To Review / Done) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-01 | Registro | UT-01 | Crear estructura HTML | Maquetar el formulario de registro de usuario | Luis Cisneros | Done |
-| US-01 | Registro | UT-02 | Añadir estilos CSS | Aplicar estilos según el diseño de Figma | Luis Cisneros | Done |
-| US-01 | Registro | UT-03 | Añadir validaciones JS | Validar campos y mostrar mensaje de confirmación | Luis Cisneros | Done |
-| US-02 | Login | UT-04 | Crear estructura HTML | Maquetar formulario de inicio de sesión | Marlon Viza | Done |
-| US-02 | Login | UT-05 | Añadir estilos CSS | Aplicar estilos según diseño aprobado | Marlon Viza | Done |
-| US-02 | Login | UT-06 | Añadir lógica JS | Validar credenciales y manejo de errores | Marlon Viza | Done |
-| US-03 | Perfil de usuario | UT-07 | Crear estructura HTML | Maquetar sección de datos personales | Deiby Vargas | To Do |
-| US-03 | Perfil de usuario | UT-08 | Añadir estilos CSS | Aplicar estilos según diseño | Deiby Vargas | To Do |
-| US-04 | Registrar nueva maquinaria | UT-09 | Crear formulario de registro | Maquetar campos del equipo (nombre, tipo, estado) | Miroslav Manosalva | Done |
-| US-04 | Registrar nueva maquinaria | UT-10 | Añadir validaciones JS | Validar datos ingresados del equipo | Miroslav Manosalva | Done |
-| US-05 | Inventario de maquinaria | UT-11 | Crear vista de lista | Maquetar tabla/lista de maquinaria registrada | Bruno Montalvo | Done |
-| US-05 | Inventario de maquinaria | UT-12 | Añadir estilos CSS | Aplicar estilos responsivos a la lista | Bruno Montalvo | Done |
-| US-07/08 | Detalle + estado/disponibilidad | UT-13 | Crear vista de detalle | Maquetar sección con info, estado y disponibilidad | Luis Cisneros | In Progress |
-| US-07/08 | Detalle + estado/disponibilidad | UT-14 | Añadir lógica JS | Mostrar estado dinámico (disponible/reservado/alquilado) | Luis Cisneros | In Progress |
-| US-09 | Catálogo/búsqueda | UT-15 | Crear buscador | Maquetar barra de búsqueda y filtros | Marlon Viza | Done |
-| US-09 | Catálogo/búsqueda | UT-16 | Añadir lógica JS | Filtrar resultados según criterios | Marlon Viza | Done |
-| US-13/14 | Bandeja de solicitudes | UT-17 | Añadir acciones JS | Maquetar lista de solicitudes recibidas | Miroslav Manosalva | In Progress |
-| US-15 | Alquileres activos | UT-18 | Crear vista de alquileres | Maquetar lista de equipos alquilados vigentes | Miroslav Manosalva | In Progress |
-| US-16 | Mis solicitudes | UT-19 | Crear vista de solo lectura | Maquetar estado de solicitudes del cliente | Bruno Montalvo | To Do |
-| US-18/20 | Registrar mantenimiento/incidencia | UT-20 | Crear formulario | Maquetar registro de mantenimiento e incidencias | Deiby Vargas | To Do |
-| US-18/20 | Registrar mantenimiento/incidencia | UT-21 | Añadir validaciones JS | Validar tipo y fecha del registro | Luis Cisneros | In Progress |
-| US-21 | Historial de maquinaria | UT-22 | Crear vista de historial | Maquetar historial de alquileres/incidencias/mantenimientos | Luis Cisneros | In Progress |
-| US-21 | Historial de maquinaria | UT-23 | Añadir estilos CSS | Aplicar estilos a la línea de tiempo del historial | Marlon Viza | Done |
+| US01 | Registro | UT-01 | Crear estructura HTML | Maquetar el formulario de registro de usuario | Luis Cisneros | Done |
+| US01 | Registro | UT-02 | Añadir estilos CSS | Aplicar estilos según el diseño de Figma | Luis Cisneros | Done |
+| US01 | Registro | UT-03 | Añadir validaciones JS | Validar campos y mostrar mensaje de confirmación | Luis Cisneros | Done |
+| US02 | Login | UT-04 | Crear estructura HTML | Maquetar formulario de inicio de sesión | Marlon Viza | Done |
+| US02 | Login | UT-05 | Añadir estilos CSS | Aplicar estilos según diseño aprobado | Marlon Viza | Done |
+| US02 | Login | UT-06 | Añadir lógica JS | Validar credenciales y manejo de errores | Marlon Viza | Done |
+| US03 | Perfil de usuario | UT-07 | Crear estructura HTML | Maquetar sección de datos personales | Deiby Vargas | To Do |
+| US03 | Perfil de usuario | UT-08 | Añadir estilos CSS | Aplicar estilos según diseño | Deiby Vargas | To Do |
+| US06 | Registrar nueva maquinaria | UT-09 | Crear formulario de registro | Maquetar campos del equipo (nombre, tipo, estado) | Miroslav Manosalva | Done |
+| US06 | Registrar nueva maquinaria | UT-10 | Añadir validaciones JS | Validar datos ingresados del equipo | Miroslav Manosalva | Done |
+| US07 | Inventario de maquinaria | UT-11 | Crear vista de lista | Maquetar tabla/lista de maquinaria registrada | Bruno Montalvo | Done |
+| US07 | Inventario de maquinaria | UT-12 | Añadir estilos CSS | Aplicar estilos responsivos a la lista | Bruno Montalvo | Done |
+| US09 / US10 / US12 | Detalle + estado/disponibilidad | UT-13 | Crear vista de detalle | Maquetar sección con info, estado y disponibilidad | Luis Cisneros | In Progress |
+| US09 / US10 / US12 | Detalle + estado/disponibilidad | UT-14 | Añadir lógica JS | Mostrar estado dinámico (disponible/reservado/alquilado) | Luis Cisneros | In Progress |
+| US11 | Catálogo/búsqueda | UT-15 | Crear buscador | Maquetar barra de búsqueda y filtros | Marlon Viza | Done |
+| US11 | Catálogo/búsqueda | UT-16 | Añadir lógica JS | Filtrar resultados según criterios | Marlon Viza | Done |
+| US18 / US19 | Bandeja de solicitudes | UT-17 | Añadir acciones JS | Maquetar lista de solicitudes recibidas | Miroslav Manosalva | In Progress |
+| US20 | Alquileres activos | UT-18 | Crear vista de alquileres | Maquetar lista de equipos alquilados vigentes | Miroslav Manosalva | In Progress |
+| US21 | Mis solicitudes | UT-19 | Crear vista de solo lectura | Maquetar estado de solicitudes del cliente | Bruno Montalvo | To Do |
+| US23 / US25 | Registrar mantenimiento/incidencia | UT-20 | Crear formulario | Maquetar registro de mantenimiento e incidencias | Deiby Vargas | To Do |
+| US23 / US25 | Registrar mantenimiento/incidencia | UT-21 | Añadir validaciones JS | Validar tipo y fecha del registro | Luis Cisneros | In Progress |
+| US26 | Historial de maquinaria | UT-22 | Crear vista de historial | Maquetar historial de alquileres/incidencias/mantenimientos | Luis Cisneros | In Progress |
+| US26 | Historial de maquinaria | UT-23 | Añadir estilos CSS | Aplicar estilos a la línea de tiempo del historial | Marlon Viza | Done |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
@@ -3716,7 +3673,7 @@ En esta sección se explica cómo se desarrollaron las actividades de implementa
 | **Sprint Goal & User Stories** | |
 | Sprint 2 Goal | Nuestro enfoque está en completar el flujo principal de alquiler de RentBuild en la Web Application: consulta de disponibilidad por periodo, solicitud de alquiler, gestión de solicitudes por la empresa de alquiler, y selección y gestión de planes de suscripción. Creemos que esto permitirá a las empresas constructoras y a las empresas de alquiler recorrer el ciclo completo de reserva sin recurrir al teléfono ni a WhatsApp. Esto se confirmará cuando una empresa constructora pueda solicitar un alquiler para un periodo disponible, la empresa de alquiler pueda aprobarlo o rechazarlo, y la primera versión de la Web Application quede desplegada y accesible públicamente desde los call-to-action de la nueva versión del Landing Page. |
 | Sprint 2 Velocity | Pendiente de medir con historias aceptadas al cierre del sprint. |
-| Sum of Story Points | Estimación del borrador: 41 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33); pendiente de conciliar los identificadores y la suma con el Product Backlog antes de aprobar el sprint. |
+| Sum of Story Points | 41 story points estimados (US03, US05, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33); suma calculada con el Product Backlog vigente, pendiente de aprobación del equipo. |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -3732,6 +3689,8 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 #### 5.2.2.3. Sprint Backlog 2
 
+US05 corresponde a cierre de sesión; US15, US16 y US17 conservan los títulos del catálogo. Las TS01–TS09 permanecen en el plan técnico de AV2 y no se registran como trabajo ejecutado de Sprint 2.
+
 El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
 
 Pendiente: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`
@@ -3742,7 +3701,7 @@ Pendiente: captura del tablero de Trello del Sprint 2 en `./assets/md-images-cha
 | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
 | US03 | Gestionar perfil | UT-01 | Maquetar sección de datos personales | Crear la vista de perfil con los datos del usuario (arrastra UT-07 y UT-08 del Sprint 1) | 2 | Deiby Vargas | To Do |
 | US03 | Gestionar perfil | UT-02 | Editar y guardar perfil | Habilitar la edición de datos con validaciones y mensaje de confirmación | 2 | Deiby Vargas | To Do |
-| US04 | Cerrar sesión | UT-03 | Implementar cierre de sesión | Añadir la acción de cerrar sesión y limpiar la sesión del usuario | 1 | Marlon Viza | To Do |
+| US05 | Cerrar sesión | UT-03 | Implementar cierre de sesión | Añadir la acción de cerrar sesión y limpiar la sesión del usuario | 1 | Marlon Viza | To Do |
 | US08 | Actualizar información de maquinaria | UT-04 | Formulario de edición | Precargar los datos de la maquinaria en un formulario editable | 3 | Miroslav Manosalva | To Do |
 | US08 | Actualizar información de maquinaria | UT-05 | Validaciones y confirmación | Validar los campos modificados y confirmar el guardado | 2 | Miroslav Manosalva | To Do |
 | US13 | Consultar disponibilidad para un periodo | UT-06 | Selector de periodo | Agregar selector de rango de fechas en el detalle de la maquinaria | 3 | Luis Cisneros | To Do |
@@ -3752,9 +3711,9 @@ Pendiente: captura del tablero de Trello del Sprint 2 en `./assets/md-images-cha
 | US18 | Gestionar solicitudes de alquiler | UT-10 | Bandeja de solicitudes | Listar las solicitudes recibidas con filtros por estado (arrastra UT-17 del Sprint 1) | 3 | Miroslav Manosalva | To Do |
 | US19 | Confirmar o rechazar una solicitud | UT-11 | Acciones confirmar y rechazar | Agregar las acciones con diálogo de confirmación y actualización del estado | 3 | Miroslav Manosalva | To Do |
 | US21 | Consultar estado de una solicitud de alquiler | UT-12 | Vista de estado de solicitudes | Mostrar al cliente el estado de cada solicitud (arrastra UT-19 del Sprint 1) | 2 | Bruno Montalvo | To Do |
-| US15 | Consultar planes | UT-13 | Vista comparativa de planes | Maquetar los tres niveles de plan con sus características | 3 | Marlon Viza | To Do |
-| US16 | Seleccionar plan | UT-14 | Flujo de selección de plan | Permitir elegir un plan y confirmar la selección | 3 | Marlon Viza | To Do |
-| US17 | Gestionar suscripción | UT-15 | Vista de suscripción actual | Mostrar el plan activo y permitir cambiarlo o cancelarlo | 4 | Bruno Montalvo | To Do |
+| US15 | Visualizar planes disponibles | UT-13 | Vista comparativa de planes | Maquetar los tres niveles de plan con sus características | 3 | Marlon Viza | To Do |
+| US16 | Suscribirse a un plan | UT-14 | Flujo de selección de plan | Permitir elegir un plan y confirmar la selección | 3 | Marlon Viza | To Do |
+| US17 | Cambiar de plan | UT-15 | Vista de suscripción actual | Mostrar el plan activo y permitir cambiarlo a un plan habilitado | 4 | Bruno Montalvo | To Do |
 | US33 | Acceder a la Web Application | UT-16 | Corrección de observaciones del Landing Page | Verificar que los call-to-action de cada segmento redirijan a la vista de la Web Application y unificar el estilo visual | 3 | Luis Cisneros | To Do |
 | US33 | Acceder a la Web Application | UT-17 | Despliegue de la Web Application | Importar el repositorio en Vercel y publicar la Web Application | 2 | Miroslav Manosalva | To Do |
 
