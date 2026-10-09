@@ -1,0 +1,88 @@
+{
+  "title": "RentBuild | Explicit Value Objects — Future C# Model",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "Money",
+      "title": "Money <<value object>>",
+      "body": "- decimal amount\n- string currency\n──────────\n+ Create(decimal, string) Money\n+ Add(Money) Money\n+ Equals(Money) bool",
+      "x": 40.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "DateRange",
+      "title": "DateRange <<value object>>",
+      "body": "- DateTime startDate\n- DateTime endDate\n──────────\n+ Create(DateTime, DateTime)\n+ Contains(DateTime) bool\n+ Overlaps(DateRange) bool",
+      "x": 550.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "RentalRate",
+      "title": "RentalRate <<value object>>",
+      "body": "- Money amount\n- BillingUnit unit\n──────────\n+ Create(Money, BillingUnit)\n+ Quote(DateRange) Money",
+      "x": 1060.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "Email",
+      "title": "Email <<value object>>",
+      "body": "- string value\n──────────\n+ Create(string) Email\n+ Equals(Email) bool",
+      "x": 40.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "Address",
+      "title": "Address <<value object>>",
+      "body": "- string district\n- string city\n- string street\n──────────\n+ Create(string, string, string)",
+      "x": 550.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "EquipmentLocation",
+      "title": "EquipmentLocation <<value object>>",
+      "body": "- decimal latitude\n- decimal longitude\n- Address address\n──────────\n+ Create(decimal, decimal, Address)",
+      "x": 1060.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "RentalRate",
+      "Money",
+      "R1",
+      false
+    ],
+    [
+      "EquipmentLocation",
+      "Address",
+      "R2",
+      false
+    ]
+  ],
+  "width": 1540,
+  "height": 1394
+}

@@ -1,0 +1,12 @@
+flowchart TB
+  equipment["Equipment Registered<br/>Rental operator publishes equipment information"]
+  request["Rental Request Submitted<br/>Construction manager requests dates"]
+  approved["Request Approved / Rejected<br/>Provider decides after checking availability"]
+  delivery["Equipment Delivered<br/>Approved operation starts using the equipment"]
+  returned["Equipment Returned<br/>Provider records condition and closes the operation"]
+  maintenance["Maintenance Completed<br/>Only release equipment if no other blocking condition exists"]
+  equipment -->|"Equipment + period"| request
+  request -->|"Provider decision"| approved
+  approved -->|"Approved only"| delivery
+  delivery -->|"Return / inspection"| returned
+  returned -->|"If intervention required"| maintenance

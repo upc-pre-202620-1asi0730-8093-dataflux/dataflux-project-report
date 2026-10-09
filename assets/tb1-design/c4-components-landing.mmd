@@ -1,0 +1,8 @@
+flowchart TB
+  public["Public sections<br/>Value proposition, segments, features and team"]
+  links["App link adapter<br/>Configured app URL + role-specific registration links"]
+  languages["Language resources<br/>English / Latin American Spanish<br/>BCP47 en-US / es-419<br/>Aliases en_US / es_419"]
+  footer["Footer and documents<br/>Terms, privacy and accessibility navigation"]
+  public -->|"Routes visitor to app"| links
+  public -->|"Localized content"| languages
+  languages -->|"Translated documents"| footer

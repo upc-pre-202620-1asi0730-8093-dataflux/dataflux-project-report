@@ -1,0 +1,8 @@
+flowchart TB
+  http["HTTP interface<br/>ASP.NET Core controllers<br/>Request / response DTOs, validation and OpenAPI"]
+  usecases["Application services<br/>IAM, Profiles, Inventory, Rentals, Maintenance, Subscriptions"]
+  rules["Domain model<br/>Owned aggregates and invariants<br/>Events / repository ports"]
+  adapters["Infrastructure adapters<br/>EF Core repositories / MySQL<br/>External service adapter — selection pending"]
+  http -->|"Invokes use cases"| usecases
+  usecases -->|"Applies business rules"| rules
+  usecases -->|"Uses owned ports"| adapters

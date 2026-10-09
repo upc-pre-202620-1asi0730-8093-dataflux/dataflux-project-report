@@ -1,0 +1,8 @@
+flowchart TB
+  iam["IAM / Profiles<br/>users, company_profiles, provider_profiles<br/>Identity and company data"]
+  inventory["Inventory<br/>equipment_categories, equipments, availability_blocks<br/>Equipment, rates and period commitments"]
+  rentals["Rentals<br/>rental_requests, rental_contracts, deliveries, equipment_returns"]
+  support["Maintenance / Subscriptions<br/>incidents, maintenance_records<br/>subscription_plans, user_subscriptions"]
+  iam -->|"Referenced by company ID"| inventory
+  inventory -->|"Referenced by equipment ID"| rentals
+  rentals -->|"Contract/equipment IDs"| support

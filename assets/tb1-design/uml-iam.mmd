@@ -1,0 +1,29 @@
+classDiagram
+  class User {
+    - int id
+    - Email email
+    - AccountRole role
+    - AccountStatus status
+    + Register(Email, AccountRole)
+    + CanAccess() bool
+  }
+  class Session {
+    - int userId
+    - DateTime expiresAt
+    - bool revoked
+    + IsValid(DateTime) bool
+    + Revoke() void
+  }
+  class AccountRole {
+    <<enumeration>>
+    RentalCompany
+    ConstructionCompany
+  }
+  class IUserRepository {
+    <<interface>>
+    + FindByEmail(Email) User
+    + Save(User) void
+  }
+  User "1" --> "0..*" Session : owns sessions 1 : 0..*
+  User --> AccountRole : has role 1 : 1
+  IUserRepository ..> User : persists users

@@ -1,0 +1,69 @@
+{
+  "title": "RentBuild | C4 Level 3 — Proposed Database Ownership",
+  "note": "LOGICAL TABLE GROUPS INSIDE ONE FUTURE MYSQL CONTAINER; NOT MICROSERVICES",
+  "nodes": [
+    {
+      "id": "iam",
+      "title": "IAM / Profiles",
+      "body": "users, company_profiles, provider_profiles\nIdentity and company data",
+      "x": 50,
+      "y": 200,
+      "w": 620,
+      "h": 250,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "inventory",
+      "title": "Inventory",
+      "body": "equipment_categories, equipments, availability_blocks\nEquipment, rates and period commitments",
+      "x": 830,
+      "y": 200,
+      "w": 620,
+      "h": 250,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "rentals",
+      "title": "Rentals",
+      "body": "rental_requests, rental_contracts, deliveries, equipment_returns",
+      "x": 50,
+      "y": 640,
+      "w": 620,
+      "h": 250,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "support",
+      "title": "Maintenance / Subscriptions",
+      "body": "incidents, maintenance_records\nsubscription_plans, user_subscriptions",
+      "x": 830,
+      "y": 640,
+      "w": 620,
+      "h": 250,
+      "kind": "component",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "iam",
+      "inventory",
+      "Referenced by company ID"
+    ],
+    [
+      "inventory",
+      "rentals",
+      "Referenced by equipment ID"
+    ],
+    [
+      "rentals",
+      "support",
+      "Contract/equipment IDs"
+    ]
+  ],
+  "width": 1500,
+  "height": 1050
+}

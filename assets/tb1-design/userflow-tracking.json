@@ -1,0 +1,85 @@
+{
+  "title": "RentBuild | Construction Manager | Track own request",
+  "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+  "nodes": [
+    {
+      "id": "start",
+      "title": "1. Entry / list",
+      "body": "US21",
+      "x": 40,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png"
+    },
+    {
+      "id": "target",
+      "title": "2. Selected action / detail",
+      "body": "Prior Figma mockup; states described below",
+      "x": 810,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png"
+    },
+    {
+      "id": "condition",
+      "title": "3. Decision",
+      "body": "Own request exists?",
+      "x": 40,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "query",
+      "image": null
+    },
+    {
+      "id": "success",
+      "title": "4. Expected result",
+      "body": "Latest PENDING / APPROVED / REJECTED status",
+      "x": 810,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "failure",
+      "title": "Alternative route",
+      "body": "Unknown / other company: no private data",
+      "x": 40,
+      "y": 1160,
+      "w": 650,
+      "h": 220,
+      "kind": "error",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "start",
+      "target",
+      "Select / inspect"
+    ],
+    [
+      "target",
+      "condition",
+      "Submit or query"
+    ],
+    [
+      "condition",
+      "success",
+      "Valid / authorized"
+    ],
+    [
+      "condition",
+      "failure",
+      "Invalid / unavailable"
+    ]
+  ],
+  "width": 1500,
+  "height": 1530
+}

@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US18 / US19"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Own pending request? Reject with reason. Approve only if period is available."]
+  success["4. Expected result<br/>APPROVED after availability check, or REJECTED with reason (no availability check)."]
+  failure["Alternative route<br/>Other provider / already decided: no change. Unavailable period blocks approval only."]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

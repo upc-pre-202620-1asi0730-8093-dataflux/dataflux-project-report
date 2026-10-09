@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US11–US14"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Requested period available?"]
+  success["4. Expected result<br/>Request PENDING in My Requests"]
+  failure["Alternative route<br/>Unavailable / invalid range: choose different dates"]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

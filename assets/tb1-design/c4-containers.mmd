@@ -1,0 +1,8 @@
+flowchart TB
+  landing["Landing Page<br/>HTML5 / CSS3 / JavaScript<br/>Public content and app links"]
+  web["Web Application<br/>Vue / JavaScript<br/>PrimeVue target + Material Design"]
+  api["RESTful API — planned AV2<br/>ASP.NET Core / C#<br/>Business rules, authorization, OpenAPI"]
+  db["Relational Database — planned<br/>MySQL / EF Core<br/>Owned tables for six contexts"]
+  landing -->|"CTA / HTTPS"| web
+  web -->|"HTTPS / JSON"| api
+  api -->|"EF Core / SQL"| db

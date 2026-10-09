@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US23–US26"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Intervention complete + no other blocks?"]
+  success["4. Expected result<br/>Equipment released only when fit and unblocked"]
+  failure["Alternative route<br/>Incomplete / other blocking work: retain restriction"]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

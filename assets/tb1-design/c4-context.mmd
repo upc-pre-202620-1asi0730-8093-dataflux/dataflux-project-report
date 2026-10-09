@@ -1,0 +1,8 @@
+flowchart TB
+  operator["Rental Operator<br/>Inventories, rental requests and equipment condition"]
+  builder["Construction Manager<br/>Searches equipment, requests a period and tracks decisions"]
+  system["RentBuild<br/>Software system<br/>Rental operations and subscriptions"]
+  external["External service — TBD<br/>Geolocation candidate; vendor and integration not verified"]
+  operator -->|"1"| system
+  builder -->|"2"| system
+  system -.->|"Planned integration"| external

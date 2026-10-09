@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US20 / US22"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Valid contract and preceding step?"]
+  success["4. Expected result<br/>Delivery / return recorded once"]
+  failure["Alternative route<br/>Missing prior delivery / duplicate: reject operation"]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

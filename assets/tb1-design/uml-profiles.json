@@ -1,0 +1,72 @@
+{
+  "title": "RentBuild | Profiles — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "CompanyProfile",
+      "title": "CompanyProfile <<aggregate>>",
+      "body": "- int id\n- int userId\n- string companyName\n- Email contactEmail\n- Address address\n──────────\n+ UpdateContact(Email, Address)",
+      "x": 40.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "ProviderProfile",
+      "title": "ProviderProfile",
+      "body": "- int id\n- int companyProfileId\n- string publicDescription\n──────────\n+ UpdateDescription(string)",
+      "x": 680.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "Address",
+      "title": "Address <<value object>>",
+      "body": "- string street\n- string district\n- string city\n──────────\n+ Create(string, string, string)",
+      "x": 40.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "IProfileRepository",
+      "title": "IProfileRepository <<interface>>",
+      "body": "──────────\n+ FindByUserId(int) CompanyProfile\n+ Save(CompanyProfile) void",
+      "x": 680.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "CompanyProfile",
+      "ProviderProfile",
+      "R1",
+      false
+    ],
+    [
+      "CompanyProfile",
+      "Address",
+      "R2",
+      false
+    ],
+    [
+      "IProfileRepository",
+      "CompanyProfile",
+      "R3",
+      true
+    ]
+  ],
+  "width": 1180,
+  "height": 1466
+}

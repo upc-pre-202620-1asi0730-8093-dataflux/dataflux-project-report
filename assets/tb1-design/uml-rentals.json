@@ -1,0 +1,106 @@
+{
+  "title": "RentBuild | Rentals — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "RentalRequest",
+      "title": "RentalRequest <<aggregate>>",
+      "body": "- int id\n- int equipmentId\n- int requesterId\n- int providerId\n- DateRange period\n- RequestStatus status\n──────────\n+ Decide(bool approved)\n+ Reject(string reason)",
+      "x": 40.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "RentalContract",
+      "title": "RentalContract <<aggregate>>",
+      "body": "- int id\n- int requestId\n- Money agreedAmount\n- ContractStatus status\n──────────\n+ RegisterDelivery(DateTime)\n+ RegisterReturn(DateTime)",
+      "x": 550.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "RequestStatus",
+      "title": "RequestStatus <<enum>>",
+      "body": "Pending\nApproved\nRejected\n──────────",
+      "x": 1060.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "Delivery",
+      "title": "Delivery",
+      "body": "- int id\n- int contractId\n- DateTime deliveredAt\n──────────\n+ Record(DateTime) Delivery",
+      "x": 40.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "EquipmentReturn",
+      "title": "EquipmentReturn",
+      "body": "- int id\n- int contractId\n- DateTime returnedAt\n- string condition\n──────────\n+ Record(DateTime, string)",
+      "x": 550.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "IRentalRepository",
+      "title": "IRentalRepository <<interface>>",
+      "body": "──────────\n+ FindRequest(int) RentalRequest\n+ SaveContract(RentalContract)",
+      "x": 1060.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "RentalRequest",
+      "RentalContract",
+      "R1",
+      false
+    ],
+    [
+      "RentalRequest",
+      "RequestStatus",
+      "R2",
+      false
+    ],
+    [
+      "RentalContract",
+      "Delivery",
+      "R3",
+      false
+    ],
+    [
+      "RentalContract",
+      "EquipmentReturn",
+      "R4",
+      false
+    ],
+    [
+      "IRentalRepository",
+      "RentalContract",
+      "R5",
+      true
+    ]
+  ],
+  "width": 1540,
+  "height": 1610
+}

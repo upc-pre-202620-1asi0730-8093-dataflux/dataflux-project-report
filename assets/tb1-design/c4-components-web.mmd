@@ -1,0 +1,8 @@
+flowchart TB
+  views["Presentation<br/>Vue views / Vue Router<br/>IAM, Profiles, Inventory, Rentals, Maintenance, Subscriptions"]
+  stores["Application<br/>Context stores and workflows<br/>Subscription/session reset and request versions"]
+  domain["Domain<br/>Entities / enums / value objects<br/>Money and DateRange owned locally"]
+  transport["Infrastructure<br/>API adapters / assemblers / FetchClient<br/>Fake API in TB1; real API planned for AV2"]
+  views -->|"Commands / reactive state"| stores
+  stores -->|"Validates local model"| domain
+  stores -->|"Requests / responses"| transport

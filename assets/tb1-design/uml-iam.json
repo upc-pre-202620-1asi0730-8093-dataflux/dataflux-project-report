@@ -1,0 +1,72 @@
+{
+  "title": "RentBuild | IAM — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "User",
+      "title": "User <<aggregate>>",
+      "body": "- int id\n- Email email\n- AccountRole role\n- AccountStatus status\n──────────\n+ Register(Email, AccountRole)\n+ CanAccess() bool",
+      "x": 40.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "Session",
+      "title": "Session",
+      "body": "- int userId\n- DateTime expiresAt\n- bool revoked\n──────────\n+ IsValid(DateTime) bool\n+ Revoke() void",
+      "x": 680.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "AccountRole",
+      "title": "AccountRole <<enum>>",
+      "body": "RentalCompany\nConstructionCompany\n──────────",
+      "x": 40.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "IUserRepository",
+      "title": "IUserRepository <<interface>>",
+      "body": "──────────\n+ FindByEmail(Email) User\n+ Save(User) void",
+      "x": 680.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "User",
+      "Session",
+      "R1",
+      false
+    ],
+    [
+      "User",
+      "AccountRole",
+      "R2",
+      false
+    ],
+    [
+      "IUserRepository",
+      "User",
+      "R3",
+      true
+    ]
+  ],
+  "width": 1180,
+  "height": 1466
+}

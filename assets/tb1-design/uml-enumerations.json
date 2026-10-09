@@ -1,0 +1,53 @@
+{
+  "title": "RentBuild | Supporting Enumerations — Future C# Model",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "AccountStatus",
+      "title": "AccountStatus <<enum>>",
+      "body": "Active\nDisabled\n──────────",
+      "x": 40.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "ContractStatus",
+      "title": "ContractStatus <<enum>>",
+      "body": "Confirmed\nActive\nCompleted\n──────────",
+      "x": 680.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "PlanStatus",
+      "title": "PlanStatus <<enum>>",
+      "body": "Active\nInactive\n──────────",
+      "x": 40.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "BillingUnit",
+      "title": "BillingUnit <<enum>>",
+      "body": "Day\nWeek\nMonth\n──────────",
+      "x": 680.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    }
+  ],
+  "edges": [],
+  "width": 1180,
+  "height": 1250
+}

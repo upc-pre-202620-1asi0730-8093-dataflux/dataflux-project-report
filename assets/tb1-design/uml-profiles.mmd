@@ -1,0 +1,30 @@
+classDiagram
+  class CompanyProfile {
+    - int id
+    - int userId
+    - string companyName
+    - Email contactEmail
+    - Address address
+    + UpdateContact(Email, Address)
+  }
+  class ProviderProfile {
+    - int id
+    - int companyProfileId
+    - string publicDescription
+    + UpdateDescription(string)
+  }
+  class Address {
+    <<valueObject>>
+    - string street
+    - string district
+    - string city
+    + Create(string, string, string)
+  }
+  class IProfileRepository {
+    <<interface>>
+    + FindByUserId(int) CompanyProfile
+    + Save(CompanyProfile) void
+  }
+  CompanyProfile "1" --> "0..1" ProviderProfile : provider view 1 : 0..1
+  CompanyProfile "1" *-- "1" Address : address 1 : 1
+  IProfileRepository ..> CompanyProfile : persists profiles

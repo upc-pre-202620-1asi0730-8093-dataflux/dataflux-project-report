@@ -1,0 +1,32 @@
+classDiagram
+  class Incident {
+    - int id
+    - int equipmentId
+    - int? contractId
+    - string description
+    - DateTime occurredAt
+    + Register(string, DateTime)
+  }
+  class MaintenanceRecord {
+    - int id
+    - int equipmentId
+    - int? incidentId
+    - DateRange period
+    - MaintenanceStatus status
+    + Schedule(DateRange)
+    + Complete() void
+  }
+  class MaintenanceStatus {
+    <<enumeration>>
+    Pending
+    InProgress
+    Completed
+  }
+  class IEquipmentConditionPort {
+    <<interface>>
+    + BlockEquipment(int, DateRange)
+    + ReleaseIfUnblocked(int)
+  }
+  Incident "0..1" --> "0..1" MaintenanceRecord : corrective intervention 0..1 : 0..1
+  MaintenanceRecord --> MaintenanceStatus : progress 1 : 1
+  MaintenanceRecord ..> IEquipmentConditionPort : changes equipment via port

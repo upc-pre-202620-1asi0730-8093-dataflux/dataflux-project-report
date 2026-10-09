@@ -1,0 +1,16 @@
+flowchart TB
+  c0["IAM | Command<br/>Register Account / Sign In / Sign Out"]
+  a0["Aggregate<br/>User / Session<br/>Query: Own identity and permissions"]
+  e0["Domain event<br/>AccountRegistered / SessionStarted / SessionEnded"]
+  c1["Profiles | Command<br/>Update Company Profile"]
+  a1["Aggregate<br/>CompanyProfile / ProviderProfile<br/>Query: Own profile / public provider"]
+  e1["Domain event<br/>CompanyProfileUpdated"]
+  c2["Subscriptions | Command<br/>Select / Change Plan"]
+  a2["Aggregate<br/>SubscriptionPlan / UserSubscription<br/>Query: Plans + current valid period"]
+  e2["Domain event<br/>DemoPlanSelected / DemoPlanChanged"]
+  c0 -->|"Validates"| a0
+  a0 -->|"Emits if accepted"| e0
+  c1 -->|"Validates"| a1
+  a1 -->|"Emits if accepted"| e1
+  c2 -->|"Validates"| a2
+  a2 -->|"Emits if accepted"| e2

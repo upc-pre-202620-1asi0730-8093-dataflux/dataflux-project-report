@@ -1,0 +1,106 @@
+{
+  "title": "RentBuild | Inventory — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "Equipment",
+      "title": "Equipment <<aggregate>>",
+      "body": "- int id\n- int providerId\n- int categoryId\n- string serialNumber\n- EquipmentStatus status\n- RentalRate rate\n──────────\n+ UpdateDetails(string)\n+ ChangeCondition(EquipmentStatus)",
+      "x": 40.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "EquipmentCategory",
+      "title": "EquipmentCategory",
+      "body": "- int id\n- string name\n──────────\n+ Rename(string) void",
+      "x": 550.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "AvailabilityBlock",
+      "title": "AvailabilityBlock",
+      "body": "- int id\n- int equipmentId\n- DateRange period\n- string sourceType\n──────────\n+ Overlaps(DateRange) bool",
+      "x": 1060.0,
+      "y": 150,
+      "w": 440,
+      "h": 410,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "EquipmentStatus",
+      "title": "EquipmentStatus <<enum>>",
+      "body": "Available\nRented\nMaintenance\n──────────",
+      "x": 40.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "RentalRate",
+      "title": "RentalRate <<value object>>",
+      "body": "- Money amount\n- BillingUnit unit\n──────────\n+ Quote(DateRange) Money",
+      "x": 550.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "IEquipmentRepository",
+      "title": "IEquipmentRepository <<interface>>",
+      "body": "──────────\n+ Find(int) Equipment\n+ Save(Equipment) void",
+      "x": 1060.0,
+      "y": 680,
+      "w": 440,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "Equipment",
+      "EquipmentCategory",
+      "R1",
+      false
+    ],
+    [
+      "Equipment",
+      "AvailabilityBlock",
+      "R2",
+      false
+    ],
+    [
+      "Equipment",
+      "EquipmentStatus",
+      "R3",
+      false
+    ],
+    [
+      "Equipment",
+      "RentalRate",
+      "R4",
+      false
+    ],
+    [
+      "IEquipmentRepository",
+      "Equipment",
+      "R5",
+      true
+    ]
+  ],
+  "width": 1540,
+  "height": 1610
+}

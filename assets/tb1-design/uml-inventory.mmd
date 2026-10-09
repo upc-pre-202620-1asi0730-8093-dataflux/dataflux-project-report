@@ -1,0 +1,45 @@
+classDiagram
+  class Equipment {
+    - int id
+    - int providerId
+    - int categoryId
+    - string serialNumber
+    - EquipmentStatus status
+    - RentalRate rate
+    + UpdateDetails(string)
+    + ChangeCondition(EquipmentStatus)
+  }
+  class EquipmentCategory {
+    - int id
+    - string name
+    + Rename(string) void
+  }
+  class AvailabilityBlock {
+    - int id
+    - int equipmentId
+    - DateRange period
+    - string sourceType
+    + Overlaps(DateRange) bool
+  }
+  class EquipmentStatus {
+    <<enumeration>>
+    Available
+    Rented
+    Maintenance
+  }
+  class RentalRate {
+    <<valueObject>>
+    - Money amount
+    - BillingUnit unit
+    + Quote(DateRange) Money
+  }
+  class IEquipmentRepository {
+    <<interface>>
+    + Find(int) Equipment
+    + Save(Equipment) void
+  }
+  Equipment "0..*" --> "1" EquipmentCategory : category 0..* : 1
+  Equipment "1" --> "0..*" AvailabilityBlock : commitments 1 : 0..*
+  Equipment --> EquipmentStatus : condition 1 : 1
+  Equipment "1" *-- "1" RentalRate : rate 1 : 1
+  IEquipmentRepository ..> Equipment : persists equipment

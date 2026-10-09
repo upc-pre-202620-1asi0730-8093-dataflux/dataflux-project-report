@@ -1,0 +1,85 @@
+{
+  "title": "RentBuild | Rental Operator | Decide a request",
+  "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+  "nodes": [
+    {
+      "id": "start",
+      "title": "1. Entry / list",
+      "body": "US18 / US19",
+      "x": 40,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Rental requests.png"
+    },
+    {
+      "id": "target",
+      "title": "2. Selected action / detail",
+      "body": "Prior Figma mockup; states described below",
+      "x": 810,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Reservations.png"
+    },
+    {
+      "id": "condition",
+      "title": "3. Decision",
+      "body": "Own pending request? Reject with reason. Approve only if period is available.",
+      "x": 40,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "query",
+      "image": null
+    },
+    {
+      "id": "success",
+      "title": "4. Expected result",
+      "body": "APPROVED after availability check, or REJECTED with reason (no availability check).",
+      "x": 810,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "failure",
+      "title": "Alternative route",
+      "body": "Other provider / already decided: no change. Unavailable period blocks approval only.",
+      "x": 40,
+      "y": 1160,
+      "w": 650,
+      "h": 220,
+      "kind": "error",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "start",
+      "target",
+      "Select / inspect"
+    ],
+    [
+      "target",
+      "condition",
+      "Submit or query"
+    ],
+    [
+      "condition",
+      "success",
+      "Valid / authorized"
+    ],
+    [
+      "condition",
+      "failure",
+      "Invalid / unavailable"
+    ]
+  ],
+  "width": 1500,
+  "height": 1530
+}

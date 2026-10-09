@@ -1,0 +1,122 @@
+[
+  {
+    "name": "c4-context",
+    "title": "RentBuild | C4 Level 1 — System Context",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "c4-containers",
+    "title": "RentBuild | C4 Level 2 — Target Containers",
+    "note": "TARGET: API/DB FUTURE. TB1 FAKE API IS A DEVELOPMENT ADAPTER, NOT THIS API."
+  },
+  {
+    "name": "c4-components-landing",
+    "title": "RentBuild | C4 Level 3 — Landing Container",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "c4-components-web",
+    "title": "RentBuild | C4 Level 3 — Vue Web Application",
+    "note": "DESIGN: ALL SIX CONTEXTS. VERIFIED REMOTE SLICE IS IDENTIFIED IN SPRINT 2."
+  },
+  {
+    "name": "c4-components-api",
+    "title": "RentBuild | C4 Level 3 — Future ASP.NET Core API",
+    "note": "PROPOSED API — NO BACKEND IMPLEMENTATION OR DEPLOYMENT CLAIM"
+  },
+  {
+    "name": "c4-components-database",
+    "title": "RentBuild | C4 Level 3 — Proposed Database Ownership",
+    "note": "LOGICAL TABLE GROUPS INSIDE ONE FUTURE MYSQL CONTAINER; NOT MICROSERVICES"
+  },
+  {
+    "name": "eventstorming-big-picture",
+    "title": "RentBuild | Big Picture — Rental Lifecycle",
+    "note": "DOCUMENTARY RECONSTRUCTION; TEAM WORKSHOP RECORD AND VALIDATION PENDING"
+  },
+  {
+    "name": "eventstorming-core",
+    "title": "RentBuild | Design-Level — Core Contexts",
+    "note": "PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED BUS"
+  },
+  {
+    "name": "eventstorming-support",
+    "title": "RentBuild | Design-Level — Supporting Contexts",
+    "note": "PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED BUS"
+  },
+  {
+    "name": "uml-value-objects",
+    "title": "RentBuild | Explicit Value Objects — Future C# Model",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-iam",
+    "title": "RentBuild | IAM — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-profiles",
+    "title": "RentBuild | Profiles — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-inventory",
+    "title": "RentBuild | Inventory — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-rentals",
+    "title": "RentBuild | Rentals — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-maintenance",
+    "title": "RentBuild | Maintenance — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-subscriptions",
+    "title": "RentBuild | Subscriptions — Proposed Domain and Ports",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "uml-enumerations",
+    "title": "RentBuild | Supporting Enumerations — Future C# Model",
+    "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE"
+  },
+  {
+    "name": "userflow-inventory",
+    "title": "RentBuild | Rental Operator | Register / update equipment",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-request",
+    "title": "RentBuild | Construction Manager | Find and request equipment",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-decision",
+    "title": "RentBuild | Rental Operator | Decide a request",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-rental",
+    "title": "RentBuild | Rental Operator | Deliver and record return",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-maintenance",
+    "title": "RentBuild | Rental Operator | Record condition and maintenance",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-tracking",
+    "title": "RentBuild | Construction Manager | Track own request",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT"
+  },
+  {
+    "name": "userflow-subscriptions",
+    "title": "RentBuild | Rental Operator — Select / Change Plan",
+    "note": "SUPPLEMENT: PR12 FRONTEND DEMO; NO PAYMENT OR AUTOMATIC BILLING. FORMAL MOCKUP EXPORT PENDING."
+  }
+]

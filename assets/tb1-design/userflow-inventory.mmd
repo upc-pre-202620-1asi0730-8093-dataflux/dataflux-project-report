@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US06–US10"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Valid required data?"]
+  success["4. Expected result<br/>Equipment recorded"]
+  failure["Alternative route<br/>Invalid / duplicate: retain input and show reason"]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

@@ -1,0 +1,16 @@
+flowchart TB
+  c0["Inventory | Command<br/>Register / Update Equipment"]
+  a0["Aggregate<br/>Equipment<br/>Query: Equipment Catalogue + availability"]
+  e0["Domain event<br/>EquipmentRegistered / EquipmentUpdated"]
+  c1["Rentals | Command<br/>Submit / Decide Rental Request"]
+  a1["Aggregate<br/>RentalRequest / RentalContract<br/>Query: Own requests + active contracts"]
+  e1["Domain event<br/>RentalRequestSubmitted / RequestApproved / RequestRejected"]
+  c2["Maintenance | Command<br/>Register Incident / Complete Maintenance"]
+  a2["Aggregate<br/>Incident / MaintenanceRecord<br/>Query: History + blocking maintenance"]
+  e2["Domain event<br/>IncidentRegistered / MaintenanceCompleted"]
+  c0 -->|"Validates"| a0
+  a0 -->|"Emits if accepted"| e0
+  c1 -->|"Validates"| a1
+  a1 -->|"Emits if accepted"| e1
+  c2 -->|"Validates"| a2
+  a2 -->|"Emits if accepted"| e2

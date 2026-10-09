@@ -1,0 +1,10 @@
+flowchart TB
+  start["1. Entry / list<br/>US21"]
+  target["2. Selected action / detail<br/>Prior Figma mockup; states described below"]
+  condition["3. Decision<br/>Own request exists?"]
+  success["4. Expected result<br/>Latest PENDING / APPROVED / REJECTED status"]
+  failure["Alternative route<br/>Unknown / other company: no private data"]
+  start -->|"Select / inspect"| target
+  target -->|"Submit or query"| condition
+  condition -->|"Valid / authorized"| success
+  condition -->|"Invalid / unavailable"| failure

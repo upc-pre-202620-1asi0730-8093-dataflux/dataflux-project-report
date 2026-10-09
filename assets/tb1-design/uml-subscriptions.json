@@ -1,0 +1,105 @@
+{
+  "title": "RentBuild | Subscriptions — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "SubscriptionPlan",
+      "title": "SubscriptionPlan <<aggregate>>",
+      "body": "- int id\n- string name\n- Money price\n- PlanStatus status\n──────────\n+ IsSelectable() bool",
+      "x": 40.0,
+      "y": 210,
+      "w": 440,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "UserSubscription",
+      "title": "UserSubscription <<aggregate>>",
+      "body": "- int id\n- int userId\n- int planId\n- DateRange period\n- SubscriptionStatus status\n- bool autoRenew\n──────────\n+ IsActive(DateTime) bool\n+ ChangePlan(int) void",
+      "x": 550.0,
+      "y": 210,
+      "w": 440,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "Money",
+      "title": "Money <<value object>>",
+      "body": "- decimal amount\n- string currency\n──────────\n+ Create(decimal, string) Money",
+      "x": 1060.0,
+      "y": 210,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "DateRange",
+      "title": "DateRange <<value object>>",
+      "body": "- DateTime startDate\n- DateTime endDate\n──────────\n+ Contains(DateTime) bool",
+      "x": 40.0,
+      "y": 800,
+      "w": 440,
+      "h": 410,
+      "kind": "value",
+      "image": null
+    },
+    {
+      "id": "SubscriptionStatus",
+      "title": "SubscriptionStatus <<enum>>",
+      "body": "Active\nCancelled\nExpired\n──────────",
+      "x": 550.0,
+      "y": 800,
+      "w": 440,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "ISubscriptionRepository",
+      "title": "ISubscriptionRepository <<interface>>",
+      "body": "──────────\n+ FindCurrent(int) UserSubscription\n+ Save(UserSubscription) void",
+      "x": 1060.0,
+      "y": 800,
+      "w": 440,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "UserSubscription",
+      "SubscriptionPlan",
+      "R1"
+    ],
+    [
+      "SubscriptionPlan",
+      "Money",
+      "R2",
+      false
+    ],
+    [
+      "UserSubscription",
+      "DateRange",
+      "R3",
+      false
+    ],
+    [
+      "UserSubscription",
+      "SubscriptionStatus",
+      "R4",
+      false
+    ],
+    [
+      "ISubscriptionRepository",
+      "UserSubscription",
+      "R5",
+      true
+    ]
+  ],
+  "width": 1540,
+  "height": 1730
+}

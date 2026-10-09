@@ -1,0 +1,72 @@
+{
+  "title": "RentBuild | Maintenance — Proposed Domain and Ports",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "Incident",
+      "title": "Incident <<aggregate>>",
+      "body": "- int id\n- int equipmentId\n- int? contractId\n- string description\n- DateTime occurredAt\n──────────\n+ Register(string, DateTime)",
+      "x": 40.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "MaintenanceRecord",
+      "title": "MaintenanceRecord <<aggregate>>",
+      "body": "- int id\n- int equipmentId\n- int? incidentId\n- DateRange period\n- MaintenanceStatus status\n──────────\n+ Schedule(DateRange)\n+ Complete() void",
+      "x": 680.0,
+      "y": 150,
+      "w": 460,
+      "h": 410,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "MaintenanceStatus",
+      "title": "MaintenanceStatus <<enum>>",
+      "body": "Pending\nInProgress\nCompleted\n──────────",
+      "x": 40.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "IEquipmentConditionPort",
+      "title": "IEquipmentConditionPort <<interface>>",
+      "body": "──────────\n+ BlockEquipment(int, DateRange)\n+ ReleaseIfUnblocked(int)",
+      "x": 680.0,
+      "y": 680,
+      "w": 460,
+      "h": 410,
+      "kind": "query",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "Incident",
+      "MaintenanceRecord",
+      "R1",
+      false
+    ],
+    [
+      "MaintenanceRecord",
+      "MaintenanceStatus",
+      "R2",
+      false
+    ],
+    [
+      "MaintenanceRecord",
+      "IEquipmentConditionPort",
+      "R3",
+      true
+    ]
+  ],
+  "width": 1180,
+  "height": 1466
+}

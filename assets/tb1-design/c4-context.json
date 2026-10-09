@@ -1,0 +1,70 @@
+{
+  "title": "RentBuild | C4 Level 1 — System Context",
+  "note": "DESIGN PROPOSAL — NOT DEPLOYMENT EVIDENCE",
+  "nodes": [
+    {
+      "id": "operator",
+      "title": "Rental Operator",
+      "body": "Inventories, rental requests and equipment condition",
+      "x": 40,
+      "y": 220,
+      "w": 410,
+      "h": 230,
+      "kind": "actor",
+      "image": null
+    },
+    {
+      "id": "builder",
+      "title": "Construction Manager",
+      "body": "Searches equipment, requests a period and tracks decisions",
+      "x": 40,
+      "y": 610,
+      "w": 410,
+      "h": 230,
+      "kind": "actor",
+      "image": null
+    },
+    {
+      "id": "system",
+      "title": "RentBuild",
+      "body": "Software system\nRental operations and subscriptions",
+      "x": 540,
+      "y": 430,
+      "w": 440,
+      "h": 250,
+      "kind": "system",
+      "image": null
+    },
+    {
+      "id": "external",
+      "title": "External service — TBD",
+      "body": "Geolocation candidate; vendor and integration not verified",
+      "x": 1080,
+      "y": 430,
+      "w": 380,
+      "h": 250,
+      "kind": "external",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "operator",
+      "system",
+      "1"
+    ],
+    [
+      "builder",
+      "system",
+      "2"
+    ],
+    [
+      "system",
+      "external",
+      "Planned integration",
+      true
+    ]
+  ],
+  "width": 1500,
+  "height": 1020
+}

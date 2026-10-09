@@ -1,0 +1,48 @@
+classDiagram
+  class RentalRequest {
+    - int id
+    - int equipmentId
+    - int requesterId
+    - int providerId
+    - DateRange period
+    - RequestStatus status
+    + Decide(bool approved)
+    + Reject(string reason)
+  }
+  class RentalContract {
+    - int id
+    - int requestId
+    - Money agreedAmount
+    - ContractStatus status
+    + RegisterDelivery(DateTime)
+    + RegisterReturn(DateTime)
+  }
+  class RequestStatus {
+    <<enumeration>>
+    Pending
+    Approved
+    Rejected
+  }
+  class Delivery {
+    - int id
+    - int contractId
+    - DateTime deliveredAt
+    + Record(DateTime) Delivery
+  }
+  class EquipmentReturn {
+    - int id
+    - int contractId
+    - DateTime returnedAt
+    - string condition
+    + Record(DateTime, string)
+  }
+  class IRentalRepository {
+    <<interface>>
+    + FindRequest(int) RentalRequest
+    + SaveContract(RentalContract)
+  }
+  RentalRequest "1" --> "0..1" RentalContract : accepted request 1 : 0..1
+  RentalRequest --> RequestStatus : decision 1 : 1
+  RentalContract "1" --> "0..1" Delivery : delivery 1 : 0..1
+  RentalContract "1" --> "0..1" EquipmentReturn : return 1 : 0..1
+  IRentalRepository ..> RentalContract : persists contract

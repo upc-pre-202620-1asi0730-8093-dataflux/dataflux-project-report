@@ -1,0 +1,46 @@
+classDiagram
+  class Money {
+    <<valueObject>>
+    - decimal amount
+    - string currency
+    + Create(decimal, string) Money
+    + Add(Money) Money
+    + Equals(Money) bool
+  }
+  class DateRange {
+    <<valueObject>>
+    - DateTime startDate
+    - DateTime endDate
+    + Create(DateTime, DateTime)
+    + Contains(DateTime) bool
+    + Overlaps(DateRange) bool
+  }
+  class RentalRate {
+    <<valueObject>>
+    - Money amount
+    - BillingUnit unit
+    + Create(Money, BillingUnit)
+    + Quote(DateRange) Money
+  }
+  class Email {
+    <<valueObject>>
+    - string value
+    + Create(string) Email
+    + Equals(Email) bool
+  }
+  class Address {
+    <<valueObject>>
+    - string district
+    - string city
+    - string street
+    + Create(string, string, string)
+  }
+  class EquipmentLocation {
+    <<valueObject>>
+    - decimal latitude
+    - decimal longitude
+    - Address address
+    + Create(decimal, decimal, Address)
+  }
+  RentalRate "1" *-- "1" Money : amount 1 : 1
+  EquipmentLocation "1" *-- "1" Address : address 1 : 1

@@ -1,0 +1,139 @@
+{
+  "title": "RentBuild | Design-Level — Supporting Contexts",
+  "note": "PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED BUS",
+  "nodes": [
+    {
+      "id": "c0",
+      "title": "IAM | Command",
+      "body": "Register Account / Sign In / Sign Out",
+      "x": 40,
+      "y": 175,
+      "w": 430,
+      "h": 240,
+      "kind": "command",
+      "image": null
+    },
+    {
+      "id": "a0",
+      "title": "Aggregate",
+      "body": "User / Session\nQuery: Own identity and permissions",
+      "x": 535,
+      "y": 175,
+      "w": 430,
+      "h": 240,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "e0",
+      "title": "Domain event",
+      "body": "AccountRegistered / SessionStarted / SessionEnded",
+      "x": 1030,
+      "y": 175,
+      "w": 430,
+      "h": 240,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "c1",
+      "title": "Profiles | Command",
+      "body": "Update Company Profile",
+      "x": 40,
+      "y": 560,
+      "w": 430,
+      "h": 240,
+      "kind": "command",
+      "image": null
+    },
+    {
+      "id": "a1",
+      "title": "Aggregate",
+      "body": "CompanyProfile / ProviderProfile\nQuery: Own profile / public provider",
+      "x": 535,
+      "y": 560,
+      "w": 430,
+      "h": 240,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "e1",
+      "title": "Domain event",
+      "body": "CompanyProfileUpdated",
+      "x": 1030,
+      "y": 560,
+      "w": 430,
+      "h": 240,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "c2",
+      "title": "Subscriptions | Command",
+      "body": "Select / Change Plan",
+      "x": 40,
+      "y": 945,
+      "w": 430,
+      "h": 240,
+      "kind": "command",
+      "image": null
+    },
+    {
+      "id": "a2",
+      "title": "Aggregate",
+      "body": "SubscriptionPlan / UserSubscription\nQuery: Plans + current valid period",
+      "x": 535,
+      "y": 945,
+      "w": 430,
+      "h": 240,
+      "kind": "aggregate",
+      "image": null
+    },
+    {
+      "id": "e2",
+      "title": "Domain event",
+      "body": "DemoPlanSelected / DemoPlanChanged",
+      "x": 1030,
+      "y": 945,
+      "w": 430,
+      "h": 240,
+      "kind": "event",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "c0",
+      "a0",
+      "Validates"
+    ],
+    [
+      "a0",
+      "e0",
+      "Emits if accepted"
+    ],
+    [
+      "c1",
+      "a1",
+      "Validates"
+    ],
+    [
+      "a1",
+      "e1",
+      "Emits if accepted"
+    ],
+    [
+      "c2",
+      "a2",
+      "Validates"
+    ],
+    [
+      "a2",
+      "e2",
+      "Emits if accepted"
+    ]
+  ],
+  "width": 1500,
+  "height": 1380
+}

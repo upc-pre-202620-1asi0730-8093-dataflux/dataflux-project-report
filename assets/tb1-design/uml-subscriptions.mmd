@@ -1,0 +1,46 @@
+classDiagram
+  class SubscriptionPlan {
+    - int id
+    - string name
+    - Money price
+    - PlanStatus status
+    + IsSelectable() bool
+  }
+  class UserSubscription {
+    - int id
+    - int userId
+    - int planId
+    - DateRange period
+    - SubscriptionStatus status
+    - bool autoRenew
+    + IsActive(DateTime) bool
+    + ChangePlan(int) void
+  }
+  class Money {
+    <<valueObject>>
+    - decimal amount
+    - string currency
+    + Create(decimal, string) Money
+  }
+  class DateRange {
+    <<valueObject>>
+    - DateTime startDate
+    - DateTime endDate
+    + Contains(DateTime) bool
+  }
+  class SubscriptionStatus {
+    <<enumeration>>
+    Active
+    Cancelled
+    Expired
+  }
+  class ISubscriptionRepository {
+    <<interface>>
+    + FindCurrent(int) UserSubscription
+    + Save(UserSubscription) void
+  }
+  SubscriptionPlan "1" <-- "0..*" UserSubscription : subscriptions 0..* : 1 selected plan
+  SubscriptionPlan "1" *-- "1" Money : price 1 : 1
+  UserSubscription "1" *-- "1" DateRange : period 1 : 1
+  UserSubscription --> SubscriptionStatus : status 1 : 1
+  ISubscriptionRepository ..> UserSubscription : persists subscriptions
