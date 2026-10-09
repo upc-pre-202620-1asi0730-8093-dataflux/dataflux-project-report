@@ -2201,7 +2201,7 @@ El Frontend General Components Diagram presenta la organización general de la S
 Los mecanismos de layout y routing de la aplicación permiten coordinar la navegación hacia IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Asimismo, Shared Frontend proporciona capacidades reutilizables de interfaz y servicios transversales, mientras que la infraestructura del frontend permite la comunicación con la RentBuild Backend API.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-general-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-general-component-diagram.png"
        alt="RentBuild Frontend General Components Diagram"
        width="95%">
 </p>
@@ -2215,7 +2215,7 @@ La Presentation Layer administra las vistas y las interacciones relacionadas con
 IAM también proporciona información de la cuenta autenticada a otros contextos del frontend y utiliza las capacidades compartidas proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-iam-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-iam-component-diagram.png"
        alt="RentBuild IAM Frontend Components Diagram"
        width="90%">
 </p>
@@ -2246,7 +2246,7 @@ La Presentation Layer contiene las vistas y formularios asociados con los perfil
 Este bounded context también utiliza la información de la cuenta autenticada proporcionada por IAM y las capacidades comunes proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-profiles-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-profiles-component-diagram.png"
        alt="RentBuild Profiles Frontend Components Diagram"
        width="90%">
 </p>
@@ -2274,7 +2274,7 @@ El bounded context Inventory del frontend administra el catálogo de maquinaria,
 Su Application Layer coordina los flujos relacionados con la gestión y consulta del inventario, comunicándose con las capas Domain e Infrastructure. Inventory también proporciona información sobre maquinaria y disponibilidad requerida por Rentals y coordina con Maintenance los cambios relacionados con el estado de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-inventory-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-inventory-component-diagram.png"
        alt="RentBuild Inventory Frontend Components Diagram"
        width="90%">
 </p>
@@ -2302,7 +2302,7 @@ El bounded context Rentals del frontend soporta la interacción correspondiente 
 Este contexto utiliza la información de los equipos y su disponibilidad proporcionada por Inventory, así como la información de empresas y participantes administrada por Profiles. Su Infrastructure Layer se encarga de la comunicación con los endpoints de Rentals expuestos por el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-rentals-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-rentals-component-diagram.png"
        alt="RentBuild Rentals Frontend Components Diagram"
        width="90%">
 </p>
@@ -2330,7 +2330,7 @@ El bounded context Maintenance del frontend administra las programaciones de man
 Este contexto colabora con Inventory para reflejar cambios en el estado y disponibilidad de los equipos, y con Rentals cuando una incidencia o actividad de mantenimiento afecta a una maquinaria asociada con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-maintenance-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Frontend Components Diagram"
        width="90%">
 </p>
@@ -2358,7 +2358,7 @@ El bounded context Subscriptions del frontend administra los planes disponibles,
 Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para obtener la información de la empresa asociada con la suscripción. Su Infrastructure Layer se comunica con los servicios correspondientes de Subscriptions disponibles en el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-subscriptions-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-component-diagram.png"
        alt="RentBuild Subscriptions Frontend Components Diagram"
        width="90%">
 </p>
@@ -2392,7 +2392,7 @@ Por su parte, la Infrastructure Layer proporciona mecanismos técnicos compartid
 De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales comunes dentro de los bounded contexts y mantiene dichas responsabilidades separadas de los conceptos específicos del dominio.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-shared-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-shared-component-diagram.png"
        alt="RentBuild Shared Frontend Components Diagram"
        width="90%">
 </p>
@@ -2406,7 +2406,7 @@ El contenedor backend está organizado alrededor de seis bounded contexts de neg
 La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-general-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
        alt="RentBuild Backend General Components Diagram"
        width="95%">
 </p>
@@ -2420,7 +2420,7 @@ La Interfaces Layer expone los endpoints REST relacionados con autenticación, r
 Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-iam-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
        alt="RentBuild IAM Backend Component Diagram"
        width="90%">
 </p>
@@ -2434,7 +2434,7 @@ La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Appl
 La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-profiles-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
        alt="RentBuild Profiles Backend Component Diagram"
        width="90%">
 </p>
@@ -2450,7 +2450,7 @@ La Domain Layer contiene los conceptos y reglas de negocio asociados con los equ
 Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mientras que Maintenance interactúa con este contexto cuando las actividades de mantenimiento modifican el estado operativo o la disponibilidad de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-inventory-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-inventory-component-diagram.png"
        alt="RentBuild Inventory Backend Component Diagram"
        width="90%">
 </p>
@@ -2464,7 +2464,7 @@ La Interfaces Layer expone las operaciones REST requeridas por el frontend. La A
 La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-rentals-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-rentals-component-diagram.png"
        alt="RentBuild Rentals Backend Component Diagram"
        width="90%">
 </p>
@@ -2480,7 +2480,7 @@ La Domain Layer contiene los conceptos y reglas de negocio relacionados con el m
 Maintenance colabora con Inventory para actualizar el estado y disponibilidad de la maquinaria y con Rentals cuando una actividad de mantenimiento o incidencia afecta a un equipo asociado con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-maintenance-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Backend Component Diagram"
        width="90%">
 </p>
@@ -2496,7 +2496,7 @@ La Domain Layer contiene los conceptos y reglas de negocio correspondientes a la
 Este bounded context utiliza IAM para identificar la cuenta autenticada y Profiles para asociar la suscripción con la información de la empresa. Asimismo, un Payment Connector integra el contexto con Stripe para realizar el procesamiento de los pagos correspondientes a las suscripciones.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-subscriptions-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-subscriptions-component-diagram.png"
        alt="RentBuild Subscriptions Backend Component Diagram"
        width="90%">
 </p>
@@ -2505,47 +2505,375 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
 
 ### 4.7.1. Class Diagrams
 
-El diseño del backend presenta entidades, agregados, value objects, interfaces de repositorio, puertos y adaptadores. Las implementaciones de Infrastructure satisfacen los contratos del dominio.
+## Inventory
+### A. Domain Layer
 
-#### Backend Class Diagram
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
 
-![Backend Class Diagram](assets/tb1-reference-design/class-diagram-backend.png)
+Explicación del Proceso:
+La capa de dominio contiene el agregado raíz Equipment, el cual encapsula la lógica pura de la maquinaria. Equipment se relaciona con EquipmentCategory para su clasificación, utiliza el Value Object RentalRate para definir costos y gestiona bloques de indisponibilidad mediante AvailabilityBlock y DateRange.
 
-#### Inventory
+Conexión de la Capa:
+Las entidades del dominio declaran los puertos de persistencia (interfaces EquipmentRepository y EquipmentCategoryRepository). Estas interfaces pertenecen al dominio para cumplir con el principio de Inversión de Dependencias (DIP).
 
-Equipment, EquipmentCategory, AvailabilityBlock y RentalRate representan el inventario y su disponibilidad. ProviderProfileId identifica al proveedor.
+### B. Application Layer
 
-![Inventory Class Diagram](assets/tb1-reference-design/class-diagram-inventory.png)
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
 
-#### Rentals
+Explicación del Proceso:
+Contiene la clase InventoryApplicationService, responsable de coordinar los casos de uso como el registro de maquinaria (RegisterEquipmentCommand) y la verificación de disponibilidad para constructoras.
 
-RentalRequest y RentalContract representan la solicitud y el contrato. El contexto coordina entregas y devoluciones mediante sus repositorios y InventoryAvailabilityPort.
+Conexión de la Capa:
+InventoryApplicationService recibe llamadas desde la capa de Interfaces e interactúa directamente con el dominio invocando los métodos declarados en EquipmentRepository.
 
-![Rentals Class Diagram](assets/tb1-reference-design/class-diagram-rentals.png)
+### C. Infrastructure Layer
+
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
+
+Explicación del Proceso:
+Implementa el acceso a datos mediante Spring Data JPA (EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl).
+
+Conexión de la Capa:
+Se conecta con la Capa de Dominio mediante una relación de Realización/Implementación de las interfaces de repositorio (EquipmentRepository), traduciendo los Value Objects del dominio a tablas de MySQL.
+
+### D. Interfaces Layer
+
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
+
+Explicación del Proceso:
+A través de InventoryController, expone los endpoints HTTP REST que reciben las solicitudes JSON del cliente Web Angular.
+
+Conexión de la Capa:
+Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
+
+## Rentals
+### A. Domain Layer
+
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
+
+Explicación del Proceso:
+Nace con el agregado RentalRequest en estado PENDING. Al aprobarse, genera la entidad RentalContract, que a su vez se compone de las entidades de seguimiento Delivery y EquipmentReturn.
+
+Conexión de la Capa:
+Declara los repositorios del dominio (RentalRequestRepository, RentalContractRepository, EquipmentReturnRepository, DeliveryRepository) y el puerto de integración InventoryAvailabilityPort para validar disponibilidad.
+
+### B. Application Layer
+
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
+
+Explicación del Proceso:
+RentalApplicationService orquesta las transacciones operativas: responder solicitudes (acceptRequest), registrar la entrega física en obra (registerDelivery) y procesar la devolución del equipo (registerReturn).
+
+Conexión de la Capa:
+Conecta las peticiones de interfaz con el dominio utilizando los repositorios e invocando el adaptador de disponibilidad hacia el contexto de Inventory.
+
+### C. Infrastructure Layer
+
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
+
+Explicación del Proceso:
+Proporciona las clases concretas que implementan los repositorios JPA e incluye el adaptador InventoryAvailabilityAdapter.
+
+Conexión de la Capa:
+Implementa las interfaces definidas en la capa de aplicación/dominio para realizar consultas en la base de datos MySQL.
+
+### D. Interfaces Layer
+
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
+
+Explicación del Proceso:
+RentalsController gestiona las rutas REST para la creación y cambio de estado de los alquileres.
+
+Conexión de la Capa:
+Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
 
 #### Maintenance
 
-Incident y MaintenanceRecord registran incidencias e intervenciones. EquipmentStatusPort permite coordinar el estado del equipo con Inventory.
+### A. Domain Layer
 
-![Maintenance Class Diagram](assets/tb1-reference-design/class-diagram-maintenance.png)
 
-#### Subscriptions
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
 
-SubscriptionPlan y UserSubscription representan los planes y su vigencia. PaymentConnector define la integración de pagos prevista.
 
-![Subscriptions Class Diagram](assets/tb1-reference-design/class-diagram-subscription-bounded-context.png)
+Explicación del Proceso:
+
+Agrupa los agregados Incident (reportes de fallas) y MaintenanceRecord
+(reparaciones preventivas y correctivas).
+
+
+Conexión de la Capa:
+
+Un Incident en estado no resuelto se relaciona con un MaintenanceRecord.
+Declara la interfaz EquipmentStatusPort para notificar al contexto de
+inventario cuando una máquina entra a taller.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
+
+
+Explicación del Proceso:
+
+MaintenanceApplicationService ejecuta los comandos de reporte de averías
+(reportIncident), programación de mantenimientos (scheduleMaintenance) y cierre
+técnico (completeMaintenance).
+
+
+Conexión de la Capa:
+
+Llama a los repositorios de mantenimiento e informa a través de
+EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Contiene IncidentRepositoryImpl, MaintenanceRecordRepositoryImpl y el adaptador
+InventoryEquipmentStatusAdapter.
+
+
+Conexión de la Capa:
+
+Conecta las llamadas de actualización de estado hacia la base de datos e
+interactúa con el módulo de inventario.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
+
+
+Explicación del Proceso:
+
+MaintenanceController mapea los endpoints de gestión de taller técnico.
+
+
+Conexión de la Capa:
+
+Envía las acciones del cliente Web a MaintenanceApplicationService.
+
+#### Subscription
+
+### A. Domain Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
+
+
+Explicación del Proceso:
+
+Contiene el plan de suscripción SubscriptionPlan y la suscripción del usuario
+UserSubscription vinculada mediante el Value Object DateRange. (Asegurarse de
+conectar el Enum BillingCycle con una línea hacia SubscriptionPlan y utilizar
+el tipo de dato Boolean para autoRenew).
+
+
+Conexión de la Capa:
+
+Declara las interfaces UserSubscriptionRepository, SubscriptionPlanRepository y
+el puerto de pasarela de pago PaymentConnector.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
+
+
+Explicación del Proceso:
+
+SubscriptionApplicationService coordina la selección de planes y la facturación
+recurrente de los usuarios.
+
+
+Conexión de la Capa:
+
+Utiliza los repositorios de dominio y delega el cobro al puerto
+PaymentConnector.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Contiene las implementaciones JPA y el adaptador externo
+StripePaymentConnector.
+
+
+Conexión de la Capa:
+
+Realiza la integración de pagos con servicios de terceros y persiste el estado
+de la suscripción.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
+
+
+Explicación del Proceso:
+
+SubscriptionController expone las llamadas de selección, cambio o cancelación
+de planes.
+
+
+Conexión de la Capa:
+
+Envía las peticiones REST a SubscriptionApplicationService.
 
 #### IAM
 
-User, Credentials y SessionToken representan la identidad, las credenciales y la sesión. UserRepository define el contrato de persistencia.
+### A. Domain Layer
 
-![IAM Class Diagram](assets/tb1-reference-design/class-diagram-iam.png)
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
+
+
+Explicación del Proceso:
+
+La entidad raíz User se compone del Value Object Credentials (correo y hash de
+contraseña) y gestiona los permisos con UserRole. (Verificar que UserRole y
+UserStatus estén conectados explícitamente a User).
+
+
+Conexión de la Capa:
+
+Declara UserRepository para la búsqueda y registro seguro de cuentas.
+
+
+### B. Application Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
+
+
+Explicación del Proceso:
+
+AuthenticationService ejecuta la lógica de autenticación, generación de tokens
+SessionToken y validación de credenciales.
+
+
+Conexión de la Capa:
+
+Consulta UserRepository para validar el correo y la contraseña cifrada.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
+
+
+Explicación del Proceso:
+
+UserRepositoryImpl implementa la persistencia de los usuarios mediante JPA.
+
+
+Conexión de la Capa:
+
+Conecta las operaciones de la aplicación con la tabla de usuarios en la base de
+datos.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
+
+
+Explicación del Proceso:
+
+IAMController maneja los endpoints de /register, /login y /logout.  
+
+
+Conexión de la Capa:
+
+Recibe RegisterUserCommand o LoginCommand y los procesa con
+AuthenticationService.
 
 #### Profiles
 
-CompanyProfile y ProviderProfile contienen información de empresa, dirección, contacto y reputación.
+### A. Domain Layer
 
-![Profiles Class Diagram](assets/tb1-reference-design/class-diagram-profiles.png)
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
+
+
+Explicación del Proceso:
+
+CompanyProfile almacena los datos de la organización e integra el Value Object
+Address con coordenadas geográficas GeoCoordinates para la localización.
+ProviderProfile extiende el perfil para las empresas de alquiler con métricas
+de reputación. (Conectar los Enums CompanyType directamente con la entidad).
+
+
+Conexión de la Capa:
+
+Declara CompanyProfileRepository y ProviderProfileRepository.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
+
+
+Explicación del Proceso:
+
+ProfileApplicationService orquesta la creación y actualización de perfiles de
+empresa y de proveedores.
+
+
+Conexión de la Capa:
+
+Transforma los datos enviados por la interfaz e invoca a los repositorios de
+dominio.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Implementa los repositorios de perfiles con JPA.
+
+
+Conexión de la Capa:
+
+Guarda la información de las empresas en la base de datos.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
+
+
+Explicación del Proceso:
+
+ProfilesController gestiona los endpoints REST de lectura y actualización de
+perfiles.
+
+
+Conexión de la Capa:
+
+Pasa los Comandos DTO a ProfileApplicationService.
 
 ## 4.8. Database Design
 
@@ -2930,7 +3258,7 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
 
-[COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
+![Sprint 2 - Tablero de Trello](./assets/md-images-chapter5/sprint-2-trello-board.png)
 
 **Trello:** https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild
 
@@ -3014,9 +3342,23 @@ El propósito central de este Sprint es completar el flujo principal de alquiler
 
 En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de alquiler de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los commits realizados durante este periodo.
 
+En este segundo Sprint el equipo desarrolló la primera versión de la Web Application, organizada por contextos (IAM, Profiles, Inventory, Maintenance, Rentals, Subscriptions y Shared), distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los principales commits realizados durante este periodo en el repositorio de la Web Application.
+
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | db46589 | feat(iam): incorporar registro y gestion de sesion en Vue | incorporar registro y gestion de sesion en Vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | 23486b8 | feat(iam): integrate PrimeVue and segment-based registration | integrate PrimeVue and segment-based registration | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/profiles | 86d6c67 | feat(profiles): incorporar consulta y edicion de perfiles de empresa | incorporar consulta y edicion de perfiles de empresa | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/shared | 644de15 | feat(shared): add terms and keyboard navigation | add terms and keyboard navigation | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 3d19ce2 | webapp(inventory): add inventory.store.js | add inventory.store.js | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 83a8d66 | webapp(inventory): add EquipmentList.vue | add EquipmentList.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 17f857a | webapp(inventory): add EquipmentSearch.vue | add EquipmentSearch.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | 8d63b25 | feat: add Incident entity | add Incident entity | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | f12af4c | feat: add maintenance list view | add maintenance list view | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/subscriptions | 8a93cfe | feat(subscriptions): integrar seleccion y renovacion de planes de demo | integrar seleccion y renovacion de planes de demo | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/rentals | 17e17ba | feat(rentals): add rentals context | add rentals context | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 7b877a2 | fix(rentals): recover partial writes without duplicate reservations | recover partial writes without duplicate reservations | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 8453a09 | fix(maintenance): reactivate inspected equipment without a fictitious incident | reactivate inspected equipment without a fictitious incident | 08/10/2026 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
