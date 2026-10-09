@@ -1,0 +1,149 @@
+{
+  "title": "RentBuild | TB1 JavaScript — Frozen State Objects",
+  "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/inventory/domain/model/equipment-status.enum.js",
+      "src/app/rentals/domain/model/rental-request-status.enum.js",
+      "src/app/rentals/domain/model/rental-status.enum.js",
+      "src/app/maintenance/domain/model/incident-status.enum.js",
+      "src/app/maintenance/domain/model/maintenance-status.enum.js",
+      "src/app/subscriptions/domain/model/plan-status.enum.js",
+      "src/app/subscriptions/domain/model/subscription-status.enum.js"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "EquipmentStatus",
+      "title": "EquipmentStatus <<enum>>",
+      "body": "",
+      "x": 40.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "AVAILABLE",
+        "RENTED",
+        "MAINTENANCE"
+      ],
+      "operations": []
+    },
+    {
+      "id": "RentalRequestStatus",
+      "title": "RentalRequestStatus <<enum>>",
+      "body": "",
+      "x": 665.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ],
+      "operations": []
+    },
+    {
+      "id": "RentalStatus",
+      "title": "RentalStatus <<enum>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "CONFIRMED",
+        "ACTIVE",
+        "COMPLETED"
+      ],
+      "operations": []
+    },
+    {
+      "id": "IncidentStatus",
+      "title": "IncidentStatus <<enum>>",
+      "body": "",
+      "x": 40.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "OPEN",
+        "RESOLVED"
+      ],
+      "operations": []
+    },
+    {
+      "id": "MaintenanceStatus",
+      "title": "MaintenanceStatus <<enum>>",
+      "body": "",
+      "x": 665.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "SCHEDULED",
+        "IN_PROGRESS",
+        "COMPLETED"
+      ],
+      "operations": []
+    },
+    {
+      "id": "PlanStatus",
+      "title": "PlanStatus <<enum>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "ACTIVE",
+        "INACTIVE"
+      ],
+      "operations": []
+    },
+    {
+      "id": "SubscriptionStatus",
+      "title": "SubscriptionStatus <<enum>>",
+      "body": "",
+      "x": 40.0,
+      "y": 2300,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "ACTIVE",
+        "CANCELLED",
+        "EXPIRED"
+      ],
+      "operations": []
+    }
+  ],
+  "edges": [],
+  "boundaries": [],
+  "legend": [
+    "Notation: - private JS #field; + public. Getter accessors use UML operation notation. Selected members shown.",
+    "Filled diamond: composition. Open arrow: navigable association. Dashed open arrow: dependency.",
+    "ID associations express references, not imports or object ownership across bounded contexts."
+  ],
+  "width": 1900,
+  "height": 3616
+}

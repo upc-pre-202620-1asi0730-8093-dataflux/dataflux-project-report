@@ -1,0 +1,198 @@
+{
+  "title": "RentBuild | TB1 JavaScript — Subscriptions",
+  "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/subscriptions/domain/model/subscription-plan.entity.js",
+      "src/app/subscriptions/domain/model/user-subscription.entity.js",
+      "src/app/subscriptions/application/subscriptions.store.js"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "SubscriptionPlan",
+      "title": "SubscriptionPlan",
+      "body": "",
+      "x": 40.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "aggregate",
+      "image": null,
+      "members": [
+        "- Number id",
+        "- String name",
+        "- String description",
+        "- Money price",
+        "- String billingCycle",
+        "- String status"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ price() Money",
+        "+ status() String"
+      ]
+    },
+    {
+      "id": "UserSubscription",
+      "title": "UserSubscription",
+      "body": "",
+      "x": 665.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "aggregate",
+      "image": null,
+      "members": [
+        "- Number id",
+        "- Number userId",
+        "- Number planId",
+        "- DateRange period",
+        "- String status",
+        "- Boolean autoRenew"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ isActive(referenceDate) Boolean",
+        "+ period() DateRange"
+      ]
+    },
+    {
+      "id": "Money",
+      "title": "Subscriptions Money <<value object>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Number amount",
+        "- String currency"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ amount() Number",
+        "+ currency() String"
+      ]
+    },
+    {
+      "id": "DateRange",
+      "title": "Subscriptions DateRange <<value object>>",
+      "body": "",
+      "x": 40.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Date startDate",
+        "- Date endDate"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ overlaps(other) Boolean",
+        "+ contains(date) Boolean"
+      ]
+    },
+    {
+      "id": "SubscriptionsStore",
+      "title": "SubscriptionsStore",
+      "body": "",
+      "x": 665.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "component",
+      "image": null,
+      "members": [
+        "- SubscriptionsApi subscriptionsApi",
+        "- Ref plansState",
+        "- Ref currentSubscriptionState",
+        "- Number planRequestVersion"
+      ],
+      "operations": [
+        "+ loadPlans()",
+        "+ loadCurrentSubscription(userId)",
+        "+ subscribeToPlan(userId, planId)",
+        "+ changePlan(planId)",
+        "+ clear()"
+      ]
+    },
+    {
+      "id": "SubscriptionStatus",
+      "title": "SubscriptionStatus <<enum>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "event",
+      "image": null,
+      "members": [
+        "ACTIVE",
+        "CANCELLED",
+        "EXPIRED"
+      ],
+      "operations": []
+    }
+  ],
+  "edges": [
+    [
+      "UserSubscription",
+      "SubscriptionPlan",
+      "R1",
+      false,
+      "\"0..*\" --> \"1\""
+    ],
+    [
+      "SubscriptionPlan",
+      "Money",
+      "R2",
+      false,
+      "\"1\" *-- \"1\""
+    ],
+    [
+      "UserSubscription",
+      "DateRange",
+      "R3",
+      false,
+      "\"1\" *-- \"1\""
+    ],
+    [
+      "SubscriptionsStore",
+      "UserSubscription",
+      "R4",
+      false,
+      "\"1\" --> \"0..1\""
+    ],
+    [
+      "UserSubscription",
+      "SubscriptionStatus",
+      "R5",
+      true,
+      "..>"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [
+    "R1 | UserSubscription -> SubscriptionPlan | association | planId reference",
+    "R2 | SubscriptionPlan -> Money | composition | price",
+    "R3 | UserSubscription -> DateRange | composition | period",
+    "R4 | SubscriptionsStore -> UserSubscription | association | current subscription",
+    "R5 | UserSubscription -> SubscriptionStatus | dependency | validates state values",
+    "Notation: - private JS #field; + public. Getter accessors use UML operation notation. Selected members shown.",
+    "Filled diamond: composition. Open arrow: navigable association. Dashed open arrow: dependency.",
+    "ID associations express references, not imports or object ownership across bounded contexts."
+  ],
+  "width": 1900,
+  "height": 2916
+}

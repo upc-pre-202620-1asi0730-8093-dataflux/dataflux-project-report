@@ -1,0 +1,33 @@
+@startuml
+title RentBuild | C4 Components — Vue Web Application
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam packageStyle rectangle
+!include <C4/C4_Component>
+LAYOUT_WITH_LEGEND()
+Container(mock, "Demo API", "Node.js / json-server", "TB1 JSON resources and illustrative authentication; not authoritative production rules.")
+Container_Boundary(web_scope, "Web Application [Container: Vue 3 / JavaScript] — six owned contexts + technical composition") {
+  Component(shell, "App.vue, router and context views", "Vue 3 / JavaScript / Vue Router / PrimeVue 4", "Routed forms and lists, session guards, language selection and app footer.")
+  Component(iam, "IAM — IamStore / IamApi", "JavaScript / Pinia / RxJS", "Sign-in/up commands, demo session and sign-out. SIGN_IN_PORT selects the adapter.")
+  Component(profiles, "Profiles — ProfilesStore / ProfilesApi", "JavaScript / Pinia / RxJS", "CompanyProfile, Address and own-profile read/update workflow.")
+  Component(subscriptions, "Subscriptions — SubscriptionsStore", "JavaScript / Pinia / RxJS", "Plans, UserSubscription, valid periods and SubscriptionsApi.")
+  Component(inventory, "Inventory — InventoryStore / InventoryApi", "JavaScript / Pinia / RxJS", "Equipment, category, RentalRate and embedded AvailabilityBlock; catalogue and ownership workflows.")
+  Component(rentals, "Rentals — RentalsStore / RentalsApi", "JavaScript / Pinia / RxJS", "RentalRequest, Rental, Delivery, EquipmentReturn; availability/participant/access ACL ports.")
+  Component(maintenance, "Maintenance — MaintenanceStore / IncidentStore", "JavaScript / Pinia / RxJS", "Maintenance and Incident workflows; equipment-condition and rental-activity ACL ports.")
+  Component(composition, "app.services.js / services.js", "JavaScript / Pinia", "configureServices registers ACL providers; resolve / registerStore / exposeStore connect owned models to Pinia state.")
+  Component(http, "HttpClient and owned API endpoints", "JavaScript / Axios / RxJS", "Axios requests exposed as Observable; AbortController cancellation. Assemblers map transport resources to models.")
+}
+Rel(shell, iam, "Sign-in/up views invoke actions")
+Rel(shell, profiles, "Profile views invoke actions")
+Rel(shell, subscriptions, "Plans view invokes actions")
+Rel(shell, inventory, "Equipment views invoke actions")
+Rel(shell, rentals, "Request/rental views invoke actions")
+Rel(shell, maintenance, "Condition views invoke actions")
+Rel(composition, rentals, "Registers Inventory / Profiles / IAM / Subscriptions / Maintenance ACL ports")
+Rel(composition, inventory, "Registers access and request ports")
+Rel(composition, maintenance, "Registers access, equipment and rental activity ports")
+Rel(composition, http, "Resolves endpoints used by every context API")
+Rel(http, mock, "Sends requests [HTTP/HTTPS + JSON]")
+footer ACTUAL SOURCE STRUCTURE AT 7e862dd; CLIENT CHECKS DO NOT ESTABLISH SERVER AUTHORIZATION
+@enduml

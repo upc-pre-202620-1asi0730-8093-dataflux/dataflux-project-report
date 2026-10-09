@@ -1,0 +1,19 @@
+@startuml
+title RentBuild | C4 System Context
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam packageStyle rectangle
+!include <C4/C4_Context>
+LAYOUT_WITH_LEGEND()
+Person(operator, "Rental Operator", "Manages own equipment, decisions, deliveries and condition.")
+Person(builder, "Construction Manager", "Finds equipment, requests dates and tracks own requests.")
+System_Ext(geo, "Geolocation service — vendor TBD", "Candidate enrichment of equipment locations. No integration verified.")
+System_Boundary(system_scope, "Software system in scope") {
+  System(rentbuild, "RentBuild", "Coordinates equipment rental information between both business segments.")
+}
+Rel(operator, rentbuild, "Manages equipment and rental operations")
+Rel(builder, rentbuild, "Searches, requests and tracks equipment")
+Rel(rentbuild, geo, "Proposed AV2: Proposed location lookup")
+footer BUSINESS CONTEXT; EXTERNAL GEOLOCATION IS A PROPOSAL, NOT A VERIFIED DEPENDENCY
+@enduml

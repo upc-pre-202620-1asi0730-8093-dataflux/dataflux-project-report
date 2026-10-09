@@ -1,0 +1,88 @@
+{
+  "title": "RentBuild | Rental Operator — Select / Change Plan",
+  "note": "SUPPLEMENT: PR12 FRONTEND DEMO; NO PAYMENT OR AUTOMATIC BILLING. FORMAL MOCKUP EXPORT PENDING.",
+  "source": null,
+  "nodes": [
+    {
+      "id": "catalogue",
+      "title": "1. Plans",
+      "body": "US15: current status and reference plans",
+      "x": 40,
+      "y": 190,
+      "w": 650,
+      "h": 245,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "confirm",
+      "title": "2. Confirmation",
+      "body": "US16 / US17: selected plan + demo notice",
+      "x": 810,
+      "y": 190,
+      "w": 650,
+      "h": 245,
+      "kind": "component",
+      "image": null
+    },
+    {
+      "id": "decision",
+      "title": "3. Valid selection?",
+      "body": "Active plan exists? Same valid plan is rejected. Expired period may begin a new demo month.",
+      "x": 40,
+      "y": 620,
+      "w": 650,
+      "h": 275,
+      "kind": "query",
+      "image": null
+    },
+    {
+      "id": "saved",
+      "title": "4. Demo saved",
+      "body": "POST new record or PUT current record. Keep valid period; refresh expired period.",
+      "x": 810,
+      "y": 620,
+      "w": 650,
+      "h": 275,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "error",
+      "title": "Alternative / retry",
+      "body": "Load or save error: show translated reason, preserve selection, and retry after reload.",
+      "x": 40,
+      "y": 1080,
+      "w": 650,
+      "h": 230,
+      "kind": "error",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "catalogue",
+      "confirm",
+      "Select available plan"
+    ],
+    [
+      "confirm",
+      "decision",
+      "Confirm once"
+    ],
+    [
+      "decision",
+      "saved",
+      "Valid"
+    ],
+    [
+      "decision",
+      "error",
+      "Unavailable / failed"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [],
+  "width": 1500,
+  "height": 1440
+}

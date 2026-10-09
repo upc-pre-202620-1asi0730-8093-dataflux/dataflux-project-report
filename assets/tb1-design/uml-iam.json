@@ -1,0 +1,141 @@
+{
+  "title": "RentBuild | TB1 JavaScript — IAM",
+  "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/iam/application/iam.store.js",
+      "src/app/iam/infrastructure/iam-api.js",
+      "src/app/iam/domain/model/sign-in.command.js",
+      "src/app/iam/domain/model/sign-up.command.js"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "SignInCommand",
+      "title": "SignInCommand",
+      "body": "",
+      "x": 40.0,
+      "y": 180,
+      "w": 660,
+      "h": 565,
+      "kind": "component",
+      "image": null,
+      "members": [
+        "- String email",
+        "- String password"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ email() String",
+        "+ password() String"
+      ]
+    },
+    {
+      "id": "SignUpCommand",
+      "title": "SignUpCommand",
+      "body": "",
+      "x": 750.0,
+      "y": 180,
+      "w": 660,
+      "h": 565,
+      "kind": "component",
+      "image": null,
+      "members": [
+        "- String firstName",
+        "- String lastName",
+        "- String email",
+        "- String password",
+        "- String companyName",
+        "- String role"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ email() String",
+        "+ role() String"
+      ]
+    },
+    {
+      "id": "IamStore",
+      "title": "IamStore",
+      "body": "",
+      "x": 40.0,
+      "y": 1240,
+      "w": 660,
+      "h": 565,
+      "kind": "component",
+      "image": null,
+      "members": [
+        "- IamApi api",
+        "- Ref signedIn",
+        "- Ref userId",
+        "- Ref role",
+        "- Number version"
+      ],
+      "operations": [
+        "+ signIn(command, router)",
+        "+ signUp(command, router)",
+        "+ signOut(router)",
+        "+ clearError()"
+      ]
+    },
+    {
+      "id": "IamApi",
+      "title": "IamApi",
+      "body": "",
+      "x": 750.0,
+      "y": 1240,
+      "w": 660,
+      "h": 565,
+      "kind": "component",
+      "image": null,
+      "members": [
+        "- SignInAdapter signInEndpoint",
+        "- SignUpApiEndpoint signUpEndpoint"
+      ],
+      "operations": [
+        "+ signIn(command) Observable",
+        "+ signUp(command) Observable"
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "IamStore",
+      "IamApi",
+      "R1",
+      false,
+      "\"1\" --> \"1\""
+    ],
+    [
+      "IamStore",
+      "SignInCommand",
+      "R2",
+      true,
+      "..>"
+    ],
+    [
+      "IamStore",
+      "SignUpCommand",
+      "R3",
+      true,
+      "..>"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [
+    "R1 | IamStore -> IamApi | association | api resolved through services",
+    "R2 | IamStore -> SignInCommand | dependency | accepts sign-in command",
+    "R3 | IamStore -> SignUpCommand | dependency | accepts registration command",
+    "Notation: - private JS #field; + public. Getter accessors use UML operation notation. Selected members shown.",
+    "Filled diamond: composition. Open arrow: navigable association. Dashed open arrow: dependency.",
+    "ID associations express references, not imports or object ownership across bounded contexts."
+  ],
+  "width": 1450,
+  "height": 2772
+}

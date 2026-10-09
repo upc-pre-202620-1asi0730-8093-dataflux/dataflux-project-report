@@ -1,0 +1,24 @@
+@startuml
+title RentBuild | C4 Containers — TB1 and AV2
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam packageStyle rectangle
+!include <C4/C4_Container>
+LAYOUT_WITH_LEGEND()
+Person(person, "Rental Operator / Construction Manager", "Browses public content and uses role-appropriate application views.")
+System_Boundary(rentbuild_scope, "RentBuild [Software System] — current containers and future replacement") {
+  Container(landing, "Landing Page — TB1", "HTML5 / CSS3 / JavaScript", "Public information, translations and configured app links.")
+  Container(web, "Web Application — TB1", "Vue 3 / JavaScript / Vite", "PrimeVue 4, Vue Router, Pinia; Axios + RxJS requests. Demo session.")
+  Container(mock, "Demo API — TB1", "Node.js / json-server 0.17", "Illustrative authentication and JSON resources. Resettable demo data.")
+  Container(api, "RESTful API — proposed AV2", "ASP.NET Core / C# / EF Core", "Server authorization, use cases, persistence and OpenAPI/Swagger.")
+  ContainerDb(db, "Relational Database — proposed AV2", "MySQL", "Persistent owned tables, keys and constraints. EF Core runs in the API.")
+}
+Rel(person, landing, "Reads public content [HTTPS]")
+Rel(person, web, "Uses browser application [HTTPS]")
+Rel(landing, web, "Configured sign-up/sign-in links [HTTPS]")
+Rel(web, mock, "TB1 requests [HTTP/HTTPS + JSON]")
+Rel(web, api, "Proposed AV2: Proposed replacement adapter [HTTPS + JSON]")
+Rel(api, db, "Proposed AV2: Proposed persistence [MySQL protocol / SQL]")
+footer TB1 USES THE DEMO API. THE ASP.NET CORE API AND MYSQL ARE AV2 PROPOSALS.
+@enduml

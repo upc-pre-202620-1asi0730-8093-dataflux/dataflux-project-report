@@ -1,0 +1,29 @@
+@startuml
+' Native PlantUML source converted from userflow-inventory.json
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 15
+skinparam ArrowFontSize 13
+skinparam dpi 144
+title RentBuild | Rental Operator | Register / update equipment
+skinparam activity {
+  BackgroundColor #E8F0FB
+  BorderColor #334155
+  DiamondBackgroundColor #FFF3BF
+  DiamondBorderColor #64748B
+}
+start
+:1. Entry / list\nUS06–US10;
+' Prior UI reference: assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Equipment.png
+-> Select / inspect;
+:2. Selected action / detail\nPrior Figma mockup; states described below;
+' Prior UI reference: assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Equipment.png
+-> Submit or query;
+if (3. Decision\nValid required data?) then (Valid / authorized)
+  :4. Expected result\nEquipment recorded;
+else (Invalid / unavailable)
+  :Alternative route\nInvalid / duplicate: retain input and show\nreason;
+endif
+stop
+caption LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION\nSCREENSHOT
+@enduml

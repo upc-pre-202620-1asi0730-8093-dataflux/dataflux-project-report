@@ -1,0 +1,38 @@
+@startuml
+' Native PlantUML source converted from eventstorming-core.json
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 15
+skinparam ArrowFontSize 13
+skinparam dpi 144
+title RentBuild | Design-Level — Core Contexts
+skinparam rectangle {
+  BorderColor #475569
+  RoundCorner 8
+}
+left to right direction
+rectangle "**Inventory | Command**\nRegister / Update Equipment" as c0 #BFDBFE
+rectangle "**Aggregate**\nEquipment\nQuery: Equipment Catalogue + availability" as a0 #FDE68A
+rectangle "**Domain event**\nEquipmentRegistered / EquipmentUpdated" as e0 #FDBA74
+rectangle "**Rentals | Command**\nSubmit / Decide Rental Request" as c1 #BFDBFE
+rectangle "**Aggregate**\nRentalRequest / Rental\nQuery: Own requests + active contracts" as a1 #FDE68A
+rectangle "**Domain event**\nRentalRequestSubmitted / RequestApproved /\nRequestRejected" as e1 #FDBA74
+rectangle "**Maintenance | Command**\nRegister Incident / Complete Maintenance" as c2 #BFDBFE
+rectangle "**Aggregate**\nIncident / Maintenance\nQuery: History + blocking maintenance" as a2 #FDE68A
+rectangle "**Domain event**\nIncidentRegistered / MaintenanceCompleted" as e2 #FDBA74
+c0 --> a0 : Validates
+a0 --> e0 : Emits if accepted
+c1 --> a1 : Validates
+a1 --> e1 : Emits if accepted
+c2 --> a2 : Validates
+a2 --> e2 : Emits if accepted
+c0 -[hidden]down-> c1
+c1 -[hidden]down-> c2
+legend bottom
+|= Color |= Meaning |
+| <#BFDBFE> Blue | Command |
+| <#FDE68A> Yellow | Aggregate |
+| <#FDBA74> Orange | Domain event |
+endlegend
+caption PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED\nBUS
+@enduml

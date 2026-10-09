@@ -1,0 +1,120 @@
+{
+  "title": "RentBuild | C4 Components — Proposed AV2 API",
+  "note": "PROPOSED DESIGN; NO BACKEND IMPLEMENTATION, MIGRATION OR DEPLOYMENT IS CLAIMED",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/app.services.js",
+      "src/app/shared/infrastructure/services.js",
+      "package.json"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "http",
+      "title": "HTTP interfaces",
+      "body": "[Component: ASP.NET Core / C# / OpenAPI]\nControllers and DTO validation implement the proposed TS01–TS09 contracts.",
+      "x": 50,
+      "y": 220,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "usecases",
+      "title": "Owned application services",
+      "body": "[Component: C#]\nIAM, Profiles, Inventory, Rentals, Maintenance and Subscriptions use cases; authorization policy.",
+      "x": 830,
+      "y": 220,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "domain",
+      "title": "Owned domain models",
+      "body": "[Component: C#]\nEntities, value objects, state invariants and repository ports. No cross-context entity imports.",
+      "x": 50,
+      "y": 720,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "persistence",
+      "title": "Persistence adapters",
+      "body": "[Component: C# / Entity Framework Core]\nOwned repository implementations, migrations and transactional constraints.",
+      "x": 830,
+      "y": 720,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "database",
+      "title": "Relational Database",
+      "body": "[External to this scope: MySQL Container]\nProposed schema and constraints; not present in TB1.",
+      "x": 830,
+      "y": 1260,
+      "w": 620,
+      "h": 260,
+      "kind": "external"
+    }
+  ],
+  "edges": [
+    [
+      "http",
+      "usecases",
+      "Invokes authorized use cases",
+      true
+    ],
+    [
+      "usecases",
+      "domain",
+      "Enforces owned invariants",
+      true
+    ],
+    [
+      "usecases",
+      "persistence",
+      "Uses owned repository ports",
+      true
+    ],
+    [
+      "persistence",
+      "database",
+      "Persists data [MySQL protocol / SQL]",
+      true
+    ]
+  ],
+  "boundaries": [
+    {
+      "id": "api_scope",
+      "label": "RESTful API [Container: ASP.NET Core / C#] — proposed AV2",
+      "nodes": [
+        "http",
+        "usecases",
+        "domain",
+        "persistence"
+      ],
+      "rect": [
+        20,
+        160,
+        1460,
+        925
+      ]
+    }
+  ],
+  "legend": [
+    "Legend: Person = actor; blue = internal software; gray = external software.",
+    "Solid arrows = current interactions. Dashed arrows = proposed AV2 interactions.",
+    "Boundary labels identify the software system or the single container in scope."
+  ],
+  "width": 1500,
+  "height": 1920
+}

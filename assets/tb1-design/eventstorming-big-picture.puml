@@ -1,0 +1,31 @@
+@startuml
+' Native PlantUML source converted from eventstorming-big-picture.json
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 15
+skinparam ArrowFontSize 13
+skinparam dpi 144
+title RentBuild | Big Picture — Rental Lifecycle
+skinparam rectangle {
+  BorderColor #475569
+  RoundCorner 8
+}
+rectangle "**Equipment Registered**\nRental operator publishes equipment\ninformation" as equipment #FDBA74
+rectangle "**Rental Request Submitted**\nConstruction manager requests dates" as request #FDBA74
+rectangle "**Request Approved / Rejected**\nProvider decides after checking\navailability" as approved #FDBA74
+rectangle "**Equipment Delivered**\nApproved operation starts using the\nequipment" as delivery #FDBA74
+rectangle "**Equipment Returned**\nProvider records condition and closes the\noperation" as returned #FDBA74
+rectangle "**Maintenance Completed**\nOnly release equipment if no other\nblocking condition exists" as maintenance #FDBA74
+equipment -right-> request : Equipment + period
+request -right-> approved : Provider decision
+approved -down-> delivery : Approved only
+delivery -left-> returned : Return / inspection
+returned -left-> maintenance : If intervention required
+legend bottom
+|= Color |= Meaning |
+| <#BFDBFE> Blue | Command |
+| <#FDE68A> Yellow | Aggregate |
+| <#FDBA74> Orange | Domain event |
+endlegend
+caption DOCUMENTARY RECONSTRUCTION; TEAM WORKSHOP RECORD AND VALIDATION PENDING
+@enduml

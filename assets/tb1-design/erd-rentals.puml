@@ -1,0 +1,55 @@
+@startuml
+title RentBuild | Proposed AV2 MySQL — Rentals
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+entity "equipments [external owner]" as equipments {
+  * id : BIGINT <<PK>>
+}
+entity "users [external owner]" as users {
+  * id : BIGINT <<PK>>
+}
+entity "rental_requests" as rental_requests {
+  * id : BIGINT <<PK>>
+  equipment_id : BIGINT <<FK>>
+  construction_user_id : BIGINT <<FK>>
+  rental_company_user_id : BIGINT <<FK>>
+  start_date : DATE
+  end_date : DATE
+  status : VARCHAR(24)
+  created_at : DATETIME(6)
+}
+entity "rentals" as rentals {
+  * id : BIGINT <<PK>>
+  rental_request_id : BIGINT <<FK, UK>>
+  equipment_id : BIGINT <<FK>>
+  construction_user_id : BIGINT <<FK>>
+  rental_company_user_id : BIGINT <<FK>>
+  start_date : DATE
+  end_date : DATE
+  status : VARCHAR(24)
+}
+entity "deliveries" as deliveries {
+  * id : BIGINT <<PK>>
+  rental_id : BIGINT <<FK, UK>>
+  delivered_at : DATETIME(6)
+  notes : TEXT
+}
+entity "equipment_returns" as equipment_returns {
+  * id : BIGINT <<PK>>
+  rental_id : BIGINT <<FK, UK>>
+  returned_at : DATETIME(6)
+  notes : TEXT
+  maintenance_required : BOOLEAN
+}
+equipments ||--o{ rental_requests : requested equipment
+users ||--o{ rental_requests : construction and rental-company participants
+rental_requests |o--o| rentals : optional unique confirmation correlation
+equipments ||--o{ rentals : rented equipment
+users ||--o{ rentals : construction and rental-company participants
+rentals ||--o| deliveries : at most one delivery
+rentals ||--o| equipment_returns : at most one return
+footer PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1
+@enduml

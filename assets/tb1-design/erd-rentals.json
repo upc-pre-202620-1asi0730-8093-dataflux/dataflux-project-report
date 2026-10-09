@@ -1,0 +1,368 @@
+{
+  "title": "RentBuild | Proposed AV2 MySQL — Rentals",
+  "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+  "source": {
+    "statementPages": [
+      19,
+      20,
+      29
+    ],
+    "frontendReference": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "scope": "proposed AV2 schema; not migrations"
+  },
+  "nodes": [
+    {
+      "id": "equipments",
+      "title": "equipments [external owner]",
+      "body": "",
+      "x": 40,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "external",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          "Inventory owner; external reference"
+        ]
+      ],
+      "external": true
+    },
+    {
+      "id": "users",
+      "title": "users [external owner]",
+      "body": "",
+      "x": 880,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "external",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          "IAM owner; external reference"
+        ]
+      ],
+      "external": true
+    },
+    {
+      "id": "rental_requests",
+      "title": "rental_requests",
+      "body": "",
+      "x": 1720,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK equipment_id: BIGINT",
+        "FK construction_user_id: BIGINT",
+        "FK rental_company_user_id: BIGINT",
+        "start_date: DATE",
+        "end_date: DATE",
+        "status: VARCHAR(24)",
+        "created_at: DATETIME(6)"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "equipment_id",
+          "FK",
+          "Inventory equipments.id"
+        ],
+        [
+          "BIGINT",
+          "construction_user_id",
+          "FK",
+          "IAM users.id"
+        ],
+        [
+          "BIGINT",
+          "rental_company_user_id",
+          "FK",
+          "IAM users.id"
+        ],
+        [
+          "DATE",
+          "start_date",
+          "",
+          ""
+        ],
+        [
+          "DATE",
+          "end_date",
+          "",
+          ""
+        ],
+        [
+          "VARCHAR(24)",
+          "status",
+          "",
+          "PENDING / APPROVED / REJECTED"
+        ],
+        [
+          "DATETIME(6)",
+          "created_at",
+          "",
+          ""
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "rentals",
+      "title": "rentals",
+      "body": "",
+      "x": 40,
+      "y": 900,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK, UK rental_request_id: BIGINT",
+        "FK equipment_id: BIGINT",
+        "FK construction_user_id: BIGINT",
+        "FK rental_company_user_id: BIGINT",
+        "start_date: DATE",
+        "end_date: DATE",
+        "status: VARCHAR(24)"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "rental_request_id",
+          "FK, UK",
+          "nullable legacy correlation"
+        ],
+        [
+          "BIGINT",
+          "equipment_id",
+          "FK",
+          "Inventory equipments.id"
+        ],
+        [
+          "BIGINT",
+          "construction_user_id",
+          "FK",
+          "IAM users.id"
+        ],
+        [
+          "BIGINT",
+          "rental_company_user_id",
+          "FK",
+          "IAM users.id"
+        ],
+        [
+          "DATE",
+          "start_date",
+          "",
+          ""
+        ],
+        [
+          "DATE",
+          "end_date",
+          "",
+          ""
+        ],
+        [
+          "VARCHAR(24)",
+          "status",
+          "",
+          "CONFIRMED / ACTIVE / COMPLETED"
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "deliveries",
+      "title": "deliveries",
+      "body": "",
+      "x": 880,
+      "y": 900,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK, UK rental_id: BIGINT",
+        "delivered_at: DATETIME(6)",
+        "notes: TEXT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "rental_id",
+          "FK, UK",
+          "rentals.id"
+        ],
+        [
+          "DATETIME(6)",
+          "delivered_at",
+          "",
+          ""
+        ],
+        [
+          "TEXT",
+          "notes",
+          "",
+          ""
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "equipment_returns",
+      "title": "equipment_returns",
+      "body": "",
+      "x": 1720,
+      "y": 900,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK, UK rental_id: BIGINT",
+        "returned_at: DATETIME(6)",
+        "notes: TEXT",
+        "maintenance_required: BOOLEAN"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "rental_id",
+          "FK, UK",
+          "rentals.id"
+        ],
+        [
+          "DATETIME(6)",
+          "returned_at",
+          "",
+          ""
+        ],
+        [
+          "TEXT",
+          "notes",
+          "",
+          ""
+        ],
+        [
+          "BOOLEAN",
+          "maintenance_required",
+          "",
+          ""
+        ]
+      ],
+      "external": false
+    }
+  ],
+  "edges": [
+    [
+      "equipments",
+      "rental_requests",
+      "R1",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "users",
+      "rental_requests",
+      "R2",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "rental_requests",
+      "rentals",
+      "R3",
+      false,
+      "er:o|--o|"
+    ],
+    [
+      "equipments",
+      "rentals",
+      "R4",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "users",
+      "rentals",
+      "R5",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "rentals",
+      "deliveries",
+      "R6",
+      false,
+      "er:||--o|"
+    ],
+    [
+      "rentals",
+      "equipment_returns",
+      "R7",
+      false,
+      "er:||--o|"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [
+    "R1 | equipments ||--o{ rental_requests | requested equipment",
+    "R2 | users ||--o{ rental_requests | construction and rental-company participants",
+    "R3 | rental_requests o|--o| rentals | optional unique confirmation correlation",
+    "R4 | equipments ||--o{ rentals | rented equipment",
+    "R5 | users ||--o{ rentals | construction and rental-company participants",
+    "R6 | rentals ||--o| deliveries | at most one delivery",
+    "R7 | rentals ||--o| equipment_returns | at most one return",
+    "Legend: PK primary key; FK foreign key; UK unique key. Gray tables show external owned keys only.",
+    "Crow foot = many; bar = one; circle = optional (zero). All schema constraints are proposed AV2.",
+    "UNIQUE(rental_request_id), UNIQUE(deliveries.rental_id), UNIQUE(equipment_returns.rental_id) proposed.",
+    "CHECK(end_date >= start_date). Return requires prior delivery; timestamps and state transitions need server validation.",
+    "Nullable request correlation accommodates legacy demo records; recovery design does not establish durable idempotency."
+  ],
+  "width": 2380,
+  "height": 2710
+}

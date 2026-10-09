@@ -1,0 +1,88 @@
+{
+  "title": "RentBuild | Rental Operator | Record condition and maintenance",
+  "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+  "source": null,
+  "nodes": [
+    {
+      "id": "start",
+      "title": "1. Entry / list",
+      "body": "US23–US26",
+      "x": 40,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Maintenance.png"
+    },
+    {
+      "id": "target",
+      "title": "2. Selected action / detail",
+      "body": "Prior Figma mockup; states described below",
+      "x": 810,
+      "y": 170,
+      "w": 650,
+      "h": 460,
+      "kind": "component",
+      "image": "assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Equipment.png"
+    },
+    {
+      "id": "condition",
+      "title": "3. Decision",
+      "body": "Intervention complete + no other blocks?",
+      "x": 40,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "query",
+      "image": null
+    },
+    {
+      "id": "success",
+      "title": "4. Expected result",
+      "body": "Equipment released only when fit and unblocked",
+      "x": 810,
+      "y": 800,
+      "w": 650,
+      "h": 220,
+      "kind": "event",
+      "image": null
+    },
+    {
+      "id": "failure",
+      "title": "Alternative route",
+      "body": "Incomplete / other blocking work: retain restriction",
+      "x": 40,
+      "y": 1160,
+      "w": 650,
+      "h": 220,
+      "kind": "error",
+      "image": null
+    }
+  ],
+  "edges": [
+    [
+      "start",
+      "target",
+      "Select / inspect"
+    ],
+    [
+      "target",
+      "condition",
+      "Submit or query"
+    ],
+    [
+      "condition",
+      "success",
+      "Valid / authorized"
+    ],
+    [
+      "condition",
+      "failure",
+      "Invalid / unavailable"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [],
+  "width": 1500,
+  "height": 1530
+}
