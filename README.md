@@ -3002,11 +3002,23 @@ El propósito central de este Sprint es completar el flujo principal de alquiler
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de alquiler de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los commits realizados durante este periodo.
+En este segundo Sprint el equipo desarrolló la primera versión de la Web Application, organizada por contextos (IAM, Profiles, Inventory, Maintenance, Rentals, Subscriptions y Shared), distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los principales commits realizados durante este periodo en el repositorio de la Web Application.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | db46589 | feat(iam): incorporar registro y gestion de sesion en Vue | incorporar registro y gestion de sesion en Vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/iam | 23486b8 | feat(iam): integrate PrimeVue and segment-based registration | integrate PrimeVue and segment-based registration | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/profiles | 86d6c67 | feat(profiles): incorporar consulta y edicion de perfiles de empresa | incorporar consulta y edicion de perfiles de empresa | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/shared | 644de15 | feat(shared): add terms and keyboard navigation | add terms and keyboard navigation | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 3d19ce2 | webapp(inventory): add inventory.store.js | add inventory.store.js | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 83a8d66 | webapp(inventory): add EquipmentList.vue | add EquipmentList.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/inventory | 17f857a | webapp(inventory): add EquipmentSearch.vue | add EquipmentSearch.vue | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | 8d63b25 | feat: add Incident entity | add Incident entity | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/maintenance | f12af4c | feat: add maintenance list view | add maintenance list view | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/subscriptions | 8a93cfe | feat(subscriptions): integrar seleccion y renovacion de planes de demo | integrar seleccion y renovacion de planes de demo | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/rentals | 17e17ba | feat(rentals): add rentals context | add rentals context | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 7b877a2 | fix(rentals): recover partial writes without duplicate reservations | recover partial writes without duplicate reservations | 08/10/2026 |
+| upc-pre-202620-1asi0730-8093-dataflux/rentbuild-webapp | feature/tb1-functional-fixes | 8453a09 | fix(maintenance): reactivate inspected equipment without a fictitious incident | reactivate inspected equipment without a fictitious incident | 08/10/2026 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
