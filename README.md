@@ -2452,13 +2452,45 @@ El frontend utiliza Vue 3 y JavaScript, Vue Router, Pinia y PrimeVue. La arquite
 
 ### 4.6.1. Design-Level Event Storming
 
-El diagrama presenta los agregados, comandos y eventos del ciclo de alquiler y sus contextos.
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los actores, comandos, agregados, eventos de dominio, modelos de lectura, políticas y reglas de negocio involucrados en MaquiGest.
 
-![Design-Level Event Storming](assets/md-images-chapter4/design-level-event-storming.png)
+Para facilitar su comprensión, el modelado se presenta mediante diagramas individuales por Bounded Context, permitiendo identificar sus responsabilidades y las interacciones entre los componentes del sistema.
 
-![Proceso principal de alquiler](assets/tb1-design/eventstorming-core.png)
+**Leyenda de Design-Level Event Storming**
 
-![Procesos de soporte](assets/tb1-design/eventstorming-support.png)
+![Leyenda Design-Level Event Storming](assets/images/chapter-4/leyenda-designlevel.png)
+
+**Inventory Bounded Context**
+
+![Inventory Bounded Context](assets/images/chapter-4/inventory-bounded-context.png)
+
+**Rentals Bounded Context**
+
+![Rentals Bounded Context](assets/images/chapter-4/rentals-bounded-context.png)
+
+**Maintenance Bounded Context**
+
+![Maintenance Bounded Context](assets/images/chapter-4/maintenance-bounded-context.png)
+
+**Subscription Plans Bounded Context**
+
+![Subscription Plans Bounded Context](assets/images/chapter-4/subscription-plans-bounded-context.png)
+
+**External Systems**
+
+![External Systems](assets/images/chapter-4/external-systems.png)
+
+**Generic IAM Bounded Context**
+
+![Generic IAM Bounded Context](assets/images/chapter-4/generic-iam-bounded-context.png)
+
+**IAM Bounded Context**
+
+![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
+
+**Profiles Bounded Context**
+
+![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
