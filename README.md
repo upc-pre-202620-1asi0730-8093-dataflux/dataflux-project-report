@@ -3126,6 +3126,8 @@ El procedimiento realizado fue el siguiente:
 
 **URL pública de la Fake API:** https://dataflux-api.onrender.com/
 
+**URL pública de la Landing Page:** https://dataflux-landing-page.vercel.app/
+
 De esta manera, se logró disponer de la Web Application y de la Fake API en entornos públicos, permitiendo realizar las pruebas de integración y demostrar los avances desarrollados durante el Sprint 2.
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
