@@ -1319,113 +1319,63 @@ El Impact Map relaciona hipótesis de negocio, personas, cambios de comportamien
 
 ![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
 
-**Estado del gráfico:** el export recuperado conserva la marca MaquiGest y una numeración antigua US01–US10. No se ha editado ni se presenta como un nuevo export de UXPressia. La relación textual vigente para RentBuild se establece a continuación y debe trasladarse al gráfico en una actualización posterior.
-
-| Business Goal | Actor / Persona | Impact esperado | Deliverable | User Stories vigentes |
-|---|---|---|---|---|
-| G01 | Armando Casas | Registra y consulta sus equipos para mantener información centralizada | Inventario (FA01/H01) | **US06:** Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.<br>Relacionadas: US07, US08, US09, US10; TS01. |
-| G01 | Armando Casas | Decide solicitudes únicamente para periodos compatibles | Validación y decisión (FA02/H02) | **US19:** Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.<br>Relacionadas: US13, US14, US18; TS02, TS03. |
-| G01 | Armando Casas | Sigue alquiler, entrega y retorno con trazabilidad | Ciclo de alquiler (FA03/H03) | **US22:** Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.<br>Relacionadas: US20; TS04. |
-| G01 | Armando Casas | Identifica equipos no aptos y registra sus intervenciones | Incidencias y mantenimiento (FA04/H04) | **US25:** Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.<br>Relacionadas: US23, US24, US26; TS05. |
-| G02 | Andrea Torres | Encuentra equipos que corresponden a la necesidad de su proyecto | Búsqueda y detalle (FA05/H05) | **US11:** Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.<br>Relacionadas: US12; TS02. |
-| G02 | Andrea Torres | Comprueba un periodo y solicita el equipo disponible | Disponibilidad y solicitud (FA06/H06) | **US14:** Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.<br>Relacionadas: US13; TS02, TS03. |
-| G02 | Andrea Torres | Consulta la decisión sin depender de llamadas de seguimiento | Seguimiento (FA07/H07) | **US21:** Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.<br>Relacionadas: TS03. |
-| G01/G02 | Visitantes de ambos segmentos | Comprenden la propuesta y continúan hacia la aplicación | Landing y acceso al producto | **US33:** Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild.<br>Relacionadas: US27, US28, US29, US30, US31, US32, US34, US35. |
-| G01 | Usuarios del servicio | Eligen condiciones de uso adecuadas a su empresa | Planes y suscripciones como soporte | **US16:** Como usuario, quiero suscribirme a un plan para acceder a funciones premium.<br>Relacionadas: US15, US17; TS07. |
-| G01/G02 | Usuarios del servicio | Mantienen su perfil y acceden a sus operaciones propias | Perfil e identidad como soporte | **US03:** Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.<br>Relacionadas: US01, US02, US04, US05; TS06, TS08, TS09. |
-
-Correspondencia del export anterior: US01 gestión de maquinaria → US06–US08; US02 disponibilidad → US09/US13; US03 reservas → US14/US18/US19/US21; US04 entrega/devolución → US22; US05 incidencias → US25; US06 mantenimiento → US23/US24/US26; US07 búsqueda → US11; US08 detalle → US12; US09 solicitud → US14; US10 seguimiento de la constructora → US21. Esta equivalencia no cambia los IDs actuales ni acredita que el gráfico haya sido corregido.
-
 ## 3.3. Product Backlog
 
-El orden expresa **valor para el negocio**: inventario, disponibilidad, solicitud/decisión y ciclo de alquiler primero; soporte de identidad y autenticación al final. El ID conserva identidad y no determina prioridad. Las historias de landing se consideran desde Sprint 1 y sus correcciones continúan en TB1; su posición en esta revisión acumulativa no elimina ese alcance histórico. Antes de desplegar recursos privados, las dependencias de seguridad deben estar satisfechas.
+El Product Backlog contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
 
-Las estimaciones son propuestas de planificación en la escala 1/2/3/5/8 y deben revisarse por el equipo; no son horas consumidas ni velocity aceptada. Las 35 US mantienen el significado del catálogo. Las TS son trabajo técnico propuesto para AV2 y no implican que la API ya esté implementada.
-
-| # Orden | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
-| :---: | :---: | :--- | :--- | :---: |
-| 1 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario. | 5 |
-| 2 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos. | 3 |
-| 3 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado. | 3 |
-| 4 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres. | 5 |
-| 5 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso. | 3 |
-| 6 | TS01 | Contratos REST de inventario | Como Developer, quiero exponer registro, consulta y actualización de equipos para integrar US06–US10 sin depender de datos de demostración. | 8 |
-| 7 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto. | 5 |
-| 8 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto. | 3 |
-| 9 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler. | 5 |
-| 10 | TS02 | Contratos REST de búsqueda y disponibilidad | Como Developer, quiero consultar catálogo y disponibilidad por periodo para integrar US11–US13 y la validación de fechas. | 5 |
-| 11 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 12 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres. | 5 |
-| 13 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos. | 3 |
-| 14 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente. | 3 |
-| 15 | TS03 | Contratos REST de solicitudes y decisiones | Como Developer, quiero crear, consultar y decidir solicitudes para integrar US14, US18, US19 y US21 con estados y conflictos comprobables. | 8 |
-| 16 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados. | 3 |
-| 17 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados. | 5 |
-| 18 | TS04 | Contratos REST del ciclo de alquiler | Como Developer, quiero consultar alquileres y registrar entregas y devoluciones para integrar US20 y US22 con operaciones trazables. | 5 |
-| 19 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo. | 5 |
-| 20 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención. | 3 |
-| 21 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones. | 3 |
-| 22 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos. | 5 |
-| 23 | TS05 | Contratos REST de mantenimiento e historial | Como Developer, quiero registrar incidencias e intervenciones y consultar antecedentes para integrar US23–US26 y la condición operativa del equipo. | 5 |
-| 24 | US30 | Visualizar propuesta de valor | Como visitante, quiero identificar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria. | 2 |
-| 25 | US27 | Consultar información de RentBuild | Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa. | 2 |
-| 26 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar cómo RentBuild puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades. | 3 |
-| 27 | US31 | Explorar funcionalidades principales | Como visitante, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria. | 3 |
-| 28 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild. | 2 |
-| 29 | US34 | Consultar el Landing Page en diferentes dispositivos | Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer RentBuild sin importar el dispositivo que utilice. | 5 |
-| 30 | US35 | Cambiar el idioma del Landing Page | Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de RentBuild en el idioma de mi preferencia. | 5 |
-| 31 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio. | 2 |
-| 32 | US29 | Contactar con RentBuild | Como visitante, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio. | 2 |
-| 33 | US15 | Visualizar planes disponibles | Como usuario, quiero ver los planes para elegir uno. | 3 |
-| 34 | US16 | Suscribirse a un plan | Como usuario, quiero suscribirme a un plan para acceder a funciones premium. | 3 |
-| 35 | US17 | Cambiar de plan | Como usuario, quiero cambiar de plan según mis necesidades. | 5 |
-| 36 | TS07 | Contratos REST de planes y suscripciones | Como Developer, quiero consultar planes y registrar o cambiar suscripciones para integrar US15–US17 sin declarar pagos o activaciones no confirmados. | 5 |
-| 37 | US03 | Gestionar perfil | Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada. | 3 |
-| 38 | TS06 | Contratos REST de perfil | Como Developer, quiero consultar y actualizar el perfil propio para integrar US03 con validación y pertenencia comprobadas en servidor. | 3 |
-| 39 | TS09 | Contrato OpenAPI y verificación de API | Como Developer, quiero documentar y comprobar los contratos REST para integrar el frontend con especificaciones y pruebas reproducibles. | 5 |
-| 40 | US01 | Registro de usuario | Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma. | 5 |
-| 41 | US02 | Inicio de sesión | Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta. | 3 |
-| 42 | US04 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta. | 3 |
-| 43 | US05 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger mi cuenta. | 1 |
-| 44 | TS08 | Contratos REST de identidad y acceso | Como Developer, quiero gestionar registro, sesiones y recuperación para integrar US01, US02, US04 y US05 y proteger los recursos privados. | 5 |
-
-**Evidencia de herramienta:** pendiente de adjuntar la captura del Product Backlog y una URL pública de lectura del tablero de Trello/Jira/YouTrack con el mismo orden, IDs y estimaciones. No se publica una invitación ni se declara que el tablero ya refleje esta revisión.
-
-### Plan técnico propuesto para AV2
-
-Los contratos TS01–TS09 se planifican para la etapa en que el statement exige la primera API desplegada (AV2, semana 12). No se fija una fecha de implementación ni se atribuyen responsables individuales. Cada tarea permanece **To Do**; las horas son estimaciones propuestas y requieren aprobación del equipo. Su inclusión no modifica la evidencia pendiente de TB1 ni declara pruebas ejecutadas.
-
-| Technical Story | US relacionadas | Work-Item | Tarea propuesta | Estimación (horas) | Responsable | Estado |
-|---|---|---|---|---:|---|---|
-| TS01 | US06–US10 | API-TS01-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS01 | US06–US10 | API-TS01-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS01 | US06–US10 | API-TS01-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS02 | US11–US13 | API-TS02-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS02 | US11–US13 | API-TS02-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS02 | US11–US13 | API-TS02-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS03 | US14, US18, US19, US21 | API-TS03-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS03 | US14, US18, US19, US21 | API-TS03-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS03 | US14, US18, US19, US21 | API-TS03-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS04 | US20, US22 | API-TS04-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS04 | US20, US22 | API-TS04-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS04 | US20, US22 | API-TS04-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS05 | US23–US26 | API-TS05-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS05 | US23–US26 | API-TS05-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS05 | US23–US26 | API-TS05-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS06 | US03 | API-TS06-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS06 | US03 | API-TS06-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS06 | US03 | API-TS06-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS07 | US15–US17 | API-TS07-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS07 | US15–US17 | API-TS07-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS07 | US15–US17 | API-TS07-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS08 | US01, US02, US04, US05 | API-TS08-01 | Definir entradas, respuestas y errores del contrato en OpenAPI | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS08 | US01, US02, US04, US05 | API-TS08-02 | Implementar los casos de uso y adaptadores necesarios conforme al contrato | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS08 | US01, US02, US04, US05 | API-TS08-03 | Crear y ejecutar pruebas unitarias e integración de escenarios válidos, errores y pertenencia | 6 | Pendiente de acuerdo del equipo | To Do |
-| TS09 | TS01–TS08 | API-TS09-01 | Publicar la especificación OpenAPI y configurar consulta Swagger | 4 | Pendiente de acuerdo del equipo | To Do |
-| TS09 | TS01–TS08 | API-TS09-02 | Preparar pruebas de integración de disponibilidad, decisiones conflictivas y errores | 8 | Pendiente de acuerdo del equipo | To Do |
-| TS09 | TS01–TS08 | API-TS09-03 | Documentar ejecución real de pruebas y reproducibilidad desde el repositorio | 4 | Pendiente de acuerdo del equipo | To Do |
-
-<div style="page-break-before: always;"></div>
+| # | Story ID | Tipo | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :--- | :---: |
+| 1 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
+| 2 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
+| 3 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 4 | US27 | User Story | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
+| 5 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
+| 6 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
+| 7 | US29 | User Story | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
+| 8 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 9 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| 10 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 11 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 12 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 13 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 14 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
+| 15 | TS11 | Technical Story | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | 5 |
+| 16 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
+| 17 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 18 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 19 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 20 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 21 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
+| 22 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
+| 23 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 24 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 25 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 26 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
+| 27 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 28 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | 5 |
+| 29 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
+| 30 | TS16 | Technical Story | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | 5 |
+| 31 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 32 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 33 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 34 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 35 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
+| 36 | TS12 | Technical Story | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | 5 |
+| 37 | TS13 | Technical Story | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | 3 |
+| 38 | TS14 | Technical Story | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | 3 |
+| 39 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
+| 40 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 41 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 42 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
+| 43 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 44 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
+| 45 | TS01 | Technical Story | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
+| 46 | TS15 | Technical Story | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | 3 |
+| 47 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 48 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 49 | US04 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 50 | US05 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 51 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | 5 |
 
 # Capítulo IV: Product Design
 
