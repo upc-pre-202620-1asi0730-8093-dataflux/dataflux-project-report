@@ -1770,72 +1770,221 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 Los wireframes de las aplicaciones web de RentBuild delinean la estructura y organización de las pantallas principales, especificando la ubicación de los elementos de la interfaz de usuario y la navegación. Estos esquemas visuales sirven como una guía precisa para el diseño final, asegurando una experiencia de usuario fluida e intuitiva tanto para el segmento de empresas de alquiler como para el segmento de empresas constructoras. Los wireframes están enfocados en la funcionalidad y facilidad de uso, permitiendo que diseñadores y desarrolladores visualicen cómo los usuarios interactúan con la aplicación, optimizando la disposición de los elementos para crear una experiencia eficiente y accesible.
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp1.png" width="100%">
-</p>
+#### 1. Dashboard — Empresa de alquiler de maquinaria
+
+
+
+**Propósito:** Proporcionar al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
+
+
+
+**Elementos clave:**
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
+
+**Desktop Web Browser**
+
+
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp2.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Dashboard.png" alt="Wireframe de rental dashboard para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp3.png" width="100%">
-</p>
+Los registros, cantidades y fechas se presentan como datos ilustrativos para representar la organización de la información.
+
+#### 2. Equipment — Gestión de maquinaria
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+**Elementos clave:**
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp4.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Equipment.png" alt="Wireframe de equipment para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp5.png" width="100%">
-</p>
+#### 3. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Permitir que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
+
+**Elementos clave:**
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp6.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_RentalRequests.png" alt="Wireframe de rental requests para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp7.png" width="100%">
-</p>
+#### 4. Reservations — Reservas
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp8.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_reservations.png" alt="Wireframe de reservations para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp9.png" width="100%">
-</p>
+#### 5. Rentals — Alquileres
+
+**Propósito:** Permitir que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
+
+**Elementos clave:**
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp10.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Rentals.png" alt="Wireframe de rentals para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp11.png" width="100%">
-</p>
+#### 6. Maintenance — Mantenimiento e incidencias
+
+**Propósito:** Permitir que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
+
+**Elementos clave:**
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp12.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Maintenance.png" alt="Wireframe de maintenance para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp13.png" width="100%">
-</p>
+#### 7. Dashboard — Empresa constructora
+
+**Propósito:** Proporcionar a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp14.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Dashboard.png" alt="Wireframe de construction dashboard para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp15.png" width="100%">
-</p>
+#### 8. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Permitir que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp16.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Search_Requipment.png" alt="Wireframe de equipment search para escritorio" width="100%">
 </p>
 
+#### 9. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Permitir que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp17.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Equipment_details.png" alt="Wireframe de equipment detail para escritorio" width="100%">
+</p>
+
+#### 10. My Requests — Mis solicitudes
+
+**Propósito:** Permitir que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyRequests.png" alt="Wireframe de my requests para escritorio" width="100%">
+</p>
+
+#### 11. My Reservations — Mis reservas
+
+**Propósito:** Permitir que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyReservations.png" alt="Wireframe de my reservations para escritorio" width="100%">
+</p>
+
+#### 12. My Rentals — Mis alquileres
+
+**Propósito:** Permitir que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyRentals.png" alt="Wireframe de my rentals para escritorio" width="100%">
 </p>
 
 ### 4.4.2. Web Applications Wireflow Diagrams
