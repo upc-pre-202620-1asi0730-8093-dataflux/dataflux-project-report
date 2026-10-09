@@ -2501,7 +2501,7 @@ Rental Operator, Construction Manager y System Administrator interactúan con Re
 
 La arquitectura comprende Landing Page, Web Application, RESTful API y Database, con sus tecnologías y comunicaciones.
 
-![Software Architecture Container Diagram](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.jpg)
+![Software Architecture Container Diagram](assets/tb1-reference-design/rentbuild-c4-system2-container-diagram.png)
 
 ### 4.6.4. Software Architecture Components Diagrams
 
@@ -2599,7 +2599,7 @@ El diseño relacional presenta las tablas, columnas, claves primarias, claves fo
 
 Diagrama de base de datos actualizado de RentBuild:
 
-![Database Diagram updated](assets/md-images-chapter4/database-diagram.png)
+![Database Diagram updated](assets/tb1-reference-design/database-diagram.png)
 
 #### IAM
 
