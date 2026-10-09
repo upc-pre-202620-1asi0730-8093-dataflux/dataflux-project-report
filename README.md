@@ -1840,32 +1840,19 @@ Los wireframes de las aplicaciones web de RentBuild delinean la estructura y org
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-**Trazabilidad del wireflow general:** inventario US06–US10; búsqueda/detalle US11–US13; solicitudes US14/US18/US19/US21; alquileres y retorno US20/US22; mantenimiento US23–US26; planes US15–US17; perfil/acceso US01–US05. El gráfico recuperado es navegación general y no acredita wireflows completos por cada user goal. Su actualización por objetivo y las variantes mobile permanecen pendientes.
-
 Los wireflow diagrams de la Web Application de RentBuild representan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realizan los usuarios dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las pantallas entre sí y cómo fluye la experiencia de uso de acuerdo con las acciones y decisiones del usuario.
 
-En el caso de RentBuild, se ha definido un wireflow general que abarca desde el proceso inicial de autenticación y registro hasta las principales funcionalidades destinadas a las empresas de alquiler de maquinaria. El diagrama permite observar de manera global cómo el usuario ingresa a la plataforma, selecciona el tipo de empresa correspondiente y posteriormente accede a los módulos necesarios para gestionar maquinaria, solicitudes, alquileres y actividades relacionadas con su operación.
+En el caso de RentBuild, se ha definido un wireflow general que integra los principales recorridos de la aplicación web, desde las pantallas de autenticación hasta las interfaces específicas para los dos segmentos principales de usuarios: las empresas de alquiler de maquinaria y las empresas constructoras. De esta forma, se representa de manera global la navegación principal del sistema, así como las pantallas clave que intervienen en el proceso de gestión y solicitud de maquinaria.
 
-El recorrido comienza en la pantalla de Login, desde la cual el usuario puede ingresar sus credenciales para acceder a RentBuild. En caso de no contar con una cuenta, puede dirigirse a la pantalla de Register para completar el proceso de creación de una nueva cuenta. Una vez realizado el registro correctamente, el flujo continúa hacia una decisión asociada al tipo de empresa del usuario.
+El recorrido inicia en la pantalla de Login, desde la cual el usuario puede registrarse en caso de no contar con una cuenta o recuperar su contraseña si no recuerda sus credenciales. Una vez completado el proceso de autenticación o registro, el flujo contempla una decisión relacionada con el tipo de empresa usuaria. Esta decisión divide la navegación en dos ramas principales.
 
-En el wireflow desarrollado se representa la rama correspondiente a una **Rental Company**, es decir, una empresa dedicada al alquiler de maquinaria. Después de seleccionar este tipo de empresa, el usuario ingresa a la Web Application de RentBuild, donde dispone de una navegación lateral persistente que permite acceder a los principales módulos del sistema. Como parte del flujo inicial también se contempla la opción de **Register machinery**, mediante la cual se puede incorporar nueva maquinaria al inventario de la empresa.
+Por un lado, la rama correspondiente a la empresa de alquiler de maquinaria conduce al dashboard principal de administración. Desde esta vista se accede a pantallas orientadas a la gestión interna de la operación, tales como Equipment, Rental Requests, Reservations, Rentals, Maintenance, Plan & Subscription y Profile. Estas interfaces permiten registrar y administrar maquinaria, revisar solicitudes de alquiler, gestionar reservas confirmadas, controlar alquileres activos, programar mantenimientos y administrar la suscripción del servicio.
 
-A partir de esta vista principal, el recorrido de la empresa de alquiler contempla los siguientes módulos:
+Por otro lado, la rama correspondiente a la empresa constructora conduce a su propio dashboard, desde el cual el usuario puede navegar hacia Equipment Search, Equipment Detail, My Requests, My Reservations, My Rentals y Profile. Este recorrido permite buscar maquinaria disponible, consultar sus características, enviar solicitudes de alquiler y dar seguimiento a las reservas y alquileres realizados.
 
-- **Inventory:** permite consultar la maquinaria registrada, su categoría, estado y cantidad de unidades disponibles.
-- **Requests:** permite revisar las solicitudes de alquiler y conocer el estado de cada una de ellas.
-- **Active rentals:** presenta los alquileres actualmente vigentes, incluyendo el período de alquiler, tarifa, costo estimado y estado.
-- **Maintenance:** permite registrar actividades de mantenimiento o incidencias asociadas a la maquinaria, además de consultar registros anteriores.
-- **History:** centraliza los eventos relacionados con cada maquinaria, como solicitudes, aprobaciones, rechazos, mantenimientos e incidencias.
-- **Catalog:** permite explorar la maquinaria mediante un catálogo visual, utilizando búsqueda y filtros para localizar equipos según su categoría o estado.
-
-Estos módulos se encuentran relacionados mediante la navegación lateral de RentBuild, permitiendo al usuario desplazarse entre las diferentes funcionalidades sin perder el contexto de la aplicación. De esta manera, el wireflow refleja el recorrido operativo asociado a la gestión de maquinaria y alquileres dentro de una empresa proveedora de equipos.
-
-Finalmente, el diagrama incorpora una salida general mediante la acción Sign Out, que representa el cierre de sesión y finaliza el recorrido del usuario dentro de la Web Application.
-
-En conjunto, el wireflow permite validar que las pantallas diseñadas se encuentran conectadas de manera coherente y que la navegación responde al flujo funcional planteado para las empresas de alquiler de maquinaria, desde el acceso inicial a RentBuild hasta la administración de inventario, solicitudes, alquileres, mantenimiento, historial y catálogo.
-
-<img src = "assets/md-images-chapter4/WireflowDiagrams.png" width = 100%>
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-wireflow-diagram/wire_flow_diagram.png" alt="WireFlow Diagram" width="100%">
+</p>
 
 ### 4.4.3. Web Applications Mock-ups
 
