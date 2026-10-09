@@ -2605,53 +2605,7 @@ Los [value objects](assets/tb1-design/uml-value-objects.png) y [enumeraciones Ja
 
 ### 4.8.1. Database Diagrams
 
-La propuesta MySQL conserva las tablas del diseño original, incluyendo provider_profiles, rental_contracts y maintenance_records. Los value objects se mapean a columnas y cada contexto conserva sus tablas propietarias. EF Core pertenece a la API y no es el motor de base de datos. Los diagramas no acreditan migraciones ni tablas desplegadas en TB1.
-
-Se reconcilian relaciones con los UML originales: provider_id apunta al ProviderProfileId correspondiente; una solicitud pendiente puede no tener contrato; un contrato puede no tener aún entrega o devolución; los vínculos de incidente y mantenimiento son opcionales. La relación opcional cero-o-uno del UML de Maintenance se conserva mediante incident_id nullable y UNIQUE. Estos ajustes de consistencia, que van más allá de etiquetas de stack, están explicados en la comparación.
-
-![ERD general: tablas del diseño original y FK consistentes con sus UML](assets/tb1-reference-design/database-diagram.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/database-diagram.puml) · [SVG](assets/tb1-reference-design/database-diagram.svg).
-
-#### IAM
-
-![ERD propuesto — IAM](assets/tb1-reference-design/erd-iam.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-iam.puml) · [SVG](assets/tb1-reference-design/erd-iam.svg).
-
-#### Profiles
-
-![ERD propuesto — Profiles](assets/tb1-reference-design/erd-profiles.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-profiles.puml) · [SVG](assets/tb1-reference-design/erd-profiles.svg).
-
-#### Inventory
-
-![ERD propuesto — Inventory](assets/tb1-reference-design/erd-inventory.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-inventory.puml) · [SVG](assets/tb1-reference-design/erd-inventory.svg).
-
-#### Rentals
-
-![ERD propuesto — Rentals](assets/tb1-reference-design/erd-rentals.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-rentals.puml) · [SVG](assets/tb1-reference-design/erd-rentals.svg).
-
-#### Maintenance
-
-![ERD propuesto — Maintenance](assets/tb1-reference-design/erd-maintenance.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-maintenance.puml) · [SVG](assets/tb1-reference-design/erd-maintenance.svg).
-
-#### Subscriptions
-
-![ERD propuesto — Subscriptions](assets/tb1-reference-design/erd-subscriptions.png)
-
-[Fuente PlantUML](assets/tb1-reference-design/erd-subscriptions.puml) · [SVG](assets/tb1-reference-design/erd-subscriptions.svg).
-
-Las seis vistas por contexto son recortes del mismo esquema global: muestran PK, FK, columnas y cardinalidades. Las tablas externas muestran únicamente la clave del contexto propietario. El historial de suscripciones conserva múltiples filas por usuario; no se introduce UNIQUE(user_id). Reglas de disponibilidad, secuencia de operaciones y suscripción efectiva requieren validación transaccional en el backend futuro.
-
----
+![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
