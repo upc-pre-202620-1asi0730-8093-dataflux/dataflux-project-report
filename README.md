@@ -870,7 +870,7 @@ La presencia de competidores consolidados y nuevas plataformas especializadas re
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="180">
 </p>
 
 **Resumen:**
@@ -890,7 +890,7 @@ Pedro González se desempeña como contratista en el rubro de alquiler de maquin
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
 </p>
 
 **Resumen:**
@@ -910,7 +910,7 @@ Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de cami
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
 </p>
 
 **Resumen:**
@@ -930,7 +930,7 @@ Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de ca
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="80">
 </p>
 
 **Resumen:**
@@ -950,7 +950,7 @@ Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
 </p>
 
 **Resumen:**
@@ -970,7 +970,7 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 | URL del video | Pendiente: Ver video — confirmar archivo y enlace Microsoft Stream con permisos para el evaluador|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
 </p>
 
 **Resumen:**
