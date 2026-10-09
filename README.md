@@ -1,64 +1,79 @@
-# RentBuild
 <div align="center">
 
-  <img src="assets/md-images-front/upc-logo.png" width="150px" />
+<img src="assets/md-images-front/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="90">
 
-  <p>Universidad Peruana de Ciencias Aplicadas</p>
-  <p>Facultad de Ingeniería</p>
-  <p>Carrera de Ingeniería de Software</p>
+<p>
+Universidad Peruana de Ciencias Aplicadas<br>
+Facultad de Ingeniería<br>
+Carrera de Ingeniería de Software
+</p>
 
-  <p>Ciclo académico 2026-20</p><br>
+<br>
 
-  <p><b>1ASI0730</b></p>
-  <p><b>Aplicaciones Web</b></p>
-  <p>NRC</p>
-  <p><b>8093</b></p>
-  <p><b>Informe de Trabajo Final</b></p>
-  <p>Docente</p>
-  <p><b>Bautista Ubillús, Efraín Ricardo</b></p>
-  <p>Startup</p>
-  <p><b>DataFlux</b></p><br>
-  <p>Producto</p>
-  <p><b>RentBuild</b></p>
+<p>
+<strong>1ASI0730</strong><br>
+<strong>Aplicaciones Web</strong>
+</p>
 
-</div>
+<p>
+NRC<br>
+<strong>8093</strong>
+</p>
 
-<div align="center">
-  <h3>Integrantes</h3>
+<h3>Informe de Trabajo Final</h3>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Apellidos y Nombres</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>U20211B198</td>
-        <td>Cisneros Salas, Luis Angel</td>
-      </tr>
-      <tr>
-        <td>U202410211</td>
-        <td>Manosalva Tovar, Miroslav Oscar</td>
-      </tr>
-      <tr>
-        <td>U202111529</td>
-        <td>Montalvo Vásquez, Bruno Rodrigo</td>
-      </tr>
-      <tr>
-        <td>U20211F962</td>
-        <td>Vargas Manchinelli, Deiby Juan</td>
-      </tr>
-      <tr>
-        <td>U202322849</td>
-        <td>Viza Quispe, Marlon Packard</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
+<p>
+Docente<br>
+<strong>Bautista Ubillús, Efraín Ricardo</strong>
+</p>
 
-  <p><b>Octubre, 2026</b></p>
+<br>
+
+<p>
+Startup<br>
+<strong>DataFlux</strong>
+</p>
+
+<p>
+Producto<br>
+<strong>RentBuild</strong>
+</p>
+
+<br>
+
+<p><strong>Integrantes</strong></p>
+
+<p>
+<span style="display:inline-block; width:120px; text-align:left;"><strong>Código</strong></span>
+<span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U20211B198</span>
+<span style="display:inline-block; width:300px; text-align:left;">Cisneros Salas, Luis Angel</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
+<span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav Oscar</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202111529</span>
+<span style="display:inline-block; width:300px; text-align:left;">Montalvo Vásquez, Bruno Rodrigo</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U20211F962</span>
+<span style="display:inline-block; width:300px; text-align:left;">Vargas Manchinelli, Deiby Juan</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202322849</span>
+<span style="display:inline-block; width:300px; text-align:left;">Viza Quispe, Marlon Packard</span>
+
+<br>
+
+<p><strong>Ciclo académico 2026-20</strong></p>
+
+<br>
+
+<p><strong>Octubre, 2026</strong></p>
 
 </div>
 
