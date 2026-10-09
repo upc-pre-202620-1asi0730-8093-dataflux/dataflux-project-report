@@ -7,3 +7,6 @@ riderModule.iml
 .idea/
 *.user
 .vs/
+node_modules/
+output/
+__pycache__/
