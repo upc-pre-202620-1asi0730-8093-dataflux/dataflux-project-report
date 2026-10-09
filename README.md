@@ -2515,10 +2515,6 @@ CompanyProfile y ProviderProfile contienen información de empresa, dirección, 
 
 ### 4.8.1. Database Diagrams
 
-## 4.8. Database Design
-
-### 4.8.1. Database Diagrams
-
 ![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram1.png)
 
 # Capítulo V: Product Implementation, Validation & Deployment
@@ -3010,7 +3006,7 @@ En este Sprint se implementaron las vistas del flujo de alquiler de la Web Appli
 - Planes de suscripción: [COMPLETAR: captura]
 - Gestión de la suscripción: [COMPLETAR: captura]
 
-**Video de ejecución:** [COMPLETAR: enlace al video de navegación del Sprint 2]
+**Execution Evidence Video for Sprint 2 Review:** [Ver video de Execution Evidence Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDOPdOMeAhKRZ-vz-1kQtt7AX2VvaT-R5lQZFxI_11rJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kexC0i)
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
