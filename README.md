@@ -1927,128 +1927,133 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
   <img src="./assets/md-images-chapter4/webapp20.png" alt="Mockup de perfil para escritorio" width="100%">
 </p>
 
-#### 4. Inventario
+###### 4. Dashboard — Empresa de alquiler de maquinaria
 
-**Propósito:** Permitir la gestión y consulta de la maquinaria disponible dentro de RentBuild.
+**Propósito:** Presentar visualmente al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
 
 **Elementos clave:**
-- Listado de maquinaria registrada.
-- Estado y disponibilidad de cada maquinaria.
-- Información básica de los equipos.
-- Filtros y opciones de búsqueda.
-- Acciones para consultar y gestionar maquinaria.
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp21.png" alt="Mockup de inventario para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Dashboard.png" alt="Mockup de rental dashboard para escritorio" width="100%">
 </p>
 
-#### 5. Registrar maquinaria
 
-**Propósito:** Permitir el registro de nuevas máquinas y equipos dentro del inventario de RentBuild.
+
+#### 5. Equipment — Gestión de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Elementos clave:**
-- Datos generales de la maquinaria.
-- Marca, modelo y categoría.
-- Características técnicas.
-- Información sobre disponibilidad.
-- Carga de imágenes o documentación.
-- Acción para registrar la maquinaria.
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp22.png" alt="Mockup de registro de maquinaria para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Equipment.png" alt="Mockup de equipment para escritorio" width="100%">
 </p>
 
-#### 6. Solicitudes
 
-**Propósito:** Permitir la gestión y seguimiento de las solicitudes de alquiler realizadas dentro de RentBuild.
+
+#### 6. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
 
 **Elementos clave:**
-- Listado de solicitudes.
-- Estado de cada solicitud.
-- Información del solicitante.
-- Maquinaria solicitada.
-- Fechas de alquiler.
-- Acciones para aceptar, rechazar o consultar una solicitud.
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp23.png" alt="Mockup de solicitudes para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Rental requests.png" alt="Mockup de rental requests para escritorio" width="100%">
 </p>
 
-#### 7. Alquileres activos
 
-**Propósito:** Permitir visualizar y gestionar los alquileres que se encuentran actualmente activos.
+
+#### 7. Reservations — Reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
 
 **Elementos clave:**
-- Listado de alquileres activos.
-- Información de la maquinaria alquilada.
-- Datos del cliente o empresa.
-- Fecha de inicio y fecha de finalización.
-- Estado del alquiler.
-- Acciones de seguimiento y gestión.
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp24.png" alt="Mockup de alquileres activos para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Reservations.png" alt="Mockup de reservations para escritorio" width="100%">
 </p>
 
-#### 8. Mantenimiento
+#### 8. Rentals — Alquileres
 
-**Propósito:** Facilitar la gestión de las actividades de mantenimiento realizadas sobre la maquinaria registrada.
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
 
 **Elementos clave:**
-- Listado de equipos en mantenimiento.
-- Estado de mantenimiento.
-- Tipo de mantenimiento.
-- Fechas programadas y realizadas.
-- Registro de observaciones.
-- Acciones para gestionar el mantenimiento.
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp25.png" alt="Mockup de mantenimiento para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Rentals.png" alt="Mockup de rentals para escritorio" width="100%">
 </p>
 
-#### 9. Historial
+#### 9. Maintenance — Mantenimiento e incidencias
 
-**Propósito:** Permitir consultar el historial de operaciones y actividades relacionadas con la maquinaria y los alquileres.
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
 
 **Elementos clave:**
-- Historial de alquileres.
-- Historial de mantenimientos.
-- Registro de movimientos de maquinaria.
-- Fechas y estados de las operaciones.
-- Filtros para facilitar la consulta.
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp26.png" alt="Mockup de historial para escritorio" width="100%">
-</p>
-
-#### 10. Catálogo
-
-**Propósito:** Presentar las maquinarias disponibles para alquiler, permitiendo a los usuarios consultar sus características y disponibilidad.
-
-**Elementos clave:**
-- Listado de maquinaria disponible.
-- Imágenes de los equipos.
-- Nombre, categoría y características principales.
-- Información de disponibilidad.
-- Filtros y búsqueda.
-- Acción para consultar o solicitar el alquiler de una maquinaria.
-
-**Desktop Web Browser**
-
-<p align="center">
-  <img src="./assets/md-images-chapter4/webapp27.png" alt="Mockup de catálogo para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Maintenance.png" alt="Mockup de maintenance para escritorio" width="100%">
 </p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
