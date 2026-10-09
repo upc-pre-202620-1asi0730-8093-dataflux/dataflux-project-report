@@ -185,6 +185,15 @@ El valor 0 de TartaroZ en ese rango **no incluye** los [PR22 de personas](https:
             - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
             - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
             - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+        - [5.2.2. Sprint 2](#522-sprint-2)
+            - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+            - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+            - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+            - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+            - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+            - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+            - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+            - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Estado de cierre de TB1](#estado-de-cierre-de-tb1)
@@ -2932,6 +2941,105 @@ En esta sección se resumen las actividades realizadas por el equipo en relació
 En esta sección se explica cómo se desarrollaron las actividades de implementación del Landing Page durante el Sprint 1, evidenciando la participación colaborativa de todos los integrantes del equipo. A continuación, se presentan capturas de los analíticos de colaboración y commits en GitHub correspondientes al repositorio del proyecto, en los que se refleja el aporte individual de cada miembro del equipo.
 
 ![Team collaboration](./assets/md-images-chapter5/Team.png)
+
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+| | |
+| :--- | :--- |
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | |
+| Date | 2026-10-07 |
+| Time | 9:00 PM |
+| Location | Vía Discord |
+| Prepared By | Luis Angel Cisneros Salas |
+| Attendees | Cisneros Salas, Luis Angel<br>Viza Quispe, Marlon Packard<br>Manosalva Tovar, Miroslav Oscar<br>Montalvo Vásquez, Bruno Rodrigo<br>Vargas Manchinelli, Deiby Juan |
+| Sprint 1 Review Summary | En el Sprint 1 se desarrolló y desplegó en Vercel la primera versión del Landing Page de RentBuild, y se avanzó con las pantallas iniciales de la Web Application: registro, login, inventario, registro de maquinaria, catálogo y búsqueda, e historial. Quedaron pendientes o en curso el perfil de usuario (UT-07 y UT-08), el detalle de maquinaria con estado y disponibilidad (UT-13 y UT-14), la bandeja de solicitudes (UT-17), los alquileres activos (UT-18), Mis solicitudes (UT-19) y el registro de mantenimiento e incidencias (UT-20 a UT-22). |
+| Sprint 1 Retrospective Summary | La división de tareas entre diseño, Landing Page y Web Application permitió avanzar en paralelo sin bloqueos. Como mejoras, el equipo identificó definir antes la herramienta de despliegue y cerrar la integración de la lógica de negocio en las pantallas ya maquetadas, además de incorporar la retroalimentación recibida en el AV1 sobre los artefactos del informe. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Nuestro enfoque está en completar el flujo principal de alquiler de RentBuild en la Web Application: consulta de disponibilidad por periodo, solicitud de alquiler, gestión de solicitudes por la empresa de alquiler, y selección y gestión de planes de suscripción. Creemos que esto permitirá a las empresas constructoras y a las empresas de alquiler recorrer el ciclo completo de reserva sin recurrir al teléfono ni a WhatsApp. Esto se confirmará cuando una empresa constructora pueda solicitar un alquiler para un periodo disponible, la empresa de alquiler pueda aprobarlo o rechazarlo, y la primera versión de la Web Application quede desplegada y accesible públicamente desde los call-to-action de la nueva versión del Landing Page. |
+| Sprint 2 Velocity | 41 |
+| Sum of Story Points | 41 story points (US03, US04, US08, US13, US14, US18, US19, US21, US15, US16, US17, US33) |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elaborado por el equipo para el Sprint 2, el cual identifica al líder y a los colaboradores responsables de cada aspecto dentro del alcance del sprint.
+
+| Team Member (Last, First) | GitHub Username | Solicitudes y disponibilidad de alquiler | Gestión de solicitudes y perfil | Planes y suscripciones | Despliegue y correcciones del Landing Page |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| Cisneros Salas, Luis Angel | LuisCS03 | L | C | C | C |
+| Viza Quispe, Marlon Packard | V8Z5 | C | C | L | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | L | C | L |
+| Montalvo Vásquez, Bruno Rodrigo | TartaroZ | C | C | C | C |
+| Vargas Manchinelli, Deiby Juan | poluxbinPe | C | C | C | C |
+
+#### 5.2.2.3. Sprint Backlog 2
+
+El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
+
+[COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
+
+**Trello:** [COMPLETAR: URL pública del tablero del Sprint 2]
+
+| User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Estimation (Hours) | Assigned To | Status (To do / In Process / To Review / Done) |
+| :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| US03 | Gestionar perfil | UT-01 | Maquetar sección de datos personales | Crear la vista de perfil con los datos del usuario (arrastra UT-07 y UT-08 del Sprint 1) | 2 | Deiby Vargas | To Do |
+| US03 | Gestionar perfil | UT-02 | Editar y guardar perfil | Habilitar la edición de datos con validaciones y mensaje de confirmación | 2 | Deiby Vargas | To Do |
+| US04 | Cerrar sesión | UT-03 | Implementar cierre de sesión | Añadir la acción de cerrar sesión y limpiar la sesión del usuario | 1 | Marlon Viza | To Do |
+| US08 | Actualizar información de maquinaria | UT-04 | Formulario de edición | Precargar los datos de la maquinaria en un formulario editable | 3 | Miroslav Manosalva | To Do |
+| US08 | Actualizar información de maquinaria | UT-05 | Validaciones y confirmación | Validar los campos modificados y confirmar el guardado | 2 | Miroslav Manosalva | To Do |
+| US13 | Consultar disponibilidad para un periodo | UT-06 | Selector de periodo | Agregar selector de rango de fechas en el detalle de la maquinaria | 3 | Luis Cisneros | To Do |
+| US13 | Consultar disponibilidad para un periodo | UT-07 | Verificación de conflictos | Implementar la lógica que detecta cruces con alquileres o reservas existentes | 4 | Luis Cisneros | To Do |
+| US14 | Solicitar alquiler de maquinaria | UT-08 | Formulario de solicitud | Maquetar el formulario con maquinaria, periodo y datos del proyecto | 3 | Luis Cisneros | To Do |
+| US14 | Solicitar alquiler de maquinaria | UT-09 | Envío de solicitud | Registrar la solicitud con estado Pendiente y confirmar al usuario | 3 | Luis Cisneros | To Do |
+| US18 | Gestionar solicitudes de alquiler | UT-10 | Bandeja de solicitudes | Listar las solicitudes recibidas con filtros por estado (arrastra UT-17 del Sprint 1) | 3 | Miroslav Manosalva | To Do |
+| US19 | Confirmar o rechazar una solicitud | UT-11 | Acciones confirmar y rechazar | Agregar las acciones con diálogo de confirmación y actualización del estado | 3 | Miroslav Manosalva | To Do |
+| US21 | Consultar estado de una solicitud de alquiler | UT-12 | Vista de estado de solicitudes | Mostrar al cliente el estado de cada solicitud (arrastra UT-19 del Sprint 1) | 2 | Bruno Montalvo | To Do |
+| US15 | Consultar planes | UT-13 | Vista comparativa de planes | Maquetar los tres niveles de plan con sus características | 3 | Marlon Viza | To Do |
+| US16 | Seleccionar plan | UT-14 | Flujo de selección de plan | Permitir elegir un plan y confirmar la selección | 3 | Marlon Viza | To Do |
+| US17 | Gestionar suscripción | UT-15 | Vista de suscripción actual | Mostrar el plan activo y permitir cambiarlo o cancelarlo | 4 | Bruno Montalvo | To Do |
+| US33 | Acceder a la Web Application | UT-16 | Corrección de observaciones del Landing Page | Verificar que los call-to-action de cada segmento redirijan a la vista de la Web Application y unificar el estilo visual | 3 | Luis Cisneros | To Do |
+| US33 | Acceder a la Web Application | UT-17 | Despliegue de la Web Application | Importar el repositorio en Vercel y publicar la Web Application | 2 | Miroslav Manosalva | To Do |
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de alquiler de la Web Application, distribuyendo las tareas según lo definido en el Sprint Backlog. A continuación se presenta la tabla con los commits realizados durante este periodo.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+En este Sprint se implementaron las vistas del flujo de alquiler de la Web Application y se aplicaron las correcciones al Landing Page. A continuación se presentan las principales vistas logradas.
+
+**Web Application**
+
+- Perfil de usuario: [COMPLETAR: captura]
+- Edición de maquinaria: [COMPLETAR: captura]
+- Disponibilidad por periodo en el detalle de maquinaria: [COMPLETAR: captura]
+- Solicitud de alquiler: [COMPLETAR: captura]
+- Bandeja de solicitudes con confirmar y rechazar: [COMPLETAR: captura]
+- Mis solicitudes con estado: [COMPLETAR: captura]
+- Planes de suscripción: [COMPLETAR: captura]
+- Gestión de la suscripción: [COMPLETAR: captura]
+
+**Video de ejecución:** [COMPLETAR: enlace al video de navegación del Sprint 2]
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Dado que el alcance del Sprint 2 se centró en la primera versión del Frontend de la Web Application, no se implementaron Web Services propios en este sprint. La Web Application consume una fake API con datos de prueba, por lo que aún no se cuenta con endpoints documentados con OpenAPI. La documentación del RESTful API se incorporará a partir del Sprint 3.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se resumen las actividades de despliegue de la Web Application de RentBuild durante el Sprint 2, realizadas en Vercel, el mismo proveedor utilizado para el Landing Page. Se desplegó la nueva versión del Landing Page y la primera versión de la Web Application, que consume una fake API.
+
+[COMPLETAR: pasos con capturas del despliegue (importación del repositorio de la Web Application, configuración, Production Deployment), URL pública de la Web Application, URL de la nueva versión del Landing Page y herramienta usada para la fake API.]
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+[COMPLETAR: descripción de la colaboración durante el Sprint 2 y capturas de los analíticos y commits de GitHub que reflejen el aporte individual de cada integrante.]
 
 # Conclusiones
 
