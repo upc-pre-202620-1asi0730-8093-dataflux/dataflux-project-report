@@ -1248,378 +1248,70 @@ El glosario reúne **términos del negocio en inglés**, con equivalente españo
 
 ## 3.1. User Stories
 
-El catálogo mantiene **US01–US35** y sus significados; la prioridad se especifica en el Product Backlog, no en la numeración. US04 es recuperación de contraseña y US05 cierre de sesión. US34/US35 cubren la landing; el resto de productos también debe cumplir los requisitos generales de responsive/i18n del statement. Las historias describen comportamiento esperado y no acreditan implementación ni aceptación.
+Las User Stories y Technical Stories representan los requisitos funcionales y técnicos identificados para el desarrollo progresivo de la solución. Las historias se organizan mediante Epics de acuerdo con las principales capacidades del producto, mientras que las Technical Stories permiten definir el soporte técnico necesario para implementar y evolucionar las funcionalidades de la solución.
 
-Las **TS01–TS09** utilizan el rol Developer y describen **contratos propuestos para AV2**, con ejemplos de request/response y errores. Las rutas y campos deben contrastarse con OpenAPI cuando se implemente el backend; no son evidencia de endpoints existentes. EP09 agrupa documentación y verificación técnica, sin introducir un nuevo bounded context. El control de acceso se exige antes de publicar recursos privados aunque las historias de autenticación se prioricen al final por valor de negocio.
-
-<table>
-<tr><th>Epic / Story ID</th><th>Título</th><th>Descripción</th><th>Criterios de Aceptación</th><th>Relacionado con (Epic ID)</th></tr>
-<tr>
-<td>EP01</td>
-<td>Gestión de usuarios y acceso</td>
-<td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de RentBuild.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US01</td>
-<td>Registro de usuario</td>
-<td>Como usuario, quiero registrarme en RentBuild para acceder a las funcionalidades de la plataforma.</td>
-<td><strong>Scenario 1</strong><br>Given la persona proporciona datos requeridos válidos y un correo no registrado<br>When la persona solicita crear su cuenta<br>Then el sistema registra una única cuenta y comunica el resultado<br><br><strong>Scenario 2</strong><br>Given los datos están incompletos o el correo ya pertenece a una cuenta<br>When la persona solicita el registro<br>Then el sistema comunica el impedimento y no crea una cuenta duplicada</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>US02</td>
-<td>Inicio de sesión</td>
-<td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario tiene una cuenta habilitada<br>When el usuario proporciona credenciales válidas<br>Then el sistema inicia una sesión y permite el acceso correspondiente a su cuenta<br><br><strong>Scenario 2</strong><br>Given las credenciales son inválidas<br>When el usuario solicita iniciar sesión<br>Then el sistema rechaza el acceso y no crea una sesión válida</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>US03</td>
-<td>Gestionar perfil</td>
-<td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario tiene una sesión y datos de perfil válidos<br>When el usuario solicita actualizar sus datos<br>Then el sistema conserva los nuevos valores y los devuelve al consultarse<br><br><strong>Scenario 2</strong><br>Given los datos requeridos son inválidos<br>When el usuario solicita guardar el perfil<br>Then el sistema informa el error y conserva la información anterior</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>US04</td>
-<td>Recuperar contraseña</td>
-<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
-<td><strong>Scenario 1</strong><br>Given una persona necesita recuperar acceso<br>When la persona proporciona un correo para recuperación<br>Then el sistema comunica la recepción de la solicitud y entrega instrucciones cuando la cuenta corresponde<br><br><strong>Scenario 2</strong><br>Given la recuperación presenta un código vencido o inválido<br>When la persona intenta cambiar la contraseña<br>Then el sistema no cambia las credenciales y permite solicitar una nueva recuperación</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>US05</td>
-<td>Cerrar sesión</td>
-<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario tiene una sesión activa<br>When el usuario solicita finalizarla<br>Then el sistema invalida la sesión y un acceso privado posterior requiere autenticación<br><br><strong>Scenario 2</strong><br>Given la sesión ya terminó<br>When el usuario vuelve a solicitar el cierre<br>Then el sistema mantiene el estado sin sesión y no modifica operaciones de negocio</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>EP02</td>
-<td>Gestión de maquinaria</td>
-<td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US06</td>
-<td>Registrar maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
-<td><strong>Scenario 1</strong><br>Given la empresa de alquiler proporciona datos válidos y un serial no registrado<br>When la empresa solicita registrar el equipo<br>Then el sistema conserva el equipo asociado al proveedor y permite consultarlo en su inventario<br><br><strong>Scenario 2</strong><br>Given faltan datos requeridos o el serial ya existe<br>When la empresa solicita registrar el equipo<br>Then el sistema informa el motivo y no crea un registro duplicado</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>US07</td>
-<td>Consultar maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
-<td><strong>Scenario 1</strong><br>Given la empresa de alquiler tiene equipos registrados<br>When la empresa consulta su inventario<br>Then el sistema devuelve sus equipos con identificación y estado<br><br><strong>Scenario 2</strong><br>Given la empresa no tiene equipos<br>When la empresa consulta el inventario<br>Then el sistema informa un resultado vacío y no incorpora equipos de otro proveedor</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>US08</td>
-<td>Actualizar información de maquinaria</td>
-<td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
-<td><strong>Scenario 1</strong><br>Given un equipo pertenece a la empresa de alquiler y los cambios son válidos<br>When la empresa solicita actualizarlo<br>Then el sistema conserva los cambios y devuelve los valores actualizados<br><br><strong>Scenario 2</strong><br>Given el cambio incumple un dato requerido o duplica un serial<br>When la empresa solicita actualizar el equipo<br>Then el sistema informa el error y conserva los valores anteriores</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>US09</td>
-<td>Consultar disponibilidad de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
-<td><strong>Scenario 1</strong><br>Given existen equipos y compromisos de disponibilidad registrados<br>When la empresa consulta disponibilidad<br>Then el sistema diferencia disponible, reservado, alquilado y en mantenimiento conforme a los registros<br><br><strong>Scenario 2</strong><br>Given un compromiso bloquea el equipo<br>When la empresa vuelve a consultar disponibilidad<br>Then el sistema no lo presenta como libre para el periodo bloqueado</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>US10</td>
-<td>Consultar estado de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo tiene un estado operativo registrado<br>When la empresa consulta su condición<br>Then el sistema devuelve el estado asociado al equipo consultado<br><br><strong>Scenario 2</strong><br>Given el equipo está en mantenimiento o no apto para alquiler<br>When la empresa consulta su condición<br>Then el sistema comunica la restricción y no lo considera apto para un nuevo alquiler</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>EP03</td>
-<td>Búsqueda y solicitud de alquiler</td>
-<td>Epic orientado a permitir que las pequeñas empresas constructoras encuentren maquinaria y gestionen solicitudes de alquiler.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US11</td>
-<td>Buscar maquinaria</td>
-<td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
-<td><strong>Scenario 1</strong><br>Given el catálogo contiene equipos con categorías y características<br>When la constructora establece criterios de búsqueda<br>Then el sistema devuelve equipos que cumplen los criterios<br><br><strong>Scenario 2</strong><br>Given ningún equipo cumple los criterios<br>When la constructora consulta los resultados<br>Then el sistema informa que no hay coincidencias sin sustituirlos por equipos que incumplen los filtros</td>
-<td>EP03</td>
-</tr>
-<tr>
-<td>US12</td>
-<td>Consultar información de maquinaria</td>
-<td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
-<td><strong>Scenario 1</strong><br>Given un equipo está disponible en el catálogo<br>When la constructora solicita sus detalles<br>Then el sistema devuelve características, estado, proveedor y condiciones de alquiler del mismo equipo<br><br><strong>Scenario 2</strong><br>Given el equipo ya no existe en el catálogo<br>When la constructora solicita sus detalles<br>Then el sistema comunica que no puede consultarse y no permite solicitar ese registro inexistente</td>
-<td>EP03</td>
-</tr>
-<tr>
-<td>US13</td>
-<td>Consultar disponibilidad para un periodo</td>
-<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo existe y el periodo es válido<br>When la constructora consulta disponibilidad<br>Then el sistema informa si el periodo está libre considerando compromisos y mantenimiento<br><br><strong>Scenario 2</strong><br>Given el rango es inválido o se solapa con un bloqueo<br>When la constructora consulta el periodo<br>Then el sistema diferencia el rango inválido del periodo no disponible y no autoriza una solicitud incompatible</td>
-<td>EP03</td>
-</tr>
-<tr>
-<td>US14</td>
-<td>Solicitar alquiler de maquinaria</td>
-<td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo tiene un periodo válido disponible<br>When la constructora solicita el alquiler<br>Then el sistema registra una solicitud pendiente con equipo, periodo y solicitante identificables<br><br><strong>Scenario 2</strong><br>Given el equipo no está disponible o el periodo es inválido<br>When la constructora solicita el alquiler<br>Then el sistema informa el impedimento y no registra una solicitud como confirmada</td>
-<td>EP03</td>
-</tr>
-<tr>
-<td>EP04</td>
-<td>Planes y suscripciones</td>
-<td>Epic orientado a la gestión de planes.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US15</td>
-<td>Visualizar planes disponibles</td>
-<td>Como usuario, quiero ver los planes para elegir uno.</td>
-<td><strong>Scenario 1</strong><br>Given hay planes publicados<br>When el usuario consulta las opciones de servicio<br>Then el sistema devuelve características, precio y periodicidad de cada plan<br><br><strong>Scenario 2</strong><br>Given un plan no está habilitado<br>When el usuario consulta opciones de contratación<br>Then el sistema no lo ofrece como una opción activa</td>
-<td>EP04</td>
-</tr>
-<tr>
-<td>US16</td>
-<td>Suscribirse a un plan</td>
-<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario elige un plan habilitado<br>When el usuario confirma la contratación<br>Then el sistema registra el plan seleccionado y comunica el estado de la suscripción<br><br><strong>Scenario 2</strong><br>Given el plan no existe o está deshabilitado<br>When el usuario intenta suscribirse<br>Then el sistema rechaza la selección y no activa una suscripción para ese plan</td>
-<td>EP04</td>
-</tr>
-<tr>
-<td>US17</td>
-<td>Cambiar de plan</td>
-<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario tiene una suscripción y el plan destino está habilitado<br>When el usuario solicita cambiar de plan<br>Then el sistema actualiza la referencia al plan y comunica las condiciones aplicables<br><br><strong>Scenario 2</strong><br>Given el plan destino no está habilitado<br>When el usuario solicita el cambio<br>Then el sistema informa el impedimento y conserva el plan anterior</td>
-<td>EP04</td>
-</tr>
-<tr>
-<td>EP05</td>
-<td>Gestión de reservas y alquileres</td>
-<td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US18</td>
-<td>Gestionar solicitudes de alquiler</td>
-<td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
-<td><strong>Scenario 1</strong><br>Given la empresa de alquiler ha recibido solicitudes<br>When la empresa consulta su bandeja<br>Then el sistema devuelve equipo, periodo, solicitante y estado de solicitudes dirigidas a esa empresa<br><br><strong>Scenario 2</strong><br>Given la empresa no ha recibido solicitudes<br>When la empresa consulta la bandeja<br>Then el sistema devuelve un resultado vacío sin incluir solicitudes de otro proveedor</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>US19</td>
-<td>Confirmar o rechazar una solicitud</td>
-<td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
-<td><strong>Scenario 1</strong><br>Given una solicitud propia está pendiente y el periodo sigue disponible<br>When la empresa de alquiler la aprueba<br>Then el sistema registra la aprobación y el compromiso del periodo sin duplicar la asignación<br><br><strong>Scenario 2</strong><br>Given una solicitud propia está pendiente<br>When la empresa de alquiler la rechaza con un motivo<br>Then el sistema registra el rechazo y no ocupa el periodo como alquiler confirmado<br><br><strong>Scenario 3</strong><br>Given la solicitud ya fue decidida o el periodo dejó de estar disponible<br>When la empresa intenta aprobarla<br>Then el sistema informa el conflicto y no confirma una asignación incompatible</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>US20</td>
-<td>Consultar alquileres activos</td>
-<td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
-<td><strong>Scenario 1</strong><br>Given la empresa de alquiler tiene operaciones activas<br>When la empresa consulta sus alquileres<br>Then el sistema devuelve sus equipos, periodos y estados de operaciones activas<br><br><strong>Scenario 2</strong><br>Given no hay operaciones activas<br>When la empresa consulta sus alquileres<br>Then el sistema devuelve un resultado vacío sin incluir operaciones cerradas como activas</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>US21</td>
-<td>Consultar estado de una solicitud de alquiler</td>
-<td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
-<td><strong>Scenario 1</strong><br>Given la constructora ha presentado solicitudes<br>When la constructora consulta su seguimiento<br>Then el sistema devuelve el estado que corresponde a la última decisión de cada solicitud propia<br><br><strong>Scenario 2</strong><br>Given la solicitud pertenece a otra constructora<br>When la empresa intenta consultar su seguimiento<br>Then el sistema no entrega datos de la operación ajena</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>US22</td>
-<td>Gestionar entregas y devoluciones</td>
-<td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
-<td><strong>Scenario 1</strong><br>Given hay un alquiler confirmado sin entrega registrada<br>When la empresa registra la entrega<br>Then el sistema relaciona equipo, operación y fecha de entrega una sola vez<br><br><strong>Scenario 2</strong><br>Given hay una entrega previa y aún no se registra el retorno<br>When la empresa registra la devolución y condición del equipo<br>Then el sistema conserva fecha y condición del retorno y permite seguir la revisión del equipo<br><br><strong>Scenario 3</strong><br>Given no hay entrega previa o el retorno ya está registrado<br>When la empresa intenta registrar la devolución<br>Then el sistema informa el impedimento y no crea una devolución duplicada o sin entrega</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>EP06</td>
-<td>Gestión de mantenimiento e incidencias</td>
-<td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US23</td>
-<td>Registrar mantenimiento</td>
-<td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
-<td><strong>Scenario 1</strong><br>Given existe un equipo y se proporcionan datos válidos de una intervención<br>When la empresa registra el mantenimiento realizado<br>Then el sistema conserva tipo, fecha y estado de la intervención asociada al equipo<br><br><strong>Scenario 2</strong><br>Given el equipo no existe o faltan datos de la intervención<br>When la empresa intenta registrar el mantenimiento<br>Then el sistema comunica el error y no crea un registro incompleto</td>
-<td>EP06</td>
-</tr>
-<tr>
-<td>US24</td>
-<td>Programar mantenimiento</td>
-<td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo requiere atención y el periodo propuesto es válido<br>When la empresa programa el mantenimiento<br>Then el sistema conserva la programación y considera el bloqueo correspondiente al consultar disponibilidad<br><br><strong>Scenario 2</strong><br>Given la programación contiene un periodo inválido<br>When la empresa solicita guardarla<br>Then el sistema informa el error y no registra un bloqueo inválido</td>
-<td>EP06</td>
-</tr>
-<tr>
-<td>US25</td>
-<td>Registrar incidencia de maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo existe y se describe un problema<br>When la empresa registra una incidencia<br>Then el sistema conserva la descripción y su relación con el equipo para seguimiento<br><br><strong>Scenario 2</strong><br>Given no se identifica el equipo o falta la descripción<br>When la empresa intenta registrar la incidencia<br>Then el sistema informa el error y no crea una incidencia sin trazabilidad</td>
-<td>EP06</td>
-</tr>
-<tr>
-<td>US26</td>
-<td>Consultar historial de maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo tiene operaciones e intervenciones registradas<br>When la empresa consulta su historial<br>Then el sistema devuelve la secuencia de alquileres, incidencias y mantenimientos con fechas e identificadores<br><br><strong>Scenario 2</strong><br>Given el equipo no tiene antecedentes<br>When la empresa consulta el historial<br>Then el sistema devuelve un historial vacío sin mezclar antecedentes de otro equipo</td>
-<td>EP06</td>
-</tr>
-<tr>
-<td>EP07</td>
-<td>Información y contratación del servicio</td>
-<td>Epic orientado a brindar información sobre RentBuild y facilitar el contacto de potenciales clientes con la plataforma.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US27</td>
-<td>Consultar información de RentBuild</td>
-<td>Como visitante, quiero conocer las funcionalidades y beneficios de RentBuild para determinar si la solución se adapta a las necesidades de mi empresa.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante desea evaluar el servicio<br>When el visitante consulta información de RentBuild<br>Then el contenido explica propósito, segmentos, funcionalidades y beneficios<br><br><strong>Scenario 2</strong><br>Given el visitante consulta los dos segmentos<br>When el visitante evalúa la propuesta<br>Then el contenido permite distinguir los beneficios para alquiler y construcción</td>
-<td>EP07</td>
-</tr>
-<tr>
-<td>US28</td>
-<td>Solicitar demostración</td>
-<td>Como visitante, quiero solicitar una demostración de RentBuild para conocer cómo funciona antes de utilizar el servicio.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante proporciona contacto válido para una demostración<br>When el visitante envía la solicitud por el canal publicado<br>Then el sistema comunica recepción solo cuando el canal confirma el envío; una simulación se identifica como tal<br><br><strong>Scenario 2</strong><br>Given faltan datos de contacto válidos o falla el envío<br>When el visitante solicita la demostración<br>Then el sistema informa el problema sin declarar una solicitud recibida</td>
-<td>EP07</td>
-</tr>
-<tr>
-<td>US29</td>
-<td>Contactar con RentBuild</td>
-<td>Como visitante, quiero contactar con el equipo de RentBuild para realizar consultas sobre el servicio.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante tiene una consulta y un contacto válido<br>When el visitante utiliza el canal de contacto publicado<br>Then el sistema informa cómo se tramita la consulta y solo declara envío cuando existe confirmación<br><br><strong>Scenario 2</strong><br>Given el canal no puede tramitar el mensaje<br>When el visitante intenta contactar<br>Then el sistema comunica el impedimento y no presenta una confirmación ficticia</td>
-<td>EP07</td>
-</tr>
-<tr>
-<td>EP08</td>
-<td>Landing Page de RentBuild</td>
-<td>Epic orientado a presentar la propuesta de valor de RentBuild y facilitar la navegación de los potenciales clientes hacia las funcionalidades y acciones principales de la plataforma.</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>US30</td>
-<td>Visualizar propuesta de valor</td>
-<td>Como visitante, quiero identificar la propuesta de valor de RentBuild para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante busca comprender el producto<br>When el visitante consulta la propuesta de valor<br>Then el contenido identifica el problema del ciclo de alquiler y el beneficio de centralizarlo<br><br><strong>Scenario 2</strong><br>Given el visitante compara los segmentos<br>When el visitante evalúa los beneficios<br>Then el contenido incluye tanto control para proveedores como búsqueda y seguimiento para constructoras</td>
-<td>EP08</td>
-</tr>
-<tr>
-<td>US31</td>
-<td>Explorar funcionalidades principales</td>
-<td>Como visitante, quiero conocer las principales funcionalidades de RentBuild para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante evalúa capacidades de RentBuild<br>When el visitante consulta funcionalidades<br>Then el contenido explica inventario, disponibilidad, solicitudes, seguimiento y mantenimiento<br><br><strong>Scenario 2</strong><br>Given una capacidad corresponde a una etapa futura<br>When el visitante consulta su descripción<br>Then el contenido la identifica como prevista y no como una función comprobada de la versión actual</td>
-<td>EP08</td>
-</tr>
-<tr>
-<td>US32</td>
-<td>Identificar la solución para mi empresa</td>
-<td>Como visitante, quiero identificar cómo RentBuild puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante pertenece a una empresa de alquiler<br>When el visitante consulta la solución para su segmento<br>Then el contenido explica control de inventario, solicitudes y equipos<br><br><strong>Scenario 2</strong><br>Given el visitante pertenece a una constructora<br>When el visitante consulta la solución para su segmento<br>Then el contenido explica búsqueda, disponibilidad, solicitud y seguimiento</td>
-<td>EP08</td>
-</tr>
-<tr>
-<td>US33</td>
-<td>Acceder a la Web Application</td>
-<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de RentBuild.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante identifica su segmento<br>When el visitante solicita acceder a la aplicación<br>Then el destino corresponde a la Web Application y al acceso previsto para su segmento<br><br><strong>Scenario 2</strong><br>Given el acceso público no está disponible<br>When el visitante intenta acceder<br>Then el contenido informa la limitación y no declara que existe un workspace operativo</td>
-<td>EP08</td>
-</tr>
-<tr>
-<td>US34</td>
-<td>Consultar el Landing Page en diferentes dispositivos</td>
-<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer RentBuild sin importar el dispositivo que utilice.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante utiliza un navegador desktop<br>When el visitante consulta el Landing Page<br>Then el contenido y la navegación conservan su información y funcionalidad<br><br><strong>Scenario 2</strong><br>Given el visitante utiliza un navegador móvil<br>When el visitante consulta el Landing Page<br>Then el contenido se adapta sin recortar información ni impedir el acceso a sus funciones de navegación</td>
-<td>EP08</td>
-</tr>
-<tr>
-<td>US35</td>
-<td>Cambiar el idioma del Landing Page</td>
-<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de RentBuild en el idioma de mi preferencia.</td>
-<td><strong>Scenario 1</strong><br>Given el visitante no ha establecido una preferencia<br>When el visitante consulta el Landing Page<br>Then el contenido utiliza inglés por defecto con locale en-US y acepta en_US como alias<br><br><strong>Scenario 2</strong><br>Given el visitante solicita español latinoamericano<br>When el visitante cambia la preferencia a es-419 o su alias es_419<br>Then el contenido se presenta en ese idioma y conserva navegación y destinos</td>
-<td>EP08</td>
-</tr>
-<tr><td>EP09</td><td>Documentación y verificación técnica</td><td>Epic de soporte para contratos OpenAPI y pruebas del RESTful API.</td><td>—</td><td>—</td></tr>
-<tr>
-<td>TS01</td>
-<td>Contratos REST de inventario</td>
-<td>Como Developer, quiero exponer registro, consulta y actualización de equipos para integrar US06–US10 sin depender de datos de demostración.</td>
-<td><strong>Scenario 1</strong><br>Given el proveedor está autorizado y el serial es nuevo<br>When el cliente envía POST /api/v1/equipment con name, serialNumber, categoryId y datos de alquiler válidos<br>Then la respuesta es 201 con id, proveedor asociado y estado; GET /api/v1/equipment/{id} devuelve el mismo registro<br><br><strong>Scenario 2</strong><br>Given el cliente envía un serial duplicado o datos inválidos<br>When el servidor procesa POST o PUT /api/v1/equipment/{id}<br>Then la respuesta es 409 para duplicidad o 400 para validación y no modifica el inventario<br><br><strong>Scenario 3</strong><br>Given el equipo pertenece a otro proveedor<br>When el cliente intenta actualizarlo<br>Then la respuesta es 403 y no cambia el equipo; la pertenencia se verifica en servidor</td>
-<td>EP02</td>
-</tr>
-<tr>
-<td>TS02</td>
-<td>Contratos REST de búsqueda y disponibilidad</td>
-<td>Como Developer, quiero consultar catálogo y disponibilidad por periodo para integrar US11–US13 y la validación de fechas.</td>
-<td><strong>Scenario 1</strong><br>Given existen equipos que cumplen los filtros<br>When el cliente envía GET /api/v1/equipment?categoryId={id}&amp;query={text}<br>Then la respuesta es 200 con items que cumplen los filtros; si no hay coincidencias, items es una lista vacía<br><br><strong>Scenario 2</strong><br>Given el equipo existe y el rango es válido<br>When el cliente envía GET /api/v1/equipment/{id}/availability?startDate={start}&amp;endDate={end}<br>Then la respuesta es 200 con equipmentId, startDate, endDate y available; un compromiso o mantenimiento incompatible produce available=false<br><br><strong>Scenario 3</strong><br>Given el rango tiene fin anterior al inicio o el equipo no existe<br>When el cliente consulta disponibilidad<br>Then la respuesta es 400 para rango inválido o 404 para equipo inexistente, sin presentar disponibilidad positiva<br><br><strong>Scenario 4</strong><br>Given el equipo forma parte del catálogo consultable<br>When el cliente envía GET /api/v1/equipment/{id}<br>Then la respuesta es 200 con id, características, condición, tarifa y condiciones de alquiler correspondientes al equipo; un id inexistente devuelve 404</td>
-<td>EP03</td>
-</tr>
-<tr>
-<td>TS03</td>
-<td>Contratos REST de solicitudes y decisiones</td>
-<td>Como Developer, quiero crear, consultar y decidir solicitudes para integrar US14, US18, US19 y US21 con estados y conflictos comprobables.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo y periodo son válidos y la constructora está autorizada<br>When el cliente envía POST /api/v1/rental-requests con equipmentId, startDate y endDate<br>Then la respuesta es 201 con id y status=PENDING; el solicitante y proveedor se resuelven y validan en servidor<br><br><strong>Scenario 2</strong><br>Given una solicitud propia está pendiente y el periodo sigue disponible<br>When el proveedor envía PATCH /api/v1/rental-requests/{id}/decision con decision=APPROVE<br>Then la respuesta es 200 con status=APPROVED y el periodo se compromete sin doble asignación<br><br><strong>Scenario 3</strong><br>Given una solicitud propia está pendiente y el proveedor indica un motivo<br>When el cliente envía la decisión REJECT y reason<br>Then la respuesta es 200 con status=REJECTED y no confirma el periodo; el rechazo no exige disponibilidad<br><br><strong>Scenario 4</strong><br>Given la solicitud ya se decidió, un periodo de aprobación se solapa o el cliente opera sobre una solicitud ajena<br>When el cliente intenta decidir nuevamente, envía APPROVE para el periodo solapado o decide/consulta el recurso ajeno<br>Then la respuesta es 409 para la decisión repetida o aprobación conflictiva, o 403 para la operación ajena; el estado y las asignaciones previas se conservan. Consultar una solicitud propia ya decidida sigue respondiendo 200; el solapamiento no impide rechazar una solicitud propia pendiente con motivo<br><br><strong>Scenario 5</strong><br>Given el usuario está autorizado como proveedor o solicitante<br>When el cliente envía GET /api/v1/rental-requests o GET /api/v1/rental-requests/{id}<br>Then la respuesta es 200 con las solicitudes recibidas o enviadas que le corresponden, incluyendo id, equipmentId, periodo y estado de la última decisión; una consulta ajena devuelve 403 y una solicitud inexistente devuelve 404</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>TS04</td>
-<td>Contratos REST del ciclo de alquiler</td>
-<td>Como Developer, quiero consultar alquileres y registrar entregas y devoluciones para integrar US20 y US22 con operaciones trazables.</td>
-<td><strong>Scenario 1</strong><br>Given el proveedor está autorizado<br>When el cliente envía GET /api/v1/rental-contracts?status=ACTIVE<br>Then la respuesta es 200 con items del proveedor, equipo, periodo y estado; las operaciones cerradas no se incluyen como activas<br><br><strong>Scenario 2</strong><br>Given el alquiler está confirmado y no tiene entrega<br>When el cliente envía POST /api/v1/rental-contracts/{id}/deliveries con datos válidos de la entrega<br>Then la respuesta es 201 con id, contractId y deliveredAt; un segundo registro incompatible devuelve 409<br><br><strong>Scenario 3</strong><br>Given hay entrega previa sin retorno<br>When el cliente envía POST /api/v1/rental-contracts/{id}/returns con condition y datos válidos<br>Then la respuesta es 201 con id, contractId y returnedAt; una devolución sin entrega previa o duplicada devuelve 409</td>
-<td>EP05</td>
-</tr>
-<tr>
-<td>TS05</td>
-<td>Contratos REST de mantenimiento e historial</td>
-<td>Como Developer, quiero registrar incidencias e intervenciones y consultar antecedentes para integrar US23–US26 y la condición operativa del equipo.</td>
-<td><strong>Scenario 1</strong><br>Given el equipo existe y pertenece al proveedor<br>When el cliente envía POST /api/v1/incidents con equipmentId y description o POST /api/v1/maintenance-records con equipmentId, type y periodo válido<br>Then la respuesta es 201 con id y equipmentId; la programación que bloquee el periodo se considera en disponibilidad<br><br><strong>Scenario 2</strong><br>Given el equipo no existe o la entrada es inválida<br>When el cliente registra una incidencia o mantenimiento<br>Then la respuesta es 404 o 400, respectivamente, sin persistir un registro incompleto<br><br><strong>Scenario 3</strong><br>Given el proveedor está autorizado para el equipo<br>When el cliente envía GET /api/v1/equipment/{id}/history<br>Then la respuesta es 200 con antecedentes identificables y fechados del mismo equipo; sin antecedentes, items es una lista vacía</td>
-<td>EP06</td>
-</tr>
-<tr>
-<td>TS06</td>
-<td>Contratos REST de perfil</td>
-<td>Como Developer, quiero consultar y actualizar el perfil propio para integrar US03 con validación y pertenencia comprobadas en servidor.</td>
-<td><strong>Scenario 1</strong><br>Given el usuario está autenticado y los datos de contacto son válidos<br>When el cliente envía PATCH /api/v1/profiles/me con los cambios de perfil<br>Then la respuesta es 200 con el perfil actualizado; GET /api/v1/profiles/me devuelve esos valores<br><br><strong>Scenario 2</strong><br>Given los datos requeridos son inválidos o falta una sesión válida<br>When el cliente intenta actualizar el perfil<br>Then la respuesta es 400 por validación o 401 por falta de autenticación y conserva los valores anteriores</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>TS07</td>
-<td>Contratos REST de planes y suscripciones</td>
-<td>Como Developer, quiero consultar planes y registrar o cambiar suscripciones para integrar US15–US17 sin declarar pagos o activaciones no confirmados.</td>
-<td><strong>Scenario 1</strong><br>Given hay planes habilitados<br>When el cliente envía GET /api/v1/subscription-plans<br>Then la respuesta es 200 con id, características, precio y periodicidad de planes habilitados<br><br><strong>Scenario 2</strong><br>Given el usuario está autorizado y el plan está habilitado<br>When el cliente envía POST /api/v1/subscriptions con planId o PATCH /api/v1/subscriptions/{id}/plan con el nuevo planId<br>Then la respuesta es 201 o 200 con planId y estado real de la suscripción; no declara pago exitoso sin confirmación del mecanismo de pago<br><br><strong>Scenario 3</strong><br>Given el plan no existe, está deshabilitado o la suscripción pertenece a otro usuario<br>When el cliente envía POST /api/v1/subscriptions o PATCH /api/v1/subscriptions/{id}/plan<br>Then la respuesta es 404 para plan inexistente, 400 para plan deshabilitado o 403 para suscripción ajena y no activa ni modifica la suscripción</td>
-<td>EP04</td>
-</tr>
-<tr>
-<td>TS08</td>
-<td>Contratos REST de identidad y acceso</td>
-<td>Como Developer, quiero gestionar registro, sesiones y recuperación para integrar US01, US02, US04 y US05 y proteger los recursos privados.</td>
-<td><strong>Scenario 1</strong><br>Given los datos de registro son válidos y el correo no existe<br>When el cliente envía POST /api/v1/auth/register<br>Then la respuesta es 201 con el identificador de cuenta; no devuelve contraseñas ni hashes<br><br><strong>Scenario 2</strong><br>Given la cuenta está habilitada<br>When el cliente envía POST /api/v1/auth/login con credenciales válidas<br>Then la respuesta es 200 con una sesión y expiración; credenciales inválidas devuelven 401<br><br><strong>Scenario 3</strong><br>Given una persona solicita recuperar acceso<br>When el cliente envía POST /api/v1/auth/password-recovery con email válido<br>Then la respuesta es 202 con un mensaje genérico de recepción sin exponer si existe la cuenta; POST /api/v1/auth/password-reset con código inválido devuelve 400 y no cambia credenciales<br><br><strong>Scenario 4</strong><br>Given existe una sesión<br>When el cliente envía POST /api/v1/auth/logout<br>Then la respuesta es 204 y esa sesión no permite una nueva solicitud privada; el control se verifica en servidor</td>
-<td>EP01</td>
-</tr>
-<tr>
-<td>TS09</td>
-<td>Contrato OpenAPI y verificación de API</td>
-<td>Como Developer, quiero documentar y comprobar los contratos REST para integrar el frontend con especificaciones y pruebas reproducibles.</td>
-<td><strong>Scenario 1</strong><br>Given el servicio propuesto está implementado en la etapa AV2<br>When el cliente envía GET /openapi.json<br>Then la respuesta es 200 con una especificación OpenAPI de las rutas implementadas, entradas, respuestas y errores; Swagger permite consultarla<br><br><strong>Scenario 2</strong><br>Given se dispone de un equipo y periodo de prueba controlados<br>When se ejecuta la prueba de integración del request de disponibilidad y de decisión conflictiva<br>Then las respuestas verifican 200 con available y 409 por conflicto; la prueba comprueba que no existe una doble asignación<br><br><strong>Scenario 3</strong><br>Given el proveedor está autorizado y falta name en los datos de un equipo<br>When el cliente envía POST /api/v1/equipment con Accept-Language correspondiente a en-US o es-419, o sin preferencia<br>Then la respuesta es 400 con código de validación estable y mensaje en el idioma soportado solicitado, con inglés por defecto; las pruebas unitarias e integración se documentan sin atribuirles ejecución previa</td>
-<td>EP09</td>
-</tr>
-</table>
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
+| :---: | :--- | :--- | :--- | :--- |
+| **EP01** | **Gestión de usuarios y acceso** | Gestiona el registro, acceso, perfil y recuperación de acceso de los usuarios de MaquiGest. | N/A | — |
+| US01 | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | **Given** que el usuario proporciona la información obligatoria y válida, **When** solicita registrarse, **Then** el sistema crea su cuenta.<br><br>**Given** que el usuario proporciona información que ya se encuentra registrada, **When** solicita registrarse, **Then** el sistema rechaza el registro.<br><br>**Given** que faltan datos obligatorios o presentan un formato inválido, **When** solicita registrarse, **Then** el sistema rechaza la operación e informa la validación correspondiente. | EP01 |
+| US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | **Given** que existe una cuenta con credenciales válidas, **When** el usuario inicia sesión, **Then** el sistema permite el acceso a su cuenta.<br><br>**Given** que las credenciales proporcionadas no son válidas, **When** el usuario intenta iniciar sesión, **Then** el sistema rechaza el acceso. | EP01 |
+| US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | **Given** que existe un perfil de usuario, **When** el usuario proporciona información válida para actualizarlo, **Then** el sistema actualiza la información.<br><br>**Given** que la información proporcionada no cumple las validaciones establecidas, **When** el usuario intenta actualizar su perfil, **Then** el sistema rechaza los datos inválidos. | EP01 |
+| US04 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | **Given** que existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema permite iniciar el proceso de recuperación.<br><br>**Given** que no existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema rechaza la solicitud. | EP01 |
+| US05 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | **Given** que el usuario tiene una sesión activa, **When** solicita cerrar sesión, **Then** el sistema finaliza la sesión.<br><br>**Given** que no existe una sesión activa, **When** se solicita cerrar sesión, **Then** el sistema no permite continuar con una sesión autenticada. | EP01 |
+| TS02 | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | **Given** que existe un perfil de usuario, **When** un cliente autorizado consulta el recurso correspondiente, **Then** la API devuelve la información del perfil.<br><br>**Given** que se proporciona información válida para actualizar un perfil, **When** el cliente realiza la solicitud, **Then** la API actualiza el perfil y devuelve la información correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se solicita la actualización, **Then** la API rechaza la operación. | US03 |
+| **EP02** | **Gestión de maquinaria** | Permite administrar el inventario, información, disponibilidad y estado de la maquinaria de las empresas de alquiler. | N/A | — |
+| US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | **Given** que la empresa proporciona la información obligatoria de una maquinaria, **When** solicita registrarla, **Then** el sistema registra la maquinaria en el inventario.<br><br>**Given** que faltan datos obligatorios, **When** la empresa intenta registrar la maquinaria, **Then** el sistema rechaza el registro. | EP02 |
+| US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | **Given** que existen maquinarias registradas, **When** la empresa solicita consultarlas, **Then** el sistema devuelve las maquinarias correspondientes.<br><br>**Given** que no existen maquinarias registradas, **When** la empresa consulta su inventario, **Then** el sistema informa que no existen registros disponibles. | EP02 |
+| US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida para actualizarla, **Then** el sistema actualiza sus datos.<br><br>**Given** que la maquinaria no existe, **When** la empresa intenta actualizarla, **Then** el sistema rechaza la operación. | EP02 |
+| US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | **Given** que existen maquinarias registradas, **When** la empresa consulta su disponibilidad, **Then** el sistema muestra el estado de disponibilidad correspondiente.<br><br>**Given** que una maquinaria se encuentra comprometida durante un periodo, **When** se consulta su disponibilidad, **Then** el sistema la identifica como no disponible para dicho periodo. | EP02 |
+| US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su estado, **Then** el sistema devuelve su condición actual.<br><br>**Given** que la maquinaria no existe, **When** se solicita su estado, **Then** el sistema rechaza la consulta. | EP02 |
+| TS03 | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | **Given** que el usuario tiene permisos para gestionar maquinaria, **When** el cliente envía una solicitud válida para registrar, consultar o actualizar una maquinaria, **Then** la API procesa la operación.<br><br>**Given** que una operación de maquinaria se procesa correctamente, **When** la API responde, **Then** devuelve la información correspondiente del recurso.<br><br>**Given** que la solicitud contiene información inválida, **When** se procesa, **Then** la API rechaza la operación. | US06, US07, US08 |
+| TS04 | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | **Given** que existe una maquinaria registrada, **When** el cliente solicita su disponibilidad para un periodo válido, **Then** la API devuelve la disponibilidad correspondiente.<br><br>**Given** que el periodo solicitado es inválido, **When** se realiza la consulta, **Then** la API rechaza la solicitud. | US09, US13 |
+| **EP03** | **Búsqueda y solicitud de alquiler** | Permite a las empresas constructoras buscar maquinaria, consultar sus características y disponibilidad y solicitar alquileres. | N/A | — |
+| US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | **Given** que existen maquinarias registradas, **When** la empresa realiza una búsqueda válida, **Then** el sistema devuelve las maquinarias que coinciden con los criterios indicados.<br><br>**Given** que no existen maquinarias que coincidan con los criterios, **When** la empresa realiza una búsqueda, **Then** el sistema informa que no existen resultados. | EP03 |
+| US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su información, **Then** el sistema devuelve sus características.<br><br>**Given** que la maquinaria no existe, **When** la empresa solicita su información, **Then** el sistema rechaza la consulta. | EP03 |
+| US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su disponibilidad para un periodo válido, **Then** el sistema indica si se encuentra disponible.<br><br>**Given** que la maquinaria se encuentra comprometida durante parte del periodo solicitado, **When** se consulta su disponibilidad, **Then** el sistema indica que no se encuentra disponible para dicho periodo. | EP03 |
+| US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | **Given** que la maquinaria está disponible para el periodo solicitado, **When** la empresa registra una solicitud de alquiler válida, **Then** el sistema registra la solicitud con estado inicial PENDING.<br><br>**Given** que la maquinaria no está disponible para el periodo solicitado, **When** la empresa intenta solicitar el alquiler, **Then** el sistema rechaza la solicitud.<br><br>**Given** que la solicitud de alquiler se registra correctamente, **When** finaliza la creación de la solicitud, **Then** se genera la notificación correspondiente para la empresa de alquiler. | EP03 |
+| TS05 | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | **Given** que existe una maquinaria disponible, **When** el cliente envía una solicitud válida de alquiler, **Then** la API registra la solicitud y devuelve su identificador y estado inicial.<br><br>**Given** que existe una solicitud de alquiler, **When** el cliente autorizado consulta el recurso, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no está disponible, **When** se intenta crear la solicitud, **Then** la API rechaza la operación. | US14, US21 |
+| **EP04** | **Planes y suscripciones** | Permite consultar y gestionar las opciones de suscripción disponibles para los usuarios de MaquiGest. | N/A | — |
+| US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | **Given** que existen planes configurados, **When** el usuario consulta las opciones disponibles, **Then** el sistema muestra la información de los planes.<br><br>**Given** que no existen planes disponibles, **When** el usuario realiza la consulta, **Then** el sistema informa que no existen opciones disponibles. | EP04 |
+| US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | **Given** que existen planes disponibles, **When** el usuario selecciona un plan válido, **Then** el sistema registra la selección correspondiente.<br><br>**Given** que el plan seleccionado no está disponible, **When** el usuario intenta seleccionarlo, **Then** el sistema rechaza la operación. | EP04 |
+| US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | **Given** que existe una suscripción asociada al usuario, **When** el usuario solicita consultar o modificar la información permitida, **Then** el sistema procesa la operación.<br><br>**Given** que no existe una suscripción válida, **When** el usuario intenta gestionarla, **Then** el sistema rechaza la operación. | EP04 |
+| TS09 | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | **Given** que existen planes configurados, **When** el cliente solicita los planes disponibles, **Then** la API devuelve la información correspondiente.<br><br>**Given** que se proporciona una selección de plan válida, **When** el cliente registra la selección, **Then** la API devuelve el estado correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se procesa la solicitud, **Then** la API rechaza la operación. | US15, US16, US17 |
+| **EP05** | **Gestión de reservas y alquileres** | Permite administrar solicitudes, decisiones de alquiler, alquileres activos, entregas y devoluciones. | N/A | — |
+| US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | **Given** que existen solicitudes de alquiler registradas, **When** la empresa consulta sus solicitudes, **Then** el sistema muestra las solicitudes recibidas y su información relevante.<br><br>**Given** que existen solicitudes pendientes, **When** la empresa consulta las solicitudes, **Then** el sistema permite identificar aquellas que se encuentran pendientes.<br><br>**Given** que no existen solicitudes registradas, **When** la empresa consulta las solicitudes, **Then** el sistema informa que no existen solicitudes disponibles. | EP05 |
+| US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | **Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** el sistema actualiza su estado a CONFIRMED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** el sistema actualiza su estado a REJECTED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que la solicitud no se encuentra pendiente, **When** la empresa intenta confirmarla o rechazarla, **Then** el sistema rechaza la operación. | EP05 |
+| US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | **Given** que existen alquileres activos, **When** la empresa solicita consultarlos, **Then** el sistema devuelve los alquileres que se encuentran en curso.<br><br>**Given** que no existen alquileres activos, **When** la empresa realiza la consulta, **Then** el sistema informa que no existen alquileres en curso. | EP05 |
+| US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | **Given** que existe una solicitud asociada a la empresa constructora, **When** consulta su estado, **Then** el sistema devuelve el estado actual de la solicitud.<br><br>**Given** que la solicitud no existe o no pertenece a la empresa constructora, **When** se consulta su estado, **Then** el sistema rechaza la consulta. | EP05 |
+| US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | **Given** que existe un alquiler confirmado, **When** la empresa registra una entrega válida, **Then** el sistema registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** la empresa registra una devolución válida, **Then** el sistema registra la devolución y actualiza el estado de la maquinaria.<br><br>**Given** que no existe un alquiler válido asociado a la operación, **When** se intenta registrar una entrega o devolución, **Then** el sistema rechaza la operación. | EP05 |
+| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
+| TS07 | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | **Given** que existe un alquiler confirmado, **When** el cliente registra una entrega válida, **Then** la API registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** el cliente registra una devolución válida, **Then** la API registra la devolución y actualiza el estado correspondiente.<br><br>**Given** que la operación no corresponde al estado actual del alquiler, **When** se registra la operación, **Then** la API la rechaza. | US22 |
+| **EP06** | **Gestión de mantenimiento e incidencias** | Permite registrar, programar y consultar mantenimientos e incidencias relacionadas con la maquinaria. | N/A | — |
+| US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida del mantenimiento, **Then** el sistema registra la intervención.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar un mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
+| US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona una fecha válida de mantenimiento, **Then** el sistema registra la programación.<br><br>**Given** que la fecha proporcionada no es válida, **When** la empresa intenta programar el mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
+| US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa registra una incidencia válida, **Then** el sistema almacena la incidencia.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar la incidencia, **Then** el sistema rechaza la operación. | EP06 |
+| US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su historial, **Then** el sistema devuelve los mantenimientos e incidencias registrados.<br><br>**Given** que no existen registros históricos, **When** la empresa consulta el historial, **Then** el sistema informa que no existen registros disponibles. | EP06 |
+| TS08 | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | **Given** que existe una maquinaria registrada, **When** el cliente envía información válida de mantenimiento o incidencia, **Then** la API almacena la información.<br><br>**Given** que existen registros históricos, **When** el cliente consulta el historial, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar información, **Then** la API rechaza la operación. | US23, US24, US25, US26 |
+| **EP07** | **Información y contratación del servicio** | Permite a los visitantes conocer MaquiGest, solicitar una demostración y contactar con el equipo. | N/A | — |
+| US27 | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | **Given** que el visitante accede a la información de MaquiGest, **When** consulta el contenido disponible, **Then** el sistema presenta información sobre la solución y su propuesta de valor.<br><br>**Given** que el visitante consulta la información, **When** navega por el contenido, **Then** puede identificar las características principales de MaquiGest. | EP07 |
+| US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | **Given** que el visitante proporciona la información requerida, **When** solicita una demostración, **Then** el sistema registra la solicitud.<br><br>**Given** que faltan datos obligatorios, **When** el visitante solicita la demostración, **Then** el sistema rechaza la solicitud. | EP07 |
+| US29 | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | **Given** que el visitante proporciona la información requerida, **When** envía una consulta, **Then** el sistema registra el contacto.<br><br>**Given** que faltan datos obligatorios, **When** el visitante intenta enviar la consulta, **Then** el sistema rechaza el envío. | EP07 |
+| **EP08** | **Landing Page de MaquiGest** | Presenta la propuesta de valor, funcionalidades y soluciones de MaquiGest mediante una experiencia web accesible y adaptable. | N/A | — |
+| US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | **Given** que el visitante accede al Landing Page, **When** consulta la propuesta de valor, **Then** el sistema presenta la información correspondiente.<br><br>**Given** que el visitante consulta la propuesta de valor, **When** continúa explorando el contenido, **Then** puede identificar el beneficio principal de MaquiGest. | EP08 |
+| US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | **Given** que el visitante accede al contenido de funcionalidades, **When** consulta la información, **Then** el sistema presenta las funcionalidades principales de MaquiGest.<br><br>**Given** que el visitante revisa las funcionalidades, **When** consulta cada característica, **Then** puede comprender su propósito general. | EP08 |
+| US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | **Given** que el visitante pertenece a uno de los segmentos objetivo, **When** consulta las soluciones disponibles, **Then** el sistema presenta información correspondiente a su tipo de empresa.<br><br>**Given** que el visitante revisa las soluciones, **When** compara la información con sus necesidades, **Then** puede identificar la propuesta correspondiente a su segmento. | EP08 |
+| US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | **Given** que el visitante se encuentra en el Landing Page, **When** solicita acceder a la Web Application, **Then** el sistema dirige al visitante hacia la experiencia correspondiente.<br><br>**Given** que el acceso a la Web Application no se encuentra disponible, **When** el visitante intenta acceder, **Then** el sistema informa que el recurso no está disponible. | EP08 |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | **Given** que el usuario accede desde un dispositivo con una resolución determinada, **When** utiliza la plataforma, **Then** el contenido se adapta al tamaño de pantalla correspondiente.<br><br>**Given** que el usuario cambia el tamaño de pantalla, **When** continúa utilizando la plataforma, **Then** la información mantiene una presentación adecuada. | EP08 |
+| US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | **Given** que existen idiomas disponibles, **When** el usuario selecciona un idioma, **Then** el sistema presenta el contenido disponible en el idioma seleccionado.<br><br>**Given** que el usuario selecciona otro idioma disponible, **When** continúa utilizando la plataforma, **Then** el contenido se actualiza al idioma correspondiente. | EP08 |
+| TS01 | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | **Given** que la API se encuentra disponible, **When** un cliente realiza una solicitud a un recurso válido, **Then** la API procesa la solicitud y devuelve la respuesta HTTP correspondiente.<br><br>**Given** que existen recursos REST definidos, **When** la Web Application los consume, **Then** los recursos mantienen una estructura consistente de solicitudes y respuestas. | Transversal |
+| TS10 | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | **Given** que existe una cuenta registrada, **When** el cliente envía credenciales válidas al recurso de autenticación, **Then** la API permite establecer una sesión autorizada.<br><br>**Given** que un cliente solicita un recurso protegido sin autorización válida, **When** la API procesa la solicitud, **Then** rechaza el acceso.<br><br>**Given** que el usuario no posee permisos para un recurso, **When** intenta acceder, **Then** la API rechaza la operación. | US01, US02, US04, US05 |
+| TS11 | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | **Given** que se registra correctamente una solicitud de alquiler, **When** el sistema procesa la creación de la solicitud, **Then** se envía un correo a la empresa de alquiler.<br><br>**Given** que una solicitud pendiente es confirmada, **When** el sistema procesa la confirmación, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que una solicitud pendiente es rechazada, **When** el sistema procesa el rechazo, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que SendGrid no permite completar el envío, **When** ocurre un error de comunicación, **Then** el sistema registra el error sin revertir una solicitud que ya fue creada o actualizada correctamente. | US14, US19 |
+| TS12 | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | **Given** que se recibe una operación válida de registro, **When** la operación finaliza correctamente, **Then** la información queda almacenada en la base de datos.<br><br>**Given** que existe un registro almacenado, **When** se consulta mediante el recurso correspondiente, **Then** la API devuelve la información persistida.<br><br>**Given** que ocurre un error durante una operación de persistencia, **When** la operación no puede completarse, **Then** el sistema informa el fallo y evita comunicar un registro exitoso inexistente. | TS02, TS03, TS05, TS08, TS09 |
+| TS13 | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | **Given** que una solicitud contiene todos los datos obligatorios con valores válidos, **When** se procesa, **Then** la API permite continuar con la operación.<br><br>**Given** que una solicitud contiene datos obligatorios ausentes o inválidos, **When** se procesa, **Then** la API rechaza la solicitud e identifica los errores de validación.<br><br>**Given** que un periodo de alquiler presenta fechas incompatibles, **When** se solicita la operación, **Then** la API rechaza el periodo inválido. | TS02, TS03, TS04, TS05, TS07, TS09 |
+| TS14 | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | **Given** que una operación se completa correctamente, **When** la API responde, **Then** devuelve el código HTTP correspondiente y la información esperada.<br><br>**Given** que se solicita un recurso inexistente, **When** la API procesa la petición, **Then** devuelve una respuesta HTTP que representa el recurso no encontrado.<br><br>**Given** que una solicitud contiene datos inválidos, **When** la API procesa la petición, **Then** devuelve una respuesta de validación consistente.<br><br>**Given** que ocurre un error inesperado, **When** la API procesa la operación, **Then** devuelve una respuesta controlada sin exponer detalles internos sensibles. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
+| TS15 | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | **Given** que la API expone recursos REST, **When** se consulta su documentación, **Then** se muestran los endpoints y métodos disponibles.<br><br>**Given** que un recurso recibe parámetros o un cuerpo de solicitud, **When** se consulta su documentación, **Then** se describen los datos requeridos y sus restricciones principales.<br><br>**Given** que un recurso devuelve respuestas exitosas o errores previstos, **When** se consulta su documentación, **Then** se muestran los códigos de respuesta correspondientes. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
+| TS16 | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | **Given** que se dispone de una ubicación válida, **When** la aplicación solicita información geográfica al servicio externo, **Then** el sistema procesa la respuesta recibida.<br><br>**Given** que el servicio externo devuelve información válida, **When** la API procesa la respuesta, **Then** proporciona los datos necesarios para apoyar la operación de entrega o devolución.<br><br>**Given** que el servicio externo no está disponible, **When** se solicita información geográfica, **Then** el sistema gestiona el error sin exponer credenciales ni interrumpir operaciones ajenas a esa consulta. | US22, TS07 |
+| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
 
 ## 3.2. Impact Mapping
 
