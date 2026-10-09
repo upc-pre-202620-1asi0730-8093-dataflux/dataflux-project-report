@@ -3023,351 +3023,458 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
 
 El diseño orientado a objetos detalla la implementación de cada bounded context identificado en la arquitectura. Cada diagrama sigue la misma estructura: entidades del dominio con sus atributos y comportamiento, value objects para conceptos sin identidad propia (periodos, tarifas, direcciones), enumeraciones para los estados del Ubiquitous Language, un repositorio por agregado y un servicio de aplicación que orquesta los casos de uso de las User Stories. Los nombres están en inglés según la convención de nomenclatura del proyecto y los tipos corresponden a C#, el lenguaje de los Web Services; las etiquetas de las relaciones van en español para facilitar la lectura.
 
-### 4.7.1. Class Diagrams
+#### 4.7.1. Class Diagrams
 
-#### Backend  Class Diagram
-
-![Class Diagram — Backend](./assets/md-images-chapter4/class-diagram-backend.png)
-
-El diagrama general de clases del backend encapsula los Agregados principales (Aggregate Roots) de cada Bounded Context y define las fronteras de dominio. A fin de mantener el desacoplamiento dictado por la arquitectura DDD, la comunicación entre contextos se realiza estrictamente a través de referencias por identificadores primitivos (userId, equipmentId, planId, contractId), garantizando que cada contexto mantenga su persistencia y sus reglas de negocio aisladas.
-
-#### Inventory
-
-![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
-
-Equipment es el agregado principal: pertenece a una EquipmentCategory, compone una RentalRate (tarifa diaria y semanal) y mantiene su EquipmentStatus (disponible, alquilado, en mantenimiento). Los AvailabilityBlock con su DateRange permiten responder isAvailableFor(period) sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. InventoryApplicationService cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado de la maquinaria.
-
-#### Rentals
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
-
-RentalRequest modela la reservación: nace en estado PENDING y, al aceptarse, genera un RentalContract. El contrato compone un DateRange y registra una Delivery y un EquipmentReturn. EquipmentReturn.requiresMaintenance() es el punto de integración donde una devolución reportada con daño dispara el flujo dentro del contexto Maintenance. RentalApplicationService orquesta el ciclo completo de alquiler mediante los cuatro repositorios de infraestructura.
-
-#### Maintenance
-
-![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
-
-MaintenanceRecord distingue mantenimientos preventivos y correctivos con su ciclo de estados. Incident registra daños o fallas operativas con su nivel de severidad y puede originar formalmente un MaintenanceRecord. MaintenanceApplicationService orquesta el flujo de atención técnica y actualiza el estado de disponibilidad del equipo en comunicación con el contexto Inventory.
-
-#### Subscription
-
-![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
-
-SubscriptionPlan define los términos de precios, beneficios y ciclo de facturación de la plataforma. UserSubscription vincula una cuenta de usuario con su plan activo mediante el value object DateRange y controla los estados de renovación o cancelación automática. SubscriptionApplicationService se integra con la pasarela externa de pagos para gestionar el flujo comercial de las membresías.
-
-#### IAM
-
-![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
-
-User es la entidad central, con role (empresa de alquiler o constructora) y status. Credentials es un value object que encapsula la validación de correo y contraseña, y SessionToken representa el token de acceso vigente. AuthenticationService orquesta el registro, el inicio y el cierre de sesión a través de UserRepository.
-
-#### Profiles
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
-
-CompanyProfile guarda los datos de la empresa y compone un value object Address con coordenadas geográficas, que alimenta la integración con mapas. ProviderProfile extiende el perfil de una empresa de alquiler con su reputación pública —alquileres completados y tasa de cumplimiento—, respondiendo al término "Perfil de Proveedor" del Ubiquitous Language.
-
-#### Detailed Class Diagrams by Layer
 
 ## Inventory
 
+
 ### A. Domain Layer
+
 
 ![Class Diagram — Inventory Domain Layer](./assets/md-images-chapter4/inventory-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 La capa de dominio contiene el agregado raíz `Equipment`, el cual encapsula la lógica de negocio relacionada con la maquinaria. `Equipment` se relaciona con `EquipmentCategory` para su clasificación, utiliza el Value Object `RentalRate` para definir los costos de alquiler y gestiona bloques de indisponibilidad mediante `AvailabilityBlock` y `DateRange`.
 
+
 **Conexión de la Capa:**
+
 
 Las entidades del dominio definen los contratos de persistencia `EquipmentRepository` y `EquipmentCategoryRepository`. Estos contratos permiten mantener la lógica de negocio independiente de las tecnologías utilizadas en el backend desarrollado con Node.js, aplicando el principio de Inversión de Dependencias (DIP).
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — Inventory Application Layer](./assets/md-images-chapter4/inventory-application.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene `InventoryApplicationService`, responsable de coordinar los casos de uso como el registro de maquinaria mediante `RegisterEquipmentCommand` y la verificación de disponibilidad de equipos para las empresas constructoras.
 
+
 **Conexión de la Capa:**
+
 
 `InventoryApplicationService` recibe las solicitudes desde la capa de Interfaces e interactúa con el dominio mediante los contratos definidos en `EquipmentRepository` y `EquipmentCategoryRepository`.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — Inventory Infrastructure Layer](./assets/md-images-chapter4/inventory-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 Implementa los mecanismos de acceso y persistencia de datos mediante `EquipmentRepositoryImpl` y `EquipmentCategoryRepositoryImpl`, utilizando el entorno Node.js para gestionar la información almacenada en MySQL.
 
+
 **Conexión de la Capa:**
+
 
 Implementa los contratos de repositorio definidos en el dominio, permitiendo almacenar y recuperar información de la maquinaria y transformar los Value Objects en estructuras compatibles con la base de datos MySQL.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — Inventory Interfaces Layer](./assets/md-images-chapter4/inventory-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 A través de `InventoryController`, expone endpoints HTTP REST desarrollados en Node.js que reciben solicitudes JSON desde la aplicación web construida con Vue.js.
 
+
 **Conexión de la Capa:**
+
 
 Transforma las peticiones HTTP en objetos de entrada, como `RegisterEquipmentCommand`, y los envía a `InventoryApplicationService` para ejecutar los casos de uso correspondientes.
 
+
 ## Rentals
 
+
 ### A. Domain Layer
+
 
 ![Class Diagram — Rentals Domain Layer](./assets/md-images-chapter4/rentals-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 La gestión de alquileres comienza con el agregado `RentalRequest`, inicialmente en estado `PENDING`. Cuando la solicitud es aprobada, se genera la entidad `RentalContract`, que administra la relación contractual y se vincula con `Delivery` y `EquipmentReturn` para registrar la entrega y devolución de la maquinaria.
 
+
 **Conexión de la Capa:**
+
 
 Define los contratos `RentalRequestRepository`, `RentalContractRepository`, `EquipmentReturnRepository` y `DeliveryRepository`, además del puerto de integración `InventoryAvailabilityPort`, encargado de validar la disponibilidad de maquinaria.
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — Rentals Application Layer](./assets/md-images-chapter4/rentals-application.png)
 
+
 **Explicación del Proceso:**
+
 
 `RentalApplicationService` coordina las operaciones relacionadas con los alquileres, incluyendo la aceptación de solicitudes mediante `acceptRequest`, el registro de entregas mediante `registerDelivery` y el procesamiento de devoluciones mediante `registerReturn`.
 
+
 **Conexión de la Capa:**
+
 
 Recibe las peticiones provenientes de la capa de Interfaces, utiliza los repositorios correspondientes y se comunica con el contexto de Inventory mediante el puerto de disponibilidad.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — Rentals Infrastructure Layer](./assets/md-images-chapter4/rentals-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene las implementaciones concretas de los repositorios de alquiler y el adaptador `InventoryAvailabilityAdapter`, responsables de realizar operaciones de persistencia y facilitar la comunicación con el módulo de inventario.
 
+
 **Conexión de la Capa:**
+
 
 Implementa los contratos definidos en el dominio mediante los mecanismos de acceso a datos del backend Node.js, realizando consultas a MySQL para gestionar solicitudes, contratos, entregas y devoluciones de maquinaria.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — Rentals Interfaces Layer](./assets/md-images-chapter4/rentals-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 `RentalsController` gestiona los endpoints HTTP REST que permiten a los usuarios de la aplicación Vue.js crear solicitudes de alquiler, consultar contratos y actualizar el estado de las operaciones.
 
+
 **Conexión de la Capa:**
+
 
 Recibe las peticiones HTTP, procesa los datos enviados en formato JSON e invoca los métodos expuestos por `RentalApplicationService`, devolviendo las respuestas mediante objetos DTO.
 
+
 ## Maintenance
 
+
 ### A. Domain Layer
+
 
 ![Class Diagram — Maintenance Domain Layer](./assets/md-images-chapter4/maintenance-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 Agrupa los agregados `Incident`, encargado de representar los reportes de fallas de maquinaria, y `MaintenanceRecord`, que registra las intervenciones de mantenimiento preventivo y correctivo.
 
+
 **Conexión de la Capa:**
+
 
 Un `Incident` no resuelto puede relacionarse con un `MaintenanceRecord`. Además, declara el puerto `EquipmentStatusPort` para comunicar al módulo de inventario los cambios de estado de los equipos que ingresan a mantenimiento.
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — Maintenance Application Layer](./assets/md-images-chapter4/maintenance-application.png)
 
+
 **Explicación del Proceso:**
+
 
 `MaintenanceApplicationService` coordina los casos de uso relacionados con el reporte de averías mediante `reportIncident`, la programación de mantenimientos mediante `scheduleMaintenance` y la finalización de trabajos técnicos mediante `completeMaintenance`.
 
+
 **Conexión de la Capa:**
+
 
 Utiliza los repositorios del dominio para gestionar las operaciones de mantenimiento y se comunica mediante `EquipmentStatusPort` para actualizar el estado de la maquinaria a `UNDER_MAINTENANCE`.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — Maintenance Infrastructure Layer](./assets/md-images-chapter4/maintenance-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene `IncidentRepositoryImpl`, `MaintenanceRecordRepositoryImpl` y el adaptador `InventoryEquipmentStatusAdapter`, responsables de implementar la persistencia de incidentes y mantenimientos, así como la comunicación con el módulo de inventario mediante el backend Node.js.
 
+
 **Conexión de la Capa:**
+
 
 Implementa las operaciones de acceso a datos mediante Node.js y MySQL, permitiendo registrar incidentes, actualizar mantenimientos y comunicar los cambios de estado de la maquinaria.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — Maintenance Interfaces Layer](./assets/md-images-chapter4/maintenance-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 `MaintenanceController` expone endpoints HTTP REST que permiten a los usuarios de la aplicación Vue.js registrar incidentes, consultar mantenimientos y actualizar los procesos de reparación de maquinaria.
 
+
 **Conexión de la Capa:**
+
 
 Recibe las solicitudes HTTP del cliente web, procesa los datos JSON y delega las operaciones correspondientes a `MaintenanceApplicationService`.
 
+
 ## Subscription
 
+
 ### A. Domain Layer
+
 
 ![Class Diagram — Subscription Domain Layer](./assets/md-images-chapter4/subscription-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene la entidad `SubscriptionPlan`, encargada de definir los planes disponibles, y `UserSubscription`, que representa las suscripciones de los usuarios. Utiliza el Value Object `DateRange` para gestionar los períodos de vigencia, el enumerado `BillingCycle` para establecer la periodicidad de facturación y el atributo booleano `autoRenew` para controlar la renovación automática.
 
+
 **Conexión de la Capa:**
+
 
 Define los contratos `UserSubscriptionRepository`, `SubscriptionPlanRepository` y el puerto `PaymentConnector`, que permite integrar servicios externos de procesamiento de pagos sin depender directamente de su implementación.
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — Subscription Application Layer](./assets/md-images-chapter4/subscription-application.png)
 
+
 **Explicación del Proceso:**
+
 
 `SubscriptionApplicationService` coordina los casos de uso relacionados con la selección de planes, administración de suscripciones y procesamiento de pagos recurrentes.
 
+
 **Conexión de la Capa:**
+
 
 Utiliza los repositorios del dominio para consultar y actualizar las suscripciones, y delega las operaciones de pago al puerto `PaymentConnector`.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — Subscription Infrastructure Layer](./assets/md-images-chapter4/subscription-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene las implementaciones de los repositorios de suscripciones y el adaptador `StripePaymentConnector`, que permite integrar el backend desarrollado con Node.js con los servicios externos de procesamiento de pagos de Stripe.
 
+
 **Conexión de la Capa:**
+
 
 Implementa los contratos del dominio para almacenar información de suscripciones en MySQL y gestionar la comunicación con la pasarela de pagos externa.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — Subscription Interfaces Layer](./assets/md-images-chapter4/subscription-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 `SubscriptionController` expone endpoints HTTP REST que permiten a los usuarios de la aplicación Vue.js seleccionar, modificar o cancelar sus planes de suscripción.
 
+
 **Conexión de la Capa:**
+
 
 Recibe las solicitudes JSON del cliente web y las dirige hacia `SubscriptionApplicationService`, encargado de ejecutar los casos de uso correspondientes.
 
+
 ## IAM
 
+
 ### A. Domain Layer
+
 
 ![Class Diagram — IAM Domain Layer](./assets/md-images-chapter4/iam-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene la entidad raíz `User`, encargada de representar las cuentas de usuario. Incorpora el Value Object `Credentials`, que almacena el correo electrónico y el hash de la contraseña, y utiliza `UserRole` y `UserStatus` para gestionar los permisos y estados de las cuentas.
 
+
 **Conexión de la Capa:**
+
 
 Define el contrato `UserRepository`, que establece las operaciones necesarias para registrar, consultar y administrar cuentas de usuario, manteniendo la lógica del dominio independiente de las tecnologías de persistencia.
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — IAM Application Layer](./assets/md-images-chapter4/iam-application.png)
 
+
 **Explicación del Proceso:**
+
 
 `AuthenticationService` coordina los procesos de registro, inicio de sesión, validación de credenciales y generación de tokens de sesión mediante `SessionToken`.
 
+
 **Conexión de la Capa:**
+
 
 Utiliza `UserRepository` para consultar la información de los usuarios, validar las credenciales y ejecutar las operaciones relacionadas con la autenticación.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — IAM Infrastructure Layer](./assets/md-images-chapter4/iam-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 `UserRepositoryImpl` implementa los mecanismos de persistencia de usuarios mediante el backend Node.js, utilizando MySQL para almacenar la información de las cuentas.
 
+
 **Conexión de la Capa:**
+
 
 Implementa el contrato `UserRepository` definido en el dominio y permite almacenar y recuperar los datos de los usuarios desde la base de datos.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — IAM Interfaces Layer](./assets/md-images-chapter4/iam-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 `IAMController` gestiona los endpoints HTTP REST `/register`, `/login` y `/logout`, permitiendo que la aplicación Vue.js realice las operaciones de registro, autenticación y cierre de sesión.
 
+
 **Conexión de la Capa:**
+
 
 Recibe solicitudes JSON, transforma los datos de entrada en comandos como `RegisterUserCommand` y `LoginCommand`, y delega su procesamiento a `AuthenticationService`.
 
+
 ## Profiles
+
 
 ### A. Domain Layer
 
+
 ![Class Diagram — Profiles Domain Layer](./assets/md-images-chapter4/profiles-domain.png)
 
+
 **Explicación del Proceso:**
+
 
 Contiene `CompanyProfile`, entidad encargada de administrar la información de las organizaciones, que utiliza el Value Object `Address` junto con `GeoCoordinates` para representar su ubicación geográfica. `ProviderProfile` extiende las características del perfil empresarial para incluir información específica de los proveedores de maquinaria y métricas de reputación.
 
+
 **Conexión de la Capa:**
+
 
 Define los contratos `CompanyProfileRepository` y `ProviderProfileRepository`, además de las relaciones entre las entidades y los tipos de empresa representados mediante `CompanyType`.
 
+
 ### B. Application Layer
+
 
 ![Class Diagram — Profiles Application Layer](./assets/md-images-chapter4/profiles-application.png)
 
+
 **Explicación del Proceso:**
+
 
 `ProfileApplicationService` coordina los casos de uso relacionados con la creación, consulta y actualización de perfiles empresariales y de proveedores de maquinaria.
 
+
 **Conexión de la Capa:**
+
 
 Recibe los datos procesados por la capa de Interfaces y utiliza los repositorios del dominio para ejecutar las operaciones de administración de perfiles.
 
+
 ### C. Infrastructure Layer
+
 
 ![Class Diagram — Profiles Infrastructure Layer](./assets/md-images-chapter4/profiles-infrastructure.png)
 
+
 **Explicación del Proceso:**
+
 
 Implementa los repositorios de perfiles empresariales y proveedores mediante los mecanismos de persistencia del backend Node.js, utilizando MySQL para almacenar y administrar la información.
 
+
 **Conexión de la Capa:**
+
 
 Implementa los contratos de repositorio definidos en el dominio y permite registrar, consultar y actualizar la información de las empresas y proveedores en la base de datos.
 
+
 ### D. Interfaces Layer
+
 
 ![Class Diagram — Profiles Interfaces Layer](./assets/md-images-chapter4/profiles-interfaces.png)
 
+
 **Explicación del Proceso:**
+
 
 `ProfilesController` expone endpoints HTTP REST que permiten a los usuarios de la aplicación Vue.js consultar, registrar y actualizar la información de sus perfiles empresariales.
 
+
 **Conexión de la Capa:**
 
+
 Recibe las solicitudes HTTP, transforma los datos JSON en objetos DTO o comandos y los envía a `ProfileApplicationService` para ejecutar los casos de uso correspondientes.
+
 
 ---
 
