@@ -1,0 +1,11 @@
+{
+  "repository": "upc-pre-202620-1asi0730-8093-dataflux/dataflux-report",
+  "cut_date": "2026-10-08",
+  "method": "Commits no merge en la historia del informe. Autor confirmado por login de GitHub; los tres commits locales del corte TB1 corresponden a poluxbinPe.",
+  "limits": "No incluye otros repositorios ni PRs abiertos. El conteo no mide calidad, cumplimiento ni calificaciones individuales.",
+  "authors": ["LuisCS03", "Miroa123", "TartaroZ", "V8Z5", "poluxbinPe"],
+  "cuts": [
+    {"name": "AV1 publicado", "revision": "014bb734", "counts": [30, 5, 55, 13, 9], "total": 112, "file": "av1-report-commits.png"},
+    {"name": "TB1 en preparación", "revision": "014bb734..67d1ff5", "counts": [7, 7, 0, 1, 3], "total": 18, "file": "tb1-report-commits.png"}
+  ]
+}
