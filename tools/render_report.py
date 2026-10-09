@@ -2,6 +2,7 @@
 import html
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -47,6 +48,20 @@ MARGIN = 42
 story = []
 missing = []
 current_template = 'portrait'
+heading_anchors = set()
+
+
+def assign_heading_anchors(tree):
+    counts = Counter()
+    for node in tree.xpath('//h1|//h2|//h3|//h4|//h5|//h6'):
+        text = ''.join(node.itertext()).strip().lower()
+        slug = re.sub(r'[^\w\s-]', '', text)
+        slug = re.sub(r'\s', '-', slug)
+        number = counts[slug]
+        counts[slug] += 1
+        anchor = slug if not number else f'{slug}-{number}'
+        node.set('data-pdf-anchor', anchor)
+        heading_anchors.add(anchor)
 
 
 def clean(text):
@@ -67,6 +82,9 @@ def inline(node):
             href = child.get('href', '')
             if href.startswith(('https://', 'http://')):
                 parts.append(f'<link href="{html.escape(href, quote=True)}" color="#165ca2">{value}</link>')
+            elif href.startswith('#') and unquote(href[1:]) in heading_anchors:
+                anchor = html.escape(unquote(href[1:]), quote=True)
+                parts.append(f'<link href="#{anchor}" color="#165ca2">{value}</link>')
             else:
                 parts.append(value)
         elif tag == 'img':
@@ -82,7 +100,9 @@ def paragraph(node, name='BodyText'):
     if text:
         if name.startswith('Heading'):
             switch_template('portrait')
-        story.append(Paragraph(text, styles[name]))
+        flowable = Paragraph(text, styles[name])
+        flowable._report_anchor = node.get('data-pdf-anchor')
+        story.append(flowable)
 
 
 def switch_template(name):
@@ -208,13 +228,14 @@ def footer(canvas, doc):
 class ReportDocument(BaseDocTemplate):
     def afterFlowable(self, flowable):
         if isinstance(flowable, Paragraph) and flowable.style.name.startswith('Heading'):
-            key = 'section-' + str(self.seq.nextf('heading'))
+            key = flowable._report_anchor or 'section-' + str(self.seq.nextf('heading'))
             self.canv.bookmarkPage(key)
             # One flat outline avoids invalid jumps between heading levels.
             self.canv.addOutlineEntry(flowable.getPlainText(), key, 0, False)
 
 
 tree = etree.HTML(sys.stdin.buffer.read(), parser=etree.HTMLParser(encoding='utf-8'))
+assign_heading_anchors(tree)
 for node in tree.find('body'):
     walk(node)
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
