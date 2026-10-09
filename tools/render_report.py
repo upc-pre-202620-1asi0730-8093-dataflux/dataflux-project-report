@@ -116,13 +116,18 @@ def paragraph(node, name='BodyText'):
         story.append(flowable)
 
 
-def switch_template(name):
+def switch_template(name, carry_heading=False):
     global current_template
     if current_template != name:
+        headings = []
+        if carry_heading:
+            while story and isinstance(story[-1], Paragraph) and story[-1].style.name.startswith('Heading'):
+                headings.insert(0, story.pop())
         if story and isinstance(story[-1], PageBreak):
             story.insert(len(story) - 1, NextPageTemplate(name))
         else:
             story.extend([NextPageTemplate(name), PageBreak()])
+        story.extend(headings)
         current_template = name
 
 
@@ -142,9 +147,10 @@ def image_node(node):
     with RasterImage.open(path) as raster:
         width, height = raster.size
     is_wide = width / max(height, 1) > 1.4 and width > 900
-    switch_template('landscape' if is_wide else 'portrait')
+    switch_template('landscape' if is_wide else 'portrait', carry_heading=True)
     page_width, page_height = WIDE if current_template == 'landscape' else PAGE
-    ratio = min((page_width - 2 * MARGIN) / width, (page_height - 2 * MARGIN - 35) / height)
+    # Reserve room for the heading, caption and source link on the figure page.
+    ratio = min((page_width - 2 * MARGIN - 12) / width, (page_height - 2 * MARGIN - 110) / height)
     specified_width = re.match(r'^(\d+)(px)?$', node.get('width', ''))
     if specified_width:
         ratio = min(ratio, int(specified_width.group(1)) * 0.75 / width)
@@ -168,7 +174,7 @@ def table_node(node):
     for row in rows:
         row.extend([Paragraph(' ', styles['Cell'])] * (count - len(row)))
     wide = count >= 5
-    switch_template('landscape' if wide else 'portrait')
+    switch_template('landscape' if wide else 'portrait', carry_heading=True)
     available = (WIDE if current_template == 'landscape' else PAGE)[0] - 2 * MARGIN
     weights = []
     for index in range(count):
