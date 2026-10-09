@@ -1,0 +1,22 @@
+diff --git a/src/app/App.vue b/src/app/App.vue
+index c2360f3..a7c077e 100644
+--- a/src/app/App.vue
++++ b/src/app/App.vue
+@@ -5,7 +5,7 @@ import { useI18n } from "vue-i18n";
+ import { useServices, clearSessionData } from "./app.services.js";
+ import LanguageSwitcher from "./shared/presentation/components/language-switcher/LanguageSwitcher.vue";
+ import AppFooter from "./shared/presentation/components/app-footer/AppFooter.vue";
+-const { iam, profiles } = useServices();
++const { iam, profiles, subscriptions } = useServices();
+ const route = useRoute();
+ const router = useRouter();
+ const { t } = useI18n();
+@@ -21,6 +21,8 @@ watch(
+ );
+ const navigation = computed(() => {
+   const links = [["/dashboard", "dashboard"]];
++  if (subscriptions && iam?.currentRole.value === "rental_company")
++    links.push(["/subscriptions/plans", "plan-subscription"]);
+   if (iam && profiles) links.push(["/profiles/profile", "profile"]);
+   return links;
+ });

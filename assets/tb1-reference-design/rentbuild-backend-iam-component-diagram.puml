@@ -1,0 +1,38 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - IAM Backend Component Diagram
+
+Container(spa, "Single Page Application", "Vue", "Consumes authentication and account-access capabilities provided by the RentBuild backend.")
+
+Container_Boundary(iam_context, "RentBuild RESTful API / ASP.NET Core — Iam context detail") {
+    Component(interfaces_layer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes authentication, registration, account access, and authorization endpoints to the frontend.")
+    Component(application_layer, "Application Layer", "Application Services / Command and Query Services", "Coordinates authentication, registration, credential management, and account-access use cases.")
+    Component(domain_layer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains users, credentials, roles, authentication rules, and IAM business logic.")
+    Component(infrastructure_layer, "Infrastructure Layer", "EF Core / Repository Implementations", "Provides persistence implementations and technical adapters required by the IAM bounded context.")
+    Component(security_connector, "Security Connector", "ASP.NET Core Authentication / JWT", "Provides authentication filters, password encoding, token generation, and authorization mechanisms.")
+}
+
+System_Ext(sendgrid, "SendGrid", "Provides transactional email delivery for account and password-recovery notifications.")
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores user accounts, credentials, roles, and authentication-related information.")
+
+' SPA Relationships
+Rel(spa, interfaces_layer, "Consumes IAM services", "JSON / HTTPS")
+
+' Internal Layer Relationships
+Rel(interfaces_layer, application_layer, "Delegates requests")
+Rel(application_layer, domain_layer, "Executes domain operations")
+Rel(application_layer, infrastructure_layer, "Uses persistence capabilities")
+Rel(application_layer, security_connector, "Uses authentication and authorization services")
+
+' External Service & Database Relationships
+Rel(application_layer, sendgrid, "Requests account and recovery emails", "HTTPS / API")
+Rel(infrastructure_layer, database, "Reads and writes IAM data", "EF Core / SQL")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

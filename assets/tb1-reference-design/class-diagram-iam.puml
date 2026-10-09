@@ -1,0 +1,90 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+package "Interfaces Layer" {
+  class IAMController <<Controller>> {
+    - authService: AuthenticationService
+    + register(command: RegisterUserCommand): UserResponse
+    + login(command: LoginCommand): SessionTokenResponse
+    + logout(): void
+  }
+}
+
+package "Application Layer" {
+  class AuthenticationService <<Application Service>> {
+    - userRepository: UserRepository
+    + register(credentials: Credentials, role: UserRole): UserId
+    + authenticate(credentials: Credentials): SessionToken
+    + logout(): void
+  }
+}
+
+package "Infrastructure Layer" {
+  class UserRepositoryImpl <<Repository Implementation>> {
+    - dbContext: RentBuildDbContext
+  }
+}
+
+package "Domain Layer" {
+  class User <<Aggregate Root>> {
+    - id: UserId
+    - credentials: Credentials
+    - role: UserRole
+    - status: UserStatus
+    + activate(): void
+    + deactivate(): void
+  }
+
+  class Credentials <<Value Object>> {
+    - email: EmailAddress
+    - passwordHash: PasswordHash
+    + matches(password: RawPassword): bool
+  }
+
+  class SessionToken <<Value Object>> {
+    - value: string
+    - expiresAt: DateTimeOffset
+    + isActive(now: DateTimeOffset): bool
+  }
+
+  enum UserStatus <<Enum>> {
+    ACTIVE
+    INACTIVE
+    BLOCKED
+  }
+
+  enum UserRole <<Enum>> {
+    RENTAL_COMPANY
+    CONSTRUCTION_COMPANY
+    ADMINISTRATOR
+  }
+
+  class EmailAddress <<Value Object>> {
+    - value: string
+    + isValid(): bool
+  }
+  class PasswordHash <<Value Object>> {
+    - value: string
+  }
+
+  interface UserRepository <<Repository>> {
+    + findById(id: UserId): User
+    + findByEmail(email: EmailAddress): User
+    + save(user: User): User
+  }
+}
+
+IAMController --> AuthenticationService
+AuthenticationService --> UserRepository
+UserRepositoryImpl ..|> UserRepository
+
+User "1" --> "1" UserStatus
+User "1" --> "1" UserRole
+User "1" *-- "1" Credentials
+Credentials "1" *-- "1" EmailAddress
+Credentials "1" *-- "1" PasswordHash
+AuthenticationService ..> SessionToken : produces
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

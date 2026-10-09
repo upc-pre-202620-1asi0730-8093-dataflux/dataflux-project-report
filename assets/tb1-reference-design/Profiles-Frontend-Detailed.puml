@@ -1,0 +1,48 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Profiles Frontend Component Diagram (DDD Layers)
+
+Container_Boundary(profiles_frontend, "Profiles Frontend Bounded Context\n[container]") {
+
+    Boundary(presentation_boundary, "Presentation") {
+        Component(profile_comp, "ProfileComponent", "Vue Component", "Displays the authenticated user's profile information")
+        Component(edit_profile_comp, "EditProfileComponent", "Vue Component", "Provides the interface for updating user profile information")
+        Component(company_profile_comp, "CompanyProfileComponent", "Vue Component", "Displays and manages company profile information")
+    }
+
+    Boundary(application_boundary, "Application") {
+        Component(profiles_app, "profiles/application", "JavaScript", "Coordinates profile queries, profile updates, company profile state, and frontend use cases")
+    }
+
+    Boundary(infrastructure_boundary, "Infrastructure") {
+        Component(profiles_infra, "profiles/infrastructure", "HTTP, Resources, Mappers", "Consumes Profiles REST endpoints and maps backend resources into frontend profile models")
+    }
+
+    Boundary(domain_boundary, "Domain") {
+        Component(profiles_domain, "profiles/domain/model", "Models / Value Objects", "User, Company, SupplierProfile and profile-related frontend models and rules")
+    }
+}
+
+Container_Ext(backend_api, "RentBuild Backend API", "C# / ASP.NET Core", "Exposes profile and company-related RESTful services consumed by the Profiles frontend")
+
+' Presentation to Application Relations
+Rel(profile_comp, profiles_app, "Requests profile data")
+Rel(edit_profile_comp, profiles_app, "Requests profile updates")
+Rel(company_profile_comp, profiles_app, "Requests company profile operations")
+
+' Application Relationships
+Rel(profiles_app, profiles_infra, "Loads and updates profile data through")
+Rel(profiles_app, profiles_domain, "Holds and applies profile state and rules")
+
+' Infrastructure Relationships
+Rel(profiles_infra, profiles_domain, "Maps resources into")
+Rel(profiles_infra, backend_api, "Consumes Profiles REST endpoints", "HTTPS / JSON")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

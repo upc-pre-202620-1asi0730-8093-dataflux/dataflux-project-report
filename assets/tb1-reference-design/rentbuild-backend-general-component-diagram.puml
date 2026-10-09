@@ -1,0 +1,57 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Backend General Components Diagram
+
+Container(spa, "Single Page Application", "Vue", "Provides RentBuild functionality to authenticated users through their web browser.")
+
+Container_Boundary(backend_api, "RentBuild Backend API Application\n[C# / ASP.NET Core]") {
+    Component(rentals_bc, "Rentals Bounded Context", "Bounded Context Component", "Manages rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+    Component(maint_bc, "Maintenance Bounded Context", "Bounded Context Component", "Manages maintenance schedules, inspections, incidents, and equipment maintenance history.")
+    Component(profiles_bc, "Profiles Bounded Context", "Bounded Context Component", "Manages user, company, supplier, and customer profile information.")
+    Component(subs_bc, "Subscriptions Bounded Context", "Bounded Context Component", "Manages subscription plans, active subscriptions, billing state, and plan changes.")
+    Component(inventory_bc, "Inventory Bounded Context", "Bounded Context Component", "Manages machinery, categories, rates, equipment status, and availability.")
+    Component(iam_bc, "IAM Bounded Context", "Bounded Context Component", "Manages authentication, authorization, credentials, users, roles, and access control.")
+    Component(shared_bc, "Shared", "Shared Component", "Provides reusable cross-cutting capabilities, common abstractions, validation, configuration, and technical utilities.")
+}
+
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores persistent account, profile, machinery, rental, maintenance, and subscription information.")
+
+' SPA Relationships
+Rel(spa, rentals_bc, "Uses rental services", "JSON / HTTPS")
+Rel(spa, maint_bc, "Uses maintenance services", "JSON / HTTPS")
+Rel(spa, profiles_bc, "Uses profile services", "JSON / HTTPS")
+Rel(spa, subs_bc, "Uses subscription services", "JSON / HTTPS")
+Rel(spa, inventory_bc, "Uses inventory services", "JSON / HTTPS")
+Rel(spa, iam_bc, "Uses authentication services", "JSON / HTTPS")
+
+' Inter-Bounded Context Relationships
+Rel(rentals_bc, inventory_bc, "Checks machinery availability")
+Rel(rentals_bc, profiles_bc, "Uses company and participant profiles")
+Rel(maint_bc, inventory_bc, "Updates equipment status and availability")
+Rel(subs_bc, iam_bc, "Uses authenticated account identity")
+Rel(profiles_bc, iam_bc, "Uses authenticated account identity")
+
+' Bounded Contexts to Shared Module Relationships
+Rel(rentals_bc, shared_bc, "Uses")
+Rel(maint_bc, shared_bc, "Uses")
+Rel(profiles_bc, shared_bc, "Uses")
+Rel(subs_bc, shared_bc, "Uses")
+Rel(inventory_bc, shared_bc, "Uses")
+Rel(iam_bc, shared_bc, "Uses")
+
+' Database Relationships
+Rel(rentals_bc, database, "Persists")
+Rel(maint_bc, database, "Persists")
+Rel(profiles_bc, database, "Persists")
+Rel(subs_bc, database, "Persists")
+Rel(inventory_bc, database, "Persists")
+Rel(iam_bc, database, "Persists")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

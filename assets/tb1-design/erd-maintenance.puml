@@ -1,0 +1,30 @@
+@startuml
+title RentBuild | Proposed AV2 MySQL — Maintenance
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+entity "equipments [external owner]" as equipments {
+  * id : BIGINT <<PK>>
+}
+entity "incidents" as incidents {
+  * id : BIGINT <<PK>>
+  equipment_id : BIGINT <<FK>>
+  description : TEXT
+  reported_at : DATETIME(6)
+  blocks_rental : BOOLEAN
+  status : VARCHAR(16)
+  resolved_at : DATETIME(6)
+}
+entity "maintenances" as maintenances {
+  * id : BIGINT <<PK>>
+  equipment_id : BIGINT <<FK>>
+  performed_at : DATETIME(6)
+  type : VARCHAR(80)
+  status : VARCHAR(24)
+}
+equipments ||--o{ incidents : equipment history
+equipments ||--o{ maintenances : equipment interventions
+footer PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1
+@enduml

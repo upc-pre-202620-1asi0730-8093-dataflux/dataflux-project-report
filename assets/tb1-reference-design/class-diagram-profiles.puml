@@ -1,0 +1,120 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+package "Interfaces Layer" {
+  class ProfilesController <<Controller>> {
+    - profileService: ProfileApplicationService
+    + createCompanyProfile(command: CreateCompanyProfileCommand): CompanyProfileResponse
+    + updateCompanyProfile(command: UpdateCompanyProfileCommand): CompanyProfileResponse
+    + getProviderProfile(): ProviderProfileResponse
+  }
+}
+
+package "Application Layer" {
+  class ProfileApplicationService <<Application Service>> {
+    - companyProfileRepository: CompanyProfileRepository
+    - providerProfileRepository: ProviderProfileRepository
+    + createCompanyProfile(command: CreateCompanyProfileCommand): CompanyProfileId
+    + updateCompanyProfile(command: UpdateCompanyProfileCommand): void
+    + createProviderProfile(command: CreateProviderProfileCommand): ProviderProfileId
+  }
+}
+
+package "Infrastructure Layer" {
+  class CompanyProfileRepositoryImpl <<Repository Implementation>>
+  class ProviderProfileRepositoryImpl <<Repository Implementation>>
+}
+
+package "Domain Layer" {
+  class CompanyProfile <<Aggregate Root>> {
+    - id: CompanyProfileId
+    - userId: UserId
+    - companyName: CompanyName
+    - taxId: TaxIdentification
+    - companyType: CompanyType
+    - phone: PhoneNumber
+    - email: EmailAddress
+    - address: Address
+  }
+
+  class ProviderProfile <<Entity>> {
+    - id: ProviderProfileId
+    - companyProfileId: CompanyProfileId
+    - description: ProfileDescription
+    - reputation: ProviderReputation
+    - isPublic: bool
+    + publish(): void
+    + updateDescription(description: ProfileDescription): void
+  }
+
+  enum CompanyType <<Enum>> {
+    RENTAL_COMPANY
+    CONSTRUCTION_COMPANY
+  }
+
+  class Address <<Value Object>> {
+    - street: string
+    - city: string
+    - coordinates: GeoCoordinates
+  }
+
+  class GeoCoordinates <<Value Object>> {
+    - latitude: decimal
+    - longitude: decimal
+  }
+
+  class ProviderReputation <<Value Object>> {
+    - completedRentals: RentalCount
+    - fulfillmentRate: FulfillmentRate
+  }
+
+  class CompanyName <<Value Object>> {
+    - value: string
+  }
+  class TaxIdentification <<Value Object>> {
+    - value: string
+  }
+  class PhoneNumber <<Value Object>> {
+    - value: string
+  }
+  class EmailAddress <<Value Object>> {
+    - value: string
+  }
+  class ProfileDescription <<Value Object>> {
+    - value: string
+  }
+  class FulfillmentRate <<Value Object>> {
+    - value: decimal
+  }
+  class RentalCount <<Value Object>> {
+    - value: int
+  }
+
+  interface CompanyProfileRepository <<Repository>>
+  interface ProviderProfileRepository <<Repository>>
+}
+
+ProfilesController --> ProfileApplicationService
+ProfileApplicationService --> CompanyProfileRepository
+ProfileApplicationService --> ProviderProfileRepository
+
+CompanyProfileRepositoryImpl ..|> CompanyProfileRepository
+ProviderProfileRepositoryImpl ..|> ProviderProfileRepository
+
+CompanyProfile "1" --> "1" CompanyType
+CompanyProfile "1" *-- "1" CompanyName
+CompanyProfile "1" *-- "1" TaxIdentification
+CompanyProfile "1" *-- "1" PhoneNumber
+CompanyProfile "1" *-- "1" EmailAddress
+CompanyProfile "1" *-- "1" Address
+Address "1" *-- "0..1" GeoCoordinates
+
+ProviderProfile "0..1" --> "1" CompanyProfile
+ProviderProfile "1" *-- "0..1" ProfileDescription
+ProviderProfile "1" *-- "1" ProviderReputation
+ProviderReputation "1" *-- "1" FulfillmentRate
+ProviderReputation "1" *-- "1" RentalCount
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

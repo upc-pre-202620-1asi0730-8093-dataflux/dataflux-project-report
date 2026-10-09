@@ -1,0 +1,281 @@
+[
+  {
+    "name": "c4-context",
+    "title": "RentBuild | C4 System Context",
+    "note": "BUSINESS CONTEXT; EXTERNAL GEOLOCATION IS A PROPOSAL, NOT A VERIFIED DEPENDENCY",
+    "source": "c4-context.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-context.png",
+    "svg": "c4-context.svg"
+  },
+  {
+    "name": "c4-containers",
+    "title": "RentBuild | C4 Containers — TB1 and AV2",
+    "note": "TB1 USES THE DEMO API. THE ASP.NET CORE API AND MYSQL ARE AV2 PROPOSALS.",
+    "source": "c4-containers.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-containers.png",
+    "svg": "c4-containers.svg"
+  },
+  {
+    "name": "c4-components-landing",
+    "title": "RentBuild | C4 Components — Landing Container",
+    "note": "TB1 LANDING COMPONENTS; THE APPLICATION IS OUTSIDE THIS CONTAINER",
+    "source": "c4-components-landing.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-components-landing.png",
+    "svg": "c4-components-landing.svg"
+  },
+  {
+    "name": "c4-components-web",
+    "title": "RentBuild | C4 Components — Vue Web Application",
+    "note": "ACTUAL SOURCE STRUCTURE AT 7e862dd; CLIENT CHECKS DO NOT ESTABLISH SERVER AUTHORIZATION",
+    "source": "c4-components-web.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-components-web.png",
+    "svg": "c4-components-web.svg"
+  },
+  {
+    "name": "c4-components-mock",
+    "title": "RentBuild | C4 Components — TB1 Demo API",
+    "note": "ACADEMIC MOCK: NO ASP.NET CORE, MYSQL TRANSACTIONS OR PRODUCTION AUTHORIZATION CLAIM",
+    "source": "c4-components-mock.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-components-mock.png",
+    "svg": "c4-components-mock.svg"
+  },
+  {
+    "name": "c4-components-api",
+    "title": "RentBuild | C4 Components — Proposed AV2 API",
+    "note": "PROPOSED DESIGN; NO BACKEND IMPLEMENTATION, MIGRATION OR DEPLOYMENT IS CLAIMED",
+    "source": "c4-components-api.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-components-api.png",
+    "svg": "c4-components-api.svg"
+  },
+  {
+    "name": "c4-components-database",
+    "title": "RentBuild | Proposed MySQL — Logical Schema Structure",
+    "note": "DATABASE TABLE GROUPS ARE NOT C4 CODE COMPONENTS; SEE THE SIX ERD VIEWS FOR KEYS AND CARDINALITIES",
+    "source": "c4-components-database.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "c4-components-database.png",
+    "svg": "c4-components-database.svg"
+  },
+  {
+    "name": "eventstorming-big-picture",
+    "title": "RentBuild | Big Picture — Rental Lifecycle",
+    "note": "DOCUMENTARY RECONSTRUCTION; TEAM WORKSHOP RECORD AND VALIDATION PENDING",
+    "source": "eventstorming-big-picture.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "eventstorming-big-picture.png",
+    "svg": "eventstorming-big-picture.svg"
+  },
+  {
+    "name": "eventstorming-core",
+    "title": "RentBuild | Design-Level — Core Contexts",
+    "note": "PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED BUS",
+    "source": "eventstorming-core.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "eventstorming-core.png",
+    "svg": "eventstorming-core.svg"
+  },
+  {
+    "name": "eventstorming-support",
+    "title": "RentBuild | Design-Level — Supporting Contexts",
+    "note": "PROPOSED MODEL: COMMAND (BLUE), AGGREGATE (YELLOW), EVENT (ORANGE); NOT IMPLEMENTED BUS",
+    "source": "eventstorming-support.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "eventstorming-support.png",
+    "svg": "eventstorming-support.svg"
+  },
+  {
+    "name": "uml-iam",
+    "title": "RentBuild | TB1 JavaScript — IAM",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-iam.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-iam.png",
+    "svg": "uml-iam.svg"
+  },
+  {
+    "name": "uml-profiles",
+    "title": "RentBuild | TB1 JavaScript — Profiles",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-profiles.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-profiles.png",
+    "svg": "uml-profiles.svg"
+  },
+  {
+    "name": "uml-inventory",
+    "title": "RentBuild | TB1 JavaScript — Inventory",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-inventory.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-inventory.png",
+    "svg": "uml-inventory.svg"
+  },
+  {
+    "name": "uml-rentals",
+    "title": "RentBuild | TB1 JavaScript — Rentals",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-rentals.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-rentals.png",
+    "svg": "uml-rentals.svg"
+  },
+  {
+    "name": "uml-maintenance",
+    "title": "RentBuild | TB1 JavaScript — Maintenance",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-maintenance.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-maintenance.png",
+    "svg": "uml-maintenance.svg"
+  },
+  {
+    "name": "uml-subscriptions",
+    "title": "RentBuild | TB1 JavaScript — Subscriptions",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-subscriptions.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-subscriptions.png",
+    "svg": "uml-subscriptions.svg"
+  },
+  {
+    "name": "uml-value-objects",
+    "title": "RentBuild | TB1 JavaScript — Explicit Value Objects",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-value-objects.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-value-objects.png",
+    "svg": "uml-value-objects.svg"
+  },
+  {
+    "name": "uml-enumerations",
+    "title": "RentBuild | TB1 JavaScript — Frozen State Objects",
+    "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+    "source": "uml-enumerations.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "uml-enumerations.png",
+    "svg": "uml-enumerations.svg"
+  },
+  {
+    "name": "erd-iam",
+    "title": "RentBuild | Proposed AV2 MySQL — IAM",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-iam.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-iam.png",
+    "svg": "erd-iam.svg"
+  },
+  {
+    "name": "erd-profiles",
+    "title": "RentBuild | Proposed AV2 MySQL — Profiles",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-profiles.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-profiles.png",
+    "svg": "erd-profiles.svg"
+  },
+  {
+    "name": "erd-inventory",
+    "title": "RentBuild | Proposed AV2 MySQL — Inventory",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-inventory.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-inventory.png",
+    "svg": "erd-inventory.svg"
+  },
+  {
+    "name": "erd-rentals",
+    "title": "RentBuild | Proposed AV2 MySQL — Rentals",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-rentals.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-rentals.png",
+    "svg": "erd-rentals.svg"
+  },
+  {
+    "name": "erd-maintenance",
+    "title": "RentBuild | Proposed AV2 MySQL — Maintenance",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-maintenance.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-maintenance.png",
+    "svg": "erd-maintenance.svg"
+  },
+  {
+    "name": "erd-subscriptions",
+    "title": "RentBuild | Proposed AV2 MySQL — Subscriptions",
+    "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+    "source": "erd-subscriptions.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "erd-subscriptions.png",
+    "svg": "erd-subscriptions.svg"
+  },
+  {
+    "name": "userflow-inventory",
+    "title": "RentBuild | Rental Operator | Register / update equipment",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-inventory.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-inventory.png",
+    "svg": "userflow-inventory.svg"
+  },
+  {
+    "name": "userflow-request",
+    "title": "RentBuild | Construction Manager | Find and request equipment",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-request.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-request.png",
+    "svg": "userflow-request.svg"
+  },
+  {
+    "name": "userflow-decision",
+    "title": "RentBuild | Rental Operator | Decide a request",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-decision.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-decision.png",
+    "svg": "userflow-decision.svg"
+  },
+  {
+    "name": "userflow-rental",
+    "title": "RentBuild | Rental Operator | Deliver and record return",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-rental.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-rental.png",
+    "svg": "userflow-rental.svg"
+  },
+  {
+    "name": "userflow-maintenance",
+    "title": "RentBuild | Rental Operator | Record condition and maintenance",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-maintenance.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-maintenance.png",
+    "svg": "userflow-maintenance.svg"
+  },
+  {
+    "name": "userflow-tracking",
+    "title": "RentBuild | Construction Manager | Track own request",
+    "note": "LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION SCREENSHOT",
+    "source": "userflow-tracking.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-tracking.png",
+    "svg": "userflow-tracking.svg"
+  },
+  {
+    "name": "userflow-subscriptions",
+    "title": "RentBuild | Rental Operator — Select / Change Plan",
+    "note": "SUPPLEMENT: PR12 FRONTEND DEMO; NO PAYMENT OR AUTOMATIC BILLING. FORMAL MOCKUP EXPORT PENDING.",
+    "source": "userflow-subscriptions.puml",
+    "rendering": "PlantUML 1.2026.8 / Graphviz",
+    "png": "userflow-subscriptions.png",
+    "svg": "userflow-subscriptions.svg"
+  }
+]

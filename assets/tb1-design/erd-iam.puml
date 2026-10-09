@@ -1,0 +1,19 @@
+@startuml
+title RentBuild | Proposed AV2 MySQL — IAM
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+entity "users" as users {
+  * id : BIGINT <<PK>>
+  email : VARCHAR(255) <<UK>>
+  password_hash : VARCHAR(255)
+  first_name : VARCHAR(160)
+  last_name : VARCHAR(160)
+  company_name : VARCHAR(160)
+  role : VARCHAR(32)
+  status : VARCHAR(16)
+}
+footer PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1
+@enduml

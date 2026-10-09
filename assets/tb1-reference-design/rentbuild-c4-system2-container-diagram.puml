@@ -1,0 +1,38 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Container>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Container Diagram
+
+Person(rental_operator, "Rental Operator", "Person responsible for managing machinery, rentals, deliveries, returns, incidents and maintenance.")
+Person(construction_manager, "Construction Manager", "Person responsible for finding machinery, checking availability and requesting rentals for construction projects.")
+Person(sys_admin, "System Administrator", "Person responsible for mediating conflicts over machinery conditions, damages, or delays involving owners and clients.")
+
+System_Boundary(rentbuild_system, "RentBuild") {
+    Container(landing_page, "Landing Page", "Vue 3 / Vite / HTML5 / CSS3 / JavaScript", "Static website that presents RentBuild, its value proposition, features and benefits, and provides calls to action to access the Web Application.")
+    Container(spa, "Single Page Application", "Vue 3, Vue Router, Pinia, PrimeVue, JavaScript", "Single Page Application that allows rental operators to manage machinery, rentals, deliveries, returns, incidents and maintenance, and allows construction managers to search machinery, check availability and request rentals.")
+    Container(api, "RESTful API", "ASP.NET Core Web API, Entity Framework Core, C#", "RESTful API that provides the business functionality of RentBuild and connects the Web Application with the domain and persistence layers.")
+    ContainerDb(database, "Database", "MySQL", "Stores users, profiles, machinery, availability, rental requests, rentals, deliveries, returns, incidents and maintenance records.")
+}
+
+System_Ext(google_maps, "Google Maps Platform", "External mapping and geolocation service used to support machinery deliveries and returns.")
+System_Ext(stripe, "Stripe", "External payment gateway that processes user subscription transactions.")
+System_Ext(sendgrid, "SendGrid", "External email service API that handles transactional emails and notifications.")
+
+Rel(rental_operator, spa, "Manages machinery and rental operations", "HTTPS")
+Rel(landing_page, spa, "Redirects users through calls to action", "HTTPS")
+Rel(construction_manager, spa, "Searches machinery and requests rentals", "HTTPS")
+Rel(sys_admin, spa, "Monitors website uptime, manages database security and resolves technical issues")
+
+Rel(spa, api, "Consumes REST resources", "HTTPS/JSON")
+Rel(api, database, "Reads and writes data", "SQL")
+Rel(api, google_maps, "Uses maps and geolocation services", "HTTPS/API")
+Rel(api, stripe, "Processes subscription payments via HTTPS")
+Rel(api, sendgrid, "Sends transactional emails, booking confirmations, and alerts", "HTTPS/API")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

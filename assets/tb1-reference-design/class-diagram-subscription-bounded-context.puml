@@ -1,0 +1,109 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+package "Interfaces Layer" {
+  class SubscriptionController <<Controller>> {
+    - subscriptionService: SubscriptionApplicationService
+    + getPlans(): List<SubscriptionPlanResponse>
+    + subscribe(command: SubscribeToPlanCommand): UserSubscriptionResponse
+    + changePlan(command: ChangePlanCommand): UserSubscriptionResponse
+    + cancel(subscriptionId: SubscriptionId): void
+  }
+}
+
+package "Application Layer" {
+  class SubscriptionApplicationService <<Application Service>> {
+    - planRepository: SubscriptionPlanRepository
+    - subscriptionRepository: UserSubscriptionRepository
+    - paymentConnector: PaymentConnector
+    + subscribeToPlan(userId: UserId, planId: SubscriptionPlanId, token: PaymentToken): SubscriptionId
+    + changePlan(subscriptionId: SubscriptionId, newPlanId: SubscriptionPlanId): SubscriptionId
+    + cancelSubscription(subscriptionId: SubscriptionId): void
+  }
+
+  interface PaymentConnector <<Port>> {
+    + processPayment(userId: UserId, amount: Money, token: PaymentToken): PaymentResult
+  }
+}
+
+package "Infrastructure Layer" {
+  class SubscriptionPlanRepositoryImpl <<Repository Implementation>>
+  class UserSubscriptionRepositoryImpl <<Repository Implementation>>
+  class StripePaymentConnector <<External Adapter>>
+}
+
+package "Domain Layer" {
+  class SubscriptionPlan <<Aggregate Root>> {
+    - id: SubscriptionPlanId
+    - name: PlanName
+    - description: PlanDescription
+    - price: Money
+    - billingCycle: BillingCycle
+    - status: PlanStatus
+  }
+
+  class UserSubscription <<Aggregate Root>> {
+    - id: SubscriptionId
+    - userId: UserId
+    - planId: SubscriptionPlanId
+    - period: DateRange
+    - status: SubscriptionStatus
+    - autoRenew: bool
+    + renew(nextEndDate: DateOnly): void
+    + cancel(): void
+  }
+
+  enum PlanStatus <<Enum>> {
+    ACTIVE
+    INACTIVE
+    ARCHIVED
+  }
+
+  enum BillingCycle <<Enum>> {
+    MONTHLY
+    YEARLY
+  }
+
+  enum SubscriptionStatus <<Enum>> {
+    ACTIVE
+    CANCELLED
+    EXPIRED
+    PENDING_PAYMENT
+  }
+
+  class PlanName <<Value Object>> {
+    - value: string
+  }
+  class PlanDescription <<Value Object>> {
+    - value: string
+  }
+  class DateRange <<Value Object>> {
+    - startDate: DateOnly
+    - endDate: DateOnly
+    + isExpired(): bool
+  }
+
+  interface SubscriptionPlanRepository <<Repository>>
+  interface UserSubscriptionRepository <<Repository>>
+}
+
+SubscriptionController --> SubscriptionApplicationService
+SubscriptionApplicationService --> SubscriptionPlanRepository
+SubscriptionApplicationService --> UserSubscriptionRepository
+SubscriptionApplicationService --> PaymentConnector
+
+SubscriptionPlanRepositoryImpl ..|> SubscriptionPlanRepository
+UserSubscriptionRepositoryImpl ..|> UserSubscriptionRepository
+StripePaymentConnector ..|> PaymentConnector
+
+SubscriptionPlan "1" --> "1" PlanStatus
+SubscriptionPlan "1" --> "1" BillingCycle
+SubscriptionPlan "1" *-- "1" PlanName
+SubscriptionPlan "1" *-- "0..1" PlanDescription
+UserSubscription "1" --> "1" SubscriptionStatus
+UserSubscription "1" *-- "1" DateRange
+UserSubscription "0..*" --> "1" SubscriptionPlan : references planId
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

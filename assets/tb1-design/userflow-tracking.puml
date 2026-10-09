@@ -1,0 +1,29 @@
+@startuml
+' Native PlantUML source converted from userflow-tracking.json
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 15
+skinparam ArrowFontSize 13
+skinparam dpi 144
+title RentBuild | Construction Manager | Track own request
+skinparam activity {
+  BackgroundColor #E8F0FB
+  BorderColor #334155
+  DiamondBackgroundColor #FFF3BF
+  DiamondBorderColor #64748B
+}
+start
+:1. Entry / list\nUS21;
+' Prior UI reference: assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png
+-> Select / inspect;
+:2. Selected action / detail\nPrior Figma mockup; states described below;
+' Prior UI reference: assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png
+-> Submit or query;
+if (3. Decision\nOwn request exists?) then (Valid / authorized)
+  :4. Expected result\nLatest PENDING / APPROVED / REJECTED status;
+else (Invalid / unavailable)
+  :Alternative route\nUnknown / other company: no private data;
+endif
+stop
+caption LOGICAL SUPPLEMENT WITH PRIOR MOCKUPS — NOT A NEW FIGJAM EXPORT OR EXECUTION\nSCREENSHOT
+@enduml

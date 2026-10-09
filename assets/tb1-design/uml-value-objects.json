@@ -1,0 +1,165 @@
+{
+  "title": "RentBuild | TB1 JavaScript — Explicit Value Objects",
+  "note": "TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/shared/domain/value-object/money.value-object.js",
+      "src/app/shared/domain/value-object/date-range.value-object.js",
+      "src/app/inventory/domain/value-object/rental-rate.value-object.js",
+      "src/app/profiles/domain/value-object/address.value-object.js",
+      "src/app/subscriptions/domain/value-object/money.value-object.js",
+      "src/app/subscriptions/domain/value-object/date-range.value-object.js"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "Money",
+      "title": "Shared Money <<value object>>",
+      "body": "",
+      "x": 40.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Number amount",
+        "- String currency"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ amount() Number",
+        "+ currency() String"
+      ]
+    },
+    {
+      "id": "DateRange",
+      "title": "Shared DateRange <<value object>>",
+      "body": "",
+      "x": 665.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Date startDate",
+        "- Date endDate"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ overlaps(other) Boolean",
+        "+ contains(date) Boolean"
+      ]
+    },
+    {
+      "id": "RentalRate",
+      "title": "Inventory RentalRate <<value object>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 180,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Money daily",
+        "- Money weekly"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ dailyMoney() Money",
+        "+ weeklyMoney() Money",
+        "+ currency() String"
+      ]
+    },
+    {
+      "id": "Address",
+      "title": "Profiles Address <<value object>>",
+      "body": "",
+      "x": 40.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- String street",
+        "- String district",
+        "- String city",
+        "- String country",
+        "- Number latitude",
+        "- Number longitude"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ street() String",
+        "+ latitude() Number"
+      ]
+    },
+    {
+      "id": "SubscriptionMoney",
+      "title": "Subscriptions Money <<value object>>",
+      "body": "",
+      "x": 665.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Number amount",
+        "- String currency"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ amount() Number",
+        "+ currency() String"
+      ]
+    },
+    {
+      "id": "SubscriptionDateRange",
+      "title": "Subscriptions DateRange <<value object>>",
+      "body": "",
+      "x": 1290.0,
+      "y": 1240,
+      "w": 570,
+      "h": 565,
+      "kind": "value",
+      "image": null,
+      "members": [
+        "- Date startDate",
+        "- Date endDate"
+      ],
+      "operations": [
+        "+ constructor(props)",
+        "+ overlaps(other) Boolean",
+        "+ contains(date) Boolean"
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "RentalRate",
+      "Money",
+      "R1",
+      false,
+      "\"1\" *-- \"2\""
+    ]
+  ],
+  "boundaries": [],
+  "legend": [
+    "R1 | RentalRate -> Money | composition | daily and weekly amounts",
+    "Notation: - private JS #field; + public. Getter accessors use UML operation notation. Selected members shown.",
+    "Filled diamond: composition. Open arrow: navigable association. Dashed open arrow: dependency.",
+    "ID associations express references, not imports or object ownership across bounded contexts."
+  ],
+  "width": 1900,
+  "height": 2628
+}

@@ -1,0 +1,51 @@
+@startuml
+title RentBuild | TB1 JavaScript — Frozen State Objects
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+hide empty methods
+skinparam classAttributeIconSize 0
+enum "EquipmentStatus" as EquipmentStatus {
+  AVAILABLE
+  RENTED
+  MAINTENANCE
+  --
+}
+enum "RentalRequestStatus" as RentalRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  --
+}
+enum "RentalStatus" as RentalStatus {
+  CONFIRMED
+  ACTIVE
+  COMPLETED
+  --
+}
+enum "IncidentStatus" as IncidentStatus {
+  OPEN
+  RESOLVED
+  --
+}
+enum "MaintenanceStatus" as MaintenanceStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  --
+}
+enum "PlanStatus" as PlanStatus {
+  ACTIVE
+  INACTIVE
+  --
+}
+enum "SubscriptionStatus" as SubscriptionStatus {
+  ACTIVE
+  CANCELLED
+  EXPIRED
+  --
+}
+footer TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM
+@enduml

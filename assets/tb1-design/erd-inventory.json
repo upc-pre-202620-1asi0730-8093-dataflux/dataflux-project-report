@@ -1,0 +1,279 @@
+{
+  "title": "RentBuild | Proposed AV2 MySQL — Inventory",
+  "note": "PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1",
+  "source": {
+    "statementPages": [
+      19,
+      20,
+      29
+    ],
+    "frontendReference": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "scope": "proposed AV2 schema; not migrations"
+  },
+  "nodes": [
+    {
+      "id": "users",
+      "title": "users [external owner]",
+      "body": "",
+      "x": 40,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "external",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          "IAM owner; external reference"
+        ]
+      ],
+      "external": true
+    },
+    {
+      "id": "equipment_categories",
+      "title": "equipment_categories",
+      "body": "",
+      "x": 880,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "name: VARCHAR(120)"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "VARCHAR(120)",
+          "name",
+          "",
+          ""
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "equipments",
+      "title": "equipments",
+      "body": "",
+      "x": 1720,
+      "y": 180,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK user_id: BIGINT",
+        "code: VARCHAR(80)",
+        "name: VARCHAR(160)",
+        "description: TEXT",
+        "FK category_id: BIGINT",
+        "location: VARCHAR(255)",
+        "daily_rate: DECIMAL(18,2)",
+        "weekly_rate: DECIMAL(18,2)",
+        "currency: CHAR(3)",
+        "status: VARCHAR(24)"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "user_id",
+          "FK",
+          "IAM users.id"
+        ],
+        [
+          "VARCHAR(80)",
+          "code",
+          "",
+          "unique within owner"
+        ],
+        [
+          "VARCHAR(160)",
+          "name",
+          "",
+          ""
+        ],
+        [
+          "TEXT",
+          "description",
+          "",
+          ""
+        ],
+        [
+          "BIGINT",
+          "category_id",
+          "FK",
+          "equipment_categories.id"
+        ],
+        [
+          "VARCHAR(255)",
+          "location",
+          "",
+          ""
+        ],
+        [
+          "DECIMAL(18,2)",
+          "daily_rate",
+          "",
+          "RentalRate.daily Money"
+        ],
+        [
+          "DECIMAL(18,2)",
+          "weekly_rate",
+          "",
+          "RentalRate.weekly Money"
+        ],
+        [
+          "CHAR(3)",
+          "currency",
+          "",
+          "ISO currency"
+        ],
+        [
+          "VARCHAR(24)",
+          "status",
+          "",
+          "AVAILABLE / RENTED / MAINTENANCE"
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "availability_blocks",
+      "title": "availability_blocks",
+      "body": "",
+      "x": 40,
+      "y": 900,
+      "w": 740,
+      "h": 590,
+      "kind": "component",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT",
+        "FK equipment_id: BIGINT",
+        "start_date: DATE",
+        "end_date: DATE",
+        "FK rental_request_id: BIGINT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          ""
+        ],
+        [
+          "BIGINT",
+          "equipment_id",
+          "FK",
+          "equipments.id"
+        ],
+        [
+          "DATE",
+          "start_date",
+          "",
+          ""
+        ],
+        [
+          "DATE",
+          "end_date",
+          "",
+          ""
+        ],
+        [
+          "BIGINT",
+          "rental_request_id",
+          "FK",
+          "nullable correlation; Rentals owner"
+        ]
+      ],
+      "external": false
+    },
+    {
+      "id": "rental_requests",
+      "title": "rental_requests [external owner]",
+      "body": "",
+      "x": 880,
+      "y": 900,
+      "w": 740,
+      "h": 590,
+      "kind": "external",
+      "image": null,
+      "columns": [
+        "PK id: BIGINT"
+      ],
+      "fields": [
+        [
+          "BIGINT",
+          "id",
+          "PK",
+          "Rentals owner; external reference"
+        ]
+      ],
+      "external": true
+    }
+  ],
+  "edges": [
+    [
+      "users",
+      "equipments",
+      "R1",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "equipment_categories",
+      "equipments",
+      "R2",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "equipments",
+      "availability_blocks",
+      "R3",
+      false,
+      "er:||--o{"
+    ],
+    [
+      "rental_requests",
+      "availability_blocks",
+      "R4",
+      false,
+      "er:o|--o|"
+    ]
+  ],
+  "boundaries": [],
+  "legend": [
+    "R1 | users ||--o{ equipments | owns",
+    "R2 | equipment_categories ||--o{ equipments | classifies",
+    "R3 | equipments ||--o{ availability_blocks | owns period commitments",
+    "R4 | rental_requests o|--o| availability_blocks | optional recovery correlation",
+    "Legend: PK primary key; FK foreign key; UK unique key. Gray tables show external owned keys only.",
+    "Crow foot = many; bar = one; circle = optional (zero). All schema constraints are proposed AV2.",
+    "UNIQUE(user_id, code); CHECK(daily_rate >= 0 AND weekly_rate >= 0); CHECK(end_date >= start_date) proposed.",
+    "Blocks are embedded JSON in TB1; equipment_id is the proposed normalized FK. Correlation is future schema design.",
+    "Preventing overlapping commitments requires a server transaction; a simple date CHECK cannot ensure availability."
+  ],
+  "width": 2380,
+  "height": 2455
+}

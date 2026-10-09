@@ -1,0 +1,41 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Inventory Backend Component Diagram
+
+Container(spa, "Single Page Application", "Vue", "Consumes inventory and machinery-management capabilities provided by the RentBuild backend.")
+
+Container_Boundary(inventory_context, "RentBuild RESTful API / ASP.NET Core — Inventory context detail") {
+    Component(interfaces_layer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for machinery, categories, rates, status, and availability management.")
+    Component(application_layer, "Application Layer", "Application Services / Command and Query Services", "Coordinates machinery registration, updates, availability queries, rates, and inventory-management use cases.")
+    Component(domain_layer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains equipment, category, rate, status, availability, and inventory-related business rules.")
+    Component(infrastructure_layer, "Infrastructure Layer", "EF Core / Repository Implementations", "Provides persistence implementations and technical adapters required by the Inventory bounded context.")
+}
+
+Component_Ext(rentals_bc, "Rentals Bounded Context", "Backend Context", "Uses machinery information and availability during rental operations.")
+Component_Ext(maint_bc, "Maintenance Bounded Context", "Backend Context", "Updates equipment status and availability when maintenance operations occur.")
+
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores machinery, categories, rates, equipment status, and availability information.")
+
+' SPA Relationships
+Rel(spa, interfaces_layer, "Consumes Inventory services", "JSON / HTTPS")
+
+' External Context Relationships
+Rel(rentals_bc, application_layer, "Queries machinery availability")
+Rel(maint_bc, application_layer, "Updates equipment status")
+
+' Internal Layer Relationships
+Rel(interfaces_layer, application_layer, "Delegates requests")
+Rel(application_layer, domain_layer, "Executes inventory domain operations")
+Rel(application_layer, infrastructure_layer, "Uses persistence capabilities")
+
+' Database Relationships
+Rel(infrastructure_layer, database, "Reads and writes Inventory data", "EF Core / SQL")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

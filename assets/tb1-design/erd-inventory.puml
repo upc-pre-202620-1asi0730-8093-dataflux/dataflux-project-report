@@ -1,0 +1,43 @@
+@startuml
+title RentBuild | Proposed AV2 MySQL — Inventory
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+entity "users [external owner]" as users {
+  * id : BIGINT <<PK>>
+}
+entity "equipment_categories" as equipment_categories {
+  * id : BIGINT <<PK>>
+  name : VARCHAR(120)
+}
+entity "equipments" as equipments {
+  * id : BIGINT <<PK>>
+  user_id : BIGINT <<FK>>
+  code : VARCHAR(80)
+  name : VARCHAR(160)
+  description : TEXT
+  category_id : BIGINT <<FK>>
+  location : VARCHAR(255)
+  daily_rate : DECIMAL(18,2)
+  weekly_rate : DECIMAL(18,2)
+  currency : CHAR(3)
+  status : VARCHAR(24)
+}
+entity "availability_blocks" as availability_blocks {
+  * id : BIGINT <<PK>>
+  equipment_id : BIGINT <<FK>>
+  start_date : DATE
+  end_date : DATE
+  rental_request_id : BIGINT <<FK>>
+}
+entity "rental_requests [external owner]" as rental_requests {
+  * id : BIGINT <<PK>>
+}
+users ||--o{ equipments : owns
+equipment_categories ||--o{ equipments : classifies
+equipments ||--o{ availability_blocks : owns period commitments
+rental_requests |o--o| availability_blocks : optional recovery correlation
+footer PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1
+@enduml

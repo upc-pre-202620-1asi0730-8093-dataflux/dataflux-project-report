@@ -1,0 +1,116 @@
+{
+  "title": "RentBuild | C4 Components — TB1 Demo API",
+  "note": "ACADEMIC MOCK: NO ASP.NET CORE, MYSQL TRANSACTIONS OR PRODUCTION AUTHORIZATION CLAIM",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/app.services.js",
+      "src/app/shared/infrastructure/services.js",
+      "package.json"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "host",
+      "title": "server/index.cjs — HTTP composition",
+      "body": "[Component: Node.js / JavaScript]\nPORT configuration and local listener; mounts demo authentication and JSON resource routes.",
+      "x": 50,
+      "y": 220,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "auth",
+      "title": "Demo authentication handlers",
+      "body": "[Component: Node.js / JavaScript]\nIllustrative sign-up/sign-in, temporary token handling and demo credential matching.",
+      "x": 830,
+      "y": 220,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "router",
+      "title": "Resource router",
+      "body": "[Component: json-server 0.17 / JavaScript]\nCRUD routes and rewrites from server/routes.json.",
+      "x": 50,
+      "y": 690,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "data",
+      "title": "Demo data adapter",
+      "body": "[Component: JSON file / json-server]\nserver/db.json fixtures; mutable and resettable. No relational guarantees.",
+      "x": 830,
+      "y": 690,
+      "w": 620,
+      "h": 250,
+      "kind": "component"
+    },
+    {
+      "id": "web",
+      "title": "Web Application",
+      "body": "[External to this scope: Vue 3 / JavaScript]\nHttpClient consumes demo responses.",
+      "x": 830,
+      "y": 1250,
+      "w": 620,
+      "h": 250,
+      "kind": "external"
+    }
+  ],
+  "edges": [
+    [
+      "web",
+      "host",
+      "Calls demo routes [HTTP/HTTPS + JSON]"
+    ],
+    [
+      "host",
+      "auth",
+      "Handles authentication demo requests"
+    ],
+    [
+      "host",
+      "router",
+      "Dispatches resource requests"
+    ],
+    [
+      "router",
+      "data",
+      "Reads/writes mock records [local JSON file]"
+    ]
+  ],
+  "boundaries": [
+    {
+      "id": "mock_scope",
+      "label": "Demo API [Container: Node.js / json-server] — TB1 only",
+      "nodes": [
+        "host",
+        "auth",
+        "router",
+        "data"
+      ],
+      "rect": [
+        20,
+        160,
+        1460,
+        880
+      ]
+    }
+  ],
+  "legend": [
+    "Legend: Person = actor; blue = internal software; gray = external software.",
+    "Solid arrows = current interactions. Dashed arrows = proposed AV2 interactions.",
+    "Boundary labels identify the software system or the single container in scope."
+  ],
+  "width": 1500,
+  "height": 1900
+}

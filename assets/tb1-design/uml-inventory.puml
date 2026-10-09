@@ -1,0 +1,73 @@
+@startuml
+title RentBuild | TB1 JavaScript — Inventory
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+hide empty methods
+skinparam classAttributeIconSize 0
+class "Equipment" as Equipment {
+  - Number id
+  - Number userId
+  - String code
+  - String name
+  - Number categoryId
+  - String location
+  - RentalRate rentalRate
+  - String status
+  - AvailabilityBlock[] availabilityBlocks
+  --
+  + constructor(props)
+  + isAvailableFor(period) Boolean
+  + isReservedOn(date) Boolean
+}
+class "EquipmentCategory" as EquipmentCategory {
+  - Number id
+  - String name
+  --
+  + constructor(props)
+  + id() Number
+  + name() String
+}
+class "AvailabilityBlock" as AvailabilityBlock {
+  - Number id
+  - DateRange period
+  - Number rentalRequestId
+  --
+  + constructor(props)
+  + overlaps(period) Boolean
+  + rentalRequestId() Number
+}
+class "RentalRate" as RentalRate <<ValueObject>> {
+  - Money daily
+  - Money weekly
+  --
+  + constructor(props)
+  + dailyMoney() Money
+  + weeklyMoney() Money
+  + currency() String
+}
+class "Shared DateRange" as DateRange <<ValueObject>> {
+  - Date startDate
+  - Date endDate
+  --
+  + constructor(props)
+  + overlaps(other) Boolean
+  + contains(date) Boolean
+}
+class "Shared Money" as Money <<ValueObject>> {
+  - Number amount
+  - String currency
+  --
+  + constructor(props)
+  + amount() Number
+  + currency() String
+}
+Equipment "0..*" --> "0..1" EquipmentCategory : category loaded by categoryId
+Equipment "1" *-- "0..*" AvailabilityBlock : embedded availabilityBlocks
+Equipment "1" *-- "1" RentalRate : rentalRate
+RentalRate "1" *-- "2" Money : daily and weekly amounts
+AvailabilityBlock "1" *-- "1" DateRange : period
+footer TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM
+@enduml

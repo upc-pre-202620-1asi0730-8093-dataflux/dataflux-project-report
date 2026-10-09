@@ -1,0 +1,41 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Maintenance Backend Component Diagram
+
+Container(spa, "Single Page Application", "Vue", "Consumes maintenance-management capabilities provided by the RentBuild backend.")
+
+Container_Boundary(maint_context, "RentBuild RESTful API / ASP.NET Core — Maintenance context detail") {
+    Component(interfaces_layer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for maintenance schedules, inspections, incidents, maintenance records, and equipment history.")
+    Component(application_layer, "Application Layer", "Application Services / Command and Query Services", "Coordinates maintenance scheduling, inspections, incident reporting, maintenance updates, and equipment-history use cases.")
+    Component(domain_layer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains maintenance records, inspections, incidents, maintenance status, and equipment-history business rules.")
+    Component(infrastructure_layer, "Infrastructure Layer", "EF Core / Repository Implementations", "Provides persistence implementations and technical adapters required by the Maintenance bounded context.")
+}
+
+Component(inventory_bc, "Inventory Bounded Context", "Backend Context", "Provides equipment information and receives maintenance-related status and availability changes.")
+Component(rentals_bc, "Rentals Bounded Context", "Backend Context", "Provides active rental context when incidents or maintenance events affect rented equipment.")
+
+ContainerDb(database, "RentBuild Database", "MySQL", "Stores maintenance schedules, inspections, incidents, maintenance records, and equipment-history information.")
+
+' Relaciones desde el SPA
+Rel(spa, interfaces_layer, "Consumes Maintenance services", "JSON / HTTPS")
+
+' Relaciones internas entre capas
+Rel(interfaces_layer, application_layer, "Delegates requests")
+Rel(application_layer, domain_layer, "Executes maintenance domain operations")
+Rel(application_layer, infrastructure_layer, "Uses persistence capabilities")
+
+' Relaciones con otros Bounded Contexts
+Rel(application_layer, inventory_bc, "Updates equipment status and availability")
+Rel(application_layer, rentals_bc, "Uses active rental context")
+
+' Relaciones con la Base de Datos
+Rel(infrastructure_layer, database, "Reads and writes Maintenance data", "EF Core / SQL")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+title RentBuild | Proposed AV2 MySQL — Subscriptions
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+entity "users [external owner]" as users {
+  * id : BIGINT <<PK>>
+}
+entity "subscription_plans" as subscription_plans {
+  * id : BIGINT <<PK>>
+  name : VARCHAR(120)
+  description : TEXT
+  price : DECIMAL(18,2)
+  currency : CHAR(3)
+  billing_cycle : VARCHAR(16)
+  status : VARCHAR(16)
+}
+entity "user_subscriptions" as user_subscriptions {
+  * id : BIGINT <<PK>>
+  user_id : BIGINT <<FK>>
+  plan_id : BIGINT <<FK>>
+  start_date : DATE
+  end_date : DATE
+  status : VARCHAR(16)
+  auto_renew : BOOLEAN
+}
+users ||--o{ user_subscriptions : owns subscription history
+subscription_plans ||--o{ user_subscriptions : selected plan
+footer PROPOSED MYSQL SCHEMA — NO TABLE, FOREIGN KEY OR TRANSACTION IS CLAIMED IMPLEMENTED IN TB1
+@enduml

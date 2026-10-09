@@ -1,0 +1,1053 @@
+diff --git a/src/app/inventory/domain/model/availability-block.entity.js b/src/app/inventory/domain/model/availability-block.entity.js
+index 145fa2a..40db317 100644
+--- a/src/app/inventory/domain/model/availability-block.entity.js
++++ b/src/app/inventory/domain/model/availability-block.entity.js
+@@ -1,9 +1,18 @@
+ export class AvailabilityBlock {
+   #id;
+   #period;
++  #rentalRequestId;
+   constructor(props) {
+     this.#id = props.id;
+     this.#period = props.period;
++    const requestId = props.rentalRequestId ?? null;
++    if (requestId !== null && (!Number.isInteger(requestId) || requestId <= 0)) {
++      throw new Error('Invalid rental request identifier');
++    }
++    this.#rentalRequestId = requestId;
++  }
++  get rentalRequestId() {
++    return this.#rentalRequestId;
+   }
+   get id() {
+     return this.#id;
+diff --git a/src/app/inventory/infrastructure/equipment-assembler.js b/src/app/inventory/infrastructure/equipment-assembler.js
+index 7869e33..8999d9e 100644
+--- a/src/app/inventory/infrastructure/equipment-assembler.js
++++ b/src/app/inventory/infrastructure/equipment-assembler.js
+@@ -45,6 +45,7 @@ export class EquipmentAssembler {
+   #toAvailabilityBlock(resource) {
+     return new AvailabilityBlock({
+       id: resource.id,
++      rentalRequestId: resource.rentalRequestId,
+       period: new DateRange({
+         startDate: new Date(resource.startDate),
+         endDate: new Date(resource.endDate),
+@@ -56,6 +57,7 @@ export class EquipmentAssembler {
+       id: block.id,
+       startDate: block.period.startDate.toISOString(),
+       endDate: block.period.endDate.toISOString(),
++      ...(block.rentalRequestId === null ? {} : { rentalRequestId: block.rentalRequestId }),
+     };
+   }
+ }
+diff --git a/src/app/rentals/application/rentals.store.js b/src/app/rentals/application/rentals.store.js
+index ac5a7b4..4de74a2 100644
+--- a/src/app/rentals/application/rentals.store.js
++++ b/src/app/rentals/application/rentals.store.js
+@@ -17,6 +17,7 @@ import { RentalRequestEligibilityPolicy } from '../domain/policy/rental-request-
+ import { EQUIPMENT_REQUEST_AVAILABILITY_PORT } from '../infrastructure/equipment-request-availability.port.js';
+ import { MAINTENANCE_INCIDENT_RESTRICTION_PORT } from '../infrastructure/maintenance-incident-restriction.port.js';
+ import { RENTAL_REQUESTER_ACCESS_PORT } from '../infrastructure/rental-requester-access.port.js';
++import { RentalOperations } from './rental-operations.js';
+ export class RentalsStore {
+   #rentalsApi = resolve(RentalsApi);
+   #requesterAccess = resolve(RENTAL_REQUESTER_ACCESS_PORT);
+@@ -26,6 +27,11 @@ export class RentalsStore {
+   #equipmentRequestAvailability = resolve(EQUIPMENT_REQUEST_AVAILABILITY_PORT);
+   #maintenanceIncidentRestriction = resolve(MAINTENANCE_INCIDENT_RESTRICTION_PORT);
+   #participantInformation = resolve(PARTICIPANT_INFORMATION_PORT);
++  #operations = new RentalOperations({
++    rentalsApi: this.#rentalsApi,
++    equipmentOperation: this.#equipmentOperation,
++    incidentRestriction: this.#maintenanceIncidentRestriction,
++  });
+   #readRequestVersion = 0;
+   #rentalRequestsState = shallowRef([]);
+   rentalRequests = shallowReadonly(this.#rentalRequestsState);
+@@ -405,6 +411,7 @@ export class RentalsStore {
+       });
+   }
+   registerDelivery(rentalId, deliveredAt, notes) {
++    if (this.#updatingRentalIdState.value !== null || this.#updatingRequestIdState.value !== null) return;
+     const currentRental = this.rentals.value.find((rental) => rental.id === rentalId);
+     if (!currentRental) {
+       this.#errorState.value = 'Rental not found';
+@@ -417,6 +424,7 @@ export class RentalsStore {
+       rentalCompanyUserId: currentRental.rentalCompanyUserId,
+       period: currentRental.period,
+       status: currentRental.status,
++      rentalRequestId: currentRental.rentalRequestId,
+     });
+     try {
+       updatedRental.registerDelivery();
+@@ -439,17 +447,8 @@ export class RentalsStore {
+     this.#updatingRentalIdState.value = rentalId;
+     this.#operationSuccessState.value = null;
+     this.#errorState.value = null;
+-    this.#rentalsApi
+-      .createDelivery(delivery)
+-      .pipe(
+-        switchMap(() => this.#rentalsApi.updateRental(updatedRental)),
+-        switchMap((savedRental) =>
+-          this.#equipmentOperation
+-            .markAsRented(savedRental.equipmentId)
+-            .pipe(map(() => savedRental)),
+-        ),
+-        takeUntil(sessionEnded),
+-      )
++    this.#operations.deliver(currentRental, updatedRental, delivery)
++      .pipe(takeUntil(sessionEnded))
+       .subscribe({
+         next: (savedRental) => {
+           this.#rentalsState.value = ((rentals) =>
+@@ -468,6 +467,7 @@ export class RentalsStore {
+       });
+   }
+   registerReturn(rentalId, returnedAt, notes, maintenanceRequired) {
++    if (this.#updatingRentalIdState.value !== null || this.#updatingRequestIdState.value !== null) return;
+     const currentRental = this.rentals.value.find((rental) => rental.id === rentalId);
+     if (!currentRental) {
+       this.#errorState.value = 'Rental not found';
+@@ -480,6 +480,7 @@ export class RentalsStore {
+       rentalCompanyUserId: currentRental.rentalCompanyUserId,
+       period: currentRental.period,
+       status: currentRental.status,
++      rentalRequestId: currentRental.rentalRequestId,
+     });
+     try {
+       updatedRental.registerReturn();
+@@ -503,18 +504,8 @@ export class RentalsStore {
+     this.#updatingRentalIdState.value = rentalId;
+     this.#operationSuccessState.value = null;
+     this.#errorState.value = null;
+-    this.#rentalsApi
+-      .createEquipmentReturn(equipmentReturn)
+-      .pipe(
+-        switchMap(() => this.#rentalsApi.updateRental(updatedRental)),
+-        switchMap((savedRental) => {
+-          const equipmentUpdate = equipmentReturn.requiresMaintenance()
+-            ? this.#equipmentOperation.markAsMaintenance(savedRental.equipmentId)
+-            : this.#equipmentOperation.markAsAvailable(savedRental.equipmentId);
+-          return equipmentUpdate.pipe(map(() => savedRental));
+-        }),
+-        takeUntil(sessionEnded),
+-      )
++    this.#operations.returnEquipment(currentRental, updatedRental, equipmentReturn)
++      .pipe(takeUntil(sessionEnded))
+       .subscribe({
+         next: (savedRental) => {
+           this.#rentalsState.value = ((rentals) =>
+@@ -570,6 +561,7 @@ export class RentalsStore {
+     this.#operationSuccessState.value = null;
+   }
+   #resolveRentalRequest(requestId, targetStatus) {
++    if (this.#updatingRentalIdState.value !== null || this.#updatingRequestIdState.value !== null) return;
+     const currentRequest = this.rentalRequests.value.find((request) => request.id === requestId);
+     if (!currentRequest) {
+       this.#errorState.value = 'Rental request not found';
+@@ -611,23 +603,9 @@ export class RentalsStore {
+         rentalCompanyUserId: currentRequest.rentalCompanyUserId,
+         period: currentRequest.period,
+         status: RentalStatus.CONFIRMED,
++        rentalRequestId: currentRequest.id,
+       });
+-      operation = this.#maintenanceIncidentRestriction
+-        .hasOpenBlockingIncident(currentRequest.equipmentId)
+-        .pipe(
+-          switchMap((hasOpenBlockingIncident) => {
+-            if (hasOpenBlockingIncident) {
+-              throw new Error('Equipment has an open blocking maintenance incident');
+-            }
+-            return this.#equipmentOperation.reservePeriod(
+-              currentRequest.equipmentId,
+-              currentRequest.period.startDate,
+-              currentRequest.period.endDate,
+-            );
+-          }),
+-          switchMap(() => this.#rentalsApi.createRental(confirmedRental)),
+-          switchMap(() => this.#rentalsApi.updateRentalRequest(updatedRequest)),
+-        );
++      operation = this.#operations.approve(updatedRequest, confirmedRental);
+     } else {
+       operation = this.#rentalsApi.updateRentalRequest(updatedRequest);
+     }
+diff --git a/src/app/rentals/domain/model/rental.entity.js b/src/app/rentals/domain/model/rental.entity.js
+index f0f653a..ce42088 100644
+--- a/src/app/rentals/domain/model/rental.entity.js
++++ b/src/app/rentals/domain/model/rental.entity.js
+@@ -6,6 +6,7 @@ export class Rental {
+   #rentalCompanyUserId;
+   #period;
+   #status;
++  #rentalRequestId;
+   constructor(props) {
+     this.#id = props.id;
+     this.#equipmentId = props.equipmentId;
+@@ -13,6 +14,14 @@ export class Rental {
+     this.#rentalCompanyUserId = props.rentalCompanyUserId;
+     this.#period = props.period;
+     this.#status = props.status ?? RentalStatus.CONFIRMED;
++    const requestId = props.rentalRequestId ?? null;
++    if (requestId !== null && (!Number.isInteger(requestId) || requestId <= 0)) {
++      throw new Error('Invalid rental request identifier');
++    }
++    this.#rentalRequestId = requestId;
++  }
++  get rentalRequestId() {
++    return this.#rentalRequestId;
+   }
+   get id() {
+     return this.#id;
+diff --git a/src/app/rentals/infrastructure/equipment-operation.port.js b/src/app/rentals/infrastructure/equipment-operation.port.js
+index ab8d2a4..cfaaefa 100644
+--- a/src/app/rentals/infrastructure/equipment-operation.port.js
++++ b/src/app/rentals/infrastructure/equipment-operation.port.js
+@@ -1,8 +1,10 @@
+ /**
+  * @typedef {object} EquipmentOperationPort
+- * @property {Function} reservePeriod - reservePeriod(equipmentId, startDate, endDate)
++ * @property {Function} reservePeriod - reservePeriod(equipmentId, startDate, endDate, rentalRequestId), returns its reservation receipt
++ * @property {Function} releaseReservation - releaseReservation(receipt), releases only the matching reservation
+  * @property {Function} markAsRented - markAsRented(equipmentId)
+  * @property {Function} markAsAvailable - markAsAvailable(equipmentId)
+  * @property {Function} markAsMaintenance - markAsMaintenance(equipmentId)
++ * @property {Function} restoreStatus - restoreStatus(receipt), restores a matching status transition
+  */
+ export const EQUIPMENT_OPERATION_PORT = Symbol('EQUIPMENT_OPERATION_PORT');
+diff --git a/src/app/rentals/infrastructure/inventory-equipment-operation-acl-adapter.js b/src/app/rentals/infrastructure/inventory-equipment-operation-acl-adapter.js
+index fc2b2b7..05c8d7c 100644
+--- a/src/app/rentals/infrastructure/inventory-equipment-operation-acl-adapter.js
++++ b/src/app/rentals/infrastructure/inventory-equipment-operation-acl-adapter.js
+@@ -1,28 +1,40 @@
+ import { FetchClient, resolve } from '../../shared/infrastructure/services.js';
+-import { catchError, map, switchMap } from 'rxjs';
++import { catchError, map, of, switchMap, throwError } from 'rxjs';
+ import { environment } from '../../../environments/environment.js';
+ import { ErrorHandlingEnabledBaseType } from '../../shared/infrastructure/error-handling-enabled-base-type.js';
+ import { MAINTENANCE_INCIDENT_RESTRICTION_PORT } from './maintenance-incident-restriction.port.js';
++import { verifyRentalWrite } from './rental-write-recovery.js';
+ 
+ export class InventoryEquipmentOperationAclAdapter extends ErrorHandlingEnabledBaseType {
+   #http = resolve(FetchClient);
+   #incidentRestriction = resolve(MAINTENANCE_INCIDENT_RESTRICTION_PORT);
+   #endpointUrl = `${environment.platformProviderApiBaseUrl}${environment.platformProviderEquipmentEndpointPath}`;
+-  reservePeriod(equipmentId, startDate, endDate) {
++  reservePeriod(equipmentId, startDate, endDate, rentalRequestId = null) {
+     if (
++      !(startDate instanceof Date) || !(endDate instanceof Date) ||
+       Number.isNaN(startDate.getTime()) ||
+       Number.isNaN(endDate.getTime()) ||
+       startDate > endDate
+     ) {
+       throw new Error('Rental period is invalid');
+     }
++    if (rentalRequestId !== null && (!Number.isInteger(rentalRequestId) || rentalRequestId <= 0)) {
++      throw new Error('Invalid rental request identifier');
++    }
+     return this.#http.get(`${this.#endpointUrl}/${equipmentId}`).pipe(
+       switchMap((equipment) => {
+         if (equipment.status !== 'AVAILABLE') {
+           throw new Error('Equipment is not available');
+         }
+-        const availabilityBlocks = equipment.availabilityBlocks ?? [];
+-        const overlaps = availabilityBlocks.some((block) =>
++        const availabilityBlocks = this.#blocks(equipment);
++        const owned = rentalRequestId === null ? [] : availabilityBlocks.filter(
++          (block) => block.rentalRequestId === rentalRequestId,
++        );
++        if (owned.length > 1 || (owned.length === 1 &&
++          !this.#samePeriod(owned[0], startDate, endDate))) {
++          throw new Error('Conflicting reservation for this request; inspect before retry');
++        }
++        const overlaps = availabilityBlocks.some((block) => block !== owned[0] &&
+           this.#periodsOverlap(
+             startDate,
+             endDate,
+@@ -33,21 +45,36 @@ export class InventoryEquipmentOperationAclAdapter extends ErrorHandlingEnabledB
+         if (overlaps) {
+           throw new Error('Equipment is not available for the selected period');
+         }
+-        const nextBlockId =
+-          availabilityBlocks.reduce((highestId, block) => Math.max(highestId, block.id), 0) + 1;
+-        return this.#http.patch(`${this.#endpointUrl}/${equipmentId}`, {
+-          availabilityBlocks: [
+-            ...availabilityBlocks,
+-            {
+-              id: nextBlockId,
+-              startDate: startDate.toISOString(),
+-              endDate: endDate.toISOString(),
+-            },
+-          ],
+-        });
++        const block = owned[0] ?? {
++          id: availabilityBlocks.reduce((highest, item) => Math.max(highest, item.id), 0) + 1,
++          startDate: startDate.toISOString(), endDate: endDate.toISOString(),
++          ...(rentalRequestId === null ? {} : { rentalRequestId }),
++        };
++        const receipt = { equipmentId, id: block.id, rentalRequestId: block.rentalRequestId ?? null,
++          startDate: block.startDate, endDate: block.endDate };
++        if (owned[0]) return of(receipt);
++        return this.#patchVerified(equipmentId, {
++          availabilityBlocks: [...availabilityBlocks, block],
++        }, (actual) => this.#blocks(actual).some((item) => this.#sameReservation(item, receipt)))
++          .pipe(map(() => receipt));
++      }),
++      catchError((error) => this.#handleOperationError(error, 'Failed to reserve equipment period')),
++    );
++  }
++  releaseReservation(receipt) {
++    return this.#http.get(`${this.#endpointUrl}/${receipt.equipmentId}`).pipe(
++      switchMap((equipment) => {
++        const blocks = this.#blocks(equipment);
++        const owned = blocks.find((block) => block.id === receipt.id);
++        if (!owned) return of(undefined);
++        if (!this.#sameReservation(owned, receipt)) {
++          throw new Error('Reservation changed before compensation; inspect before retry');
++        }
++        return this.#patchVerified(receipt.equipmentId, {
++          availabilityBlocks: blocks.filter((block) => block !== owned),
++        }, (actual) => !this.#blocks(actual).some((block) => block.id === receipt.id))
++          .pipe(map(() => undefined));
+       }),
+-      map(() => undefined),
+-      catchError(this.handleError('Failed to reserve equipment period')),
+     );
+   }
+   markAsRented(equipmentId) {
+@@ -59,10 +86,31 @@ export class InventoryEquipmentOperationAclAdapter extends ErrorHandlingEnabledB
+   markAsMaintenance(equipmentId) {
+     return this.#updateStatus(equipmentId, 'MAINTENANCE');
+   }
++  restoreStatus(receipt) {
++    if (!receipt.changed) return of(undefined);
++    return this.#http.get(`${this.#endpointUrl}/${receipt.equipmentId}`).pipe(
++      switchMap((equipment) => {
++        if (equipment.status === receipt.previousStatus) return of(undefined);
++        if (equipment.status !== receipt.appliedStatus) {
++          throw new Error('Equipment changed before compensation; inspect before retry');
++        }
++        return this.#incidentRestriction.hasOpenBlockingIncident(receipt.equipmentId).pipe(
++          switchMap((blocked) => {
++            if (blocked && receipt.previousStatus !== 'MAINTENANCE') {
++              throw new Error('Blocking incident prevents equipment compensation; inspect before retry');
++            }
++            return this.#patchVerified(receipt.equipmentId, { status: receipt.previousStatus },
++              (actual) => actual.status === receipt.previousStatus);
++          }),
++          map(() => undefined),
++        );
++      }),
++    );
++  }
+   #updateStatus(equipmentId, status) {
+     return this.#http.get(`${this.#endpointUrl}/${equipmentId}`).pipe(
+       switchMap((equipment) => {
+-        if (status === 'RENTED' && equipment.status !== 'AVAILABLE') {
++        if (status === 'RENTED' && !['AVAILABLE', 'RENTED'].includes(equipment.status)) {
+           throw new Error('Cannot rent equipment that is not available');
+         }
+         if (status === 'AVAILABLE' && equipment.status === 'MAINTENANCE') {
+@@ -70,21 +118,50 @@ export class InventoryEquipmentOperationAclAdapter extends ErrorHandlingEnabledB
+         }
+         if (status === 'AVAILABLE') {
+           return this.#incidentRestriction.hasOpenBlockingIncident(equipmentId).pipe(
+-            switchMap((blocked) =>
+-              this.#http.patch(`${this.#endpointUrl}/${equipmentId}`, {
+-                status: blocked ? 'MAINTENANCE' : 'AVAILABLE',
+-              }),
+-            ),
++            switchMap((blocked) => this.#applyStatus(
++              equipmentId, equipment.status, blocked ? 'MAINTENANCE' : 'AVAILABLE',
++            )),
+           );
+         }
+-        return this.#http.patch(`${this.#endpointUrl}/${equipmentId}`, {
+-          status,
+-        });
++        return this.#applyStatus(equipmentId, equipment.status, status);
+       }),
+-      map(() => undefined),
+-      catchError(this.handleError('Failed to update equipment status')),
++      catchError((error) => this.#handleOperationError(error, 'Failed to update equipment status')),
++    );
++  }
++  #applyStatus(equipmentId, previousStatus, appliedStatus) {
++    const receipt = { equipmentId, previousStatus, appliedStatus, changed: previousStatus !== appliedStatus };
++    if (!receipt.changed) return of(receipt);
++    return this.#patchVerified(equipmentId, { status: appliedStatus },
++      (actual) => actual.status === appliedStatus).pipe(map(() => receipt));
++  }
++  #patchVerified(equipmentId, body, matches) {
++    return this.#http.patch(`${this.#endpointUrl}/${equipmentId}`, body).pipe(
++      catchError((error) => verifyRentalWrite(error,
++        () => this.#http.get(`${this.#endpointUrl}/${equipmentId}`), matches)),
+     );
+   }
++  #handleOperationError(error, operation) {
++    return error.outcomeUnknown ? throwError(() => error) : this.handleError(operation)(error);
++  }
++  #blocks(equipment) {
++    const blocks = equipment.availabilityBlocks ?? [];
++    if (!Array.isArray(blocks) || blocks.some((block) =>
++      !Number.isInteger(block.id) || block.id <= 0 ||
++      (block.rentalRequestId != null && (!Number.isInteger(block.rentalRequestId) || block.rentalRequestId <= 0)) ||
++      !Number.isFinite(Date.parse(block.startDate)) || !Number.isFinite(Date.parse(block.endDate)) ||
++      new Date(block.startDate) > new Date(block.endDate))) {
++      throw new Error('Unable to verify equipment reservations');
++    }
++    return blocks;
++  }
++  #sameReservation(block, receipt) {
++    return block.id === receipt.id &&
++      (block.rentalRequestId ?? null) === (receipt.rentalRequestId ?? null) &&
++      this.#samePeriod(block, new Date(receipt.startDate), new Date(receipt.endDate));
++  }
++  #samePeriod(block, startDate, endDate) {
++    return Date.parse(block.startDate) === startDate.getTime() && Date.parse(block.endDate) === endDate.getTime();
++  }
+   #periodsOverlap(firstStart, firstEnd, secondStart, secondEnd) {
+     return firstStart <= secondEnd && secondStart <= firstEnd;
+   }
+diff --git a/src/app/rentals/infrastructure/rental-assembler.js b/src/app/rentals/infrastructure/rental-assembler.js
+index f565826..9c4637f 100644
+--- a/src/app/rentals/infrastructure/rental-assembler.js
++++ b/src/app/rentals/infrastructure/rental-assembler.js
+@@ -15,6 +15,7 @@ export class RentalAssembler {
+         endDate: new Date(resource.endDate),
+       }),
+       status: resource.status,
++      rentalRequestId: resource.rentalRequestId,
+     });
+   }
+   toResourceFromEntity(entity) {
+@@ -26,6 +27,7 @@ export class RentalAssembler {
+       startDate: entity.period.startDate.toISOString(),
+       endDate: entity.period.endDate.toISOString(),
+       status: entity.status,
++      ...(entity.rentalRequestId === null ? {} : { rentalRequestId: entity.rentalRequestId }),
+     };
+   }
+ }
+diff --git a/src/app/rentals/infrastructure/rentals-api.js b/src/app/rentals/infrastructure/rentals-api.js
+index 1eb087d..64a0d08 100644
+--- a/src/app/rentals/infrastructure/rentals-api.js
++++ b/src/app/rentals/infrastructure/rentals-api.js
+@@ -1,9 +1,10 @@
++import { catchError, map, of, switchMap, throwError } from 'rxjs';
+ import { BaseApi } from '../../shared/infrastructure/base-api.js';
+-
+ import { DeliveryApiEndpoint } from './delivery-api-endpoint.js';
+ import { EquipmentReturnApiEndpoint } from './equipment-return-api-endpoint.js';
+ import { RentalApiEndpoint } from './rental-api-endpoint.js';
+ import { RentalRequestApiEndpoint } from './rental-request-api-endpoint.js';
++import { matchesRentalResource, verifyRentalWrite } from './rental-write-recovery.js';
+ export class RentalsApi extends BaseApi {
+   #rentalRequestEndpoint = new RentalRequestApiEndpoint(this.http);
+   #rentalEndpoint = new RentalApiEndpoint(this.http);
+@@ -19,21 +20,82 @@ export class RentalsApi extends BaseApi {
+     return this.#rentalRequestEndpoint.create(rentalRequest);
+   }
+   updateRentalRequest(rentalRequest) {
+-    return this.#rentalRequestEndpoint.update(rentalRequest, rentalRequest.id);
++    return this.#updateVerified(this.#rentalRequestEndpoint, rentalRequest);
+   }
+   getRentals() {
+     return this.#rentalEndpoint.getAll();
+   }
++  getRental(id) {
++    return this.#rentalEndpoint.getById(id);
++  }
+   createRental(rental) {
+-    return this.#rentalEndpoint.create(rental);
++    if (rental.rentalRequestId === null) return this.#rentalEndpoint.create(rental);
++    return this.#createOnce(this.#rentalEndpoint, rental, 'rentalRequestId');
+   }
+   updateRental(rental) {
+-    return this.#rentalEndpoint.update(rental, rental.id);
++    return this.#updateVerified(this.#rentalEndpoint, rental);
++  }
++  restoreRental(original, applied) {
++    return this.getRental(original.id).pipe(switchMap((current) => {
++      if (this.#matches(this.#rentalEndpoint, current, original)) return of(current);
++      if (!this.#matches(this.#rentalEndpoint, current, applied)) {
++        throw new Error('Rental changed before compensation; inspect before retry');
++      }
++      return this.updateRental(original);
++    }));
++  }
++  removeConfirmedRental(rental) {
++    const endpoint = this.#rentalEndpoint;
++    const url = `${endpoint.endpointUrl}/${rental.id}`;
++    const read = () => this.http.get(url).pipe(catchError((error) =>
++      error.status === 404 ? of(null) : throwError(() => error),
++    ));
++    return read().pipe(switchMap((current) => {
++      if (current === null) return of(undefined);
++      const expected = endpoint.assembler.toResourceFromEntity(rental);
++      if (current.status !== 'CONFIRMED' || !matchesRentalResource(current, expected)) {
++        throw new Error('Rental changed before compensation; inspect before retry');
++      }
++      return this.http.request('DELETE', url).pipe(
++        catchError((error) => verifyRentalWrite(error, read, (actual) => actual === null)),
++        map(() => undefined),
++      );
++    }));
+   }
+   createDelivery(delivery) {
+-    return this.#deliveryEndpoint.create(delivery);
++    return this.#createOnce(this.#deliveryEndpoint, delivery, 'rentalId');
+   }
+   createEquipmentReturn(equipmentReturn) {
+-    return this.#equipmentReturnEndpoint.create(equipmentReturn);
++    return this.#createOnce(this.#equipmentReturnEndpoint, equipmentReturn, 'rentalId');
++  }
++  #updateVerified(endpoint, entity) {
++    return endpoint.update(entity, entity.id).pipe(catchError((error) =>
++      verifyRentalWrite(error, () => endpoint.getById(entity.id),
++        (actual) => this.#matches(endpoint, actual, entity)),
++    ));
++  }
++  #createOnce(endpoint, entity, key) {
++    const find = (entities) => this.#findMatching(endpoint, entities, entity, key);
++    return endpoint.getAll().pipe(switchMap((entities) => {
++      const existing = find(entities);
++      if (existing) return of(existing);
++      return endpoint.create(entity).pipe(catchError((error) =>
++        verifyRentalWrite(error, () => endpoint.getAll(),
++          (actual) => Boolean(find(actual))).pipe(map(find)),
++      ));
++    }));
++  }
++  #findMatching(endpoint, entities, entity, key) {
++    const matching = entities.filter((existing) => existing[key] === entity[key]);
++    if (matching.length === 0) return null;
++    if (matching.length !== 1 || !this.#matches(endpoint, matching[0], entity)) {
++      throw Object.assign(new Error('Recovery incomplete: conflicting rental record; inspect before retry'),
++        { outcomeUnknown: true });
++    }
++    return matching[0];
++  }
++  #matches(endpoint, actual, expected) {
++    return matchesRentalResource(endpoint.assembler.toResourceFromEntity(actual),
++      endpoint.assembler.toResourceFromEntity(expected));
+   }
+ }
+diff --git a/src/app/rentals/application/rental-operations.js b/src/app/rentals/application/rental-operations.js
+new file mode 100644
+index 0000000..f2875e4
+--- /dev/null
++++ b/src/app/rentals/application/rental-operations.js
+@@ -0,0 +1,91 @@
++import { catchError, concatMap, defer, from, map, of, switchMap, tap, throwError, toArray } from 'rxjs';
++import { RentalRequestStatus } from '../domain/model/rental-request-status.enum.js';
++
++export class RentalOperations {
++  #api;
++  #equipment;
++  #incidents;
++  constructor({ rentalsApi, equipmentOperation, incidentRestriction }) {
++    this.#api = rentalsApi;
++    this.#equipment = equipmentOperation;
++    this.#incidents = incidentRestriction;
++  }
++  approve(request, confirmedRental) {
++    return this.#recover((compensations) => this.#api.getRentalRequest(request.id).pipe(
++      switchMap((current) => {
++        this.#ensureSameRental(current, request);
++        if (current.status === RentalRequestStatus.APPROVED) return of(current);
++        if (!current.isPending) throw new Error('Rental request is no longer pending; reload requests');
++        return this.#incidents.hasOpenBlockingIncident(request.equipmentId).pipe(
++          switchMap((blocked) => {
++            if (blocked) throw new Error('Equipment has an open blocking maintenance incident');
++            return this.#equipment.reservePeriod(request.equipmentId,
++              request.period.startDate, request.period.endDate, request.id);
++          }),
++          tap((receipt) => compensations.push(() => this.#equipment.releaseReservation(receipt))),
++          switchMap(() => this.#api.createRental(confirmedRental)),
++          tap((rental) => compensations.push(() => this.#api.removeConfirmedRental(rental))),
++          switchMap(() => this.#api.updateRentalRequest(request)),
++        );
++      }),
++    ));
++  }
++  deliver(current, updated, delivery) {
++    return this.#move(current, updated, () => this.#equipment.markAsRented(current.equipmentId),
++      () => this.#api.createDelivery(delivery));
++  }
++  returnEquipment(current, updated, equipmentReturn) {
++    const updateEquipment = () => equipmentReturn.requiresMaintenance()
++      ? this.#equipment.markAsMaintenance(current.equipmentId)
++      : this.#equipment.markAsAvailable(current.equipmentId);
++    return this.#move(current, updated, updateEquipment,
++      () => this.#api.createEquipmentReturn(equipmentReturn));
++  }
++  #move(current, updated, updateEquipment, recordOperation) {
++    return this.#recover((compensations) => this.#api.getRental(current.id).pipe(
++      switchMap((fresh) => {
++        this.#ensureSameRental(fresh, current);
++        if (![current.status, updated.status].includes(fresh.status)) {
++          throw new Error('Rental status changed; reload rentals before retry');
++        }
++        return updateEquipment().pipe(
++          tap((receipt) => compensations.push(() => this.#equipment.restoreStatus(receipt))),
++          switchMap(() => {
++            if (fresh.status === updated.status) return of(fresh);
++            return this.#api.updateRental(updated).pipe(
++              tap((saved) => compensations.push(() => this.#api.restoreRental(fresh, saved))),
++            );
++          }),
++          switchMap((saved) => recordOperation().pipe(map(() => saved))),
++        );
++      }),
++    ));
++  }
++  #recover(operation) {
++    return defer(() => {
++      const compensations = [];
++      return operation(compensations).pipe(catchError((error) => {
++        if (error.outcomeUnknown) return throwError(() => error);
++        // Stop on a failed compensation: releasing availability while a rental
++        // could still exist would introduce another inconsistent state.
++        return from([...compensations].reverse()).pipe(
++          concatMap((compensate) => defer(compensate)), toArray(),
++          catchError((recoveryError) => of(recoveryError)),
++          switchMap((result) => throwError(() => Array.isArray(result) ? error : new Error(
++            `${error.message}. Recovery incomplete: ${result.message}. Inspect before retry`,
++          ))),
++        );
++      }));
++    });
++  }
++  #ensureSameRental(actual, expected) {
++    if (actual.id !== expected.id || actual.equipmentId !== expected.equipmentId ||
++      actual.constructionUserId !== expected.constructionUserId ||
++      actual.rentalCompanyUserId !== expected.rentalCompanyUserId ||
++      (actual.rentalRequestId ?? null) !== (expected.rentalRequestId ?? null) ||
++      actual.period.startDate.getTime() !== expected.period.startDate.getTime() ||
++      actual.period.endDate.getTime() !== expected.period.endDate.getTime()) {
++      throw new Error('Rental details changed; reload before retry');
++    }
++  }
++}
+diff --git a/src/app/rentals/application/rentals.store.test.js b/src/app/rentals/application/rentals.store.test.js
+new file mode 100644
+index 0000000..f3e8500
+--- /dev/null
++++ b/src/app/rentals/application/rentals.store.test.js
+@@ -0,0 +1,311 @@
++import { afterEach, describe, expect, it, vi } from 'vitest';
++import { createRentalHarness, equipmentResource, rentalResource, requestResource } from './tests/rental-api-harness.js';
++
++afterEach(() => vi.unstubAllGlobals());
++const date = () => new Date('2030-01-01T05:00:00.000Z');
++const faultOn = (method, resource, condition = () => true) => (call) =>
++  call.method === method && call.resource === resource && condition(call);
++async function loadRequests(store) {
++  store.loadRentalRequestsForCompany(1);
++  await vi.waitFor(() => expect(store.loading.value).toBe(false));
++  expect(store.error.value).toBeNull();
++}
++async function loadRentals(store) {
++  store.loadActiveRentalsForCompany(1);
++  await vi.waitFor(() => expect(store.loading.value).toBe(false));
++  expect(store.error.value).toBeNull();
++}
++async function finishApproval(store) {
++  await vi.waitFor(() => expect(store.updatingRequestId.value).toBeNull());
++}
++async function finishMovement(store) {
++  await vi.waitFor(() => expect(store.updatingRentalId.value).toBeNull());
++}
++
++describe('Rentals: approval recovery', () => {
++  it.each(['equipment', 'rentals', 'rental-requests'])('compensates a failed write to %s and permits a clean retry', async (resource) => {
++    const { store, db, failNext } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : resource === 'rentals' ? 'POST' : 'PUT', resource));
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toContain('Controlled transport failure');
++    expect(db.equipment[0].availabilityBlocks).toEqual([]);
++    expect(db.rentals).toEqual([]);
++    expect(db['rental-requests'][0].status).toBe('PENDING');
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals).toHaveLength(1);
++    expect(db.rentals[0].status).toBe('CONFIRMED');
++    expect(db['rental-requests'][0].status).toBe('APPROVED');
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++  });
++
++  it.each(['equipment', 'rentals', 'rental-requests'])('verifies a lost success response from %s without duplicating effects', async (resource) => {
++    const { store, db, failNext } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : resource === 'rentals' ? 'POST' : 'PUT', resource), 'after');
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals).toHaveLength(1);
++    expect(db['rental-requests'][0].status).toBe('APPROVED');
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++  });
++
++  it('warns if reservation compensation fails and resumes the same reservation on retry', async () => {
++    const { store, db, failNext } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn('POST', 'rentals'));
++    failNext(faultOn('PATCH', 'equipment', (call) => call.body.availabilityBlocks?.length === 0));
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toContain('Recovery incomplete');
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals).toHaveLength(1);
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++    expect(db['rental-requests'][0].status).toBe('APPROVED');
++  });
++
++  it('does not release a reservation owned by another request', async () => {
++    const equipment = equipmentResource();
++    equipment.availabilityBlocks = [{ id: 5, rentalRequestId: 99, startDate: rentalResource().startDate, endDate: rentalResource().endDate }];
++    const { store, db } = await createRentalHarness({ equipment: [equipment], 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeTruthy();
++    expect(db.equipment[0].availabilityBlocks).toEqual(equipment.availabilityBlocks);
++    expect(db.rentals).toEqual([]);
++  });
++
++  it('preserves other periods when compensating its own reservation', async () => {
++    const equipment = equipmentResource();
++    equipment.availabilityBlocks = [{ id: 5, rentalRequestId: 99, startDate: '2030-02-01T00:00:00.000Z', endDate: '2030-02-10T00:00:00.000Z' }];
++    const { store, db, failNext } = await createRentalHarness({ equipment: [equipment], 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn('POST', 'rentals'));
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(db.equipment[0].availabilityBlocks).toEqual(equipment.availabilityBlocks);
++    expect(db.rentals).toEqual([]);
++  });
++
++  it('retains the reservation if deleting the compensated rental fails and reuses both on retry', async () => {
++    const { store, db, calls, failNext } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn('PUT', 'rental-requests'));
++    failNext(faultOn('DELETE', 'rentals'));
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toContain('Recovery incomplete');
++    expect(db.rentals).toHaveLength(1);
++    expect(db.rentals[0].rentalRequestId).toBe(1);
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++    expect(db.equipment[0].availabilityBlocks[0].rentalRequestId).toBe(1);
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeNull();
++    expect(db['rental-requests'][0].status).toBe('APPROVED');
++    expect(db.rentals).toHaveLength(1);
++    expect(calls.filter(faultOn('POST', 'rentals'))).toHaveLength(1);
++  });
++
++  it.each(['equipment', 'rentals', 'rental-requests'])('reports an unverified %s write and resumes from persisted effects on retry', async (resource) => {
++    const { store, db, failNext } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : resource === 'rentals' ? 'POST' : 'PUT', resource), 'after');
++    failNext(faultOn('GET', resource, () => resource === 'equipment'
++      ? db.equipment[0].availabilityBlocks.length === 1
++      : resource === 'rentals' ? db.rentals.length === 1 : db['rental-requests'][0].status === 'APPROVED'));
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toContain('write outcome could not be verified');
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals).toHaveLength(1);
++    expect(db.equipment[0].availabilityBlocks).toHaveLength(1);
++    expect(db['rental-requests'][0].status).toBe('APPROVED');
++  });
++});
++
++describe('Rentals: delivery and return recovery', () => {
++  it.each(['equipment', 'rentals', 'deliveries'])('compensates delivery failure at %s and retries without duplicate records', async (resource) => {
++    const { store, db, failNext } = await createRentalHarness({ rentals: [rentalResource()] });
++    await loadRentals(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : resource === 'rentals' ? 'PUT' : 'POST', resource));
++    store.registerDelivery(1, date(), 'Fictional delivery');
++    await finishMovement(store);
++    expect(store.error.value).toContain('Controlled transport failure');
++    expect(db.rentals[0].status).toBe('CONFIRMED');
++    expect(db.equipment[0].status).toBe('AVAILABLE');
++    expect(db.deliveries).toEqual([]);
++    store.registerDelivery(1, date(), 'Fictional delivery');
++    await finishMovement(store);
++    expect(store.operationSuccess.value).toBe('DELIVERY');
++    expect(db.rentals[0].status).toBe('ACTIVE');
++    expect(db.equipment[0].status).toBe('RENTED');
++    expect(db.deliveries).toHaveLength(1);
++  });
++
++  it.each(['equipment', 'rentals', 'equipment-returns'])('compensates return failure at %s and retries without duplicate records', async (resource) => {
++    const { store, db, failNext } = await createRentalHarness({ equipment: [equipmentResource('RENTED')], rentals: [rentalResource('ACTIVE')] });
++    await loadRentals(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : resource === 'rentals' ? 'PUT' : 'POST', resource));
++    store.registerReturn(1, date(), 'Fictional return', true);
++    await finishMovement(store);
++    expect(store.error.value).toContain('Controlled transport failure');
++    expect(db.rentals[0].status).toBe('ACTIVE');
++    expect(db.equipment[0].status).toBe('RENTED');
++    expect(db['equipment-returns']).toEqual([]);
++    store.registerReturn(1, date(), 'Fictional return', true);
++    await finishMovement(store);
++    expect(store.operationSuccess.value).toBe('RETURN');
++    expect(db.rentals[0].status).toBe('COMPLETED');
++    expect(db.equipment[0].status).toBe('MAINTENANCE');
++    expect(db['equipment-returns']).toHaveLength(1);
++  });
++
++  it.each(['deliveries', 'equipment-returns'])('reconciles a committed %s POST with a lost response', async (resource) => {
++    const returning = resource === 'equipment-returns';
++    const { store, db, failNext } = await createRentalHarness({ equipment: [equipmentResource(returning ? 'RENTED' : 'AVAILABLE')], rentals: [rentalResource(returning ? 'ACTIVE' : 'CONFIRMED')] });
++    await loadRentals(store);
++    failNext(faultOn('POST', resource), 'after');
++    if (returning) store.registerReturn(1, date(), '', true);
++    else store.registerDelivery(1, date(), '');
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(store.operationSuccess.value).toBe(returning ? 'RETURN' : 'DELIVERY');
++    expect(db[resource]).toHaveLength(1);
++    expect(db.rentals[0].status).toBe(returning ? 'COMPLETED' : 'ACTIVE');
++    expect(db.equipment[0].status).toBe(returning ? 'MAINTENANCE' : 'RENTED');
++  });
++
++  it('serializes repeated delivery confirmation in the same session', async () => {
++    const { store, db } = await createRentalHarness({ rentals: [rentalResource()] });
++    await loadRentals(store);
++    store.registerDelivery(1, date(), '');
++    store.registerDelivery(1, date(), '');
++    await finishMovement(store);
++    expect(store.operationSuccess.value).toBe('DELIVERY');
++    expect(db.deliveries).toHaveLength(1);
++  });
++
++  it.each(['deliveries', 'equipment-returns'])('resumes a committed %s record after its verification read also fails', async (resource) => {
++    const returning = resource === 'equipment-returns';
++    const { store, db, calls, failNext } = await createRentalHarness({ equipment: [equipmentResource(returning ? 'RENTED' : 'AVAILABLE')], rentals: [rentalResource(returning ? 'ACTIVE' : 'CONFIRMED')] });
++    await loadRentals(store);
++    failNext(faultOn('POST', resource), 'after');
++    failNext(faultOn('GET', resource, () => db[resource].length === 1));
++    const confirm = () => returning ? store.registerReturn(1, date(), '', true) : store.registerDelivery(1, date(), '');
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toContain('write outcome could not be verified');
++    expect(db.rentals[0].status).toBe(returning ? 'COMPLETED' : 'ACTIVE');
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(store.operationSuccess.value).toBe(returning ? 'RETURN' : 'DELIVERY');
++    expect(db[resource]).toHaveLength(1);
++    expect(calls.filter(faultOn('POST', resource))).toHaveLength(1);
++  });
++
++  it.each(['deliveries', 'equipment-returns'])('does not roll back equipment after rental compensation fails for %s, then resumes', async (resource) => {
++    const returning = resource === 'equipment-returns';
++    const previousStatus = returning ? 'ACTIVE' : 'CONFIRMED';
++    const { store, db, failNext } = await createRentalHarness({ equipment: [equipmentResource(returning ? 'RENTED' : 'AVAILABLE')], rentals: [rentalResource(previousStatus)] });
++    await loadRentals(store);
++    failNext(faultOn('POST', resource));
++    failNext(faultOn('PUT', 'rentals', (call) => call.body.status === previousStatus));
++    const confirm = () => returning ? store.registerReturn(1, date(), '', true) : store.registerDelivery(1, date(), '');
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toContain('Recovery incomplete');
++    expect(db.rentals[0].status).toBe(returning ? 'COMPLETED' : 'ACTIVE');
++    expect(db.equipment[0].status).toBe(returning ? 'MAINTENANCE' : 'RENTED');
++    expect(db[resource]).toEqual([]);
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(db[resource]).toHaveLength(1);
++  });
++
++  it('keeps request correlation through approval, delivery, Inventory serialization and an ordinary return', async () => {
++    const { store, db } = await createRentalHarness({ 'rental-requests': [requestResource()] });
++    await loadRequests(store);
++    store.approveRentalRequest(1);
++    await finishApproval(store);
++    await loadRentals(store);
++    store.registerDelivery(1, date(), '');
++    await finishMovement(store);
++    expect(db.rentals[0].rentalRequestId).toBe(1);
++    const { EquipmentAssembler } = await import('../../inventory/infrastructure/equipment-assembler.js');
++    const assembler = new EquipmentAssembler();
++    const saved = assembler.toResourceFromEntity(assembler.toEntityFromResource(db.equipment[0]));
++    expect(saved.availabilityBlocks[0].rentalRequestId).toBe(1);
++    store.registerReturn(1, date(), '', false);
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals[0].rentalRequestId).toBe(1);
++    expect(db.rentals[0].status).toBe('COMPLETED');
++    expect(db.equipment[0].status).toBe('AVAILABLE');
++  });
++
++  it('preserves Maintenance restrictions on a return without a requested inspection', async () => {
++    const { store, db } = await createRentalHarness({ equipment: [equipmentResource('RENTED')], rentals: [rentalResource('ACTIVE')], incidents: [{ id: 1, equipmentId: 1, status: 'OPEN', blocksRental: true }] });
++    await loadRentals(store);
++    store.registerReturn(1, date(), '', false);
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(db.equipment[0].status).toBe('MAINTENANCE');
++    expect(db.rentals[0].status).toBe('COMPLETED');
++  });
++
++  it.each([
++    ['delivery', 'equipment'], ['delivery', 'rentals'], ['return', 'equipment'], ['return', 'rentals'],
++  ])('resumes %s after an unverified %s status change', async (movement, resource) => {
++    const returning = movement === 'return';
++    const targetStatus = resource === 'equipment' ? (returning ? 'MAINTENANCE' : 'RENTED') : (returning ? 'COMPLETED' : 'ACTIVE');
++    const { store, db, failNext } = await createRentalHarness({ equipment: [equipmentResource(returning ? 'RENTED' : 'AVAILABLE')], rentals: [rentalResource(returning ? 'ACTIVE' : 'CONFIRMED')] });
++    await loadRentals(store);
++    failNext(faultOn(resource === 'equipment' ? 'PATCH' : 'PUT', resource), 'after');
++    failNext(faultOn('GET', resource, () => db[resource][0].status === targetStatus));
++    const confirm = () => returning ? store.registerReturn(1, date(), '', true) : store.registerDelivery(1, date(), '');
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toContain('write outcome could not be verified');
++    confirm();
++    await finishMovement(store);
++    expect(store.error.value).toBeNull();
++    expect(db.rentals[0].status).toBe(returning ? 'COMPLETED' : 'ACTIVE');
++    expect(db.equipment[0].status).toBe(returning ? 'MAINTENANCE' : 'RENTED');
++    expect(db[returning ? 'equipment-returns' : 'deliveries']).toHaveLength(1);
++  });
++
++  it('refuses to duplicate a previously recorded delivery with conflicting details', async () => {
++    const { store, db, calls } = await createRentalHarness({ rentals: [rentalResource()], deliveries: [{ id: 1, rentalId: 1, deliveredAt: date().toISOString(), notes: 'Previously recorded' }] });
++    await loadRentals(store);
++    store.registerDelivery(1, date(), 'Different details');
++    await finishMovement(store);
++    expect(store.error.value).toContain('conflicting rental record');
++    expect(db.deliveries).toHaveLength(1);
++    expect(db.deliveries[0].notes).toBe('Previously recorded');
++    expect(calls.filter(faultOn('POST', 'deliveries'))).toHaveLength(0);
++  });
++
++  it('does not mutate an equipment or delivery when the fresh rental state has changed', async () => {
++    const { store, db, calls } = await createRentalHarness({ rentals: [rentalResource()] });
++    await loadRentals(store);
++    db.rentals[0].status = 'COMPLETED';
++    store.registerDelivery(1, date(), '');
++    await finishMovement(store);
++    expect(store.error.value).toContain('Rental status changed');
++    expect(calls.filter(faultOn('PATCH', 'equipment'))).toHaveLength(0);
++    expect(db.deliveries).toEqual([]);
++  });
++});
+diff --git a/src/app/rentals/application/tests/rental-api-harness.js b/src/app/rentals/application/tests/rental-api-harness.js
+new file mode 100644
+index 0000000..8e252b0
+--- /dev/null
++++ b/src/app/rentals/application/tests/rental-api-harness.js
+@@ -0,0 +1,73 @@
++import { vi } from 'vitest';
++
++export const equipmentResource = (status = 'AVAILABLE') => ({
++  id: 1, userId: 1, code: 'TEST-1', name: 'Fictional equipment', description: 'Local fixture',
++  categoryId: 1, location: 'Lima', dailyRate: 100, weeklyRate: 600, status, availabilityBlocks: [],
++});
++export const rentalResource = (status = 'CONFIRMED') => ({
++  id: 1, equipmentId: 1, constructionUserId: 2, rentalCompanyUserId: 1,
++  startDate: '2030-01-01T05:00:00.000Z', endDate: '2030-01-10T04:59:59.999Z', status,
++});
++export const requestResource = () => ({ ...rentalResource('PENDING'), createdAt: '2029-12-01T05:00:00.000Z' });
++
++// Only transport is replaced; Rentals composition, domain, APIs and ACLs remain real.
++export async function createRentalHarness(resources = {}) {
++  vi.resetModules();
++  const storage = new Map();
++  vi.stubGlobal('localStorage', {
++    getItem: (key) => storage.get(key) ?? null,
++    setItem: (key, value) => storage.set(key, String(value)),
++    removeItem: (key) => storage.delete(key),
++  });
++  const db = structuredClone({
++    equipment: [equipmentResource()], profiles: [], incidents: [], rentals: [],
++    'rental-requests': [], deliveries: [], 'equipment-returns': [], ...resources,
++  });
++  const calls = [];
++  const faults = [];
++  const reply = (status, data) => new Response(JSON.stringify(data), { status });
++  vi.stubGlobal('fetch', async (rawUrl, options = {}) => {
++    const url = new URL(rawUrl);
++    const [resource, rawId] = url.pathname.replace(/^\/api\/v1\//, '').split('/');
++    const id = rawId === undefined ? null : Number(rawId);
++    const request = { method: options.method ?? 'GET', resource, id,
++      body: options.body ? JSON.parse(options.body) : undefined };
++    calls.push(request);
++    const fault = faults.find((item) => item.matches(request));
++    if (fault) faults.splice(faults.indexOf(fault), 1);
++    if (fault?.phase === 'before') return reply(503, { message: 'Controlled transport failure' });
++    const rows = db[resource];
++    if (!rows) return reply(404, { message: 'Unknown test resource' });
++    let response;
++    if (request.method === 'GET') {
++      const result = id === null ? rows.filter((row) => [...url.searchParams].every(
++        ([key, value]) => String(row[key]) === value,
++      )) : rows.find((row) => row.id === id);
++      response = result === undefined ? reply(404, { message: 'Not found' }) : reply(200, result);
++    } else if (request.method === 'POST') {
++      const row = { ...request.body, id: Math.max(0, ...rows.map((item) => item.id)) + 1 };
++      rows.push(row);
++      response = reply(201, row);
++    } else {
++      const index = rows.findIndex((row) => row.id === id);
++      if (index < 0) return reply(404, { message: 'Not found' });
++      if (request.method === 'DELETE') {
++        rows.splice(index, 1);
++        response = reply(200, {});
++      } else {
++        rows[index] = request.method === 'PATCH' ? { ...rows[index], ...request.body } : { ...request.body, id };
++        response = reply(200, rows[index]);
++      }
++    }
++    return fault?.phase === 'after' ? reply(503, { message: 'Lost success response' }) : response;
++  });
++  const { configure } = await import('../rentals.module.js');
++  const { configure: configureIam } = await import('../../../iam/application/iam.module.js');
++  const { RentalsStore } = await import('../rentals.store.js');
++  const { resolve } = await import('../../../shared/infrastructure/services.js');
++  configureIam();
++  configure();
++  const store = resolve(RentalsStore);
++  const failNext = (matches, phase = 'before') => faults.push({ matches, phase });
++  return { store, db, calls, failNext };
++}
+diff --git a/src/app/rentals/infrastructure/rental-write-recovery.js b/src/app/rentals/infrastructure/rental-write-recovery.js
+new file mode 100644
+index 0000000..533da39
+--- /dev/null
++++ b/src/app/rentals/infrastructure/rental-write-recovery.js
+@@ -0,0 +1,19 @@
++import { catchError, of, switchMap, throwError } from 'rxjs';
++
++// A failed response may follow a committed mock write. Only a successful read can
++// distinguish that case from a rejected write; unavailable reads forbid rollback.
++export function verifyRentalWrite(error, read, matches) {
++  return read().pipe(
++    catchError(() => throwError(() => Object.assign(
++      new Error(`${error.message}. Recovery incomplete: write outcome could not be verified; inspect before retry`),
++      { outcomeUnknown: true },
++    ))),
++    switchMap((actual) => matches(actual) ? of(actual) : throwError(() => error)),
++  );
++}
++
++export function matchesRentalResource(actual, expected) {
++  return actual != null && Object.entries(expected).every(([key, value]) =>
++    key === 'id' && value === 0 ? true : actual[key] === value,
++  );
++}

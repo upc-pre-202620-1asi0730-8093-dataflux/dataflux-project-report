@@ -1,0 +1,56 @@
+@startuml
+title RentBuild | TB1 JavaScript — Maintenance
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam linetype ortho
+skinparam packageStyle rectangle
+hide empty methods
+skinparam classAttributeIconSize 0
+class "Incident" as Incident {
+  - Number id
+  - Number equipmentId
+  - String description
+  - Date reportedAt
+  - Boolean blocksRental
+  - String status
+  - Date resolvedAt
+  --
+  + constructor(props)
+  + report(props) Incident
+  + requireRentalRestriction()
+  + resolve(resolvedAt)
+}
+class "Maintenance" as Maintenance {
+  - Number id
+  - Number equipmentId
+  - Date performedAt
+  - String type
+  - String status
+  --
+  + constructor(props)
+  + schedule(props, referenceDate)
+  + status() String
+}
+class "IncidentStore" as IncidentStore {
+  - IncidentApi incidentApi
+  - EquipmentOperationPort equipmentOperation
+  - RentalActivityPort rentalActivity
+  --
+  + registerIncident(user, equipment, text, flag)
+  + resolveIncident(user, incident)
+  + reactivateEquipment(user, equipment, inspected)
+  + clear()
+}
+class "MaintenanceStore" as MaintenanceStore {
+  - MaintenanceApi maintenanceApi
+  - EquipmentInformationPort equipmentInformation
+  --
+  + registerMaintenance(user, equipment, date, type)
+  + scheduleMaintenance(user, equipment, date, type)
+  + clear()
+}
+IncidentStore "1" --> "0..*" Incident : incident state
+MaintenanceStore "1" --> "0..*" Maintenance : maintenance state
+footer TB1 JAVASCRIPT — DEVELOP 7e862dd + PR17 c4c3452 (PENDING REVIEW); NO C# BACKEND CLAIM
+@enduml

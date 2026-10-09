@@ -1,0 +1,53 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam dpi 130
+!include <C4/C4_Component>
+
+LAYOUT_WITH_LEGEND()
+
+title RentBuild - Maintenance Frontend Component Diagram (DDD Layers)
+
+Container_Boundary(maint_frontend, "Maintenance Frontend Bounded Context\n[container]") {
+
+    Boundary(presentation_boundary, "Presentation") {
+        Component(maint_list_comp, "MaintenanceListComponent", "Vue Component", "Displays scheduled and completed maintenance activities")
+        Component(maint_detail_comp, "MaintenanceDetailComponent", "Vue Component", "Displays detailed maintenance information and equipment history")
+        Component(incident_form_comp, "IncidentFormComponent", "Vue Component", "Provides the interface for registering equipment incidents")
+        Component(inspection_comp, "InspectionComponent", "Vue Component", "Provides inspection information and inspection-related interaction")
+    }
+
+    Boundary(application_boundary, "Application") {
+        Component(maint_app, "maintenance/application", "JavaScript", "Coordinates maintenance workflows, inspections, incidents, maintenance state and frontend use cases")
+    }
+
+    Boundary(infrastructure_boundary, "Infrastructure") {
+        Component(maint_infra, "maintenance/infrastructure", "HTTP, Resources, Mappers", "Consumes Maintenance REST endpoints and maps backend resources into frontend maintenance models")
+    }
+
+    Boundary(domain_boundary, "Domain") {
+        Component(maint_domain, "maintenance/domain/model", "Entities / Value Objects", "Maintenance, Inspection, Incident, MaintenanceStatus and equipment-history models and business rules")
+    }
+}
+
+Container_Ext(backend_api, "RentBuild Backend API", "C# / ASP.NET Core", "Exposes maintenance, inspection, incident and equipment-history RESTful services consumed by the Maintenance frontend")
+
+' Presentation Internal Navigation
+Rel(maint_list_comp, maint_detail_comp, "Navigates to")
+
+' Presentation to Application Relations
+Rel(maint_list_comp, maint_app, "Requests maintenance data")
+Rel(maint_detail_comp, maint_app, "Requests maintenance details")
+Rel(incident_form_comp, maint_app, "Registers incident")
+Rel(inspection_comp, maint_app, "Manages inspection")
+
+' Application Relationships
+Rel(maint_app, maint_infra, "Loads and updates maintenance data through")
+Rel(maint_app, maint_domain, "Holds and applies maintenance state and rules")
+
+' Infrastructure Relationships
+Rel(maint_infra, maint_domain, "Maps resources into")
+Rel(maint_infra, backend_api, "Consumes Maintenance REST endpoints", "HTTPS / JSON")
+footer Proposed product design — C# / ASP.NET Core / EF Core / MySQL; implementation is not claimed
+@enduml

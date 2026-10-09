@@ -1,0 +1,30 @@
+{
+  "date_lima": "2026-10-08",
+  "repository": "dataflux-webapp",
+  "pull_request": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/12",
+  "state_at_cut": "OPEN",
+  "base": "develop",
+  "head": "feature/subscriptions",
+  "head_sha": "ab617c8958c9b57841bc68fb573cf60d12ca28ff",
+  "review_requested": [
+    "V8Z5"
+  ],
+  "commits": [
+    {
+      "sha": "8a93cfe80b2ae3a908eb388e6e582925f3a50db3",
+      "message": "feat(subscriptions): integrar seleccion y renovacion de planes de demo",
+      "committed_at_utc": "2026-10-09T02:25:14Z"
+    },
+    {
+      "sha": "ab617c8958c9b57841bc68fb573cf60d12ca28ff",
+      "message": "docs(subscriptions): documentar alcance y pruebas de la demo",
+      "committed_at_utc": "2026-10-09T02:25:26Z"
+    }
+  ],
+  "validation": {
+    "tests_passed": 52,
+    "test_files": 6,
+    "build": "passed",
+    "backend": "fake API only"
+  }
+}

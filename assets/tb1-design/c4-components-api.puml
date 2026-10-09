@@ -1,0 +1,21 @@
+@startuml
+title RentBuild | C4 Components — Proposed AV2 API
+skinparam shadowing false
+skinparam dpi 160
+skinparam defaultFontName Arial
+skinparam packageStyle rectangle
+!include <C4/C4_Component>
+LAYOUT_WITH_LEGEND()
+Container(database, "Relational Database", "MySQL Container", "Proposed schema and constraints; not present in TB1.")
+Container_Boundary(api_scope, "RESTful API [Container: ASP.NET Core / C#] — proposed AV2") {
+  Component(http, "HTTP interfaces", "ASP.NET Core / C# / OpenAPI", "Controllers and DTO validation implement the proposed TS01–TS09 contracts.")
+  Component(usecases, "Owned application services", "C#", "IAM, Profiles, Inventory, Rentals, Maintenance and Subscriptions use cases; authorization policy.")
+  Component(domain, "Owned domain models", "C#", "Entities, value objects, state invariants and repository ports. No cross-context entity imports.")
+  Component(persistence, "Persistence adapters", "C# / Entity Framework Core", "Owned repository implementations, migrations and transactional constraints.")
+}
+Rel(http, usecases, "Proposed AV2: Invokes authorized use cases")
+Rel(usecases, domain, "Proposed AV2: Enforces owned invariants")
+Rel(usecases, persistence, "Proposed AV2: Uses owned repository ports")
+Rel(persistence, database, "Proposed AV2: Persists data [MySQL protocol / SQL]")
+footer PROPOSED DESIGN; NO BACKEND IMPLEMENTATION, MIGRATION OR DEPLOYMENT IS CLAIMED
+@enduml

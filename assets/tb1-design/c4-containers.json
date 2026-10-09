@@ -1,0 +1,139 @@
+{
+  "title": "RentBuild | C4 Containers — TB1 and AV2",
+  "note": "TB1 USES THE DEMO API. THE ASP.NET CORE API AND MYSQL ARE AV2 PROPOSALS.",
+  "source": {
+    "repository": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp",
+    "revision": "7e862dddb7be797afea964bdb360c772de94d56c",
+    "pendingCorrection": {
+      "pullRequest": "https://github.com/upc-pre-202620-1asi0730-8093-dataflux/dataflux-webapp/pull/17",
+      "revision": "c4c3452bb4a0f340116556a6a7b6f6d86c44ab00"
+    },
+    "paths": [
+      "src/app/app.services.js",
+      "src/app/shared/infrastructure/services.js",
+      "package.json"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "person",
+      "title": "Rental Operator / Construction Manager",
+      "body": "[Person]\nBrowses public content and uses role-appropriate application views.",
+      "x": 460,
+      "y": 175,
+      "w": 660,
+      "h": 210,
+      "kind": "actor"
+    },
+    {
+      "id": "landing",
+      "title": "Landing Page — TB1",
+      "body": "[Container: HTML5 / CSS3 / JavaScript]\nPublic information, translations and configured app links.",
+      "x": 45,
+      "y": 525,
+      "w": 680,
+      "h": 270,
+      "kind": "system"
+    },
+    {
+      "id": "web",
+      "title": "Web Application — TB1",
+      "body": "[Container: Vue 3 / JavaScript / Vite]\nPrimeVue 4, Vue Router, Pinia; Axios + RxJS requests. Demo session.",
+      "x": 845,
+      "y": 525,
+      "w": 680,
+      "h": 270,
+      "kind": "system"
+    },
+    {
+      "id": "mock",
+      "title": "Demo API — TB1",
+      "body": "[Container: Node.js / json-server 0.17]\nIllustrative authentication and JSON resources. Resettable demo data.",
+      "x": 845,
+      "y": 1000,
+      "w": 680,
+      "h": 270,
+      "kind": "system"
+    },
+    {
+      "id": "api",
+      "title": "RESTful API — proposed AV2",
+      "body": "[Container: ASP.NET Core / C# / EF Core]\nServer authorization, use cases, persistence and OpenAPI/Swagger.",
+      "x": 45,
+      "y": 1500,
+      "w": 680,
+      "h": 300,
+      "kind": "external"
+    },
+    {
+      "id": "db",
+      "title": "Relational Database — proposed AV2",
+      "body": "[Container: MySQL]\nPersistent owned tables, keys and constraints. EF Core runs in the API.",
+      "x": 845,
+      "y": 1500,
+      "w": 680,
+      "h": 300,
+      "kind": "external"
+    }
+  ],
+  "edges": [
+    [
+      "person",
+      "landing",
+      "Reads public content [HTTPS]"
+    ],
+    [
+      "person",
+      "web",
+      "Uses browser application [HTTPS]"
+    ],
+    [
+      "landing",
+      "web",
+      "Configured sign-up/sign-in links [HTTPS]"
+    ],
+    [
+      "web",
+      "mock",
+      "TB1 requests [HTTP/HTTPS + JSON]"
+    ],
+    [
+      "web",
+      "api",
+      "Proposed replacement adapter [HTTPS + JSON]",
+      true
+    ],
+    [
+      "api",
+      "db",
+      "Proposed persistence [MySQL protocol / SQL]",
+      true
+    ]
+  ],
+  "boundaries": [
+    {
+      "id": "rentbuild_scope",
+      "label": "RentBuild [Software System] — current containers and future replacement",
+      "nodes": [
+        "landing",
+        "web",
+        "mock",
+        "api",
+        "db"
+      ],
+      "rect": [
+        20,
+        440,
+        1530,
+        1400
+      ]
+    }
+  ],
+  "legend": [
+    "Legend: Person = actor; blue = internal software; gray = external software.",
+    "Solid arrows = current interactions. Dashed arrows = proposed AV2 interactions.",
+    "Boundary labels identify the software system or the single container in scope."
+  ],
+  "width": 1580,
+  "height": 2250
+}
