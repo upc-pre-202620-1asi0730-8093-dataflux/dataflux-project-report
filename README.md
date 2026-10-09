@@ -2201,7 +2201,7 @@ El Frontend General Components Diagram presenta la organización general de la S
 Los mecanismos de layout y routing de la aplicación permiten coordinar la navegación hacia IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Asimismo, Shared Frontend proporciona capacidades reutilizables de interfaz y servicios transversales, mientras que la infraestructura del frontend permite la comunicación con la RentBuild Backend API.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-general-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-general-component-diagram.png"
        alt="RentBuild Frontend General Components Diagram"
        width="95%">
 </p>
@@ -2215,7 +2215,7 @@ La Presentation Layer administra las vistas y las interacciones relacionadas con
 IAM también proporciona información de la cuenta autenticada a otros contextos del frontend y utiliza las capacidades compartidas proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-iam-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-iam-component-diagram.png"
        alt="RentBuild IAM Frontend Components Diagram"
        width="90%">
 </p>
@@ -2246,7 +2246,7 @@ La Presentation Layer contiene las vistas y formularios asociados con los perfil
 Este bounded context también utiliza la información de la cuenta autenticada proporcionada por IAM y las capacidades comunes proporcionadas por Shared Frontend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-profiles-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-profiles-component-diagram.png"
        alt="RentBuild Profiles Frontend Components Diagram"
        width="90%">
 </p>
@@ -2274,7 +2274,7 @@ El bounded context Inventory del frontend administra el catálogo de maquinaria,
 Su Application Layer coordina los flujos relacionados con la gestión y consulta del inventario, comunicándose con las capas Domain e Infrastructure. Inventory también proporciona información sobre maquinaria y disponibilidad requerida por Rentals y coordina con Maintenance los cambios relacionados con el estado de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-inventory-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-inventory-component-diagram.png"
        alt="RentBuild Inventory Frontend Components Diagram"
        width="90%">
 </p>
@@ -2302,7 +2302,7 @@ El bounded context Rentals del frontend soporta la interacción correspondiente 
 Este contexto utiliza la información de los equipos y su disponibilidad proporcionada por Inventory, así como la información de empresas y participantes administrada por Profiles. Su Infrastructure Layer se encarga de la comunicación con los endpoints de Rentals expuestos por el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-rentals-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-rentals-component-diagram.png"
        alt="RentBuild Rentals Frontend Components Diagram"
        width="90%">
 </p>
@@ -2330,7 +2330,7 @@ El bounded context Maintenance del frontend administra las programaciones de man
 Este contexto colabora con Inventory para reflejar cambios en el estado y disponibilidad de los equipos, y con Rentals cuando una incidencia o actividad de mantenimiento afecta a una maquinaria asociada con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-maintenance-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Frontend Components Diagram"
        width="90%">
 </p>
@@ -2358,7 +2358,7 @@ El bounded context Subscriptions del frontend administra los planes disponibles,
 Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para obtener la información de la empresa asociada con la suscripción. Su Infrastructure Layer se comunica con los servicios correspondientes de Subscriptions disponibles en el backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-subscriptions-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-component-diagram.png"
        alt="RentBuild Subscriptions Frontend Components Diagram"
        width="90%">
 </p>
@@ -2392,7 +2392,7 @@ Por su parte, la Infrastructure Layer proporciona mecanismos técnicos compartid
 De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales comunes dentro de los bounded contexts y mantiene dichas responsabilidades separadas de los conceptos específicos del dominio.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/RentBuild-frontend-shared-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-shared-component-diagram.png"
        alt="RentBuild Shared Frontend Components Diagram"
        width="90%">
 </p>
@@ -2406,7 +2406,7 @@ El contenedor backend está organizado alrededor de seis bounded contexts de neg
 La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-general-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
        alt="RentBuild Backend General Components Diagram"
        width="95%">
 </p>
@@ -2420,7 +2420,7 @@ La Interfaces Layer expone los endpoints REST relacionados con autenticación, r
 Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-iam-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
        alt="RentBuild IAM Backend Component Diagram"
        width="90%">
 </p>
@@ -2434,7 +2434,7 @@ La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Appl
 La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-profiles-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
        alt="RentBuild Profiles Backend Component Diagram"
        width="90%">
 </p>
@@ -2450,7 +2450,7 @@ La Domain Layer contiene los conceptos y reglas de negocio asociados con los equ
 Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mientras que Maintenance interactúa con este contexto cuando las actividades de mantenimiento modifican el estado operativo o la disponibilidad de los equipos.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-inventory-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-inventory-component-diagram.png"
        alt="RentBuild Inventory Backend Component Diagram"
        width="90%">
 </p>
@@ -2464,7 +2464,7 @@ La Interfaces Layer expone las operaciones REST requeridas por el frontend. La A
 La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-rentals-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-rentals-component-diagram.png"
        alt="RentBuild Rentals Backend Component Diagram"
        width="90%">
 </p>
@@ -2480,7 +2480,7 @@ La Domain Layer contiene los conceptos y reglas de negocio relacionados con el m
 Maintenance colabora con Inventory para actualizar el estado y disponibilidad de la maquinaria y con Rentals cuando una actividad de mantenimiento o incidencia afecta a un equipo asociado con un alquiler activo.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-maintenance-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-maintenance-component-diagram.png"
        alt="RentBuild Maintenance Backend Component Diagram"
        width="90%">
 </p>
@@ -2496,7 +2496,7 @@ La Domain Layer contiene los conceptos y reglas de negocio correspondientes a la
 Este bounded context utiliza IAM para identificar la cuenta autenticada y Profiles para asociar la suscripción con la información de la empresa. Asimismo, un Payment Connector integra el contexto con Stripe para realizar el procesamiento de los pagos correspondientes a las suscripciones.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/RentBuild-backend-subscriptions-component-diagram.png"
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-subscriptions-component-diagram.png"
        alt="RentBuild Subscriptions Backend Component Diagram"
        width="90%">
 </p>
