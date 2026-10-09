@@ -2994,18 +2994,59 @@ En este segundo Sprint el equipo desarrolló las funcionalidades del flujo de al
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-En este Sprint se implementaron las vistas del flujo de alquiler de la Web Application y se aplicaron las correcciones al Landing Page. A continuación se presentan las principales vistas logradas.
+En este Sprint se implementó la primera versión de la Web Application, con una experiencia distinta para cada uno de los dos segmentos objetivo: la empresa de alquiler y la empresa constructora. La aplicación consume una fake API con datos de prueba. A continuación se presentan las principales vistas logradas.
 
 **Web Application**
 
-- Perfil de usuario: [COMPLETAR: captura]
-- Edición de maquinaria: [COMPLETAR: captura]
-- Disponibilidad por periodo en el detalle de maquinaria: [COMPLETAR: captura]
-- Solicitud de alquiler: [COMPLETAR: captura]
-- Bandeja de solicitudes con confirmar y rechazar: [COMPLETAR: captura]
-- Mis solicitudes con estado: [COMPLETAR: captura]
-- Planes de suscripción: [COMPLETAR: captura]
-- Gestión de la suscripción: [COMPLETAR: captura]
+*Acceso a la plataforma (ambos segmentos)*
+
+Inicio de sesión:
+
+![Web Application - Inicio de sesión](./assets/md-images-chapter5/execution-evidence/sprint2-01-login.png)
+
+Registro de empresa, con selección del tipo de organización:
+
+![Web Application - Registro](./assets/md-images-chapter5/execution-evidence/sprint2-02-register.png)
+
+*Empresa constructora*
+
+Panel de la empresa constructora:
+
+![Web Application - Panel de empresa constructora](./assets/md-images-chapter5/execution-evidence/sprint2-03-construction-dashboard.png)
+
+Búsqueda de maquinaria con filtros por categoría, ubicación y disponibilidad:
+
+![Web Application - Buscar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-04-search-machinery.png)
+
+Mis solicitudes, con el estado de cada solicitud de alquiler:
+
+![Web Application - Mis solicitudes](./assets/md-images-chapter5/execution-evidence/sprint2-05-my-requests.png)
+
+Perfil de usuario, con información personal, de contacto y de la organización:
+
+![Web Application - Perfil](./assets/md-images-chapter5/execution-evidence/sprint2-06-profile.png)
+
+*Empresa de alquiler*
+
+Panel de la empresa de alquiler:
+
+![Web Application - Panel de empresa de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-07-rental-dashboard.png)
+
+Inventario de maquinaria de la empresa de alquiler:
+
+![Web Application - Maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-08-machinery.png)
+
+Registro de maquinaria:
+
+![Web Application - Registrar maquinaria](./assets/md-images-chapter5/execution-evidence/sprint2-09-register-machinery.png)
+
+Solicitudes de alquiler recibidas, con filtros por estado y fecha:
+
+![Web Application - Solicitudes de alquiler](./assets/md-images-chapter5/execution-evidence/sprint2-10-rental-requests.png)
+
+Plan y suscripción, con la comparación de los tres planes disponibles:
+
+![Web Application - Plan y suscripción](./assets/md-images-chapter5/execution-evidence/sprint2-11-plan-subscription.png)
 
 **Execution Evidence Video for Sprint 2 Review:** [Ver video de Execution Evidence Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDOPdOMeAhKRZ-vz-1kQtt7AX2VvaT-R5lQZFxI_11rJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=kexC0i)
 
