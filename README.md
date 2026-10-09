@@ -1770,102 +1770,238 @@ El Footer del mock-up utiliza un fondo oscuro para diferenciar claramente el fin
 
 Los wireframes de las aplicaciones web de RentBuild delinean la estructura y organización de las pantallas principales, especificando la ubicación de los elementos de la interfaz de usuario y la navegación. Estos esquemas visuales sirven como una guía precisa para el diseño final, asegurando una experiencia de usuario fluida e intuitiva tanto para el segmento de empresas de alquiler como para el segmento de empresas constructoras. Los wireframes están enfocados en la funcionalidad y facilidad de uso, permitiendo que diseñadores y desarrolladores visualicen cómo los usuarios interactúan con la aplicación, optimizando la disposición de los elementos para crear una experiencia eficiente y accesible.
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp1.png" width="100%">
-</p>
+#### 1. Dashboard — Empresa de alquiler de maquinaria
+
+
+
+**Propósito:** Proporcionar al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
+
+
+
+**Elementos clave:**
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
+
+**Desktop Web Browser**
+
+
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp2.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Dashboard.png" alt="Wireframe de rental dashboard para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp3.png" width="100%">
-</p>
+Los registros, cantidades y fechas se presentan como datos ilustrativos para representar la organización de la información.
+
+#### 2. Equipment — Gestión de maquinaria
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+**Elementos clave:**
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp4.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Equipment.png" alt="Wireframe de equipment para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp5.png" width="100%">
-</p>
+#### 3. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Permitir que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
+
+**Elementos clave:**
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp6.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_RentalRequests.png" alt="Wireframe de rental requests para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp7.png" width="100%">
-</p>
+#### 4. Reservations — Reservas
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp8.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_reservations.png" alt="Wireframe de reservations para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp9.png" width="100%">
-</p>
+#### 5. Rentals — Alquileres
+
+**Propósito:** Permitir que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
+
+**Elementos clave:**
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp10.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Rentals.png" alt="Wireframe de rentals para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp11.png" width="100%">
-</p>
+#### 6. Maintenance — Mantenimiento e incidencias
+
+**Propósito:** Permitir que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
+
+**Elementos clave:**
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp12.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Rental/RentBuild_Wireframe_Maintenance.png" alt="Wireframe de maintenance para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp13.png" width="100%">
-</p>
+#### 7. Dashboard — Empresa constructora
+
+**Propósito:** Proporcionar a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp14.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Dashboard.png" alt="Wireframe de construction dashboard para escritorio" width="100%">
 </p>
 
-<p align="center">
-<img src="./assets/md-images-chapter4/webapp15.png" width="100%">
-</p>
+#### 8. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Permitir que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
 
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp16.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Search_Requipment.png" alt="Wireframe de equipment search para escritorio" width="100%">
 </p>
 
+#### 9. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Permitir que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
 <p align="center">
-<img src="./assets/md-images-chapter4/webapp17.png" width="100%">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_Equipment_details.png" alt="Wireframe de equipment detail para escritorio" width="100%">
+</p>
+
+#### 10. My Requests — Mis solicitudes
+
+**Propósito:** Permitir que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyRequests.png" alt="Wireframe de my requests para escritorio" width="100%">
+</p>
+
+#### 11. My Reservations — Mis reservas
+
+**Propósito:** Permitir que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyReservations.png" alt="Wireframe de my reservations para escritorio" width="100%">
+</p>
+
+#### 12. My Rentals — Mis alquileres
+
+**Propósito:** Permitir que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/Wireframe_RentBuild_Constructor/RentBuild_Wireframe_MyRentals.png" alt="Wireframe de my rentals para escritorio" width="100%">
 </p>
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-**Trazabilidad del wireflow general:** inventario US06–US10; búsqueda/detalle US11–US13; solicitudes US14/US18/US19/US21; alquileres y retorno US20/US22; mantenimiento US23–US26; planes US15–US17; perfil/acceso US01–US05. El gráfico recuperado es navegación general y no acredita wireflows completos por cada user goal. Su actualización por objetivo y las variantes mobile permanecen pendientes.
-
 Los wireflow diagrams de la Web Application de RentBuild representan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realizan los usuarios dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las pantallas entre sí y cómo fluye la experiencia de uso de acuerdo con las acciones y decisiones del usuario.
 
-En el caso de RentBuild, se ha definido un wireflow general que abarca desde el proceso inicial de autenticación y registro hasta las principales funcionalidades destinadas a las empresas de alquiler de maquinaria. El diagrama permite observar de manera global cómo el usuario ingresa a la plataforma, selecciona el tipo de empresa correspondiente y posteriormente accede a los módulos necesarios para gestionar maquinaria, solicitudes, alquileres y actividades relacionadas con su operación.
+En el caso de RentBuild, se ha definido un wireflow general que integra los principales recorridos de la aplicación web, desde las pantallas de autenticación hasta las interfaces específicas para los dos segmentos principales de usuarios: las empresas de alquiler de maquinaria y las empresas constructoras. De esta forma, se representa de manera global la navegación principal del sistema, así como las pantallas clave que intervienen en el proceso de gestión y solicitud de maquinaria.
 
-El recorrido comienza en la pantalla de Login, desde la cual el usuario puede ingresar sus credenciales para acceder a RentBuild. En caso de no contar con una cuenta, puede dirigirse a la pantalla de Register para completar el proceso de creación de una nueva cuenta. Una vez realizado el registro correctamente, el flujo continúa hacia una decisión asociada al tipo de empresa del usuario.
+El recorrido inicia en la pantalla de Login, desde la cual el usuario puede registrarse en caso de no contar con una cuenta o recuperar su contraseña si no recuerda sus credenciales. Una vez completado el proceso de autenticación o registro, el flujo contempla una decisión relacionada con el tipo de empresa usuaria. Esta decisión divide la navegación en dos ramas principales.
 
-En el wireflow desarrollado se representa la rama correspondiente a una **Rental Company**, es decir, una empresa dedicada al alquiler de maquinaria. Después de seleccionar este tipo de empresa, el usuario ingresa a la Web Application de RentBuild, donde dispone de una navegación lateral persistente que permite acceder a los principales módulos del sistema. Como parte del flujo inicial también se contempla la opción de **Register machinery**, mediante la cual se puede incorporar nueva maquinaria al inventario de la empresa.
+Por un lado, la rama correspondiente a la empresa de alquiler de maquinaria conduce al dashboard principal de administración. Desde esta vista se accede a pantallas orientadas a la gestión interna de la operación, tales como Equipment, Rental Requests, Reservations, Rentals, Maintenance, Plan & Subscription y Profile. Estas interfaces permiten registrar y administrar maquinaria, revisar solicitudes de alquiler, gestionar reservas confirmadas, controlar alquileres activos, programar mantenimientos y administrar la suscripción del servicio.
 
-A partir de esta vista principal, el recorrido de la empresa de alquiler contempla los siguientes módulos:
+Por otro lado, la rama correspondiente a la empresa constructora conduce a su propio dashboard, desde el cual el usuario puede navegar hacia Equipment Search, Equipment Detail, My Requests, My Reservations, My Rentals y Profile. Este recorrido permite buscar maquinaria disponible, consultar sus características, enviar solicitudes de alquiler y dar seguimiento a las reservas y alquileres realizados.
 
-- **Inventory:** permite consultar la maquinaria registrada, su categoría, estado y cantidad de unidades disponibles.
-- **Requests:** permite revisar las solicitudes de alquiler y conocer el estado de cada una de ellas.
-- **Active rentals:** presenta los alquileres actualmente vigentes, incluyendo el período de alquiler, tarifa, costo estimado y estado.
-- **Maintenance:** permite registrar actividades de mantenimiento o incidencias asociadas a la maquinaria, además de consultar registros anteriores.
-- **History:** centraliza los eventos relacionados con cada maquinaria, como solicitudes, aprobaciones, rechazos, mantenimientos e incidencias.
-- **Catalog:** permite explorar la maquinaria mediante un catálogo visual, utilizando búsqueda y filtros para localizar equipos según su categoría o estado.
-
-Estos módulos se encuentran relacionados mediante la navegación lateral de RentBuild, permitiendo al usuario desplazarse entre las diferentes funcionalidades sin perder el contexto de la aplicación. De esta manera, el wireflow refleja el recorrido operativo asociado a la gestión de maquinaria y alquileres dentro de una empresa proveedora de equipos.
-
-Finalmente, el diagrama incorpora una salida general mediante la acción Sign Out, que representa el cierre de sesión y finaliza el recorrido del usuario dentro de la Web Application.
-
-En conjunto, el wireflow permite validar que las pantallas diseñadas se encuentran conectadas de manera coherente y que la navegación responde al flujo funcional planteado para las empresas de alquiler de maquinaria, desde el acceso inicial a RentBuild hasta la administración de inventario, solicitudes, alquileres, mantenimiento, historial y catálogo.
-
-<img src = "assets/md-images-chapter4/WireflowDiagrams.png" width = 100%>
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-wireflow-diagram/wire_flow_diagram.png" alt="WireFlow Diagram" width="100%">
+</p>
 
 ### 4.4.3. Web Applications Mock-ups
 
@@ -1927,189 +2063,296 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
   <img src="./assets/md-images-chapter4/webapp20.png" alt="Mockup de perfil para escritorio" width="100%">
 </p>
 
-#### 4. Inventario
+###### 4. Dashboard — Empresa de alquiler de maquinaria
 
-**Propósito:** Permitir la gestión y consulta de la maquinaria disponible dentro de RentBuild.
+**Propósito:** Presentar visualmente al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
 
 **Elementos clave:**
-- Listado de maquinaria registrada.
-- Estado y disponibilidad de cada maquinaria.
-- Información básica de los equipos.
-- Filtros y opciones de búsqueda.
-- Acciones para consultar y gestionar maquinaria.
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp21.png" alt="Mockup de inventario para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Dashboard.png" alt="Mockup de rental dashboard para escritorio" width="100%">
 </p>
 
-#### 5. Registrar maquinaria
 
-**Propósito:** Permitir el registro de nuevas máquinas y equipos dentro del inventario de RentBuild.
+
+#### 5. Equipment — Gestión de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Elementos clave:**
-- Datos generales de la maquinaria.
-- Marca, modelo y categoría.
-- Características técnicas.
-- Información sobre disponibilidad.
-- Carga de imágenes o documentación.
-- Acción para registrar la maquinaria.
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp22.png" alt="Mockup de registro de maquinaria para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Equipment.png" alt="Mockup de equipment para escritorio" width="100%">
 </p>
 
-#### 6. Solicitudes
 
-**Propósito:** Permitir la gestión y seguimiento de las solicitudes de alquiler realizadas dentro de RentBuild.
+
+#### 6. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
 
 **Elementos clave:**
-- Listado de solicitudes.
-- Estado de cada solicitud.
-- Información del solicitante.
-- Maquinaria solicitada.
-- Fechas de alquiler.
-- Acciones para aceptar, rechazar o consultar una solicitud.
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp23.png" alt="Mockup de solicitudes para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Rental requests.png" alt="Mockup de rental requests para escritorio" width="100%">
 </p>
 
-#### 7. Alquileres activos
 
-**Propósito:** Permitir visualizar y gestionar los alquileres que se encuentran actualmente activos.
+
+#### 7. Reservations — Reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Reservations.png" alt="Mockup de reservations para escritorio" width="100%">
+</p>
+
+#### 8. Rentals — Alquileres
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
+
+**Elementos clave:**
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Rentals.png" alt="Mockup de rentals para escritorio" width="100%">
+</p>
+
+#### 9. Maintenance — Mantenimiento e incidencias
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
+
+**Elementos clave:**
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Maintenance.png" alt="Mockup de maintenance para escritorio" width="100%">
+</p>
+
+#### 10. Dashboard — Empresa constructora
+
+**Propósito:** Presentar visualmente a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Dashboard.png" alt="Mockup de construction dashboard para escritorio" width="100%">
+</p>
+
+
+#### 11. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Search_equipment.png" alt="Mockup de equipment search para escritorio" width="100%">
+</p>
+
+#### 12. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Equipment _detail.png" alt="Mockup de equipment detail para escritorio" width="100%">
+</p>
+
+#### 13. My Requests — Mis solicitudes
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png" alt="Mockup de my requests para escritorio" width="100%">
+</p>
+
+#### 14. My Reservations — Mis reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_reservations.png" alt="Mockup de my reservations para escritorio" width="100%">
+</p>
+
+#### 15. My Rentals — Mis alquileres
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
 
 **Elementos clave:**
 - Listado de alquileres activos.
-- Información de la maquinaria alquilada.
-- Datos del cliente o empresa.
-- Fecha de inicio y fecha de finalización.
-- Estado del alquiler.
-- Acciones de seguimiento y gestión.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
 
 **Desktop Web Browser**
 
 <p align="center">
-  <img src="./assets/md-images-chapter4/webapp24.png" alt="Mockup de alquileres activos para escritorio" width="100%">
-</p>
-
-#### 8. Mantenimiento
-
-**Propósito:** Facilitar la gestión de las actividades de mantenimiento realizadas sobre la maquinaria registrada.
-
-**Elementos clave:**
-- Listado de equipos en mantenimiento.
-- Estado de mantenimiento.
-- Tipo de mantenimiento.
-- Fechas programadas y realizadas.
-- Registro de observaciones.
-- Acciones para gestionar el mantenimiento.
-
-**Desktop Web Browser**
-
-<p align="center">
-  <img src="./assets/md-images-chapter4/webapp25.png" alt="Mockup de mantenimiento para escritorio" width="100%">
-</p>
-
-#### 9. Historial
-
-**Propósito:** Permitir consultar el historial de operaciones y actividades relacionadas con la maquinaria y los alquileres.
-
-**Elementos clave:**
-- Historial de alquileres.
-- Historial de mantenimientos.
-- Registro de movimientos de maquinaria.
-- Fechas y estados de las operaciones.
-- Filtros para facilitar la consulta.
-
-**Desktop Web Browser**
-
-<p align="center">
-  <img src="./assets/md-images-chapter4/webapp26.png" alt="Mockup de historial para escritorio" width="100%">
-</p>
-
-#### 10. Catálogo
-
-**Propósito:** Presentar las maquinarias disponibles para alquiler, permitiendo a los usuarios consultar sus características y disponibilidad.
-
-**Elementos clave:**
-- Listado de maquinaria disponible.
-- Imágenes de los equipos.
-- Nombre, categoría y características principales.
-- Información de disponibilidad.
-- Filtros y búsqueda.
-- Acción para consultar o solicitar el alquiler de una maquinaria.
-
-**Desktop Web Browser**
-
-<p align="center">
-  <img src="./assets/md-images-chapter4/webapp27.png" alt="Mockup de catálogo para escritorio" width="100%">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_rentals.png" width="100%">
 </p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los siguientes suplementos mejoran la lectura de los flujos por objetivo y concilian su semántica con las US vigentes. Incluyen un resultado esperado y rutas alternativas; seis incorporan mockups Figma ya presentes en el informe, sin modificar sus píxeles. **Son propuestas de diseño, no capturas de ejecución ni un nuevo export de FigJam/LucidChart/Overflow.** La publicación formal en esa herramienta, la cobertura de todos los objetivos y los estados mobile continúan pendientes.
+LEl User Flow Diagram de la Web Application de **RentBuild** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
-La recuperación de contraseña por correo, pagos, cancelación de reserva y confirmación adicional de recepción que aparecen en exports anteriores no se declaran implementados ni se atribuyen a una US de otro rol. Se emplea el modelo común de 2.5: solicitud Pending → Approved/Rejected; aprobación compromete periodo; entrega precede devolución.
+#### Authentication and Registration User Flow
 
-| User goal / persona | US relacionadas | Condición y alternativa |
-|---|---|---|
-| Registrar o actualizar equipo / Armando Casas | US06–US10 | Datos válidos y equipo propio; rechazar duplicidad o información incompleta. |
-| Encontrar y solicitar equipo / Andrea Torres | US11–US14 | Periodo válido y disponible; conservar contexto de búsqueda si no está disponible. |
-| Decidir solicitud / Armando Casas | US18, US19 | Solicitud propia y pendiente; aprobar exige disponibilidad vigente. Rechazar exige motivo, sin exigir disponibilidad. |
-| Entregar y registrar retorno / Armando Casas | US20, US22 | Contrato confirmado, una entrega y devolución posterior; rechazar repetición o paso previo ausente. |
-| Gestionar condición/mantenimiento / Armando Casas | US23–US26 | Equipo propio e intervención completa; no liberar si existe otro bloqueo. |
-| Seguir solicitud propia / Andrea Torres | US21 | Consultar el último estado propio; no exponer solicitudes de otra empresa. |
-| Elegir o cambiar plan / Armando Casas | US15–US17 | Plan habilitado; no repetir el mismo plan vigente; tras vencimiento puede empezar nuevo mes de demo. |
+El Authentication and Registration User Flow representa el proceso transversal mediante el cual una persona obtiene acceso a RentBuild, independientemente del tipo de empresa a la que pertenece. El flujo contempla tanto el ingreso de usuarios existentes como la creación de nuevas cuentas, la recuperación de credenciales y la validación de las condiciones necesarias para acceder al workspace correspondiente.
 
-#### User goal: Registrar / actualizar equipo
+El recorrido comienza cuando el usuario abre la plataforma y el sistema comprueba si existe una sesión activa. En caso contrario, se presenta la pantalla de inicio de sesión, desde la cual el usuario puede autenticarse, registrarse o iniciar el proceso de recuperación de contraseña. Cuando las credenciales son válidas, el sistema identifica el tipo de compañía y redirige al usuario hacia el entorno que le corresponde.
 
-El proveedor parte del inventario y solicita registrar o actualizar información. Los datos incompletos o seriales duplicados no reemplazan un registro válido. El mismo objetivo debe dividirse en los estados de formulario nuevos/editados en el export formal.
+Durante el registro se distingue entre los dos segmentos atendidos por RentBuild: empresas de alquiler de maquinaria y empresas constructoras o contratistas. Las empresas constructoras pueden activar su cuenta directamente, mientras que las empresas de alquiler deben seleccionar un plan de suscripción y completar el proceso de pago antes de habilitar el acceso a las funcionalidades de la plataforma.
 
-![Suplemento de User Flow: Registrar / actualizar equipo](assets/tb1-design/userflow-inventory.png)
+Asimismo, el flujo contempla escenarios alternativos como credenciales incorrectas, pagos no completados, suscripciones inactivas y recuperación de contraseña mediante correo electrónico. De esta manera, el diagrama no representa únicamente el camino exitoso, sino también las principales situaciones que pueden presentarse durante el acceso.
 
-#### User goal: Encontrar y solicitar equipo
+En conjunto, este User Flow permite visualizar cómo RentBuild controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-La constructora busca, inspecciona características y consulta un periodo. Si el periodo es válido y disponible envía una solicitud Pending; una consulta negativa conserva las fechas para corregirlas. Enviar no significa que ya exista aprobación o contrato.
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width="800px">
 
-![Suplemento de User Flow: Encontrar y solicitar equipo](assets/tb1-design/userflow-request.png)
+#### Rental Company Core Domain User Flow
 
-#### User goal: Decidir una solicitud
+El Rental Company Core Domain User Flow representa las principales operaciones que realiza una empresa de alquiler de maquinaria dentro de RentBuild una vez que ha obtenido acceso a su workspace. El flujo se concentra en las actividades directamente relacionadas con la administración de maquinaria y con el ciclo completo de atención de un alquiler.
 
-El proveedor revisa solicitudes y decide. Aprobar exige comprobar disponibilidad nuevamente para evitar solapamientos; rechazar conserva el motivo. La reserva representa el compromiso del periodo, no una segunda solicitud.
+El recorrido parte desde el Rental Company Dashboard, desde donde el usuario puede acceder a los módulos de Equipment, Rental Requests, Reservations, Rentals y Maintenance. Estos módulos representan las capacidades principales que permiten controlar la disponibilidad y utilización de la maquinaria.
 
-![Suplemento de User Flow: Decidir una solicitud](assets/tb1-design/userflow-decision.png)
+En Equipment, la empresa administra su inventario mediante el registro de nuevos equipos, la actualización de información y la consulta de detalles. Esta información constituye la base para que la maquinaria pueda ser posteriormente encontrada y solicitada por empresas constructoras.
 
-#### User goal: Entregar y registrar devolución
+En Rental Requests, la empresa revisa las solicitudes recibidas. Cada solicitud puede ser aprobada o rechazada. Cuando se aprueba, la empresa constructora es notificada y se genera una reserva asociada al equipo y al período solicitado. Si se rechaza, se registra el motivo correspondiente y se comunica la decisión al solicitante.
 
-El proveedor registra entrega del contrato aprobado y luego retorno/condición. No se permite retorno sin entrega ni repetir la misma operación. La intervención requerida después de inspección debe impedir liberar prematuramente el equipo.
+El módulo Reservations permite administrar las asignaciones ya confirmadas. Una reserva puede consultarse, cancelarse o continuar hacia el registro de un alquiler. Esto establece una separación entre la intención inicialmente aprobada y la operación de alquiler que posteriormente será ejecutada.
 
-![Suplemento de User Flow: Entregar y registrar devolución](assets/tb1-design/userflow-rental.png)
+En Rentals, la empresa administra las etapas operativas del servicio. El proveedor registra la entrega del equipo y posteriormente espera la confirmación de recepción por parte de la empresa constructora antes de considerar que la maquinaria se encuentra efectivamente en alquiler. Al finalizar el período, la constructora inicia la devolución y la empresa de alquiler revisa el retorno, inspecciona el equipo y confirma su recepción antes de completar el alquiler.
 
-#### User goal: Gestionar condición y mantenimiento
+Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar su estado y devolver un equipo a disponibilidad cuando nuevamente se encuentre en condiciones de ser alquilado.
 
-El proveedor registra antecedentes y sigue la intervención. Completar una intervención permite liberar únicamente si el equipo está apto y no queda otra restricción; no se asume que todas las incidencias generen mantenimiento.
 
-![Suplemento de User Flow: Gestionar condición y mantenimiento](assets/tb1-design/userflow-maintenance.png)
+Por ello, este User Flow representa el núcleo operativo de RentBuild para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-#### User goal: Seguir solicitud propia
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width="800px">
 
-La constructora consulta sus solicitudes con el estado de la última decisión. La consulta de operaciones ajenas se deniega. La sección no incorpora cancelación ni alquileres del proveedor dentro de US21.
+#### Construction Company Core Domain User Flow
 
-![Suplemento de User Flow: Seguir solicitud propia](assets/tb1-design/userflow-tracking.png)
+El Construction Company Core Domain User Flow representa el recorrido principal de una pequeña empresa constructora o contratista que utiliza RentBuild para encontrar maquinaria, solicitar su alquiler y realizar seguimiento a las operaciones asociadas.
 
-#### User goal: Elegir / cambiar plan
+El flujo comienza desde el Construction Company Dashboard, desde donde el usuario puede acceder principalmente a Search Equipment, My Requests, My Reservations y My Rentals. A diferencia de la empresa de alquiler, este segmento no administra inventario propio dentro del sistema, sino que utiliza RentBuild como medio para encontrar y contratar maquinaria ofrecida por proveedores.
 
-El PR12 respalda el recorrido frontend sobre Fake API. Se presenta referencia de precio mensual y confirmación de demo; un plan vigente conserva periodo al cambiar, y uno vencido puede comenzar un mes nuevo. Carga/error bloquean confirmación y habilitan reintento; no existe pago ni renovación programada.
+En Search Equipment, la empresa constructora explora el catálogo de maquinaria disponible, puede aplicar filtros según categoría, ubicación, disponibilidad u otras características, y acceder al detalle de un equipo. Desde esta vista puede seleccionar el período requerido y comprobar si la maquinaria se encuentra disponible para dichas fechas. Cuando la disponibilidad es favorable, puede generar una solicitud de alquiler.
 
-![Suplemento de User Flow: Elegir / cambiar plan](assets/tb1-design/userflow-subscriptions.png)
+Las solicitudes realizadas pasan a My Requests, donde la constructora puede consultar su estado. Una solicitud puede encontrarse pendiente mientras espera la respuesta del proveedor, ser aprobada para continuar con el proceso o ser rechazada. Mientras corresponda, el usuario también puede cancelar solicitudes que todavía no hayan avanzado a etapas posteriores.
 
-**Cobertura pendiente:** acceso/recuperación/perfil (US01–US05), variantes independientes de registro/edición y de mantenimiento, y todos los estados mobile deben conciliarse con sus wireflows y mockups por objetivo. Las stories de landing US27–US35 conservan su alcance público. No se marca completa la exigencia de flujos/prototipos por agregar estos suplementos.
+Una vez confirmada la asignación del equipo, la operación pasa a My Reservations. Desde este módulo la empresa consulta las reservas vigentes, los equipos involucrados, los proveedores y los períodos confirmados. También puede cancelar una reserva cuando ya no requiera la maquinaria, notificando al proveedor y liberando el período previamente reservado.
+
+Posteriormente, cuando la reserva se convierte en alquiler, la operación aparece en My Rentals. Desde allí la constructora puede consultar la maquinaria que se encuentra en uso, revisar las fechas de devolución y realizar las acciones que le corresponden dentro de la operación. Cuando el proveedor registra una entrega, la constructora confirma que recibió el equipo. Al finalizar el uso de la maquinaria, la constructora inicia el proceso de devolución, quedando la confirmación final y la inspección en manos de la empresa de alquiler.
+
+En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de RentBuild, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
+
+<img src="assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width="800px">
 
 ## 4.5. Web Applications Prototyping
 
