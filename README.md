@@ -2598,7 +2598,9 @@ CompanyProfile y ProviderProfile contienen información de empresa, dirección, 
 
 El diseño relacional presenta las tablas, columnas, claves primarias, claves foráneas y cardinalidades. Las vistas por contexto pertenecen al mismo esquema global.
 
-![Database Diagram](assets/tb1-reference-design/database-diagram.png)
+Diagrama de base de datos actualizado de RentBuild:
+
+![Database Diagram updated](assets/md-images-chapter4/database-diagram.png)
 
 #### IAM
 
