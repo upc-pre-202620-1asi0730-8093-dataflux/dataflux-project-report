@@ -2056,6 +2056,111 @@ Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquit
   <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_alquiler/Maintenance.png" alt="Mockup de maintenance para escritorio" width="100%">
 </p>
 
+#### 10. Dashboard — Empresa constructora
+
+**Propósito:** Presentar visualmente a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Dashboard.png" alt="Mockup de construction dashboard para escritorio" width="100%">
+</p>
+
+
+#### 11. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Search_equipment.png" alt="Mockup de equipment search para escritorio" width="100%">
+</p>
+
+#### 12. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/Equipment _detail.png" alt="Mockup de equipment detail para escritorio" width="100%">
+</p>
+
+#### 13. My Requests — Mis solicitudes
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_requests.png" alt="Mockup de my requests para escritorio" width="100%">
+</p>
+
+#### 14. My Reservations — Mis reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_reservations.png" alt="Mockup de my reservations para escritorio" width="100%">
+</p>
+
+#### 15. My Rentals — Mis alquileres
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="assets/md-images-chapter4/web-app-mock_ups/empresa_constructora/My_rentals.png" width="100%">
+</p>
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
 LEl User Flow Diagram de la Web Application de **RentBuild** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
