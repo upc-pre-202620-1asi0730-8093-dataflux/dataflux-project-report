@@ -2976,9 +2976,9 @@ En esta sección se presenta el Leadership-and-Collaboration Matrix (LACX) elabo
 
 El propósito central de este Sprint es completar el flujo principal de alquiler en la Web Application de RentBuild, cerrando además los pendientes del Sprint 1 (perfil de usuario y Mis solicitudes). El trabajo se organizó a partir de las User Stories del Product Backlog priorizadas para este sprint. Como herramienta de seguimiento y control de tareas, el equipo utiliza Trello.
 
-[COMPLETAR: captura del tablero de Trello del Sprint 2 en `./assets/md-images-chapter5/sprint-2-trello-board.png`]
+![Sprint 2 - Tablero de Trello](./assets/md-images-chapter5/sprint-2-trello-board.png)
 
-**Trello:** [COMPLETAR: URL pública del tablero del Sprint 2]
+**Trello:** https://trello.com/invite/b/6ac862d08565a1f49df535d7/ATTI8c0d4b7ea1228b131197ba4affe8fd8320E5EBEA/sprint-backlog-2-rentbuild
 
 | User Story ID | User Story Title | Work-Item ID | Work-Item Title | Description | Estimation (Hours) | Assigned To | Status (To do / In Process / To Review / Done) |
 | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
