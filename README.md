@@ -3072,10 +3072,51 @@ Dado que el alcance del Sprint 2 se centró en la primera versión del Frontend 
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-En esta sección se resumen las actividades de despliegue de la Web Application de RentBuild durante el Sprint 2, realizadas en Vercel, el mismo proveedor utilizado para el Landing Page. Se desplegó la nueva versión del Landing Page y la primera versión de la Web Application, que consume una fake API.
+Durante el Sprint 2 se realizó el despliegue de la Web Application de RentBuild utilizando Vercel, plataforma empleada también para el Landing Page. Asimismo, se implementó una Fake API mediante JSON Server, desplegada en Render, con el propósito de proporcionar datos simulados para el funcionamiento y las pruebas de la aplicación.
 
-[COMPLETAR: pasos con capturas del despliegue (importación del repositorio de la Web Application, configuración, Production Deployment), URL pública de la Web Application, URL de la nueva versión del Landing Page y herramienta usada para la fake API.]
+**Despliegue de la Web Application en Vercel**
 
+Para publicar la Web Application se realizaron los siguientes pasos:
+
+1. **Importación del repositorio:** Se seleccionó el repositorio `rentbuild-webapp` desde GitHub y se importó a Vercel.
+2. **Configuración del proyecto:** Se estableció el nombre `rentbuild-webapp`, se seleccionó Vite como framework y se inició el despliegue.
+3. **Confirmación del despliegue:** Vercel mostró el mensaje de confirmación indicando que la aplicación fue desplegada correctamente.
+4. **Verificación en producción:** Se comprobó que el estado del despliegue fuera `Ready` y que la aplicación estuviera disponible públicamente.
+
+**Evidencias del despliegue:**
+
+![paso-1-importacion.png.png](assets/sprint2-deployment/vercel/paso-1-importacion.png.png)
+![paso-2-configuracion.png](assets/sprint2-deployment/vercel/paso-2-configuracion.png)
+![paso-3-confirmacion.png](assets/sprint2-deployment/vercel/paso-3-confirmacion.png)
+![paso-4-produccion.png](assets/sprint2-deployment/vercel/paso-4-produccion.png)
+
+**URL pública de la Web Application:** https://rentbuild-webapp.vercel.app/
+
+**Despliegue de la Fake API en Render**
+
+Para proporcionar datos simulados a la Web Application, se utilizó JSON Server como Fake API y Render como plataforma de alojamiento.
+
+El procedimiento realizado fue el siguiente:
+
+1. **Creación del servicio:** Se ingresó a Render y se seleccionó la opción `New > Web Service`.
+2. **Conexión con GitHub:** Se proporcionó la dirección del repositorio que contiene los archivos necesarios para la Fake API.
+3. **Configuración del servicio:** Se establecieron las configuraciones del entorno Node.js, la rama principal y la región de despliegue.
+4. **Configuración de ejecución:** Se definieron los comandos de instalación e inicio de JSON Server y se seleccionó el plan gratuito.
+5. **Verificación del despliegue:** Se confirmó el estado `Deploy succeeded | Live` y se obtuvo la URL pública del servicio.
+
+**Evidencias del despliegue:**
+
+![paso-1-servicio.png](assets/sprint2-deployment/render/paso-1-servicio.png)
+![paso-2-repositorio.png](assets/sprint2-deployment/render/paso-2-repositorio.png)
+![paso-3-configuracion.png](assets/sprint2-deployment/render/paso-3-configuracion.png)
+![paso-4-json-server.png](assets/sprint2-deployment/render/paso-4-json-server.png)
+![paso-5-despliegue.png](assets/sprint2-deployment/render/paso-5-despliegue.png)
+
+**URL pública de la Fake API:** https://dataflux-api.onrender.com/
+
+**Nueva versión del Landing Page:** [Agregar URL pública actualizada del Landing Page].
+
+De esta manera, se logró disponer de la Web Application y de la Fake API en entornos públicos, permitiendo realizar las pruebas de integración y demostrar los avances desarrollados durante el Sprint 2.
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
 [COMPLETAR: descripción de la colaboración durante el Sprint 2 y capturas de los analíticos y commits de GitHub que reflejen el aporte individual de cada integrante.]
