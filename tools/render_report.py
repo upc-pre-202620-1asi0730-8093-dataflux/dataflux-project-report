@@ -4,7 +4,7 @@ import re
 import sys
 from collections import Counter
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import quote, unquote, urlsplit
 
 from lxml import etree
 from PIL import Image as RasterImage
@@ -21,6 +21,7 @@ from reportlab.platypus import (
 
 ROOT = Path(sys.argv[1]).resolve()
 OUTPUT = Path(sys.argv[2]).resolve()
+SOURCE_BASE = sys.argv[3] if len(sys.argv) > 3 else ''
 FONT_ROOT = Path('C:/Windows/Fonts')
 for name, file in [('Report', 'arial.ttf'), ('Report-Bold', 'arialbd.ttf'), ('Report-Italic', 'ariali.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT_ROOT / file)))
@@ -85,6 +86,16 @@ def inline(node):
             elif href.startswith('#') and unquote(href[1:]) in heading_anchors:
                 anchor = html.escape(unquote(href[1:]), quote=True)
                 parts.append(f'<link href="#{anchor}" color="#165ca2">{value}</link>')
+            elif SOURCE_BASE and not urlsplit(href).scheme and not href.startswith(('#', '//')):
+                reference = urlsplit(href)
+                local = (ROOT / unquote(reference.path)).resolve()
+                if local.is_relative_to(ROOT) and local.is_file():
+                    target = SOURCE_BASE + quote(local.relative_to(ROOT).as_posix(), safe='/')
+                    if reference.fragment:
+                        target += '#' + quote(unquote(reference.fragment), safe='-')
+                    parts.append(f'<link href="{html.escape(target, quote=True)}" color="#165ca2">{value}</link>')
+                else:
+                    parts.append(value)
             else:
                 parts.append(value)
         elif tag == 'img':

@@ -2,6 +2,8 @@
 
 La fuente es `README.md` y sus imágenes locales. La exportación no descarga recursos externos ni altera el contenido. Los cuadros anchos e imágenes panorámicas se exportan en páginas horizontales; el resto usa A4 vertical. El PDF conserva enlaces web y enlaces internos del índice, y añade marcadores para sus encabezados.
 
+Cuando se exporta desde un checkout con origen GitHub, los enlaces a archivos locales existentes se convierten a URLs del commit exportado. Esto permite abrir los guiones y parches desde el PDF sin depender de rutas del computador. Publicar ese commit antes de compartir el archivo; desde un ZIP sin Git, el texto de esos enlaces se conserva sin destino de repositorio.
+
 En Windows, con Node 22 o posterior y Python 3.11 o posterior:
 
 ```powershell
